@@ -1,0 +1,35 @@
+* General info
+  [[file:~/Research/documents/thesis/][Directory]]
+  [[file:~/Research/documents/thesis/org/notes.org][note.org]]
+* Task
+** TODO Presentation slides
+   DEADLINE: <2016-04-30 Sat 23:59>
+
+** TODO Documentations
+*** TODO Contact Nakata
+    SCHEDULED: <2016-04-27 Wed 12:00>
+* Degree application schedue
+** DONE Meeting with Ishiguro
+   CLOSED: [2016-04-27 Wed 00:36]
+<2016-04-11 Mon>--<2016-04-23 Sat>
+*** DONE prepare 4 slides
+    CLOSED: [2016-04-25 Mon 22:57]
+    - main: what cannot be done in the 2nd journal and what has achieved in the current paper
+    - (may be need) method explanation
+    - thesis summary (the table in the conclusion Meeting)
+** meeting with Ishiguro
+** meeting with Hosoda
+   SCHEDULED: <2016-05-02 Mon 11:00>
+** meeting with Arai
+** Oral defense
+   SCHEDULED: <2016-05-25 Wed 09:00-12:00>
+** Submission of thesis title
+   DEADLINE: <2016-06-15 Wed>
+** Submission of all documents
+   DEADLINE: <2016-06-20 Mon>
+ 
+
+
+
+
+

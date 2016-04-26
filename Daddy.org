@@ -1,0 +1,11 @@
+* Info
+** 
+* Health
+** DONE Father surgery
+   CLOSED: [2016-04-15 Fri 20:00]
+   - cautions
+     - no high fibre food
+     - control blood pressure
+   - check in <2016-04-08 Fri 12:00>
+   - operation start <2016-04-09 Sat 12:00>
+* Tasks

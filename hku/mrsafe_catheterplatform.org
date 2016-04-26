@@ -1,0 +1,186 @@
+* general info
+  [[file:~/Work/HKU/MRcompatible_platform/][Working directory]]
+
+* tasks
+** TODO dynamics modeling [0%]
+- [ ] Free body diagram
+** TODO paper draft 
+   
+** TODO submit paper
+   SCHEDULED: <2016-06-01 Wed>
+* paper draft 
+** Title
+   Design of a Robotic Platform for MRI-guided Cardiac Electrophysiology (EP)
+** Introdution
+*** Cardiac electrophysiology is an effective surgical treatment for diagnosis and treatment of heart
+**** What is Cardiac Electrophysiology  (Definition)
+     - In EP, electrophysiologists insert a 1.5m catheter from femoral vein to the heart chamber where radiofrequency ablation (RFA) is conducted via the catheter tip on the lesion tissue to isolate the abnormal electrophysiological signals that cause arrhythmias
+**** Current methods using robotic platform/procedure and associated problems: learning curve, cost, preparation time, accuracy, efficiency 
+     - In conventional EP, fluoroscopy and ultrasound are adopted to visualize the catheter configuration inside the heart chamber.
+**** Deduce to the need of MRI-guided
+     - However, the visualization can only provide rough information inside the heart chamber for RFA.
+*** MRI techniques can facilitate EP, however, there is still no MR-compatible platform for EP
+**** Why catheterization has to be done inside MRI
+     - Magnetic resonance imaging (MRI) offers excellent images contrast for cardiovascular soft tissue for construction of clear 3D cardiac roadmap [3,4], which enables intra-operative (intra-op) visualization of RFA-induced physiological changes, thus allowing electrophysiologists to promptly determine whether the treatment of particular lesions is complete or requires further ablation.
+     - T2-weighted MRI [5,6] can also readily visualize the edema [6] and scar tissue [7] from successful or incomplete RFA
+**** Current progress of MR-compatible platform, list some examples of catheter robot.
+     - Sensei Robotic system [12] is a well-known commercial platform for intra-cardiac EP intervention
+     - Hansen Sensei X, Amigo Remote Catheter System, Stereotaxis Niobe are industry-leading EP robots
+     - All the above robots are MR-incompatible
+     - Currently, no MR-compatible commercial robotic platform for EP is available
+     - [31] is actuated by non-ferromagnetic,  ultrasonic motors driven by electric current, providing only two DOFs of catheter. However, because the motors are placed close to the scanner, the driving and encoding signals would induce electromagnetic (EM) noise to MRI.
+     - Ultrasonic motors reduce of SNR ratio, though can be treated by installing amplifier and carefully shield electronics at the expense of system cost [Su2012]
+     - Recently, a MR-compatible pneumatic stepper motor has been developed [39], showing   better performance than existing ones in [57-59], however, the operation speed is still too slow for driving catheter advancement or rotation.
+     - "Pneumatic actuators are MR-compatible and do not cause SNR reduction, but they do require a complicated installation that involves locating a control unit, power supplies, amplifiers and valves external to the MRI shielded room (Patriciu et al., 2007; Li et al., 2011; Tokuda et al., 2012). Furthermore, the pneumatic transmission lines lower the bandwidth and, in combination with the spatial con- straints of the MRI bore, complicate robot design (Song et al., 2011).” [Vartholomeos2013]
+**** [What makes development/applications of MR-compatible robots difficult]
+     - Complex EM-shielded enclosure is required to surround on all sides of the motor drivers
+     - It is also technically difficult to filter the motor control signals at high frequency, but without degrading the motor operation [33].
+**** [Deduce to the need of implementation MR-compatible actuators for EP]
+     - Actuators driven by other non-electromagnetical mechanism such as pressured air flow are attracting attention for development of MR-compatible robotic platform [34]
+
+*** Hydraulic mechanism can provide MR-compatible, efficient and precise actuation for EP.
+**** [Any used for medical application? ]
+**** [What is rolling diaphragm (RD) and its characteristics ]
+     - Frictionless
+**** [Any other MR-compatible actuation mechanism? Why they are not chosen in this research?]
+*** We design and fabricate the first MR-compatible, efficient robot for cardiac EP
+**** State clearly main features of our design that facilitate cardiac catheterization 
+- Rolling diaphragms are actuated by pressurized clear air (at 30-60 psi) supplied by the medical piped gas systems guarantees zero EM interference with the MRI
+- Fast and precise manipulation of the advancement, steering and rotation of catheter can be achieved
+
+** Clinical Motivation /MRI-Guided EP
+    - (may be combined with the introductin section)
+*** Cardiac EP for heart arrhythmia and ablation is the one demanding for dexterous control of catheter for tissue ablation
+- Show data support obtained from American Heart Association (AHA) and Center for Disease Control (CHC)
+*** The basic operation of EP is described as follows
+- [Fig: illustrating the basic operation of EP, and the catheter configuration inside the anatomy]
+- [Emphasize particular procedure and associated problems/difficulties]
+- [Insertion done by junior surgeon]
+*** A MR-guided catheterization can facilitate diagnosis and treatment
+- How?
+- Fig: showing the ablation features visualized on late-gadolinium MR images
+*** Deduce to the need of our design
+
+** The MR-compatible Robotic Platform
+A MR-compatible, high performance robot has been developed for EP operation. Fig. shows the appearance of the robot. The robot is used to manipulate a catheter tip that locates near to the target heart tissue. During an EP operation, a surgeon use a controller to operate the catheter (Fig. ). In order to achieve effective manipulation of a catheter during a MRI-guided EP, the robot is developed to fulfil the following requirements:
++ The robot must be solely made of MR-compatible material.
++ The robot can give advancement, steering and rotation of a catheter that mounted on the robot during EP operation.
++ The robot is capable of response fast enough to the surgeon’s control inputs with negligible backlash.
++ The actuators have to provide precise displacement with sufficient output torque.
++ The size of the robot must not be too bulky and compactly assembled.
+
+*** MR-compatible hydraulic actuator
+**** The core of the MR-compatible platform is an efficient hydraulic actuator capable of providing precise bidirectional rotation or translation actuation depicted in Fig. .  
+The actuator consists of two identical hydraulic piston-actuators, a gear, two long flexible tubes (>10m) and a hydraulic pump. 
+Each piston-actuator consists of a piston, a rolling diaphragm and a cylinder. The two tubes and the hydraulic pump connect the two piston-actuators with fixed amount of pressurized fluid filled inside. 
+The rolling diaphragms act as flexible seals. The two piston-actuators and the gear are assembled such that the gear transmits translational motion of one piston to other piston in opposite direction. 
+When the hydraulic pump forces the pressurized fluid from one cylinder to another by a piston inside, the change of the fluid volume in one cylinder induces pressure on the wall of the rolling diaphragm and pushes the piston out. 
+Simultaneously, the other piston is push into the other cylinder by the force transmitted from the gear and the atmospheric pressure due to the decrease of fluid inside the cylinder. 
+As a result, the pistons provide bidirectional translation and the gear provides bidirectional rotation.
+**** All the components except the hydraulic pump, which is isolated in a zero-EM-interference room, are made of MR-compatible and medical safe materials.
+**** The proposed design together with the use of pressurized fluid can prevent backlash at the gear.
+The gear and the piston shafts are not seamlessly contacted. Backlash refers to the phenomenon when the piston leaves contact with the gear such that motion cannot be transmitted. 
+The pressurized fluid inside the two cylinders always provides force to push the two pistons out. 
+Consequently, the teeth of the piston are forced to seamlessly contact with the teeth of the gear, thereby preventing backlash (Fig. ).
+- (Existing bidirectional actuator designs such as [] usually has only one shaft and thus backlash is inevitable (Fig. ).)
+**** The proposed design effectively converts the change of fluid volume inside the cylinders to the translational motion of the piston, based on the characteristics of negligible backlash and all the piston, rolling diaphragms and the gear are seamlessly assembled. 
+Also, the coplanarity of the gear and the two piston shafts helps to effectively transmit the translational motion from one piston shaft to another. 
+Moreover, the rolling diaphragms provide negligible friction between the pistons and the inner walls of the cylinders [] such that the energy loss during operation can be reduced.  
+Although energy loss and response delay will likely occur because the volume of the pressurized fluid and the volume of the long flexible tubes will possibly be altered during operation, in practice and as will be shown in section XXX, the response is negligible that the piston react once the surgeon gives control input.
+**** There are cases that require larger range of rotation.
+For instance, the rotation of catheter may need more than 360 degree to produce a 360 degree sweeping motion of the tip inside the heart chamber, because torsion may occur in the long (>1.5m) catheter. 
+However, the range of the rotation of the gear is limited by the stroke length and the diameter of the rolling diaphragms, because the gear is placed between the two piston shafts, as illustrated in Fig. . 
+**** Two types of assembly are designed for different requirement of range of rotation of the gear.
+Figure depicts the two designs in which the two cylinders are assembled in parallel-shape and in V-shape. 
+In the following context, we refer them as the P-type actuator and the V-type actuator, respectively. 
+The V-type actuator has larger range of rotation than that of the P-type because a smaller gear can be installed and thus produces larger range of rotation of the gear.
+There is a trade-off between the maximum range of rotation and the resolution. 
+Under the same-sized gear teeth and the same change of fluid volume inside the cylinder, the V-type actuator has larger range of rotation but also coarse resolution, because small gear has larger gear ratio. 
+– (Although the V-shape assembly also has limitation of maximum piston shaft length.)
+- (geometric equation relating the )
+**** Assume that all the elastic effect of the rolling diaphragm is negligible such that the change of the fluid volume inside one of the cylinder of the hydraulic actuator $\Delta V_c$  is related to the displacement of the piston shaft $\Delta h$  by:
+    \Delta V_c = \pi r^2_c \Delta h		(1)
+where $r_c$ is the inner radius of the cylinder. 
+In ideal case where the fluid is incompressible and the volume of inside the long flexible tube is constant, $\Delta V_c$ is solely induced by the change of volume inside the hydraclic pump $\Delta V_p \propto \Delta l$ which is proportional to the displacement of the piston inside hydraulic pump $\Delta l$. 
+Therefore, the displacement of the piston shaft $\Delta h$ of the actuator is also proportional to $\Delta l$ :
+	    \Delta V_c = \pi r^2_c \Delta h
+\implies    \Delta h \propto \Delta l	
+	    \Delta h = k_t \Delta l			(2)
+where $k_t$ is the input-output ratio (I-O ratio) of the piston shaft. 
+For the case without backlash at the gear, the angular change of the gear $\Delta \theta$ is proportional to the displacement of the piston shaft $\Delta h$ and thus also proportional to $\Delta l$:
+	    \Delta \theta \propto \Delta l		
+\implies    \Delta \theta = k_g \Delta l		(3)
+where $k_g$ is the I-O  ratio of the gear.
+- (The proportionality in (2) and (3) vanishes if the fluid volume is not constant or backlash occurs.)
+- (need more complicated model including fluid dynamics to explain the time delay?)
+**** [The expected characteristics/advantages:, stroke and accuracy]
+- fast response
+- output torque
+
+*** The MR-compatible robotic platform
+**** The proposed hydraulic actuators are compactly assembled in a MR-compatible robotic platform depicted in Fig. , which provides effective steering (bending), fine advancement, rotation and coarse advancement of a catheter mounted on it. 
+The design technical specifications of our current prototype are summarized in Table 1.
+**** The steering and the advancement of the catheter are provided by two P-type actuators as depicted in Fig. . 
+The platform tightly holds the steering wheel of the catheter and the catheter handle such that the gears of the two P-type actuators directly actuate the catheter with fine resolution and without backlash.
+**** The rotation and the coarse advancement of the catheter are provided by two V-type hydraulic actuators as depicted in Fig. .
+The V-type actuator is used instead of the P-type actuator because catheter may need larger range of rotation as mentioned before. 
+The V-type actuators provide both the rotation and the coarse advancement via intermediate gears to magnify the range of motion and thus have coarser resolution than the steering and advancement and may encounter the problem of backlash.
+- (How the specific requirements for EP are matched?)
+- [Table of design parameters: dimension, components, DoF requirement, ranges of motion, resolution (or input-output ratios of each DOF), material name et al]
+
+** Control interface (combine with B?)
+*** Fig. depicts the schematic diagram for carrying out EP by the MR-compatible robotic platform.
+- [Schematic diagram: including connections between motor drivers, valves, mcu, MRI scanner room, control rooms, etc…]
+- [which components are in the MRI-scanner room and the control room?]
+- [Fig: figure of the controller]
+- [Description of how the EP is carried out by the user using the robot:]
+  - [Surgeon uses controller to control the platform for cardiac ablation, according to the (real-time) MRI which reflects catheterization in 3D roadmap]
+  - [the controller input is sent to the microprocessor in the control room to actuate robotic platform]
+
+** Experimental Evalulations
+*** To examine the applicability of the proposed design for EP, the robotic platform depicted in Fig. was constructed
+- [Fig. of real robot, long flexible tubes, cylinder pump]
+- Actuation experiments were conducted to evaluate the actuation performance in terms of time delay, precision (related to backlash) and operation speed, output torque
+- MR-compatibility tests were also carried out to investigate the effects to MRI.
+
+*** MR-compatibility test
+- Image artifacts
+- SNR analysis
+- [Fig: depicting the zero-artifact using 1-2 significant MRI sequences]
+- (actuation inside MRI scanner?)
+
+*** Performance analysis
+Specification
+- resolution, speed, I/O ratios 
+   depending on the resolution of the cylinder and I/O ratio
+- output torque
+- range of motion
+
+
+**** Step response
+- rise time, overshoot, settling time, time constant
+
+
+**** Frequency response
+- time delay
+- bode plot
+
+**** hysterysis and backlash
+
+
+**** workspace analysis with catheter
+
+** Discussion
+*** Highlight the significant novelties - 1st MR-compatible robotic platform for EP
+*** Definition/justification of our proposed performance indices, such as time consuming, efficiency
+*** Contribution of this work. How it could be extended to other clinical applications?
+
+
+** Conclusion
+*** The first MR-compatible robot for EP
+    - Efficient and effective actuation of rotation, advancement and bending
+    - Other main features
+    - ...
+*** Future work
+    - Extensible to other clinical applications/surgeries
+    - Difficulty even using robot, and pave a way to our future work in regards of model-free catheter control

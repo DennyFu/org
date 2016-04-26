@@ -1,0 +1,118 @@
+* General info
+[[file:~/Work/HKU/Poster_RGC_2016/][Working directory]]
+* Task
+** TODO submit poster
+   DEADLINE: <2016-04-29 Fri>
+
+* Poster outline
+** Title
+   MRI-guided and Robot-assisted Catheterization for Cardiac Electrophysiological Intervention
+** Introduction
+   - (T2-weighted) Magnetic resonance imaging (MRI) techniques provide intra-operative, (real-time) assessment of lesion tissue
+   - MRI-guided and robot-assisted catheterization enhances saftey and efficacy of  cardiovascular electrophysiology (EP) intervention
+** Objective
+   1. Development of fast computing architecture for real-time MR image processing
+   2. Development of high-performance, MR-conditional robotic catheterization platform
+   3. Improvement of control accuracy of catheterization with 
+   4. Validation of potential clinical advantages 
+** Experimental work
+*** Fast MR image registration (Objective 1)
+    1. Field-Programmable Gate Arrays (FPGAs)-based computing architecture for accurate localization of ablation targets
+*** MR-compatible robotic platform (Objective 2)
+    - design 1: MR-compatible material, hydraulic transmission, rolling diaphragm
+    - (optional?) design 2: MR-compatible stepper motor
+*** Visual, position and haptic sensing (Objective 3)
+    1. Fly-through vision
+    2. Micro coil sensor for real-time positional tracking
+    3. (optional?) Haptic catheter-tissue force sensing by optical Fiber Bragg Grating (FBG)-based sensing units
+       - being mounted closed to the catheter tip to measure contact force to the cardiac vessels and chambers
+*** Model-free kinematics control interface for flexible catheter (Objective 3)
+    - achieves visual-motor alignment in the fly-through view (FTV) for accurate tele-manipulation of catheter
+    - Kinematics estimation by Particle filtering
+      - mapping of from desired tip displacement in FTV to catheter motor command
+*** Validation (Objective 4)
+    1. Lab-based validation
+       1. Computer-simulated RFA test
+	  - Subject test: volunteers were invited to manually maneuver an EP catheter to target the virtual catheter tip to the lesion targets
+	  - validate the potential benefits of providing enhanced guidance in the form of haptic and visual feedback
+       2. Phantom model will be obtained using a 3T MRI scanner
+       3. (optional?) Real-time EM tracking system (NDI Medical Aurora V3) for measuring catheter tip position
+    2. MRI-based validation
+       1. Test of FPGA-based MR image registration
+       2. Signal-to-noise (SNR) test
+** Results
+*** MR image registration
+*** MR-compatible robotic platform
+*** Visual, position and haptic sensing
+    1. Micro coil
+       tracking accuracy +/- 0.5mm at 40Hz
+    2. (optional?) FBG-based sensing units
+*** Model-free kinematics control interface for flexible catheter
+    - Ablation performances are found to be improved significantly with the visual-motor realignment updated in real time
+    - Subject found easier to complete the simulated ablation task with the aid of our model-free robotic control
+    - Both accuracy and effciency of robotic catheterization are enhanced
+    - Quantitive data needed
+*** Validation
+    1. Lab-based validation
+       1. Computer-simulated RFA test -- the same test in model-free control?
+       2. Figure of the phantom model
+    2. MRI-based validation
+       1. SNR images
+** Conclusions
+To be revised at last
+*** Prospective impacts of using robotic catheter for MRI-guided EP:
+    1. Decrease chances of post-precedural arrhythmia recurrence
+    2. Increase safety of catheter navigation
+       - Thereby decreasing the rates of nerve damage, esophageal fistula creation, pulmonary-vein stenosis and stroke, the major risks of EP procedures
+    3. Enhancing the dexterity of catheter control facilitating better treatments for more complex arrhythmias
+    4. Serve as bencmark for the design and integration of MR-conditional robotic devices
+       - Open a new dimension for other procedures, such as breast biopsy neurosurgery and prostate intervention that can also benefit from intra-op MRI
+*** Something more to say....
+
+
+
+
+
+* Poster limits
+  - Photos, pictures or charts to be included with caption (separate files with at least 300 dpi)
+  - < 600 words
+* misc
+  - Rpg Student: [name of rpg student(s) supported by this project]
+
+
+* Materials
+** Proposal
+
+** Hamlyn Symposium video - [[file:~/Work/HKU/Hamlyn_symposium_2016/][(Directory)]]
+*** Video captions:
+**** Why MRI-guided Catheterization?
+     - Intra-operative MRI provides fast and high-contrast soft tissue images withouth emitting radiation
+     - During ablation, physiological change of tissue can be well-distinguished by late gadolinium enhancement T2-weighted MRI (Khomolvski et al. Circulation 2014)
+     - Physician can readily monitor the catheter ablation progress and hence reduce the chance of arrhythmias reoccurrence
+**** MR-safe actuations
+     - The MR-conditional robot comprises components made of MR-conditional materials
+     - The robot actuation is designed to be driven by hydraulic power transmitted from the motors in control room
+**** Catheter Manipulation
+**** Tracking coil
+     - Real-time MR-based positional tracking units offer accurate alignment between the catheter and the MR images
+     - tracking accuracy +/- 0.5mm at 40Hz
+**** Human machine interface
+     - A 3D motion inut device is used to command the 3-DOF manipulation of EP ablation catheter
+     - The online updated Jacobian allows instant realignment between the endoscopic view and the input left-and-right motion. The realignment is continuously updated/estimated in real time using a model-free controller
+     - The updated Jacobian allows intuitive maneuvering of catheter aiming at the lesion targets based on the endoscopic view
+     - Simlated tasks were conducted, in which ablation has to be applied precisely on the target lesions
+     - Ablation performances are found to be improved significantly with the visual-motor realignment updated in real time
+     - Subject found easier to complete the simulated ablation task with the aid of our model-free robotic control
+     - Both accuracy and effciency of robotic catheterization are enhanced
+     - Dynamic left atrial phantom model will be incorporated in our future validation
+**** Prospective impacts of using robotic catheter for MRI-guided EP:
+     1) Decrease chances of post-precedural arrhythmia recurrence
+     2) Increase safety of catheter navigation
+	- Thereby decreasing the rates of nerve damage, esophageal fistula creation, pulmonary-vein stenosis and stroke, the major risks of EP procedures
+     3) Enhancing the dexterity of catheter control facilitating better treatments for more complex arrhythmias
+     4) Serve as bencmark for the design and integration of MR-conditional robotic devices
+	- Open a new dimension for other procedures, such as breast biopsy neurosurgery and prostate intervention that can also benefit from intra-op MRI
+	
+
+
+** IROS posters
