@@ -1,0 +1,157 @@
+* Hamlyn Symposium
+     
+** A Dual-Arm Robotic Neuroendoscope: Early Results
+*** General info
+- [[file:~/Work/Review/Hamlyn2016/][working directory]]
+- Paper ID: 78
+*** Review report
+  1. Does this paper fit the scope of the symposium?
+     
+  Yes
+  
+  2. Please provide your expertise in the topic area of this paper
+  3-Knowledgeable 
+  
+  3. Originality
+     
+  Yes really 
+  
+  4. Soundness of experimental design
+     
+  Yes really 
+  
+  5. Clinical/Technical novelty
+     
+  Technically novel
+  
+  6. Detailed Comments
+     
+  This paper presents a dual-arm teleoperated robotic neuroendoscope. 
+  It is well-written with clear description of mechanical design, operation interface and control methods.
+  
+  Evaluations demonstrate that the robot is capable to operate in small workspace with adequate dexterity and compliance for neurosurgical operations.
+  
+  All the figures, and especially the video, are of high quality to clearly illustrate design of the robot and demonstrate the functionality.
+  
+  Possibly due to the limited pages, it would be better to include comparison with existing/similar robotic systems, at least to mention in the Introduction, to emphasize the novelty of the presented robot.
+  
+  7. Please provide your overall rating for this paper
+     
+  4-Probably accept: I would argue for accepting this paper
+  
+  8. Comments to Program Chair
+     
+  The dual-arm teleoperated robotic neuroendoscope presented in this paper is well-designed. 
+  The performance shown in both the paper and the video is promising that the presented robot is beneficial to various neurosurgical operations.
+  
+  I recommend this paper to be accepted for the Hamlyn Symposium. 
+
+** Instrument tip angular kinematics in teleoperated needle-driving
+*** General info
+- [[file:~/Work/Review/Hamlyn2016/][working directory]]
+- Paper ID: 9
+*** Review report
+  1. Does this paper fit the scope of the symposium?
+     
+     Yes
+     
+  2. Please provide your expertise in the topic area of this paper
+     
+     2-Passing Knowledge
+     
+  3. Originality
+     
+     Yes really
+     
+  4. Soundness of experimental design
+     
+     Yes really
+     
+  5. Clinical/Technical novelty
+     
+     Clinically novel
+     
+  6. Detailed Comments
+     
+     Summary:
+     The author presents a new metric for evaluation of robot-assisted surgical skills. They propose the normalized angular displacement, the accumulated change in instrument angular displacement normalized by the path length which is the accumulated translational displacement, to assess the tele-operation skill level using surgical robot. In a experiment, they compared the skill level between 6 experienced surgeons and 9 novices without surgical experience in a needle-driving short training (80 trials) using a da Vinci Research Kit. It was found that in the comparison of the last 10 trials, the normalized angular displacement difference between the experienced surgeons and the novices was significant. In contrast, the path length difference between the experienced surgeons and the novices was not significant. The author thereby deduces the path length metric, which is a common measure of surgical skill, is insufficient.
+     
+     Some detailed comments:
+     The paper is well-written and easy to follow.
+     The method is clearly described and the results are properly presented. 
+     The photos in Figure 1 are blurred.
+     
+     A question:
+     The proposed metric is reasonable that experienced surgeons implicitly manipulate surgical tools with minimum change of orientation.
+     Because the operators change both the tool's translational and angular displancement, did the authors try to compare the performance using the metric of both the angular displacement and the translational displacement?
+     
+     
+  
+  7. Please provide your overall rating for this paper
+     
+     4-Probably accept: I would argue for accepting this paper
+     
+  8. Comments to Program Chair
+     
+     The proposed metric based on instrument augular displacement for quantitative robot-assisted surgical skill evaluation has shown to be capable of distinguishing experienced surgeons' skill and novices' skill. This result supports the proposed metric would improve assessment in robot-assisted surgical training.
+     
+     
+  I recommend this paper to be accepted for the Hamlyn Symposium. 
+  
+** A Shape similarity framework for brain fibers classification based on Frénet Frame
+*** General info
+- [[file:~/Work/Review/Hamlyn2016/][working directory]]
+- Paper ID: 39
+*** Review report
+  1. Does this paper fit the scope of the symposium?
+     
+     Yes
+     
+  2. Please provide your expertise in the topic area of this paper
+     
+     2-Passing Knowledge
+     
+  3. Originality
+     
+     Yes really
+     
+  4. Soundness of experimental design
+     
+     Yes really
+     
+  5. Clinical/Technical novelty
+     
+     Technically novel
+     
+  6. Detailed Comments 
+     
+     Summary
+     In simplifying visualization and analysis of Diffusion Tensor Imaging (DTI) data of human brain, most methods use metrics that measure local distances of brain fiber data in data clustering process. This paper proposes a framework based on a composite similarity metric to improve data clustering performance. The composite similarity metric consists of a global metric and a local metric. The global metric, obtained based on the Fr\'{e}net equations, measures the similarity of fiber shape; the local metric, obtained based on the Fr\'{e}chet distance, measures the proximity of fibers. The proposed similarity metric is computed by applying the local metric on the results of the global metric.
+     Results show that from detailed 3D anatomical representation of brain fiber (arcuate fascicle), the propose method can 1) extract individual fibers, 2) measure the similarity of shape of multiple fibers a 2D similarity matrix visualization and 3) measure and visualize the overall similarity of two fibers -- different fibers have higher value of the proposed metric. 
+     
+     
+  some detailed comments/questions:
+  The figures can give superficial understanding about the proposed method and the results.
+  However the paper itself is not very well-written, for example, the four steps mentioned in the material and methods section are not explained accordingly in the results section; the figures axes are not labeled; 
+  
+  Because it is claimed that this research is to improve clustering performance, it is better to show comparison between the proposed metric (global+local) and the common metric (local) to show the improvement. 
+  Please revise Figure 3 caption.
+  Why the Fr\'{e}net equations and the Fr\'{e}chet distance is chosen? 
+  how to determine the threshold? It should be the important part of the research.
+  
+  
+  7. Please provide your overall rating for this paper
+     
+  3-Neutral: I would not argue for the acceptance/rejection of this paper 
+  
+  8. Comments to Program Chair
+     
+     To improve data clustering performance in visualization of human brain fiber using Diffusion Tensor Imaging (DTI), this paper proposes a framework based on a composite metric that measures both the similarity between fibers the shape globally and the proximity locally. 
+     Results show that the proposed method can visually classify different brain fiber. 
+     
+     However, considering the overall quality of the paper, I am neutral for either the acceptance or the rejection.
+  
+* Frontier 
+
+** TODO review paper 
+   DEADLINE: <2016-04-28 Thu>

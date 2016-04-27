@@ -1,6 +1,12 @@
 * general info
   [[file:~/Work/HKU/MRcompatible_platform/][Working directory]]
 
+* Notes
+** TODO finish dynamics modeling
+   SCHEDULED: <2016-04-27 Wed 14:00>
+** TODO ppt for meeting
+   SCHEDULED: <2016-04-27 Wed 16:00>
+
 * tasks
 ** TODO dynamics modeling [0%]
 - [ ] Free body diagram
@@ -8,6 +14,7 @@
    
 ** TODO submit paper
    SCHEDULED: <2016-06-01 Wed>
+   
 * paper draft 
 ** Title
    Design of a Robotic Platform for MRI-guided Cardiac Electrophysiology (EP)
@@ -175,7 +182,6 @@ Specification
 *** Definition/justification of our proposed performance indices, such as time consuming, efficiency
 *** Contribution of this work. How it could be extended to other clinical applications?
 
-
 ** Conclusion
 *** The first MR-compatible robot for EP
     - Efficient and effective actuation of rotation, advancement and bending
@@ -184,3 +190,14 @@ Specification
 *** Future work
     - Extensible to other clinical applications/surgeries
     - Difficulty even using robot, and pave a way to our future work in regards of model-free catheter control
+
+* Meeting
+  SCHEDULED: <2016-04-27 Wed 18:45 +1w>
+
+
+
+
+
+* Dynamic modeling
+ 
+  \\theta\
