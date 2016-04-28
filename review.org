@@ -152,6 +152,238 @@
      However, considering the overall quality of the paper, I am neutral for either the acceptance or the rejection.
   
 * Frontier 
+  
+** DONE review paper 
+   CLOSED: [2016-04-28 Thu 16:35] SCHEDULED: <2016-04-28 Thu 11:00-16:00> DEADLINE: <2016-04-28 Thu>
+   
+   
+*** General info
+- [[file:~/Work/Review/FrontiersinRoboticsandAI/senAPR2016cooperative/][working directory]]
+- [[file:~/Work/Review/FrontiersinRoboticsandAI/senAPR2016cooperative/204220_Kazanzides_Manuscript.PDF::%25PDF-1.5%0D][paper pdf]]
+- Title: Cooperative Control with Ultrasound Guidance for Radiation Therapy
+- Authors: H. Tutkun Sen, Alexis Cheng, Kai Ding, Emad Boctor, John Wong, Iulian Iordachita, and Peter Kazanzides
+*** Review report
+    My independent review report
+    Please fill in each field of the independent review questionnaire below. Your review report will only be submitted to the Associate Editor and Authors when clicking on Submit my report.
 
-** TODO review paper 
-   DEADLINE: <2016-04-28 Thu>
+    S1. ARTICLE TYPE AND STRUCTURE
+    ARTICLE TYPE
+    Q 1
+    Does this manuscript conform to the definition below of Original Research articles? If not, please contact the Frontiers Editorial Office (editorial.office@frontiersin.org).
+    
+    Original Research articles describe the aims, study, and methods of original research. Results are reported, interpreted and may include a discussion of possible implications. They may also encompass disconfirming results allowing hypothesis elimination, reformulation; or they may report on the non-reproducibility of previously published results.
+    Yes
+    
+    MANUSCRIPT LENGTH
+    Q 2
+    An Original Research article should not exceed 12'000 words. Should any part of the manuscript be shortened? If so, please specify.
+    
+    No
+
+    LANGUAGE AND GRAMMAR
+
+    Q 3
+    Is the language, specifically the grammar, of sufficient quality?
+    Yes
+    
+    Q 4
+    Should the authors send this manuscript to an expert in English editing and academic writing?
+    
+    No
+
+    S2. GENERAL EVALUATION
+    MAIN MESSAGE
+    Q 5
+What are the main findings reported in this manuscript?
+This manuscript presents a cooperative control framework that provides real-time guidance to locate
+soft-tissue for radiotherapy. 
+Results show that a tumor 3D position in a abdomen phantom could be estimated within 2mm; the ultrasound probe can be positioned within 10mm and 2 degree accuracy.
+The results imply an inexperienced operators can reproduce ultrasound image that previously found by an expert. 
+    
+    Q 6
+    Is the study presented in a consistent and succinct form?
+    Yes
+    
+    OBJECTIVE ERRORS
+    Q 7
+    Are there any objective errors in the methodology? If so, please specify.
+
+    No
+
+    Q 8
+    Are there any objective errors in the results? If so, please specify.
+
+    No
+
+    INITIAL OVERVIEW
+    Q 9
+    Significance of the results:
+    7
+    Q 10
+    Quality of the methods:
+    6
+    Q 11
+    Quality of the writing:
+    6
+    Q 12
+    Quality of the figure(s):
+    7
+    Q 13
+    Quality of the table(s):
+    6
+    Q 14
+    Quality of the approach:
+    6
+    Q 15
+    Novelty of the results:
+    6
+
+    S3. INDIVIDUAL SECTIONS
+    MANDATORY SECTIONS
+    Q 16
+    An Original Research article is composed of the following five mandatory sections: abstract, introduction, materials and methods, results, and discussion. Are all these sections present?
+    Yes
+
+    TITLE AND ABSTRACT
+    Q 17
+    Does the title clearly and precisely reflect the findings of the manuscript, as described in the author guidelines?
+    Yes
+    
+    Q 18
+    Is the abstract written in a clear and comprehensive way?
+    Yes
+    
+    INTRODUCTION
+    Q 19
+    Does the introduction present the study in an appropriate context?
+    Yes
+    
+    Q 20
+    Other comments on the introduction.
+- the term patient setup should be defined more clearly. the general description in the first paragraph "the goal is to set up the
+patient in accordance with the plan prior to delivering the radiation" is ok. but the "patient setup with US image" should be desribed in more detailed in the following paragraph. E.g. tasks and requirements in the patient setup
+
+Q 21
+Is the purpose of the study, including motivation for new studies, explained?
+Yes
+
+MATERIAL AND METHODS
+Q 22
+Are the procedures sufficiently advanced and accurate to address the research questions posed?
+Yes
+
+Q 23
+Are the statistical methods used valid?
+Yes
+
+
+Q 24
+Other comments on the materials and methods.
+- Since cooperative control with virtual fixtures is the central issue of the paper, although the "virtual fixture" method was developed in the author's previous work, more detailed should be elaborated.
+e.g.
+How the VFs relate to the VF Stiffness matrix in Figure 3? 
+Equations of the cooperative control should be shown to illustrate how virtual fixture forece (Fig. 3) is generated to cooperate with the operator's force to manipulate the probe to the desired position and orientation, and provide haptic feedback.
+
+- line 109: "minimal ultrasound experience" is unfair to describe the skill of radiation therapists
+  
+Q 25
+Are the materials and methods sufficiently described?
+
+No
+RESULTS
+Q 26
+Are the results presented appropriately?
+Yes
+
+Q 27
+Have the author(s) included all the information required to reach the conclusions?
+
+No
+Q 28
+Other comments on the results.
+One of the claim is that the proposed framework produce consistence soft-tissue deformation at all stages of the radiotherapy (line 43-45), results of soft-tissue deformation should be shown.
+
+Is it possible to improve the interpretation of the equations (2)-(5)? e.g. visualization 
+It took me some time to recall the knowledge of homogeneous transformation in order to understand and verify the meaning of the equations.
+
+
+DISCUSSION
+Q 29
+Does the Discussion address the research questions posed in the Introduction?
+Yes
+
+Q 30
+Does the Discussion interpret the results in light of previous knowledge?
+Yes
+
+Q 31
+Are the conclusions justified?
+Yes
+
+Q 32
+Other comments on the discussion or the conclusions.
+
+line 242: "the US probe placement difference is 8.64 ± 4.86 mm in translation and 1.79 ± 1.45 degrees in rotation. This measurement may be clinically significant, ...""
+it is difficult to judge if this accuracy achievement is clinically significant. The authors explain this by a treatment plan case where a beam is passed within 10mm of the probe. So, what if the plan requirement is within "5mm"?
+So maybe the control performance should be compared with existing stage-of-art achievement. 
+
+
+
+S4. ETHICAL STANDARDS
+ETHICAL STANDARDS
+Q 33
+Has the work been conducted in conformity with the ethical standards of the field?
+Yes
+No
+Not Applicable
+Q 34
+For research involving human subjects or animals, do the author(s) identify the committee approving the studies and provide confirmation that all studies conform to the relevant regulatory standards?
+
+
+Not Applicable
+CLINICAL TRIALS
+Q 35
+Has the clinical trial been registered in a public trials registry?
+
+
+Not Applicable
+BIOSECURITY STANDARDS
+Q 36
+Does the manuscript describe experiments using a select agent or toxin?
+
+
+Not Applicable
+Q 37
+Is it possible that this manuscript contains a National Science Advisory Board for Biosecurity (NSABB)-defined experiment of concern?
+
+
+Not Applicable
+S5. COMPLEMENTARY DATA
+COMPLEMENTARY DATA
+Q 38
+Does the manuscript include any complementary data that should be deposited to an online repository or database (including nucleotide/amino acid sequences, crystallographic or NMR data, microarray data, etc)?
+
+
+Not Applicable
+Q 39
+For any complementary data submitted to an online repository or database, do the author(s) provide the accession number?
+
+
+Not Applicable
+S6. OTHER COMMENTS
+Q 40
+Please add here any further comments on this manuscript.
+
+*** comments on the figures
+The results are promising, but the paper is still not publishable because some important ingredients is missing.
+
+    
+**** Figure 1: please use different annotation pointing color. Black is not a good choice.
+     
+**** Figure 2: 
+     - please describe the functions of dash arrows.
+     - please indicate the planning is done by expert and delivery is done by none expert
+       
+       
+**** Figure 6:
+     - please indicate which frames are fixed and which frames are moving 

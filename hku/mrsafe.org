@@ -4,8 +4,8 @@
 * Notes
 ** TODO finish dynamics modeling
    SCHEDULED: <2016-04-27 Wed 14:00>
-** TODO ppt for meeting
-   SCHEDULED: <2016-04-27 Wed 16:00>
+** DONE ppt for meeting
+   CLOSED: [2016-04-28 Thu 10:40] SCHEDULED: <2016-04-27 Wed 16:00>
 
 * tasks
 ** TODO dynamics modeling [0%]
@@ -191,8 +191,12 @@ Specification
     - Extensible to other clinical applications/surgeries
     - Difficulty even using robot, and pave a way to our future work in regards of model-free catheter control
 
-* Meeting
-  SCHEDULED: <2016-04-27 Wed 18:45 +1w>
+* TODO Meeting
+  SCHEDULED: <2016-05-04 Wed 18:45 +1w>
+  - State "DONE"       from "TODO"       [2016-04-27 Thu 22:00]
+  :PROPERTIES:
+  :LAST_REPEAT: [2016-04-28 Thu 10:55]
+  :END:
 
 
 
@@ -200,4 +204,4 @@ Specification
 
 * Dynamic modeling
  
-  \\theta\
+
