@@ -7,10 +7,13 @@
 *** outline
     SCHEDULED: <2016-04-29 Fri 14:00-17:00>
     [[file:~/Research/documents/thesis/org/notes.org][note.org]]
+
 ** TODO Documentations
    SCHEDULED: <2016-05-01 Sun>
-   
    will arrive in May
+
+** TODO buy airplane ticket
+   SCHEDULED: <2016-04-29 Fri 23:00>
 *** DONE Contact Nakata
     CLOSED: [2016-04-27 Wed 12:23] SCHEDULED: <2016-04-27 Wed 12:00>
 * Degree application schedue
