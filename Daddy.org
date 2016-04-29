@@ -1,6 +1,11 @@
 * Info
 ** 
 * Health
+** follow-up consultation
+*** TODO check cancer index - Dr. Lam
+    SCHEDULED: <2016-06-17 Fri 10:00>
+*** TODO check cancer index - PWH
+    SCHEDULED: <2016-07-04 Mon>
 ** DONE Father surgery
    CLOSED: [2016-04-15 Fri 20:00]
    - cautions
@@ -8,4 +13,5 @@
      - control blood pressure
    - check in <2016-04-08 Fri 12:00>
    - operation start <2016-04-09 Sat 12:00>
+
 * Tasks

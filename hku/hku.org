@@ -1,0 +1,40 @@
+* Notes
+
+* Lectures
+
+* Seminars
+  
+** DONE Computer Aided Surgery and Surgical Robotics - Professor Ichiro Sakuma, The University of Tokyo
+   CLOSED: [2016-04-29 Fri 10:57] SCHEDULED: <2016-04-29 Fri 09:00>
+Title:           Computer Aided Surgery and Surgical Robotics
+
+Speaker:     Professor Ichiro Sakuma
+Vice Dean, School of Engineering
+Director, Medical Device Development and Regulation Research Center
+Professor, Department of Bioengineering
+The University of Tokyo, Tokyo, Japan
+ 
+Date:           April 29, 2016 (Friday)
+ 
+Time:          9:00 a.m.
+ 
+Venue:        HW 7-37, Haking Wong Building, HKU
+ 
+Minimally invasive therapy such as endoscopic surgery and catheter based intervention are being spread in many surgical intervention fields. Thus engineering assistance is important to realize safe and effective minimally invasive therapy. Computer Assisted Surgical guidance such as surgical navigation is one of key technologies. On the other hand, it is expected that application of robotic technology to minimally invasive surgery will provide the following functions:
+1.  Precise manipulation of biological tissues and surgical instruments in narrow and confined surgical field.
+2.  Precise and accurate localization of therapeutic devices using various pre and intra-operative medical information.
+ 
+In the first mode of application, more compact system is required. At the same time integration with various energy devices such as ultrasonically activated scalpel, bipolar coagulator, and high intensity focused ultrasound. At the same time, intra-operative guidance utilizing various pre and intra operative information is also required.
+ 
+In the second mode of application, image guided robotic system for RF ablation, laser ablation, intensity modified radiation therapy, and high intensity focused ultrasound. In this type of robot, various pre-and intraoperative information including functional information is used to navigate the therapeutic devices to the target lesion.
+ 
+In both applications, preoperative clinical information, in particular three dimensional medical imaging data are widely used. Anatomical information including lesion location are used for surgical navigation and surgical robot control. However, preoperative information does reflect current situation of the patient. For example deformation of soft tissue leads to errors in surgical navigation. Thus use of intra-operative information is required to augment preoperative information or to modify preoperative information. Miniaturized sensor technologies are also important in realizing advanced surgical assist systems. There are inherent limitations in quality of intra-operative information because of clinical constraints that are not found in preoperative data acquisition. Data fusion of pre-and intra-operative information through intelligent signal processing is indispensable.
+ 
+For advancement of minimally invasive therapies, various information technologies as well as robotic/mechatronic technologies should be integrated to realize intended functions of surgical assist systems.
+ 
+ 
+   
+* Lab Demo
+
+** DONE Prof. Kazuhiro Kosuge's visit
+   CLOSED: [2016-04-28 Thu 16:35] SCHEDULED: <2016-04-28 Thu 16:00>

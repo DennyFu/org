@@ -1,3 +1,9 @@
+* notes
+* today's todo
+** DONE call daddy not go tonight dinner
+   CLOSED: [2016-04-29 Fri 13:54] SCHEDULED: <2016-04-29 Fri 14:00>
 * Emacs
 ** task
 *** TODO enable preview-latex
+*** TODO fix mbp's mactex
+

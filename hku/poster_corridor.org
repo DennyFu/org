@@ -1,64 +1,94 @@
 * General info
-[[file:~/Work/HKU/Poster_RGC_2016/][Working directory]]
-* Task
-** TODO submit poster
-   DEADLINE: <2016-04-29 Fri>
+  [[file:~/Work/HKU/Poster_corridor/]]
 
-* Poster outline
+* notes
+  
+** TODO ask for figures
+   ask chimlee for coil design figures
+   ask martin or other for phantom figure
+
+** TODO ask for conclusion text
+   
+* Task
+
+** TODO submit poster
+   DEADLINE: <2016-04-30 Fri>
+
+* DONE Poster outline
+  CLOSED: [2016-04-29 Fri 17:37] SCHEDULED: <2016-04-29 Fri 11:00-13:00>
 ** Title
-   MRI-guided and Robot-assisted Catheterization for Cardiac Electrophysiological Intervention
+   - High-performance Robot-assisted Systems for MRI-guided Cardiac Interventions * 
+   - MRI-guided and Robot-assisted Technologies for Surgical Interventions
 ** Introduction
-   - (T2-weighted) Magnetic resonance imaging (MRI) techniques provide intra-operative, (real-time) assessment of lesion tissue
-   - MRI-guided and robot-assisted catheterization enhances saftey and efficacy of  cardiovascular electrophysiology (EP) intervention
-** Objective
+   - Magnetic resonance imaging (MRI) techniques
+     - produce high-contrast images
+     - enable/provide intra-operative, real-time assessment of lesion tissue
+   - MRI-guided and Robot-assisted Systems enhances saftey and efficacy of surgical interventions
+   - Examples of surgical interventions (omitted)
+     - Cardiovascular electrophysiology (EP) 
+     - Neurosurgery
+   - Figure of good quality MR images
+** Objectives
    1. Development of fast computing architecture for real-time MR image processing
-   2. Development of high-performance, MR-conditional robotic catheterization platform
-   3. Improvement of control accuracy of catheterization with 
+   2. Development of high-performance, MR-conditional robotic platform
+   3. Advanced control interface
    4. Validation of potential clinical advantages 
-** Experimental work
+   5. Ultimate objective : Figure of integrated robotic system
+      
+** Methodology
+
+
 *** Fast MR image registration (Objective 1)
-    1. Field-Programmable Gate Arrays (FPGAs)-based computing architecture for accurate localization of ablation targets
-*** MR-compatible robotic platform (Objective 2)
-    - design 1: MR-compatible material, hydraulic transmission, rolling diaphragm
-    - (optional?) design 2: MR-compatible stepper motor
-*** Visual, position and haptic sensing (Objective 3)
-    1. Fly-through vision
+    - Field-Programmable Gate Arrays (FPGAs)-based computing architecture for accurate localization of ablation targets
+    - Figure
+*** MR-compatible actuation and sensing (Objective 2)
+    1. design: MR-compatible pnuematic stepper motor 
+       - add chimlee for more design figure of coil
     2. Micro coil sensor for real-time positional tracking
-    3. (optional?) Haptic catheter-tissue force sensing by optical Fiber Bragg Grating (FBG)-based sensing units
-       - being mounted closed to the catheter tip to measure contact force to the cardiac vessels and chambers
-*** Model-free kinematics control interface for flexible catheter (Objective 3)
-    - achieves visual-motor alignment in the fly-through view (FTV) for accurate tele-manipulation of catheter
-    - Kinematics estimation by Particle filtering
-      - mapping of from desired tip displacement in FTV to catheter motor command
+       - figure
+*** Control interface for catheterization (Objective 3)
+    - Novel model-free control for flexible continuum robots
+    - Visual-motor alignment of operator’s motion in virtual endoscopic fly-through view
+	
 *** Validation (Objective 4)
-    1. Lab-based validation
-       1. Computer-simulated RFA test
+    1. Development of dynamic left atrial phantom model for lab-based validation
+        - phantom model figure, currently copied from video, to be modified
+    2. Computer-simulated RFA test
 	  - Subject test: volunteers were invited to manually maneuver an EP catheter to target the virtual catheter tip to the lesion targets
 	  - validate the potential benefits of providing enhanced guidance in the form of haptic and visual feedback
-       2. Phantom model will be obtained using a 3T MRI scanner
-       3. (optional?) Real-time EM tracking system (NDI Medical Aurora V3) for measuring catheter tip position
-    2. MRI-based validation
+    3. MRI-based validation
        1. Test of FPGA-based MR image registration
+	  - figure
        2. Signal-to-noise (SNR) test
+	  - figure
+
 ** Results
 *** MR image registration
+    FPGA-based computation enables fast (<0.1s) MR registration
+
 *** MR-compatible robotic platform
-*** Visual, position and haptic sensing
-    1. Micro coil
-       tracking accuracy +/- 0.5mm at 40Hz
-    2. (optional?) FBG-based sensing units
-*** Model-free kinematics control interface for flexible catheter
-    - Ablation performances are found to be improved significantly with the visual-motor realignment updated in real time
-    - Subject found easier to complete the simulated ablation task with the aid of our model-free robotic control
-    - Both accuracy and effciency of robotic catheterization are enhanced
-    - Quantitive data needed
+Figure of the robotic platform with pneumatic/hydraulic actuators installed (the above figure to be replaced if not to be disclosed)
+
+*** Control interface
+Enhancement of control performance has been proven in subject test of ablation task
 *** Validation
     1. Lab-based validation
        1. Computer-simulated RFA test -- the same test in model-free control?
        2. Figure of the phantom model
     2. MRI-based validation
        1. SNR images
-** Conclusions
+
+
+*** Visual, position and haptic sensing (omitted)
+    1. Micro coil
+       tracking accuracy +/- 0.5mm at 40Hz
+    2. (optional?) FBG-based sensing units
+*** Model-free kinematics control interface for flexible catheter (omitted)
+    - Ablation performances are found to be improved significantly with the visual-motor realignment updated in real time
+    - Subject found easier to complete the simulated ablation task with the aid of our model-free robotic control
+    - Both accuracy and effciency of robotic catheterization are enhanced
+    - Quantitive data needed
+** Conclusions/outlooks
 To be revised at last
 *** Prospective impacts of using robotic catheter for MRI-guided EP:
     1. Decrease chances of post-precedural arrhythmia recurrence
@@ -73,19 +103,12 @@ To be revised at last
 
 
 
-* Poster limits
-  - Photos, pictures or charts to be included with caption (separate files with at least 300 dpi)
-  - < 600 words
-* misc
-  - Rpg Student: [name of rpg student(s) supported by this project]
-
 
 * Materials
-** figures
-   [[file:~/Work/HKU/Poster_corridor/fig/]]
 ** Proposal
 
-** Hamlyn Symposium video - [[file:~/Work/HKU/Hamlyn_symposium_2016/][(Directory)]]
+** Hamlyn Symposium video
+   [[file:~/Work/HKU/Hamlyn_symposium_2016/][(Directory)]]
 *** Video captions:
 **** Why MRI-guided Catheterization?
      - Intra-operative MRI provides fast and high-contrast soft tissue images withouth emitting radiation
@@ -114,16 +137,10 @@ To be revised at last
      3) Enhancing the dexterity of catheter control facilitating better treatments for more complex arrhythmias
      4) Serve as bencmark for the design and integration of MR-conditional robotic devices
 	- Open a new dimension for other procedures, such as breast biopsy neurosurgery and prostate intervention that can also benefit from intra-op MRI
+	
 
-** CUHK invited talk
-   [[file:~/Work/HKU/Poster_corridor/CUHK_Seminar%20todanny.pptx::M%20Filemode%20Length%20Date%20Time%20File][talk ppt]]
 
 ** IROS posters
-   [[file:~/Work/HKU/Poster_corridor/IROS_poster_v8_Jacky.pptx::M%20Filemode%20Length%20Date%20Time%20File][IROS_ppt]]
-
-
-
-
-
-
-
+   
+** ziyan's ppt
+   [[file:~/Work/HKU/Poster_corridor/][ppt location]]
