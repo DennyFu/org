@@ -1,12 +1,12 @@
 * General info
-  [[file:~/Research/documents/thesis/][Directory]]
-  [[file:~/Research/documents/thesis/org/notes.org][note.org]]
+  [[file:~/Work/thesis/]]
+
 * Tasks
 ** Revise presentation slides [0%]
    DEADLINE: <2016-05-06 Fri>
    [[file:~/Research/documents/thesis/org/notes.org][note.org]]
 *** TODO revise Part 1 slides
-    SCHEDULED: <2016-05-03 Tue 18:00>
+    SCHEDULED: <2016-05-04 Tue 16:00>
 *** TODO revise Part 2 slides
     SCHEDULED: <2016-05-04 Tue 16:00>
 *** TODO revise Part 3 slides
