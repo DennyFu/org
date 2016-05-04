@@ -13,12 +13,4 @@
     SCHEDULED: <2016-05-04 Wed 14:00>
 
 
-* Emacs
-** tasks
-*** TODO add TODO states					      :emacs:
-*** TODO enable preview-latex					      :emacs:
-*** TODO fix aspell					      :emacs:
-    [[https://tug.org/mactex/elcapitan.html][internet source]]
-*** DONE fix mbp's mactex					      :emacs:
-    CLOSED: [2016-05-03 Tue 15:48]
 

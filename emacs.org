@@ -1,0 +1,661 @@
+* Emacs todo lists
+** DONE add TODO states
+   CLOSED: [2016-05-05 Thu 00:53]
+   - State "DONE"       from "TODO"       [2016-05-05 Thu 00:53]
+** TODO enable preview-latex
+** TODO fix aspell	
+   [[https://tug.org/mactex/elcapitan.html][internet source]]
+** DONE fix mbp's mactex
+   CLOSED: [2016-05-03 Tue 15:48]
+
+
+
+* source
+
+** online manual
+** books
+
+
+* .emacs setting
+** .emacs raw 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
+ '(electric-pair-mode t)
+ '(fill-column 80)
+ '(global-visual-line-mode t)
+ '(indicate-buffer-boundaries (quote ((t . right) (top . left))))
+ '(indicate-empty-lines t)
+ '(save-place t nil (saveplace))
+ '(scroll-bar-mode nil)
+ '(show-paren-mode t)
+ '(text-mode-hook (quote (text-mode-hook-identify)))
+ '(tool-bar-mode nil)
+ '(tooltip-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:stipple nil :background "Black" :foreground "lightgreen" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 128 :width normal :foundry "apple" :family "Monaco"))))
+ '(font-lock-comment-face ((((class color) (min-colors 88) (background dark)) (:foreground "azure4"))))
+ '(matlab-cellbreak-face ((t (:underline "Cyan" :weight bold))))
+ '(matlab-nested-function-keyword-face ((t (:overline t :slant italic))))
+ '(matlab-region-face ((t (:background "aquamarine4")))))
+(setq initial-frame-alist '((top . 1) (left . 720) (width . 88) (height . 49)))
+(setq default-frame-alist '((top . 1) (left . 1) (width . 88) (height . 40)))
+(setq mac-option-key-is-meta nil)
+(setq mac-command-key-is-meta t)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
+(setq ls-lisp-use-insert-directory-program nil)
+(setq ls-lisp-format-time-list  '("%Y-%m-%d %H:%M:%S" "%Y-%m-%d %H:%M")
+      ls-lisp-use-localized-time-format t)
+
+;(setq tab-width 2)
+
+
+
+
+;;================== Applications setups ===================
+
+
+;; ----- setup shell mode PATH
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin:/usr/X11/bin:/usr/texbin"))
+(setq exec-path (append (split-string-and-unquote (getenv "PATH") ":") exec-path))
+
+
+;; --- set Mactex path
+(setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
+(setq exec-path (append exec-path '("/Library/TeX/texbin")))
+;; ----- Load Auctex
+(setq LaTeX-command "latex -synctex=1")
+;(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/auctex/")
+(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/auctex-11.86/")
+(load "auctex.el" nil t t)
+(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/auctex-11.86/preview/")
+(load "preview-latex.el" nil t t)
+(setq TeX-PDF-mode t)
+(setq LaTeX-math-mode t)
+(add-hook 'Latex-mode-hook '(lambda () (outline-minor-mode t)))
+;; (setq outline-minor-mode t)
+(setq TeX-math-close-double-dollar t)
+(setq TeX-electric-sub-and-superscript t)
+;(setq outline-mode-prefix-map "C-")
+;; ----- setup Synctex+SKim
+(add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
+(setq TeX-source-correlate-method 'synctex)
+(server-start)
+(add-hook 'LaTeX-mode-hook
+	  (lambda ()
+	    (add-to-list 'TeX-expand-list '("%q" skim-make-url))))
+(defun skim-make-url () (concat
+			 (TeX-current-line)
+			 " "
+			 "\"" (expand-file-name (funcall file (TeX-output-extension) t)
+					   (file-name-directory (TeX-master-file))) "\""
+			 " "
+			 "\""(buffer-file-name)"\""))
+(setq TeX-view-program-list 
+      '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline %q")))
+(setq TeX-view-program-selection '((output-pdf "Skim")))
+; (add-hook 'Latex-mode-hook 'turn-on-flyspell)
+; (add-hook 'latex-mode-hook 'turn-on-auto-fill)
+(autoload 'reftex-mode     "reftex" "RefTeX Minor Mode" t)
+(autoload 'turn-on-reftex  "reftex" "RefTeX Minor Mode" nil)
+(autoload 'reftex-citation "reftex-cite" "Make citation" nil)
+(autoload 'reftex-index-phrase-mode "reftex-index" "Phrase mode" t)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)   ; with AUCTeX LaTeX mode
+(add-hook 'latex-mode-hook 'turn-on-reftex)   ; with Emacs latex mode
+(autoload 'turn-on-bib-cite "bib-cite")
+(add-hook 'Latex-mode-hook 'turn-on-bib-cite)
+; CJK package setting
+;; (load-library "/usr/local/texlive/texmf-local/cjk-4.8.3/utils/lisp/emacs/cjk-enc")
+;; ; (load-library "/usr/local/texlive/texmf-local/cjk-4.8.3/utils/lisp/cjktilde")
+;; (autoload 'CJK-insert-space "/usr/local/texlive/texmf-local/cjk-4.8.3/utils/lisp/cjkspace"
+;;   "Insert tildes appropriately in CJK document." t)
+;; (defun my-LaTeX-mode-hook ()
+;;   "My personal key definitions for LaTeX mode."
+;;       (define-key LaTeX-mode-map " " 'CJK-insert-space))
+;; (add-hook 'LaTeX-mode-hook 'my-LaTeX-mode-hook)
+
+
+
+
+;; --- setup cocoAspell (Dictionary)
+(setq ispell-program-name "aspell"
+      ispell-dictionary "english")
+      ;; ispell-dictionary-alist
+      ;; (let ((default '("[A-Za-z]" "[^A-Za-z]" "[']" nil
+      ;;                  ("-B" "-d" "english" "--dict-dir"
+      ;;                   "/Library/Application Support/cocoAspell/aspell6-en-6.0-0")
+      ;;                  nil iso-8859-1)))
+      ;;   `((nil ,@default)
+      ;;     ("english" ,@default))))
+
+
+;; --- setup matlab
+(setenv "matlabroot" (concat (getenv "matlabroot") "/Applications/MATLAB_R2013a_Student.app"))
+(setenv "LD_LIBRARY_PATH" (concat (getenv "LD_LIBRARY_PATH") "/usr/local/lib:/Applications/MATLAB_R2013a_Student.app/bin/:/Applications/MATLAB_R2013a_Student.app/runtime/maci64:/Applications/MATLAB_R2013a_Student.app/sys/os/maci64:${matlabroot}/bin/maci64"))
+(setenv "DYLD_FALLBACK_LIBRARY_PATH" (concat (getenv "DYLD_FALLBACK_LIBRARY_PATH") "/usr/local/lib:/lib:/usr/lib:/Applications/MATLAB_R2013a_Student.app/bin/maci64"))
+(setenv "MATLAB_JAVA" "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home")
+
+
+
+;;================== Applications setups end ===============
+
+
+
+
+;;================== Emacs modes setups ====================
+
+
+;; ----- org mode
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+;;(global-set-key "\C-cb" 'org-iswitchb)
+;;After changing one of these lines, use C-c C-c with the cursor still in the line to make the changes known to Org mode. 
+;; task overall status: TODO, WAITING, INPROGRESS, DONE 
+;; in-task status (for INPROGRESS): START, CONTINUE, PAUSE, DONE
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "WAITING(w@/!)" "INPROGRESS(i)" "|" "DONE(d!)" "CANCELED(k@)") 
+	(sequence "START(s!)" "CONTINUE(c!)" "PAUSED(p!)" "|" "DONE(d!)") 
+	))
+;To define TODO keywords that are valid only in a single file, use the following text anywhere in the file.
+;
+;     #+TODO: TODO(t) | DONE(d)
+;     #+TODO: REPORT(r) BUG(b) KNOWNCAUSE(k) | FIXED(f)
+;     #+TODO: | CANCELED(c)
+(setq org-log-done 'time)
+(setq org-agenda-files (quote ("~/org"
+                               "~/org/hku"
+                               "~/org/paper_review")))
+
+
+
+
+
+
+;; ----- Load highlight-symbol
+(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/")
+(require 'highlight-symbol)
+(global-set-key [(control f4)] 'highlight-symbol-at-point)
+(global-set-key [f4] 'highlight-symbol-next)
+(global-set-key [(shift f4)] 'highlight-symbol-prev)
+(global-set-key [(meta f4)] 'highlight-symbol-prev)
+(global-set-key [(control meta f4)] 'highlight-symbol-query-replace)
+(global-set-key (kbd "C-c ;") 'comment-region)
+
+
+
+
+;; ----- Load auto-complete
+(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/auto-complete/etc/")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "/Applications/Emacs.app/Contents/Resources/auto-complete/etc//ac-dict")
+(ac-config-default)
+(add-to-list 'ac-modes 'latex-mode)
+(add-to-list 'ac-modes 'matlab-mode)
+
+
+
+
+;; ----- Load Yasnippet
+;; (add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/yasnippet")
+;; (require 'yasnippet) ;; not yasnippet-bundle
+
+;; (yas/initialize)
+;; (yas/load-directory "/Applications/Emacs.app/Contents/Resources/yasnippet/snippets")
+
+
+;; ----- Load CEDET.
+;; See cedet/common/cedet.info for configuration details.
+;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
+;; CEDET component (including EIEIO) gets activated by another 
+;; package (Gnus, auth-source, ...).
+(load-file "/Applications/Emacs.app/Contents/Resources/cedet/common/cedet.el")
+
+;; Enable EDE (Project Management) features
+;;(global-ede-mode 1)
+
+;; Enable EDE for a pre-existing C++ project
+;; (ede-cpp-root-project "NAME" :file "~/myproject/Makefile")
+
+
+;; Enabling Semantic (code-parsing, smart completion) features
+;; Select one of the following:
+
+;; * This enables the database and idle reparse engines
+;;(semantic-load-enable-minimum-features)
+
+;; * This enables some tools useful for coding, such as summary mode,
+;;   imenu support, and the semantic navigator
+;;(semantic-load-enable-code-helpers)
+
+;; * This enables even more coding tools such as intellisense mode,
+;;   decoration mode, and stickyfunc mode (plus regular code helpers)
+;; (semantic-load-enable-gaudy-code-helpers)
+
+;; * This enables the use of Exuberant ctags if you have it installed.
+;;   If you use C++ templates or boost, you should NOT enable it.
+;; (semantic-load-enable-all-exuberent-ctags-support)
+;;   Or, use one of these two types of support.
+;;   Add support for new languages only via ctags.
+;; (semantic-load-enable-primary-exuberent-ctags-support)
+;;   Add support for using ctags as a backup parser.
+;; (semantic-load-enable-secondary-exuberent-ctags-support)
+
+;; Enable SRecode (Template management) minor-mode.
+;; (global-srecode-minor-mode 1)
+
+
+;; ----- Load ECB
+;; (add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/ecb/")
+;; ;;(require 'ecb)
+;; (setq stack-trace-on-error t)
+;; (require 'ecb-autoloads)
+
+
+
+
+;; ----- Load Matlab-mode
+;; Replace path below to be where your matlab.el file is.
+(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/M-mode/")
+(load-library "matlab-load")
+;(setq matlab-mode-install-path (quote ("/Applications/Emacs.app/Contents/Resources/M-mode/")))
+(setq matlab-auto-fill t)
+(setq matlab-comment-column 40)
+(setq matlab-comment-region-s "%--- ")
+(setq matlab-completion-technique 'increment)
+(setq matlab-fill-fudge-hard-maximum 81)
+(setq matlab-highlight-cross-function-variables t)
+;;(setq matlab-shell-command "/Applications/MATLAB_R2012b.app/bin/matlab")
+(setq matlab-shell-command "/Applications/MATLAB_R2013a_Student.app/bin/matlab")
+(setq matlab-vers-on-startup t)
+(setq matlab-shell-input-ring-size 100)
+(setq matlab-indent-function-body nil)
+(setq matlab-indent-level 2)
+;; (setq matlab-shell-logo "/Applications/MATLAB_R2012b.app/toolbox/nnet/nnresource/icon16/matlab.png")
+;(setq mlint-programs (quote ("/Applications/MATLAB_R2012b.app/bin/maci64/mlint" "mlint" "mac/mlint" )))
+(setq mlint-programs '("/Applications/MATLAB_R2013a_Student.app/bin/maci64/mlint"))
+(setq matlab-show-mlint-warnings t)
+(setq mlint-verbose t)
+;;(setq mlint-programs '("/Applications/MATLAB_R2012b.app//bin/maci64/mlint"))
+
+;(autoload 'mlint-minor-mode "mlint" nil t)
+;(add-hook 'matlab-mode-hook (lambda () (mlint-minor-mode t)))
+;; Enable CEDET feature support for MATLAB code. (Optional)
+;;(matlab-cedet-setup)
+;;(add-hook 'matlab-mode-hook '(lambda () (mlint-minor-mode)))
+;; (defface ac-matlab-candidate-face
+;;   '((t (:background "PaleGreen" :foreground "black")))
+;;   "Face for matlab candidate."
+;;   :group 'auto-complete)
+
+;; (defface ac-matlab-selection-face
+;;   '((t (:background "DarkGreen" :foreground "white")))
+;;   "Face for matlab selected candidate."
+;;   :group 'auto-complete)
+
+;; (defun matlab-complete-symbol-list (&optional arg)
+
+;;   (interactive "P")
+;;   ;(matlab-navigation-syntax
+;;     (let* ((prefix (if (and (not (eq last-command 'matlab-complete-symbol))
+;; 			    (member (preceding-char) '(?  ?\t ?\n ?, ?\( ?\[ ?\')))
+;; 		       ""
+;; 		     (buffer-substring-no-properties
+;; 		      (save-excursion (forward-word -1) (point))
+;; 		      (point))))
+;; 	   (sem (matlab-lattr-semantics prefix)))
+;;       (if (not (eq last-command 'matlab-complete-symbol))
+;; 	  (setq matlab-last-prefix prefix
+;; 		matlab-last-semantic sem
+;; 		matlab-completion-search-state
+;; 		(cond ((eq sem 'solo)
+;; 		       '(matlab-solo-completions
+;; 			 matlab-find-user-functions
+;; 			 matlab-find-recent-variable))
+;; 		      ((eq sem 'boolean)
+;; 		       '(matlab-find-recent-variable
+;; 			 matlab-boolean-completions
+;; 			 matlab-find-user-functions
+;; 			 matlab-value-completions))
+;; 		      ((eq sem 'value)
+;; 		       '(matlab-find-recent-variable
+;; 			 matlab-find-user-functions
+;; 			 matlab-value-completions
+;; 			 matlab-boolean-completions))
+;; 		      ((eq sem 'property)
+;; 		       '(matlab-property-completions
+;; 			 matlab-find-user-functions
+;; 			 matlab-find-recent-variable
+;; 			 matlab-value-completions))
+;; 		      (t '(matlab-find-recent-variable
+;; 			   matlab-find-user-functions
+;; 			   matlab-value-completions
+;; 			   matlab-boolean-completions)))))
+
+;;       (let ((allsyms (apply 'append
+;; 			    (mapcar (lambda (f) (funcall f prefix))
+;; 				    matlab-completion-search-state))))
+;; 	(matlab-uniquafy-list allsyms))))
+;; (defvar ac-source-matlab
+;;   '((candidates
+;;      . (lambda ()
+;; 	 (matlab-complete-symbol-list)))
+;;     (candidate-face . ac-matlab-candidate-face)
+;;     (selection-face . ac-matlab-selection-face)
+;; ))
+;(add-hook 'matlab-mode-hook (lambda ()
+			      ;; (add-to-list 'ac-sources 'ac-source-matlab)
+			      ;; (add-to-list 'ac-sources 'ac-source-yasnippet)))
+
+
+
+
+
+;; load folding mode
+;; (load "folding" 'nomessage 'noerror)
+;; (folding-mode-add-find-file-hook)
+;; ;; (folding-add-to-marks-list 'matlab-mode "%--- <<"  "%--- >>"  nil t)
+;; (add-hook 'matlab-mode-hook 'folding-mode)
+
+
+** Applications
+*** internal shell
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin:/usr/X11/bin:/usr/texbin"))
+(setq exec-path (append (split-string-and-unquote (getenv "PATH") ":") exec-path))
+
+*** MacTex 2015
+(setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
+(setq exec-path (append exec-path '("/Library/TeX/texbin")))
+
+*** MacTex(Texlive) 2012
+(setenv "PATH" (concat "/usr:local/bin:/usr/local/texlive/2012/bin/x86_64-darwin" (getenv "PATH")) t)
+(setq exec-path (append exec-path '("/usr/local/texlive/2012/bin/x86_64-darwin")))
+;; ----- Load Auctex
+(setq LaTeX-command "latex -synctex=1")
+;(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/auctex/")
+(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/auctex-11.86/")
+(load "auctex.el" nil t t)
+(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/auctex-11.86/preview/")
+(load "preview-latex.el" nil t t)
+(setq TeX-PDF-mode t)
+(setq LaTeX-math-mode t)
+(add-hook 'Latex-mode-hook '(lambda () (outline-minor-mode t)))
+;; (setq outline-minor-mode t)
+(setq TeX-math-close-double-dollar t)
+(setq TeX-electric-sub-and-superscript t)
+;(setq outline-mode-prefix-map "C-")
+;; ----- setup Synctex+SKim
+(add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
+(setq TeX-source-correlate-method 'synctex)
+(server-start)
+(add-hook 'LaTeX-mode-hook
+	  (lambda ()
+	    (add-to-list 'TeX-expand-list '("%q" skim-make-url))))
+(defun skim-make-url () (concat
+			 (TeX-current-line)
+			 " "
+			 "\"" (expand-file-name (funcall file (TeX-output-extension) t)
+					   (file-name-directory (TeX-master-file))) "\""
+			 " "
+			 "\""(buffer-file-name)"\""))
+(setq TeX-view-program-list 
+      '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline %q")))
+(setq TeX-view-program-selection '((output-pdf "Skim")))
+; (add-hook 'Latex-mode-hook 'turn-on-flyspell)
+; (add-hook 'latex-mode-hook 'turn-on-auto-fill)
+(autoload 'reftex-mode     "reftex" "RefTeX Minor Mode" t)
+(autoload 'turn-on-reftex  "reftex" "RefTeX Minor Mode" nil)
+(autoload 'reftex-citation "reftex-cite" "Make citation" nil)
+(autoload 'reftex-index-phrase-mode "reftex-index" "Phrase mode" t)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)   ; with AUCTeX LaTeX mode
+(add-hook 'latex-mode-hook 'turn-on-reftex)   ; with Emacs latex mode
+(autoload 'turn-on-bib-cite "bib-cite")
+(add-hook 'Latex-mode-hook 'turn-on-bib-cite)
+; CJK package setting
+;; (load-library "/usr/local/texlive/texmf-local/cjk-4.8.3/utils/lisp/emacs/cjk-enc")
+;; ; (load-library "/usr/local/texlive/texmf-local/cjk-4.8.3/utils/lisp/cjktilde")
+;; (autoload 'CJK-insert-space "/usr/local/texlive/texmf-local/cjk-4.8.3/utils/lisp/cjkspace"
+;;   "Insert tildes appropriately in CJK document." t)
+;; (defun my-LaTeX-mode-hook ()
+;;   "My personal key definitions for LaTeX mode."
+;;       (define-key LaTeX-mode-map " " 'CJK-insert-space))
+;; (add-hook 'LaTeX-mode-hook 'my-LaTeX-mode-hook)
+
+*** cocoAspell 
+(setq ispell-program-name "aspell"
+      ispell-dictionary "english")
+      ;; ispell-dictionary-alist
+      ;; (let ((default '("[A-Za-z]" "[^A-Za-z]" "[']" nil
+      ;;                  ("-B" "-d" "english" "--dict-dir"
+      ;;                   "/Library/Application Support/cocoAspell/aspell6-en-6.0-0")
+      ;;                  nil iso-8859-1)))
+      ;;   `((nil ,@default)
+      ;;     ("english" ,@default))))
+
+*** MATLAB
+(setenv "matlabroot" (concat (getenv "matlabroot") "/Applications/MATLAB_R2013a_Student.app"))
+(setenv "LD_LIBRARY_PATH" (concat (getenv "LD_LIBRARY_PATH") "/usr/local/lib:/Applications/MATLAB_R2013a_Student.app/bin/:/Applications/MATLAB_R2013a_Student.app/runtime/maci64:/Applications/MATLAB_R2013a_Student.app/sys/os/maci64:${matlabroot}/bin/maci64"))
+(setenv "DYLD_FALLBACK_LIBRARY_PATH" (concat (getenv "DYLD_FALLBACK_LIBRARY_PATH") "/usr/local/lib:/lib:/usr/lib:/Applications/MATLAB_R2013a_Student.app/bin/maci64"))
+(setenv "MATLAB_JAVA" "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home")
+
+; set up path for 2012b
+;;(setenv "matlabroot" (concat (getenv "matlabroot") "/Applications/MATLAB_R2012b.app"))
+;; (setenv "LD_LIBRARY_PATH" (concat (getenv "LD_LIBRARY_PATH") "/usr/local/lib:/Applications/MATLAB_R2012b.app/bin/:/Applications/MATLAB_R2012b.app/runtime/maci64:/Applications/MATLAB_R2012b.app/sys/os/maci64:${matlabroot}/bin/maci64"))
+;; (setenv "DYLD_FALLBACK_LIBRARY_PATH" (concat (getenv "DYLD_FALLBACK_LIBRARY_PATH") "/usr/local/lib:/lib:/usr/lib:/Applications/MATLAB_R2012b.app/bin/maci64"))
+
+*** Simbody and Opensim
+;; (setenv "LD_LIBRARY_PATH" (concat (getenv "LD_LIBRARY_PATH") "/Applications/Opensim/install-xcode/lib:/Applications/Simbody/install-test/lib:"))
+;; (setenv "DYLD_LIBRARY_PATH" (concat (getenv "DYLD_LIBRARY_PATH") "/Applications/Opensim/install-xcode/lib:/Applications/Simbody/install-test/lib:"))
+;; (setenv "SIMBODY_HOME" "/Applications/Simbody/install-test")
+;; (setenv "OPENSIM_HOME" "/Applications/Opensim/install-xcode")
+;; (setenv "PATH" (concat "/Applications/Opensim/install-xcode/bin:/Applications/Opensim/install-xcode/lib:" (getenv "PATH") ))
+;; (setenv "JAVA_HOME" "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home")
+
+
+** Emacs modes
+
+*** org mode
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+;;(global-set-key "\C-cb" 'org-iswitchb)
+;;After changing one of these lines, use C-c C-c with the cursor still in the line to make the changes known to Org mode. 
+;; task overall status: TODO, WAITING, INPROGRESS, DONE 
+;; in-task status (for INPROGRESS): START, CONTINUE, PAUSE, DONE
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "WAITING(w@/!)" "INPROGRESS(i)" "|" "DONE(d!)" "CANCELED(k@)") 
+	(sequence "START(s!)" "CONTINUE(c!)" "PAUSED(p!)" "|" "DONE(d!)") 
+	))
+;To define TODO keywords that are valid only in a single file, use the following text anywhere in the file.
+;
+;     #+TODO: TODO(t) | DONE(d)
+;     #+TODO: REPORT(r) BUG(b) KNOWNCAUSE(k) | FIXED(f)
+;     #+TODO: | CANCELED(c)
+(setq org-log-done 'time)
+(setq org-agenda-files (quote ("~/org"
+                               "~/org/hku"
+                               "~/org/paper_review")))
+*** highlight-symbol
+(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/")
+(require 'highlight-symbol)
+(global-set-key [(control f4)] 'highlight-symbol-at-point)
+(global-set-key [f4] 'highlight-symbol-next)
+(global-set-key [(shift f4)] 'highlight-symbol-prev)
+(global-set-key [(meta f4)] 'highlight-symbol-prev)
+(global-set-key [(control meta f4)] 'highlight-symbol-query-replace)
+(global-set-key (kbd "C-c ;") 'comment-region)
+
+
+*** auto-complete
+(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/auto-complete/etc/")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "/Applications/Emacs.app/Contents/Resources/auto-complete/etc//ac-dict")
+(ac-config-default)
+(add-to-list 'ac-modes 'latex-mode)
+(add-to-list 'ac-modes 'matlab-mode)
+
+
+*** Yasnippet
+;; (add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/yasnippet")
+;; (require 'yasnippet) ;; not yasnippet-bundle
+
+;; (yas/initialize)
+;; (yas/load-directory "/Applications/Emacs.app/Contents/Resources/yasnippet/snippets")
+
+
+*** CEDET
+;; See cedet/common/cedet.info for configuration details.
+;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
+;; CEDET component (including EIEIO) gets activated by another 
+;; package (Gnus, auth-source, ...).
+(load-file "/Applications/Emacs.app/Contents/Resources/cedet/common/cedet.el")
+
+;; Enable EDE (Project Management) features
+;;(global-ede-mode 1)
+
+;; Enable EDE for a pre-existing C++ project
+;; (ede-cpp-root-project "NAME" :file "~/myproject/Makefile")
+
+
+;; Enabling Semantic (code-parsing, smart completion) features
+;; Select one of the following:
+
+;; * This enables the database and idle reparse engines
+;;(semantic-load-enable-minimum-features)
+
+;; * This enables some tools useful for coding, such as summary mode,
+;;   imenu support, and the semantic navigator
+;;(semantic-load-enable-code-helpers)
+
+;; * This enables even more coding tools such as intellisense mode,
+;;   decoration mode, and stickyfunc mode (plus regular code helpers)
+;; (semantic-load-enable-gaudy-code-helpers)
+
+;; * This enables the use of Exuberant ctags if you have it installed.
+;;   If you use C++ templates or boost, you should NOT enable it.
+;; (semantic-load-enable-all-exuberent-ctags-support)
+;;   Or, use one of these two types of support.
+;;   Add support for new languages only via ctags.
+;; (semantic-load-enable-primary-exuberent-ctags-support)
+;;   Add support for using ctags as a backup parser.
+;; (semantic-load-enable-secondary-exuberent-ctags-support)
+
+;; Enable SRecode (Template management) minor-mode.
+;; (global-srecode-minor-mode 1)
+
+
+;; ----- Load ECB
+;; (add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/ecb/")
+;; ;;(require 'ecb)
+;; (setq stack-trace-on-error t)
+;; (require 'ecb-autoloads)
+
+*** matlab-emacs
+(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/M-mode/")
+(load-library "matlab-load")
+;(setq matlab-mode-install-path (quote ("/Applications/Emacs.app/Contents/Resources/M-mode/")))
+(setq matlab-auto-fill t)
+(setq matlab-comment-column 40)
+(setq matlab-comment-region-s "%--- ")
+(setq matlab-completion-technique 'increment)
+(setq matlab-fill-fudge-hard-maximum 81)
+(setq matlab-highlight-cross-function-variables t)
+;;(setq matlab-shell-command "/Applications/MATLAB_R2012b.app/bin/matlab")
+(setq matlab-shell-command "/Applications/MATLAB_R2013a_Student.app/bin/matlab")
+(setq matlab-vers-on-startup t)
+(setq matlab-shell-input-ring-size 100)
+(setq matlab-indent-function-body nil)
+(setq matlab-indent-level 2)
+;; (setq matlab-shell-logo "/Applications/MATLAB_R2012b.app/toolbox/nnet/nnresource/icon16/matlab.png")
+;(setq mlint-programs (quote ("/Applications/MATLAB_R2012b.app/bin/maci64/mlint" "mlint" "mac/mlint" )))
+(setq mlint-programs '("/Applications/MATLAB_R2013a_Student.app/bin/maci64/mlint"))
+(setq matlab-show-mlint-warnings t)
+(setq mlint-verbose t)
+;;(setq mlint-programs '("/Applications/MATLAB_R2012b.app//bin/maci64/mlint"))
+
+;(autoload 'mlint-minor-mode "mlint" nil t)
+;(add-hook 'matlab-mode-hook (lambda () (mlint-minor-mode t)))
+;; Enable CEDET feature support for MATLAB code. (Optional)
+;;(matlab-cedet-setup)
+;;(add-hook 'matlab-mode-hook '(lambda () (mlint-minor-mode)))
+;; (defface ac-matlab-candidate-face
+;;   '((t (:background "PaleGreen" :foreground "black")))
+;;   "Face for matlab candidate."
+;;   :group 'auto-complete)
+
+;; (defface ac-matlab-selection-face
+;;   '((t (:background "DarkGreen" :foreground "white")))
+;;   "Face for matlab selected candidate."
+;;   :group 'auto-complete)
+
+;; (defun matlab-complete-symbol-list (&optional arg)
+
+;;   (interactive "P")
+;;   ;(matlab-navigation-syntax
+;;     (let* ((prefix (if (and (not (eq last-command 'matlab-complete-symbol))
+;; 			    (member (preceding-char) '(?  ?\t ?\n ?, ?\( ?\[ ?\')))
+;; 		       ""
+;; 		     (buffer-substring-no-properties
+;; 		      (save-excursion (forward-word -1) (point))
+;; 		      (point))))
+;; 	   (sem (matlab-lattr-semantics prefix)))
+;;       (if (not (eq last-command 'matlab-complete-symbol))
+;; 	  (setq matlab-last-prefix prefix
+;; 		matlab-last-semantic sem
+;; 		matlab-completion-search-state
+;; 		(cond ((eq sem 'solo)
+;; 		       '(matlab-solo-completions
+;; 			 matlab-find-user-functions
+;; 			 matlab-find-recent-variable))
+;; 		      ((eq sem 'boolean)
+;; 		       '(matlab-find-recent-variable
+;; 			 matlab-boolean-completions
+;; 			 matlab-find-user-functions
+;; 			 matlab-value-completions))
+;; 		      ((eq sem 'value)
+;; 		       '(matlab-find-recent-variable
+;; 			 matlab-find-user-functions
+;; 			 matlab-value-completions
+;; 			 matlab-boolean-completions))
+;; 		      ((eq sem 'property)
+;; 		       '(matlab-property-completions
+;; 			 matlab-find-user-functions
+;; 			 matlab-find-recent-variable
+;; 			 matlab-value-completions))
+;; 		      (t '(matlab-find-recent-variable
+;; 			   matlab-find-user-functions
+;; 			   matlab-value-completions
+;; 			   matlab-boolean-completions)))))
+
+;;       (let ((allsyms (apply 'append
+;; 			    (mapcar (lambda (f) (funcall f prefix))
+;; 				    matlab-completion-search-state))))
+;; 	(matlab-uniquafy-list allsyms))))
+;; (defvar ac-source-matlab
+;;   '((candidates
+;;      . (lambda ()
+;; 	 (matlab-complete-symbol-list)))
+;;     (candidate-face . ac-matlab-candidate-face)
+;;     (selection-face . ac-matlab-selection-face)
+;; ))
+;(add-hook 'matlab-mode-hook (lambda ()
+			      ;; (add-to-list 'ac-sources 'ac-source-matlab)
+			      ;; (add-to-list 'ac-sources 'ac-source-yasnippet)))
+
+
+*** folding mode
+;; load folding mode
+;; (load "folding" 'nomessage 'noerror)
+;; (folding-mode-add-find-file-hook)
+;; ;; (folding-add-to-marks-list 'matlab-mode "%--- <<"  "%--- >>"  nil t)
+;; (add-hook 'matlab-mode-hook 'folding-mode)
+
+
