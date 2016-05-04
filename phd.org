@@ -2,23 +2,29 @@
   [[file:~/Research/documents/thesis/][Directory]]
   [[file:~/Research/documents/thesis/org/notes.org][note.org]]
 * Tasks
-** TODO Presentation slides
-   DEADLINE: <2016-04-30 Sat 23:59>
-*** outline
-    SCHEDULED: <2016-04-29 Fri 14:00-17:00>
-    [[file:~/Research/documents/thesis/org/notes.org][note.org]]
+** Revise presentation slides [0%]
+   DEADLINE: <2016-05-06 Fri>
+   [[file:~/Research/documents/thesis/org/notes.org][note.org]]
+*** TODO revise Part 1 slides
+    SCHEDULED: <2016-05-03 Tue 18:00>
+*** TODO revise Part 2 slides
+    SCHEDULED: <2016-05-04 Tue 16:00>
+*** TODO revise Part 3 slides
+    SCHEDULED: <2016-05-05 Tue 22:00>
 
 ** TODO Documentations
    SCHEDULED: <2016-05-01 Sun>
    will arrive in May
 
-** TODO buy airplane ticket
-   SCHEDULED: <2016-04-29 Fri 23:00>
+*** DONE buy airplane ticket
+    CLOSED: [2016-05-03 Tue 19:36] SCHEDULED: <2016-05-03 Tue 14:00>
+
 *** DONE Contact Nakata
     CLOSED: [2016-04-27 Wed 12:23] SCHEDULED: <2016-04-27 Wed 12:00>
 * Degree application schedue
 ** TODO submission of the 3rd journal
-   SCHEDULED: <2016-04-29 Fri 23:00>
+   SCHEDULED: <2016-05-05 Thu 18:00>
+
 ** DONE Meeting with Ishiguro
    CLOSED: [2016-04-27 Wed 00:36]
 <2016-04-11 Mon>--<2016-04-23 Sat>
@@ -29,9 +35,11 @@
     - thesis summary (the table in the conclusion Meeting)
 ** meeting with Ishiguro
    SCHEDULED: <2016-05-07 Sat 11:00-12:00>
-** meeting with Hosoda
-   SCHEDULED: <2016-05-02 Mon 11:00>
-** meeting with Arai
+** DONE meeting with Hosoda
+   CLOSED: [2016-05-03 Tue 10:48] SCHEDULED: <2016-05-02 Mon 11:00-12:00>
+
+** DONE meeting with Arai
+   CLOSED: [2016-05-03 Tue 10:49] SCHEDULED: <2016-05-02 Mon 14:00-15:00>
 *** DONE email arai sensei again
     CLOSED: [2016-04-29 Fri 14:00] SCHEDULED: <2016-04-29 Fri 14:00>
 ** Oral defense
@@ -40,9 +48,9 @@
    DEADLINE: <2016-06-15 Wed>
 ** Submission of all documents
    DEADLINE: <2016-06-20 Mon>
- 
-
-
-
-
-
+** Faculty meeting
+   July
+** Final defense result
+   <2016-08-26 Fri>
+** Committe meeting and degree granting
+   <2016-09-23 Fri>

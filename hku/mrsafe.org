@@ -2,14 +2,150 @@
   [[file:~/Work/HKU/MRcompatible_platform/][Working directory]]
 
 * notes
-** TODO finish dynamics modeling
-   SCHEDULED: <2016-04-27 Wed 14:00>
-** DONE ppt for meeting
-   CLOSED: [2016-04-28 Thu 10:40] SCHEDULED: <2016-04-27 Wed 16:00>
+  
+** TODO meeting material
+   SCHEDULED: <2016-05-03 Tue 21:00>
+   - prepare some figures about friction modeling at gears
+   - complete combining equations from all FBD
+
+* meeting
+
+** progress meeting
+   SCHEDULED: <2016-05-04 Wed 15:00 +1w>
+   - State "DONE"       from "TODO"       [2016-04-27 Thu 22:00]
+   :PROPERTIES:
+   :LAST_REPEAT: [2016-04-28 Thu 10:55]
+   :END:
 
 * tasks
-** TODO dynamics modeling [0%]
-- [ ] Free body diagram
+** Dynamics modeling
+*** elements for modeling
+**** motor gear connected to the stepper motor power source
+**** piston 1
+     connected to the motor gear **** water 1
+     water inside upper pipeline
+**** spring-damper 1
+     between piston 1 and water 1
+**** spring-damper 2
+     between water 1 and piston 2
+**** piston 2
+     connected to the gear end effector
+**** gear end effector 
+     connected to the end effector
+**** piston 3
+     connected to the gear end effector
+**** spring-damper 3
+     between piston 3 and water 2
+**** water 2
+     water inside lower pipeline
+**** spring-damper 4
+     between water 2 and piston 4
+**** piston 4
+     connected to the motor gear *** symbol notations
+    
+    | <30>                           | <20>                 | <10>       | <30>                           | <15>            |
+    | Description                    | symbols              | physical parameters (P)/kinematics parameters (K)/force variable (F) | how to get                     | component       |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | motor gear inertia             | I_m                | P          | experimment                    | motor gear      |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | motor gear radius              | r_m                | P          | design                         | motor gear      |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | motor gear angular displacement | \theta_m (cw \+)   | K          | system input/output             | motor gear      |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | torque by stepper motor        | \tau_m             | F          | system input                   | motor gear      |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | frictional torque at motor gear joint | \hat \tau_m        | F          | \mu_m,f_R,r_m            | motor gear      |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | frictional coefficient at motor gear joint | \mu_m              | P          | experiment                     | motor gear      |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | reaction forces of the moment couple at the two contact points | f_m                | F          | internal                       | motor gear      |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | pressure force from water      | f_wp               | F          | f_R                          |                 |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | reaction force at joint        | f_R                | F          | f_wp                         | motor gear      |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | displacement of piston 1       | x_1 (right \+)     | K          | \theta_m                     | piston 1        |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | mass of piston 1               | m_m                | P          | design                         | piston 1        |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | spring constant                | k                  | P          | k=B\frac{A}{L}               | water 1         |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | damping coefficient of water   | d                  | P          | experiment                     | water 1         |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | bulk constant of water         | B                  | P          | design (literature)            | water 1         |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | cross section area of pipeline 1 | A                  | P          | design                         | pipeline 1      |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | length of pipeline 1           | L                  | P          | design                         | pipeline  1     |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | displacement of water          | x_{w1}             | K          | internal                       | water 1         |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | mass of water                  | m_w                | P          | design                         | water 1         |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | friction inside pipeline       | \hat f_w           | F          | \hat f_w = H_f \rho g A      | water 1         |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | frictional weight of pipeline  | H_{f1}             |            | H_{f1} = \frac{\bar f L ({\dot x_{w1}})^2}{2gd}$ | water 1         |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | frictional constant of pipeline | \bar f             | P          | \bar f = \frac{64}{Re}       | water 1         |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | Reynolds number                | Re                 | P          | design (literature)            | water 1         |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | displacement of piston 2       | x_2 (right \+)     | K          | \theta_e                     | piston 2        |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | mass of piston 2               | m_e                | P          | design                         | piston 2        |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | inertia of effector gear       | I_e                | P          | design                         | effector gear   |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | radius of effector gear        | r_e                | P          | design                         | effector gear   |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | resulting moment               | \tau_e             | F          | \tau_e = f_e r_e             | effector gear   |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | resulting couple               | f_e                | F          | \tau_e = f_e r_e             | effector gear   |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | reaction force at joint        | f_{Re}             | F          | f_{Re} = 2 f_{wp}            | effector gear   |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | frictional torque              | \hat \tau          | F          | \mu_e , f_{Re}, r_e      | effector gear   |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | angular displacement of effector gear | \theta_e           | K          | system output                  | effector gear   |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | displacement of piston 3       | x_3 (left \+)      | K          | \theta_e                       | piston 3        |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | displacement of water 2        | x_{w2}             | K          | internal                       | water 2         |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | mass of water 2                | m_w                | P          | design                         | water 2         |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | frictional weight of pipeline  | H_{f2}             |            | H_{f2} = \frac{\bar f L ({\dot x_{w2}})^2}{2gd}$ | water 2         |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | displacement of piston 4       | x_4 (left \+)      | K          | \theta_m                     | piston 4        |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+    | mass of piston 4               | m_m                | P          | design                         | piston 4        |
+    |--------------------------------+----------------------+------------+--------------------------------+-----------------|
+
+     
+
+*** TODO Free body diagrams 
+
+*** TODO Combine equations and Find necessary constraint equations
+|            |                                                                                                                |                   |                     |
+| rigid body | equations of motion                                                                                            | unknown variables | number of equations |
+|------------+----------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
+| motor gear | \tau_m - \hat \tau_m = I_m(\ddot \theta_m)                                                                     | \f_{wp}           |                     |
+|            | \hat \tau_m = \mu_m abs(f_R) r_m                                                                               | (f_m,\tau_m)      |                     |
+|            | f_R = 2f_{wp}                                                                                                  |                   |                     |
+|            | \tau_m = f_m r_m                                                                                               |                   |                     |
+|            |                                                                                                                |                   |                     |
+|            | \tau_m - \mu_m abs(2f_{wp}) r_m = I_m (\ddot \theta_m)                                                         |                   |                     |
+|------------+----------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
+| piston 1   | f_m - k(x_1 - x_{w1}) - d({\dot x}_1 - {\dot x}_{w1}) = m_m {\ddot x_1}                                        | x_{w1}            |                     |
+|            | x_1 = \theta_m r_m                                                                                             | (f_m)             |                     |
+|            |                                                                                                                |                   |                     |
+|            | \frac{\tau_m}{r_m} - k(\theta_m r_m - x_{w1}) - d( {\dot \theta}_m r_m - {\dot x}_{w1}) = m_m {\ddot \theta}_m |                   |                     |
+|------------+----------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
+|            |                                                                                                                |                   |                     |
+
+
+*** TODO check friction model between gear and shaft (sliding friction)
+*** TODO verification
 ** TODO paper draft 
    
 ** TODO submit paper
@@ -190,15 +326,6 @@ Specification
 *** Future work
     - Extensible to other clinical applications/surgeries
     - Difficulty even using robot, and pave a way to our future work in regards of model-free catheter control
-
-* meeting
-
-** TODO progress meeting
-   SCHEDULED: <2016-05-04 Wed 18:45 +1w>
-   - State "DONE"       from "TODO"       [2016-04-27 Thu 22:00]
-   :PROPERTIES:
-   :LAST_REPEAT: [2016-04-28 Thu 10:55]
-   :END:
 
 
 

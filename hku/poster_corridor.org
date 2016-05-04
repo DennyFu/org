@@ -11,7 +11,7 @@
    
 * Task
 
-** TODO submit poster
+** TODO submit poster [pending now]
    DEADLINE: <2016-04-30 Fri>
 
 * DONE Poster outline

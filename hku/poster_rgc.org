@@ -1,7 +1,7 @@
 * General info
 [[file:~/Work/HKU/Poster_RGC_2016/][Working directory]]
 * Task
-** TODO submit poster
+** TODO submit poster [pending now]
    DEADLINE: <2016-04-29 Fri>
 
 * Poster outline

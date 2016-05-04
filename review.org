@@ -387,3 +387,15 @@ The results are promising, but the paper is still not publishable because some i
        
 **** Figure 6:
      - please indicate which frames are fixed and which frames are moving 
+* IROS
+
+** TODO review IROS 2016
+   SCHEDULED: <2016-05-07 Sat> DEADLINE: <2016-05-09 Mon>
+      
+*** General info
+- [[file:~/Work/Review/IROS_2016][working directory]]
+- [[file:~/Work/Review/IROS_2016/IROS16_0928_MS.pdf::%25PDF-1.5][paper pdf]]
+- Title: Motor Channelling for Safe and Effective Dynamic Constraints in Minimally Invasive Surgery
+- Authors: Maria Grammatikopoulou, Konrad Leibrandt, and Guang-Zhong Yang, Fellow, IEEE
+*** Review report
+**** notes to myself take templete from previous IROS review by Ka wai

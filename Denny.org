@@ -1,9 +1,18 @@
 * notes
 * today's todo
-** DONE call daddy not go tonight dinner
-   CLOSED: [2016-04-29 Fri 13:54] SCHEDULED: <2016-04-29 Fri 14:00>
+** 29 April 2016
+*** DONE call daddy not go tonight dinner
+    CLOSED: [2016-04-29 Fri 13:54] SCHEDULED: <2016-04-29 Fri 14:00>
+** 3 May 2016
+*** DONE get passport 
+    CLOSED: [2016-05-03 Tue 10:00]
+
 * Emacs
-** task
-*** TODO enable preview-latex
-*** TODO fix mbp's mactex
+** tasks
+*** TODO add TODO states					      :emacs:
+*** TODO enable preview-latex					      :emacs:
+*** TODO fix aspell					      :emacs:
+    [[https://tug.org/mactex/elcapitan.html][internet source]]
+*** DONE fix mbp's mactex					      :emacs:
+    CLOSED: [2016-05-03 Tue 15:48]
 
