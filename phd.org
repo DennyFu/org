@@ -48,3 +48,181 @@
    <2016-08-26 Fri>
 ** Committe meeting and degree granting
    <2016-09-23 Fri>
+
+
+
+* slides outline
+speech hints are inside ()
+
+** overview
+
+*** motivation
+to show why the research is important
+
+**** benefits of musculoskeletal robots
+***** more dexterous
+***** more safe
+***** versatile
+
+**** potential applications
+***** replacing human work
+      example figure
+***** medical applications
+      example figure
+
+**** control difficulties hinders real applications
+***** difficult to control many muscles and many joints
+***** difficult to obtain analytical model
+
+**** a fly-in block: 
+     how to control musculoskeletal systems?
+
+
+*** bio-inspired control strategy -- muscle synergies
+to introduce what is muscle synergies
+(biological creatures face the control difficulties...)
+
+**** a muscle synergy =  co-activation of muscles
+      figure of muscle synergies decomposition
+
+**** reduces control dimensionality
+      pointer to indicate controller that computes synergy activation
+
+**** A big fly-in block: 
+      can it be applied in musculoskeletal robots?
+      how can a robot obtain muscle synergies?
+      (this thesis studies about these two questions....)
+
+
+*** Thesis overview
+    to give an overview of the research study
+    
+**** with the two questions in the previous slides
+
+**** a process chart showing the 3 parts
+
+
+*** Definition - muscle synergies
+    to notice time invariant synergies are studied
+
+**** Time invariant synergies
+     - Fixed muscle co-activation for all time
+     - equation
+
+**** Dimensionality reduction 
+     - dim(a) ≤ dim(u)
+
+**** extraction of synergies
+     - Tools perform linear matrix factorization with conceptual diagram
+       - Nonnegative Matrix Factorization
+       - Principle component analysis
+
+
+*** Definition - musculoskeletal system
+    to notice linear muscles are studied
+
+**** linear muscle model
+     - equations of linear relation to control u
+       - force output
+       - torque output
+     - figure of a simple arm model
+
+**** Nonlinear systems that are affine in control
+     - equation of motion: indicate affine in control
+     - equivalent state space equations with end effector output
+     
+**** A human-like robotic arm simulator
+     - 3 joints, 10 muscles,
+     - move on horizontal plane
+     - figure
+
+
+** part 1
+   
+*** Motivation
+    To show the objective is to verify the feasibility of utilizing synergies
+    
+    - preceded by the thesis overview slide showing the two issues
+
+**** Objective (concerning about the two questions in overview)
+     - to verify feasibility of dimensionality reduction in control
+       - utilizing synergies in control
+     - to get some hints about synergies extraction
+       (the problem of how to extract is about studying innate properties of data sample source)
+       - study synergies sets that inherit different properties (optimality)
+
+**** related work
+     - Chharab's work where time varying synergies were investigated
+
+*** Methodology
+    Briefly description
+
+**** Comparison of synergies extracted from individually optimized control signals ~ 1 slide
+
+***** conceptual diagram
+      optimize control signals by certain criterion -> synergies -> control problem
+      several flow lines
+
+***** the control problem: reaching task of the human-like robotic arm
+      - show figure
+
+***** Different ways of generating data sample source
+      - Optimized by goal-related criterion -> achieving-goal synergies
+      - optimized by different goal-unrelated criteria -> fitness-optimized synergies
+        - weaker constraint on the optimization criterion
+
+***** Capable to solve the control problem in reduced control dimensionality -> Feasible synergies
+
+**** Obtaining Achieving goal synergies
+
+**** Obtaining Fitness-optimized synergies
+
+*** Results and discussion
+**** Utilizing achieving goal synergies
+**** Comparison with fitness optimized synergies
+*** Conclusion
+**** Verified synergies can reduce control dimensionality
+**** Implications
+**** Limitations
+***** Require known analytical model
+*** Related publications
+
+** part 2
+
+   - A copy of thesis overview slide
+
+*** Motivation
+
+    - figure: big cross on EMG-signals and equations + box with text:how to extract synergies?
+**** Proper data sample is given in most literature
+     - EMG
+     - optimized data sample (e.g. Part 1)
+       
+**** Objective
+     - extraction of synergies
+       - from data sample without statistical regularities
+       - without robot's analytical dynamics model
+     - control utilizing synergies
+
+**** Few research has been done
+
+*** Methodology
+
+**** a summary slide
+***** Data generation
+      - end effector starts from random positions
+      - actuated by randomly parameterized control signals
+	- no statistical regularities
+
+***** System identification
+      - estimate 
+
+***** Data preprocessing for extraction of synergies
+
+***** Controller
+
+*** Results
+
+*** Conclusion
+
+*** Related publication
