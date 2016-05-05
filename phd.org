@@ -2,28 +2,22 @@
   [[file:~/Work/thesis/]]
 
 * Tasks
-** Revise presentation slides [0%]
-   DEADLINE: <2016-05-06 Fri>
+** TODO Revise presentation slides 
+   SCHEDULED: <2016-05-05 Thu 13:00-17:00>
    [[file:~/Research/documents/thesis/org/notes.org][note.org]]
-*** TODO revise Part 1 slides
-    SCHEDULED: <2016-05-04 Tue 16:00>
-*** TODO revise Part 2 slides
-    SCHEDULED: <2016-05-04 Tue 16:00>
-*** TODO revise Part 3 slides
-    SCHEDULED: <2016-05-05 Tue 22:00>
 
-** TODO Documentations
+** WAITING Documentations
    SCHEDULED: <2016-05-01 Sun>
-   will arrive in May
+   - State "WAITING"    from "TODO"       [2016-05-05 Thu 11:52] \\
+     waiting for Nakata's contact
 
 *** DONE buy airplane ticket
     CLOSED: [2016-05-03 Tue 19:36] SCHEDULED: <2016-05-03 Tue 14:00>
 
-*** DONE Contact Nakata
-    CLOSED: [2016-04-27 Wed 12:23] SCHEDULED: <2016-04-27 Wed 12:00>
+
 * Degree application schedue
 ** TODO submission of the 3rd journal
-   SCHEDULED: <2016-05-05 Thu 18:00>
+   SCHEDULED: <2016-05-05 Thu 17:30>
 
 ** DONE Meeting with Ishiguro
    CLOSED: [2016-04-27 Wed 00:36]
