@@ -226,4 +226,7 @@ to introduce what is muscle synergies
 *** Conclusion
 
 *** Related publication
+<<<<<<< HEAD
 
+=======
+>>>>>>> 610724485b36bb4870ca0eb441da886ad8d98314
