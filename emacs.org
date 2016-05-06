@@ -1,4 +1,5 @@
 * Emacs todo lists
+** TODO fix auto-complete
 ** DONE add TODO states
    CLOSED: [2016-05-05 Thu 00:53]
    - State "DONE"       from "TODO"       [2016-05-05 Thu 00:53]

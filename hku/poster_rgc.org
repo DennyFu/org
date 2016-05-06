@@ -1,8 +1,10 @@
 * General info
 [[file:~/Work/HKU/Poster_RGC_2016/][Working directory]]
 * Task
-** TODO submit poster [pending now]
+** WAITING submit poster 
    DEADLINE: <2016-04-29 Fri>
+   - State "WAITING"    from "TODO"       [2016-05-06 Fri 10:24] \\
+     request by department has been postponed
 
 * Poster outline
 ** Title

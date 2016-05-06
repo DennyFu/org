@@ -1,24 +1,51 @@
 * general info
-  [[file:~/Work/HKU/MRcompatible_platform/][Working directory]]
-
-* notes
+  :PROPERTIES:
+  :Directory: file:~/Work/HKU/MRcompatible_platform/
+  :END:
   
-** TODO meeting material
-   SCHEDULED: <2016-05-04 Wed 13:00>
+* notes
+
+  
+** DONE meeting material
+   CLOSED: [2016-05-04 Wed 18:44] SCHEDULED: <2016-05-04 Wed 13:00>
    - prepare some figures about friction modeling at gears
    - complete combining equations from all FBD
 
+
 * meeting
 
-** progress meeting
-   SCHEDULED: <2016-05-04 Wed 15:00 +1w>
+** TODO progress meeting
+   SCHEDULED: <2016-05-11 Wed 15:00 +1w>
+   - State "DONE"       from "TODO"       [2016-05-04 Wed 17:00]
    - State "DONE"       from "TODO"       [2016-04-27 Thu 22:00]
    :PROPERTIES:
-   :LAST_REPEAT: [2016-04-28 Thu 10:55]
+   :LAST_REPEAT: [2016-05-06 Fri 10:31]
    :END:
 
 * tasks
 ** Dynamics modeling
+   details are located below
+*** TODO free body diagram
+*** DONE combine equaitons and find necessary constraint equations
+    CLOSED: [2016-05-06 Fri 11:14]
+    - State "DONE"       from "TODO"       [2016-05-06 Fri 11:14]
+*** TODO check friction model between gear and shaft (sliding friction)
+*** TODO check friction model between gear and shaft (sliding friction)
+*** TODO verification
+
+** Paper
+*** TODO draft paper
+    DEADLINE: <2016-06-10 Fri>
+    outline is located below
+    
+*** TODO submit paper
+    SCHEDULED: <2016-06-15 Wed>
+
+
+
+
+
+* Dynamic modeling
 *** elements for modeling
 **** motor gear connected to the stepper motor power source
 **** piston 1
@@ -125,67 +152,66 @@
 
     
 
-*** TODO Free body diagrams 
+*** free body diagrams 
 
-*** DONE Combine equations and Find necessary constraint equations
-    CLOSED: [2016-05-04 Wed 18:43]
-|               |                                                                                                                                                                                             |                   |                     |
-| rigid body    | equations of motion                                                                                                                                                                         | unknown variables | number of equations |
-|---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
-| motor gear    | \tau_m - \hat \tau_m = I_m(\ddot \theta_m)                                                                                                                                                  |                   |                     |
-|               | \hat \tau_m = \mu_m abs(f_R) r_m                                                                                                                                                            |                   |                     |
-|               | f_R = 2f_{wp}                                                                                                                                                                               |                   |                     |
-|               | \tau_m = f_m r_m                                                                                                                                                                            |                   |                     |
-|               |                                                                                                                                                                                             |                   |                     |
-|               | \tau_m - 2 \mu_m r_m abs(f_{wp})  = I_m (\ddot \theta_m)                                                                                                                                    | \f_{wp}           |                     |
-|               |                                                                                                                                                                                             | (f_m,\tau_m)      |                     |
-|---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
-| piston 1      | f_m - k(x_1 - x_{w1}) - d({\dot x}_1 - {\dot x}_{w1}) = m_m {\ddot x_1}                                                                                                                     |                   |                     |
-|               | x_1 = \theta_m r_m                                                                                                                                                                          |                   |                     |
-|               |                                                                                                                                                                                             |                   |                     |
-|               | \frac{\tau_m}{r_m} - k(\theta_m r_m - x_{w1}) - d( {\dot \theta}_m r_m - {\dot x}_{w1}) = r_m m_m {\ddot \theta}_m                                                                          | x_{w1}            |                     |
-|               |                                                                                                                                                                                             | (f_m)             |                     |
-|---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
-| water 1       | k(x_1-x_{w1}) + d({\dot x}_1 - {\dot x}_{w1}) - k(x_{w1}-x_2) - d({\dot x}_{w1} - {\dot x}_2) - \hat f_{w1} = m_w {\ddot x}_{w1}                                                            |                   |                     |
-|               | \hat f_{w1} = H_{f1} \rho g A                                                                                                                                                               |                   |                     |
-|               | H_{f1} = \frac{\bar f L ({\dot x_{w1}})^2}{2gd}                                                                                                                                             |                   |                     |
-|               | \bar f = \frac{64}{Re}                                                                                                                                                                      |                   |                     |
-|               | x_1 = \theta_m r_m                                                                                                                                                                          |                   |                     |
-|               | {\dot x}_1 = r_m {\dot \theta}_m                                                                                                                                                            |                   |                     |
-|               | x_2 = \theta_e r_e                                                                                                                                                                          |                   |                     |
-|               | {\dot x}_2 = r_e {\dot \theta}_e                                                                                                                                                            |                   |                     |
-|               |                                                                                                                                                                                             |                   |                     |
-|               | r_m k(\theta_m) + r_m d({\dot \theta_m}) - 2 k(x_{w1}) - 2 d({\dot x}_{w1})  + r_e k(\theta_e) + r_e d({\dot \theta}_e) - \frac{32 \rho A L ({\dot x_{w1}})^2 }{Re d}  = m_w {\ddot x}_{w1} |                   |                     |
-|---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
-| piston 2      | - f_e + k(x_{w1}) - k(x_2) + d({\dot x}_{w1}) - d({\dot x}_2) = m_e {\ddot x}_2                                                                                                             |                   |                     |
-|               |                                                                                                                                                                                             |                   |                     |
-|               | - f_e + k(x_{w1}) - r_e k(\theta_e) + d({\dot x}_{w1}) - r_e d({\dot \theta}_e) = r_e m_e {\ddot \theta}_e                                                                                  |                   |                     |
-|---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
-| effector gear | \tau_e - \hat \tau_e = I_e({\ddot \theta_e})                                                                                                                                                |                   |                     |
-|               | \hat \tau_e = \mu_e abs(f_{Re}) r_e                                                                                                                                                         |                   |                     |
-|               | f_{Re} = 2f_{wp}                                                                                                                                                                            |                   |                     |
-|               | \tau_e = f_e r_e                                                                                                                                                                            |                   |                     |
-|               |                                                                                                                                                                                             |                   |                     |
-|               | f_e r_e - \mu_e abs(2f_{wp}) r_e = I_e (\ddot \theta_m)                                                                                                                                     |                   |                     |
-|---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
-| piston 3      | - f_e - k(x_{3}) + k(x_{w2}) - d({\dot x}_3) + d({\dot x}_{w2}) = m_e {\ddot x}_3                                                                                                           |                   |                     |
-|               | x_3 = x2 = \theta_e r_e                                                                                                                                                                     |                   |                     |
-|               |                                                                                                                                                                                             |                   |                     |
-|               | - f_e - r_e k(\theta_e) + k(x_{w2}) - r_e d({\dot \theta}_e) + d({\dot x}_{w2}) = r_e m_e {\ddot \theta}_e                                                                                  |                   |                     |
-|---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
-| water 2       | k(x_3-x_{w2}) + d({\dot x}_3 - {\dot x}_{w2}) - k(x_{w2}-x_4) - d({\dot x}_{w2} - {\dot x}_4) - \hat f_{w2} = m_w {\ddot x}_{w2}                                                            |                   |                     |
-|               | \hat f_{w2} = H_{f2} \rho g A                                                                                                                                                               |                   |                     |
-|               | H_{f2} = \frac{\bar f L ({\dot x_{w2}})^2}{2gd}                                                                                                                                             |                   |                     |
-|               | \bar f = \frac{64}{Re}                                                                                                                                                                      |                   |                     |
-|               | x_4 = x_1 = \theta_m r_m                                                                                                                                                                    |                   |                     |
-|               |                                                                                                                                                                                             |                   |                     |
-|               | r_e k(\theta_e) + r_e d({\dot \theta}_e) - 2k(x_{w2}) - 2d({\dot x}_{w2}) + r_m k(\theta_m) + r_m d({\dot \theta}_m) - \frac{32 \rho A L ({\dot x_{w2}})^2 }{Re d}  = m_w {\ddot x}_{w2}    |                   |                     |
-|---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
-| piston 4      | f_m + k(x_{w2}) - k(x_4) + d({\dot x}_{w2}) - d({\dot x}_4) = m_m {\ddot x}_4                                                                                                               |                   |                     |
-|               | \tau_m = f_m r_m                                                                                                                                                                            |                   |                     |
-|               |                                                                                                                                                                                             |                   |                     |
-|               | \frac{\tau_m}{r_m} + k(x_{w2}) - r_m k(\theta_m) + d({\dot x}_{w2}) - r_m d({\dot \theta}_m) = r_m m_m {\ddot \theta}_m                                                                     |                   |                     |
-|---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
+*** combine equations and Find necessary constraint equations
+    |               |                                                                                                                                                                                             |                   |                     |
+    | rigid body    | equations of motion                                                                                                                                                                         | unknown variables | number of equations |
+    |---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
+    | motor gear    | \tau_m - \hat \tau_m = I_m(\ddot \theta_m)                                                                                                                                                  |                   |                     |
+    |               | \hat \tau_m = \mu_m abs(f_R) r_m                                                                                                                                                            |                   |                     |
+    |               | f_R = 2f_{wp}                                                                                                                                                                               |                   |                     |
+    |               | \tau_m = f_m r_m                                                                                                                                                                            |                   |                     |
+    |               |                                                                                                                                                                                             |                   |                     |
+    |               | \tau_m - 2 \mu_m r_m abs(f_{wp})  = I_m (\ddot \theta_m)                                                                                                                                    | \f_{wp}           |                     |
+    |               |                                                                                                                                                                                             | (f_m,\tau_m)      |                     |
+    |---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
+    | piston 1      | f_m - k(x_1 - x_{w1}) - d({\dot x}_1 - {\dot x}_{w1}) = m_m {\ddot x_1}                                                                                                                     |                   |                     |
+    |               | x_1 = \theta_m r_m                                                                                                                                                                          |                   |                     |
+    |               |                                                                                                                                                                                             |                   |                     |
+    |               | \frac{\tau_m}{r_m} - k(\theta_m r_m - x_{w1}) - d( {\dot \theta}_m r_m - {\dot x}_{w1}) = r_m m_m {\ddot \theta}_m                                                                          | x_{w1}            |                     |
+    |               |                                                                                                                                                                                             | (f_m)             |                     |
+    |---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
+    | water 1       | k(x_1-x_{w1}) + d({\dot x}_1 - {\dot x}_{w1}) - k(x_{w1}-x_2) - d({\dot x}_{w1} - {\dot x}_2) - \hat f_{w1} = m_w {\ddot x}_{w1}                                                            |                   |                     |
+    |               | \hat f_{w1} = H_{f1} \rho g A                                                                                                                                                               |                   |                     |
+    |               | H_{f1} = \frac{\bar f L ({\dot x_{w1}})^2}{2gd}                                                                                                                                             |                   |                     |
+    |               | \bar f = \frac{64}{Re}                                                                                                                                                                      |                   |                     |
+    |               | x_1 = \theta_m r_m                                                                                                                                                                          |                   |                     |
+    |               | {\dot x}_1 = r_m {\dot \theta}_m                                                                                                                                                            |                   |                     |
+    |               | x_2 = \theta_e r_e                                                                                                                                                                          |                   |                     |
+    |               | {\dot x}_2 = r_e {\dot \theta}_e                                                                                                                                                            |                   |                     |
+    |               |                                                                                                                                                                                             |                   |                     |
+    |               | r_m k(\theta_m) + r_m d({\dot \theta_m}) - 2 k(x_{w1}) - 2 d({\dot x}_{w1})  + r_e k(\theta_e) + r_e d({\dot \theta}_e) - \frac{32 \rho A L ({\dot x_{w1}})^2 }{Re d}  = m_w {\ddot x}_{w1} |                   |                     |
+    |---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
+    | piston 2      | - f_e + k(x_{w1}) - k(x_2) + d({\dot x}_{w1}) - d({\dot x}_2) = m_e {\ddot x}_2                                                                                                             |                   |                     |
+    |               |                                                                                                                                                                                             |                   |                     |
+    |               | - f_e + k(x_{w1}) - r_e k(\theta_e) + d({\dot x}_{w1}) - r_e d({\dot \theta}_e) = r_e m_e {\ddot \theta}_e                                                                                  |                   |                     |
+    |---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
+    | effector gear | \tau_e - \hat \tau_e = I_e({\ddot \theta_e})                                                                                                                                                |                   |                     |
+    |               | \hat \tau_e = \mu_e abs(f_{Re}) r_e                                                                                                                                                         |                   |                     |
+    |               | f_{Re} = 2f_{wp}                                                                                                                                                                            |                   |                     |
+    |               | \tau_e = f_e r_e                                                                                                                                                                            |                   |                     |
+    |               |                                                                                                                                                                                             |                   |                     |
+    |               | f_e r_e - \mu_e abs(2f_{wp}) r_e = I_e (\ddot \theta_m)                                                                                                                                     |                   |                     |
+    |---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
+    | piston 3      | - f_e - k(x_{3}) + k(x_{w2}) - d({\dot x}_3) + d({\dot x}_{w2}) = m_e {\ddot x}_3                                                                                                           |                   |                     |
+    |               | x_3 = x2 = \theta_e r_e                                                                                                                                                                     |                   |                     |
+    |               |                                                                                                                                                                                             |                   |                     |
+    |               | - f_e - r_e k(\theta_e) + k(x_{w2}) - r_e d({\dot \theta}_e) + d({\dot x}_{w2}) = r_e m_e {\ddot \theta}_e                                                                                  |                   |                     |
+    |---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
+    | water 2       | k(x_3-x_{w2}) + d({\dot x}_3 - {\dot x}_{w2}) - k(x_{w2}-x_4) - d({\dot x}_{w2} - {\dot x}_4) - \hat f_{w2} = m_w {\ddot x}_{w2}                                                            |                   |                     |
+    |               | \hat f_{w2} = H_{f2} \rho g A                                                                                                                                                               |                   |                     |
+    |               | H_{f2} = \frac{\bar f L ({\dot x_{w2}})^2}{2gd}                                                                                                                                             |                   |                     |
+    |               | \bar f = \frac{64}{Re}                                                                                                                                                                      |                   |                     |
+    |               | x_4 = x_1 = \theta_m r_m                                                                                                                                                                    |                   |                     |
+    |               |                                                                                                                                                                                             |                   |                     |
+    |               | r_e k(\theta_e) + r_e d({\dot \theta}_e) - 2k(x_{w2}) - 2d({\dot x}_{w2}) + r_m k(\theta_m) + r_m d({\dot \theta}_m) - \frac{32 \rho A L ({\dot x_{w2}})^2 }{Re d}  = m_w {\ddot x}_{w2}    |                   |                     |
+    |---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
+    | piston 4      | f_m + k(x_{w2}) - k(x_4) + d({\dot x}_{w2}) - d({\dot x}_4) = m_m {\ddot x}_4                                                                                                               |                   |                     |
+    |               | \tau_m = f_m r_m                                                                                                                                                                            |                   |                     |
+    |               |                                                                                                                                                                                             |                   |                     |
+    |               | \frac{\tau_m}{r_m} + k(x_{w2}) - r_m k(\theta_m) + d({\dot x}_{w2}) - r_m d({\dot \theta}_m) = r_m m_m {\ddot \theta}_m                                                                     |                   |                     |
+    |---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------|
 
 
 
@@ -227,13 +253,61 @@
 |                |           | I_e + (r_e)^2 m_e |               | -r_e d   | (r_e)^2 d     |                                |          | -r_e k | (r_e)^2 k | 2 \mu_e r_e abs(f_{wp)  |
 |                |           |                   |               |          |               |                                |          |        |           |                         |
 
-*** TODO check friction model between gear and shaft (sliding friction)
-*** TODO verification
-** TODO paper draft 
-   
-** TODO submit paper
-   SCHEDULED: <2016-06-01 Wed>
-   
+\begin{pmatrix}
+I_m & 0 & 0\\
+0 & m_w & 0\\
+0 & 0 & I_e + (r_e)^2 m_e
+\end{pmatrix}
+\begin{pmatrix}
+\ddot \theta_m\\
+\ddot x_w\\
+\ddot \theta_e
+\end{pmatrix}
++ 
+\begin{pmatrix}
+0 & 0 & 0\\
+-r_m d & 2 d & -r_e d\\
+0 & -r_e d & (r_e)^2 d
+\end{pmatrix}
+\begin{pmatrix}
+\dot \theta_m\\
+\dot x_w\\
+\dot \theta_e
+\end{pmatrix}
++ 
+\begin{pmatrix}
+0 & 0 & 0\\
+0 & \frac{32 \rho A L}{Re \cdot d} & 0\\
+0 & 0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+(\dot \theta_m)^2\\
+(\dot x_w)^2\\
+(\dot \theta_e)^2
+\end{pmatrix}
++ 
+\begin{pmatrix}
+0 & 0 & 0\\
+-r_m k & 2 k & -r_e k\\
+0 & -r_e k & (r_e)^2 k
+\end{pmatrix}
+\begin{pmatrix}
+ \theta_m\\
+ x_w\\
+ \theta_e
+\end{pmatrix}
++ 
+\begin{pmatrix}
+2 \mu_m r_m abs(f_{wp})\\
+0\\
+ 2 \mu_e r_e abs(f_{wp})
+\end{pmatrix}
+=0
+
+*** check friction model between gear and shaft (sliding friction)
+*** verification
+
+
 * paper draft 
 ** Title
    Design of a Robotic Platform for MRI-guided Cardiac Electrophysiology (EP)
@@ -409,11 +483,5 @@ Specification
 *** Future work
     - Extensible to other clinical applications/surgeries
     - Difficulty even using robot, and pave a way to our future work in regards of model-free catheter control
-
-
-
-
-
-* Dynamic modeling
  
 

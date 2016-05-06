@@ -7,11 +7,10 @@
    [[file:~/Research/documents/thesis/org/notes.org][note.org]]
 
 ** WAITING Documentations
-   SCHEDULED: <2016-05-01 Sun>
    - State "WAITING"    from "TODO"       [2016-05-05 Thu 11:52] \\
      waiting for Nakata's contact
 
-*** DONE buy airplane ticket
+** DONE buy airplane ticket
     CLOSED: [2016-05-03 Tue 19:36] SCHEDULED: <2016-05-03 Tue 14:00>
 
 
