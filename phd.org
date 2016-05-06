@@ -234,7 +234,7 @@ to introduce what is muscle synergies
       - data-driven, based on inverse dynamcis estimates using sliding mode control
       - null-space control for controlling joint
 
-**** Four slides for each component
+**** Slides for each component in supplimentary slides
 
 *** Results
 **** Results of synergies extraction
@@ -274,6 +274,7 @@ to introduce what is muscle synergies
 ** Thesis Conclusion and Future works
 
 
+
 ** references
 - Xu and Todorov, "Design of a Highly Biomimetic Anthropomorphic Robotic Hand towards Artificial Limb Regeneration," ICRA 2016
 - Artemiadis, P.K., and K.J. Kyriakopoulos. "EMG-Based Control Of a Robot Arm Using Low-Dimensional Embeddings," Robotics, IEEE Transactions On 26.2 (2010) : 393-398.
@@ -286,6 +287,12 @@ to introduce what is muscle synergies
 - S. Yakovenko, N. Krouchev, and T. Drew, “Sequential activation of motor cortical neurons contributes to intralimb coordination during reaching in the cat by modulating muscle synergies,” Journal of neurophysiology, vol. 105, no. 1, pp. 388–409, 2011.
 - M. Chhabra and R. A. Jacobs, “Properties of synergies arising from a theory of optimal motor behavior,” Neural computation, vol. 18, no. 10, pp. 2320–2342, 2006.
 - W. Li and E. Todorov, “Iterative linearization methods for approximately optimal control and estimation of non-linear stochastic system,” International Journal of Control, vol. 80, no. 9, pp. 1439–1453, 2007.
+- M Rolf, J J Steil, and M Gienger, “Goal Babbling Permits Direct Learning of Inverse Kinematics.” IEEE Transactions on Automatic Mental Development, 2(3):216–229, 2010.
+- A Baranes and P Oudeyer, “Active learning of inverse models with intrinsically motivated goal exploration in robots.” Robotics and Autonomous Systems, 61(1):49–73, 2013.
+- C Hartmann, J Boedecker, O Obst, S Ikemoto, and M Asada, “Real- time Inverse Dynamics Learning for Musculoskeletal Robots based on Echo State Gaussian Process Regression.” In Robotics: Science and Systems, pages 1–8, 2012.
+
+
+
 
 
 
