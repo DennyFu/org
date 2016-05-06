@@ -1,5 +1,8 @@
 * General info
-  [[file:~/Work/thesis/]]
+  :PROPERTIES:
+  :Directory: file:~/Work/thesis/
+  :END:
+
 
 * Tasks
 ** TODO Revise presentation slides 
@@ -144,13 +147,15 @@ to introduce what is muscle synergies
     - preceded by the thesis overview slide showing the two issues
 
 **** Objective (concerning about the two questions in overview)
-     - to verify feasibility of dimensionality reduction in control
-       - utilizing synergies in control
+     - to verify feasibility of dimensionality reduction in control utilizing synergies
      - to get some hints about synergies extraction
        (the problem of how to extract is about studying innate properties of data sample source)
-       - study synergies sets that inherit different properties (optimality)
+       - study synergies sets that inherit different properties from data sample sources
 
-**** related work
+**** Related works – synergies arisen from optimal movements
+     - Studies suggest vertebrates follow certain optimal principle in producing goal-directed movements (Uno et al. 1989)
+       - Controller minimizes task goal (e.g distance from target) + certain criterion (e.g. control effort)
+     - Synergies can be extracted from EMG signals (Yakovenko et al. 2011)
      - Chharab's work where time varying synergies were investigated
 
 *** Methodology
@@ -186,6 +191,7 @@ to introduce what is muscle synergies
 ***** Require known analytical model
 *** Related publications
 
+
 ** part 2
 
    - A copy of thesis overview slide
@@ -208,24 +214,80 @@ to introduce what is muscle synergies
 *** Methodology
 
 **** a summary slide
+     one slide to give summary of the proposed method
 ***** Data generation
       - end effector starts from random positions
       - actuated by randomly parameterized control signals
 	- no statistical regularities
 
 ***** System identification
-      - estimate 
+      - estimate forward and inverse dynamics
+      - kernel-based regression
 
 ***** Data preprocessing for extraction of synergies
+      - estimate corresponding optimal control signals
+      - optimality: minimum control effort (Euclidean norm)
+      - system identification and quadractic programming
 
 ***** Controller
+      - following/tracking a desired end effector position trajectory
+      - data-driven, based on inverse dynamcis estimates using sliding mode control
+      - null-space control for controlling joint
+
+**** Four slides for each component
+
+*** Results
+**** Results of synergies extraction
+**** Results of utilizing synergies in control
+
+*** Conclusion
+    
+**** proposed method
+     - extraction from data sample with statistical regularities
+     - proposed to extract synergies from optimal estimates
+       - control signals that produce end effector accelerations by minimum control effort
+     - System identification based on kernel-based regression
+     - Robust task space tracking controller
+
+**** results
+     - Synergies were sucessfully extracted
+     - A desired trajectory was accurately tracked in reduced control dimensionality
+       - 10 -> 5
+
+**** Limitations
+     - requires robot can start from anywhere within task space
+
+*** Related publications
+
+
+** part 3
+   - a copy of thesis overview
+
+*** Motivation
+    
+*** Methodology
 
 *** Results
 
 *** Conclusion
 
-*** Related publication
-<<<<<<< HEAD
+** Thesis Conclusion and Future works
 
-=======
->>>>>>> 610724485b36bb4870ca0eb441da886ad8d98314
+
+** references
+- Xu and Todorov, "Design of a Highly Biomimetic Anthropomorphic Robotic Hand towards Artificial Limb Regeneration," ICRA 2016
+- Artemiadis, P.K., and K.J. Kyriakopoulos. "EMG-Based Control Of a Robot Arm Using Low-Dimensional Embeddings," Robotics, IEEE Transactions On 26.2 (2010) : 393-398.
+- P. Artemiadis, "Emg-based robot control interfaces: Past, present and future,” Advances in Robotics & Automation, vol. 1, no. 02, pp. 10–12, 2012.
+- C. Carignan, J. Tang, and S. Roderick, "Development of an exoskeleton haptic interface for virtual task training," IROS, 3697-3702, 2009
+- N. G. Tsagarakis and D. G. Caldwell, "Development and control of a ’soft- actuated’ exoskeleton for use in physiotherapy and training," Autonomous Robots, vol. 15, no. 1, pp. 21–33, 2003.
+- V. Salvucci, Y. Kimura, S. Oh, and Y. Hori, "Force maximization of biarticularly actuated manipulators using in nity norm," IEEE/ASME Transactions on Mechatronics, vol. 18, no. 3, pp. 1080–1089, 2013.
+- Cheung et al., "Stability of muscle synergies for voluntary actions after cortical stroke in humans," PNAS, 106(46), pp.19563–19568, 2009.
+- Y. Uno, M. Kawato, and R. Suzuki, "Formation and control of optimal trajectory in human multijoint arm movement," Biological cybernetics, vol. 61, no. 2, pp. 89–101, 1989.
+- S. Yakovenko, N. Krouchev, and T. Drew, “Sequential activation of motor cortical neurons contributes to intralimb coordination during reaching in the cat by modulating muscle synergies,” Journal of neurophysiology, vol. 105, no. 1, pp. 388–409, 2011.
+- M. Chhabra and R. A. Jacobs, “Properties of synergies arising from a theory of optimal motor behavior,” Neural computation, vol. 18, no. 10, pp. 2320–2342, 2006.
+- W. Li and E. Todorov, “Iterative linearization methods for approximately optimal control and estimation of non-linear stochastic system,” International Journal of Control, vol. 80, no. 9, pp. 1439–1453, 2007.
+
+
+
+
+
