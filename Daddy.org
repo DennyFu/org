@@ -1,5 +1,5 @@
 * Info
-** 
+
 * Health
 ** follow-up consultation
 *** TODO check cancer index - Dr. Lam
@@ -15,3 +15,7 @@
    - operation start <2016-04-09 Sat 12:00>
 
 * Tasks
+  
+
+** TODO remind warren to bring document
+   SCHEDULED: <2016-05-09 Mon 12:00>

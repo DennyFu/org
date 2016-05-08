@@ -393,9 +393,48 @@ The results are promising, but the paper is still not publishable because some i
    SCHEDULED: <2016-05-07 Sat> DEADLINE: <2016-05-09 Mon>
       
 *** General info
-- [[file:~/Work/Review/IROS_2016][working directory]]
-- [[file:~/Work/Review/IROS_2016/IROS16_0928_MS.pdf::%25PDF-1.5][paper pdf]]
-- Title: Motor Channelling for Safe and Effective Dynamic Constraints in Minimally Invasive Surgery
-- Authors: Maria Grammatikopoulou, Konrad Leibrandt, and Guang-Zhong Yang, Fellow, IEEE
+    :PROPERTIES:
+    :Directory: file:~/Work/Review/IROS_2016
+    :Title: Motor Channelling for Safe and Effective Dynamic Constraints in Minimally Invasive Surgery
+    :Authors: Maria Grammatikopoulou, Konrad Leibrandt, and Guang-Zhong Yang, Fellow, IEEE
+    :END:
+
 *** Review report
-**** notes to myself take templete from previous IROS review by Ka wai
+
+
+**** Motivation
+     Active constraints have been employed in several researches to provide force feedback functionality in order to enhance precision and safety during minimally invasive surgery (MIS). This paper aims to solve several technical challenges in the active constraints framework and to incorporate several features to achieve motor channelling, which provides navigation and haptic feedback to operators in master-slave surgical setups.
+
+**** Methodology
+     This paper proposes to integrate the guidance active constraints (GACs) and forbidden region active constraints (FRACs) to simultaneously enable tool navigation assistance along predefined paths and tool restriction. As a result of the integration, smooth and continuous force-torque rendering is achieved by avoiding switching between attractive and repulsive forces. To achieve bounded rendering forces, a simplified frictional force model from reference [17] is employed to dissipate kinetic energy. The motion of the target anatomy is compensated such that the velocity of the slave manipulator is synchronized with that of the contact point (or the point being contacted) on the target anatomy surface. The contact point motion is estimated by online the signal reconstruction technique called least-squares spectral analysis (LSSA). 
+     
+**** Novelty
+     The novelty of this paper is not clearly stated. 
+It is stated that there is no a unified control strategy that integrate both GACs and (FRACs). 
+However, it has already been done in some literature (please give suggestion here).
+The novelty is weak because it is apparently an integration of existing algorithms.
+
+**** Results
+     The proposed motor chanelling control scheme was validated using the daVinci Research Kit in simulating surface scanning for in situ medical imaging and vessel manipulation for microvascular anastomosis in Totally Endoscopic Robotic Coronary Artery Bypass (TECAB). Results show that the penetration of the anatomy was reduced in the surface scanning task and the distance between the tool and the dynamics phantom surface was reduced in the vessel manipulation task.
+
+**** More detailed comments 
+     The paper is well-organized and well-written, with appropriate equations, figures and especially the high quality video to clearly elaborate the proposed method and results. 
+
+     "Another challenge of active constraints ... instabilities to the robotic control system." is written in the introduction. Please clearly state that what is the corresponding challenge in the preceding paragraph. Is it about the merge of GACs and FRACs? Or is it about the identification of user's intentions? In this paper identifying user's intention is not installed. Instead the user's intentions are "respected" as stated in section II B. 
+
+     About the proposed force-torque profile in Fig. 2, is there possibility that wrong direction of force will be exerted near the constraint boundary? Consider the case where the surface does not align with the constraints boundary due to measurement or estimation error but locates in zone (2) moving towards zone (1). According to the proposed force-torque profile an attractive force to the constraint boundary will give damage to the tissue. The proposed profile may need modification in such case. 
+     It is also better to indicate the direction of force exerted on the manipulator in each zone.
+
+     About the estimation of the motion prediction in section III B, how to determine the number of dominant frequencies $N$ needed in eq. (16) and how many sample $M$ is required? Are the dominant frequencies $\omega_n$ and the time instance $\tau$ updating online or fixed for all time. If $\omega_n$ and $\tau$ are fixed and/or large $M$ is required, the estimation method may only able to predict constant periodic motion. The authors are suggested to take reference from other methods for motion prediction and motion compensation such as "Robotic Motion Compensation for Beating Heart Intracardiac Surgery".
+
+
+
+
+
+
+
+
+
+
+
+

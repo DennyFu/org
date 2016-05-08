@@ -283,6 +283,9 @@ to introduce what is muscle synergies
 - N. G. Tsagarakis and D. G. Caldwell, "Development and control of a ’soft- actuated’ exoskeleton for use in physiotherapy and training," Autonomous Robots, vol. 15, no. 1, pp. 21–33, 2003.
 - V. Salvucci, Y. Kimura, S. Oh, and Y. Hori, "Force maximization of biarticularly actuated manipulators using in nity norm," IEEE/ASME Transactions on Mechatronics, vol. 18, no. 3, pp. 1080–1089, 2013.
 - Cheung et al., "Stability of muscle synergies for voluntary actions after cortical stroke in humans," PNAS, 106(46), pp.19563–19568, 2009.
+- M. C. Tresch and A. Jarc, “The case for and against muscle synergies,” Current Opinion in Neurobiology, vol. 19, pp. 601–607, 2009.
+- E. Todorov and M. I. Jordan, “Optimal feedback control as a theory of motor coordination,” Nature Neuroscience, vol. 5, no. 11, pp. 1226–1235, 2002.
+- E. Todorov, Weiwei Li and Xiuchuan Pan, "From task parameters to motor synergies: A hierarchical framework for approximately-optimal control of redundant manipulators." Journal of Robotic System, vol22, no. 11, pp. 691-710, 2005
 - Y. Uno, M. Kawato, and R. Suzuki, "Formation and control of optimal trajectory in human multijoint arm movement," Biological cybernetics, vol. 61, no. 2, pp. 89–101, 1989.
 - S. Yakovenko, N. Krouchev, and T. Drew, “Sequential activation of motor cortical neurons contributes to intralimb coordination during reaching in the cat by modulating muscle synergies,” Journal of neurophysiology, vol. 105, no. 1, pp. 388–409, 2011.
 - M. Chhabra and R. A. Jacobs, “Properties of synergies arising from a theory of optimal motor behavior,” Neural computation, vol. 18, no. 10, pp. 2320–2342, 2006.
