@@ -17,5 +17,6 @@
 * Tasks
   
 
-** TODO remind warren to bring document
-   SCHEDULED: <2016-05-09 Mon 12:00>
+** DONE remind warren to bring document
+   CLOSED: [2016-05-09 Mon 21:04] SCHEDULED: <2016-05-09 Mon 12:00>
+   - State "DONE"       from "TODO"       [2016-05-09 Mon 14:00]

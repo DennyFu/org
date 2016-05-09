@@ -5,9 +5,10 @@
 
 
 * Tasks
-** TODO Revise presentation slides 
-   SCHEDULED: <2016-05-05 Thu 13:00-17:00>
-   [[file:~/Research/documents/thesis/org/notes.org][note.org]]
+** WAITING Check thesis plagiarism
+   - State "WAITING"    from ""           [2016-05-09 Mon 10:34] \\
+     request sent, waiting for Nakata's reply
+** INPROGRESS Revise presentation slides 
 
 ** WAITING Documentations
    - State "WAITING"    from "TODO"       [2016-05-05 Thu 11:52] \\
@@ -18,8 +19,9 @@
 
 
 * Degree application schedue
-** TODO submission of the 3rd journal
-   SCHEDULED: <2016-05-05 Thu 17:30>
+** DONE submission of the 3rd journal
+   CLOSED: [2016-05-09 Mon 10:29] SCHEDULED: <2016-05-05 Thu 17:30>
+   - State "DONE"       from "TODO"       [2016-05-07 Sat 18:0]
 
 ** DONE Meeting with Ishiguro
    CLOSED: [2016-04-27 Wed 00:36]
@@ -29,8 +31,9 @@
     - main: what cannot be done in the 2nd journal and what has achieved in the current paper
     - (may be need) method explanation
     - thesis summary (the table in the conclusion Meeting)
-** meeting with Ishiguro
-   SCHEDULED: <2016-05-07 Sat 11:00-12:00>
+** DONE meeting with Ishiguro
+   CLOSED: [2016-05-09 Mon 10:30] SCHEDULED: <2016-05-07 Sat 11:00-12:00>
+   - State "DONE"       from ""           [2016-05-09 Mon 10:30]
 ** DONE meeting with Hosoda
    CLOSED: [2016-05-03 Tue 10:48] SCHEDULED: <2016-05-02 Mon 11:00-12:00>
 

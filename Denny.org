@@ -1,12 +1,20 @@
 * notes
 * today's todo
 
+** 9 May 2016
+
+   
+*** check catheter data and revise paper draft
+    SCHEDULED: <2016-05-09 Mon 14:00-17:00>
+*** revise defense slide
+    SCHEDULED: <2016-05-09 Mon 21:00-22:00>
 ** 5 May 2016
 *** defense slides and submit the 3rd journal
 ** 4 May 2016
    
-*** INPROGRESS contact host family
-    SCHEDULED: <2016-05-04 Wed 14:00>
+*** DONE contact host family
+    CLOSED: [2016-05-09 Mon 10:28] SCHEDULED: <2016-05-04 Wed 14:00>
+    - State "DONE"       from "INPROGRESS" [2016-05-09 Mon 10:28]
 ** 3 May 2016
 *** DONE get passport 
     CLOSED: [2016-05-03 Tue 10:00]

@@ -389,8 +389,9 @@ The results are promising, but the paper is still not publishable because some i
      - please indicate which frames are fixed and which frames are moving 
 * IROS
 
-** TODO review IROS 2016
-   SCHEDULED: <2016-05-07 Sat> DEADLINE: <2016-05-09 Mon>
+** DONE review IROS 2016
+   CLOSED: [2016-05-09 Mon 13:44] SCHEDULED: <2016-05-07 Sat> DEADLINE: <2016-05-09 Mon>
+   - State "DONE"       from "INPROGRESS" [2016-05-09 Mon 13:44]
       
 *** General info
     :PROPERTIES:
@@ -425,7 +426,7 @@ The novelty is weak because it is apparently an integration of existing algorith
      About the proposed force-torque profile in Fig. 2, is there possibility that wrong direction of force will be exerted near the constraint boundary? Consider the case where the surface does not align with the constraints boundary due to measurement or estimation error but locates in zone (2) moving towards zone (1). According to the proposed force-torque profile an attractive force to the constraint boundary will give damage to the tissue. The proposed profile may need modification in such case. 
      It is also better to indicate the direction of force exerted on the manipulator in each zone.
 
-     About the estimation of the motion prediction in section III B, how to determine the number of dominant frequencies $N$ needed in eq. (16) and how many sample $M$ is required? Are the dominant frequencies $\omega_n$ and the time instance $\tau$ updating online or fixed for all time. If $\omega_n$ and $\tau$ are fixed and/or large $M$ is required, the estimation method may only able to predict constant periodic motion. The authors are suggested to take reference from other methods for motion prediction and motion compensation such as "Robotic Motion Compensation for Beating Heart Intracardiac Surgery".
+     About the estimation of the motion prediction in section III B, how to determine the number of dominant frequencies $N$ needed in eq. (16) and how many sample $M$ is required? It would be better to demonstrate the estimation result with aperiodic signal. For instance, the results demonstrated in Yuen et al. "Robotic Motion Compensation for Beating Heart Intracardiac Surgery", IJRR, 2009, which is the extension of the reference [14].
 
 
 
