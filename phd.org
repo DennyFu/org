@@ -17,6 +17,11 @@
 ** DONE buy airplane ticket
     CLOSED: [2016-05-03 Tue 19:36] SCHEDULED: <2016-05-03 Tue 14:00>
 
+** TODO consider to remove the simple example in chapter 4
+** TODO change wordings [0%]
+- [ ] fitness-optimized to goal-unrelated and achieving goal to goal related
+- [ ] sub-optimal to omni-directional
+- [ ] non-optimal to no statistical regularities
 
 * Degree application schedue
 ** DONE submission of the 3rd journal
@@ -57,19 +62,17 @@
 
 
 * slides outline
-speech hints are inside ()
 
 ** overview
 
-*** motivation
-to show why the research is important
+*** background
 
 **** benefits of musculoskeletal robots
 ***** more dexterous
 ***** more safe
 ***** versatile
 
-**** potential applications
+**** potential applications ()
 ***** replacing human work
       example figure
 ***** medical applications
@@ -97,6 +100,18 @@ to introduce what is muscle synergies
       can it be applied in musculoskeletal robots?
       how can a robot obtain muscle synergies?
       (this thesis studies about these two questions....)
+
+
+*** muscle synergies in robotic control
+
+
+*** Objectives
+
+**** To verify feasibility of muscle synergies in control
+
+**** To obtain muscle synergies without analytical model
+
+**** To enable robot to obtain muscle synergies
 
 
 *** Thesis overview
@@ -140,7 +155,7 @@ to introduce what is muscle synergies
      - 3 joints, 10 muscles,
      - move on horizontal plane
      - figure
-
+       
 
 ** part 1
    
