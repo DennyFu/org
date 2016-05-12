@@ -17,12 +17,16 @@
 ** DONE buy airplane ticket
     CLOSED: [2016-05-03 Tue 19:36] SCHEDULED: <2016-05-03 Tue 14:00>
 
+<<<<<<< HEAD
 ** TODO consider to remove the simple example in chapter 4
 ** TODO change wordings [0%]
 - [ ] fitness-optimized to goal-unrelated and achieving goal to goal related
 - [ ] sub-optimal to omni-directional
 - [ ] non-optimal to no statistical regularities
 
+=======
+** TODO change fitness-optimized to goal-unrelated and achieving goal to goal related
+>>>>>>> 3096082534181daccd71f22ef5ca54e8e570a221
 * Degree application schedue
 ** DONE submission of the 3rd journal
    CLOSED: [2016-05-09 Mon 10:29] SCHEDULED: <2016-05-05 Thu 17:30>
