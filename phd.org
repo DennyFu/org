@@ -4,7 +4,7 @@
   :END:
 
 
-* Tasks
+* To do tasks
 ** WAITING Check thesis plagiarism
    - State "WAITING"    from ""           [2016-05-09 Mon 10:34] \\
      request sent, waiting for Nakata's reply
@@ -27,6 +27,7 @@
 =======
 ** TODO change fitness-optimized to goal-unrelated and achieving goal to goal related
 >>>>>>> 3096082534181daccd71f22ef5ca54e8e570a221
+** TODO revise chapter 1.2 and 1.3 to show the need of extraction of time invariant synergies from data sample.
 * Degree application schedue
 ** DONE submission of the 3rd journal
    CLOSED: [2016-05-09 Mon 10:29] SCHEDULED: <2016-05-05 Thu 17:30>
