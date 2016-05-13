@@ -6,9 +6,10 @@
 
 * meeting
   
-** internal progress meeting
-   SCHEDULED: <2016-05-09 Mon 11:00 +1w>
-** progress meeting with nisi
+** TODO internal progress meeting
+   SCHEDULED: <2016-05-16 Mon 11:00 +1w>
+   - State "DONE"       from "TODO"           [2016-05-09 Mon 13:00]
+** TODO progress meeting with nisi
    SCHEDULED: <2016-05-13 Fri 18:00 +1w>
    - State "DONE"       from "TODO"       [2016-05-06 Fri 21:00]
    - State "DONE"       from "TODO"       [2016-04-29 Fri 22:00]
