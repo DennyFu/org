@@ -17,17 +17,14 @@
 ** DONE buy airplane ticket
     CLOSED: [2016-05-03 Tue 19:36] SCHEDULED: <2016-05-03 Tue 14:00>
 
-<<<<<<< HEAD
+
 ** TODO consider to remove the simple example in chapter 4
 ** TODO change wordings [0%]
 - [ ] fitness-optimized to goal-unrelated and achieving goal to goal related
 - [ ] sub-optimal to omni-directional
 - [ ] non-optimal to no statistical regularities
 
-=======
-** TODO change fitness-optimized to goal-unrelated and achieving goal to goal related
->>>>>>> 3096082534181daccd71f22ef5ca54e8e570a221
-** TODO revise chapter 1.2 and 1.3 to show the need of extraction of time invariant synergies from data sample.
+** TODO revise chapter 1 to show the need of extraction of time invariant synergies from data sample.
 * Degree application schedue
 ** DONE submission of the 3rd journal
    CLOSED: [2016-05-09 Mon 10:29] SCHEDULED: <2016-05-05 Thu 17:30>
@@ -54,9 +51,9 @@
 ** Oral defense
    SCHEDULED: <2016-05-25 Wed 11:00-12:00>
 ** Submission of thesis title
-   DEADLINE: <2016-06-15 Wed>
+   DEADLINE: <2016-06-08 Wed 17:00>
 ** Submission of all documents
-   DEADLINE: <2016-06-20 Mon>
+   DEADLINE: <2016-06-20 Mon 17:00>
 ** Faculty meeting
    July
 ** Final defense result
@@ -64,7 +61,55 @@
 ** Committe meeting and degree granting
    <2016-09-23 Fri>
 
+* Chapter 1 outline
+  
+** Musculoskeletal robots
 
+** Muscle synergies
+
+*** Muscle synergies simplify control complexity
+biological evidence
+
+*** Time-invariant
+
+*** time-varying synergies
+
+
+** Relationship of muscle synergies and control strategies (Computational aspects of control from biological perspective)
+Introduce control strategies in vertebrates and its relationship (optimal and Task-oriented) to muscle synergies
+
+*** Optimal control strategy
+
+*** Task-oriented control strategy
+
+
+
+** Applications of muscle synergies in robotics
+indicate the engineering purpose is different from biological studies that to find synergies to perform different task 
+
+Applications using time-invariant and time-varying synergies
+
+Describe the pros and cons of each type of synergies in robot control
+
+
+Time-invariant synergies are investigated because of its simplicity, direct implementation of existing feedback control law, and task-independent properties
+
+*** (Internal models, distributes to learning-based control applications)
+
+*** (Goal-directed exploration strategy, as examples of application)
+
+
+** Related control methods in engineering
+(distributes the content to the section applications of muscle synergies in robots and in chapter 2)
+*** Optimal control theory
+
+*** Task-space control
+
+*** Learning-based control approach
+
+
+
+** Research focuses
 
 * slides outline
 
@@ -300,21 +345,24 @@ to introduce what is muscle synergies
 
 ** references
 - Xu and Todorov, "Design of a Highly Biomimetic Anthropomorphic Robotic Hand towards Artificial Limb Regeneration," ICRA 2016
-- Artemiadis, P.K., and K.J. Kyriakopoulos. "EMG-Based Control Of a Robot Arm Using Low-Dimensional Embeddings," Robotics, IEEE Transactions On 26.2 (2010) : 393-398.
-- P. Artemiadis, "Emg-based robot control interfaces: Past, present and future,” Advances in Robotics & Automation, vol. 1, no. 02, pp. 10–12, 2012.
 - C. Carignan, J. Tang, and S. Roderick, "Development of an exoskeleton haptic interface for virtual task training," IROS, 3697-3702, 2009
-- N. G. Tsagarakis and D. G. Caldwell, "Development and control of a ’soft- actuated’ exoskeleton for use in physiotherapy and training," Autonomous Robots, vol. 15, no. 1, pp. 21–33, 2003.
-- V. Salvucci, Y. Kimura, S. Oh, and Y. Hori, "Force maximization of biarticularly actuated manipulators using in nity norm," IEEE/ASME Transactions on Mechatronics, vol. 18, no. 3, pp. 1080–1089, 2013.
 - Cheung et al., "Stability of muscle synergies for voluntary actions after cortical stroke in humans," PNAS, 106(46), pp.19563–19568, 2009.
 - M. C. Tresch and A. Jarc, “The case for and against muscle synergies,” Current Opinion in Neurobiology, vol. 19, pp. 601–607, 2009.
+- M. Chhabra and R. A. Jacobs, “Properties of synergies arising from a theory of optimal motor behavior,” Neural computation, vol. 18, no. 10, pp. 2320–2342, 2006.
+- M. Berniker, A. Jarc, E. Bizzi, and M. C. Tresch, "Simpli ed and e ective motor control based on muscle synergies to exploit musculoskeletal dynamics,"" PNAS, vol. 106, pp. 7601–7606, 2009.
+- W. Li and E. Todorov, “Iterative linearization methods for approximately optimal control and estimation of non-linear stochastic system,” International Journal of Control, vol. 80, no. 9, pp. 1439–1453, 2007.
+- A.Diamond and O.E.Hollan,“Reaching control of a full-torso, modelled musculoskeletal robot using muscle synergies emergent under reinforcement learning,” Bioinspiration & Biomimetics, vol. 9, no. 1, p. 016015, March 2014.
+- M Rolf, J J Steil, and M Gienger, “Goal Babbling Permits Direct Learning of Inverse Kinematics.” IEEE Transactions on Automatic Mental Development, 2(3):216–229, 2010.
+- A Baranes and P Oudeyer, “Active learning of inverse models with intrinsically motivated goal exploration in robots.” Robotics and Autonomous Systems, 61(1):49–73, 2013.
+- C. von Hofsten, “Eye-hand coordination in the newborn,” Developmental Psy- chology, vol. 18, no. 3, pp. 450–461, 1982.
+- P. Artemiadis, "Emg-based robot control interfaces: Past, present and future,” Advances in Robotics & Automation, vol. 1, no. 02, pp. 10–12, 2012.
+- Artemiadis, P.K., and K.J. Kyriakopoulos. "EMG-Based Control Of a Robot Arm Using Low-Dimensional Embeddings," Robotics, IEEE Transactions On 26.2 (2010) : 393-398.
+- N. G. Tsagarakis and D. G. Caldwell, "Development and control of a ’soft- actuated’ exoskeleton for use in physiotherapy and training," Autonomous Robots, vol. 15, no. 1, pp. 21–33, 2003.
+- V. Salvucci, Y. Kimura, S. Oh, and Y. Hori, "Force maximization of biarticularly actuated manipulators using in nity norm," IEEE/ASME Transactions on Mechatronics, vol. 18, no. 3, pp. 1080–1089, 2013.
 - E. Todorov and M. I. Jordan, “Optimal feedback control as a theory of motor coordination,” Nature Neuroscience, vol. 5, no. 11, pp. 1226–1235, 2002.
 - E. Todorov, Weiwei Li and Xiuchuan Pan, "From task parameters to motor synergies: A hierarchical framework for approximately-optimal control of redundant manipulators." Journal of Robotic System, vol22, no. 11, pp. 691-710, 2005
 - Y. Uno, M. Kawato, and R. Suzuki, "Formation and control of optimal trajectory in human multijoint arm movement," Biological cybernetics, vol. 61, no. 2, pp. 89–101, 1989.
 - S. Yakovenko, N. Krouchev, and T. Drew, “Sequential activation of motor cortical neurons contributes to intralimb coordination during reaching in the cat by modulating muscle synergies,” Journal of neurophysiology, vol. 105, no. 1, pp. 388–409, 2011.
-- M. Chhabra and R. A. Jacobs, “Properties of synergies arising from a theory of optimal motor behavior,” Neural computation, vol. 18, no. 10, pp. 2320–2342, 2006.
-- W. Li and E. Todorov, “Iterative linearization methods for approximately optimal control and estimation of non-linear stochastic system,” International Journal of Control, vol. 80, no. 9, pp. 1439–1453, 2007.
-- M Rolf, J J Steil, and M Gienger, “Goal Babbling Permits Direct Learning of Inverse Kinematics.” IEEE Transactions on Automatic Mental Development, 2(3):216–229, 2010.
-- A Baranes and P Oudeyer, “Active learning of inverse models with intrinsically motivated goal exploration in robots.” Robotics and Autonomous Systems, 61(1):49–73, 2013.
 - C Hartmann, J Boedecker, O Obst, S Ikemoto, and M Asada, “Real- time Inverse Dynamics Learning for Musculoskeletal Robots based on Echo State Gaussian Process Regression.” In Robotics: Science and Systems, pages 1–8, 2012.
 
 
