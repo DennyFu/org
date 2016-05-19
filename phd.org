@@ -67,13 +67,54 @@
 
 ** Muscle synergies
 
-*** Muscle synergies simplify control complexity
-biological evidence
+A fundamental question in the study of biological motor control is -- How does the central nervous system (CNS) coordinate many muscles to produce movements and perform various motor tasks.
+%
+Because of the redundancies of the joints and the muscles of musculoskeletal structure, there are inifinite number of ways (joint configurations at the joint level, combinations of muscle activations at the muslce level) can accomplish a motor task.
+%
+%This many degree-of-freedom body structure allows performing a task in many different ways thus enhance flexibility~\cite{latash2007toward}, however, also poses a problem in control of selecting a solution because the task requirement provided is insufficient~\cite{ting2007dimensional}. 
+This poses a problem to the CNS to select one of the inifinite number of possible ways to accomplish the motor task because the task requirement provided is insufficient~\cite{ting2007dimensional}. 
+%
+This problem is known as the degree-of-freedom problem or the Bernstein's problem~\{bernstein1967co}.
+%
+It has been suggested that the CNS resolves this control difficulty by simplifying control complexity by modularly organizing control variables~\cite{bernstein1967co,latash2007toward}.
+%
+Examples of such modularity are spinal force field, kinematics strokes and muscle synergies~\cite{flash:2005}.
+%
 
-*** Time-invariant
+(This section gives a brief introduction about how muscle synergies can simply control complexity. 
+%
+Interpretations of muscle synergies are also mentioned.)
 
-*** time-varying synergies
 
+
+
+
+*** Time-invariant and time-varying synergies
+time-invariant synergies
+- nature
+
+time-varying synergies
+- 
+
+linear decomposition
+- extration methods
+
+*** Muscle synergies simplify control 
+
+A muscle synergy represents co-activation pattern of a group of muscles~\cite{tresch2009case}. 
+%
+It has been suggested that the central nervous system resolves this control difficulty by simplifying control complexity -- coordinating muscle synergies to produce a movement but not controlling muscles independently~\cite{lee1984neuromotor, d2003combinations}.
+
+Many Biological evidence based on analysis of statistical regularities of EMG signals (without relating to the task space )... 
+- frog hindlimb Tresch1999, frog hindlimb d'avella 2003, frog natural motion d'avella and bizzi 2005, frog sensory feedback effect cheung 2005
+- ting's macpherson 2005 cat, torres-oviedo 2006
+- primate grasping brochier 2004, primate grasping overduin 2008
+- human reaching d'avella 2006, 2008, muceli 2010, isometric force production roh2012
+- ting's posture? torres-oviedo and ting 2007,2010, 
+- human locomotion: walking ivanenko 2003,2004, running cappellini 2006
+
+direct evidence
+- 
 
 ** Relationship of muscle synergies and control strategies (Computational aspects of control from biological perspective)
 Introduce control strategies in vertebrates and its relationship (optimal and Task-oriented) to muscle synergies
@@ -94,12 +135,16 @@ Describe the pros and cons of each type of synergies in robot control
 
 Time-invariant synergies are investigated because of its simplicity, direct implementation of existing feedback control law, and task-independent properties
 
+
+
+
+
 *** (Internal models, distributes to learning-based control applications)
 
 *** (Goal-directed exploration strategy, as examples of application)
 
 
-** Related control methods in engineering
+** (Related control methods in engineering)
 (distributes the content to the section applications of muscle synergies in robots and in chapter 2)
 *** Optimal control theory
 
@@ -109,7 +154,13 @@ Time-invariant synergies are investigated because of its simplicity, direct impl
 
 
 
-** Research focuses
+** Research Objectives
+How to obtain muscle synergies?
+- obj 1
+- obj 2
+- obj 3
+
+** Thesis organization
 
 * slides outline
 
