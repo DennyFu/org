@@ -67,6 +67,7 @@
 
 ** Muscle synergies
 
+
 How does the central nervous system (CNS) coordinate many muscles to produce movements and perform various motor tasks?
 %
 The is one of fundamental questions in the study of biological motor control.
@@ -88,9 +89,13 @@ Muscle synergies specifies co-activations of a group of muscles~\cite{tresch2009
 By coordinating muscle synergies, the CNS produces a movement with fewer control variables; the CNS dose not control many muscles independently~\cite{lee1984neuromotor, d2003combinations}.
 %
 ...
+
+
+
 (This section gives a brief introduction about how muscle synergies can simply control complexity. 
 %
 Interpretations of muscle synergies are also mentioned.)
+
 
 
 
@@ -161,6 +166,37 @@ direct evidence
 
 The limitation of such analysis is that it is difficult to evaluate the feasibility of utilizing the extracted synergies to perform the observed motor tasks or novel motor tasks.
 
+
+
+
+
+
+*** Time-invariant and time-varying synergies
+time-invariant synergies
+- nature
+
+time-varying synergies
+- 
+
+linear decomposition
+- extration methods
+
+*** Muscle synergies simplify control 
+
+A muscle synergy represents co-activation pattern of a group of muscles~\cite{tresch2009case}. 
+%
+It has been suggested that the central nervous system resolves this control difficulty by simplifying control complexity -- coordinating muscle synergies to produce a movement but not controlling muscles independently~\cite{lee1984neuromotor, d2003combinations}.
+
+Many Biological evidence based on analysis of statistical regularities of EMG signals (without relating to the task space )... 
+- frog hindlimb Tresch1999, frog hindlimb d'avella 2003, frog natural motion d'avella and bizzi 2005, frog sensory feedback effect cheung 2005
+- ting's macpherson 2005 cat, torres-oviedo 2006
+- primate grasping brochier 2004, primate grasping overduin 2008
+- human reaching d'avella 2006, 2008, muceli 2010, isometric force production roh2012
+- ting's posture? torres-oviedo and ting 2007,2010, 
+- human locomotion: walking ivanenko 2003,2004, running cappellini 2006
+
+direct evidence
+- 
 
 ** Relationship of muscle synergies and control strategies (Computational aspects of control from biological perspective)
 Introduce control strategies in vertebrates and its relationship (optimal and Task-oriented) to muscle synergies
