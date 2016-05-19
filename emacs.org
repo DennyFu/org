@@ -1,4 +1,5 @@
 * Emacs todo lists
+** TODO try egg for git
 ** TODO fix auto-complete
 ** DONE add TODO states
    CLOSED: [2016-05-05 Thu 00:53]

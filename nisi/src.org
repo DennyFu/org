@@ -7,17 +7,23 @@
 * meeting
   
 ** TODO internal progress meeting
-   SCHEDULED: <2016-05-16 Mon 11:00 +1w>
+   SCHEDULED: <2016-05-23 Mon 11:00 +1w>
+   - State "CANCELED"   from "TODO"       [2016-05-16 Mon 15:24] \\
+     Dr. Kwok is attending ICRA
    - State "DONE"       from "TODO"           [2016-05-09 Mon 13:00]
+   :PROPERTIES:
+   :LAST_REPEAT: [2016-05-19 Thu 15:24]
+   :END:
 ** TODO progress meeting with nisi
-   SCHEDULED: <2016-05-13 Fri 18:00 +1w>
+   SCHEDULED: <2016-05-20 Fri 18:00 +1w>
+   - State "DONE"       from "TODO"       [2016-05-13 Fri 22:00]
    - State "DONE"       from "TODO"       [2016-05-06 Fri 21:00]
    - State "DONE"       from "TODO"       [2016-04-29 Fri 22:00]
    - State "DONE"       from "TODO"       [2016-04-13 Wed 22:00]
    - State "DONE"       from "TODO"       [2016-04-22 Fri 22:00]
    :PROPERTIES:
    :Directory: [[file:~/Work/NISI/SRC/meeting%20records/][file:~/Work/NISI/SRC/meeting records/]]
-   :LAST_REPEAT: [2016-05-09 Mon 10:30]
+   :LAST_REPEAT: [2016-05-19 Thu 15:26]
    :END:      
 
 

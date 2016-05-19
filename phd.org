@@ -67,25 +67,127 @@
 
 ** Muscle synergies
 
-*** Muscle synergies simplify control complexity
-biological evidence
+How does the central nervous system (CNS) coordinate many muscles to produce movements and perform various motor tasks?
+%
+The is one of fundamental questions in the study of biological motor control.
+%
+Because of the redundancies of the joints and the muscles of musculoskeletal structure, there are inifinite number of ways can accomplish a motor task.
+%
+A motor task can be achieved by one of the many joint configurations, where each configurations can be attained one of the many combinations of muscle activations.
+%
+%This many degree-of-freedom body structure allows performing a task in many different ways thus enhance flexibility~\cite{latash2007toward}, however, also poses a problem in control of selecting a solution because the task requirement provided is insufficient~\cite{ting2007dimensional}. 
+This poses a problem to the CNS, because the task requirement provided is insufficient to select one of the inifinite number of possible ways to accomplish the motor task~\cite{ting2007dimensional}. 
+%
+This problem is known as the degree-of-freedom problem or the Bernstein's problem~\{bernstein1967co}.
+%
+It has been suggested that the CNS resolves this control difficulty by simplifying control complexity by modularly organizing control variables~\cite{bernstein1967co,latash2007toward} such as spinal force field, kinematics strokes and muscle synergies~\cite{flash:2005}.
+%
 
-*** Time-invariant
+Muscle synergies specifies co-activations of a group of muscles~\cite{tresch2009case}.
+%
+By coordinating muscle synergies, the CNS produces a movement with fewer control variables; the CNS dose not control many muscles independently~\cite{lee1984neuromotor, d2003combinations}.
+%
+...
+(This section gives a brief introduction about how muscle synergies can simply control complexity. 
+%
+Interpretations of muscle synergies are also mentioned.)
 
-*** time-varying synergies
+
+
+
+
+*** Interpretations of muscle synergies
+
+Muscle synergies are quantitatively studied by investigating statistical regularities in measurements of muscle activations.
+%
+In biological studies, the measurements are usually electromyogram (EMG) signals of motor tasks performed by a variety of species~\cite{yakovenko2011sequential, overduin2008modulation}.
+%
+Two components, muscle synergies and muscle synergy activations, are extracted from a given data sample of muscle activations.
+% 
+Muscle synergy activations scale corresponding muscle synergies. They are usually low-dimensional signals.
+%
+Interpretations of the muscle synergies depends on the purposes and requirements of analysis.
+
+There are two main interpretations of muscle synergies, namely the time-invariant synergy and time varying synergies.
+%
+In time-invariant synergies, 
+time-invariant synergies
+- nature
+- extraction metod
+
+In time-varying synergies,
+
+time-varying synergies
+- Nature
+- extraction mehtod
+
+
+Apart from the concept of muscles synergies, there is another interpretation of modular control mechanism in the central nervous system called the "uncontrolled manifold"~\cite{latash2002motor}, which states that the central nervous system coordinates elements (e.g. joint, muscles) that only control task-related elements and leave others uncontrolled. 
+%
+Across trails the variance of all the elements form a task-dependent uncontrolled manifold. 
+%
+However, this concept requires a controller acts in high-dimensional space~\cite{latash2010motor} (because all elements are controlled), which is different from the notion of control simplification in this study.
+
+
+*** Biological evidence
+
+Biological studies focus on validating the hypothesis of muscle synergies.
+%
+One common approach is to obtain EMG signals from specific motor tasks of a certain species, followed by investigating the inherent statistical regularities;
+%
+It is to identify muscle synergies and synergy activations that have lower dimensionality than the original number of muscles to approximate the acquired data sample.
+% 
+%Given a set of muscle synergies, the control complexity is reduced if the control dimensionality, which is equivalent to the dimensionality of the muscle synergy activations, is smaller than the original control dimensionality, which equals the number muscles.
+Such analysis supports the muscle synergy hypothesis.
+
+To testify the muscle synergy hypothesis, various experiments have been carried out in a variety of species.
+- frog hindlimb Tresch1999, frog hindlimb d'avella 2003, frog natural motion d'avella and bizzi 2005, frog sensory feedback effect cheung 2005
+- ting's macpherson 2005 cat, torres-oviedo 2006
+- primate grasping brochier 2004, primate grasping overduin 2008
+- human reaching d'avella 2006, 2008, muceli 2010, isometric force production roh2012
+- ting's posture? torres-oviedo and ting 2007,2010, 
+- human locomotion: walking ivanenko 2003,2004, running cappellini 2006
+
+Not all experiments supports the muscle synergy hypothesis.
+In an experiment of producing finger-tip force, it was found that the variance explained by each extracted synergies (by PCA) from the measured EMG signals has nonnegligible fluctuation within trials, which opposes the hypothesis that muscle activations are formed by small number of muscle synergies.~\cite{valero2009structured}
+%
+It has been also argued that the identified muscle synergies from EMG signals may be the consequence of task or biomechanical constraints, unrelated to the neural coupling of muscles in the CNS~/cite{kutch2012challenges}.
+% 
+
+More direct approach for testification of muscle synergy hypothesis has been conducted by measuring the signals in the CNS where the neural implementation of muscle synergies may exists. 
+%
+direct evidence
+- 
+
+The limitation of such analysis is that it is difficult to evaluate the feasibility of utilizing the extracted synergies to perform the observed motor tasks or novel motor tasks.
 
 
 ** Relationship of muscle synergies and control strategies (Computational aspects of control from biological perspective)
 Introduce control strategies in vertebrates and its relationship (optimal and Task-oriented) to muscle synergies
 
-*** Optimal control strategy
+How do muscle synergies relate to the act of control by CNS?
+
+
 
 *** Task-oriented control strategy
+Thus far, the mentioned literature analyzes synergies from muscle activations of various motor tasks with specific task goals.
+
+
+
+*** Optimal control strategy
+It has been suggested that the CNS produce movements optimally -- It selects an optimal control signals from the inifinite number of solutions according to certain optimal principle in performing a motor task.
 
 
 
 ** Applications of muscle synergies in robotics
-indicate the engineering purpose is different from biological studies that to find synergies to perform different task 
+
+%indicate the engineering purpose is different from biological studies that to find synergies to perform different task 
+The modular control based on muscle synergies motivates robotic research to develope synergetic control strategies for controller high dimensional robotic systems.
+%
+In contrast to biological studies that the objective is to justify (or falsify) the muscle synergies hypothesis, the objective in engineering is to develop controllers for accomplishment of tasks. 
+
+
+
 
 Applications using time-invariant and time-varying synergies
 
@@ -94,12 +196,16 @@ Describe the pros and cons of each type of synergies in robot control
 
 Time-invariant synergies are investigated because of its simplicity, direct implementation of existing feedback control law, and task-independent properties
 
+
+
+
+
 *** (Internal models, distributes to learning-based control applications)
 
 *** (Goal-directed exploration strategy, as examples of application)
 
 
-** Related control methods in engineering
+** (Related control methods in engineering)
 (distributes the content to the section applications of muscle synergies in robots and in chapter 2)
 *** Optimal control theory
 
@@ -109,7 +215,13 @@ Time-invariant synergies are investigated because of its simplicity, direct impl
 
 
 
-** Research focuses
+** Research Objectives
+How to obtain muscle synergies?
+- obj 1
+- obj 2
+- obj 3
+
+** Thesis organization
 
 * slides outline
 
