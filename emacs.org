@@ -1,4 +1,5 @@
 * Emacs todo lists
+** TODO upgrade emacs
 ** TODO try egg for git
 ** TODO fix auto-complete
 ** DONE add TODO states

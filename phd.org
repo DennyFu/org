@@ -165,60 +165,36 @@ direct evidence
 - 
 
 The limitation of such analysis is that it is difficult to evaluate the feasibility of utilizing the extracted synergies to perform the observed motor tasks or novel motor tasks.
+- verification using musculoskeletal model
 
 
-
-
-
-
-*** Time-invariant and time-varying synergies
-time-invariant synergies
-- nature
-
-time-varying synergies
-- 
-
-linear decomposition
-- extration methods
-
-*** Muscle synergies simplify control 
-
-A muscle synergy represents co-activation pattern of a group of muscles~\cite{tresch2009case}. 
-%
-It has been suggested that the central nervous system resolves this control difficulty by simplifying control complexity -- coordinating muscle synergies to produce a movement but not controlling muscles independently~\cite{lee1984neuromotor, d2003combinations}.
-
-Many Biological evidence based on analysis of statistical regularities of EMG signals (without relating to the task space )... 
-- frog hindlimb Tresch1999, frog hindlimb d'avella 2003, frog natural motion d'avella and bizzi 2005, frog sensory feedback effect cheung 2005
-- ting's macpherson 2005 cat, torres-oviedo 2006
-- primate grasping brochier 2004, primate grasping overduin 2008
-- human reaching d'avella 2006, 2008, muceli 2010, isometric force production roh2012
-- ting's posture? torres-oviedo and ting 2007,2010, 
-- human locomotion: walking ivanenko 2003,2004, running cappellini 2006
-
-direct evidence
-- 
 
 ** Relationship of muscle synergies and control strategies (Computational aspects of control from biological perspective)
-Introduce control strategies in vertebrates and its relationship (optimal and Task-oriented) to muscle synergies
 
+%Introduce control strategies in vertebrates and its relationship (optimal and Task-oriented) to muscle synergies
 How do muscle synergies relate to the act of control by CNS?
+%
+- synergies are extracted from muscle activations of motor tasks
+- consequence of the act of control by the CNS, although the CNS may not implement synergies, but just the outcome of task or biomechanical constraints
+- There is strong relationship between the existence of muscle synergies and the control strategies adopted in the CNS
 
 
 
 *** Task-oriented control strategy
 Thus far, the mentioned literature analyzes synergies from muscle activations of various motor tasks with specific task goals.
-
+- in fact, it has been suggested that the existence of the synergies is strongerly related to the task-oriented control strategy taken by the CNS. 
+- 
 
 
 *** Optimal control strategy
-It has been suggested that the CNS produce movements optimally -- It selects an optimal control signals from the inifinite number of solutions according to certain optimal principle in performing a motor task.
-
+Another worthIt has been suggested that the CNS produce movements optimally -- It selects an optimal control signals from the inifinite number of solutions according to certain optimal principle in performing a motor task.
+- 
 
 
 ** Applications of muscle synergies in robotics
 
 %indicate the engineering purpose is different from biological studies that to find synergies to perform different task 
-The modular control based on muscle synergies motivates robotic research to develope synergetic control strategies for controller high dimensional robotic systems.
+The modular control based on muscle synergies motivates robotic research to develop synergetic control strategies for controller high dimensional robotic systems.
 %
 In contrast to biological studies that the objective is to justify (or falsify) the muscle synergies hypothesis, the objective in engineering is to develop controllers for accomplishment of tasks. 
 
@@ -238,7 +214,7 @@ Time-invariant synergies are investigated because of its simplicity, direct impl
 
 *** (Internal models, distributes to learning-based control applications)
 
-*** (Goal-directed exploration strategy, as examples of application)
+*** (Goal-directed exploration strategy, as examples of application without analytical model)
 
 
 ** (Related control methods in engineering)
