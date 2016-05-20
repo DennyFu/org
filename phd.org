@@ -168,6 +168,7 @@ It has been also argued that the identified muscle synergies from EMG signals ma
 More direct approach for testification of muscle synergy hypothesis has been conducted by trying to locate the neural implementation of muscle synergies in the CNS (e.g. motor cortex) when performing different motor tasks.
 %
 direct evidence
+
 - Using such an approach, Holdefer and Miller (2002) provided direct support for the existence of neural substrates of muscle synergies in monkey's primary motor cortex. In particular, they studied the activity of neurons and muscles during the execution of a variety of reaching and pointing movements, and they found that the discharge of individual neurons represents the activation of functional groups of muscles.
 - Another study demonstrated that the sequential activation of populations of neurons in the cat's motor cortex initiates and sequentially modifies the activity of a small number of functionally distinct groups of synergistic muscles (Yakovenko et al., 2010).
 - Similarly, Overduin et al. (2012) showed that microstimulations of specific regions of the motor cortex of two rhesus macaques corresponded to well-defined spatial patterns of muscle activations. These synchronous synergies were very similar to those extracted from the same animals during natural reaching and grasping behaviors.
@@ -226,9 +227,13 @@ It has been suggested that the CNS produce movements optimally -- It selects an 
 - Related results are presented by McKay and Ting (2008, 2012). The goal of these studies is to predict the patterns of muscle activities and the ground reaction forces observed experimentally in unrestrained balance tasks with cats (Torres-Oviedo et al., 2006). Muscle contractions for an anatomically-realistic musculoskeletal model of the cat are computed; the used optimization procedure constrains task-related variables (i.e., center of mass) to the experimental results. Although many different cost functions are tested, the best predictions are achieved by minimizing control effort (i.e., total squared muscle activation). Predictions improve if muscle contractions are constrained to linear combinations of the experimentally derived synergies (Torres-Oviedo et al., 2006); however, the overall control effort increases, and the range of admissible ground forces reduces substantially. Furthermore, these studies validate the assumption made by Torres-Oviedo et al. (2006) that the ground reaction forces associated to each synergy rotate as a function of the limb axis. These results suggest that muscle synergies are feasible physiological mechanisms for the implementation of near-optimal or “good-enough” motor behaviors (de Rugy et al., 2012).
 - todorov example (2009) see below
 
+
+
+
 ** Applications of muscle synergies in robotics
 
 %indicate the engineering purpose is different from biological studies that to find synergies to perform different task 
+
 The modular control based on muscle synergies motivates robotic research to develop synergetic control strategies to reduce control complexity (in the sense of reducing the number of control variable) high dimensional robotic systems.
 %
 In contrast to biological studies that the objective is to justify (or falsify) the muscle synergies hypothesis, the objective in engineering is to develop controllers for accomplishment of a variety of tasks. 
