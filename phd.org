@@ -109,22 +109,37 @@ In biological studies, the measurements are usually electromyogram (EMG) signals
 %
 Two components, muscle synergies and muscle synergy activations, are extracted from a given data sample of muscle activations.
 % 
-Muscle synergy activations scale corresponding muscle synergies. They are usually low-dimensional signals.
+Common analysis assumes that a given data sample can be approximated by linear combination of a set of muscle synergies.
+%
+For the purpose of dimensionality reduction, it usually seeks for a set of syneriges where the number of synergies is smaller than the number of muscles.
+%
+The muscle activations are usually low-dimensional signals scaling the corresponding muscle synergies. 
 %
 Interpretations of the muscle synergies depends on the purposes and requirements of analysis.
+%
 
 There are two main interpretations of muscle synergies, namely the time-invariant synergy and time varying synergies.
 %
-In time-invariant synergies, 
-time-invariant synergies
-- nature
-- extraction metod
+In the time-invariant synergies interpretation, each muscle synergy specifies a fixed pattern of muscle co-activations of a group of muscles. 
+%
+Time-invariant are constant for all the time; they store spatio information of muscles and are task-independent~\cite{alessandro2013muscle}.
+%
+Time-invariant synergies can be extracted by common linear matrix factorization tools. 
+%
+For instance, if principal component analysis (PCA) is used, the principal components are the time-invariant muscle synergies, and the corresponding scores are the synergy activations.
 
-In time-varying synergies,
-
-time-varying synergies
-- Nature
-- extraction mehtod
+In the time-varying synergies interpretation, each muscle synergy specifies a sequence of muscle activations spanning for a particular duration of a group of muscles. 
+%
+Therefore, a synergy can be an input signal for actuation; they contains spatiotemporal information.
+%
+The synergy activation defines the scale, time-lead/lag, and duration of a synergy. 
+%
+The activations for a group of muscles are given by superposing time-varying synergies after modification by synergy activations.
+%
+The activations can be either time-invariant or time-varying; 
+This provide flexibility to adapt inherent regularities in data sample to provide better dimensionality reduction performance.
+%
+The extraction of time-varying synergies needs more complicated tools such as optimization process with specific constraints as demonstrated in~\cite{d2003combinations}.
 
 
 Apart from the concept of muscles synergies, there is another interpretation of modular control mechanism in the central nervous system called the "uncontrolled manifold"~\cite{latash2002motor}, which states that the central nervous system coordinates elements (e.g. joint, muscles) that only control task-related elements and leave others uncontrolled. 
@@ -147,52 +162,52 @@ Such analysis supports the muscle synergy hypothesis.
 
 To testify the muscle synergy hypothesis, various experiments have been carried out in a variety of species.
 %
-In analyses of frog hindlimb movements such as reflexive motion~\cite{(Tresch et al.1999)}, kicking~\cite{(d'Avella et al., 2003)}, swimming, jumping, and walking~\cite{((d'Avella and Bizzi, 2005))}, it has been reported that both the identified time-varying synergies~\cite{(d'Avella et al., 2003)} and time-invariant synergies~\cite{(Tresch et al., 1999)} were directly related to the resulting kinematics characteristics.
+In analyses of frog hindlimb movements such as reflexive motion~\cite{tresch:1999}, kicking~\cite{d2003combinations}, swimming, jumping, and walking~\cite{d'Avella:2005}, it has been reported that both the identified time-varying synergies~\cite{d2003combinations} and time-invariant synergies~\cite{tresch:1999} were directly related to the resulting kinematics characteristics.
 %
-Further evidence was found in cat postural experiments~\cite{ting's macpherson 2005, torres-oviedo 2006}, where the time-invariant synergies obtained from the EMG signals from a set of natural postural configurations to maintain balance on a translating surface were consistent with that on a rotating surfance, suggesting that the synergies captured specific biomechanical functionalities.
+Further evidence was found in cat postural experiments~\cite{ting2005limited,torres2006muscle}, where the time-invariant synergies obtained from the EMG signals from a set of natural postural configurations to maintain balance on a translating surface were consistent with that on a rotating surfance, suggesting that the synergies captured specific biomechanical functionalities.
 %
-In primates experiments, it was discovered that small number of time-invariant synergies~\cite{Brochier et al. (2004) } extracted from a grasping task were able to reconstruct the to reconstruct the EMG signals measured in other trials of the same task. Small number of time-varying synergies were also capable to account for a variety of grasping tasks, and adaptive to describe novel motor behavior by tuning the scale and timing in the synergies~\cite{Overduin et al. (2008)}.
+In primates experiments, it was discovered that small number of time-invariant synergies~\cite{brochier2004patterns} extracted from a grasping task were able to reconstruct the to reconstruct the EMG signals measured in other trials of the same task. Small number of time-varying synergies were also capable to account for a variety of grasping tasks, and adaptive to describe novel motor behavior by tuning the scale and timing in the synergies~\cite{overduin2008modulation}.
 
 The hypothesis of muscle synergies was also verified in human motor tasks.
 %
-The EMG-signals of reaching tasks in different speeds and directions could be approximated by linear combinations of extracted synergies; Similar synergies were found across subjects and with and without loading conditions~\cite{ (d'Avella et al., 2006) (d'Avella et al., 2008)}. 
+The EMG-signals of reaching tasks in different speeds and directions could be approximated by linear combinations of extracted synergies; Similar synergies were found across subjects and with and without loading conditions~\cite{d2006control,d'avella:2008}. 
 %
-Similar finding was reported in ~\cite{roh2012}, where a small number of time-invariant synergies could explain the muscle activations in producing isometric forces by hand; The extracted synergies were corelated to a particular force direction that the synergy activations account for the amplitude of force.
+Similar finding was reported in~\cite{roh2012robustness}, where a small number of time-invariant synergies could explain the muscle activations in producing isometric forces by hand; The extracted synergies were corelated to a particular force direction that the synergy activations account for the amplitude of force.
 %
-It has been also demonstrated that walking motions with different speeds and loading conditions could be explained by small number of time-varying synergies, which were found correlated to the kinematics of foot~\cite{IvanenkoIvanenko et al. (2003,2004) }
+It has been also demonstrated that walking motions with different speeds and loading conditions could be explained by small number of time-varying synergies, which were found correlated to the kinematics of foot~\cite{ivanenko2003temporal,ivanenko2004five}
 
 
 Not all experiments supports the muscle synergy hypothesis.
 In an experiment of producing finger-tip force, it was found that the variance explained by each extracted synergies (by PCA) from the measured EMG signals has nonnegligible fluctuation within trials, which was in conflict with the hypothesis that muscle activations are formed by small number of muscle synergies.~\cite{valero2009structured}
 %
-It has been also argued that the identified muscle synergies from EMG signals may be the consequence of task or biomechanical constraints, unrelated to the neural coupling of muscles in the CNS~/cite{kutch2012challenges}, although these results did not falsify the existence of neural implementationf of muscle synergies in the CNS.
+It has been also argued that the identified muscle synergies from EMG signals may be the consequence of task or biomechanical constraints, unrelated to the neural coupling of muscles in the CNS~\cite{kutch2012challenges}, although these results did not falsify the existence of neural implementationf of muscle synergies in the CNS.
 
 % direct evidence
 More direct approach for testification of muscle synergy hypothesis has been conducted by trying to locate the neural implementation of muscle synergies in the CNS (e.g. motor cortex) when performing different motor tasks.
 %
-Supportive evidence of muslce synergies has been found in cat that the sequential activations of specific groups of muscles were initialized and tuned by populations of neurons in the motor cortex~\cite{Yakovenko etal 2010}.
+Supportive evidence of muslce synergies has been found in cat that the sequential activations of specific groups of muscles were initialized and tuned by populations of neurons in the motor cortex~\cite{yakovenko2011sequential}.
 %
-Similar findings were reported in the study of the relationship between the neural activities in monkey's brain and muscle activations during pointing and reaching movements , where activations of groups of muscles that related to particular functionalities were correlated to the discharge of individual neurons in the primary motor cortex~\cite{Holdefer and Miller (2002) }.
+Similar findings were reported in the study of the relationship between the neural activities in monkey's brain and muscle activations during pointing and reaching movements , where activations of groups of muscles that related to particular functionalities were correlated to the discharge of individual neurons in the primary motor cortex~\cite{holdefer2002primary}.
 %
 It was found that the time-invariant synergies extracted from the EMG signals resuting from micro-stimulations of particular regions in the motor cortex of two rhesus macaques were very similar to those identified from the reaching and grasping motions of the other rhesus macaques.
 %
-In comparing time-invariant synergies extracted from the arm movements performed by healthy and that performed by brain-damaged patients, it was found that they are very similar, implying that the synergies were implemented in the unimpaired regions in the CNS~\cite{Cheung et al. (2009b) }.
+In comparing time-invariant synergies extracted from the arm movements performed by healthy and that performed by brain-damaged patients, it was found that they are very similar, implying that the synergies were implemented in the unimpaired regions in the CNS~\cite{cheung2009stability}.
 %
-In extension of the comparison to patients with more severe brain-damaged, the time-invariant synergies were found to be varied in the forms of preservations, merging and fractionation, indicating the CNS may response to the cortial damage~\cite{(Cheung et al., 2012)}. Similar finding of preservation of synergy activations after stroke has also been reported in~\cite{Gizzi et al. (2011)}. 
+In extension of the comparison to patients with more severe brain-damaged, the time-invariant synergies were found to be varied in the forms of preservations, merging and fractionation, indicating the CNS may response to the cortial damage~\cite{cheung2012muscle}. Similar finding of preservation of synergy activations after stroke has also been reported in~\cite{gizzi2011impulses}. 
 
 
 The limitation of analysis of measured EMG signals is that it is difficult to evaluate the feasibility of utilizing the extracted synergies to perform the observed motor tasks or generalized motor tasks.
 %
 The validation of the modular control is usally carried out by reconstructing the observed data sample by smaller number of muscle synergies as bases; However, 
-the reconstructed muscle activities may not produce the same observed task. (Broer and Takens, 2011).
+the reconstructed muscle activities may not produce the same observed task~\cite{broer2010dynamical}.
 %
 Verifications using biologically plausible musculoskeletal model have been adopted to overcome this deficiency.
 %
-A mathematical model of frog hindlimb was used in~\cite{Berniker2009} in a synergies-based control scheme. It was shown that a low-dimensional dynamical model capture the natural dynamics of the frog hindlimb. Time-invariant synergies were obtained from data sample that was representative to account for both the low- and full-dimensional dynamics with minimum muscular effort. The synergies were found very similar to the synergies extracted from jumping and swimming motions of intact frogs. And control performance of the low-dimensional control scheme using the proposed synergies was comparable with the full-dimensional controller that activated each muscle independently.
+A mathematical model of frog hindlimb was used in~\cite{berniker:2009} in a synergies-based control scheme. It was shown that a low-dimensional dynamical model capture the natural dynamics of the frog hindlimb. Time-invariant synergies were obtained from data sample that was representative to account for both the low- and full-dimensional dynamics with minimum muscular effort. The synergies were found very similar to the synergies extracted from jumping and swimming motions of intact frogs. And control performance of the low-dimensional control scheme using the proposed synergies was comparable with the full-dimensional controller that activated each muscle independently.
 %
 Analysis was also conducted for human walking motion. 
 %
-It was reported that the time-invariant synergies extracted from the EMG signals of walking could be used as bases to reproduce walking kinematics and the ground reaction forces via a musculoskeletal model of human legs~\cite{Neptune et al., 2009; Allen and Neptune, 2012}, where the relative muscle activations and the synergy activations  were optimized such that the difference between the experimental measurements and the forward simulation was minimized. 
+It was reported that the time-invariant synergies extracted from the EMG signals of walking could be used as bases to reproduce walking kinematics and the ground reaction forces via a musculoskeletal model of human legs~\cite{neptune2009modular;allen2012three}, where the relative muscle activations and the synergy activations  were optimized such that the difference between the experimental measurements and the forward simulation was minimized. 
 
 
 
@@ -205,7 +220,7 @@ In addition to testify the existence of muscle synergies, the relationship betwe
 %
 In the presented literature above, synergies were extracted from muscle activations of motor tasks, which are the consequence of the act of control by the CNS.
 %
-%Although muscle synergies may not be encoded in the CNS, they may be just the outcomes induced by task or biomechanical constraints~/cite{kutch2012challenges}, it is still difficult to 
+%Although muscle synergies may not be encoded in the CNS, they may be just the outcomes induced by task or biomechanical constraints~\cite{kutch2012challenges}, it is still difficult to 
 This indicates there is strong relationship between the existence of muscle synergies and the control strategies adopted in the CNS.
 %
 Here two control strategies, task-oriented control strategy and optimal control strategy, that closely related to muscle synergies are introduced. 
@@ -227,9 +242,9 @@ This implies more attention is paid on controlling the task space variables that
 
 Analyses have related muscle synergies with task-related variables to the performance of task.
 %
-In~\cite{(d'Avella 2008)}, it was demonstrated that the EMG-signals of human reaching movements in different directions and speeds could be represented by small number of time-varying synergies during the reaching movements and time-invariant synergies at the end of the reachings (to maintain posture); The time-varying synergies were modulated in terms of the directions and speeds, implying that the task-relevant sensory information and the dynamics of the system could be incorporated into low-dimensional representation in the form of synergies to simply control.
+In~\cite{d2008modulation}, it was demonstrated that the EMG-signals of human reaching movements in different directions and speeds could be represented by small number of time-varying synergies during the reaching movements and time-invariant synergies at the end of the reachings (to maintain posture); The time-varying synergies were modulated in terms of the directions and speeds, implying that the task-relevant sensory information and the dynamics of the system could be incorporated into low-dimensional representation in the form of synergies to simply control.
 %
-The functionality of muscle synergies in human postural task was analyzed in~\cite{chvatal et al.2011}. In addition to the EMG signals of a person standing on a surface under perturbation, the task-related variable, measured reaction forces to the feet and the accelerations of the center of mass of the body, were included in the data sample for extraction of the so-called functional muscle synergies (time-invariant). It was found that the functional synergies extracted from one type of responses to the perturbations (non-stepping responses) were similar and could be used to reconstruct the EMG signals and the task-related variables of another type of reponses (stepping responses), supporting that the concept that muscle synergies are to produce a predictable biomechanical function~\cite{ting_mckay2007}.
+The functionality of muscle synergies in human postural task was analyzed in~\cite{chvatal2011common}. In addition to the EMG signals of a person standing on a surface under perturbation, the task-related variable, measured reaction forces to the feet and the accelerations of the center of mass of the body, were included in the data sample for extraction of the so-called functional muscle synergies (time-invariant). It was found that the functional synergies extracted from one type of responses to the perturbations (non-stepping responses) were similar and could be used to reconstruct the EMG signals and the task-related variables of another type of reponses (stepping responses), supporting that the concept that muscle synergies are to produce a predictable biomechanical function~\cite{ting2005limited}.
 
 
 
@@ -244,7 +259,7 @@ It states that the optimization during  generation of voluntary movements focuse
 %
 Using a optimal control theory to solve for solutions of a motor task~\cite{todorov:2002,todorov:2005,chhabra2006properties}, it has been demonstrated that a low-dimensional control space that reflects task-relevant dynamics of system is naturally identified~\cite{tresch2009case}. 
 %
-Related results have been reported in~\cite{McKay and Ting (2008, 2012)}. Based on an anatomically-realistic musculoskeletal model of cat, the muscle activations for 
+Related results have been reported in~\cite{mckay2008functional,mckay2012optimization}. Based on an anatomically-realistic musculoskeletal model of cat, the muscle activations for 
 keeping balance on a surface under translational perturbations were found by optimization that constraints center of mass forces and moments (task-related variables) while minimizing control efforts. It was found that the extracted time-invariant synergies could predict the EMG signals and the reaction forces on the surface observed experimentally, suggesting that muscle synergies mechanism can reduce control dimensionality and can achieve similar kinetics to the optimal solution.
 
 
@@ -266,7 +281,7 @@ This section highlights several robotic researches that adopt the concept of mus
 
 
 %Applications using time-invariant and time-varying synergies
-One of the first synergies-based controllers was proposed in \cite{Mussa-Ivaldi1997}. 
+One of the first synergies-based controllers was proposed in~\cite{mussa1997nonlinear}. 
 The control signals of the actuators were given by linear combination of time-varying synergies. 
 %
 Each synergy was defined by a single equilibrium point. 
@@ -274,14 +289,14 @@ Each synergy was defined by a single equilibrium point.
 This idea was inspired from similar proposal in biological studies~\cite{bizzi1984posture,hogan1984organizing} that the CNS plans and executes limb movement as a temporal sequence of static attractor points for the limb. 
 %
 Various end effector trajectories of a simulated planar kinematic chain could be produced by suitable choice of equilibrium points.
-Based on the same synthesis of synergies, a feedback controller that was able to drive a simulated 2D planar kinematic chain to synergy equilibrium position to follow the desired trajectory was proposed in~\cite{Nori and Frezza, 2005}; The synergies were obtained from analytical solution of an optimal control problem.
+Based on the same synthesis of synergies, a feedback controller that was able to drive a simulated 2D planar kinematic chain to synergy equilibrium position to follow the desired trajectory was proposed in~\cite{nori2005control}; The synergies were obtained from analytical solution of an optimal control problem.
 
 Obtaining muscle synergies from solutions of optimization problems can be found in~\cite{chhabra:2006,todorov2009compositionality}
 In~\cite{chhabra:2006}, analysis was carried out on a simulated planar robotic arm. Two sets of time-varying synergies extracted from optimal solutions of reaching tasks and via-point tasks solved by optimal control theory. Comparison of the two sets of synergies revealed that some synergies in the two sets were similar, suggesting that synergies arise regardless of the task context; implying optimal motor behaviors can be efficiently generated by combinations of task-dependent and task-independent synergies.
 The existence of such compositional optimal control laws has been proven mathematically in~\cite{todorov2009compositionality}; For a certain class of stochastic optimal control problems that have a particular form of cost-to-go function in defining a task, an optimal control law that is a linear combination of some functions. These functions are the solutions of other optimal control problems and can be represented as time-varying synergies (or primitives), although the acquisition of such time-varying synergies is not provided.
 
 % - here present works without analytical model
-The acquistion of time-varying synergies without given accurate system dynamics model has been demonstrated in~\cite{Todorov and Ghahramani (2003)}.
+The acquistion of time-varying synergies without given accurate system dynamics model has been demonstrated in~\cite{todorov2003unsupervised}.
 %
 In the proposed hierarchical control scheme, muscle synergies translate high-level control signals encoded in low-dimensionality to actual muscle activations, via some internal variables that receive sensory signals; There exists inverse model that maps the sensory signals to the muscle synergies. 
 The inverse model as well as the time-varying synergies can be learned from observed data sample, and form a low-dimensional controller.
@@ -294,12 +309,14 @@ One advantage of time-invariant synergies is that they are simpler. Comparing wi
 % from here time-invariant synergies
 Taking the advantage of simplicity, feedback controllers based on time-invariant synergies have been implemented in several robotic researches. 
 In the development of the tendon-driven robotic ACT hand~\cite{malhotra2012reduced}, time-invariant synergies were adopted in a PID feedback controller that controls a finger-tip to follow a circular trajectories on a virtual plane accurately. In addition to the use of muscle synergies to reduce control dimensionality, the sensory signals were adopted to reduce the observation space, leading to a low-dimensional dynamical system where the feedback controller was derived.
-Without the knowledge of robot dynamics, an learning-based control scheme has been proposed in~\cite{Marques et al. (2012)} to obtain muscle synergies using unsupervised Hebbian-like algorithm and to learn a low-dimensional feedforward controller based on supervised learning techniques; 
+Without the knowledge of robot dynamics, an learning-based control scheme has been proposed in~\cite{marques2012unsupervised} to obtain muscle synergies using unsupervised Hebbian-like algorithm and to learn a low-dimensional feedforward controller based on supervised learning techniques; 
 In the experiment of a single-joint robot driven by four tendons connected to independent motors, the time-invariant muscle synergies were obtained from data sample of robot responses of spontaneous single muscle twitches with fixed amplitude and duration. The low-dimensional controller was learned to minimize task error. In contrast to most literature where synergies have been obtained from data sample of movements with specific task goals, this work demonstrates that time-invariant synergies can also be obtained from data sample that is not generated with specific task goals. 
 
 
 % conclude that obtain time-invariant synergies without analytical model of musculoskeletal robots is somewhat a missing part in robotics research.
+To conclude, 
 - As a final note, it is important to say that the concept of modularity has been employed in robot control in many other ways. In most of these works modules are defined as kinematic-based controllers that are combined sequentially to obtain complex joint trajectories (Khansari-Zadeh and Billard, 2011; Ijspeert et al., 2013). In this regard, these works are more related to the concept of kinematic stroke than to muscle synergies (Pollick et al., 2009). 
+
 
 
 
@@ -325,11 +342,38 @@ In the experiment of a single-joint robot driven by four tendons connected to in
 
 
 
-** Research Objectives
-How to obtain muscle synergies?
+** Research focuses
+This thesis put focuses on the extraction and utilization of time-invariant synergies.
+%
+The objectives of robotic researches should focus on developing control methods that allow robotic systems to achieve a variety of tasks.
+%
+Adopting task-independent time-invariant synergies is a straightforward approach, also because they are simpler to extract, and allow implementation of existing feedback control methods.  
+%
+Although time-varying synergies are more flexible that may enhance dimensionality reduction performance for specific data regularities, they require more complicated methods for extraction and control. 
+%
+In particular, the following objectives are concerned:
 - obj 1
 - obj 2
 - obj 3
+
+
+
+(%
+In many robotic researches, as well as biological studies, synergies are extracted from data samples that exploit prior information about desired task goals;
+%
+Employing such synergies that inherently possess task-relevant information 
+
+
+as mention, TI synergies has been extracted from data sample of movements with specific task goals. synergies extracted from such data sample inherently possess task-related properties. using such task-related synergies for develpping control method for a variety or generalized task is indirect. 
+A more direct approach would be extractig synrgies from task-irrrlecvant data sample and theris utilization. 
+
+
+How to obtain muscle synergies?
+
+robotic research focus on developing controller that can achieve a variety of task,
+the task-independent properties seems more sutiable for this objective. 
+although it has been show that time-varying synergies are capable of performing generalized task as demonstrated in todorov's composite optimal contrl law, time-varying synergies controller are usally more complicated, and it more difficult to implement feedback controller. 
+TI are studied in this thesis.)
 
 ** Thesis organization
 
