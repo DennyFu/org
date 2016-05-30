@@ -3,6 +3,258 @@
   :Directory: file:~/Work/thesis/
   :END:
 
+* to do task after public hearing
+
+** google doc.
+======
+Schedule
+Meeting with Hosoda sensei: Done
+The date you will leave Japan: 29 May 
+Meeting with Arai sensei and ask for comment: to be confirmed
+Meeting with Ishiguro sensei to confirm the thesis title
+Check Grammar and typo mistake: to be finished by 5th Jun (Asked Fabio sensei, Edu, James and my boss in HK to check for English already)
+Check thesis format
+Ask Nakata sensei for Plagiarism check
+Submission of thesis title : 8 Jun 1700
+Submission of all documents : 20 Jun 1700
+Form 1 (1 copy)
+Form 2 (1 copy)
+Form 3 (2 copy) and send data to Ishiguro sensei
+Form 4 (2 copy)
+Form 9 (data by email)
+Form 10 (1 copy)
+5 books binding, not necessary the final one
+Checklist signed by Ishiguro sensei
+新規性についての上申書
+同意承諾書
+Prepare final binding and send copy to the professors
+With a separated note to say thank you for the review 
+A PDF in USB or CD for COOP. A printed version is also needed
+Either soft or hard copy
+Faculty meeting 20 July
+Final defense - presentation and Q&A (total 30 mins)
+Presentation to answer the questions in the public hearing
+Defend the thesis
+Response letter (4 copies)
+1 slides for one question
+博士学位論文の審査等の結果報告(The result of examination): remind Ishiguro sensei to prepare it. It needs all professors’ name seals
+最終試験の結果の要旨及び担当者（form 8): remind Ishiguro sensei to prepare it
+Submission of final defense results by Ishiguro sensei (maybe 2 days later after final defense)
+博士学位論文の審査等の結果報告
+論文審査の結果の要旨，及び担当者（様式7）(within Form 3) (Ishiguro sensei)
+PDF file of Form 3 
+Written from the point of view of committee members
+Matsumura san’s example
+Deadline for replacement of thesis: Have to confirm with Nakata sensei
+Final defense result: 26 Aug
+Committee meeting and degree granting: 23 Sep 
+To do list
+Share the schedule information with people concerned DONE
+Send e-mail until this night!
+Nakamura
+Fabio-sensei
+Nakata-sensei (he sent e-mails related to this issue and Denny-kun should confirm this issue with him)
+Ishiguro-sensei 
+Check grammar and typo
+Who will check the grammar and typo?
+Meet with Hosoda sensei DONE
+Meet with Arai-sensei
+Negotiate the schedule for the meeting 
+Prepare the document of the thesis title submission and get the stamp from ishiguro sensei
+Prepare the documents for the phd application
+Confirm the thesis title with Ishiguro sensei
+Translation of thesis title to Japanese
+Extraction and utilization of muscle synergies in controlling musculoskeletal robots 
+筋骨格ロボット制御における筋シナジーの抽出と利用に関する研究
+A study of control methods for musculoskeletal robots using muscle synergies
+筋シナジーを用いた筋骨格ロボットの制御法に関する研究
+======
+
+The following are a list of the questions and to do tasks on today’s presentation.
+
+[[file:~/Desktop/Thesis%20related/Hosoda_and_Arai_sensei_QandA.pdf::%25PDF-1.3][/Users/Denny/Desktop/Thesis related/Hosoda_and_Arai_sensei_QandA.pdf]]
+
+
+Hosoda sensei's questions
+why the cost-to-go value is not decreasing as the number of synergies increase
+
+
+Because under the current setting of the cost-to-go function, the increase of the number of synergies does not chathe improvement of the cost-to-go function the solver for the optimal control problem The cost-to-go value is not strongly related to the number of synergies used in solving for the optimal control problems in this chapter. It also depends on the solver used and the definition of the cost-to-go function. The optimal control problems are solved by a solver called iterative Linear Quadratic Gaussian iLQG. The solver stops iteration for obtaining better results if the change of the cost-to-go functions is very small. In the current result, using 4 synergies can reach to a target point closely. When using 5 or more synergies, the robot is expected to approach closer to the target. But the improvement reflected in the resulting cost-to-go value may be too small that the iLQG solver cannot detect the improvement and stop iteration. 
+
+Arai's sensei's questions
+Can you explain why 4 synergies is enough?
+This is the problem of controlling the robot end effector on a 2D task space. As the synergy activations are constrained to nonnegative, actuating one synergies can only move the end effector in one direction. Therefore, conceptually, the robot needs minimally 4 synergies to move in all possible directions on the 2D task space.
+What is the best number of synergies 
+How to determine the number of synergies?
+Have you consider to determine the number of synergies?
+What is the main contribution of the thesis?
+Ishiguro sensei's requests
+Check the remaining days before professors meeting
+Answer the professor's' questions
+ Check grammar and typo
+
+
+
+
+
+
+
+ 
+
+Technical explanation of iLQG
+
+Compare with no synergies case, which is the optimal case in our setting.
+
+
+
+
+
+
+
+The total variance explained simply increases as the number of synergies increases
+
+In this graph, as the number of synergies increases, the cost-to-go value does not decrease simply. Why?
+
+i don't know in detail about how do you utilize the analytical model for getting synergies, but is the analytical model means that has some relation between the cost function 
+
+i guess the reason why the cost-to-go function decrease with the number of synergies increases is that the way you get the synergies from the analytical model is completely different, completely away from the cost-to-go values,
+means that the strategy to get the synergies is not really appropriate estimates how it is effective or not
+= the cost-to-go value is not a appropriate value to estimate ...
+
+it cannot be expected that the more synergies leads to the better results(previous question)
+
+-ishiguro sensei: is it the matter of the task? the task was so simple? 
+
+maybe the appropriate answer would be: the index how you can get the synergies is completely different from cost-to-go value,
+you should think about the relation between how you can determine the number of  synergies and the cost-to-go function, i.e. the relation between these two.
+If you expect some positive correlation between these two values, then the graph will be decreasing, now the current graph suggest these two variable are not strongly related. 
+
+What kind of relation between the cost-to-go values and the index of how you can deterimine the synergies 
+
+- ishiguro sensei: need to analyze the result and get some hypothesis why this reuslt happens
+
+
+Arai sensei: what is the most important contribution?
+
+
+
+
+
+
+** answer sensei's question ASAP
+
+** check gramma and typo
+
+** Hosoda sensei's questions
+*** why the cost-to-go value is not decreasing as the number of synergies increases
+
+The resulting cost-to-go values when using 4 or more synergies appeared to be the same level because these values are very closed to the reference value. In the current setting that the reaching task is achieved by solving the optimal control problem using the solver iLQG, the reference value is the cost-to-go value when the optimal control problem is solve in original dimensionality, i.e. the "no synergies" case. 
+
+
+It is assumed that the iLQG solver can solve for the current optimal control problem of the reaching tasks accurately, such that the reference value is the best cost-to-go value among the cases when different number synergies is used. The iLQR (iterative Linear Quadratic Gaussian) solver solve for locally-optimal feedback control of a nonlinear dynamics system given a quadratic cost-to-go function; It iteratively linearizes the nonlinear dynamics system around a nominal trajectory, and solve for a locally optimal feedback control law using a modified LQG 
+
+
+The goal-related synergies are extracted from the optimal solutions, say A, solved in original dimensionality. When they are used to solve for the same optimal control problem, it is thereby expected that as the number of synergies used decreases, the resulting cost-to-go values increases. 
+
+The gool-unrelated synergies are extracted from different dataset that are optimized b
+
+The random synergies 
+
+** Arai's sensei's questions
+*** Can you explain why 4 synergies is enough?
+Theoretically, 3 nonnegative synergies that are actuated by nonnegative synergy activation are enough to manipulate the current robot in chapter 3. A synergy specifies co-activations of all muscles. When a synergy is activated, all the muscles contribute to provide motion in one direction. Becasue theoretically the minimum number of vectors (bases) needed to span a 2D plane is 3, at least 3 synergies are required to produce motion in all possible directions on the 2D task space of the end effector.
+
+
+My results shows that the current robot needs 4 synergies because of the following possible reasons:
+- Using 4 synergies may produce motion with with smaller total control efforts, since the measure of total control efforts is included in the optimization index (the cost-to-go function).
+- Nonnegative matrix fractionation (NMF) may not be able to extract 3 synergies that can produce motion in all possible direction, since NMF does not consider the resulting motion direction.
+- 2 or more synergies are necessary to achieve motion in a certain direction with enough amplitude of accelerations.
+
+
+*** How to determine the number of synergies? What is the best number of synergies? Have you consider to determine the number of synergies in other chapter?
+
+Depending on the chapter, this thesis determines the number of synergies according to three criteria: different criteria, such as the control performance, the computation time and the total variance explained. 
+In chapter 3, the number of synergies is determined according to the resulting cost-to-go values, the resulting computational time spent and the number of synergies used. Since 4 synergies was the minimum number that could achieve small enough cost-to-go value with less computation time, I would say using 4 synergies was the best choice.
+In chapter 4, the number of synergies is determined according to the resulting tracking error, whether collisions to the joint limits occured and the number of synergies used. Since 5 synergies was the minimum number that could achieve small tracking error without collisions to the joint limits, I would say using 5 synergies was the best choice.
+In chapter 5, in contrast to the chapter 3 and chapter 4 that determine the number of synergies after the act of control, the number of synergies is determined according to the total variance explained before the act of control. The number of synergies was determined such that the extracted synergies explained over 90% total variance of data. As a result, 4 or 5 synergies were used to carry out the exploration task.
+
+
+*** What is the main contribution of the thesis?
+- bio-inspired
+- data-driven based 
+- obtain muscle synergies
+- without prior knowledge of robot
+- simplify control 
+- maintain performance
+- control methods
+- precise manipulation 
+- 
+- establish fundation of developing autonomous musculoskeletal robots
+
+Develop bio-inspired, data-driven based methods such that musculoskeletal robot can obtain muscle synergies to simplify control complexity and can perform precise manipulation by itself, without providing prior knowledge of the robot.
+
+
+
+Musculoskeletal robots have biomimetic structure that can potentially behave like biological creatures.
+It is desirable that musculoskeletal robots can perform a variety of tasks. For instance, precise manipulation is exhausting task for human; It is difficult to maintain high attention to maintain high accuracy for a long time. Musculoskeletal robots can replace human in jobs that requires precise manipulation and ability to perform different tasks.
+If robot can learn control by itself, it can save many complicated setup procedures such as obtaining mathematical model of the robot, calibration, etc..
+However, the complicated musculoskeletal structure posed difficulties in developing control methods.
+The bio-inspired modular control concept is a possible approach to reduce control complexity arisen from high control dimensionality. Data-driven based control is promising approach to avoid mathematical modeling of complicated musculoskeletal structure. 
+This thesis provides fundamental techniques for development of autonomous musculoskeletal robots.
+
+- why it is important?
+- what potential functionalities that the proposed work can enable
+- How can this work contribute to the existing knowledge?
+This thesis provides fundamental techniques for autonomous musculoskeletal robots that 
+  - what is the improvement compared with the existing work? 
+  - what can be achieved that no one have been done. 
+
+
+- possible thinking direction: pave a way to some important future Development
+  - e.g. a future robots have many functionalities, my method setup fundation or solve some difficulties in one of these functionalities
+    - robot's characteristics
+      - flexible
+      - compliant
+      - Biomimetic
+
+    - functionalities: 
+      - a variety of tasks
+        - precise motion
+	replacing human work: performing repetitive precise movements is exhausting task. it is difficult for people to maintain high accuracy for a long time
+        - fast movements
+      - interactions 
+      - learn control by itself
+	does not require complicated setup procedures including obtaining mathematical models, calibration, etc..
+      - 
+    - difficulties
+      - Difficult to control complicated structure
+        - because redundancies: many joint and muscle
+	- because the structure is complicate to obtain accurate model
+    - 
+- contribution of three chapters 
+  - chapter 3: 
+    - verified that muscle synergies can reduce control dimensionality while maintaining control performance in a optimal control problem (for generating goal-directed/reaching movements).
+    - showed that muscle synergies can be extracted from dataset that does not exploit any prior information about desired goals of specific tasks.
+  - chapter 4: 
+    - developed a method that can extract muscle synergies from dataset of random movements without robot's dynamics model
+    - developed a data-driven method for controlling musculoskeletal robots in reduced control dimensionality using muscle synergies.
+  - chapter 5:
+    - developed a method such that a musculoskeletal can simultaneously obtain muscle synergies and extend controllable task space 
+
+- investigate the feasibility of the synergy-based control method for a musculoskeletal robot. 
+musculoskeletal robot - redundant structure
+dimensionality reduction is crucial to develop method to effectively control such robot.
+My research might be the first step to the realization of robots that can work in daily life.
+
+
+
+** Ishiguro sensei's request
+*** Check the remaining days before professors meeting
+
+*** Answer the professors' questions
+
+*** Check gramma and typo
+
 
 * To do tasks
 ** WAITING Check thesis plagiarism
@@ -18,13 +270,19 @@
     CLOSED: [2016-05-03 Tue 19:36] SCHEDULED: <2016-05-03 Tue 14:00>
 
 
-** TODO consider to remove the simple example in chapter 4
-** TODO change wordings [0%]
-- [ ] fitness-optimized to goal-unrelated and achieving goal to goal related
-- [ ] sub-optimal to omni-directional
-- [ ] non-optimal to no statistical regularities
+** DONE consider to remove the simple example in chapter 4
+   CLOSED: [2016-05-24 Tue 17:39]
+   - State "DONE"       from "TODO"       [2016-05-24 Tue 17:39]
+** DONE change wordings [100%]
+   CLOSED: [2016-05-24 Tue 17:39]
+   - State "DONE"       from "TODO"       [2016-05-24 Tue 17:39]
+- [X] fitness-optimized to goal-unrelated and achieving goal to goal related
+- [X] sub-optimal to omni-directional
+- [X] non-optimal to no statistical regularities
 
-** TODO revise chapter 1 to show the need of extraction of time invariant synergies from data sample.
+** DONE revise chapter 1 to show the need of extraction of time invariant synergies from data sample.
+   CLOSED: [2016-05-24 Tue 17:39]
+   - State "DONE"       from "TODO"       [2016-05-24 Tue 17:39]
 * Degree application schedue
 ** DONE submission of the 3rd journal
    CLOSED: [2016-05-09 Mon 10:29] SCHEDULED: <2016-05-05 Thu 17:30>
@@ -328,6 +586,10 @@ To conclude,
 
 
 *** (Internal models, distributes to learning-based control applications)
+- Muscle synergies may then provide the basis functions that allow acquiring and using such mapping quickly and efficiently by reducing the number of parameters to be adjusted, stored, and retrieved. 
+- We propose that an internal model for postural force generation may coordinate functional muscle synergies that are invariant in intrinsic limb coordinates, and this reduced-dimension control scheme reduces the set of forces available for postural control.( J. Lucas McKay, Lena H. Ting 2008 J. biomechanics)
+- An internal representation of the point-to-point movement corresponding to the desired corrective movement in terms of a few synergy recruitment parameters may simplify the online computation of the necessary adjustments.{d2011superposition}
+
 
 *** (Goal-directed exploration strategy, as examples of application without analytical model)
 
