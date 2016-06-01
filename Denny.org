@@ -1,6 +1,31 @@
 * notes
 * today's todo
 
+** 2 Jun 2016
+*** TODO check english of the thesis
+*** TODO discussions in chapter 3, 4 and 5 about determination of synergies no.
+** 1 Jun 2016
+    
+*** DONE contact Dr. Tsang
+    CLOSED: [2016-06-01 Wed 23:43]
+    - State "DONE"       from "TODO"       [2016-06-01 Wed 23:43]
+    Dear Dr. Tsang,
+
+    How are you? It has been long time since we had the gathering at your place.
+    We are fine here. The two children are growing up quickly and having angle smiles everyday.
+    My sister and her husband are both doing good as usual.
+    It was very lucky that my father discovered a stage 1 cancer near the semi-colon this April,
+    and had a successful MIS that completely remove the tumour.
+    He is now recovered and living as usual that taking care of the us everyday.
+    I moved back to Hong Kong since last December. If everything goes fine, I will get the PhD degree this September.
+    
+    I'm now working at the University of Hong Kong in a Lab doing surgical robotics.
+    I'm going to London from 21 Jun to 3 Jul for a about surgical robotics symposium held in the Imperial College London.
+    It will be great if we can meet each other.
+
+    Best,
+    Denny
+    
 ** 9 May 2016
 
    

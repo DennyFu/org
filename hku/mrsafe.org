@@ -24,6 +24,7 @@
    :END:
 
 * tasks
+** TODO buy airplane ticket to london
 ** Dynamics modeling
    details are located below
 *** TODO free body diagram
