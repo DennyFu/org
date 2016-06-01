@@ -46,6 +46,109 @@
 
 
 
+
+* DONE Hamlyn symposium robotic challenge 2-pages paper
+  CLOSED: [2016-06-01 Wed 19:34]
+  - State "DONE"       from ""           [2016-06-01 Wed 19:34]
+
+** Project title
+
+** Abstract
+
+*** revised
+Magnetic resonance imaging (MRI) techniques allows electrophysiologists to intra-operatively assess the ablation procedure during cardiovascular electrophysiology (EP); However, it is still challenging to carry out effective catheterization under MRI environment. We present a MRI-conditional catheter robotic system that integrates intra-operative MRI techniques, real-time visual feedback and effective control interface for catheter manipulation. Subject proved that the presented robotic system could enhance the performance of simulated ablation tasks.
+
+
+*** Ziyan's original
+Cardiac electrophysiology (EP) intervention is an effective treatment to arrhythmias. This project presents an MRI-conditional catheter robotic system that integrates intra-operative MRI, MR-based tracking units and enhanced visual guidance with catheter manipulation. The proposed system differs fundamentally from existing remotely controlled EP systems, of which the robotic manipulation is still challenging due to the very limited image guidance. This is the first system that provides a means of integrating intra-op MR imaging and tracking to improve the performance of tele-operated robotic catheterization.
+** Introdution
+
+
+*** revised
+In cardiac EP intervention, a long catheter (>1m) is delivered to the heart chamber; Radiofrequency ablation (RFA) is performed on lesion tissue to isolate the abnormal eletrophysiological signals. The safety and effectiveness of EP intervention can be enhanced by introducing high quality intra-operative visual feedback of cardiac conditions and MR-compatible robotic platform for effective catheterization. Currently, neither any existing commercial nor research prototype of robotic catheterization platform is MR-conditional/safe. We present a MRI-conditional catheter robotic system for effective catheter manipulation that makes use of intra-operative MRI techniques, real-time visual feedback and an advanced kinematics control method.
+
+*** Ziyan's original
+In cardiac EP intervention, a long catheter (>1m) has to be delivered to the heart chamber, in which radiofrequency ablation (RFA) is performed on lesion tissue to isolate the abnormal eletrophysiological signals. Numerous patient trials under late gadolinium enhancement T2-weighted MRI have been conducted, which demonstrated safer and more effective EP intervention by monitoring the RFA under MRI. However, the ferromagnetic materials and conductive components in most catheter robots and steerable catheterization systems are forbidden from the use of MRI scanner due to its tremendously strong magnetic field generated. Furthermore, maneuvering of such a long and flexible catheter inside the cardiac chamber is still a challenging task even for the latest advances in the robotic-assisted platforms. Currently, neither any existing commercial nor research prototype of robotic catheterization platform is MR-conditional/safe. There is no well-established robot-human interface capable of continuously registering targets locations based on intra-operative MR images, and guiding the effective manipulation of the long, thin, flexible catheter.
+
+
+** Methods
+
+*** Effective MRI-compatible robotic platform: 
+We construct a master-slave robotic platform made of MRI-safe, non-ferromagnetic materials for catheterization. Hydraulic transmission with water is adopted to guarantee zero EM interference with the MRI. The master actuators drive the slave actuators, which are isolated 10 m away in the MRI scanner room, providing steering, rolling, translation and fine advancement of a catheter mounted on the slave unit. To achieve effective actuation, we design the actuators with minimum backlash effect and install rolling diaphragms to reduce friction.
+
+*** Real time, intra-operative visualization and position feedback for catheter navigation:
+Based on intra-operative MR images, we construct and update a real-time 3D cardiac roadmap. We also employ a micro coil on the catheter tip that enables real-time (> 30 Hz), low latency (<3ms) and accurate (fine spatial resolution 0.6×0.6×0.6mm3) position tracking of the catheter. According to the position feedback, we attach a virtual camera at the a tip of the catheter to provide a virtual view for navigation.
+
+*** User-friendly control interface with visual-motor alignment: 
+User can manipulate the catheter by providing desired displacement in the virtual view via a motion input device. We develop a control method based on model-free online estimation of the kinematics relationship between the control input and the catheter tip position, achieving visual-motor alignment between the virtual camera attached to the catheter tip and the virtual.
+
+*** Ziyan's original
+Robot motion driven by MR-safe actuation unit: 
+The actuator is fabricated by 3D printing, except for the rubber rolling diaphragm. As it is actuated by hydraulic power, the whole unit is MR-safe and remains minimized imaging disturbance in MR environment. The actuator consists of two identical hydraulic piston-actuators, a gear, two long flexible tubes (>10m) and a hydraulic pump. Each piston-actuator consists of a piston, a rolling diaphragm and a cylinder. The two tubes and the hydraulic pump connect the two piston-actuators with fixed amount of pressurized fluid filled inside. The rolling diaphragms act as flexible seals. The two piston-actuators and the gear are assembled such that the gear transmits translational motion of one piston to other piston in opposite direction. When the hydraulic pump forces the pressurized fluid from one cylinder to another by a piston inside, the change of the fluid volume in one cylinder induces pressure on the wall of the rolling diaphragm and pushes the piston out. Simultaneously, the other piston is push into the other cylinder by the force transmitted from the gear and the atmospheric pressure due to the decrease of fluid inside the cylinder. As a result, the pistons provide bidirectional translation and the gear provides bidirectional rotation.
+
+Robot navigation of catheter using MR-based tracking unit: A tracking unit consist of a micro coil which could serve as an MRI-based signal marker and enable the real-time, frequent and continuous sampling of instrument positional tracking with respect to (w.r.t.) the image coordinates. While all the existing prototypes require (manual) selection of landmarks on MR images, e.g. fiducial marker, optical positional tracker. This small coil unit can enable virtual augmentation of instrument configuration on the MR imaging model precisely. It features with high rate position sampling (at >30 Hz) with low latency (<3ms) in fine spatial resolution of 0.6×0.6×0.6mm3). 
+
+Human-robot control interface: We have developed a kinematic-model-free control framework capable of online estimating the motion mapping from the robot actuation to the tip displacement. This update is achieved by the means of a stochastic method that solely depends on previous measurements, namely the tracked position of the catheter tip. Subject test has shown significant improvement with this presented enhanced hand-eye coordination.
+
+** Results
+
+*** MRI-compatibility: 
+- Negligible EM interference was verified by placing the operating robot closely to a commercial MRI phantom cylinder (#452213095955, CadMed+, USA), which was located at the isocenter of the scanner.
+
+*** Ziyan's original
+MRI-compatibility: Experimental validation with robot running under MRI have been conducted. The robot was placed closely to a commercial MRI phantom cylinder (#452213095955, CadMed+, USA), which was located at the isocenter of the scanner.
+
+Subject test: Subject tests (10, age ranging from 20-35) were carried out for evaluation, where the pulmonary vein isolation ablation tasks were simulated using the robotic experimental setup. Each subject performed the same task under two different conditions: 1) Only the fly-through view (Fig. 1a) was provided without the proposed control approach. 2) Fly-through view and the virtual camera view (Fig. 1b) were provided, where the proposed visual-motor alignment was employed. Each had to perform RF ablation on pre-defined lesions within 5 minutes. The RF ablation at the catheter tip was activated by a foot pedal.
+
+*** Subject test:
+- Subject (10 people(surgeons), age ranging from 20-35) tests of simulated RF ablation tasks using the presented robotic system were carried. 
+- It was observed that the visual-motor alignment control interface improved the accuracy (detailed data needed) of the task.
+** Discussion
+
+*** revised
+To the best of our knowledge, this is the first robotic systems for image-guided robot-assisted catheterization that integrates intra-operative MRI, real-time visual and position feedback and visual-motor alignment.
+It i) enhances the catheter manipulation accuracy to desired surgical region, thus decreasing the chances of recurrence (e.g. currently 30% in atrial fibrillation and 50% in ventricular tachycardia after electrophysiology procedure), 
+compensating the cost of using MRI and reducing the overall expenditure; 
+ii) improves the safety of catheter navigation, thereby decreasing the rates of undesired damage; 
+iii) eases catheter manipulation, thus facilitating the shorter learning curve for surgeons and better treatment for more complex cases. 
+For the cardiac EP procedure, it is anticipated that our invention will significantly reduce the chance of post-recurrence of arrhythmia, which cannot be achieved by the current state-of-the-art robot EP catheter system. 
+
+*** Ziyan's original
+The effective maneuvering of a long and flexible catheter (about 1.5m) to the desired target points under highly dynamic environment still remains a great challenge. While the current 3D roadmap used for catheter manipulation guidance is static and computed from MRI. This is the first system that provides a means of integrating intra-operative MR imaging and tracking to improve the performance of tele-operated robotic catheterization. The contributions of this system are considered to be: precise MR-safe actuators incorporated in the robotic catheter manipulator; a real-time tracking system with MR-based tracking coils embedded at the tip of catheter, updating the position and shape of catheter by magnetic resonance imaging (MRI); a human-robot control interface with frequently-updated 3D roadmap, offering the intuitive instrument navigation.
+
+
+
+
+*** context in patent application
+Through the use of our presented catheter robot featured with MR-based position feedback units integrated with the catheter, we could
+- provide a precise and real-time visual feedback to the operator during the catheter navigation under the MRI. 
+- Sharing the same MR-tracking coordinates with the MR images can guarantee correct alignment of the virtual catheter configuration relative to the cardiac imaging models, thereby benefiting to various kinds of cardiovascular catheter intervetion. 
+- Combined with the robotic manipulation of the catheter, 
+- not only could the ablation progress be monitored by MRI, but it also enables the operator to re-target the insufficiently ablated lesions readily through the tele-operated manipulation of the catheter in the control room. 
+
+
+Currently, neither any existing commercial robotic catheterization platform, nor any research prototype providing full manipulation of 
+catheter, could be safely operated in MRI environment. There is also no well-established robot-human interface capable of continuously update surgical roadmap and catheter location based on MR images. 
+- This system is the first catheter robot to be integrated with MRI-compatible actuation, MR-based tracking system, and the 3D surgical roadmap registered with intra-operative MR images. 
+- It represents a major step in achieving several goals: i) enhancing the catheter manipulation and access to desired surgical region, thus decreasing the chances of recurrence (e.g. currently 30% in atrial fibrillation and 50% in ventricular tachycardia after electrophysiology procedure), 
+compensating the cost of using MRI and reducing the overall expenditure; 
+ii) improving the safety of catheter navigation, thereby decreasing the rates of undesired damage; 
+iii) enhancing the catheter control, thus facilitating the shorter learning curve for surgeons and better treatment for more complex cases. 
+
+
+
+This system is the first catheter robot to be integrated with MRI-compatible actuation, MR-tracking system, and the 3D surgical roadmap registered with intra-operative MR images. The successfully developed components of this system could be further implemented in other robot-assisted interventions, particularly those using MRI navigation on rapidly physiological-changed tissues. Our study may serve as a benchmark for the design and integration of MR-conditional robotic devices
+
+
+** References
+- S.Nazarian, A. Kolandaivelu, M. M. Zviman, G. R. Meininger, R. Kato, R. C. Susil, A. Roguin, T. L. Dickfeld, H. Ashikaga, H. Calkins, R. D. Berger, D. A. Bluemke, A. C. Lardo, and H. R. Halperin, "Feasibility of real-time magnetic resonance imaging for catheter guidance in electrophysiology studies," Circulation, vol. 118, pp. 223--229, 2008
+- E. J. Schmidt, R. P. Mallozzi, A. Thiagalingam, G. Holmvang, A. d'Avila, R. Guhde, R. Darrow, G. S. Slavin, M. M. Fung, J. Dando, L. Foley, C. L. Dumoulin, and V. Y. Reddy, "Electroanatomic Mapping and Radiofrequency Ablation of Porcine Left Atria and Atrioventricular Nodes Using Magnetic Resonance Catheter Tracking," Circulation-Arrhythmia and Electrophysiology, vol. 2, pp. 695-+, Dec 2009
+- D. C. Peters, J. Hsing, K. V. Kissinger, B. Goddu, R. Nezafat, J. E. Taclas, M. E. Josephson, J. V. Wylie, and W. J. Manning, "T2-Weighted Imaging of the Left Atrium Acutely After Pulmonary Vein Isolation Demonstrates Wall Thickening and Edema," ISMRM Proceedings, 2009.
+- M. Shurrab, R. Schilling, E. Gang, E. M. Khan, and E. Crystal, "Robotics in invasive cardiac electrophysiology," Expert Rev Med Devices, vol. 11, pp. 375-81, Jul 2014.
+
+** Figure
+
+
 * Dynamic modeling
 *** elements for modeling
 **** motor gear connected to the stepper motor power source
