@@ -13,8 +13,9 @@
 
 
 * Events
-** Quality Management System (QMS) training
-   SCHEDULED: <2016-05-16 Mon 14:30-17:30>
+** DONE Quality Management System (QMS) training
+   CLOSED: [2016-05-16 Mon 18:00] SCHEDULED: <2016-05-16 Mon 14:30-17:30>
+   - State "DONE"       from ""           [2016-05-16 Thu 18:00]
    venue: Poly U, Room R603
 
 ** Materials
