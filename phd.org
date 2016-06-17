@@ -6,152 +6,18 @@
 * to do task after public hearing
 
 
-
-** google doc.
-======
-Schedule
-Meeting with Hosoda sensei: Done
-The date you will leave Japan: 29 May 
-Meeting with Arai sensei and ask for comment: to be confirmed
-Meeting with Ishiguro sensei to confirm the thesis title
-Check Grammar and typo mistake: to be finished by 5th Jun (Asked Fabio sensei, Edu, James and my boss in HK to check for English already)
-Check thesis format
-Ask Nakata sensei for Plagiarism check
-Submission of thesis title : 8 Jun 1700
-Submission of all documents : 20 Jun 1700
-Form 1 (1 copy)
-Form 2 (1 copy)
-Form 3 (2 copy) and send data to Ishiguro sensei
-Form 4 (2 copy)
-Form 9 (data by email)
-Form 10 (1 copy)
-5 books binding, not necessary the final one
-Checklist signed by Ishiguro sensei
-新規性についての上申書
-同意承諾書
-Prepare final binding and send copy to the professors
-With a separated note to say thank you for the review 
-A PDF in USB or CD for COOP. A printed version is also needed
-Either soft or hard copy
-Faculty meeting 20 July
-Final defense - presentation and Q&A (total 30 mins)
-Presentation to answer the questions in the public hearing
-Defend the thesis
-Response letter (4 copies)
-1 slides for one question
-博士学位論文の審査等の結果報告(The result of examination): remind Ishiguro sensei to prepare it. It needs all professors’ name seals
-最終試験の結果の要旨及び担当者（form 8): remind Ishiguro sensei to prepare it
-Submission of final defense results by Ishiguro sensei (maybe 2 days later after final defense)
-博士学位論文の審査等の結果報告
-論文審査の結果の要旨，及び担当者（様式7）(within Form 3) (Ishiguro sensei)
-PDF file of Form 3 
-Written from the point of view of committee members
-Matsumura san’s example
-Deadline for replacement of thesis: Have to confirm with Nakata sensei
-Final defense result: 26 Aug
-Committee meeting and degree granting: 23 Sep 
-To do list
-Share the schedule information with people concerned DONE
-Send e-mail until this night!
-Nakamura
-Fabio-sensei
-Nakata-sensei (he sent e-mails related to this issue and Denny-kun should confirm this issue with him)
-Ishiguro-sensei 
-Check grammar and typo
-Who will check the grammar and typo?
-Meet with Hosoda sensei DONE
-Meet with Arai-sensei
-Negotiate the schedule for the meeting 
-Prepare the document of the thesis title submission and get the stamp from ishiguro sensei
-Prepare the documents for the phd application
-Confirm the thesis title with Ishiguro sensei
-Translation of thesis title to Japanese
-Extraction and utilization of muscle synergies in controlling musculoskeletal robots 
-筋骨格ロボット制御における筋シナジーの抽出と利用に関する研究
-A study of control methods for musculoskeletal robots using muscle synergies
-筋シナジーを用いた筋骨格ロボットの制御法に関する研究
-======
-
-The following are a list of the questions and to do tasks on today’s presentation.
-
-[[file:~/Desktop/Thesis%20related/Hosoda_and_Arai_sensei_QandA.pdf::%25PDF-1.3][/Users/Denny/Desktop/Thesis related/Hosoda_and_Arai_sensei_QandA.pdf]]
-
-
-Hosoda sensei's questions
-why the cost-to-go value is not decreasing as the number of synergies increase
-
-
-Because under the current setting of the cost-to-go function, the increase of the number of synergies does not chathe improvement of the cost-to-go function the solver for the optimal control problem The cost-to-go value is not strongly related to the number of synergies used in solving for the optimal control problems in this chapter. It also depends on the solver used and the definition of the cost-to-go function. The optimal control problems are solved by a solver called iterative Linear Quadratic Gaussian iLQG. The solver stops iteration for obtaining better results if the change of the cost-to-go functions is very small. In the current result, using 4 synergies can reach to a target point closely. When using 5 or more synergies, the robot is expected to approach closer to the target. But the improvement reflected in the resulting cost-to-go value may be too small that the iLQG solver cannot detect the improvement and stop iteration. 
-
-Arai's sensei's questions
-Can you explain why 4 synergies is enough?
-This is the problem of controlling the robot end effector on a 2D task space. As the synergy activations are constrained to nonnegative, actuating one synergies can only move the end effector in one direction. Therefore, conceptually, the robot needs minimally 4 synergies to move in all possible directions on the 2D task space.
-What is the best number of synergies 
-How to determine the number of synergies?
-Have you consider to determine the number of synergies?
-What is the main contribution of the thesis?
-Ishiguro sensei's requests
-Check the remaining days before professors meeting
-Answer the professor's' questions
- Check grammar and typo
-
-
-
-
-
-
-
- 
-
-Technical explanation of iLQG
-
-Compare with no synergies case, which is the optimal case in our setting.
-
-
-
-
-
-
-
-The total variance explained simply increases as the number of synergies increases
-
-In this graph, as the number of synergies increases, the cost-to-go value does not decrease simply. Why?
-
-i don't know in detail about how do you utilize the analytical model for getting synergies, but is the analytical model means that has some relation between the cost function 
-
-i guess the reason why the cost-to-go function decrease with the number of synergies increases is that the way you get the synergies from the analytical model is completely different, completely away from the cost-to-go values,
-means that the strategy to get the synergies is not really appropriate estimates how it is effective or not
-= the cost-to-go value is not a appropriate value to estimate ...
-
-it cannot be expected that the more synergies leads to the better results(previous question)
-
--ishiguro sensei: is it the matter of the task? the task was so simple? 
-
-maybe the appropriate answer would be: the index how you can get the synergies is completely different from cost-to-go value,
-you should think about the relation between how you can determine the number of  synergies and the cost-to-go function, i.e. the relation between these two.
-If you expect some positive correlation between these two values, then the graph will be decreasing, now the current graph suggest these two variable are not strongly related. 
-
-What kind of relation between the cost-to-go values and the index of how you can deterimine the synergies 
-
-- ishiguro sensei: need to analyze the result and get some hypothesis why this reuslt happens
-
-
-Arai sensei: what is the most important contribution?
-
-
-
-
-
-
-** answer sensei's question ASAP
-
-** TODO check gramma and typo
+** INPROGRESS check gramma and typo
    DEADLINE: <2016-06-05 Sun>
    - by Grammarly
 ** DONE check thesis format
    CLOSED: [2016-06-02 Thu 15:54]
    - State "DONE"       from "TODO"       [2016-06-02 Thu 15:54]
-** 
+
+** WAITING Check thesis plagiarism
+   DEADLINE: <2016-06-17 Fri>
+   - State "WAITING"    from "TODO"       [2016-06-17 Fri 12:00] \\
+     waiting for Nakata's check
+
 ** Hosoda sensei's questions
 *** why the cost-to-go value is not decreasing as the number of synergies increases
 
@@ -166,6 +32,119 @@ The goal-related synergies are extracted from the optimal solutions, say A, solv
 The gool-unrelated synergies are extracted from different dataset that are optimized b
 
 The random synergies 
+** DONE include answers to Hosoda and Arai into discussion of thesis
+   CLOSED: [2016-06-17 Fri 12:00]
+   - State "DONE"       from "TODO"       [2016-06-17 Fri 12:00]
+Denny,
+
+Sorry, I have no time this week due to travel, meeting, etc.
+No skype meeting is required, since your comments on my questions seems
+understandable.
+Those comments should be included properly in your thesis,
+in the discussion parts. 
+Furthermore, we are still interested in how we can select the best synergy
+in a case.
+You need to comment on this matter more, to show your more clear and more
+definite ideas, hopefully.
+Hope your good luck in your final defense.
+
+Best,
+Tatsuo Arai
+
+
+*** literature about selecting no. of synergies
+**** A Diamond - Reaching control of a full-torso...
+     min. no of synergies to explain the observed data (reaching movement control signals by RL)
+**** Berniker - simplified and effective motor control ...
+     control performance vs min. number of synergies
+*** chapter 3
+**** "Why the cost-to-go value is not decreasing as the number of synergies increase?”
+
+The cost-to-go value in my proposed method using synergies is expected to be worse than the reference value, i.e., the cost-to-go value of the "no synergies" case. Since the cost-to-go value of the “4 synergies” case is similar to the reference value, the value might not decrease significantly even if the number of synergies is larger than 4. Note that, even though the value does not decrease significantly, the value does not increase and it could be said that the values are monotonically decreasing when we consider all cases including “3 synergies”. The details are as explained below.
+The robot motion is generated by a well-established “optimal control theory based solver” called iLQG, no matter how the synergies are used or not. The iLQG controls the robot so that the cost-to-go value is minimized, and it is assumed that the iLQG solver can determine the “optimal” control signal within the given control space. The control space using synergies becomes a low-dimensional “subspace” of the original control space, and the performance index of the control, i.e., the cost-to-go value, must degrade when the synergies are used. Therefore, the cost-to-go value of the “no synergy” case is treated as the reference value which is the lower limit of the performance index.
+The simplicity of the task may affect the change of the performance index. The results show that “4 synergies” are enough to achieve the reaching tasks. If the task becomes more complicated, it is expected that the performance index may decrease as the number of synergies."
+
+
+**** relationship of the cost-to-go values and the number of synergies used
+In the current setting, it is expected that the cost-to-go values decrease as the number of synergies increased. The cost-to-go values are the results of the optimal control problems, i.e. the reaching task. The smaller the cost-to-go value, the better the control performance. The optimal control problems are solved by the well-established solver iLQG, which "searches" for solutions within a control space. When synergies are used, the iLQG "searches" for solutions in a subspace of the original control space spanned by the synergies. The admissible control space "volumn" decreases as fewer synergies are used. Therefore, it can be expected that the cost-to-go values decrease as fewer synergies are used. And the cost-to-go values must be higher than that when the optimal control problem is solved in original control dimensionality, i.e. the no synergies case. 
+
+Although monotonically decreasing cost-to-go values were observed in the results of all type of synergies, whether the "optimal solutions" can be found does not directly related to the number of synergies used. 
+For the case when random synergies are used (Fig. 3-4), since the synergies are not orthogonal vectors and the control values are bounded, they cannot span the original control space and thus the reaching task cannot be solved even all 10 synergies are used. In contrast to the random synergies, the goal-related synergies are extracted from the "optimal solutions" solved in original control space, they span a control space that "optimal solutions" lie within; It is expected that the "optimal solutions" can be found when as least all synergies are used. The results in Fig. 3-3a implies that the "optimal solutions" lie in a low-dimensional control space (manifold); the low-dimensional control space can be spanned by using the goal-related synergies or the energy-efficient synergies.
+
+The simplicity of the task may affect the change of the performance index. The results show that “4 synergies” are enough to achieve the reaching tasks. If the task becomes more complicated, it is expected that the performance index may decrease as the number of synergies."
+
+
+
+
+**** the minimum number of synergies required
+“Can you explain why 4 synergies is enough?”
+One synergy might move the end effector in one direction since the muscle just contract and at least 2 synergies may be necessary if we have to move the end effector in a 1-D space (on a line). In order to move the end effector in a 2D space, more synergies seem to be required as shown below figures.
+
+From the figures, controlling the robot by 3 synergies may enable the reaching motion but our result shows that 4 synergies are necessary. One possible reason is the non-linearity of the robot dynamics. The moving direction by a synergy must depends on the posture of the robot, and it make sense that a redundant number of synergies are required to move the end effector to various target positions.
+
+**** The minimum number of synergies required
+At least 3 synergies are required to produce end effector motion in all possible directions on the 2D horizontal task space. A synergy specifies co-activations of all muscles. Since muscles can only contract, activation of a synergy can move the end effector in one direction; Motion along a line (1D task space) requires at least 2 synergies that move the end effector in opposite direction, thereby 3 synergies are minimally required to move the end effector in the 2D task space. The results here shows that 4 synergies are necessary. One possible reason is the non-linearity of the robot dynamics. The moving direction by a synergy must depend on the posture of the robot, and it makes sense that a redundant number of synergies are required to move the end effector to various target positions.
+
+
+
+
+**** how we can select the best number of synergies
+     “How to determine the number of synergies? What is the best number of synergies?”
+The best number of synergies might be determined according to the performance index of the control and the calculation cost. While the performance might degrade as the number of synergies decreases, the calculation cost must be reduced. To develop a method to consider the balancing is one of the future work. In the Chapter 3, controlling with 3 synergies is significantly worse than that with 4 synergies. In such a case, controlling with 4 synergies seems to be the best case. Note that, it may depend on the control task.
+
+
+
+**** The best number of synergies
+The best number of synergies to achieve the reaching tasks can be determined according to the control performance and the computation cost. As mentioned before, the control performace is expected to be monotonically increasing (i.e., cost-to-go values decreases) when more synergies were used, with a trade-off of increase of computation cost. Therefore, one can uses an ad hoc scheme that selected the minimum number of synergies that can achieve cost-to-go values smaller than a pre-defined threshold value. A possible ad hoc scheme of finding the best number of synergies is to look for the "start" of the plateau. If the "optimal solutions" of performing the reaching task can be approximated by fewer synergies, a sharp drop followed by a plateau in the cost-to-go values similar to the Fig. 3-3a can be expected. This sharp drop and plateau have been reported in other works that adopt synergies-based control methods~\cite{chhabra2006properties, diamond2014reaching}. For instance, one can say 4 was the best number of synergies that had the best trade-off between the control performance and the computation cost when goal-related synergies were used, according to Fig. 3-3a. Development of a method for determination of the best number of synergies is one of the future works. 
+
+The best number of synergies also depends on the task complexity. While it is reasonable that more degree-of-freedom of control is needed to carry out more complicated task (e.g. reaching targets via predefined points), it is expected that the "drop" may not be as steep as the case of simple task; However, as long as the "optimal solutions" of the complicated task can be approximated by fewer synergies, the plateau exists.
+
+
+
+
+
+*** in chapter 4
+
+**** the minimum number of muscle synergies required (synergies with negative components)
+Compared with the chapter 3, the minimum number of synergies required to move the end effector in a 2D space can be 2. This chapter allows positive and negative synergy activations; This implies activating a synergy may produce 2 possible motion directions, thereby 2 synergies may produce 4 directions that act as bases for producing motion in all possible directions. Although the synergies are orthogonal vectors in the control space, they do not necessarily produce orthogonal motion directions in the end effector task space. Moreover, since the synergies may include negative components, a linear combination of synergies may result in negative muscle activations that needed to be bounded to nonnegative before applying to the robot. In addition to the non-linearity of the robot, these are possible reasons such that 5 synergies were required to achieve good control performance in our case. 
+
+
+**** how we can select the best number of synergies? “Have you consider to determine the number of synergies in other chapters?”
+Yes, in chapter 4, similar criterion can be used to determine the best number of synergies.
+
+
+**** The best number of synergies
+Similar to the case in chapter 3, the best number of synergies can be determined in this tracking control task according to the control performance, by an ad hoc method that locates a sharp improvement followed by a "plateau" of the control performance. From Table 4.2, it was observed that 5 was the minimum number of synergies required to achieve good control performance of following the desired figure of eight trajectory.  A sudden drop of the tracking error was observed when 2-4 synergies were used. The tracking errors were of similar level when 5 or more synergies were used. This sudden drop and plateau of the control performance indicate that the control signals to achieve the tracking task lie in a lower-dimensional control space.  
+
+The control performance was not only the tracking error in the task space, but also the control performance in the joint space. As the secondary control task goal, the joints were regulated by the null space control term to keep away from the limits without much interfering the control performance in the task space. It was observed that the when smaller then 4 (or 5 when the sparsification technique was used), the robot collided with the joint limits. This was possibly due to the lack of the degree-of-freedom of control. However, this assessment can only indicate whether the null space control can work; Further investigation of relationship between the number of synergies and the 
+
+Since the control performances were assessed for this particular tracking control task, it may need more or fewer synergies to accomplish different control tasks. (e.g. different desired task-space trajectories) Investigation of the best number of synergies for performing a variety of control task is one of the future work.
+
+
+*** in chapter 5
+**** how we can select the best number of synergies? “Have you consider to determine the number of synergies in other chapters?”
+No, in chapter 5, there is no criterion to determine the best number of synergies, during the data collection. Therefore, I extract the synergies which explain 90% of the total variance where the value is determined empirically. Note that, it is not the way to determine the best number of synergies.
+
+**** choosing the number of synergies for exploration
+In contrast to chapter 3 and chapter 4, there is no criteria to determine the best number of synergies in the exploration task. The previous two chapters, the best number of synergies is determined according to the control performance after the act of control. In this chapter, since the best number of synergies for the exploration task is unknown, the number of synergies used for the exploration is set before the act of control. Presetting the number of synergies can also save the time of repeating the exploration task using different number of synergies.
+
+The number of synergies used for exploration is preset so that the selected synergies 
+can explain a certain threshold percentage of the total data variance. The threshold is a predefined value. In the experiment, a guess of 90% was set for this threshold. 
+
+In the future work, the exploration task will be conducted by using a certain fixed number of synergies. By comparing the control performance of exploration according to certain criteria such as tracking error, the best number of synergies that attains the best trade-off between the control performance and the control dimensionality (complexity) for the exploration task can be obtained. 
+
+
+
+
+
+- fioen 
+- pit2 
+- iej a 
+
+
+“What is the main contribution of the thesis?”
+The main contribution of this thesis is the investigation of the feasibility of control methods utilizing muscle synergies for a musculoskeletal robot. Musculoskeletal robots have redundant number of joints and muscles that can perform a diversity of tasks. Dimensionality reduction is crucial to develop methods to effectively control the robots. My research can be the first step to the realization of robots that can work in daily life.
+
 
 ** Arai's sensei's questions
 *** Can you explain why 4 synergies is enough?
@@ -248,58 +227,146 @@ This thesis provides fundamental techniques for autonomous musculoskeletal robot
   - chapter 5:
     - developed a method such that a musculoskeletal can simultaneously obtain muscle synergies and extend controllable task space 
 
-- investigate the feasibility of the synergy-based control method for a musculoskeletal robot. 
+- investigate the feasibility of the synergies-based control method for a musculoskeletal robot. 
 musculoskeletal robot - redundant structure
 dimensionality reduction is crucial to develop method to effectively control such robot.
 My research might be the first step to the realization of robots that can work in daily life.
-
-
-
 ** Ishiguro sensei's request
 *** Check the remaining days before professors meeting
 
 *** Answer the professors' questions
 
 *** Check gramma and typo
+** google doc.
+======
+Schedule
+Meeting with Hosoda sensei: Done
+The date you will leave Japan: 29 May 
+Meeting with Arai sensei and ask for comment: to be confirmed
+Meeting with Ishiguro sensei to confirm the thesis title
+Check Grammar and typo mistake: to be finished by 5th Jun (Asked Fabio sensei, Edu, James and my boss in HK to check for English already)
+Check thesis format
+Ask Nakata sensei for Plagiarism check
+Submission of thesis title : 8 Jun 1700
+Submission of all documents : 20 Jun 1700
+Form 1 (1 copy)
+Form 2 (1 copy)
+Form 3 (2 copy) and send data to Ishiguro sensei
+Form 4 (2 copy)
+Form 9 (data by email)
+Form 10 (1 copy)
+5 books binding, not necessary the final one
+Checklist signed by Ishiguro sensei
+新規性についての上申書
+同意承諾書
+Prepare final binding and send copy to the professors
+With a separated note to say thank you for the review 
+A PDF in USB or CD for COOP. A printed version is also needed
+Either soft or hard copy
+Faculty meeting 20 July
+Final defense - presentation and Q&A (total 30 mins)
+Presentation to answer the questions in the public hearing
+Defend the thesis
+Response letter (4 copies)
+1 slides for one question
+博士学位論文の審査等の結果報告(The result of examination): remind Ishiguro sensei to prepare it. It needs all professors’ name seals
+最終試験の結果の要旨及び担当者（form 8): remind Ishiguro sensei to prepare it
+Submission of final defense results by Ishiguro sensei (maybe 2 days later after final defense)
+博士学位論文の審査等の結果報告
+論文審査の結果の要旨，及び担当者（様式7）(within Form 3) (Ishiguro sensei)
+PDF file of Form 3 
+Written from the point of view of committee members
+Matsumura san’s example
+Deadline for replacement of thesis: Have to confirm with Nakata sensei
+Final defense result: 26 Aug
+Committee meeting and degree granting: 23 Sep 
+To do list
+Share the schedule information with people concerned DONE
+Send e-mail until this night!
+Nakamura
+Fabio-sensei
+Nakata-sensei (he sent e-mails related to this issue and Denny-kun should confirm this issue with him)
+Ishiguro-sensei 
+Check grammar and typo
+Who will check the grammar and typo?
+Meet with Hosoda sensei DONE
+Meet with Arai-sensei
+Negotiate the schedule for the meeting 
+Prepare the document of the thesis title submission and get the stamp from ishiguro sensei
+Prepare the documents for the phd application
+Confirm the thesis title with Ishiguro sensei
+Translation of thesis title to Japanese
+Studies on control methods for musculoskeletal robots using muscle synergies
+筋シナジーを用いた筋骨格ロボットに対する制御法の研究
+キンシナジーヲモチイタキンコッカクロボットニタイスルセイギョホウノケンキュウ
+======
 
-** TODO Check thesis plagiarism
-   DEADLINE: <2016-06-17 Fri>
+The following are a list of the questions and to do tasks on today’s presentation.
+
+[[file:~/Desktop/Thesis%20related/Hosoda_and_Arai_sensei_QandA.pdf::%25PDF-1.3][/Users/Denny/Desktop/Thesis related/Hosoda_and_Arai_sensei_QandA.pdf]]
 
 
-** TODO include answers to Hosoda and Arai into discussion of thesis
-
-*** chapter 3
-**** "Why the cost-to-go value is not decreasing as the number of synergies increase?”
-
-The cost-to-go value in my proposed method using synergies is expected to be worse than the reference value, i.e., the cost-to-go value of the "no synergies" case. Since the cost-to-go value of the “4 synergies” case is similar to the reference value, the value might not decrease significantly even if the number of synergies is larger than 4. Note that, even though the value does not decrease significantly, the value does not increase and it could be said that the values are monotonically decreasing when we consider all cases including “3 synergies”. The details are as explained below.
-The robot motion is generated by a well-established “optimal control theory based solver” called iLQG, no matter how the synergies are used or not. The iLQG controls the robot so that the cost-to-go value is minimized, and it is assumed that the iLQG solver can determine the “optimal” control signal within the given control space. The control space using synergies becomes a low-dimensional “subspace” of the original control space, and the performance index of the control, i.e., the cost-to-go value, must degrade when the synergies are used. Therefore, the cost-to-go value of the “no synergy” case is treated as the reference value which is the lower limit of the performance index.
-The simplicity of the task may affect the change of the performance index. The results show that “4 synergies” are enough to achieve the reaching tasks. If the task becomes more complicated, it is expected that the performance index may decrease as the number of synergies."
-
-**** the minimum number of synergies required
-“Can you explain why 4 synergies is enough?”
-One synergy might move the end effector in one direction since the muscle just contract and at least 2 synergies may be necessary if we have to move the end effector in a 1-D space (on a line). In order to move the end effector in a 2D space, more synergies seem to be required as shown below figures.
-
-From the figures, controlling the robot by 3 synergies may enable the reaching motion but our result shows that 4 synergies are necessary. One possible reason is the non-linearity of the robot dynamics. The moving direction by a synergy must depends on the posture of the robot, and it make sense that a redundant number of synergies are required to move the end effector to various target positions.
+Hosoda sensei's questions
+why the cost-to-go value is not decreasing as the number of synergies increase
 
 
-**** how we can select the best number of synergies
-     “How to determine the number of synergies? What is the best number of synergies?”
-The best number of synergies might be determined according to the performance index of the control and the calculation cost. While the performance might degrade as the number of synergies decreases, the calculation cost must be reduced. To develop a method to consider the balancing is one of the future work. In the Chapter 3, controlling with 3 synergies is significantly worse than that with 4 synergies. In such a case, controlling with 4 synergies seems to be the best case. Note that, it may depend on the control task.
+Because under the current setting of the cost-to-go function, the increase of the number of synergies does not chathe improvement of the cost-to-go function the solver for the optimal control problem The cost-to-go value is not strongly related to the number of synergies used in solving for the optimal control problems in this chapter. It also depends on the solver used and the definition of the cost-to-go function. The optimal control problems are solved by a solver called iterative Linear Quadratic Gaussian iLQG. The solver stops iteration for obtaining better results if the change of the cost-to-go functions is very small. In the current result, using 4 synergies can reach to a target point closely. When using 5 or more synergies, the robot is expected to approach closer to the target. But the improvement reflected in the resulting cost-to-go value may be too small that the iLQG solver cannot detect the improvement and stop iteration. 
+
+Arai's sensei's questions
+Can you explain why 4 synergies is enough?
+This is the problem of controlling the robot end effector on a 2D task space. As the synergy activations are constrained to nonnegative, actuating one synergies can only move the end effector in one direction. Therefore, conceptually, the robot needs minimally 4 synergies to move in all possible directions on the 2D task space.
+What is the best number of synergies 
+How to determine the number of synergies?
+Have you consider to determine the number of synergies?
+What is the main contribution of the thesis?
+Ishiguro sensei's requests
+Check the remaining days before professors meeting
+Answer the professor's' questions
+ Check grammar and typo
 
 
 
 
-*** in chapter 4
-**** how we can select the best number of synergies? “Have you consider to determine the number of synergies in other chapters?”
-Yes, in chapter 4, similar criterion can be used to determine the best number of synergies.
-
-*** in chapter 5
-**** how we can select the best number of synergies? “Have you consider to determine the number of synergies in other chapters?”
-No, in chapter 5, there is no criterion to determine the best number of synergies, during the data collection. Therefore, I extract the synergies which explain 90% of the total variance where the value is determined empirically. Note that, it is not the way to determine the best number of synergies.
 
 
-“What is the main contribution of the thesis?”
-The main contribution of this thesis is the investigation of the feasibility of control methods utilizing muscle synergies for a musculoskeletal robot. Musculoskeletal robots have redundant number of joints and muscles that can perform a diversity of tasks. Dimensionality reduction is crucial to develop methods to effectively control the robots. My research can be the first step to the realization of robots that can work in daily life.
+
+ 
+
+Technical explanation of iLQG
+
+Compare with no synergies case, which is the optimal case in our setting.
+
+
+
+
+
+
+
+The total variance explained simply increases as the number of synergies increases
+
+In this graph, as the number of synergies increases, the cost-to-go value does not decreases simply. Why?
+
+i don't know in detail about how do you utilize the analytical model for getting synergies, but is the analytical model means that has some relation between the cost function 
+
+i guess the reason why the cost-to-go function decrease with the number of synergies increases is that the way you get the synergies from the analytical model is completely different, completely away from the cost-to-go values,
+means that the strategy to get the synergies is not really appropriate estimates how it is effective or not
+= the cost-to-go value is not a appropriate value to estimate ...
+
+it cannot be expected that the more synergies leads to the better results(previous question)
+
+-ishiguro sensei: is it the matter of the task? the task was so simple? 
+
+maybe the appropriate answer would be: the index how you can get the synergies is completely different from cost-to-go value,
+you should think about the relation between how you can determine the number of  synergies and the cost-to-go function, i.e. the relation between these two.
+If you expect some positive correlation between these two values, then the graph will be decreasing, now the current graph suggest these two variable are not strongly related. 
+
+What kind of relation between the cost-to-go values and the index of how you can deterimine the synergies 
+
+- ishiguro sensei: need to analyze the result and get some hypothesis why this reuslt happens
+
+
+Arai sensei: what is the most important contribution?
+
 
 * To do tasks
   
@@ -357,10 +424,12 @@ The main contribution of this thesis is the investigation of the feasibility of 
 ** DONE Oral defense
    CLOSED: [2016-05-25 Wed 23:00] SCHEDULED: <2016-05-25 Wed 11:00-12:00>
    - State "DONE"       from ""           [2016-05-25 Wed 23:00]
-** Submission of thesis title
-   DEADLINE: <2016-06-08 Wed 17:00>
-*** WAITING send excel file to Kashioka san and ishiguro
-    SCHEDULED: <2016-06-02 Thu>
+** DONE Submission of thesis title
+   CLOSED: [2016-06-08 Wed 12:00] DEADLINE: <2016-06-08 Wed 17:00>
+   - State "DONE"       from ""           [2016-06-08 Wed 12:01]
+*** DONE send excel file to Kashioka san and ishiguro
+   CLOSED: [2016-06-08 Wed 12:00] DEADLINE: <2016-06-08 Wed 17:00>
+    - State "DONE"       from "WAITING"    [2016-06-08 Wed 12:02]
     - State "WAITING"    from "TODO"       [2016-06-02 Thu 16:56] \\
       waiting from Kashioka san's reply
     
