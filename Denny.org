@@ -1,6 +1,41 @@
 * notes
 * today's todo
 
+** 17 Jun 2016
+   
+** 3 Jun 2016
+*** DONE draft complaint letter
+    CLOSED: [2016-06-17 Fri 12:10]
+    - State "DONE"       from "TODO"       [2016-06-17 Fri 12:10]
+Dear Chief Editor,
+
+I am writing for a few equiries about our recent submission titled “Nonparametric Local Learning for Hyper-Elastic Robotics Control: An Enabling Technique for Effective Endoscopic Navigation” (ID: TMECH-02-2016-5183) to the Focused Section Mechatronics in Soft Robotics of the IEEE Transaction on Mechatronics.
+
+We received a decision on 8th May 2016, which contains comments from 9 reviewers. (The decision letter is attached for your reference.)
+In order to prepare a revised paper within the tight schedule of the focused section, we have contacted the associate editor about the deadline for resubmission. However, there is no reply.
+
+Regarding our submission, we would like to enquire about the following issues:
+1. Could you please provide the average number of reviewers for each submission in this focused section? and in regular submission? 
+   As discussed with experienced colleagues, we believe that a decision based on 9 reviewers' comments is unusual.
+Especially for the focused section, preparing high-quality replies to all the 9 reviewers' comments within designated is difficult.
+Thus, we conceive that the decision with 9 reviewers comments was a subtle way to discourage us from resubmission in the same focused section. 
+2. Is there any filtering process for the reviewers' comments?
+   We found that the 9 reviewers' comments are diverging. Some reviewers lack technical knowledge that misunderstood our manuscript. For example, a reviewer misunderstood that we employed neutral network; However, we employed a nonparametric local learning technique called LWPR, which is not a neutral network algorithm. In addition to the number of the reviewer, the quality of the comments also introduce difficulties to improve our manuscript.
+3. Generally, is a resubmission deadline is included in the decision letter for a focused section?
+   Although the deadline for submission of revised paper is provided in the focused section, it is not updated; 
+   Due to the postponement of the paper submission, we received the decision almost a month later than that provided on the web.
+   We believe it is impossible to prepare a revised manuscript that includes response to all the 9 reviewers, by the provided deadline of submission of revised paper on 1st June.
+
+
+Thank you for your attention. 
+We are looking forward to your kind response.
+
+Yours sincerely,
+
+
+*** DONE draft method for determining the best number of synergies
+    CLOSED: [2016-06-17 Fri 12:10]
+    - State "DONE"       from "TODO"       [2016-06-17 Fri 12:10]
 ** 2 Jun 2016
 *** TODO check english of the thesis
 *** TODO discussions in chapter 3, 4 and 5 about determination of synergies no.

@@ -1,9 +1,61 @@
-* general info
+* General info
   :PROPERTIES:
   :Directory: file:~/Work/HKU/MRcompatible_platform/
   :END:
   
 * notes
+
+Kinematic Model-free Positional Control for 
+Robot-assisted Cardiac Catheterization 
+
+
+
+This research presents model-free control interface capable of providing effective teleoperated control of a clinically used catheter, with the incorporation of visual-motor alignment.
+
+
+This research presents a control interface that provides effective telemanipulation for Cardiac catheterization.
+%
+The proposed interface 
+
+
+
+
+kinematic control
+model-free approach
+particle filtering
+unknown and unstructured constrained environments
+
+visual-motor alignment
+motion consistent with approximated(virtual) visual feedback 
+
+
+
+To provide an operator with a consistent motion reference
+
+maneuver the catheter tip aiming at the desired target in unknown or unstructured constrained environments
+visual-motor alignment.
+
+
+subject tests
+enhance navigation effectiveness
+
+
+
+A sequential sampling method, particle filtering [1], is used to update the mapping from actuation input to our proposed virtual camera coordinate smoothly in order to realign the visual-motor coordinates time-by-time. It aims to provide the operator with a consistent motion reference to maneuver the catheter tip aiming at the desired target in unknown or unstructured constrained environments. Subject tests have been conducted to demonstrate how the proposed approach enhances the navigation effectiveness.
+
+
+
+
+
+
+
+
+
+presents a model-free
+
+References
+[1] Ma et al., Journal of computer, vol.no, pp.xxx-xxx, 2012.
+[2] Zheng et al., Circulation, vol.no, pp.xxx-xxx, 2001
 
   
 ** DONE meeting material
@@ -15,18 +67,18 @@
 * meeting
 
 ** TODO progress meeting
-   SCHEDULED: <2016-06-08 Wed 15:00 +1w>
+   SCHEDULED: <2016-06-15 Wed 15:00 +1w>
    - State "DONE"       from "TODO"       [2016-05-25 Wed 18:00]
    - State "DONE"       from "TODO"       [2016-05-18 Wed 18:00]
    - State "DONE"       from "TODO"       [2016-05-11 Wed 15:00]
    - State "DONE"       from "TODO"       [2016-05-04 Wed 17:00]
    - State "DONE"       from "TODO"       [2016-04-27 Thu 22:00]
    :PROPERTIES:
-   :LAST_REPEAT: [2016-06-02 Thu 16:09]
+   :LAST_REPEAT: [2016-06-17 Fri 12:12]
    :END:
 
 * tasks
-** TODO buy airplane ticket to london
+** buy airplane ticket to london
 ** Dynamics modeling
    details are located below
 *** TODO free body diagram

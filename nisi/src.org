@@ -4,10 +4,12 @@
   :END:
 * notes
 
+** Neoguide Colonoscope
+
 * meeting
   
 ** TODO internal progress meeting
-   SCHEDULED: <2016-06-03 Fri 18:00 +1w>
+   SCHEDULED: <2016-07-11 Mon 11:00 +1w>
    - State "CANCELED"   from "TODO"       [2016-05-16 Mon 15:24] \\
      Dr. Kwok is attending ICRA
    - State "DONE"       from "TODO"           [2016-05-09 Mon 13:00]
@@ -15,7 +17,7 @@
    :LAST_REPEAT: [2016-05-19 Thu 15:24]
    :END:
 ** TODO progress meeting with nisi
-   SCHEDULED: <2016-06-11>
+   SCHEDULED: <2016-06-17 Fri 20:30>
    - State "DONE"       from "TODO"       [2016-05-30 Mon 21:00]
    - State "DONE"       from "TODO"       [2016-05-13 Fri 22:00]
    - State "DONE"       from "TODO"       [2016-05-06 Fri 21:00]
