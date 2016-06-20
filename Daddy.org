@@ -2,8 +2,9 @@
 
 * Health
 ** follow-up consultation
-*** TODO check cancer index - Dr. Lam
-    SCHEDULED: <2016-06-20 Mon 10:30>
+*** DONE check cancer index - Dr. Lam
+    CLOSED: [2016-06-20 Mon 16:35] SCHEDULED: <2016-06-20 Mon 10:30>
+    - State "DONE"       from "TODO"       [2016-06-20 Mon 16:35]
 *** TODO check cancer index - PWH
     SCHEDULED: <2016-07-04 Mon>
 ** DONE Father surgery

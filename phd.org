@@ -433,8 +433,9 @@ Arai sensei: what is the most important contribution?
     - State "WAITING"    from "TODO"       [2016-06-02 Thu 16:56] \\
       waiting from Kashioka san's reply
     
-** TODO Submission of all documents
-   SCHEDULED: <2016-06-07 Tue> DEADLINE: <2016-06-20 Mon 17:00>
+** DONE Submission of all documents
+   CLOSED: [2016-06-20 Mon 16:34] SCHEDULED: <2016-06-07 Tue> DEADLINE: <2016-06-20 Mon 17:00>
+   - State "DONE"       from "TODO"       [2016-06-20 Mon 16:34]
    - Form 1 (1 copy)
    - Form 2 (1 copy)
    - Form 3 (2 copy) and send data to Ishiguro sensei

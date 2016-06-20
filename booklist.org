@@ -1,0 +1,15 @@
+* Gramma
+** The Only Grammar Book You'll Ever Need: A One-Stop Source for Every Writing Assignment, Susan Thurman and Larry Shea
+
+* Writing
+** General
+*** The Element of Style, William Struck Jr and Elwyn Brooks White
+    [[file:~/Documents/Books/The_Element_of_Style.org::*Elementary%20rules%20of%20usage][org file]]
+    [[file:~/Documents/Books/The%20Elements%20Of%20Style%20(Strunk,White-4th%20Edition).pdf::%25PDF-1.4][pdf file
+]]
+*** Bird by Bird: Some Instructions on Writing and Life, Anne Lamott
+*** On Writing Well: The Classic Guide to Writing Nonfiction, William Zinsser
+
+** Research purposes
+*** A Manual for Writers of Research Papers, Theses, and Dissertations, Eighth Edition: Chicago Style for Students and Researchers (Chicago Guides to Writing, Editing, and Publishing),  Kate L. Turabian (Author), Wayne C. Booth (Editor), Gregory G. Colomb (Editor)
+ 
