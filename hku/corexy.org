@@ -1,0 +1,45 @@
+* info
+  :PROPERTIES:
+  :Directory: [[file:~/Work/HKU/CoreXY/]]
+  :END:
+
+* Notes
+
+** on paper_v16.docx
+
+*** section II
+**** fig1 not clear to show how the end effector is moved in x direction and in y direction
+**** add subtitle "the core xy mechanism"
+**** good flow of first describe Kinematic modelling
+**** infinite-stiffness assumption -< not good choice of terminology
+     inextensible
+**** Lagrange equations of the second kind <- Lagrange's equations of the second kind
+**** put (7) before kinetic energy
+**** kinetic energy of the belt is missing?
+**** list out equation for the case of stepping motor too
+**** good summing up at the last paragraph
+*** section III
+**** the belts connected to the end effector are not "horizontal" in fig 3, any problem?
+**** what is the purpose of III A, analysis the time-delay of the system?
+**** only one case (x=2.5, y=2.5) was studied? 
+**** give your definition on the settling time
+**** better to do sine wave input too to show the time-delay problem
+**** "the additional transmission elements that was involved in the x-direction motion" is just your guess but not a reason supported by evidence
+**** in III B. better also mention the three points i) ii) and iii) in the introduction? to show why the dynamic modeling is necessary
+**** fig.6: use different symbols of x and y for ideal and simulated trajectory. 
+**** fig.6: what is r?
+**** fig.6: separate the two models, no cross lines
+**** "While moving along a straight line, nearly no deviation from the ideal trajectory can be observed": indicate the relevant results/figs
+**** what is "the 5% range"?
+**** "Having the task repeated for 20 times, we could not recognize fluctuation of the actual trajectory regardless of increasing the running speed. " where are the relevant results/figs?
+**** fig 7: why the red and blue lines are different at the 4 corners?
+**** add fig 8 is good to illustrate the definition of the error, but you also need the equation
+**** explain why such error defintion is good
+**** As I said before, using experiment error as baseline may not be a good idea. 
+**** anyway, fig. 9 needs to be improved or other kind of interpretation. by just looking at the figure, readers may easily get confused that 4-DOF model is a better model.
+**** can we say something about the achievable radius of curvature at the corner at different speed? it may be significant for designing the 3d printing trajectory
+**** III C. you cannot directly draw to conclusion. at least you need to describe how you obtained the figure 10.
+**** III C. 1) did you conduct exp. using different masses 
+**** III C needs to be elaborated more.
+
+

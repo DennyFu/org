@@ -1,4 +1,4 @@
-* Hamlyn Symposium
+* Hamlyn Symposium 2016
      
 ** A Dual-Arm Robotic Neuroendoscope: Early Results
 *** General info

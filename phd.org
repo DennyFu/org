@@ -6,15 +6,17 @@
 * to do task after public hearing
 
 
-** INPROGRESS check gramma and typo
-   DEADLINE: <2016-06-05 Sun>
+** DONE check gramma and typo
+   CLOSED: [2016-07-04 Mon 11:25] DEADLINE: <2016-06-05 Sun>
+   - State "DONE"       from "INPROGRESS" [2016-07-04 Mon 11:25]
    - by Grammarly
 ** DONE check thesis format
    CLOSED: [2016-06-02 Thu 15:54]
    - State "DONE"       from "TODO"       [2016-06-02 Thu 15:54]
 
-** WAITING Check thesis plagiarism
-   DEADLINE: <2016-06-17 Fri>
+** DONE Check thesis plagiarism
+   CLOSED: [2016-07-04 Mon 11:25] DEADLINE: <2016-06-17 Fri>
+   - State "DONE"       from "WAITING"    [2016-07-04 Mon 11:25]
    - State "WAITING"    from "TODO"       [2016-06-17 Fri 12:00] \\
      waiting for Nakata's check
 

@@ -1,8 +1,12 @@
 * notes
 * today's todo
 
-** 17 Jun 2016
-   
+** 4 Jul 2016
+
+*** TODO revise mingzhou paper
+
+*** TODO organize Hamlyn information
+    
 ** 3 Jun 2016
 *** DONE draft complaint letter
     CLOSED: [2016-06-17 Fri 12:10]
@@ -38,7 +42,9 @@ Yours sincerely,
     - State "DONE"       from "TODO"       [2016-06-17 Fri 12:10]
 ** 2 Jun 2016
 *** TODO check english of the thesis
-*** TODO discussions in chapter 3, 4 and 5 about determination of synergies no.
+*** DONE discussions in chapter 3, 4 and 5 about determination of synergies no.
+    CLOSED: [2016-07-04 Mon 11:29]
+    - State "DONE"       from "TODO"       [2016-07-04 Mon 11:29]
 ** 1 Jun 2016
     
 *** DONE contact Dr. Tsang

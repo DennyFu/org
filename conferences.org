@@ -1,0 +1,4 @@
+* Hamlyn Symposium 2016
+:PROPERTIES:
+:Directory: [[file:~/Work/Conferences/]]
+:END:
