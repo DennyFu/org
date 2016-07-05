@@ -9,13 +9,52 @@
 * meeting
   
 ** TODO internal progress meeting
-   SCHEDULED: <2016-07-11 Mon 11:00 +1w>
+   SCHEDULED: <2016-07-12 Tue 14:30 +1w>
+   - State "DONE"       from "TODO"       [2016-07-05 Tue 17:56]
    - State "CANCELED"   from "TODO"       [2016-05-16 Mon 15:24] \\
      Dr. Kwok is attending ICRA
    - State "DONE"       from "TODO"           [2016-05-09 Mon 13:00]
    :PROPERTIES:
-   :LAST_REPEAT: [2016-05-19 Thu 15:24]
+   :LAST_REPEAT: [2016-07-05 Tue 17:56]
    :END:
+*** notes - 2016-07-05
+**** ballon
+- need to confirm ballon design and quantity
+- to order more outuber ballons
+  - pay by luis
+  - will be arrived in 2 months
+- tim
+
+**** tube
+- ordered tubes with different stiffness
+- tim
+
+**** pump
+- sourcing by dr. tse
+- to test how much power should to use
+
+**** filter
+- to find proper filter
+- or solution to use larger radius for suction
+  - will enlarge both inner and other tube
+    - tube will be needed x-symmetric
+- test 2mm (first) and 3mm suction with long tube and new pump and flow rate sensors
+
+
+**** test locomotion with ballon placing at the front
+- without bendable section first 
+
+**** find info for bending curvature of optical fibers
+
+**** test faster response using faster stepper motor
+- braided tube = biopsy
+- smaller bendable section to put inside outer tube 
+- faster stepper motor/better linear track/larger cylinder
+
+**** wiring 
+- on braided tube = sourcing by chimlee
+- alternative solution - flexible pcb
+
 ** TODO progress meeting with nisi
    SCHEDULED: <2016-06-17 Fri 20:30>
    - State "DONE"       from "TODO"       [2016-05-30 Mon 21:00]
