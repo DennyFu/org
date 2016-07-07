@@ -4,66 +4,6 @@
   :END:
   
 * notes
-
-Kinematic Model-free Positional Control for 
-Robot-assisted Cardiac Catheterization 
-
-
-
-This research presents model-free control interface capable of providing effective teleoperated control of a clinically used catheter, with the incorporation of visual-motor alignment.
-
-
-This research presents a control interface that provides effective telemanipulation for Cardiac catheterization.
-%
-The proposed interface 
-
-
-
-
-kinematic control
-model-free approach
-particle filtering
-unknown and unstructured constrained environments
-
-visual-motor alignment
-motion consistent with approximated(virtual) visual feedback 
-
-
-
-To provide an operator with a consistent motion reference
-
-maneuver the catheter tip aiming at the desired target in unknown or unstructured constrained environments
-visual-motor alignment.
-
-
-subject tests
-enhance navigation effectiveness
-
-
-
-A sequential sampling method, particle filtering [1], is used to update the mapping from actuation input to our proposed virtual camera coordinate smoothly in order to realign the visual-motor coordinates time-by-time. It aims to provide the operator with a consistent motion reference to maneuver the catheter tip aiming at the desired target in unknown or unstructured constrained environments. Subject tests have been conducted to demonstrate how the proposed approach enhances the navigation effectiveness.
-
-
-
-
-
-
-
-
-
-presents a model-free
-
-References
-[1] Ma et al., Journal of computer, vol.no, pp.xxx-xxx, 2012.
-[2] Zheng et al., Circulation, vol.no, pp.xxx-xxx, 2001
-
-  
-** DONE meeting material
-   CLOSED: [2016-05-04 Wed 18:44] SCHEDULED: <2016-05-04 Wed 13:00>
-   - prepare some figures about friction modeling at gears
-   - complete combining equations from all FBD
-
-
 * meeting
 
 ** TODO progress meeting
@@ -78,7 +18,6 @@ References
    :END:
 
 * tasks
-** buy airplane ticket to london
 ** Dynamics modeling
    details are located below
 *** TODO free body diagram
@@ -90,16 +29,36 @@ References
 *** TODO verification
 
 ** Paper
-*** TODO draft paper
-    DEADLINE: <2016-06-10 Fri>
+*** TODO draft paper for a journal
     outline is located below
     
-*** TODO submit paper
-    SCHEDULED: <2016-06-15 Wed>
 
+*** TODO submit paper to RA Magazine Special Issue
+    DEADLINE: <2016-08-01 Mon>
+**** RAM submission info
+http://www.ieee-ras.org/publications/ram/ram-special-issues/special-issues-on-surgical-robot-challenge
 
+http://www.ieee.org/publications_standards/publications/authors/authors_journals.html
 
+1. Preparing Your Manuscript
 
+Submitted papers must be written in good understandable English. It is not the job of reviewers, associate editors or editor-in-chief to correct English spelling and grammar, and poorly written papers stand a much lower chance of being accepted. Authors wishing for assistance in this regard may consider using the IEEE proof editing service (fee based).
+
+The submitted paper is submitted as a PDF file for review. There is no format or template requirement and you may use any tool at all (LaTeX, Word etc.) to prepare the PDF file. You might like to use the IEEE PDF checker to ensure that your file is compliant, and some hints on creating compliant PDF files using LaTeX. The IEEE Author Digital Tool Box has many helpful links including tools for correct reference formats.
+
+A technical feature (regular or special issue) should meet the following requirements:
+
+    No more than 9 magazine pages, so aim for no more than 4500 words of text
+    No more than 10 equations
+    No more than 20 references, unless it is a survey article
+    No more than 10 figures
+    Include at least one high quality color photograph of the robotic system
+    Figures, tables, schematics, plots are very welcome
+    PLEASE NOTE: figures need to be submitted in high-resolution, high-quality format such as JPEG, TIFF, EPS, etc. PDF files are not supported.
+
+Be aware that mandatory page charges of USD 250 apply for every published page beyond 8 pages. If your paper has multimedia material then this should be prepared according to the guidelines and submitted at the same time as your PDF file.
+
+If you have not previously submitted a paper to the magazine, you are strongly encouraged to peruse recent issues to familiarize yourself with the style and technical level of typical articles.
 
 
 * DONE Hamlyn symposium robotic challenge 2-pages paper
@@ -467,7 +426,7 @@ I_m & 0 & 0\\
 *** verification
 
 
-* paper draft 
+* paper draft for a journal
 ** Title
    Design of a Robotic Platform for MRI-guided Cardiac Electrophysiology (EP)
 ** Introdution
@@ -519,7 +478,7 @@ I_m & 0 & 0\\
 - How?
 - Fig: showing the ablation features visualized on late-gadolinium MR images
 *** Deduce to the need of our design
-
+    
 ** The MR-compatible Robotic Platform
 A MR-compatible, high performance robot has been developed for EP operation. Fig. shows the appearance of the robot. The robot is used to manipulate a catheter tip that locates near to the target heart tissue. During an EP operation, a surgeon use a controller to operate the catheter (Fig. ). In order to achieve effective manipulation of a catheter during a MRI-guided EP, the robot is developed to fulfil the following requirements:
 + The robot must be solely made of MR-compatible material.
@@ -643,4 +602,146 @@ Specification
     - Extensible to other clinical applications/surgeries
     - Difficulty even using robot, and pave a way to our future work in regards of model-free catheter control
  
+
+
+* paper draft for RAM
+  :PROPERTIES:
+  :Directory: file:~/Work/HKU/MRcompatible_platform/RAM
+  :END:
+  
+  - try to pick out the most important message at every page
+
+
+** Abstract - the 1st paragraph
+- one short paragraph
+  - motivation using MRI
+  - aim of this paper: 
+
+** Introduction - MRI-guided robot-assisted MIS (+ abstract 800 words)
+- What is MIS and its advantages
+- What is MRI and its advantages in MIS
+  - MRI provide better quality (intra-operative) images that monitor the conditions of a patient during MIS procedure
+  - robot to manipulate surgical tools
+- Technical difficulties of incorporating MRI technologies
+- last paragraph sums up and connects to the next section
+
+** The surgeon-robot close-loop (not good, to be changed) ( 2500 words)
+- overview
+  - 5 components in the close-loop: Image processing, mri-compatible actuation, sensory feedback, control method and validation
+  - general setting in the MRI scanner room and the control room
+    - fig
+
+*** Image processing
+- objective: producing intra-operative MR images
+  - by registration technique 
+
+- registration 
+  - what is registration
+    - fig
+  - several existing registration methods
+    - pros and cons
+
+- real-time computation
+  - FPGA-based computation
+    - fig explaning the computation mechanism
+    - pros and cons 
+  - several existing methods
+    - pros and cons 
+
+- intra-operative 3D image construction
+  - examples with figs
+
+*** MRI-compatible actuation
+- negligible effect to the MR image quality
+
+- pneumatic actuation
+  - pros and cons
+  - several examples
+
+- Hydraulic actuation
+  - O-ring vs rolling diaphragm
+  - pros and cons
+
+- other common actuation methods 
+  - ultrasound (common)
+    - pros and cons
+  - piezeoelectric (common)
+    - pros and cons
+  - magnetic-driven (move to future work?)
+    - pros and cons
+
+
+*** Sensory feedback 
+- important to feedback position defined in the same coordinate frame as the MR image's coordinate frame
+  - reason:  MR images are actually distorted
+
+- type of sensors
+  - kinematics sensors
+    - active tracking coil for positional feedback
+      - what does active means
+      - pros and cons 
+  - other existing sensors
+    - forces sensor
+      - pros and cons
+
+
+*** Control methods
+- Model-based control
+  - for manipulation of rigid surgical tools
+  - example of kinematic modelling 
+  - example of model-based force control
+
+- Model-free control
+  - for flexible surgical tools that are difficult to obtain accurate model
+  - adopting machine learning methods
+  - exmaples: our kinematic controller to manipulate a cathether
+
+
+*** Validation
+- MRI-compatibility
+  - SNR methods
+  - fig
+
+- Lab-based Validation
+  - phantom model by 3D-printing techniques to mimick/realize physiological characteristics
+    - flexible material to model of left atrium to mimick pulsatory characteristics of blood flow and motion
+      - fig of our phantom
+
+** An example - A robotic platform for cardiac electrophysiological interventions in the Surgical Robot Challenge (600 words)
+- system overview
+  - fig
+- Registration
+- The catheter robot
+- Real-time positional feedback 
+  - active tracking coil
+- The model-free control method 
+- The surgeon-robot interface
+
+** Discussion and Conclusions (600 works)
+- current stage
+  - what can be done now
+  - limitations
+  - examples of MRI-guided robotic platform
+    - ours and others
+
+- future directions
+  - improvement for the 5 components in the close-loop, some preliminaires results on 
+    - imaging
+    - Sensing
+      - semi-active tracking
+    - actuation
+    - control
+      - operational space control of continuum robot in 3D task space
+      - enable autonomous control 
+    - lab-based validation 
+      - improvement on 3D printing technologies
+  - Machine learning techniques 
+    - decision making, motion/path planning, more autonomous and/or intuitive control-interface
+
+
+** Acknowledgments
+
+** References
+
+
 

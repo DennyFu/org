@@ -374,19 +374,22 @@ S6. OTHER COMMENTS
 Q 40
 Please add here any further comments on this manuscript.
 
-*** comments on the figures
+comments on the figures
 The results are promising, but the paper is still not publishable because some important ingredients is missing.
 
     
-**** Figure 1: please use different annotation pointing color. Black is not a good choice.
+Figure 1: please use different annotation pointing color. Black is not a good choice.
      
-**** Figure 2: 
+Figure 2: 
      - please describe the functions of dash arrows.
      - please indicate the planning is done by expert and delivery is done by none expert
        
        
-**** Figure 6:
+Figure 6:
      - please indicate which frames are fixed and which frames are moving 
+
+
+*** Finished review - accepted <2016-07-05 Tue 21:00>
 * IROS
 
 ** DONE review IROS 2016
