@@ -465,7 +465,7 @@ I_m & 0 & 0\\
 **** State clearly main features of our design that facilitate cardiac catheterization 
 - Rolling diaphragms are actuated by pressurized clear air (at 30-60 psi) supplied by the medical piped gas systems guarantees zero EM interference with the MRI
 - Fast and precise manipulation of the advancement, steering and rotation of catheter can be achieved
-
+  
 ** Clinical Motivation /MRI-Guided EP
     - (may be combined with the introductin section)
 *** Cardiac EP for heart arrhythmia and ablation is the one demanding for dexterous control of catheter for tissue ablation
@@ -611,31 +611,46 @@ Specification
   
   - try to pick out the most important message at every page
 
+** Abstract - the 1st paragraph (100 words)
 
-** Abstract - the 1st paragraph
 - one short paragraph
-  - motivation using MRI
-  - aim of this paper: 
+  - motivation/advantages using MRI in MIS
+    - aim of this paper
+      - motivate the use of MRI in robot-assisted MIS 
+      - exploit MRI in robot-assisted MIS
+      - how to incorporate MRI in robot-assisted MIS
+      - present a MR-compatible robotic platform for Cardiac Electrophysiological (EP) that was demonstrated in the Surgical Robot Challenge
 
-** Introduction - MRI-guided robot-assisted MIS (+ abstract 800 words)
+** Introduction - MRI-guided robot-assisted MIS (800 words)
+
 - What is MIS and its advantages
-- What is MRI and its advantages in MIS
-  - MRI provide better quality (intra-operative) images that monitor the conditions of a patient during MIS procedure
-  - robot to manipulate surgical tools
-- Technical difficulties of incorporating MRI technologies
-- last paragraph sums up and connects to the next section
+  - small wound, faster recovery
+  - requires high precision of tool mainpulation within a relatively small, confined workspace
+  - most surgeons currently conduct MIS based on pre-op MRI, intra-op 2D, rough images
+    - depend on the experience of surgeons
 
-** The surgeon-robot close-loop (not good, to be changed) ( 2500 words)
+- What is MRI and its advantages in MIS
+  - MRI provide better quality (intra-operative) images for monitoring the conditions of a patient during MIS procedure
+  - surgeons do not need to expose to high magnetic field
+    - robot to manipulate surgical tools
+
+- Technical difficulties of incorporating MRI technologies
+
+- last paragraph sums up and connects to the next section
+  - (still considering the content)
+
+
+** The surgeon-robot close-loop (not good, to be changed) (2000 words)
+
 - overview
-  - 5 components in the close-loop: Image processing, mri-compatible actuation, sensory feedback, control method and validation
+  - 4 components in the close-loop: Image processing, sensory feedback, mri-compatible actuation, control interface
   - general setting in the MRI scanner room and the control room
     - fig
 
 *** Image processing
-- objective: producing intra-operative MR images
-  - by registration technique 
 
-- registration 
+- this component produces intra-operative MR images
+  - by registration technique 
   - what is registration
     - fig
   - several existing registration methods
@@ -643,16 +658,19 @@ Specification
 
 - real-time computation
   - FPGA-based computation
-    - fig explaning the computation mechanism
+    - explain the computation mechanism with fig
     - pros and cons 
   - several existing methods
     - pros and cons 
 
-- intra-operative 3D image construction
+- virtual 3D environment construction
   - examples with figs
 
+
 *** MRI-compatible actuation
-- negligible effect to the MR image quality
+
+- a robotic platform that allows surgeons tele-manipulate surgical tools which are located in the MRI-scanner room
+  - should have negligible effect to the MR image quality. 
 
 - pneumatic actuation
   - pros and cons
@@ -663,61 +681,102 @@ Specification
   - pros and cons
 
 - other common actuation methods 
-  - ultrasound (common)
-    - pros and cons
-  - piezeoelectric (common)
+  - ultrasound, piezoelectric
+    - these two are commonly adopted in MR-compatible devices
     - pros and cons
   - magnetic-driven (move to future work?)
     - pros and cons
 
 
 *** Sensory feedback 
-- important to feedback position defined in the same coordinate frame as the MR image's coordinate frame
-  - reason:  MR images are actually distorted
 
-- type of sensors
+- it is important to feedback the surgical tools' 3D positions that are defined in the same coordinate frame as the MR image's coordinate frame
+  - the sensory feedback allows implementation of feedback control method
+    - for more accurate manipulation of surgical tools
+    - implementation of intuitive control-interface
+    - to close the surgeon-robot loop
+  - explain why the same coordinate frame should be used
+
+
+- MR-compatible sensors
   - kinematics sensors
     - active tracking coil for positional feedback
       - what does active means
+	- connected with a wire (tethered)
+      - working priciple
       - pros and cons 
-  - other existing sensors
-    - forces sensor
+  - list some other existing sensors if possible
+    - e.g. forces sensor
+      - some examples in the literature and their working principles
       - pros and cons
 
 
-*** Control methods
-- Model-based control
-  - for manipulation of rigid surgical tools
-  - example of kinematic modelling 
-  - example of model-based force control
+*** Control interface
 
-- Model-free control
-  - for flexible surgical tools that are difficult to obtain accurate model
-  - adopting machine learning methods
-  - exmaples: our kinematic controller to manipulate a cathether
+- A control interface that allows surgeons intuitively manipulate the surgical tools
+  - within a 3D virtual environment constructed from intra-operative MR images
+  - a fig of our control-interface
+    - details to be discussed in the results section
 
+- one of the key units in the interface is a method to control the robotic platform that actually manipulate the surgical tools for specific purposes
+  - position control
+    - example in literature
+  - force control
+    - example in literature
+  - hybrid (position and force) control
+    - example in literature
+  - compensating physiological motion
+    - example in literature
 
-*** Validation
-- MRI-compatibility
-  - SNR methods
+- control methods for rigid surgical tools and flexible surgical tools
+  - very briefly explain the need of flexible surgical tools
+  - rigid surgical tools
+    - model-based method
+      - example in literature
+  - flexible surgical tools
+    - model-free method 
+      - example in literature
+      
+
+** An example - A robotic platform for cardiac electrophysiological interventions in the Surgical Robot Challenge (800 words)
+
+- overview of our system
   - fig
 
-- Lab-based Validation
-  - phantom model by 3D-printing techniques to mimick/realize physiological characteristics
-    - flexible material to model of left atrium to mimick pulsatory characteristics of blood flow and motion
-      - fig of our phantom
+- Image processing
+  - FPGA-based computation
+  - results
+    - comp. time
+    - figs
+      - e.g. 3D figures, registered images
 
-** An example - A robotic platform for cardiac electrophysiological interventions in the Surgical Robot Challenge (600 words)
-- system overview
-  - fig
-- Registration
-- The catheter robot
 - Real-time positional feedback 
   - active tracking coil
-- The model-free control method 
-- The surgeon-robot interface
+    - specifications, fig
+      - e.g. working frequency
+  - results
+    - accuracy
 
-** Discussion and Conclusions (600 works)
+- The catheter robot
+  - hydraulic transmission with rolling diaphragm 
+    - design figs, number of DOF, function of each DOF
+  - results
+    - SNR test fig
+    - response results
+
+- The surgeon-robot interface
+  - The model-free control method
+    - real-time update of a Jacobian mapping defined between the desired Endoscopic displacement and control input of the robotic platform
+      - control schematic diagram
+
+- A left atrium phantom model that has characteristics closed to human physiological characteristics
+  - explain why mimicking this(these) characteristic(s) is important
+  - flexible atrium
+  - custom-made pump
+  - fig of the phantom
+  - subject test result
+
+** Discussion and Conclusions (800 words)
 - current stage
   - what can be done now
   - limitations
@@ -725,19 +784,18 @@ Specification
     - ours and others
 
 - future directions
-  - improvement for the 5 components in the close-loop, some preliminaires results on 
+  - for improving for the close-loop, some preliminary results on 
     - imaging
     - Sensing
       - semi-active tracking
     - actuation
-    - control
+    - control interface
       - operational space control of continuum robot in 3D task space
       - enable autonomous control 
     - lab-based validation 
       - improvement on 3D printing technologies
-  - Machine learning techniques 
+  - some advance features
     - decision making, motion/path planning, more autonomous and/or intuitive control-interface
-
 
 ** Acknowledgments
 

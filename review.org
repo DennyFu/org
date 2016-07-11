@@ -442,3 +442,282 @@ The novelty is weak because it is apparently an integration of existing algorith
 
 
 
+* IEEE Sensors Journal
+
+** TODO review paper
+   DEADLINE: <2016-07-22 Fri>
+*** General info
+    :PROPERTIES:
+    :Directory: file:~/Work/Review//IEEE_Sensor_Journal
+    :link: [[file:~/Work/Review/IEEE_Sensor_Journal/Image-based%20Optical%20Miniaturized%20Three-Axis%20Force%20Sensor%20for%20Cardiac%20Catheterization.pdf::%25PDF-1.5][.pdf]]
+    :Title: Image-based Optical Miniaturized Three-Axis Force Sensor for Cardiac Catheterization
+    :Authors: Yohan Noh, Hongbin Liu, Sina Sareh, Damith Suresh Chathuranga, Helge Wurdemann, Kawal Rhode, Kaspar Althoefer
+    :END:
+
+*** Review report (The score sheet)
+
+Review
+Please expand and give details in Comments to the Author
+
+ 
+A. Suitability of Topic
+1. Is the topic appropriate for publication in these transactions?
+
+ Yes
+
+ Perhaps
+
+ No
+2. Is the topic important to colleagues working in the field?
+
+ Yes
+
+ Moderately
+
+ No
+
+ 
+B. Content
+1. Is the paper technically sound? If no, why not?
+
+ Yes
+
+ No (explain)
+
+  
+2. Is the coverage of the topic sufficiently comprehensive and balanced?
+
+ Yes
+
+ Important information is missing or superficially treated.
+
+ Treatment somewhat unbalanced, but not seriously so.
+
+ Some topics are significantly overstressed.
+3. How would you describe the technical depth of the paper?
+
+ Superficial
+
+ Suitable for the non-specialist
+
+ Appropriate for the generally knowledgeable individual Working in the Field or a Related Field
+
+ Suitable only for an expert
+4. How would you rate the technical novelty of the paper?
+
+ Novel
+
+ Somewhat novel
+
+ Not novel
+
+ 
+C. Presentation
+1. How would you rate the overall organization of the paper?
+
+ Satisfactory
+
+ Could be improved
+
+ Poor
+2. Are the title and abstract satisfactory?
+
+ Yes
+
+ No (explain)
+
+  
+3. Is the length of the paper appropriate? If not, recommend how the length of the paper should be amended, including a possible target length for the final manuscript.
+
+ Yes
+
+ No (explain)
+
+  
+4. Are symbols, terms, and concepts adequately defined?
+
+ Yes
+
+ Not always
+
+ No
+5. How do you rate the English usage?
+
+ Satisfactory
+
+ Needs improvement
+
+ Poor
+6. Rate the Bibliography?
+
+ Satisfactory
+
+ Unsatisfactory
+
+ 
+D. Overall rating
+1. How would you rate the technical contents of the paper? 	
+
+ excellent
+	
+
+ good
+	
+
+ fair
+	
+
+ poor
+2. How would you rate the novelty of the paper? 	
+
+ highly novel
+	
+
+ sufficiently novel
+	
+
+ slightly novel
+	
+
+ not novel
+3. How would you rate the "literary" presentation of the paper? 	
+
+ totally accessible
+	
+
+ mostly accessible
+	
+
+ partially accessible
+	
+
+ inaccessible
+4. How would you rate the appropriateness of this paper for publication in this IEEE Transactions? 	
+
+ excellent match
+	
+
+ good match
+	
+
+ weak match
+	
+
+ poor match
+
+ 
+Would you recommend this paper for a Best Paper Award?
+
+	
+
+Yes
+
+	
+
+No
+
+ 
+
+Recommendation
+	
+
+Publish Unaltered
+	
+
+Publish in Minor, Required Changes (as noted in the Comments section. This rating may not be assigned for Sensors Letters.)
+	
+
+Review Again After Resubmission (Paper is not acceptable in its current form, but has merit. A major rewrite is required. Author should be encouraged to resubmit a rewritten version after the changes suggested in the Comments section have been completed.)
+	
+
+Reject (Paper is not acceptable for the Sensors Journal. Author should be encouraged to submit to another journal.)
+	
+
+Reject (Paper is seriously flawed; do not encourage resubmission.)
+ 
+
+Would you be willing to review a revision of this manuscript?
+	
+
+Yes
+	
+
+No
+ 
+
+Comments
+
+Confidential Comments to the Associate Editor
+
+Comments to the Author
+
+Please include all comments to be sent to the author in this section. If comments are in a file, please type "see attached file."
+
+     
+*** Other reviewers' comments and authors' response
+
+List of changes and response to reviewers
+
+We would like to thank the reviewers for their helpful comments. We have updated the manuscript in line with these comments and highlighted the changes in red in the manuscript and in the responses below.
+
+Reviewer 1
+
+Comments:
+This paper presents a novel miniaturized 3-axis force sensor using optic-fiber technology. The sensor composes of 3D printed deformable structure, in which 4 optical fibers are embedded at one end, and a mirror is installed at one end. The force applied on the tip of deformable structure can be measured by detecting the reflected light image from the mirror. A digital camera is integrated at the other end of the fiber bundles to retrieve such images, and image processing algorithm is also proposed to compute the force in real time. The paper is very well written. The part of introduction provides a good overview why such 3-axis tactile sensing is of importance to RF ablation in cardiac electrophysiology (EP), particularly for MRI-guided one. The content is clear with detailed explanation and illustration of the design and fabrication process. Comparison between the estimated force and the ground truth is also conducted, and the experimental results are promising. The work presented is impressive and convincing in general. The authors are expected to improve the manuscript by taking account for the following concerns:
+
+Sensor material property:
+
+1. Any hysteresis occurs in the 3D printed deformable structure? e.g. measurement difference between applying and releasing force on the structure
+
+Answer: Thank you for this comment. In principle, hysteresis property is influenced by the characteristics of the material properties. In the future research, we will consider to fabricate the sensor structure from titanium which has very low hysteresis, e.g. titanium. To make this clearer, we have added the following paragraph to the discussion (highlighted in yellow):
+In 6), the sensor structure is made out of a UV curable acrylic plastic (VisiJet®EX200) manufactured by a rapid prototyping machine (Projet 3000, 3D SYSTEM Co., Ltd), with relatively large hysteresis values. The hysteresis influences the sensor’s linearity and, hence, negatively impacts the accuracy of calibration matrix, resulting in sensor value estimation errors.
+
+2. Although the optical fiber and the signal are not sensitive to the temperature change, the printed deformable part probably does. The air gap, if any, inside the tip between the mirror and optical fibers may cause variation.
+
+Answer: we agree that the change of temperature may cause the printed part small displacement, therefore affect the sensor readings. In the future, we will make further investigations on the effect of the temperature change to the distance between mirror and optical fibers using different structural materials (highlighted in green):
+In addition, the change of temperature may produce small displacements in the sensing structure and, therefore, affect the sensor readings. The use of MR-compatible materials such as titanium and cobalt-chromium in future designs can potentially reduce the error due to hysteresis and temperature change.
+
+3. Is it feasible to integrate the proposed sensor with the current standard EP catheter? If not, how far could it be? What is the corresponding technical challenges?
+
+Answer: Thanks. To address this comment we have added the following paragraph to the discussion (highlighted in sky blue):
+The conventional catheters are around 7-7.5 French (2.31-2.475 mm) in diameter. In extreme case of the ablation, catheters are around 8-10 French (2.64-3.3mm) thick. Hence, in order to integrate our sensor development approach into the catheters (including EP and ablation Catheters) and secure some space to pass electric cables through, it is essential to miniaturize the overall size of the sensor structure. This can be done through reducing the diameter of the optical fiber bundle; the size of a bundle of the multi-cores can be further miniaturized by using a 0.125 mm optical fiber bundle which is available off the shelf. The diameter of the catheter tip could be further reduced through optimization of the material properties of the sensing structure. In the future work, we will use MR-compatible materials such as titanium and cobalt-chromium to minimize the catheter’s tip size to around 7-7.5 French (2.31-2.475 mm).
+
+Future work:
+4. Would a high-quality CMOS camera be useful to offer images with less light intensity noise? Is the image processing technique capable to reduce such noise with higher image input rate?
+
+Answer: Many thanks for this point. We have added the following sentences to the discussion section to address it (highlighted in purple):
+Using a high-quality CMOS camera or providing a higher image input rate to the image processing approach can potentially reduce the light intensity noise, leading to a reduced force estimation error. We will investigate this further in our future research. However, there will be always a trade-off between the image quality and the image input rate.
+
+5. While Kalman filter is demonstrated to estimate/reduce noise error, another adaptive approach is also recommended with the aim to model/process the noise variable for better estimation/reduction.
+
+Answer: We would like to thank to recommendation of the reviewer. In our future study, we will improve the filtering algorithm with the aim of modelling/processing the noise variable for better estimation, so that reducing the noise effectively (highlighted in Cyan):
+Furthermore, we will improve the filtering algorithm with aim of modelling/processing the noise variable for better estimation/reduction to reduce the noise effectively.
+Experiment and validation:
+
+6. Additional validation is suggested to investigate the sensing error in combinations of the three axes, rather than just along a single axis at once only.
+
+Answer: We would like to thank to recommendation of the reviewer. We will consider your recommendation for our future work and have added the following sentences to the discussion to further clarify on this point (highlighted in red):
+This should be mentioned that the sensing error was validated along a single axis at once only. The future work will investigate the sensor error in combination of the three axes.
+
+Reviewer 2
+
+Comments:
+1. This research work targets the development of a triaxial force sensor with fiber-optics technology, in order to achieve miniaturization of the tip and hence applicability in surgical procedures with particular respect to cardiac ones.
+The developed technology appears to be sound and the rationale towards miniaturization of the sensor (though not guaranteeing very high precision) is clear.
+I have only a suggested discussion point to be addressed by the authors in the revised paper.
+The sensing principle based on a mirror appears to be highly sensitive to shear forces because such tangential forces alter the angle of the mirror plane. Conversely, normal forces do not cause modification in such angle and hence the transduction is due to change in the distance between the mirror and the lower plate. Due to this, I had a doubt that the calibration matrix K could have been ill-conditioned, and I calculated the conditioning number (“cond” function in Matlab), obtaining about 2 which is acceptable (though not excellent).
+So, I encourage the authors to discuss those aspects in the revised paper, linking in a more direct manner the FEM analysis of Fig. 7, the calibration matrix (Equation 9) and the proposed revised design in Fig. 17. The ingredients are there, but the dots have to be connected along the paper for the sake of proper discussion.
+
+Answer: We would like to thank to recommendation of the reviewer and added the following sentences to the discussion section to clarify this point (highlighted in dark yellow):
+The matrix calibrated experimentally as shown in equation (8) and (9) could be potentially ill-conditioned, so to avoid such drawback, in the future, we will carry out FEM analysis to obtain an initial theoretical calibration matrix under controlled condition. This process will also allow the structure to be adjusted to optimize the condition number of the matrix. The calibration matrix will be then fine-tuned using experimental data.
+
+2. In Section V, please complement the dimension in “French” with measurement units of the International System.
+
+Answer: Thanks for this comment which has been addresses in the text according to your recommendation.
+
+3. Written English language is very good. Only some minor typos, or some sentences not being fluid, shall be corrected in the revised paper. Examples are:
+- “catheter catheterization”
+- “makes the sensor is free”
+- “allows the sensor immune to”
+
+Answer: Thanks for this comment which has been addressed in the text. 
