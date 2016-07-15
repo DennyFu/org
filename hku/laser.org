@@ -1,0 +1,10 @@
+* General info
+  :PROPERTIES:
+  :Directory: [[file:~/Work/HKU/Laser/]]
+  :END:
+   
+* notes
+* meeting
+** schedule
+   SCHEDULED: <2016-07-15 Fri 16:00>
+* tasks

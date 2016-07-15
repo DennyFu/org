@@ -1,9 +1,31 @@
 * notes
+
+
 * today's todo
+
+** 15 Jul 2016
+
+*** TODO Laser project meeting  
+
+*** 
+** 12 Jul 2016
+
+*** TODO Review Frontier Robotic and AI paper
+
+*** TODO Review IEEE sensor paper
+
+*** TODO RAM - write topic sentences 
+
+*** DONE PPT for nisi - dynamic model of soft robot
+    CLOSED: [2016-07-15 Fri 12:14]
+    - State "DONE"       from "INPROGRESS" [2016-07-15 Fri 12:14]
+
 
 ** 4 Jul 2016
 
-*** TODO revise mingzhou paper
+*** DONE revise mingzhou paper
+    CLOSED: [2016-07-05 Tue 11:26]
+    - State "DONE"       from "TODO"       [2016-07-05 Tue 11:26]
 
 *** TODO organize Hamlyn information
     
