@@ -5,14 +5,20 @@
 
 ** 15 Jul 2016
 
-*** TODO Laser project meeting  
+*** DONE Laser project meeting  
+    CLOSED: [2016-07-15 Fri 18:00]
+    - State "DONE"       from "TODO"       [2016-07-15 Fri 18:00]
 
 *** 
 ** 12 Jul 2016
 
-*** TODO Review Frontier Robotic and AI paper
+*** DONE Manage Frontier Robotic and AI paper review
+    CLOSED: [2016-07-18 Mon 14:13]
+    - State "DONE"       from "WAITING"    [2016-07-18 Mon 14:13]
+    - State "WAITING"    from "TODO"       [2016-07-15 Fri 15:19] \\
+      request sent, waiting for reviewer reply
 
-*** TODO Review IEEE sensor paper
+*** INPROGRESS Review IEEE sensor paper
 
 *** TODO RAM - write topic sentences 
 

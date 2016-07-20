@@ -1,10 +1,9 @@
 * General info
   :PROPERTIES:
   :Directory: [[file:~/Work/HKU/Laser/]]
+  :TC'notes: [[file:~/Work/HKU/Laser/]]TC_notes/
+  :reference: [[file:~/Work/HKU/Laser/]]ref/
   :END:
-   
+  
 * notes
-* meeting
-** schedule
-   SCHEDULED: <2016-07-15 Fri 16:00>
 * tasks

@@ -602,7 +602,7 @@ Specification
     - Extensible to other clinical applications/surgeries
     - Difficulty even using robot, and pave a way to our future work in regards of model-free catheter control
  
-
+      
 
 * paper draft for RAM
   :PROPERTIES:
@@ -624,53 +624,163 @@ Specification
 ** Introduction - MRI-guided robot-assisted MIS (800 words)
 
 - What is MIS and its advantages
+  - brief description of MIS
   - small wound, faster recovery
-  - requires high precision of tool mainpulation within a relatively small, confined workspace
+  - requires high precision of tool manipulation within a relatively small, confined workspace
   - most surgeons currently conduct MIS based on pre-op MRI, intra-op 2D, rough images
     - depend on the experience of surgeons
+  - example: EP in cardiac catheterization, deep brain stimulation (DBS) in neurosurgery
 
-- What is MRI and its advantages in MIS
-  - MRI provide better quality (intra-operative) images for monitoring the conditions of a patient during MIS procedure
-  - surgeons do not need to expose to high magnetic field
-    - robot to manipulate surgical tools
+- what is MRI and the advantage of intra-operative MRI
+  - brief description of intra-operative (Late gadolinium enhancement) T2-weighted MRI 
+    - 
+  - MRI provide better quality (intra-operative) images
+    - better quality and high contrast images of soft tissue
+    - monitoring the physiological and pathological change of region of interest during MIS
+    - construction of roadmap for specific surgical goals
+      - e.g. registering lesion targets on MR-images for EP treatment
+      - e.g. in DBS treatment, planning of placing an electrode accurately at the subthalamic nucleus (STN) in the deep brain under stereotactic guidance.
+  - example in EP:
+    - enable intra-operative assessment of ablation location and progress
+      - construction of cardiac roadmap [aliot2009ehra/hrs, nazarian2008feasibility]: registering lesion targets on MR-images for EP treatment
+      - t2-weighted cardiac MRI [schmidt2009electroanatomic, peters2009t2]
+      - edema [peters2009t2weighted] and scar tissue [ren2007apotential]
+  - example in DBS:
+    - fMRI/DT-MRI reveals critical structure related to the deep brain nuclei, the corticospinal tract, red nucleus and third nerve nucleus for planning of placing an electrode accurately at the subthalamic nucleus (STN) under stereotactic guidance [XXX].
+    - 
 
-- Technical difficulties of incorporating MRI technologies
+- Technical difficulties of incorporating MRI in MIS
+  - requires fast image processing 
+    - image processing is computationally intensive: difficult to carry out fast enough to provide intra-operative image
+    - realignment of exact, deformed physiological features to pre-planned roadmap
+    - rigid image co-registration [ishihara2007mrievaluation] between the pre-and intra-op images would help compensate the 6D-offset due to patient positioning and motion, but rapid morphological changes cause inaccuracies.
+    - non-rigid 3D image registrations [relan2011personalitzation, archip2007nonrigid] have been used in the conventional EP, but mostly applied only once after the EAM for improved integration between map and the pre-op roadmap
+    - processing of non-rigid registrations is normally computationally intensive (>5sec)
+  - requires special actuation method
+    - tele-manipulate the surgical tools via robotic platform so that surgeons do not need to expose to high magnetic field 
+    - conventional actuation method is usually not MR-compatible
+  - requires sensors that can work inside MRI scanner
+    - positional feedback
+    - force feedback
+  
 
 - last paragraph sums up and connects to the next section
-  - (still considering the content)
+  -          
 
 
 ** The surgeon-robot close-loop (not good, to be changed) (2000 words)
 
 - overview
-  - 4 components in the close-loop: Image processing, sensory feedback, mri-compatible actuation, control interface
+  - 3 components in the close-loop: Image processing, mri-compatible actuation and sensory feedback
   - general setting in the MRI scanner room and the control room
-    - fig
+  - schematic diagram
 
-*** Image processing
+*** Intra-operative image processing
+- intra-operative image registration
+  - Image registration is the process of transforming different sets of data into one coordinate system. (from wiki)
+  - data from multiple images, different sensors, times, depths, or viewpoints. (from wiki)
+  - terminology: non-rigid image registration
+    - especially to cope with deformation of object
+      - deformation due to e.g. breathing, anatomical changes (e.g. brain shift)
+  - intra-operative image registration: look for continuous mapping between pre-operative (pre-op) and intra-operative (intra-op) image
+  - update high resolution pre-op image with rapidly acquired intra-op image
+  - DD, transform/ operation in Lie’s group, continues and smooth manifold, all mathematic operations (e.g. composition rather than simple addition) become much more complicated
+  - fig: merging high quality pre-op image and intra-op image
 
-- this component produces intra-operative MR images
-  - by registration technique 
-  - what is registration
-    - fig
-  - several existing registration methods
-    - pros and cons
+- objectives/advantages of intra-operative imaging
+  - intra-operatively
+  - describing continuous morphological changes of soft tissues 
+  - instantly reveal effect of surgical actions
+  - fused into and update roadmap 
+  - smoothen the repeated workflow of surgical tool path planning 
 
-- real-time computation
-  - FPGA-based computation
-    - explain the computation mechanism with fig
+- intensity-based (IB) and feature-based (FB) approach
+  - IB: based on optical-flow, requires higher computation cost, less sensitive to image artifact
+  - FB: based on feature correspondence, faster and simpler computation, larger error in matching the feature correspondence
+  - thus IB is preferable if the fast enough computation is available
+
+- High-performance computational architecture, enabling technology for fast image processing during surgery
+  - GPU-based, higher floating computation throughput than multi-core CPU, highly parallelized design (hundreds of processing unit)
+    - A 3D MR image comprising a large number of voxels can be “split” into smaller segments and processed on a multi-threaded architecture consisted of hundreds of stream processors
+    - previous study demonstrated order of magnitude speed-up as compared to CPU
+    - The growing trend of computation power is much faster than CPU    
+  - FPGA-based computation, focus the design of dataflow program and pipelining
+    - flexible architecture that optimization of dataflow and pipeline
+    - customizable data format, enable trade-off between accuracy and performance
+    - overcome memory bandwidth constraint of GPU, minimize memory transfer into/from processor 
+    - enable parallelization and scalability
+    - deterministic computation time
+    - gradient computation as an example:
+      - one output can be generated at every clock cycle
+      - figure
+  - explain the computation mechanism with fig
     - pros and cons 
   - several existing methods
     - pros and cons 
+
+- Diffeomorphic demons registration
+  - original demons approach [wang2005validation]
+  - our previous work [kwok2014fpgabased,kwok2014mribased]
+    - register RF ablation targets on cardiac roadmap for electrophysiology (EP)
+    - < 3mm registration error
+    - based on local intensity gradient
+  - Diffeomorphic demons registration [vercauteren2007nonparametric,vercauteren2009diffeomorphic]
+    - not only does it ensure preserving the topology of large deforming tissue structure, but it also allows for smooth forward and inverse transformation
+    - thus guaranteeing tighter, more accurate alignment of ablation landmards and electro-anatomic mapping (EAM) contact points with the EP roadmap [vercauteren2009diffeomorphic]
+    - both pre-op and intra-op image sets will have to be interpolated in a common region of Cartesian girds to calculate the intensity differences for processing the diffeomorphic demons; this induces larger number of pixel/voxels perations, amount of inlinked or non-coalesced memory access to be provessed.
+    - state-of-art using GPU can achieve only 4-5 second computation [muyanozcelik2008fast,gu2010implementation]
+  - matching/searching spectral correspondence to handle large deformation [lombaert2013spectral]
+    - e.g. taking global scope of brain image
+    - it is the state-of-art using CPUs that can achieve only 25 to 45 min
+
+
+Algorithm 1: General Diffeomorphic Demons Framework
+1. Input: Fixed image  and moving Image 
+2. repeat until converge:
+3. Compute update field  based on  and 
+4. Apply fluid-like regularization 
+5. Update velocity field  
+6. Apply diffusion-like regularization 
+7. Output: Transformation  from  to 
+
 
 - virtual 3D environment construction
   - examples with figs
 
 
+
+
 *** MRI-compatible actuation
+
+- In addition to imaging issues, enhanced stability and adequate flexibility of robot-assisted surgical platform also poses increasing demand on intra-op MRI navigation.
+- Considering the operation on delicate tissue, the robot system must has high accuracy and can be finely controlled, in other words, backlash should be minimized and it should be able to remain locked in its original position if any power failure or emergency stop happens.
+- The workspace is tightly constrained inside the scanner bore. These all bring up the strict demands on compacted mechanical design of the robot. 
+- Sterilization should also be taken into consideration, especially for the design of end effector.
+- Actuators driven by oscillation of piezoelectric materials, such as ultrasonic motor, have been extensively applied (e.g. [XXX]) to be tailor-made for interventional MRI applications because of its high-fidelity dynamic accuracy. 
+
+- Recent advanced designs was proposed to operate the piezoelectric motor electronics using direct digital synthesizers [XXX] in order to attenuate EM interference that will cause the image artifact. Even though the signal-to-noise ratio (SNR) is promising with <15% reduction, complex EM-shielded enclosure is required to surround on all sides of the motor drivers, thus degrading the motor compactness [XXX]. 
+- The presence of electric current supplied from the external electrical source inevitably infringes the new standard of MR-safety [XXX]. 
+- These disadvantages have naturally shifted the research focuses towards intrinsically MR-safe actuators driven by other energy sources, e.g. pressured fluid flow, instead of EM power [XXX]. 
+- Compact actuation units allowing the robotic manipulation taking place inside the MRI bore is required for providing highly precise and reliable targeting of lesions located by the intra-op imaging. 
+- To this end, various pneumatic/hydraulic actuators [XXX] have been designed, which are capable of operating in an MR environment, even inside the scanner, without adversely affecting MR image quality.
 
 - a robotic platform that allows surgeons tele-manipulate surgical tools which are located in the MRI-scanner room
   - should have negligible effect to the MR image quality. 
+  - must has high accuracy and can be finely controlled
+    - e.g. backlash should be minimized and it should be able to remain locked in its original position if any power failure or emergency stop happens.
+  - The workspace is tightly constrained inside the scanner bore. These all bring up the strict demands on compacted mechanical design of the robot.
+  - Sterilization should also be taken into consideration
+  - 
+
+- recent advanced MR-compatible actuation methods 
+  - ultrasound, piezoelectric
+    - using direct digital synthesizers [shang2015piezoelectrically,hao2012amriguided] in order to attenuate EM interference that will cause the image artifact (piezoelectric)
+    - Even though the signal-to-noise ratio (SNR) is promising with <15% reduction, complex EM-shielded enclosure is required to surround on all sides of the motor drivers, thus degrading the motor compactness [hao2012amriguided,bannan2015development].
+    - The presence of electric current supplied from the external electrical source inevitably infringes the new standard of MR-safety [stoianovici2014mrisafe].
+    - 
+  - magnetic-driven (move to future work?)
+    - [vartholomeos2011mripowered]
+    - pros and cons
 
 - pneumatic actuation
   - pros and cons
@@ -679,13 +789,6 @@ Specification
 - Hydraulic actuation
   - O-ring vs rolling diaphragm
   - pros and cons
-
-- other common actuation methods 
-  - ultrasound, piezoelectric
-    - these two are commonly adopted in MR-compatible devices
-    - pros and cons
-  - magnetic-driven (move to future work?)
-    - pros and cons
 
 
 *** Sensory feedback 
@@ -698,17 +801,34 @@ Specification
   - explain why the same coordinate frame should be used
 
 
-- MR-compatible sensors
+- MR-conditional/safe sensors
   - kinematics sensors
-    - active tracking coil for positional feedback
-      - what does active means
-	- connected with a wire (tethered)
-      - working priciple
-      - pros and cons 
+    - active tracking unit for positional feedback
+      - e.g. [wang2015realtime]
+      - comprises small coils
+      - connected with a receiver channel of the scanner via coaxial cables in order to measure MR gradient field.
+      - The reveived coil signal is highly localized [galassi2015fast] and can be readily differentiated from the other coils' signal
+      - thus enabling high-frame rate of tracking (≥40Hz)
+      - The routing of the coaxial cables is required from the coil to the receiver interface [sarioglu2015anoptically]
+      - the size and length of the cables have to be minimized for reduction of any EM interference
+      - particularly challenging while operating larger numbers (>8) of active coil.
+      - coil-to-channel electronic interface also has to be specifically designed for particular types of scanners only
+    - semi-active tracking unit
+      - the coil does not have to connect with the scanner receiver channel, but only act as an radio-frequency (RF) receiver and inductor in an isolated LC circuit that resonates with MR frequency ~63.8MHz or 123.5MHz, respectively, for 1.5T or 3T scanner either [rube2014wireless]
+      - may require tedious LC tuning process to match the resonant frequency within tolerance of ±1MHz [galassi2015fast]
+      - 3D coordinates matching of just three coils is complicated [galassi2015fast]
+      - miniaturization to include commercial MR-safe capacitors is very challenging
+	- the criteria for high quality factor (Q>50) that is inversely proportional to the circuit electrical resistance
+	- high resistance that may generate excessive heat
+      - only
   - list some other existing sensors if possible
     - e.g. forces sensor
       - some examples in the literature and their working principles
+	- optical Fiber Bragg Grating (FBG)-based sensing unit to measure force [chen-mriconditional]
+	- 
       - pros and cons
+
+- image registration
 
 
 *** Control interface
