@@ -1,4 +1,112 @@
 * Notes
+** Spreadsheet by Ka-wai
+** website
+*** project by project
+**** one para
+*** personal desciption
+**** better to have a personal website
+**** 
+
+* thesis
+** 1 research objective and motivation short
+** 2 literature review , technical gap , motivation (30 pages)
+** 3 simulation
+** 4 experimental 
+
+* MICCAI
+
+* progress meeting
+
+** Tim
+*** chirped fiber bragg grating (CFBG) test was done
+**** spectual response
+**** tracking platform was built
+***** 3 cameras
+*** Ka-wai
+**** can it be less fragile (Ka-wai)
+**** find out mathematical model by next week
+***** element model and material(substrate) model
+**** draft the  
+
+** ziyang
+*** RAM
+**** technical description by this weekend
+*** neurorobot design
+*** reassembly of catheter robot
+**** by 26
+*** PWH 3D printer problem
+*** Evaluation of Surgical robot challenge
+**** component strength
+***** parts in control room should 
+**** less belt
+**** theoretical analysis
+*** purchase printers
+**** Markforged
+*** Ka-wai
+**** source one more printer
+***** unique, well-differentiated from existing
+***** draft 
+***** improve not only linear, but improve to get rid of stroke-length limitation
+
+
+** Marco
+*** 3d printable hyper-elastic actuator
+**** no need multi-stage molding
+**** enabling digital printing
+***** solution provided by companies?
+*** MR-compatible actuator using soft pop-ups
+*** Ka-wai
+**** contact leo
+**** literature
+***** focus on surgical application or design mechanism but not the frabrication process
+
+
+** Jacky
+*** Reduction of rolling diaphram
+*** Needle insert mechanism
+**** challenge
+***** long stroke 20cm
+***** precise control
+*** Continues rotation
+**** The Telsa motor wiht encoder
+
+
+** Ziyan
+*** Needle insertion
+**** forward and inverse kinematics 
+**** workspace analysis 50 cm^2
+**** error analysis 0.2mm/1degree
+**** registration scheme
+**** difficulities
+***** long stroke
+****** try to solve by continuous motor
+***** actuator 
+****** hydraulic
+****** cable driven
+****** mount motor on the needle guide
+****** need optical encoder
+*** Catheter robot
+**** new phantom
+***** 
+*** motor upgrade
+**** modify models
+*** Ka-wai
+**** close pneumatic motor and submit to a journal 
+***** assign experiments to family pueumatic motor
+
+** Fai
+*** To create simple and portable, yet accurate system
+**** auto image capturing
+**** contactless
+**** protable
+**** unrestricted
+*** current progress
+**** prototype
+**** need colorchecker
+**** GUI
+*** application for ITF
+*** working on 2 reviews
+**** more details, current progress, where to submit
 
 * Lectures
 
