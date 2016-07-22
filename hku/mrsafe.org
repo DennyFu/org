@@ -791,7 +791,7 @@ Algorithm 1: General Diffeomorphic Demons Framework
   - pros and cons
 
 
-*** Sensory feedback 
+*** Positional tracking under MRI 
 
 - it is important to feedback the surgical tools' 3D positions that are defined in the same coordinate frame as the MR image's coordinate frame
   - the sensory feedback allows implementation of feedback control method
@@ -799,36 +799,153 @@ Algorithm 1: General Diffeomorphic Demons Framework
     - implementation of intuitive control-interface
     - to close the surgeon-robot loop
   - explain why the same coordinate frame should be used
+    - advantage in the image registration process
+- Intra-operative imaging is possible by SSFP, parallel imaging techniques  
+  - Due to the continued development of MR hardware for faster image acquisition and reconstruction, along with developments such as steady state free precession (SSFP) and parallel imaging techniques, real-time MR imaging is now a clinical reality[raman2005realtime, wacker2005mrguided].
+
+- shorter and more open magnet designs, from research to preclinical method and a few clinical applications
+  - With the trend toward shorter and more open magnet designs, endovascular MR-guided interventions have evolved from a research tool to a preclinical method over the last decade with a few applications that have entered the clinical arena [razavi2003cardiac].
+- 
+- In MR-guided intravascular interventions (e.g., embolization or stent placement), the interventional radiologist benefits from automatic and continuous updates of the imaging slice position, since during the procedure the catheter tip is always visible. Unfortunately, tip tracking requires information only from several selected points on the catheter.
 
 
-- MR-conditional/safe sensors
-  - kinematics sensors
-    - active tracking unit for positional feedback
-      - e.g. [wang2015realtime]
-      - comprises small coils
-      - connected with a receiver channel of the scanner via coaxial cables in order to measure MR gradient field.
-      - The reveived coil signal is highly localized [galassi2015fast] and can be readily differentiated from the other coils' signal
-      - thus enabling high-frame rate of tracking (≥40Hz)
-      - The routing of the coaxial cables is required from the coil to the receiver interface [sarioglu2015anoptically]
-      - the size and length of the cables have to be minimized for reduction of any EM interference
-      - particularly challenging while operating larger numbers (>8) of active coil.
-      - coil-to-channel electronic interface also has to be specifically designed for particular types of scanners only
-    - semi-active tracking unit
-      - the coil does not have to connect with the scanner receiver channel, but only act as an radio-frequency (RF) receiver and inductor in an isolated LC circuit that resonates with MR frequency ~63.8MHz or 123.5MHz, respectively, for 1.5T or 3T scanner either [rube2014wireless]
-      - may require tedious LC tuning process to match the resonant frequency within tolerance of ±1MHz [galassi2015fast]
-      - 3D coordinates matching of just three coils is complicated [galassi2015fast]
-      - miniaturization to include commercial MR-safe capacitors is very challenging
-	- the criteria for high quality factor (Q>50) that is inversely proportional to the circuit electrical resistance
-	- high resistance that may generate excessive heat
-      - only
-  - list some other existing sensors if possible
-    - e.g. forces sensor
-      - some examples in the literature and their working principles
-	- optical Fiber Bragg Grating (FBG)-based sensing unit to measure force [chen-mriconditional]
-	- 
-      - pros and cons
 
-- image registration
+- active tracking coils
+  - e.g. [wang2015realtime]
+
+  - structure
+    - fig [wacker2004thecatheter]
+    - small radiofrequency (RF) coils attached to the instrument, connected with a receiver system via coaxial cables [dumoulin1993realtime,duerk2002abriefreview]
+    - The routing of the coaxial cables is required from the coil to the receiver interface [sarioglu2015anoptically] to measure MR gradient field.
+    - utilizes locally sensitive transmit/receive coils for either localization [ackerman1986rapid,dumoulin1993realtime] or visualization [ocali1997intravascular] or is based on the visualization of current related local field inhomogeneities produced in a small loop [glowinski1997catheter]
+
+    - the size and length of the cables have to be minimized for reduction of any EM interference
+    - coil-to-channel electronic interface also has to be specifically designed for particular types of scanners only
+    - particularly challenging while operating larger numbers (>8) of active coil.
+    - a catheter coil design is proposed that performs active catheter tip tracking and visualization of the distal end with a only single coaxial cable [zuehlsdorff2004mr].
+    - Often, a single coil at the tip of the instrument is used for instrument tracking, which is then localized with a fast gradient echo acquisition of three orthogonal projections. 
+    - In intravascular tracking catheters, the blood surrounding the microcoil provides the MR signal; however, in air-filled cavities no residual MR signal is available and the microcoil needs to be equipped with an independent signal source [erhart1998tissue]. Tracking thus differs from other high-resolution imaging applications, where a small local coil is used acquire images of the tissue adjacent to the airways [gilderdale2003aninductively]. Signal sources using liquid-filled capsules or water-based gels were found to rapidly dry out over several days [sandhu2007asolid], in particular, when very small reservoirs with a diameter of only several millimeters were used. Since medical devices often need to be stored for several months or even years (shelf life), liquid signal reservoirs in microcoils are impracticable for clinical use.
+    - Recently, image artifacts caused by the semisolid rubber material of breathing tubes and hoses in short- echo-time (TE) MR images were found [kugel2001artifacts], which suggest that these materials might also be useful as MR signal sources [umathum2008rubber] for device tracking in air-filled cavities. In this work[stefan2010active], a novel tracking method for active micro- coils in air-filled cavities is presented. The tracking method uses a biocompatible and clinically approved rubber as MR signal source in a microcoil at the tip of a catheter. A dedicated pulse sequence and postprocessing algorithm are presented that utilize the unique MR prop- erties of the rubber material to distinguish its signal from that of the surrounding tissue [rahmer2008catheter]. The coil position data were visualized using either a roadmapping tech- nique or a real-time implementation with active device tracking and automatic slice positioning [bock2004mrguided]. Both catheter and pulse sequence were tested in phantom and animal experiments.
+
+  - working principle
+    - localization of the coil is achieved in few millisecnds through acquisition of 1D projections along all three spatial directions (X,Y and Z)
+    - since the sensitivity of the micro-coils is confined to small region, projections obtained show a peak corresponding to its position
+    - The reveived coil signal is highly localized [galassi2015fast] and can be readily differentiated from the other coils' signal
+    - thus enabling high-frame rate of tracking (≥40Hz)
+    - the instrument tip position is detected within 20 ms [zuehlsdorff2004mr].
+    - 
+    - Small direct currents have been sent through wire loops mounted on a catheter to create a switchable field distortion (1). Receiver coils incorporated in the catheter lumen have been used for profiling in order to visualize the entire length of the catheter (1,6,7). Furthermore, cath- eters have been equipped with microcoils for active tip tracking (8 –10). The location of these tracking coils can be determined rapidly by means of a projection technique, and the position information in turn can be used to define the position of the imaging slice.
+
+  - not only for device tracking but also for vessel wall imaging or functional studies [hurst1992intravascular,quick1999singleloop,hofmann2005human].
+
+  - potential radiofrequency (RF) heating issues
+    - due to standing waves along the conducting cables still represent one of the major and most prominent potential safety hazards with active tracking.
+    - The standing waves lead to storage of electrical energy, which may be transmitted into the human body.
+    - With nitinol guidewires temperatures of up to 740C has been reported [konings2000heating].
+
+  - active device localization can be achieved via radio-frequency (RF) micro-coils (MR-Tracking) or gradient field measurements, which can generate unambiguous and precise (< 1 mm) 3D location information for multiple micro-coils within a few milliseconds [dumoulin1993realtime,bock2006afaraday,scheffler2004navigation].
+    - However, active tracking is challenging for MR-guided brachytherapy because: (a) the metallic stylet within the catheter leads to B0 and RF (B1) magnetic field inhomogeneities, which are exacerbated by the close proximity of 10-20 needles;
+    - (b) RF currents induced in the surface of metallic stylet can distort imaging and cause heating.
+
+  - Active devices use direct electrical connection to the MR system or an external power source and are usually grouped into four categories:
+    - devices which change the signal locally by affecting the field homogeneity using DC current in wires traversing the catheter [glowinski1997catheter]
+    - devices (typically small reso- nant coils) which localize the tip of the catheter on a previously acquired roadmap using three orthogonal projections [leung1995realtime,wildermuth1997mr,ladd1998visualization,ladd1998active,ladd2000interventional]
+    - devices which allow visualization of the length of the catheter, like the loopless antenna [ocali1997intravascular,lardo2000visualization,bottomley2000cardiovascular]
+    - devices that can be used to track the position of the catheter and image locally [zhang2000active,zhang2001amultielement]. 
+
+- passive tracking
+  - structure
+    - the interventional device is made to be visible on the MR image itself and does not require any additional harware or image post- processing and hence the name.
+    - utilizing contrast agents --  T1-shortening agents (See Fig. 1.5).
+      - fig - [unal2006mrvisible,bakker1996visualization]
+      - such as 4-6 vol % Gd- DTPA
+      - fills within the interventional device (for e.g. catheter) or coat on the devices surface [unal2006mrvisible].
+      - handling of the agent-filled or coated instruments remains problematic.
+	- the insertion of guidewire is not possible since the catheter lumen is filled with contrast agent.
+    - using paramagnetic materials such as dysprosium oxide [bakker1996visualization] or stainless steel materials [mekle2006apolymerbased]
+
+  - working principle
+    - one using contrast agents (T1-shortening agents) (such as 4-6 vol % Gd- DTPA) that increases the MR signal [unal1998arapid, unal2006mrvisible].
+      - By utilizing strong T1-weighted sequence, tracking of the device can be achieved with positive contrast [unal1998arapid, omary2000mrguided]
+    - The paramagnetic markers or materials cause significant field inhomogeneities when placed in a uniform main magnetic field B0, due to its local susceptibility differences with respect to surrounding tissues [schenck1996therole].
+      - field inhomogeneity has a dual effect of local frequency shifts and local gradient perturbations.
+      - This source of field inhomogeneity has been exploited as a form of image contrast for passive visualization and tracking of the interventional devices as well as super-paramagnetic iron oxide (SPIO)-labeled cells.
+      - Traditionally the visualization of these paramagnetic materials is based on increase in T2∗ decay that they cause entailing a negative contrast (signal loss) with respect to background in a resultant image (Fig.1.6).
+	- fig from [bakker1996visualization]
+	- Gradient-echo sequences are the current de-facto standard to visualize these T2∗-based effects [rubin1990magnetic,kochli1994vascular,bakker1996visualization], since the magnetic field inhomogeneities have strong impact on signal properties of these type of sequences [reichenbach1997theory].
+	- Unfortunately, due to confounding background signals it is often difficult to distinguish signal loss due to paramagnetic materials from other unwanted inhomogeneities such as, air/tissue interfaces etc.
+      - Therefore, MRI techniques that generate positive contrast that are localized within the immediate surroundings of the paramagnetic materials while suppressing the background signals have been proposed.
+	- The concurrent state-of-the-art positive contrast techniques can be broadly classified into three categories based upon their method of identifying paramagnetic materials:
+	  - those using local frequency shifts in the on-resonance frequency [mekle2006apolymerbased, stuber2007positive, cunningham2005positive]
+	    - either based on temporally inefficient spin-echo type of sequences incorporating specially designed RF pulses [cunningham2005positive] or are susceptible to main magnetic field inhomogeneities [stuber2007positive].
+	    - Mekle et.al proposed a fast passive tracking ap- proach based on special properties of bSSFP sequence at low flip angles giving rise to positive contrast within the close vicinity of the marker due to off-resonance effect [mekle2006apolymerbased]
+	  - those exploiting the local gradient compensation by the imaging gradients [seppenwoolde2003passive]
+	    - based on deliberate modification of slice select gradients that dephases background signals whereas marker-related local gradients compensate for the dephasing gradients to produce locally a positive contrast [seppenwoolde2007whitemarker] and is commonly known as “White Marker Phenomenon” (See Fig. 1.8).
+	  - those mapping the susceptibility-induced gradients as a post-processing step [vonken2008positive, dahnke2008susceptibility].
+      - Most of the research carried out to date on passive visual- ization has been with spoiled gradient echo sequences. The recently introduced steady-state free precession (SSFP) sequences provide high blood signal intensity [thiele2001functional] and good signal-to-noise and have become the sequence of choice for dynamic imaging of the heart and great vessels. Preliminary work by Martin et al. [martin2003steady] demonstrated the potential benefits of using SSFP imaging to visualize endovascular devices.
+	    
+  - Contrary to active tracking, passive techniques do not suffer from RF heating problems.
+  - unlike semi-active devices passive devices do not require any mechanical scanner connection.
+  - passively visualizing the magnetic susceptibility image artifact created by the metallic stylet [kapur20123t].
+    - Metal itself does not generate MR signals and the presence of metal can result in severe distortion to the static magnetic field (B0) around it because of the large susceptibility differences with surrounding tissues.
+    - The signal voids created by the metal in MR images are used as a negative contrast to identify the device, but the accurate location and size of the device is difficult to determine because the susceptibility artifact on MR images depends on the shape and material properties, the device’s orientation relative to B0, and pulse sequence parameters [muller2004numerical].
+    - High-resolution image-based passive tracking methods are typically time-consuming (0.5-2 tracking frames per minute) and may also compromise the contrast- to-noise ratio of anatomic images.
+    - Furthermore, this approach becomes more difficult in MR-guided brachytherapy, where the individual paths of multiple catheters need to be tracked, since catheters are close to each other (<10 mm apart) or cross paths during insertion.
+    - Various positive contrast techniques have been proposed to image paramagnetic metallic objects, but these approaches offer limited benefit over negative contrast methods [seevinck2011highly,dahnke2008susceptibility,cunningham2005positive,mani2006gradient,seppenwoolde2003passive].
+
+  - Passive devices interact directly with the imaging system or surrounding tissues to allow visualiza- tion of the catheter.
+    - In the work of Bakker et al. [bakker1996visualization,bakker1997mrguided], dysprosium rings were placed on conventional catheters to create an area of signal loss. The ring design allowed the markers to be visualized regardless of the catheter orientation.
+    - Alternatively, Gd-DTPA solutions (4 – 6%) can be used to obtain positive enhancement of the catheter [unal1998arapid,omary2000realtime]
+    - In a similar study a dephasing gradient was added along the slice select direction to further increase the catheter/tissue contrast [korosec1996time].
+
+- semi-active tracking coils
+  - structure
+    - the coil does not have to connect with the scanner receiver channel, but only act as an radio-frequency (RF) receiver and inductor in an isolated LC circuit that resonates with MR frequency ~63.8MHz or 123.5MHz, respectively, for 1.5T or 3T scanner either [rube2014wireless]
+    - may require tedious LC tuning process to match the resonant frequency within tolerance of ±1MHz [galassi2015fast]
+    - utilize self-resonant RF circuits and have no direct electrical connection to the scanner.
+    - incorporate miniature RF coils tuned to Larmor frequency of the scanner and encapsulates a small container filled with a solution having short T1 [kuehne2004catheter, hegde2006interactive].
+
+  - 3D coordinates matching of just three coils is complicated [galassi2015fast]
+  - miniaturization to include commercial MR-safe capacitors is very challenging
+    - the criteria for high quality factor (Q>50) that is inversely proportional to the circuit electrical resistance
+    - high resistance that may generate excessive heat
+
+  - working principle
+    - using a fast imaging sequence with low flip angles generates a positive contrast for the sample within the coil due to local gain of the B1 field [burl1996tuned, quick2005interventional], in combination with the relatively low signal from the background (see Fig. 1.4).
+      - fig - [weiss2004invivo]
+      - The MR sequence controls the detuning of the resonant circuit by means of software triggers, which are programmable in the MR scan software. Corresponding hardware triggers on the scanner interface are used to switch a laser diode, which illuminates the photodiode D at the catheter tip via an optical fiber. <- the figure caption
+  - Since inductively coupled coils do not utlize extended long conducting structures, heating of the coils due to E-field coupling is avoided if the wavelength of the electric field in tissue is longer than the coil dimension.
+  - might still lead to severely increased local specific absorption rate (SAR) values due to their resonant coupling to the B-field of the RF.
+  - semi-active devices require a mechanical connection (for e.g. laser fiber) between the instrument and the scanner
+
+  - Semiactive devices incorporate tuned coils, but have no direct connection to the scanner.
+    - These devices can be incorporated into fiducial markers by surrounding a small cell containing a short T1 solution surrounded by tuned windings.
+    - These semiactive devices can also be used to enhance externally applied RF pulses and hence produce a high-signal intensity using “flip-angle amplifi- cation” [burl1996tuned].
+    - Recently, semiactive devices were used in pairs to produce a signal enhancement for any catheter orientation [kuehne2003pair].
+
+- image registration for the three types of sensing - for manifying the advantage of using active tracking coil
+  - active tracking coil
+    - The positional information is used to actively align the position of the imaging slice.
+    - velocity of the device has been used to automatically adjust the imaging parameters [wacker2004thecatheter].
+    - It has also been demonstrated that position of the micro-coil can be detected between the acquisition of two real-time images (for e.g. using balanced SSFP (bSSFP), TrueFISP) and the information can be used to reposition the imaging slice [duerk1998remember, rasche1997catheter].
+  - semi-active
+  - passive
+
+- Three main heating mechanisms can occur: from eddy currents, induction loops, and resonating RF waves along a conducting device. The first two mechanisms do not involve storage of electrical energy. [marc2004visualization]
+  - Heating due to eddy currents rarely exceeds a few degrees [shellock1994magnetic,schenck1997safety]
+  - induction loops, for example, formed by monitoring equipment leads, have been known to cause burns [knopp1996unusual,shellock1996burns].
+  - In the third mechanism, a resonant RF wave is reflected at the endpoints of the con- ducting structure, thus creating a standing wave and storage of electrical energy [ladd1998active,konings2000heating,nitz2001on](5,25,26). This is an important problem in conducting guide wires and active catheters. With a nitinol guide wire, temperatures of up to 74°C have been observed [konings2000heating].
+
+
+
+- list some other existing sensors if possible
+  - e.g. forces sensor
+    - some examples in the literature and their working principles
+      - optical Fiber Bragg Grating (FBG)-based sensing unit to measure force [chen-mriconditional]
+      - 
+    - pros and cons
+
+
 
 
 *** Control interface
@@ -920,6 +1037,82 @@ Algorithm 1: General Diffeomorphic Demons Framework
 ** Acknowledgments
 
 ** References
+- J. L. Ackerman, M. C. Offut, R. B. Buxton, and T. J. Brady, “Rapid 3D tracking of small RF coils.,” in Proceedings of the SMRM, (Montreal), p. 1131, 1986.
+- C. Dumoulin, S. Souza, and R. Darrow, “Real-time position monitor- ing of invasive devices using magnetic resonance,” Magn Reson Med, vol. 29, p. 411–5, Mar. 1993.
+- O. Ocali and E. Atalar, “Intravascular magnetic resonance imaging using a loopless catheter antenna,” Magn Reson Med, vol. 37, no. 1, p. 112–8, 1997.
+- A. Glowinski, G. Adam, A. Bucker, J. Neuerburg, J. van Vaals, and R. Gunther, “Catheter visualization using locally induced, actively controlled field inhomogeneities,” Magn Reson Med, vol. 38, p. 253–8, Aug. 1997.
+- S. Zuehlsdorff, R. Umathum, S. Volz, P. Hallscheidt, C. Fink, W. Semm- ler, and M. Bock, “MR coil design for simultaneous tip tracking and curvature delineation of a catheter,” Magn Reson Med, vol. 52, p. 214–8, July 2004
+- F. Wacker, D. Elgort, C. Hillenbrand, J. Duerk, and J. Lewin, “The catheter-driven MRI scanner: a new approach to intravascular catheter tracking and imaging-parameter adjustment for interventional MRI,” AJR Am J Roentgenol, vol. 183, p. 391–5, Aug. 2004.
+- J. L. Duerk, J. S. Lewin, M. Wendt, and C. Petersilge, “Remember true FISP? a high SNR, near 1-second imaging method for t2-like contrast in interventional MRI at .2 t,” Journal of Magnetic Resonance Imaging: JMRI, vol. 8, p. 203–208, Feb. 1998. PMID: 9500281.
+- V. Rasche, D. Holz, J. Ko ̈hler, R. Proksa, and P. Ro ̈schmann, “Catheter tracking using continuous radial MRI,” Magnetic Resonance in Medicine, vol. 37, pp. 963–968, June 1997. PMID: 9178250.
+- G. C. Hurst, J. Hua, J. L. Duerk, and A. M. Cohen, “Intravascular (catheter) NMR receiver probe: preliminary design analysis and appli- cation to canine iliofemoral imaging,” Magnetic Resonance in Medicine: Official Journal of the Society of Magnetic Resonance in Medicine / Society of Magnetic Resonance in Medicine, vol. 24, pp. 343–357, Apr. 1992. PMID: 1569872.
+- H. H. Quick, M. E. Ladd, G. G. Zimmermann-Paul, P. Erhart, E. Hof- mann, G. K. von Schulthess, and J. F. Debatin, “Single-loop coil concepts for intravascular magnetic resonance imaging,” Magnetic Reso- nance in Medicine: Official Journal of the Society of Magnetic Res- onance in Medicine / Society of Magnetic Resonance in Medicine, vol. 41, pp. 751–758, Apr. 1999. PMID: 10332851.
+- L. V. Hofmann, R. P. Liddell, J. Eng, B. A. Wasserman, A. Arepally, D. S. Lee, and D. A. Bluemke, “Human peripheral arteries: feasibility of transvenous intravascular MR imaging of the arterial wall,” Radiology, vol. 235, pp. 617–622, May 2005. PMID: 15858101.
+- M. Konings, L. Bartels, H. Smits, and C. Bakker, “Heating around intravascular guidewires by resonating RF waves,” J Magn Reson Imaging, vol. 12, p. 79–85, July 2000.
+- T. Kuehne, S. Weiss, F. Brinkert, J. Weil, S. Yilmaz, B. Schmitt, P. Ew- ert, P. Lange, and M. Gutberlet, “Catheter visualization with resonant markers at MR imaging-guided deployment of endovascular stents in swine,” Radiology, vol. 233, p. 774–80, Dec. 2004.
+- S. Hegde, M. Miquel, R. Boubertakh, D. Gilderdale, V. Muthurangu, S. Keevil, I. Young, D. Hill, and R. Razavi, “Interactive MR imaging and tracking of catheters with multiple tuned fiducial markers,” J Vasc Interv Radiol, vol. 17, p. 1175–9, July 2006.
+- M. Burl, G. Coutts, and I. Young, “Tuned fiducial markers to iden- tify body locations with minimal perturbation of tissue magnetization,” Magn Reson Med, vol. 36, p. 491–3, Sept. 1996.
+- H. H. Quick, M. O. Zenge, H. Kuehl, G. Kaiser, S. Aker, S. Massing, S. Bosk, and M. E. Ladd, “Interventional magnetic resonance angiog- raphy with no strings attached: wireless active catheter visualization,” Magnetic Resonance in Medicine: Official Journal of the Society of Magnetic Resonance in Medicine / Society of Magnetic Resonance in Medicine, vol. 53, pp. 446–455, Feb. 2005. PMID: 15678524.
+- S. Weiss, T. Kuehne, F. Brinkert, G. Krombach, M. Katoh, T. Scha- effter, R. W. Guenther, and A. Buecker, “In vivo safe catheter visualiza- tion and slice tracking using an optically detunable resonant marker,” Magnetic Resonance in Medicine: Official Journal of the Society of Magnetic Resonance in Medicine / Society of Magnetic Resonance in Medicine, vol. 52, pp. 860–868, Oct. 2004. PMID: 15389956.
+- O. Unal, F. Korosec, R. Frayne, C. Strother, and C. Mistretta, “A rapid 2D time-resolved variable-rate k-space sampling MR technique for passive catheter tracking during endovascular procedures,” Magn Reson Med, vol. 40, p. 356–62, Sept. 1998.
+- O. Unal, J. Li, W. Cheng, H. Yu, and C. M. Strother, “MR-visible coatings for endovascular device visualization,” Journal of Magnetic Resonance Imaging: JMRI, vol. 23, pp. 763–769, May 2006. PMID: 16555229.
+- D. Rubin, A. Ratner, and S. Young, “Magnetic susceptibility effects and their application in the development of new ferromagnetic catheters for magnetic resonance imaging,” Invest Radiol, vol. 25, p. 1325–32, Dec. 1990.
+- V. Kochli, G. McKinnon, E. Hofmann, and G. von Schulthess, “Vascu- lar interventions guided by ultrafast MR imaging: evaluation of differ- ent materials,” Magn Reson Med, vol. 31, p. 309–14, Mar. 1994.
+- C. Bakker, R. Hoogeveen, J. Weber, J. van Vaals, M. Viergever, and W. Mali, “Visualization of dedicated catheters using fast scanning techniques with potential for MR-guided vascular interventions,” Magn Re- son Med, vol. 36, p. 816–20, Dec. 1996.
+- R. Mekle, E. Hofmann, K. Scheffler, and D. Bilecen, “A polymer-based MR-compatible guidewire: a study to explore new prospects for in- terventional peripheral magnetic resonance angiography (ipMRA),” J Magn Reson Imaging, vol. 23, p. 145–55, Feb. 2006.
+- R. A. Omary, R. Frayne, O. Unal, T. Warner, F. R. Korosec, C. A. Mistretta, C. M. Strother, and T. M. Grist, “MR-guided angioplasty of renal artery stenosis in a pig model: a feasibility study,” Journal of Vascular and Interventional Radiology: JVIR, vol. 11, pp. 373–381, Mar. 2000. PMID: 10735435.
+- J. F. Schenck, “The role of magnetic susceptibility in magnetic resonance imaging: MRI magnetic compatibility of the first and second kinds,” Medical Physics, vol. 23, pp. 815–850, June 1996. PMID: 8798169.
+- J. Reichenbach, R. Venkatesan, D. Yablonskiy, M. Thompson, S. Lai, and E. Haacke, “Theory and application of static field inhomogene- ity effects in gradient-echo imaging,” J Magn Reson Imaging, vol. 7, p. 266–79, Apr. 1997.
+- M. Stuber, W. Gilson, M. Schar, D. Kedziorek, L. Hofmann, S. Shah, E. Vonken, J. Bulte, and D. Kraitchman, “Positive contrast visual- ization of iron oxide-labeled stem cells using inversion-recovery with ON-resonant water suppression (IRON),” Magn Reson Med, vol. 58, p. 1072–7, Nov. 2007.
+- C. Cunningham, T. Arai, P. Yang, M. McConnell, J. Pauly, and S. Conolly, “Positive contrast magnetic resonance imaging of cells labeled with magnetic nanoparticles,” Magn Reson Med, vol. 53, p. 999–1005, May 2005.
+- J. Seppenwoolde, M. Viergever, and C. Bakker, “Passive tracking ex- ploiting local signal conservation: the white marker phenomenon,” Magn Reson Med, vol. 50, p. 784–90, Oct. 2003.
+- E. Vonken, M. Schar, and M. Stuber, “Positive contrast visualization of nitinol devices using susceptibility gradient mapping,” Magn Reson Med, vol. 60, p. 588–94, Sept. 2008.
+- H. Dahnke, W. Liu, D. Herzka, J. Frank, and T. Schaeffter, “Susceptibility gradient mapping (SGM): a new postprocessing method for positive contrast generation applied to superparamagnetic iron oxide particle (SPIO)-labeled cells,” Magn Reson Med, vol. 60, p. 595–603, Sept. 2008.
+- J. Seppenwoolde, K. Vincken, and C. Bakker, “White-marker imaging- Separating magnetic susceptibility effects from partial volume effects,” Magn Reson Med, July 2007.
+- Kapur T, Egger J, Damato A, Schmidt EJ, Viswanathan AN. 3-T MR-guided brachytherapy for gynecologic malignancies. Magnetic resonance imaging. 2012; 30(9):1279–1290.
+- Müller-Bierl B, Graf H, Lauer U, Steidle G, Schick F. Numerical modeling of needle tip artifacts in MR gradient echo imaging. Medical physics. 2004; 31(3):579–587.
+- Seevinck PR, de Leeuw H, Bos C, Bakker CJ. Highly localized positive contrast of small paramagnetic objects using 3D center-out radial sampling with off-resonance reception. Magnetic resonance in medicine. 2011; 65(1):146–156. [PubMed: 20740656]
+- Mani V, Briley-Saebo KC, Itskovich VV, Samber DD, Fayad ZA. Gradient echo acquisition for superparamagnetic particles with positive contrast (GRASP): sequence characterization in membrane and glass superparamagnetic iron oxide phantoms at 1.5 T and 3T. Magnetic resonance in medicine. 2006; 55(1):126–135. 
+- Bock M, Umathum R, Sikora J, Brenner S, Aguor E, Semmler W. A Faraday effect position sensor for interventional magnetic resonance imaging. Physics in medicine and biology. 2006; 51(4):999. 
+- Scheffler K, Korvink J. Navigation with Hall sensor device for interventional MRI. 2004:950.
+- Leung DA, Debatin JF, Wildermuth S, Heske N, Dumoulin CL, Darrow RD, Hauser M, Davis CP, von Schulthess GK. Realtime biplanar needle tracking for interventional MR imaging procedures. Radiology 1995; 197:485– 488.
+- Wildermuth S, Debatin JF, Leung DA, Dumoulin CL, Darrow RD, Uhlschmid G, Hofmann E, Thyregod J, von Schulthess GK. MR imaging-guided intravascular procedures: initial demonstration in a pig model. Radiology 1997;202:578–583.
+- Ladd ME, Zimmermann GG, McKinnon GC, von Schulthess GK, Du- moulin CL, Darrow RD, Hofmann E, Debatin JF. Visualization of vas- cular guidewires using MR tracking. J Magn Reson Imag 1998;8:251– 253.
+- Ladd ME, Zimmermann GG, Quick HH, Debatin JF, Boesiger P, von Schulthess GK, McKinnon GC. Active MR visualization of a vascular guidewire in vivo. J Magn Reson Imag 1998;8:220–225.
+- Ladd ME, Quick HH, Debatin JF. Interventional MRA and intravascular imaging. J Magn Reson Imag 2000;12:534–546.
+- Lardo AC, McVeigh ER, Jumrussirikul P, Berger RD, Calkins H, Lima J, Halperin HR. Visualization and temporal/spatial characterization of cardiac radiofrequency ablation lesions using magnetic resonance im- aging. Circulation 2000;102:698 –705.
+- Bottomley PA, Atalar E, Lee RF, Shunk KA, Lardo A. Cardiovascular MRI probes for the outside in and for the inside out. MAGMA 2000; 11:49 –51.
+- Zhang Q, Wendt M, Aschoff AJ, Zheng L, Lewin JS, Duerk JL. Active MR guidance of interventional devices with target-navigation. Magn Reson Med 2000;44:56–65.
+- Zhang Q, Wendt M, Aschoff AJ, Lewin JS, Duerk JL. A multielement RF coil for MRI guidance of interventional devices. J Magn Reson Imag 2001;14:56 – 62.
+- Kuehne T, Fahrig R, Butts K. Pair of resonant fiducial markers for localisation of endovascular catheters at all catheter orientations. J Magn Reson Imag 2003;17:620–624.
+- Bakker CJ, Hoogeveen RM, Hurtak WF, van Vaals JJ, Viergever MA, Mali WP. MR-guided endovascular interventions: susceptibility-based catheter and near-real-time imaging technique. Radiology 1997;202: 273–276.
+- Omary RA, Unal O, Koscielski DS, Frayne R, Korosec FR, Mistretta CA, Strother CM, Grist TM. Real-time MR imaging guided passive catheter tracking with use of gadolinium-filled catheters. J Vasc Interv Radiol 2000;11:1079 –1085.
+- Korosec FR, Frayne R, Grist TM, Mistretta CA. Time-resolved contrast- enhanced 3D MR angiography. Magn Reson Med 1996;36:345–531.
+- Marc E. Miquel, Sanjeet Hegde, Vivek Muthurangu, Benjamin J. Corcoran, Stephen F. Keevil, Derek L.G. Hill, and Reza S. Razavi, "Visualization and Tracking of an Inflatable Balloon Catheter Using SSFP in a Flow Phantom and in the Heart and Great Vessels of Patients," Magnetic Resonance in Medicine 51:988–995 (2004)
+- Shellock FG, Kanal E. Magnetic resonance—bioeffects, safety, and patient management. New York: Raven Press; 1994.
+- Schenck JF. Safety issues in the MR environment. In: Debatin JF, Adam G, editors. Interventional magnetic resonance imaging. Heldelberg: Springer; 1997.
+- Knopp MV, Essig M, Dubus J, Zabel HJ, von Kaick G. Unusual burns of the lower extremities caused by a closed conducting loop in a patient at MR imaging. Radiology 1996;2000:572–575.
+- Shellock FG, Kanal E. Burns associated with the use of monitoring equipment during MR procedures. J Magn Reson Imag 1996;6:271–272.
+- Nitz RW, Oppelt A, Renz W, Manke C, Lenhart M, Link J. On the heating of linear conductive structures as guide wires and catheters in interventional MRI. J Magn Reson Imag 2001;13:105–114.
+- V. K. Raman, P. V. Karmarkar, M. A. Guttman, A. J. Dick, D. C. Peters, C. Ozturk, B. S. S. Pessanha, R. B. Thompson, A. N. Raval, R. DeSilva, R. J. Aviles, E. Atalar, E. R. McVeigh, and R. J. Leder- man, “Real-time magnetic resonance-guided endovascular repair of ex- perimental abdominal aortic aneurysm in swine,” Journal of the Amer- ican College of Cardiology, vol. 45, p. 2069–2077, June 2005. PMID: 15963411.
+- F. K. Wacker, C. M. Hillenbrand, J. L. Duerk, and J. S. Lewin, “MR- guided endovascular interventions: device visualization, tracking, nav- igation, clinical applications, and safety aspects,” Magnetic Resonance Imaging Clinics of North America, vol. 13, p. 431–439, Aug. 2005. PMID: 16084411.
+- R. Razavi, D. Hill, S. Keevil, M. Miquel, V. Muthurangu, S. Hegde, K. Rhode, M. Barnett, J. van Vaals, D. Hawkes, and E. Baker, “Cardiac catheterisation guided by MRI in children and adults with congenital heart disease,” Lancet, vol. 362, p. 1877–82, Dec. 2003.
+- Thiele H, Nagel E, Paetsch I, Schnackenburg B, Bornstedt A, Kouwenhoven M, Wahl A, Schuler G, Fleck E. Functional cardiac MR imaging with steady-state free precession (SSFP) significantly improves endocardial border delineation without contrast agents. J Magn Reson Imag 2001;14:362–367.
+- Martin AJ, Weber OM, Saeed M, Roberts TPL. Steady-state imaging for visualization of endovascular interventions. Magn Reson Imag 2003; 50:434 – 438.
+- Duerk JL, Wong EY, Lewin JS. A brief review of hardware for catheter tracking in magnetic resonance imaging. MAGMA 2002;13:199–208.
+- Erhart P, Ladd ME, Steiner P, Heske N, Dumoulin CL, Debatin JF. Tissue-independent MR tracking of invasive devices with an internal signal source. Magn Reson Med 1998;39:279–284.
+- Gilderdale DJ, Williams AD, Dave U, deSouza NM. An inductively- coupled, detachable receiver coil system for use with magnetic resonance compatible endoscopes. J Magn Reson Imaging 2003;18: 131–135.
+- Sandhu G. A solid marker material for MRI with adjustable relaxa- tion properties. Proc Intl Soc Magn Reson Med 2007;15:3385.
+- Kugel H, Steppan G, Zaro Weber O, Krug B. [Artifacts in MR Imaging due to ventilation tubes]. Rofo 2001;173:949–954.
+- Umathum R. Rubber materials for active device tracking. Proc Intl Soc Magn Reson Med 2008;16:1208.
+- Stefan Alt, Ann-Kathrin Homagk, Reiner Umathum, Wolfhard Semmler, and Michael Bock, "Active Microcoil Tracking in the Lungs Using a Semisolid Rubber as Signal Source," Magnetic Resonance in Medicine 64:271–279 (2010)
+- Rahmer J. Catheter visualization using rubber bands and ultrashort TE imaging. Proc Intl Soc Magn Reson Med 2008;16:1207.
+- Bock M, Volz S, Zuhlsdorff S, Umathum R, Fink C, Hallscheidt P, Seminmler W. MR-guided intravascular procedures: real-time param- eter control and automated slice positioning with active tracking coils. J Magn Reson Imaging 2004;19:580–589.
+
+
+
+
+
 
 
 
