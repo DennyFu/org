@@ -809,21 +809,26 @@ Algorithm 1: General Diffeomorphic Demons Framework
 - In MR-guided intravascular interventions (e.g., embolization or stent placement), the interventional radiologist benefits from automatic and continuous updates of the imaging slice position, since during the procedure the catheter tip is always visible. Unfortunately, tip tracking requires information only from several selected points on the catheter.
 
 
+In active tracking, small coils are attached to an instrument, for example, at the tip of a catheter. Via coaxial cables [dumoulin1993realtime,duerk2002abriefreview], the coils are connected to a receiver electronic system to measure MR gradient field. The localization of the coils is achieved by a projection technique, which can be achieved within a few milliseconds [bock2006afaraday], thus enabling high-frame rate of tracking. Precise measurement of the 3D ( 0.6 X 0.6 X 0.6 mm3 in [wang2015realtime]) can be achieved utilizing coils that have high sensitivity to local field inhomogeneity. 
+One of the main issues in active tracking is the heating issues. Resonant radiofrequency (RF) waves are reflected in the coils; Electrical energy is stored within the conducting structure and may cause potential safety hazards [ladd1998active,konings2000heating,nitz2001on]. It has been reported that nitinol-made guidedwires was up to 74 degree celcius [konings2000heating]. 
+The electronic component may also induce electromagnetic (EM) interference that causes artifacts in the MR images.
+However, active tracking also has several advantages compared with the passive traacking and semi-active tracking. 
+Need several advantages of active tracking
 
-- active tracking coils
+
+
+- active tracking
   - e.g. [wang2015realtime]
-
   - structure
-    - fig [wacker2004thecatheter]
-    - small radiofrequency (RF) coils attached to the instrument, connected with a receiver system via coaxial cables [dumoulin1993realtime,duerk2002abriefreview]
+    - fig example [wacker2004thecatheter]
+    - small radiofrequency (RF) coils attached to the instrument; the coils connect with a receiver system via coaxial cables [dumoulin1993realtime,duerk2002abriefreview]
     - The routing of the coaxial cables is required from the coil to the receiver interface [sarioglu2015anoptically] to measure MR gradient field.
-    - utilizes locally sensitive transmit/receive coils for either localization [ackerman1986rapid,dumoulin1993realtime] or visualization [ocali1997intravascular] or is based on the visualization of current related local field inhomogeneities produced in a small loop [glowinski1997catheter]
 
     - the size and length of the cables have to be minimized for reduction of any EM interference
     - coil-to-channel electronic interface also has to be specifically designed for particular types of scanners only
     - particularly challenging while operating larger numbers (>8) of active coil.
     - a catheter coil design is proposed that performs active catheter tip tracking and visualization of the distal end with a only single coaxial cable [zuehlsdorff2004mr].
-    - Often, a single coil at the tip of the instrument is used for instrument tracking, which is then localized with a fast gradient echo acquisition of three orthogonal projections. 
+    - Often, a single coil at the tip of the instrument is used for instrument tracking, which is then 
     - In intravascular tracking catheters, the blood surrounding the microcoil provides the MR signal; however, in air-filled cavities no residual MR signal is available and the microcoil needs to be equipped with an independent signal source [erhart1998tissue]. Tracking thus differs from other high-resolution imaging applications, where a small local coil is used acquire images of the tissue adjacent to the airways [gilderdale2003aninductively]. Signal sources using liquid-filled capsules or water-based gels were found to rapidly dry out over several days [sandhu2007asolid], in particular, when very small reservoirs with a diameter of only several millimeters were used. Since medical devices often need to be stored for several months or even years (shelf life), liquid signal reservoirs in microcoils are impracticable for clinical use.
     - Recently, image artifacts caused by the semisolid rubber material of breathing tubes and hoses in short- echo-time (TE) MR images were found [kugel2001artifacts], which suggest that these materials might also be useful as MR signal sources [umathum2008rubber] for device tracking in air-filled cavities. In this work[stefan2010active], a novel tracking method for active micro- coils in air-filled cavities is presented. The tracking method uses a biocompatible and clinically approved rubber as MR signal source in a microcoil at the tip of a catheter. A dedicated pulse sequence and postprocessing algorithm are presented that utilize the unique MR prop- erties of the rubber material to distinguish its signal from that of the surrounding tissue [rahmer2008catheter]. The coil position data were visualized using either a roadmapping tech- nique or a real-time implementation with active device tracking and automatic slice positioning [bock2004mrguided]. Both catheter and pulse sequence were tested in phantom and animal experiments.
 
@@ -834,6 +839,8 @@ Algorithm 1: General Diffeomorphic Demons Framework
     - thus enabling high-frame rate of tracking (≥40Hz)
     - the instrument tip position is detected within 20 ms [zuehlsdorff2004mr].
     - 
+    - localized with a fast gradient echo acquisition of three orthogonal projections.
+    - utilizes locally sensitive transmit/receive coils for either localization [ackerman1986rapid,dumoulin1993realtime] or visualization [ocali1997intravascular] or is based on the visualization of current related local field inhomogeneities produced in a small loop [glowinski1997catheter]
     - Small direct currents have been sent through wire loops mounted on a catheter to create a switchable field distortion (1). Receiver coils incorporated in the catheter lumen have been used for profiling in order to visualize the entire length of the catheter (1,6,7). Furthermore, cath- eters have been equipped with microcoils for active tip tracking (8 –10). The location of these tracking coils can be determined rapidly by means of a projection technique, and the position information in turn can be used to define the position of the imaging slice.
 
   - not only for device tracking but also for vessel wall imaging or functional studies [hurst1992intravascular,quick1999singleloop,hofmann2005human].
@@ -852,6 +859,14 @@ Algorithm 1: General Diffeomorphic Demons Framework
     - devices (typically small reso- nant coils) which localize the tip of the catheter on a previously acquired roadmap using three orthogonal projections [leung1995realtime,wildermuth1997mr,ladd1998visualization,ladd1998active,ladd2000interventional]
     - devices which allow visualization of the length of the catheter, like the loopless antenna [ocali1997intravascular,lardo2000visualization,bottomley2000cardiovascular]
     - devices that can be used to track the position of the catheter and image locally [zhang2000active,zhang2001amultielement]. 
+
+
+In contrast to active tracking, passive tracking does not require electronic components such as cables and receivers circuits.
+Utilizing either contrast agents (e.g. 4-6 vol % Gd-DTPA) as T1-shortening agents that enhances MR signal [unal1998arapid,unal2006mrvisible] or paramagnetic material (e.g. dysprosium oxide) that causes field inhomogeneities to the surrounding matter [schenck1996therole], and properly designed MR sequence that are programmable in the MR scan software, visualization of the contrast agents or the paramagnetic material in the MRI can be achieved. 
+example and some data 
+pros and cons
+
+
 
 - passive tracking
   - structure
@@ -934,7 +949,7 @@ Algorithm 1: General Diffeomorphic Demons Framework
 - Three main heating mechanisms can occur: from eddy currents, induction loops, and resonating RF waves along a conducting device. The first two mechanisms do not involve storage of electrical energy. [marc2004visualization]
   - Heating due to eddy currents rarely exceeds a few degrees [shellock1994magnetic,schenck1997safety]
   - induction loops, for example, formed by monitoring equipment leads, have been known to cause burns [knopp1996unusual,shellock1996burns].
-  - In the third mechanism, a resonant RF wave is reflected at the endpoints of the con- ducting structure, thus creating a standing wave and storage of electrical energy [ladd1998active,konings2000heating,nitz2001on](5,25,26). This is an important problem in conducting guide wires and active catheters. With a nitinol guide wire, temperatures of up to 74°C have been observed [konings2000heating].
+  - In the third mechanism, a resonant RF wave is reflected at the endpoints of the con- ducting structure, thus creating a standing wave and storage of electrical energy [ladd1998active,konings2000heating,nitz2001on]. This is an important problem in conducting guide wires and active catheters. With a nitinol guide wire, temperatures of up to 74°C have been observed [konings2000heating].
 
 
 
@@ -1108,6 +1123,7 @@ Algorithm 1: General Diffeomorphic Demons Framework
 - Stefan Alt, Ann-Kathrin Homagk, Reiner Umathum, Wolfhard Semmler, and Michael Bock, "Active Microcoil Tracking in the Lungs Using a Semisolid Rubber as Signal Source," Magnetic Resonance in Medicine 64:271–279 (2010)
 - Rahmer J. Catheter visualization using rubber bands and ultrashort TE imaging. Proc Intl Soc Magn Reson Med 2008;16:1207.
 - Bock M, Volz S, Zuhlsdorff S, Umathum R, Fink C, Hallscheidt P, Seminmler W. MR-guided intravascular procedures: real-time param- eter control and automated slice positioning with active tracking coils. J Magn Reson Imaging 2004;19:580–589.
+- Wei Wang, Charles L. Dumoulin, Akila N. Viswanathan, Zion T. H. Tse, Alireza Mehrtash, Wolfgang Loew, Isaiah Norton, Junichi Tokuda, Ravi T. Seethamraju, Tina Kapur, Antonio L. Damato, Robert A. Cormack, and Ehud J. Schmidt, "Real-time active MR-tracking of metallic stylets in MR-guided radiation therapy," Magn Reson Med. 2015 May ; 73(5): 1803–1811.
 
 
 
