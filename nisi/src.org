@@ -4,6 +4,71 @@
   :END:
 * notes
 
+** src meeting 27 Jul
+*** felix
+**** camera module supplier visit
+***** MISUMI
+***** CHIYI
+***** JPP
+
+***** image quality
+- vga/720p might not have significant different
+- FOV > 120 deg
+- depth of field
+- 2 meter transmission for 1080p is challenging compromising size and cost
+  - shielding not considered yet
+  - 
+- with lighting
+
+***** custum made RFQ progress
+- MISUMI
+- CHIYI
+  - studying whole module
+- JPP
+- check photo
+
+*** our team 
+
+**** simulator 
+ck comments:
+- longer decending colon fixture and rectum fixture
+- only way to sucess is to deflate the colon so that the acute angle can be reduce at the semi colon
+  - israel assumption: based on the inflation of ballon but that will not exacerate the acute angle at the semi-colon
+
+**** filtering
+- ck: potential problem
+  - filer overlapped the bending section
+**** tubing
+- ck likes the without shape edge one
+**** shorten balloon 
+
+**** Routing of tubing
+
+ck on inner tube balloon design
+- separte ballon from felix idea
+  - one balloon at the front and one balloon at hte end of bendable section
+  - filter wrap the whole bendable section
+    - unknown the anchoring effect
+  - proved workable by jimmy
+- only one distal balloon 
+- maybe outer tube is not necessary for colonoscopy
+- soft robot is much more prefer than tendon driven
+- need to confirm the inner tube ballon design ASAP (by next week)
+
+
+- ck one more time emphasize if camera can see the lumen
+  - if this work everything can done
+
+
+marco
+- difficult for miniaturization
+- 3mm for biopsy channel is a must from ck 
+
+**** timeline
+- major change of bendable section designed require 3 months
+
+**** 
+
 ** Neoguide Colonoscope
 
 * meeting
@@ -56,7 +121,7 @@
 - alternative solution - flexible pcb
 
 ** TODO progress meeting with nisi
-   SCHEDULED: <2016-06-17 Fri 20:30>
+   SCHEDULED: <2016-07-27 Wed 19:30>
    - State "DONE"       from "TODO"       [2016-05-30 Mon 21:00]
    - State "DONE"       from "TODO"       [2016-05-13 Fri 22:00]
    - State "DONE"       from "TODO"       [2016-05-06 Fri 21:00]
