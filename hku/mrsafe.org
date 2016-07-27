@@ -767,8 +767,9 @@ Algorithm 1: General Diffeomorphic Demons Framework
 
 *** MRI-compatible actuation
 
-Robots have to be designed to fulfill the MRI-compatibility requirements for i) MR-safety; ii) preservation of image quality; iii) operation without being affected by the electric and magnetic fields of MRI scanner [2]. Therefore, ferromagnetic materials that induce image artifacts should be avoided; Conductive materials may induce eddy currents that disrupt magnetic field homogeneity. 
-Existing actuation mechanism of robots that work near the isocenter of the MRI system can be classified to 1) electric motor; 2) pneumatic motor and 3) hydraulic motors.
+MRI-compatibile robotic platforms allows surgeons tele-manipulate interventional devices that are located in the MRI-scanner room.
+Robots have to fulfill requirements for i) MR-safety; ii) preservation of image quality; and iii) actuation that are unaffected by the strong MR fields [2]. Therefore, ferromagnetic materials that induce image artifacts should be avoided; Conductive materials may induce eddy currents that disrupt magnetic field homogeneity. 
+Common actuation mechanisms for robots working near the isocenter of the MRI system can be classified as 1) electrically driven; 2) pneumatically driven and 3) hydraulically driven.
 
 - Existing actuation mechanism of robots that work near the isocenter of the MRI system can be classified to 1) electric motor, including ultrasonic and piezoelectric motors; 2) Electromagnetic (EM) -powered motor; and 3) fluid motor, including pneumatic and hydraulic motors.
 
@@ -779,7 +780,7 @@ Existing actuation mechanism of robots that work near the isocenter of the MRI s
   - Currently, there are three types of actuators adopted in MRI-guided robot, 1) electric motor, including ultrasonic and piezoelectric motors; 2) Electromagnetic (EM) -powered motor; and 3) fluid motor, including pneumatic and hydraulic motors.
 
 
-Ultrasonic motors and piezoelectric motors are the most common electric motor in MRI-compatible actuation.
+Ultrasonic motors and piezoelectric motors are the most commonly used electrically driven MRI-compatible actuation.
 Chinzei et al. designed an MR-compatible surgical assist robot operating under open MRI, which is driven by ultrasonic motors [4].
 (1 sentence of working principle or other kinds of short description of ultrasonic motor please)
 Piezoelectric motor features with high power-efficiency, compactness and high-fidelity dynamic accuracy. 
@@ -805,14 +806,12 @@ These drawbacks have naturally shifted the research focuses towards intrinsicall
     - Dupont et al. [7] designed an EM-motor that could be actuated by static magnetic field of the MRI scanner. However, the steady performance of this motor will still get influenced by the magnetic field of scanner. 
 
 
-Pneumatic motors are capable of operating in an MR environment, even inside the scanner, without adversely affecting MR image quality.
-MRI-compatible pneumatically driven robots often design as master-slave system: The master unit can be electric components such as pumps and cylinder and isolate from the MRI system, guaranteeing negligible MR image artifacts; The slave unit, i.e. the robot, works near MRI where the actuation is transmitted pnuematically via long pipelines through the wave guide from the master unit, thus allowing compact design.
+Pneumatic motors are capable of operating in MR environment, even inside the scanner, without adversely affecting MR image quality.
+MRI-compatible pneumatically driven robots are often designed as master-slave system: The master unit can be electric components such as pumps and cylinder and isolate from the MRI system, guaranteeing negligible MR image artifacts; The slave unit, i.e. the robot, works near MRI where the actuation is transmitted pnuematically via long pipelines through the wave guide from the master unit, thus allowing compact design.
 Stoianovici et al [9] developed the first MR-safe pneumatic stepper motor. (please also praise something However, its structure is complex and cost is relatively high due to the complicated fabrication and difficult sterilization.)
 In our previous work [13] (Fig. X), a pneumatic motor that features with its compactness and simplicity has been developed. It consists of only seven, 3D-printed components that are solely made of MR-safe homogeneous materials.
 In the fluid transmission, pneumatic motors get several advantages over the hydraulic ones. For example, the working fluid is readily available and innocuous so that leakage problem will not be a concern. And thanks to the low-viscosity and low-weight of the air, extra friction and mass to the robot could be ignorable. However, pneumatic motors are typically bulky and with low energy-efficiency. The vibration and noise due to the air dynamics during the transmission is challenging to eliminate as well.
 
-
-pros and cons 
 
 
 
@@ -825,9 +824,11 @@ pros and cons
 
 
 
-Hydraulic
-efficient and steady transmission, nearly incompressible that improve actuation delay through long pipe line.
-hydrauclic motor 
+Hydraulic transmission is an alternative for designing MRI-compatible master-slave type robot design.
+Rather than using pressurized air in the pneumatic transmission mentioned previously,  using nearly incompressible pressurized as media in the long pipeline can reduce actuation delay to offer steady transmission and quick response.
+Recently, a novel hydraulic motor has been invented [14] and is promising to be implemented in MRI-guided robots; To enhance transmission efficiency, rolling diaphragms were adopted for avoiding sliding friction that occurs between piston shaft and traditional O-rign tight-sealing (Fig. X). 
+hydrauclic motor with rolling diaphragms
+Still, fluid leakage is a potential problem. Filling the pressurized fluid also increase difficulty in system set up.
 
 
 
