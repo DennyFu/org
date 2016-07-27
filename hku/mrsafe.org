@@ -33,7 +33,7 @@
     outline is located below
     
 
-*** TODO submit paper to RA Magazine Special Issue
+*** INPROGRESS submit paper to RA Magazine Special Issue
     DEADLINE: <2016-08-01 Mon>
 **** RAM submission info
 http://www.ieee-ras.org/publications/ram/ram-special-issues/special-issues-on-surgical-robot-challenge
@@ -61,42 +61,40 @@ Be aware that mandatory page charges of USD 250 apply for every published page b
 If you have not previously submitted a paper to the magazine, you are strongly encouraged to peruse recent issues to familiarize yourself with the style and technical level of typical articles.
 
 
-* DONE Hamlyn symposium robotic challenge 2-pages paper
-  CLOSED: [2016-06-01 Wed 19:34]
-  - State "DONE"       from ""           [2016-06-01 Wed 19:34]
+*** DONE Hamlyn symposium robotic challenge 2-pages paper
+    
+**** Project title
 
-** Project title
+**** Abstract
 
-** Abstract
-
-*** revised
+***** revised
 Magnetic resonance imaging (MRI) techniques allows electrophysiologists to intra-operatively assess the ablation procedure during cardiovascular electrophysiology (EP); However, it is still challenging to carry out effective catheterization under MRI environment. We present a MRI-conditional catheter robotic system that integrates intra-operative MRI techniques, real-time visual feedback and effective control interface for catheter manipulation. Subject proved that the presented robotic system could enhance the performance of simulated ablation tasks.
 
 
-*** Ziyan's original
+***** Ziyan's original
 Cardiac electrophysiology (EP) intervention is an effective treatment to arrhythmias. This project presents an MRI-conditional catheter robotic system that integrates intra-operative MRI, MR-based tracking units and enhanced visual guidance with catheter manipulation. The proposed system differs fundamentally from existing remotely controlled EP systems, of which the robotic manipulation is still challenging due to the very limited image guidance. This is the first system that provides a means of integrating intra-op MR imaging and tracking to improve the performance of tele-operated robotic catheterization.
-** Introdution
+**** Introdution
 
 
-*** revised
+***** revised
 In cardiac EP intervention, a long catheter (>1m) is delivered to the heart chamber; Radiofrequency ablation (RFA) is performed on lesion tissue to isolate the abnormal eletrophysiological signals. The safety and effectiveness of EP intervention can be enhanced by introducing high quality intra-operative visual feedback of cardiac conditions and MR-compatible robotic platform for effective catheterization. Currently, neither any existing commercial nor research prototype of robotic catheterization platform is MR-conditional/safe. We present a MRI-conditional catheter robotic system for effective catheter manipulation that makes use of intra-operative MRI techniques, real-time visual feedback and an advanced kinematics control method.
 
-*** Ziyan's original
+***** Ziyan's original
 In cardiac EP intervention, a long catheter (>1m) has to be delivered to the heart chamber, in which radiofrequency ablation (RFA) is performed on lesion tissue to isolate the abnormal eletrophysiological signals. Numerous patient trials under late gadolinium enhancement T2-weighted MRI have been conducted, which demonstrated safer and more effective EP intervention by monitoring the RFA under MRI. However, the ferromagnetic materials and conductive components in most catheter robots and steerable catheterization systems are forbidden from the use of MRI scanner due to its tremendously strong magnetic field generated. Furthermore, maneuvering of such a long and flexible catheter inside the cardiac chamber is still a challenging task even for the latest advances in the robotic-assisted platforms. Currently, neither any existing commercial nor research prototype of robotic catheterization platform is MR-conditional/safe. There is no well-established robot-human interface capable of continuously registering targets locations based on intra-operative MR images, and guiding the effective manipulation of the long, thin, flexible catheter.
 
 
-** Methods
+**** Methods
 
-*** Effective MRI-compatible robotic platform: 
+***** Effective MRI-compatible robotic platform: 
 We construct a master-slave robotic platform made of MRI-safe, non-ferromagnetic materials for catheterization. Hydraulic transmission with water is adopted to guarantee zero EM interference with the MRI. The master actuators drive the slave actuators, which are isolated 10 m away in the MRI scanner room, providing steering, rolling, translation and fine advancement of a catheter mounted on the slave unit. To achieve effective actuation, we design the actuators with minimum backlash effect and install rolling diaphragms to reduce friction.
 
-*** Real time, intra-operative visualization and position feedback for catheter navigation:
+***** Real time, intra-operative visualization and position feedback for catheter navigation:
 Based on intra-operative MR images, we construct and update a real-time 3D cardiac roadmap. We also employ a micro coil on the catheter tip that enables real-time (> 30 Hz), low latency (<3ms) and accurate (fine spatial resolution 0.6×0.6×0.6mm3) position tracking of the catheter. According to the position feedback, we attach a virtual camera at the a tip of the catheter to provide a virtual view for navigation.
 
-*** User-friendly control interface with visual-motor alignment: 
+***** User-friendly control interface with visual-motor alignment: 
 User can manipulate the catheter by providing desired displacement in the virtual view via a motion input device. We develop a control method based on model-free online estimation of the kinematics relationship between the control input and the catheter tip position, achieving visual-motor alignment between the virtual camera attached to the catheter tip and the virtual.
 
-*** Ziyan's original
+***** Ziyan's original
 Robot motion driven by MR-safe actuation unit: 
 The actuator is fabricated by 3D printing, except for the rubber rolling diaphragm. As it is actuated by hydraulic power, the whole unit is MR-safe and remains minimized imaging disturbance in MR environment. The actuator consists of two identical hydraulic piston-actuators, a gear, two long flexible tubes (>10m) and a hydraulic pump. Each piston-actuator consists of a piston, a rolling diaphragm and a cylinder. The two tubes and the hydraulic pump connect the two piston-actuators with fixed amount of pressurized fluid filled inside. The rolling diaphragms act as flexible seals. The two piston-actuators and the gear are assembled such that the gear transmits translational motion of one piston to other piston in opposite direction. When the hydraulic pump forces the pressurized fluid from one cylinder to another by a piston inside, the change of the fluid volume in one cylinder induces pressure on the wall of the rolling diaphragm and pushes the piston out. Simultaneously, the other piston is push into the other cylinder by the force transmitted from the gear and the atmospheric pressure due to the decrease of fluid inside the cylinder. As a result, the pistons provide bidirectional translation and the gear provides bidirectional rotation.
 
@@ -104,22 +102,22 @@ Robot navigation of catheter using MR-based tracking unit: A tracking unit consi
 
 Human-robot control interface: We have developed a kinematic-model-free control framework capable of online estimating the motion mapping from the robot actuation to the tip displacement. This update is achieved by the means of a stochastic method that solely depends on previous measurements, namely the tracked position of the catheter tip. Subject test has shown significant improvement with this presented enhanced hand-eye coordination.
 
-** Results
+**** Results
 
-*** MRI-compatibility: 
+***** MRI-compatibility: 
 - Negligible EM interference was verified by placing the operating robot closely to a commercial MRI phantom cylinder (#452213095955, CadMed+, USA), which was located at the isocenter of the scanner.
 
-*** Ziyan's original
+***** Ziyan's original
 MRI-compatibility: Experimental validation with robot running under MRI have been conducted. The robot was placed closely to a commercial MRI phantom cylinder (#452213095955, CadMed+, USA), which was located at the isocenter of the scanner.
 
 Subject test: Subject tests (10, age ranging from 20-35) were carried out for evaluation, where the pulmonary vein isolation ablation tasks were simulated using the robotic experimental setup. Each subject performed the same task under two different conditions: 1) Only the fly-through view (Fig. 1a) was provided without the proposed control approach. 2) Fly-through view and the virtual camera view (Fig. 1b) were provided, where the proposed visual-motor alignment was employed. Each had to perform RF ablation on pre-defined lesions within 5 minutes. The RF ablation at the catheter tip was activated by a foot pedal.
 
-*** Subject test:
+***** Subject test:
 - Subject (10 people(surgeons), age ranging from 20-35) tests of simulated RF ablation tasks using the presented robotic system were carried. 
 - It was observed that the visual-motor alignment control interface improved the accuracy (detailed data needed) of the task.
-** Discussion
+**** Discussion
 
-*** revised
+***** revised
 To the best of our knowledge, this is the first robotic systems for image-guided robot-assisted catheterization that integrates intra-operative MRI, real-time visual and position feedback and visual-motor alignment.
 It i) enhances the catheter manipulation accuracy to desired surgical region, thus decreasing the chances of recurrence (e.g. currently 30% in atrial fibrillation and 50% in ventricular tachycardia after electrophysiology procedure), 
 compensating the cost of using MRI and reducing the overall expenditure; 
@@ -127,13 +125,13 @@ ii) improves the safety of catheter navigation, thereby decreasing the rates of 
 iii) eases catheter manipulation, thus facilitating the shorter learning curve for surgeons and better treatment for more complex cases. 
 For the cardiac EP procedure, it is anticipated that our invention will significantly reduce the chance of post-recurrence of arrhythmia, which cannot be achieved by the current state-of-the-art robot EP catheter system. 
 
-*** Ziyan's original
+***** Ziyan's original
 The effective maneuvering of a long and flexible catheter (about 1.5m) to the desired target points under highly dynamic environment still remains a great challenge. While the current 3D roadmap used for catheter manipulation guidance is static and computed from MRI. This is the first system that provides a means of integrating intra-operative MR imaging and tracking to improve the performance of tele-operated robotic catheterization. The contributions of this system are considered to be: precise MR-safe actuators incorporated in the robotic catheter manipulator; a real-time tracking system with MR-based tracking coils embedded at the tip of catheter, updating the position and shape of catheter by magnetic resonance imaging (MRI); a human-robot control interface with frequently-updated 3D roadmap, offering the intuitive instrument navigation.
 
 
 
 
-*** context in patent application
+***** context in patent application
 Through the use of our presented catheter robot featured with MR-based position feedback units integrated with the catheter, we could
 - provide a precise and real-time visual feedback to the operator during the catheter navigation under the MRI. 
 - Sharing the same MR-tracking coordinates with the MR images can guarantee correct alignment of the virtual catheter configuration relative to the cardiac imaging models, thereby benefiting to various kinds of cardiovascular catheter intervetion. 
@@ -154,13 +152,13 @@ iii) enhancing the catheter control, thus facilitating the shorter learning curv
 This system is the first catheter robot to be integrated with MRI-compatible actuation, MR-tracking system, and the 3D surgical roadmap registered with intra-operative MR images. The successfully developed components of this system could be further implemented in other robot-assisted interventions, particularly those using MRI navigation on rapidly physiological-changed tissues. Our study may serve as a benchmark for the design and integration of MR-conditional robotic devices
 
 
-** References
+**** References
 - S.Nazarian, A. Kolandaivelu, M. M. Zviman, G. R. Meininger, R. Kato, R. C. Susil, A. Roguin, T. L. Dickfeld, H. Ashikaga, H. Calkins, R. D. Berger, D. A. Bluemke, A. C. Lardo, and H. R. Halperin, "Feasibility of real-time magnetic resonance imaging for catheter guidance in electrophysiology studies," Circulation, vol. 118, pp. 223--229, 2008
 - E. J. Schmidt, R. P. Mallozzi, A. Thiagalingam, G. Holmvang, A. d'Avila, R. Guhde, R. Darrow, G. S. Slavin, M. M. Fung, J. Dando, L. Foley, C. L. Dumoulin, and V. Y. Reddy, "Electroanatomic Mapping and Radiofrequency Ablation of Porcine Left Atria and Atrioventricular Nodes Using Magnetic Resonance Catheter Tracking," Circulation-Arrhythmia and Electrophysiology, vol. 2, pp. 695-+, Dec 2009
 - D. C. Peters, J. Hsing, K. V. Kissinger, B. Goddu, R. Nezafat, J. E. Taclas, M. E. Josephson, J. V. Wylie, and W. J. Manning, "T2-Weighted Imaging of the Left Atrium Acutely After Pulmonary Vein Isolation Demonstrates Wall Thickening and Edema," ISMRM Proceedings, 2009.
 - M. Shurrab, R. Schilling, E. Gang, E. M. Khan, and E. Crystal, "Robotics in invasive cardiac electrophysiology," Expert Rev Med Devices, vol. 11, pp. 375-81, Jul 2014.
 
-** Figure
+**** Figure
 
 
 * Dynamic modeling
@@ -676,6 +674,23 @@ Specification
   - schematic diagram
 
 *** Intra-operative image processing
+
+Real-time MRI for image guided interventions 
+Real-time MRI (rt-MRI) opens up new possibilities in the realm of image guided intervention. By sacrificing spatial resolution for temporal resolution, rt-MRI enable fast image acquisition (~100ms) with low latency [XXX]. Thus, detailed tissue morphology change can be presented to the surgeons during the surgery. Apart from the definite fact that MRI produces clear images of soft tissue, rt-MRI enables surgeons to precisely monitor the surgical process by revealing the location of scars and edema in the specific area of interest. Pre-operative data, such as planned trajectory, segmentation margins and surgical plans, can also be presented to the surgeons conjointly with the rt-MRI images for the surgeon’s easy reference. However, misalignments between the intra-operative (intra-op) images and the pre-operative (pre-op) is often observed due to motion or external disturbance. The misalignment between the intra-op and pre-op images will induce great uncertainty to surgeons.
+
+Motivation for having fast image registration
+To achieve MRI-guided robotic surgeries, the system must be able to address these misalignments in an automatic manner. Non-rigid image registration can apply to re-align the images by computing the continuous mapping between the pre- and intra-op images. Such mapping can provide enhanced interventional guidance by re-aligning the pre-operative data with the exact anatomy obtained by intra-operative image. There are two approaches to register images in non-rigid manners: feature-based registration and intensity-based registration. The former registration scheme relies on automatically-detected landmarks in the image to compute the correspondence; whilst the latter scheme computes the pixel-wise corresponds between images. 
+
+Registering the rt-MRI image to the pre-op image is a challenging task – the robustness and accuracy of feature-based registration schemes are severely impaired by the increased noise and artifacts in rt-MRI images; yet intensity-based image registration schemes are well-known to be computationally intensive due to numerous pixel-wise operations and 3D convolution involved in the process. Typical computation time for Diffeomorphic Demons [XXX] will require >25 minutes to compute register a 3D image using state-of-the-art CPU running in single thread. 
+
+Enabling technology for fast image processing
+Given that image registration have to be done in near real-time, application accelerators, such as graphical processing units (GPUs) or field-programmable gate arrays (FPGAs), have to be used to accelerate the registration process. Application accelerators employ spatial and temporal parallelism to accelerate the computation. Both of them are scalable accelerators that exploit spatial parallelism to improve the performance. At such, the 3D MR image will be tessellated into smaller segments before loading into the device memory for parallel computation. 
+Among the two application accelerators mentioned, GPUs are devices that well-know of having a multi-threaded architecture numerous of processing unit, capable of processing multiple blocks of data at the same time. Nonetheless, the memory bandwidth of GPUs often limited cause a bottleneck on the computation. 
+
+In contrary, FPGAs can resolve the memory bottleneck by exploiting temporal parallelism. Memory transfer between processors can be minimized with its customizable architecture that allows optimization for pipeline dataflow. The computation performance of FPGA can also be further tailored by the customizable data format, which enables trade-offs between accuracy and performance. 
+
+
+
 - intra-operative image registration
   - Image registration is the process of transforming different sets of data into one coordinate system. (from wiki)
   - data from multiple images, different sensors, times, depths, or viewpoints. (from wiki)
@@ -752,6 +767,80 @@ Algorithm 1: General Diffeomorphic Demons Framework
 
 *** MRI-compatible actuation
 
+Robots have to be designed to fulfill the MRI-compatibility requirements for i) MR-safety; ii) preservation of image quality; iii) operation without being affected by the electric and magnetic fields of MRI scanner [2]. Therefore, ferromagnetic materials that induce image artifacts should be avoided; Conductive materials may induce eddy currents that disrupt magnetic field homogeneity. 
+Existing actuation mechanism of robots that work near the isocenter of the MRI system can be classified to 1) electric motor; 2) pneumatic motor and 3) hydraulic motors.
+
+- Existing actuation mechanism of robots that work near the isocenter of the MRI system can be classified to 1) electric motor, including ultrasonic and piezoelectric motors; 2) Electromagnetic (EM) -powered motor; and 3) fluid motor, including pneumatic and hydraulic motors.
+
+
+- The second key component of this robot is the MRI-compatible actuation unit.
+  - MRI-compatibility brings out the requirements on: i) MR-safety; ii) preservation of image quality; iii) operation without being affected by the electric and magnetic fields of MRI scanner [2]. 
+  - Regarding these criteria, ferromagnetic materials should be avoided in MRI-compatible actuators due to the image artifacts and distortion induced. The use of non-ferromagnetic metals, e.g. aluminum, titanium, plastic and composite materials, is permissible. It is worth noting that conductive materials placed closely to the isocenter will potentially induce eddy currents and disrupt the field homogeneity. As a result of the limited choices in materials and power supply, traditional actuators (e.g. direct current electric motor) should be precluded in the vicinity of isocenter. 
+  - Currently, there are three types of actuators adopted in MRI-guided robot, 1) electric motor, including ultrasonic and piezoelectric motors; 2) Electromagnetic (EM) -powered motor; and 3) fluid motor, including pneumatic and hydraulic motors.
+
+
+Ultrasonic motors and piezoelectric motors are the most common electric motor in MRI-compatible actuation.
+Chinzei et al. designed an MR-compatible surgical assist robot operating under open MRI, which is driven by ultrasonic motors [4].
+(1 sentence of working principle or other kinds of short description of ultrasonic motor please)
+Piezoelectric motor features with high power-efficiency, compactness and high-fidelity dynamic accuracy. 
+Su et al. [6] proposed an advanced design on piezoelectric motor by using direct digital synthesizers in order to attenuate EMI, while the SNR reduction could be eliminated within 15%. 
+Nevertheless, the presence of electric current supplied from the external electrical source inevitably infringes the new standard of MR-safety [stoianovici2014mrisafe]. Complex EM-shielded enclosure is required to to attenuate EM interference, thus degrading the motor compactness [hao2012amriguided,bannan2015development]. These drawbacks have naturally shifted the research focuses towards intrinsically MR-safe actuators driven by other energy sources, e.g. pressured fluid flow [8]. 
+
+
+- Piezoelectric
+  - Piezoelectric motor is one of the most common actuation methods in MRI-guided robot.
+  - Chinzei et al. designed an MR-compatible surgical assist robot operating under open MRI, which is driven by ultrasonic motors [4].
+  - Piezoelectric motor features with high power-efficiency, compactness and high-fidelity dynamic accuracy.
+  - Piezoelectric crystal is MR-conditional, but its driving electric current will unavoidably induce EM interferences (EMI) and yield noise in the electronic signals, leading to severe loss of signal to noise ratio (SNR) in MR images.
+  - To ensure the safe operation of such motors inside MRI room, high requirements have to be fulfilled on proper location and complex EM-shielding. 
+  - Su et al. [6] proposed an advanced design on piezoelectric motor by using direct digital synthesizers in order to attenuate EMI, while the SNR reduction could be eliminated within 15%. 
+  - using direct digital synthesizers [shang2015piezoelectrically,hao2012amriguided] in order to attenuate EM interference that will cause the image artifact (piezoelectric)
+  - Even though the signal-to-noise ratio (SNR) is promising with <15% reduction, complex EM-shielded enclosure is required to surround on all sides of the motor drivers, thus degrading the motor compactness [hao2012amriguided,bannan2015development].
+  - The presence of electric current supplied from the external electrical source inevitably infringes the new standard of MR-safety [stoianovici2014mrisafe].
+These drawbacks have naturally shifted the research focuses towards intrinsically MR-safe actuators driven by other energy sources, e.g. pressured fluid flow [8]. 
+
+
+- magnetic-driven (move to future work?)
+    - [vartholomeos2011mripowered]
+    - Dupont et al. [7] designed an EM-motor that could be actuated by static magnetic field of the MRI scanner. However, the steady performance of this motor will still get influenced by the magnetic field of scanner. 
+
+
+Pneumatic motors are capable of operating in an MR environment, even inside the scanner, without adversely affecting MR image quality.
+MRI-compatible pneumatically driven robots often design as master-slave system: The master unit can be electric components such as pumps and cylinder and isolate from the MRI system, guaranteeing negligible MR image artifacts; The slave unit, i.e. the robot, works near MRI where the actuation is transmitted pnuematically via long pipelines through the wave guide from the master unit, thus allowing compact design.
+Stoianovici et al [9] developed the first MR-safe pneumatic stepper motor. (please also praise something However, its structure is complex and cost is relatively high due to the complicated fabrication and difficult sterilization.)
+In our previous work [13] (Fig. X), a pneumatic motor that features with its compactness and simplicity has been developed. It consists of only seven, 3D-printed components that are solely made of MR-safe homogeneous materials.
+In the fluid transmission, pneumatic motors get several advantages over the hydraulic ones. For example, the working fluid is readily available and innocuous so that leakage problem will not be a concern. And thanks to the low-viscosity and low-weight of the air, extra friction and mass to the robot could be ignorable. However, pneumatic motors are typically bulky and with low energy-efficiency. The vibration and noise due to the air dynamics during the transmission is challenging to eliminate as well.
+
+
+pros and cons 
+
+
+
+- pneumatic
+  - Compact actuation units allowing the robotic manipulation taking place inside the MRI bore is required for providing highly precise and reliable targeting by the intra-op imaging. 
+  - To this end, various pneumatic/hydraulic actuators [9,10,11,12] have been designed, which are capable of operating in an MR environment, even inside the scanner, without adversely affecting MR image quality.
+  - Stoianovici et al [9] developed the first MR-safe pneumatic stepper motor. However, its structure is complex and cost is relatively high due to the complicated fabrication and difficult sterilization.
+  - We have developed an MR-safe pneumatic motor that features with its compactness and simplicity. It consists of only seven components, which are all fabricated in homogeneous material by 3D printing. This motor is driven by the air supply that is commonly available in hospital rooms. And the related electronics and valves could be all placed in control room without affecting the imaging quality, controlling and transmitting the mechanical power by three air tubes going through the wave guide. Self-locking is another noticeable characteristics of this motor, allowing the high-steady positioning in surgical robot. The first prototype has been reported in [13] and the corresponding performance test results are as shown in Fig. X. To implement this motor into the robot, a gearbox will be further incorporated to meet the different actuation requirements. 
+  - In the fluid transmission, pneumatic motors get several advantages over the hydraulic ones. For example, the working fluid is readily available and innocuous so that leakage problem will not be a concern. And thanks to the low-viscosity and low-weight of the air, extra friction and mass to the robot could be ignorable. However, pneumatic motors are typically bulky and with low energy-efficiency. The vibration and noise due to the air dynamics during the transmission is challenging to eliminate as well.
+
+
+
+Hydraulic
+efficient and steady transmission, nearly incompressible that improve actuation delay through long pipe line.
+hydrauclic motor 
+
+
+
+- Hydraulic
+  - Such that in some applications, hydraulic motors will be an alternative to offer efficient and steady transmission. 
+  - To meet these challenges, a novel hydraulic motor has been invented [14] and is promising to be implemented in MRI-guided robots. This is a passive fluid transmission based on a pair of rolling-diaphragm cylinders, which are placed symmetrically and connected by a hydraulic tube. Different from the traditional sealing, e.g. tight-sealing by O-ring, these cylinders are sealed by rolling diaphragms (as shown in Fig. X). It avoids the sliding friction of traditional sealing, hence the rolling-diaphragm actuator is capable of providing low-friction, smooth transmission over the entire stroke. Fluid pressure could be preloaded for bidirectional operation and quicker response. 
+  - The disadvantages of hydraulic motor are: i) fluid leakage is always a problem in hydraulic transmission, adding constraints in system setup and its mobility. ii) the strength of rolling diaphragm could limit the maximum transmission force. iii) fluid dynamics will still have influences on the transmission response.
+
+
+
+
+
+
 - In addition to imaging issues, enhanced stability and adequate flexibility of robot-assisted surgical platform also poses increasing demand on intra-op MRI navigation.
 - Considering the operation on delicate tissue, the robot system must has high accuracy and can be finely controlled, in other words, backlash should be minimized and it should be able to remain locked in its original position if any power failure or emergency stop happens.
 - The workspace is tightly constrained inside the scanner bore. These all bring up the strict demands on compacted mechanical design of the robot. 
@@ -773,10 +862,7 @@ Algorithm 1: General Diffeomorphic Demons Framework
   - 
 
 - recent advanced MR-compatible actuation methods 
-  - ultrasound, piezoelectric
-    - using direct digital synthesizers [shang2015piezoelectrically,hao2012amriguided] in order to attenuate EM interference that will cause the image artifact (piezoelectric)
-    - Even though the signal-to-noise ratio (SNR) is promising with <15% reduction, complex EM-shielded enclosure is required to surround on all sides of the motor drivers, thus degrading the motor compactness [hao2012amriguided,bannan2015development].
-    - The presence of electric current supplied from the external electrical source inevitably infringes the new standard of MR-safety [stoianovici2014mrisafe].
+  
     - 
   - magnetic-driven (move to future work?)
     - [vartholomeos2011mripowered]
@@ -791,7 +877,12 @@ Algorithm 1: General Diffeomorphic Demons Framework
   - pros and cons
 
 
-*** Positional tracking under MRI 
+*** Tracking under MRI 
+
+Having positional feedback of interventional devices is essential in MRI-guided robot-assisted MIS; 
+It not only allows implementation of feedback control method that attains more accurate tool manipulation, 
+but also enables development of more intuitive control interface and closes the surgeon-robot loop.
+This section highlights the hardware technologies of that enable intra-operative tracking under MRI. 
 
 - it is important to feedback the surgical tools' 3D positions that are defined in the same coordinate frame as the MR image's coordinate frame
   - the sensory feedback allows implementation of feedback control method
@@ -809,9 +900,8 @@ Algorithm 1: General Diffeomorphic Demons Framework
 - In MR-guided intravascular interventions (e.g., embolization or stent placement), the interventional radiologist benefits from automatic and continuous updates of the imaging slice position, since during the procedure the catheter tip is always visible. Unfortunately, tip tracking requires information only from several selected points on the catheter.
 
 
-In active tracking, small coils are attached to an instrument, for example, at the tip of a catheter. Via coaxial cables [dumoulin1993realtime,duerk2002abriefreview], the coils are connected to a receiver electronic system to measure MR gradient field. The localization of the coils is achieved by a projection technique, which can be achieved within a few milliseconds [bock2006afaraday], thus enabling high-frame rate of tracking. Precise measurement of the 3D ( 0.6 X 0.6 X 0.6 mm3 in [wang2015realtime]) can be achieved utilizing coils that have high sensitivity to local field inhomogeneity. 
-One of the main issues in active tracking is the heating issues. Resonant radiofrequency (RF) waves are reflected in the coils; Electrical energy is stored within the conducting structure and may cause potential safety hazards [ladd1998active,konings2000heating,nitz2001on]. It has been reported that nitinol-made guidedwires was up to 74 degree celcius [konings2000heating]. 
-The electronic component may also induce electromagnetic (EM) interference that causes artifacts in the MR images.
+In active tracking, small coils are attached to an interventional device, for example, at the tip of a catheter. Tracking coils are connected to a receiver electronic system via coaxial cables to measure MR gradient field [dumoulin1993realtime,duerk2002abriefreview]. Localization of the coils can be achieved within a few milliseconds [bock2006afaraday], thus enabling high-frame rate of tracking. Precise measurement of position can be achieved utilizing coils that have high sensitivity to local field inhomogeneity; Recently, 3D localization of resolution 0.6 X 0.6 X 0.6 mm3 can be attained with 40 Hz tracking frequency [wang2015realtime].
+One of the main issues in active tracking is the heating issues, due to the standing wave induced by the reflection of resonant radiofrequency (RF) waves; The standing wave also causes storage of electrical energy within the conducting structure that may cause potential safety hazards [ladd1998active,konings2000heating,nitz2001on]. It has been reported that nitinol-made guidewires was up to 74 degree Celsius [konings2000heating]. The electronic component may also induce electromagnetic (EM) interference that causes artifacts in the MR images.
 However, active tracking also has several advantages compared with the passive traacking and semi-active tracking. 
 Need several advantages of active tracking
 
@@ -862,9 +952,10 @@ Need several advantages of active tracking
 
 
 In contrast to active tracking, passive tracking does not require electronic components such as cables and receivers circuits.
-Utilizing either contrast agents (e.g. 4-6 vol % Gd-DTPA) as T1-shortening agents that enhances MR signal [unal1998arapid,unal2006mrvisible] or paramagnetic material (e.g. dysprosium oxide) that causes field inhomogeneities to the surrounding matter [schenck1996therole], and properly designed MR sequence that are programmable in the MR scan software, visualization of the contrast agents or the paramagnetic material in the MRI can be achieved. 
-example and some data 
-pros and cons
+Utilizing either contrast agents (e.g. 4-6 vol % Gd-DTPA) as T1-shortening agents that enhances MR signal [unal1998arapid,unal2006mrvisible] or paramagnetic material (e.g. dysprosium oxide) that causes MR field inhomogeneities to the surrounding matter [schenck1996therole], and properly designed triggering signal called MR sequence that are programmable in the MR scan software, visualization of the contrast agents or the paramagnetic material in the MRI can be achieved. Position of the instrument is subsequently obtained from the resulting MR image. 
+In [patil2009automatic], the MR sequence PRIDE (projection-reconstruction imaging with echo-dephasing) has been proposed for passive tracking positioning, in which ≤ 4.5mm positional error of paramagnetic marker materials wrapped around a MR-compatible guidewire can be obtained within 20 ms (50 Hz). 
+Passive tracking does not have the heating risk and is applicable in different MR field strengths.
+However, it requires more complicated sequence and more computation time to process susceptibility artifact in the high-resolution images for fast and acurate localization; The instrument coordinates are not registered with passive tracking methods [fabio2015magnetic], manually updating the imaging plance is usally necessary [frericks2009magnetic]. It may also encounter difficulties to track multiple instruments in close proximity to each other, such as multiple catheters in endovasular catheterization procedure [kapur20123t, fabio2015magnetic].
 
 
 
@@ -912,6 +1003,16 @@ pros and cons
     - In the work of Bakker et al. [bakker1996visualization,bakker1997mrguided], dysprosium rings were placed on conventional catheters to create an area of signal loss. The ring design allowed the markers to be visualized regardless of the catheter orientation.
     - Alternatively, Gd-DTPA solutions (4 – 6%) can be used to obtain positive enhancement of the catheter [unal1998arapid,omary2000realtime]
     - In a similar study a dephasing gradient was added along the slice select direction to further increase the catheter/tissue contrast [korosec1996time].
+
+
+
+
+Semi-active tracking utilizes small coils in isolated circuits that resonate to particular MR frequencies and has no direct capacitive electrical connections to the MRI system [duerk2002abriefreview]. Instead, wireless inductive coupling between the coils and the MRI system is used. Using properly programmed MR sequence that detunes/triggers the isolated resonant circuit, visualization of the semi-active device in the MR image can be achieved. In [weiss2004invivo], an optical fiber was used as the wireless inductive coupling along a catheter, where the laser signal source triggered by a MR sequence was transmitted to illuminate a photodiode, which was placed parallel to a coil in a resonant circuit at the catheter tip; Real-time imaging (30fps) of a in vivo test using a radial steady-state free-precession sequence was demonstrated.
+Benefiting from the wireless inductive coupling, semi-active devices avoid the potential development of standing waves along electrical connections found in active tracking. Nevertheless, the mechanical assembly and miniaturization of semi-active is still a challenging task [galassi2015fast]. 
+
+
+
+
 
 - semi-active tracking coils
   - structure
@@ -1124,10 +1225,10 @@ pros and cons
 - Rahmer J. Catheter visualization using rubber bands and ultrashort TE imaging. Proc Intl Soc Magn Reson Med 2008;16:1207.
 - Bock M, Volz S, Zuhlsdorff S, Umathum R, Fink C, Hallscheidt P, Seminmler W. MR-guided intravascular procedures: real-time param- eter control and automated slice positioning with active tracking coils. J Magn Reson Imaging 2004;19:580–589.
 - Wei Wang, Charles L. Dumoulin, Akila N. Viswanathan, Zion T. H. Tse, Alireza Mehrtash, Wolfgang Loew, Isaiah Norton, Junichi Tokuda, Ravi T. Seethamraju, Tina Kapur, Antonio L. Damato, Robert A. Cormack, and Ehud J. Schmidt, "Real-time active MR-tracking of metallic stylets in MR-guided radiation therapy," Magn Reson Med. 2015 May ; 73(5): 1803–1811.
-
-
-
-
+- S. Patil, O. Bieri, P. Jhooti, and K. Scheffle, "Automatic Slice Positioning (ASP) for Passive Real-Time Tracking of Interventional Devices Using Projection- Reconstruction Imaging with Echo-Dephasing (PRIDE)," Magnetic Resonance in Medicine 62:935–942 (2009)
+- Fabio Settecase, Alastair J. Martin, Prasheel Lillaney, Aaron Losey, Steven W. Hetts, "Magnetic Resonance– Guided Passive Catheter Tracking for Endovascular Therapy," Magn Reson Imaging Clin N Am 23 (2015) 591–605
+- Frericks BB, Elgort DR, Hillenbrand C, et al. Magnetic resonance imaging-guided renal artery stent placement in a swine model: comparison of two tracking techniques. Acta Radiologica 2009;50(1): 21–7.
+- F Galassi, D Brujic, M Rea, N Lambert, N Desouza, M Ristic, "Fast and accurate localization of multiple RF markers for tracking in MRI-guided interventions," Magnetic Resonance Materials in Physics, Biology and Medicine, vol. 28, pp. 33–48, 2015
 
 
 
