@@ -153,7 +153,7 @@
   
 * Frontier 
   
-** DONE review paper 
+** DONE H T Sen, A Cheng, K Ding, E Boctor, J Wong, I Iordachita, and P Kazanzides, Cooperative Control with Ultrasound Guidance for Radiation Therapy
    CLOSED: [2016-04-28 Thu 16:35] SCHEDULED: <2016-04-28 Thu 11:00-16:00> DEADLINE: <2016-04-28 Thu>
    
    
@@ -392,7 +392,7 @@ Figure 6:
 *** Finished review - accepted <2016-07-05 Tue 21:00>
 * IROS
 
-** DONE review IROS 2016
+** DONE M Grammatikopoulou, K Leibrandt, and G. Z. Yang, Motor Channelling for Safe and Effective Dynamic Constraints in Minimally Invasive Surgery
    CLOSED: [2016-05-09 Mon 13:44] SCHEDULED: <2016-05-07 Sat> DEADLINE: <2016-05-09 Mon>
    - State "DONE"       from "INPROGRESS" [2016-05-09 Mon 13:44]
       
@@ -444,8 +444,9 @@ The novelty is weak because it is apparently an integration of existing algorith
 
 * IEEE Sensors Journal
 
-** TODO review paper
-   DEADLINE: <2016-07-22 Fri>
+** DONE Y Noh, H Liu, S Sareh, D S Chathuranga, H Wurdemann, K Rhode, K Althoefer, Image-based Optical Miniaturized Three-Axis Force Sensor for Cardiac Catheterization
+   CLOSED: [2016-08-03 Wed 13:14] DEADLINE: <2016-07-22 Fri>
+   - State "DONE"       from "TODO"       [2016-08-03 Wed 13:14]
 *** General info
     :PROPERTIES:
     :Directory: file:~/Work/Review//IEEE_Sensor_Journal
@@ -465,16 +466,11 @@ A. Suitability of Topic
 
  Yes
 
- Perhaps
 
- No
 2. Is the topic important to colleagues working in the field?
 
  Yes
 
- Moderately
-
- No
 
  
 B. Content
@@ -482,34 +478,20 @@ B. Content
 
  Yes
 
- No (explain)
-
   
 2. Is the coverage of the topic sufficiently comprehensive and balanced?
 
  Yes
 
- Important information is missing or superficially treated.
-
- Treatment somewhat unbalanced, but not seriously so.
-
- Some topics are significantly overstressed.
 3. How would you describe the technical depth of the paper?
-
- Superficial
-
- Suitable for the non-specialist
 
  Appropriate for the generally knowledgeable individual Working in the Field or a Related Field
 
- Suitable only for an expert
 4. How would you rate the technical novelty of the paper?
 
- Novel
 
  Somewhat novel
 
- Not novel
 
  
 C. Presentation
@@ -517,100 +499,56 @@ C. Presentation
 
  Satisfactory
 
- Could be improved
 
- Poor
 2. Are the title and abstract satisfactory?
 
  Yes
-
- No (explain)
 
   
 3. Is the length of the paper appropriate? If not, recommend how the length of the paper should be amended, including a possible target length for the final manuscript.
 
  Yes
 
- No (explain)
-
   
 4. Are symbols, terms, and concepts adequately defined?
 
  Yes
 
- Not always
-
- No
 5. How do you rate the English usage?
 
  Satisfactory
 
- Needs improvement
-
- Poor
 6. Rate the Bibliography?
 
  Satisfactory
-
- Unsatisfactory
 
  
 D. Overall rating
 1. How would you rate the technical contents of the paper? 	
 
- excellent
-	
 
  good
 	
 
- fair
-	
-
- poor
 2. How would you rate the novelty of the paper? 	
 
- highly novel
-	
 
  sufficiently novel
 	
 
- slightly novel
-	
-
- not novel
 3. How would you rate the "literary" presentation of the paper? 	
 
  totally accessible
 	
 
- mostly accessible
-	
-
- partially accessible
-	
-
- inaccessible
 4. How would you rate the appropriateness of this paper for publication in this IEEE Transactions? 	
 
- excellent match
-	
 
  good match
 	
 
- weak match
-	
-
- poor match
-
  
 Would you recommend this paper for a Best Paper Award?
-
-	
-
-Yes
 
 	
 
@@ -624,34 +562,28 @@ Recommendation
 Publish Unaltered
 	
 
-Publish in Minor, Required Changes (as noted in the Comments section. This rating may not be assigned for Sensors Letters.)
-	
-
-Review Again After Resubmission (Paper is not acceptable in its current form, but has merit. A major rewrite is required. Author should be encouraged to resubmit a rewritten version after the changes suggested in the Comments section have been completed.)
-	
-
-Reject (Paper is not acceptable for the Sensors Journal. Author should be encouraged to submit to another journal.)
-	
-
-Reject (Paper is seriously flawed; do not encourage resubmission.)
- 
-
 Would you be willing to review a revision of this manuscript?
 	
 
 Yes
 	
 
-No
- 
-
 Comments
 
 Confidential Comments to the Associate Editor
 
+I recommend this paper to be published in the IEEE Sensors Journal. 
+This paper presents a force sensor based on fiber-optic technology, specifically for the application to cardiac electrophysiology treatment.
+This paper is very well-written, where the objective, methods and results are clearly presented with high-quality figures. The novelty is on the miniaturization of the design to attain sensitive force measurement using fiber-optic technology, which is a promising technology for the development of MR-compatible sensory devices. 
+
 Comments to the Author
 
 Please include all comments to be sent to the author in this section. If comments are in a file, please type "see attached file."
+
+
+This paper presents a force sensor based on fiber-optic technology, specifically for the application to cardiac electrophysiology treatment. The presented sensor measures forces in three orthogonal axes. There is a mirror inside the sensor to reflect light from an optical fiber to 3 other optical fibers. A digital camera is installed at the other end of the fibers. When force is applied to the deformable structure of the sensor, the light intensity received at the camera changes. The image is processed in real time to reduce noise using a Kalman filter. A calibration method is proposed for the force estimation, where the relationship between the 3-axis forces and the light intensity is approximated by a linear equation with so called the decoupling stiffness matrix. The result is promising, although the estimation error is still not very satisfactory. 
+
+This paper is very well-written, where the objective, methods and results are clearly presented with high-quality figures. The novelty is on the miniaturization of the design to attain sensitive force measurement using fiber-optic technology, which is a promising technology for the development of MR-compatible sensory devices. The only weak point of this paper is the large estimation error. Due to the nonlinearity of the measured data, the use of linear approximation is, of course, less suitable. To this end, adopting nonlinear regression techniques such as SVM may improve the estimation performance in a simple way. 
 
      
 *** Other reviewers' comments and authors' response
