@@ -702,9 +702,13 @@ Specification
   -          
 
 
-** Fundamental components for 
+** Enabling techniques 
 
-   Advanced techniques in multiple disciplines make MRI-guided robot-assisted intracardiac catheterization possible. This section introduces technologies that enable 1) acquistion of high quality MR images intra-operatively; 2) robots to work in close proximity to the MRI scanner for precise and effective catheterization; and 3) positional feedback of the catheter under the MR environment. These 3 parts are essential components to close the surgeon-robot loop. 
+   
+
+
+   Multidisciplinary advanced techniques make MRI-guided robot-assisted intracardiac catheterization possible. This section introduces timely technologies that enable 1) acquistion of high quality MR images intra-operatively; 2) robots to work in close proximity to the MRI scanner for precise and effective catheterization; and 3) positional feedback of the catheter under the MR environment. 
+
 
 
 *** Intra-operative image processing
@@ -795,52 +799,33 @@ Algorithm 1: General Diffeomorphic Demons Framework
 
 
 
-*** MRI-compatible actuation
+*** Actuation in MRI environment
 
-- mri-compatibility requirements
-  - MR-safety
-  - preservation of image quality
-  - operation without being affected by the electric and magnetic fields of MRI scanner
-- catheter mounted on the robot
-- robot locates near the isocenter of the MRI scanner
-- traditional actuators should be precluded in the vicinity of the isocenter
-- no ferromagnetic materials
-  - might induce image artifacts
-- caution with conductive materials
-  - eddy currents
-  - the disruption of magnetic field homogeneity
-- 3 common type of motor for MRI-compatible actuation mechanisms
-  - Piezoelectric/ultrasonic
-  - pneumatic
-  - hydraulic
+Robot's operations should have negligible effect to the MR images and should be unaffected by the electric and magnetic fields of the MR system. In robot-assisted catheterization, a catheter is mounted on a robot, which is located near the isocenter of the MRI scanner. Therefore, ferromagnetic materials that might cause image artifacts should be avoided, and conductive materials should be adopted with caution because the magnetic field homogeneity might induce eddy currents or might be disrupted. Traditional electric motors should be precluded in the vicinity of the isocenter. Three types of motors are commonly used for actuating robots that work in MRI environments: 1) Piezoelectric or ultrasonic motors, 2) pneumatic motors, and 3) hydraulic motors.
 
-
-
-
-
-MRI-compatibility requirements include MR-safety, preservation of image quality and operation without being affected by the electric and magnetic fields of MRI scanner [chinzei1999mr]. Therefore, ferromagnetic materials that might induce image artifacts should be avoided. Conductive materials should be adopted with caution, due to the eddy currents and the disruption of magnetic field homogeneity. As a result of the limited choices in materials and power supply, traditional actuators (e.g. direct current electric motor) should be precluded in the vicinity of isocenter. This section spotlights three common types of actuation mechanism for MRI-compatible robots: 1) piezoelectric/ultrasonic motors; 2) pneumatic motors and 3) hydraulic motors.
 
 **** Piezoelectric/ultrasonic motors
-Piezoelectric and ultrasonic motors are commonly used in MRI-compatible actuation. They are driven by oscillation of piezoelectric crystals. These motors feature with high power-efficiency, compactness and high-fidelity dynamic accuracy. Ultrasonic motors have been successfully applied in a MR-compatible surgical robot [chinzei2000mr]. In an advanced design adopting piezoelectric motors [su2015piezoelectrically], direct digital synthesizers were used in order to attenuate electromagnetic (EM) interference, while the signal-to-noise ratio (SNR) loss was less than 15%. Nevertheless, the presence of electric current supplied from the external electrical source inevitably infringes the new standard of MR-safety [stoianovici2014mrisafe]. Complex EM-shielding enclosure is required to attenuate EM interference, thus degrading the motor compactness [bannan2015development]. These drawbacks have naturally shifted the research focuses towards intrinsically MR-safe actuators driven by other energy sources. For instance, pneumatic and hydraulic motors.
+Piezoelectric and ultrasonic motors feature high power-efficiency, compactness and high dynamic accuracy, thus are suitable for actuating robots that work in close proximity to the MR system. They are driven by oscillations of piezoelectric crystals. Ultrasonic motors have been successfully applied in a MR-compatible surgical robot [chinzei2000mr]. In an advanced design adopting piezoelectric motors [su2015piezoelectrically], direct digital synthesizers were used in order to attenuate electromagnetic (EM) interference, while the signal-to-noise ratio (SNR) loss was less than 15%. Nevertheless, the presence of electric current supplied from the external electrical source inevitably infringes the safety standard of MR environment [stoianovici2014mrisafe]. To attenuate EM interference, complex EM-shielding enclosure is necessary, which degrades the motor compactness and increase design difficulties. These drawbacks have naturally shifted the research focuses towards intrinsically MR-safe actuators driven by other energy sources. For instance, pneumatic and hydraulic motors.
+
 	
 **** Pneumatic motors
-Pneumatic motors are capable of operating in an MR environment, even inside the scanner, without adversely affecting MR image quality. Stoianovici et al [stoianovici2007anew] developed the first MR-safe pneumatic stepper motor. It comprises 25 components and could output high-torque rotation of maximum 650 mNm with 0.83 MPa air input. However, its structure is complex and cost is relatively high due to the complicated fabrication and difficult sterilization. In our previous work [guo2016novel] (Fig. 3), a pneumatic motor that features with its compactness and simplicity has been developed. It consists of only seven, 3D-printed components that are solely made of MR-safe homogeneous materials. 
-Pneumatic motors get several advantages over the hydraulic ones. For example, the working fluid is readily available and innocuous so that leakage problem will not be a concern. And thanks to the low-viscosity and low-weight of the air, extra friction and mass to the robot could be ignorable. However, pneumatic motors are typically bulky and with low energy-efficiency. Tackling the vibrations and noise during in pneumatic transmission is still one of the challenging tasks.
+Pneumatic motors are capable of operating in an MR environment, even inside the scanner, without adversely affecting MR image quality. The first MR-safe pneumatic stepper motor was presented in [stoianovici2007anew]; It comprised 25 MR-safe components and could output high-torque rotation of maximum 650 mNm with 0.83 MPa air input pressure. However, its structure was complex and cost was relatively high due to the complicated fabrication and difficult sterilization. In our previous work [guo2016novel] (Fig. 3), a compact and yet simple pneumatic motor has been developed; It consists of only seven, 3D-printed components that are solely made of MR-safe homogeneous materials. 
+
+Pneumatic motors get several advantages over the hydraulic ones: Medical gas is readily available and innocuous so that leakage problem could be of less concern; The low-viscosity and low-weight characteristics cause introduce negligible friction and mass to the robot. However, pneumatic motors are typically bulky and are not energy-efficient. Tackling the vibrations and noise in pneumatic actuation are still challenging.
 
 
 
 
 
 
-Fig. 3   (a) Performance data of our previous pneumatic motor [guo2016novel]. The output power increases with motor speed. Eight levels of pressure are measured. Linear correlation between power and speed holds below 60 RPM. (b) Overview photo of the pneumatic motor. (c) Explosion view. Seven components are fabricated in transparent or painted in different colors for easy illustration.
+Fig. 3   (a) The pneumatic motor [guo2016novel] consists of seven components that are 3D-printed using MR-safe materials. (b) The pneumatic motor after assembly. (c) It can offer high speed and power. Linear correlation between power and speed holds below 60 RPM. 
 
 **** Hydraulic motors
-Hydraulic transmission is an alternative for MRI-compatible actuation. Master-slave design is often adopted (Fig. 4a): To ensure negligible EM interference to the MR images, the master unit, which is usually driven by electric components such as pumps and cylinders, is placed inside the control room. The slave unit works near MRI scanner, where the actuation is transmitted from the master unit via long hydraulic pipelines through the wave guide. Recently, a novel hydraulic motor has been invented [whitney2014alowfriction] and is promising to be implemented in MRI-guided robots; It adopted rolling diaphragms to avoid sliding friction that occurs between piston and O-ring in traditional sealing (Fig. 4b and Fig. 4c), thus enhancing transmission efficiency. 
-Hydraulic transmission uses nearly incompressible fluid as transmission media offers more steady transmission and quicker response, compared to the pneumatic transmission. It also allows master-slave design so that electric components, which are usually bulkier, can be placed in the control room, thus more compact slave unit can be designed. However, fluid leakage is a potential problem. Filling the pressurized fluid also increases difficulty in setting up the system.
+Hydraulic transmission uses nearly incompressible fluid as transmission media, offering more steady transmission and quicker response, compared to the pneumatic transmission. It also allows master-slave design (Fig. 4a); The master unit, which is usually driven by electric components such as pumps and cylinders, can be placed in the control room. The slave unit works near MRI scanner, where the actuation is transmitted from the master unit via long hydraulic pipelines through the wave guide. Such separation ensures negligible EM interference to the MR images, and allows the design of the slave unit be more compact. Recently, a novel hydraulic motor has been invented [whitney2014alowfriction] and is promising to be implemented in MRI-guided robots; It adopted rolling diaphragms to avoid sliding friction that occurs between piston and O-ring in traditional sealing (Fig. 4b and Fig. 4c), thus enhancing transmission efficiency. 
+However, fluid leakage is a potential problem to safety. Filling the pressurized fluid also increases difficulty of setting up the robot.
  
 
-
-Fig. 4 (a) A conceptual diagram of hydraulic transmission using master-slave design for MR-compatible robot. (b) Sealing using (b) O-rings has sliding friction inside the cylinders, whereas (c) sealing using (c) rolling-diaphragms does not.
+Fig. 4 (a) A conceptual diagram of hydraulic transmission using master-slave design for MR-compatible robot. (b) Sealing using O-rings has sliding friction inside the cylinders, whereas (c) sealing using rolling-diaphragms does not.
 
 
 
