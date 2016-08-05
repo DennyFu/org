@@ -921,7 +921,6 @@ These drawbacks have naturally shifted the research focuses towards intrinsicall
   - pros and cons
 
 
-<<<<<<< Updated upstream
 *** Hardware for tracking in MRI 
 
 Catheter tracking is a central requirement for MRI-guided robot-assisted catheterization for monitoring the progression of a catheter in MRI system. It enables determination of the catheter's position and orientation, and promptly assessment of the efficacy of a therapy such as radiofrequency (RF) ablation for the MR images. Positional feedback also allows implementation of close-loop control algorithms to enhance robot control accuracy and devising advanced intuitive control interface. The hardware technologies for catheter tracking in MRI can be classified into 1) active tracking, 2) passive tracking and 3) semi-active tracking three categories [duerk2002abriefreview], which are introduced as follows.
