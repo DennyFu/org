@@ -704,12 +704,11 @@ Specification
 
 ** Enabling techniques 
 
-   
-
-
    Multidisciplinary advanced techniques make MRI-guided robot-assisted intracardiac catheterization possible. This section introduces timely technologies that enable 1) acquistion of high quality MR images intra-operatively; 2) robots to work in close proximity to the MRI scanner for precise and effective catheterization; and 3) positional feedback of the catheter under the MR environment. 
 
 
+{The proposed system for MRI-guided cardiac catheterization involves timely research issues, aiming to: 1) provide fast intra-operative (intra-op) updates of the cardiac EP roadmap based on MR images; 2) enable precise and dexterous manipulation which is driven by MR-conditional actuators; 3) implement close-loop robot control with real-time MR-tracking system. Three key components corresponding to the above issues will be introduced as follows, which are also integrated in the system. kw}
+{Developing robotic systems for MRI-guided robot-assisted intracardiac catheterization involves multidisciplinary researches of engineering. In particular, 1) intra-operative update of high quality cardiac images based on MR images, 2) MR-compatible actuation mechanism for precise and effective maneuver of catheter and 3) accurate and real-time tracking of catheter under MRI system. This section introduces timely techniques about these fundamental components}
 
 *** Intra-operative image processing
 
@@ -922,16 +921,30 @@ These drawbacks have naturally shifted the research focuses towards intrinsicall
   - pros and cons
 
 
-*** Tracking under MRI 
-Tracking of catheter is essential in MRI-guided robot-assisted catheterization; It not only allows visualization of the catheter in MR images, but also enables positional feedback of the catheter. This section highlights 3 categories of tracking technologies under MRI. 
- 
-**** Active tracking 
-In active tracking, small coils are attached to the tip of a catheter. Tracking coils are connected to a receiver electronic system via coaxial cables to measure MR gradient field [duerk2002abriefreview]. Localization of the coils can be achieved within a few milliseconds, thus enabling high-frame rate of tracking. Precise measurement of position can be achieved utilizing coils that have high sensitivity to local field inhomogeneity [glowinski1997catheter]; Recently, 3D localization resolution 0.6 X 0.6 X 0.6 mm3 can be attained with 40 Hz tracking frequency [wang2015realtime].
-Active tracking has several advantages (Table 1).  It has higher spatial and temporal resolution 3D information than passive tracking. Compared with semi-active tracking, it could provide high resolution tracking without affecting the image quality. One of the main issues in active tracking is the heating issues due to the standing wave induced by the reflection of resonant radiofrequency (RF) waves; The standing wave also causes storage of electrical energy within the conducting structure that may cause potential safety hazards [konings2000heating]. The electronic component may also induce electromagnetic (EM) interference that causes artifacts in the MR images.
+*** Hardware for tracking in MRI 
+
+Catheter tracking is a central requirement for MRI-guided robot-assisted catheterization for monitoring the progression of a catheter in MRI system. It enables determination of the catheter's position and orientation, and promptly assessment of the efficacy of a therapy such as radiofrequency (RF) ablation for the MR images. Positional feedback also allows implementation of close-loop control algorithms to enhance robot control accuracy and devising advanced intuitive control interface. The hardware technologies for catheter tracking in MRI can be classified into 1) active tracking, 2) passive tracking and 3) semi-active tracking three categories [duerk2002abriefreview], which are introduced as follows.
+
 
 **** Passive tracking 
-In contrast to active tracking, passive tracking does not require electronic components such as cables and receiver circuits. Utilizing either contrast agents (e.g. 4-6 vol % Gd-DTPA) as T1-shortening agents that enhances MR signal or paramagnetic material (e.g. dysprosium oxide) that causes MR field inhomogeneity to the surrounding matter, and properly designed triggering signal called MR sequence that are programmable in the MR scan software, visualization of the contrast agents or the paramagnetic material in the MRI can be achieved; Position of the instrument can be subsequently obtained from the resulting MR image. In [patil2009automatic], a sequence called projection-reconstruction imaging with echo-dephasing (PRIDE) has been proposed for passive tracking positioning, in which ≤ 4.5mm positional error of paramagnetic marker materials wrapped around a MR-compatible guidewire can be obtained within 20 ms (50 Hz). 
+Passive tracking make use of directly interaction between the catheter and the MRI system or tissue for allow visualization. 
+A catheter is coated or filled with either contrast agents (e.g. T1-shortening agent 4-6 vol % Gd-DTPA) that enhances MR signal or paramagnetic material (e.g. dysprosium oxide) that causes MR field inhomogeneity to the surrounding matter. 
+Visualization is achieved using properly designed triggering signal called MR sequence that are programmable in the MR scan software.
+
+
+
+
+The local MR effects depend on the shape of the catheter, the catheter orientation to the magnetic field, and 
+
+In [patil2009automatic], a sequence called projection-reconstruction imaging with echo-dephasing (PRIDE) has been proposed for passive tracking positioning, in which ≤ 4.5mm positional error of paramagnetic marker materials wrapped around a MR-compatible guidewire can be obtained within 20 ms (50 Hz). 
 Passive tracking does not have the heating risk as in active tracking and is applicable in different MR field strengths. However, it requires more complicated sequence and more computation time to process susceptibility artifacts in the high-resolution images for fast and accurate localization; The instrument coordinates are not registered with passive tracking methods [fabio2015magnetic], manually updating the imaging plane is usually necessary [frericks2009magnetic]. It may also encounter difficulties to track multiple catheters that are in close proximity to each other.
+ 
+**** Active tracking 
+Active tracking utilizes electronic circuits that actively control/affect magnetic field inhomogeneity for visualization and localization of the catheter in MRI.
+Small tracking coils are attached to the tip of a catheter. They are connected to a receiver electronic system via coaxial cables to measure or disturb the magnetic field inhomogeneity. 
+
+Localization of the coils can be achieved within a few milliseconds, thus enabling high-frame rate of tracking. Precise measurement of position can be achieved utilizing coils that have high sensitivity to local field inhomogeneity [glowinski1997catheter]; Recently, 3D localization resolution 0.6 X 0.6 X 0.6 mm3 can be attained with 40 Hz tracking frequency [wang2015realtime].
+Active tracking has several advantages (Table 1).  It has higher spatial and temporal resolution 3D information than passive tracking. Compared with semi-active tracking, it could provide high resolution tracking without affecting the image quality. One of the main issues in active tracking is the heating issues due to the standing wave induced by the reflection of resonant radiofrequency (RF) waves; The standing wave also causes storage of electrical energy within the conducting structure that may cause potential safety hazards [konings2000heating]. The electronic component may also induce electromagnetic (EM) interference that causes artifacts in the MR images.
 
 **** Semi-active tracking
 In semi-active tracking, small coils are utilized in isolated circuits that resonate with particular MR frequencies. There are no direct capacitive electrical connections to the MRI system. Instead, wireless inductive coupling between tracking coils and the MRI system is used. Using properly programmed MR sequence that detunes/triggers the isolated resonant circuit, visualization of the semi-active device in the MR image can be achieved. An optical fiber was used in [weiss2004invivo] as the wireless inductive coupling along a catheter, where the laser signal source triggered by a MR sequence was transmitted to illuminate a photodiode, which was placed parallel to a coil in a resonant circuit at the catheter tip; Real-time imaging (30fps) of a in vivo test using a radial steady-state free-precession sequence was demonstrated.
