@@ -4,6 +4,71 @@
   :END:
 * notes
 
+** src meeting on 5 Aug
+
+*** Fai has improved the colon simulator
+- ck agree the improvement
+
+*** locomotion (brian)
+
+- two component
+  - sraightening
+  - concertina
+
+ck said these two components are both necessary
+ck surgeons common sense - can always advance if the lumen center can be found
+
+- 3 design
+  - A: single tube with twins balloon will be unfold
+    - effective straigtening
+    - lumen can be found
+    - lumen behind
+  - ck said the failure may be due to the lumen behind is not straight enough , pushing the colon forward nullify the advancement
+    - happen in inexperienced colonoscopist.
+      - 1. straighten the colon
+      - 2. see the lumen
+      - 3. insulflation
+      - 4. deflate the balloon
+    - may be due to the wrong position of the sleeve rectum
+      - may try shorten the rectum sleeve
+  - B: inner + outer tube, twins balloons in both tubes
+    - need to put at the tip of the bendable section
+    - folding between the two sets of twin balloon
+    - insulflation also need at the outer tube beforece advaning the outer tube
+      - ck agree that
+      - ck does not need hydrofilic coating on the outer tube surface
+      - experienced colonoscopist always deflate rather than inflate
+      - gental insulflation to only inflate the collapsed lumen
+
+*** update on naneye RS (chimlee)
+
+- expected delivery time: october
+- module price 600 usd
+
+
+*** comparison of 3 and 4 chamber design (nelson)
+- bending efficiency
+  - actuating 1 chamber and 2 chamber only
+  - 4 chamber > 3 chamber in the 2 chamber-actuated  case
+  - marco said it is more important to compare the dynamics result rather than the kinematics result
+
+- mapping efficiency
+  - 4 chamber > 3 chamber design
+
+
+- volume compression and pressure study
+  - 
+
+
+
+- ck said it still deserve to compare the performance of the 3 and 4 chambers design in different aspect
+  - based on FEA is better because lab-based results have more uncertainty such as fabrication and etc..
+
+*** camera comparison (johnson)
+
+- still not statisfied
+
+
 ** src meeting 27 Jul
 *** felix
 **** camera module supplier visit
