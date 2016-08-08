@@ -4,149 +4,55 @@
   :END:
 * notes
 
-** src meeting on 5 Aug
-
-*** Fai has improved the colon simulator
-- ck agree the improvement
-
-*** locomotion (brian)
-
-- two component
-  - sraightening
-  - concertina
-
-ck said these two components are both necessary
-ck surgeons common sense - can always advance if the lumen center can be found
-
-- 3 design
-  - A: single tube with twins balloon will be unfold
-    - effective straigtening
-    - lumen can be found
-    - lumen behind
-  - ck said the failure may be due to the lumen behind is not straight enough , pushing the colon forward nullify the advancement
-    - happen in inexperienced colonoscopist.
-      - 1. straighten the colon
-      - 2. see the lumen
-      - 3. insulflation
-      - 4. deflate the balloon
-    - may be due to the wrong position of the sleeve rectum
-      - may try shorten the rectum sleeve
-  - B: inner + outer tube, twins balloons in both tubes
-    - need to put at the tip of the bendable section
-    - folding between the two sets of twin balloon
-    - insulflation also need at the outer tube beforece advaning the outer tube
-      - ck agree that
-      - ck does not need hydrofilic coating on the outer tube surface
-      - experienced colonoscopist always deflate rather than inflate
-      - gental insulflation to only inflate the collapsed lumen
-
-*** update on naneye RS (chimlee)
-
-- expected delivery time: october
-- module price 600 usd
-
-
-*** comparison of 3 and 4 chamber design (nelson)
-- bending efficiency
-  - actuating 1 chamber and 2 chamber only
-  - 4 chamber > 3 chamber in the 2 chamber-actuated  case
-  - marco said it is more important to compare the dynamics result rather than the kinematics result
-
-- mapping efficiency
-  - 4 chamber > 3 chamber design
-
-
-- volume compression and pressure study
-  - 
-
-
-
-- ck said it still deserve to compare the performance of the 3 and 4 chambers design in different aspect
-  - based on FEA is better because lab-based results have more uncertainty such as fabrication and etc..
-
-*** camera comparison (johnson)
-
-- still not statisfied
-
-
-** src meeting 27 Jul
-*** felix
-**** camera module supplier visit
-***** MISUMI
-***** CHIYI
-***** JPP
-
-***** image quality
-- vga/720p might not have significant different
-- FOV > 120 deg
-- depth of field
-- 2 meter transmission for 1080p is challenging compromising size and cost
-  - shielding not considered yet
-  - 
-- with lighting
-
-***** custum made RFQ progress
-- MISUMI
-- CHIYI
-  - studying whole module
-- JPP
-- check photo
-
-*** our team 
-
-**** simulator 
-ck comments:
-- longer decending colon fixture and rectum fixture
-- only way to sucess is to deflate the colon so that the acute angle can be reduce at the semi colon
-  - israel assumption: based on the inflation of ballon but that will not exacerate the acute angle at the semi-colon
-
-**** filtering
-- ck: potential problem
-  - filer overlapped the bending section
-**** tubing
-- ck likes the without shape edge one
-**** shorten balloon 
-
-**** Routing of tubing
-
-ck on inner tube balloon design
-- separte ballon from felix idea
-  - one balloon at the front and one balloon at hte end of bendable section
-  - filter wrap the whole bendable section
-    - unknown the anchoring effect
-  - proved workable by jimmy
-- only one distal balloon 
-- maybe outer tube is not necessary for colonoscopy
-- soft robot is much more prefer than tendon driven
-- need to confirm the inner tube ballon design ASAP (by next week)
-
-
-- ck one more time emphasize if camera can see the lumen
-  - if this work everything can done
-
-
-marco
-- difficult for miniaturization
-- 3mm for biopsy channel is a must from ck 
-
-**** timeline
-- major change of bendable section designed require 3 months
-
-**** 
-
 ** Neoguide Colonoscope
 
-* meeting
+* meetings
   
 ** TODO internal progress meeting
-   SCHEDULED: <2016-07-12 Tue 14:30 +1w>
+   SCHEDULED: <2016-08-15 Mon 11:30 +1w>
+   - State "DONE"       from "TODO"       [2016-08-08 Mon 18:51]
    - State "DONE"       from "TODO"       [2016-07-05 Tue 17:56]
    - State "CANCELED"   from "TODO"       [2016-05-16 Mon 15:24] \\
      Dr. Kwok is attending ICRA
    - State "DONE"       from "TODO"           [2016-05-09 Mon 13:00]
    :PROPERTIES:
-   :LAST_REPEAT: [2016-07-05 Tue 17:56]
+   :LAST_REPEAT: [2016-08-08 Mon 18:51]
    :END:
+*** notes - 2016-08-08
+**** vaccum casting pump (martin)
+***** martin will go for order 
+**** Computer
+***** 4 computers
+****** 2 X i7-6700, gtr 1024, 24gb ram, 240gbssd 1tb hdd
+****** 2 X i7-6700, gtr 1024, 16gb ram, 240gbssd 1tb hdd
+****** 4 X windows
+***** 7 monitors 24 inches 1080
+***** 2 X work stations
+**** will give nisi braided tube
+**** will give inner tube without coating
+**** tubing, ballon development report
+***** 2 hardness tubing
+****** in manufacturing process
+****** louis paid
+***** shorter ballon
+****** - 8mm to 10mm can be shorten for a twin set
+***** try to stick the suction tube from outside (i.e. not using internal suciton tube) to test the concept
+**** lumen adapter
+***** try to (metal) 3D print an adapter
+***** ask nisi for a solution in the next meeting
+**** filter testing, dirt capacity(0/25/50/100%)-anchoring
+***** will test surrounding a filter around the twin balloon
+**** time-observation(filter/suction hole/suction channel)
+**** handle
+***** pending
+**** visual servoing
+***** show video processing
+**** website
+***** publication team to discussion with nisi every thursday
+**** 3 or 4 chamber
+***** dr. kwok will explain historical reason why choosing 3 chambers in the next meeting
+***** consult dr chou about the payload problem
+****** prepare a checklist
 *** notes - 2016-07-05
 **** ballon
 - need to confirm ballon design and quantity
@@ -186,7 +92,9 @@ marco
 - alternative solution - flexible pcb
 
 ** TODO progress meeting with nisi
-   SCHEDULED: <2016-07-27 Wed 19:30>
+   SCHEDULED: <2016-08-12 Fri 19:30 +1w>
+   - State "DONE"       from "TODO"       [2016-08-05 Fri 21:00]
+   - State "DONE"       from "TODO"       [2016-07-27 Fri 21:00]
    - State "DONE"       from "TODO"       [2016-05-30 Mon 21:00]
    - State "DONE"       from "TODO"       [2016-05-13 Fri 22:00]
    - State "DONE"       from "TODO"       [2016-05-06 Fri 21:00]
@@ -195,7 +103,140 @@ marco
    - State "DONE"       from "TODO"       [2016-04-22 Fri 22:00]
    :PROPERTIES:
    :Directory: [[file:~/Work/NISI/SRC/meeting%20records/][file:~/Work/NISI/SRC/meeting records/]]
-   :LAST_REPEAT: [2016-06-02 Thu 16:04]
+   :LAST_REPEAT: [2016-08-08 Mon 18:54]
    :END:      
 
+*** notes - 5 Aug
 
+**** Fai has improved the colon simulator
+- ck agree the improvement
+
+**** locomotion (brian)
+
+- two component
+  - sraightening
+  - concertina
+
+ck said these two components are both necessary
+ck surgeons common sense - can always advance if the lumen center can be found
+
+- 3 design
+  - A: single tube with twins balloon will be unfold
+    - effective straigtening
+    - lumen can be found
+    - lumen behind
+  - ck said the failure may be due to the lumen behind is not straight enough , pushing the colon forward nullify the advancement
+    - happen in inexperienced colonoscopist.
+      - 1. straighten the colon
+      - 2. see the lumen
+      - 3. insulflation
+      - 4. deflate the balloon
+    - may be due to the wrong position of the sleeve rectum
+      - may try shorten the rectum sleeve
+  - B: inner + outer tube, twins balloons in both tubes
+    - need to put at the tip of the bendable section
+    - folding between the two sets of twin balloon
+    - insulflation also need at the outer tube beforece advaning the outer tube
+      - ck agree that
+      - ck does not need hydrofilic coating on the outer tube surface
+      - experienced colonoscopist always deflate rather than inflate
+      - gental insulflation to only inflate the collapsed lumen
+
+**** update on naneye RS (chimlee)
+
+- expected delivery time: october
+- module price 600 usd
+
+
+**** comparison of 3 and 4 chamber design (nelson)
+- bending efficiency
+  - actuating 1 chamber and 2 chamber only
+  - 4 chamber > 3 chamber in the 2 chamber-actuated  case
+  - marco said it is more important to compare the dynamics result rather than the kinematics result
+
+- mapping efficiency
+  - 4 chamber > 3 chamber design
+
+
+- volume compression and pressure study
+  - 
+
+
+
+- ck said it still deserve to compare the performance of the 3 and 4 chambers design in different aspect
+  - based on FEA is better because lab-based results have more uncertainty such as fabrication and etc..
+
+**** camera comparison (johnson)
+
+- still not statisfied
+
+*** notes - 27 Jul
+**** felix
+***** camera module supplier visit
+****** MISUMI
+****** CHIYI
+****** JPP
+
+****** image quality
+- vga/720p might not have significant different
+- FOV > 120 deg
+- depth of field
+- 2 meter transmission for 1080p is challenging compromising size and cost
+  - shielding not considered yet
+  - 
+- with lighting
+
+****** custum made RFQ progress
+- MISUMI
+- CHIYI
+  - studying whole module
+- JPP
+- check photo
+
+**** our team 
+
+***** simulator 
+ck comments:
+- longer decending colon fixture and rectum fixture
+- only way to sucess is to deflate the colon so that the acute angle can be reduce at the semi colon
+  - israel assumption: based on the inflation of ballon but that will not exacerate the acute angle at the semi-colon
+
+***** filtering
+- ck: potential problem
+  - filer overlapped the bending section
+***** tubing
+- ck likes the without shape edge one
+***** shorten balloon 
+
+***** Routing of tubing
+
+ck on inner tube balloon design
+- separte ballon from felix idea
+  - one balloon at the front and one balloon at hte end of bendable section
+  - filter wrap the whole bendable section
+    - unknown the anchoring effect
+  - proved workable by jimmy
+- only one distal balloon 
+- maybe outer tube is not necessary for colonoscopy
+- soft robot is much more prefer than tendon driven
+- need to confirm the inner tube ballon design ASAP (by next week)
+
+
+- ck one more time emphasize if camera can see the lumen
+  - if this work everything can done
+
+
+marco
+- difficult for miniaturization
+- 3mm for biopsy channel is a must from ck 
+
+***** timeline
+- major change of bendable section designed require 3 months
+
+***** 
+
+
+** TODO publication meeting with nisi
+   SCHEDULED: <2016-08-11 Thu 10:30 +1w>
+
+** 
