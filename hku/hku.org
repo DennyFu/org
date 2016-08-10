@@ -16,6 +16,109 @@
 * MICCAI
 
 * progress meeting
+** 9 Aug 2016
+*** Brian 
+**** ICRA 2017
+- IMU-based state estimation for soft robot task-space feedback control
+  - IMU module
+    - 9 axis inertial measure unit
+      - linar acc.
+      - abs orientation
+  - originality 
+    - soft robot estimation of posture 
+  - Task space feedback control
+  - kawai
+  - chimlee
+    - imu cannot be placed too closed
+*** Martin 
+**** Performance Aware programming
+- identify the computation bottleneck
+  - bottleneck in memory access
+- proposed acceleration
+  - accelerate both process using FPGA
+  - adopting pixel shift register to minimize bandwidth requirement
+- kawai
+  - better to focus on developing a user-friendly open source code 
+    - a common series of scalable GPU
+      - modular GPU
+    - optimization memory access strategy
+    - not necessarily focus on FPGA-based
+  - TMI
+*** Ziyan
+**** Neuro robot
+- 
+**** Catheter robot
+**** motor upgrade
+- model modified
+  - 7 motors with different parameters
+- need a torque sensor
+  - kawai: can go for buy suitable sensor
+- Ziyan suggest for TMECH
+  - kawai suggest
+    - for ICRA letter
+    - ask dr zhou for FEA simulation of puematic acutation
+
+*** Tim 
+**** FEA simulation
+***** silicone model
+***** fiber model
+**** CFBG simulation
+- interesting method from strain data to specturm frequency
+**** CFBG testing
+**** literature
+- kawai ask for literature review (chapter 2)
+
+*** Chimlee
+**** semi-active coil
+- 9 layers
+- 134 and 135 MHz results
+- Successful detunig with PIN photodiode + Detuning Capacitor
+  - @ 110 MHz
+  - delta 1MHz
+- testing platform (kawai suggestion)
+  - at the tip of 4 飲管
+  - optical fibers
+    - need to find a better method for cutting optical fibers
+  - laser source
+  - how to locate the center of the sensor
+    - frequency domain data
+    - 
+  - FEA results next time
+
+*** ziyang
+
+**** RAM paper
+**** improvement of catheter robot design
+- master part enhancement using metal 
+
+**** Markforged printer cannot deliver to HK until 2017
+**** future design
+**** ask su-lin about the ablation target and then prepare data by manually control the robot 
+
+*** Jacky
+
+**** neurorobot
+- 1st version
+- planar backlash is reduced
+- Workspace is enough
+- still a bit backlash
+**** future work
+- try to use servo to drive the pair of rolling diaphragm
+- Develop of kinematic of the robot in matlab
+- Telsa turbine
+- kawai suggest consider "cycrops" mechanism
+- bring the 2nd prototype to Dr. Danny Chan
+
+*** Marco
+
+**** 3D printable hyper-elastic actuator
+- can bend > 90 angle
+- kawai 
+  - how to apply to the laser project
+  - how to encode the laser pointing
+    - what MR sequence is sensitive to temperatures (<45 degree)
+    - optical calibration 
+
 ** 21 Jul 2016
 *** Tim
 **** chirped fiber bragg grating (CFBG) test was done
@@ -68,7 +171,7 @@
 ****** long stroke 20cm
 ****** precise control
 **** Continues rotation
-***** The Telsa motor wiht encoder
+***** The Telsa motor with encoder
 
 
 *** Ziyan
