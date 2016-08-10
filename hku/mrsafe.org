@@ -1156,104 +1156,92 @@ Benefiting from the wireless inductive coupling, semi-active devices avoid the p
 
 
 
-*** Control interface
-
-- A control interface that allows surgeons intuitively manipulate the surgical tools
-  - within a 3D virtual environment constructed from intra-operative MR images
-  - a fig of our control-interface
-    - details to be discussed in the results section
-
-- one of the key units in the interface is a method to control the robotic platform that actually manipulate the surgical tools for specific purposes
-  - position control
-    - example in literature
-  - force control
-    - example in literature
-  - hybrid (position and force) control
-    - example in literature
-  - compensating physiological motion
-    - example in literature
-
-- control methods for rigid surgical tools and flexible surgical tools
-  - very briefly explain the need of flexible surgical tools
-  - rigid surgical tools
-    - model-based method
-      - example in literature
-  - flexible surgical tools
-    - model-free method 
-      - example in literature
       
 
 ** An experimental platform
 
-- overview of our system
-  - Fig. 5: a close loop architecture, consists of image processing, a MR-compatible catheter robot, active tracking coils, and control interface
-  - , Fig. 6: real robot
+We have developed a robotic platform for carrying out MRI-guided intra-cardiac EP. Figure 4 illustrates the general setting: A catheter robot that mounted with a clinically-used catheter is placed in the MRI; Having the real-time positional feedback of the catheter and 3D visualization, an EP surgeon conducts ablation following designated lesion targets using a motion input device in the control room. In the following context, the three key components of the robotic platform: 1) the catheter robot, 2) the tracking of the catheter and 3) the fast image processing scheme are presented.  
+
+
+*** A catheter robot using MR-safe actuation units 
+
+The catheter robot comprises a master part locating in the control room and a slave part locating near the isocenter of the MRI scanner (Fig. 5). The 1) rolling, 2) bending, 3) coarse and 4) fine insertion of a clinically-used catheter, which is mounted on the slave part, is provided by individual master-slave pairs adopting hydraulic transmission as illustrated in Fig. 3(a).
+
+- robot general functions and it design
+  - Fig. 5 captions
+    - master slave design
+    - catheter is mounted on the slave
+    - mention range of motion and resolution 
+    - 4 Dof
+      - rolling, bending, coarse and fine insertion of the catheter
+  - master slave design
+    - master part in the control room is driven by electric stepper motor
+    - slave locates near the isocenter of the MRI scanner
+  - 4 Dof
+    - rolling, bending, coarse and fine insertion of the catheter
+  - each dof motion is provided by an actuation unit that provides bidirectional actuation
+    - similar to Fig. 3a
+
+
+- MR-conditional
+  - fabricated (3D-printed) using non-ferromagnetic materials
+    - to avoid generation of any artifact to the MR images
+      - MR test proves the robot is MR-conditional
+	- our robot running inside a 1.5T MRI scanner (SIGNA, General Electric Company, USA).
+	- A commercial MRI phantom (J8931, J.M. Specialty Parts, USA) was placed at the isocenter of the scanner and close to the robot (the slave)
+	- T1-weighted and T2-weighted imaging were adopted to acquire the MR images of phantom
+	- images obtained in the Fig. 6/7
+	  - Figure captions
+	    - description of the scenarios
+	      1. phantom: only the phantom was placed in the MRI scanner;
+	      2. static: the robot was introduced in the MRI room and the electric power of the actuation units in the control room was off;
+	      3. powered: the electric power of the actuation units was switched on but the robot remained still;
+	      4. in motion: robot was actuated.
+
+- effective and steady actuation
+  - actuation transmit via long pipelines (~10m) through wave guides
+    - hydraulic transmission is adot
+    - pressurized pure water eliminates backlash between gears within a actuation unit
+  - rolling diaphragms in each actuation units
+    - frictionless sealing
+  - Fig. 6 shows the hydraulic transmission performance
+    - high repeatability of the bending DOF
+      - bending requires the highest torque input for clinically-used catheter
+    - small hysteresis
+
+
+- easy sterilization
+  - any part of the robot contacts with the catheter needs sterilization
+  - can be easily covered by a plastic bag
+  - catheter guide, supporter and the introducer is single-use and disposable stuff
 
 
 
+To achieve a safe and effective catheterization under MRI environment, we designed and fabricated a robot (Fig. 5) to guide a catheter and conduct the process.  
 
-{ziyang
-The robot platform for cardiac electrophysiological interventions contains chiefly three parts: MR-safe/conditional catheter robot, MR-based tracking system and 3D surgical roadmap registered with intra-operative MR images. 
-The presented catheter robot is MR-safe/conditional, consisting of master part in control room and slave part in MRI room. By adopting rolling diaphragm and hydraulic transmission, slave part can be made of non-metallic materials and driven through the control of master part, offering a MR-safe actuation. 
-Robot navigation of the catheter uses MR-based tracking units. The tracking unit consists of micro-coil or LC coil circuit which could operate as MR-based active or semi-active signal markers and enable the real-time, frequent and continuous sampling of instrument positional tracking with respect to (w.r.t.) the image coordinates.
-Precise and real-time visual feedback to the operator is provided during the catheter/instrument navigation under the MRI. Sharing the same MR-tracking coordinates same with the MR images can guarantee correct alignment of the virtual catheter/instrument configuration relative to the cardiac imaging models, thereby being of benefit to all kinds MRI-guided interventions.
-It is the first catheter robot to be integrated with the three components, attempting to achieve a more secure and effective intervention process under MRI.
-}
+The presented catheter robot consists of chiefly two parts: the master part that situates in the control room and the slave part that locates near the isocenter of the MRI scanner. The master part of the robot contains electrical motors and actuation units, providing power and control to the robot. Because of electricity and magnetic materials in this part, it can just be placed in control room. As for the slave part, components of it contains entirely no ferromagnetic materials, in order to minimize the influence to the MR image quality. To transmit movements from master part to slave part, tubes are installed between the two parts and guide hydraulic medium through wave guide, which is the channel connecting MRI room and control room. 
 
-*** Fast non-rigid image registration
-To achieve enhanced visual guidance by re-aligning EP roadmap (Fig. 1) onto the intra-op image, Diffeomorphic Demons (DD) is implemented in our robotic platform. By employing diffeomorphic transformation in the deformation model, DD can ensure invertibility, continuity and legitimacy of the deformation field [10.1016/j.neuroimage.2008.10.040]. However, the computation of DD involves a substantial number of convolution processes, which require repeated access of non-coalesced pixel values. Such access will compel a large amount of memory being continuously fetched to the device cache in runtime. 
-In light of such memory bandwidth requirement, we have implemented DD on an FPGA (Xilinx® Virtex7-XC7V2000T). Memory access congestion is avoided by streaming the data into a dataflow pipeline, while other pixel values can be accessed via data exchange channels between the processing units [10.1186/1532-429X-16-S1-W11]. Results (Fig. 5?) shows that the computation using FPGA is 25 times faster than state-of-the-art GPUs. The registration can be done within seconds, which opens up the possibility of deploying DD in the clinical scenario.
+The actuation of the robot relies upon MR-safe actuation unit, which is hydraulic driven. The actuator comprises a pair of hydraulic piston connected with long flexible tubes (5-10 meters). Instead of O-ring, which is regularly used as sealing of pistons, rolling diaphragms are adopted in the actuation units (Fig.4), providing frictionless sealing and thus enhancing efficiency of actuation. Each actuation unit incorporated in the slave part of robot is connected with another symmetric actuation unit at the master part by two hydraulic tubes. By pre-pressurizing the fluid in the tubes, rolling diaphragms as well as the corresponding shafts can be push against the gear, which ensures the actuator can provide bidirectional motions as well as transfer linear motion to rotation. In addition, backlash from the gear is eliminate in this way. While the electric motor at the master side is driving the master actuation units, the slave one replicates the motion simultaneously through the hydraulic transmission. Since the actuation units in slave part are made of plastics material and driven by fluid, it is safe to use them in an MRI system, because they are not affected by the MR fields and will not generate any EM waves or otherwise interfere with the operation of the MR imaging.
 
-Fig. 5 Computation performance of Demons registration algorithm of 3D MRI images evaluated on GPUs and FPGA using our proposed framework. 
-
-
-*** The robot working in MRI
-	We have designed and fabricated a robot for effective catheterization under MRI environment. The robot has 3 main features: 1) MR-compatible hydraulic-driven master-slave design; 2) MR-safe and efficient actuation units utilizing rolling diagrams and 3) compatibility with commercial catheters.
-. 
-
-Figure 6： LARGE FIGURE ACROSS 2 COLUMNS, MORE DESCRIPTION IN THE CAPTION IS NEEDED. Master part and slave part of the catheter robot. (Movement ranges: a. Steering: 90 degrees; b. Rotation: 720 degrees; c. Insertion: 30mm + 200mm [fine + coarse])
-To carry out catheterization under MRI environment and to avoid generation of any artifact to the MR images, the proposed robot is separated into two parts (Fig. 1): the master part that situates in the control room and the slave part that locates near the isocenter of the MRI scanner. The master part provides power to drive the slave part, where a clinically-used catheter is tightly mounted. The power from the electrical motor is transmitted via long pipelines (around 10m) filled with pressurized pure water. Both the master and the slave parts of the robot are fabricated (3D-printed) using non-ferromagnetic materials. The slave part has 4 independent actuation units, providing coarse insertion, fine insertion, rotation, and steering. 
-Rolling diaphragms are adopted in the actuator units, providing frictionless sealing and thus enhancing efficiency of actuation. Each actuator unit moves bidirectionally. By pre-pressurizing the fluid in transmission pipelines, backlash between gears within the actuation unit can be eliminated. 
-
-Figure7: Repeatability test results of DoF of bending
-Preliminary result reveals the hydraulic actuation using rolling diaphragm has a small hysteresis and repeatable motion. Fig. 7 shows that the hysteresis effect is about 1.5 degrees after a number of motion cycles (NEED TO ELABORATE MORE ABOUT THE ROBOT PERFORMANCE). 
+By adopting 4 independent actuation units with rolling diaphragm (#1-4 in Fig.4 & 4(b)), the robot can achieve motions of coarse insertion, fine insertion, rotation and bending. For insertion motion, there are two actuation units serving separately for coarse and fine insertion. While the actuation unit for coarse insertion is connected to manipulator platform by timing belt, the unit for fine insertion is by gear directly. This design enables the flexible adjustment of transmission ratio, namely the adjustment of insertion range. While by fine insertion, it still keeps the feature of high-accuracy and quick-response in this DoF. For the part of rotation in the robot, it can be separated into two parts: lower part and upper part. The lower part contains actuation unit of bending and upper part acts as a cover. In this way, clinical-using catheter can be directly anchored into the robot, allowing a more flexible surgery procedure. To adapt catheters with different shape, the upper part can be changed for covering. 
 
 We have conducted an MRI-compatibility test with our robot running inside a 1.5T MRI scanner (SIGNA, General Electric Company, USA). A commercial MRI phantom (J8931, J.M. Specialty Parts, USA) was placed at the isocenter of the scanner and close to the robot (the slave). MR images were obtained under different robot running scenarios: i) control: only the phantom was placed in the MRI scanner; ii) static: the robot was introduced in the MRI room and the electric power of the actuation units in the control room was off; iii) powered: the electric power of the actuation units was switched on but the robot remained still; iv) in motion: robot was actuated. Fig. 8 shows the schematic diagram of the experimental setup. T1-weighted and T2-weighted imaging were adopted to acquire the MR images of phantom. As shown in Fig. 9, no observable image artifact was generated. 
 
 
+Repeatability test has been conducted to investigate the performance of the robot. During the test, actuation unit at master side moves with a stroke of approximately 30 degrees and a frequency of 0.1 to 0.5 Hz. The movement is slow and steady to avoid damping effect of the transmission media. Encoders are installed at both actuator units of master and slave side to record the motion of input and output.
+Preliminary result (Fig.6) reveals the performance of actuator unit with rolling diaphragm and hydraulic transmission, which has relatively low hysteresis, steady motion and repeatable trajectory. Backlash is limited within 1.5 degrees and accuracy is constant even after a number of motion cycles.
 
-Fig. 8 Experimental setup of MRI-compatibility test.
-
-
-Control
-Static
-Powered
-In Motion
-T1
+*** real-time active tracking coil
+Multiple small RF receive coils are incorporated into a clinical-use cardiac catheter (Fig. X, active tracking coil mounted to the tip of catheter), which is connected to a custom-build receiver electronic system via coaxial cable. A dedicated MR tracking sequence [wang2015realtime] was used to acquire the 3D position of the tracking coil with spatial resolution up to 0.6×0.6×0.6 mm3, and a sampling rate of up to 40 Hz. 
 
 
-
-
-T2
+*** fast image registration using FPGA
+To achieve enhanced visual guidance by re-aligning EP roadmap (Fig. 1) onto the intra-op images, Diffeomorphic Demons (DD) is implemented in our robotic platform. DD employs diffeomorphic transformation in the deformation model, ensuring invertibility, continuity and legitimacy of the deformation field [10.1016/j.neuroimage.2008.10.040]. However, the computation of DD involves a substantial number of convolution processes, which require repeated access of non-coalesced pixel values. Such access will compel a large amount of memory being continuously fetched to the device cache in runtime. 
+In light of such memory bandwidth requirement, we have implemented DD on an FPGA (Xilinx® Virtex7-XC7V2000T). Memory access congestion is avoided by streaming the data into a dataflow pipeline, while other pixel values can be accessed via data exchange channels between the processing units [10.1186/1532-429X-16-S1-W11]. Results (Fig. 5?) shows that the computation using FPGA is 25 times faster than state-of-the-art GPUs. The registration can be done within seconds, which opens up the possibility of deploying DD in the clinical scenario. 
 
 
 
-
-Fig. 9 MR images of a phantom with the robot placed besides running under different scenarios. SNR loss was within 2%.
-
-
-
- 
-
-*** Real-time positional feedback (where to include this?)
-  -  active tracking coil
-  - fig of the active tracking coil mounted to the tip of a catheter, add on to fig 6
-  - The tracking can achieve a 3D spatial resolution of up to 0.6 x 0.6 x 0.6 mm square and a sampling rate of up to 40 Hz 
-   -  need to describe briefly how the tracking coil works referring to Fig.5 (the overview)
-
-
-
-** Discussion and Conclusions (800 words)
+** Discussion and Conclusions (<800 words) 
 Limitation of Current Approach
 -- Currently, there is no existing commercial robotic platform is MR-conditional, that is also integrated with real-time MR image registration.
 -- First attempt to an comprehensive MRI-compatible robotics system for EP catheterization 
@@ -1300,31 +1288,7 @@ Potential extension and future work
 -- Cardiac motion compensation?
 
 
-- overview of our system
-  - fig
 
-
-
-
-- current stage
-  - what can be done now
-  - limitations
-  - examples of MRI-guided robotic platform
-    - ours and others
-
-- future directions
-  - for improving for the close-loop, some preliminary results on 
-    - imaging
-    - Sensing
-      - semi-active tracking
-    - actuation
-    - control interface
-      - operational space control of continuum robot in 3D task space
-      - enable autonomous control 
-    - lab-based validation 
-      - improvement on 3D printing technologies
-  - some advance features
-    - decision making, motion/path planning, more autonomous and/or intuitive control-interface
 
 ** Acknowledgments
 
@@ -1409,3 +1373,13 @@ Potential extension and future work
 
 
 
+
+Corresponding to the three key techniques mentioned above, we have 1) investigated the performance of a FPGA-based image registration method, 2) developed and a catheter robot using MR-safe hydraulically-driven actuation units and 3) examined an active coil for real-time catheter tracking. Results are elaborated as follows.
+
+
+
+
+- fast image registration
+- a catheter robot
+- active tracking coils
+- 
