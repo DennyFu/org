@@ -7,7 +7,8 @@
 ** Neoguide Colonoscope
 
 * meetings
-  
+
+
 ** TODO internal progress meeting
    SCHEDULED: <2016-08-15 Mon 11:30 +1w>
    - State "DONE"       from "TODO"       [2016-08-08 Mon 18:51]
@@ -18,7 +19,56 @@
    :PROPERTIES:
    :LAST_REPEAT: [2016-08-08 Mon 18:51]
    :END:
+
+*** notes - 2016-08-15 
+
+**** working prototype deliverables
+
+***** until the end of October
+***** Camera
+- Naneye
+- 200 X 200
+
+***** Biocoating 
+- possibly not available because it needs 2 months
+
+***** Control 
+- more responsive by
+  - by improving the bendable section stiffness and shorter length
+
+
+***** bendable section
+- stiffer
+- shorter
+  - length? 
+
+***** handle
+- Tim, Chimlee, Dr. Tse
+
+***** Anchorage and filter, integrating balloon, inner tubes and filter
+- difficult to use cohensive to integrate the balloons, inner tube and the filter
+- Tim, Dr. Tse
+
+***** inner tube
+- stiffer
+- will arrive as fast as the end of Aug, as late on 15 Sep
+- Tim
+
+***** simulator 
+- very important
+- need to call CK in the loop
+
+
+***** visual-servo
+- publication and patent
+
+
+***** individual detail schedule and timeline
+
+
 *** notes - 2016-08-08
+
+*** 
 **** vaccum casting pump (martin)
 ***** martin will go for order 
 **** Computer
@@ -105,6 +155,30 @@
    :Directory: [[file:~/Work/NISI/SRC/meeting%20records/][file:~/Work/NISI/SRC/meeting records/]]
    :LAST_REPEAT: [2016-08-08 Mon 18:54]
    :END:      
+*** notes - 2016-08-12
+- filter surround a twin-balloon set
+  - filter large facel particles
+  - ck: water is unavoidable
+  - 
+- experiment
+  - only litte fluid passing thru the suction channel
+- nisi exp.
+  - ck: the distance between the twin balloon doesn't matter
+  - ck: further investiage the performance in our setting with larger separation
+    - proximal balloon just behind the bendable section
+    - we also agree large distance has better suction force
+    - need further investigation with different pore size
+  - ck: what if all the pore are 100% blocked (academic point of view)
+    - 100% submerge is not equivalent to 100% blocked 
+
+- ck: need straighten up the bending section at the same time when pulling the colon 
+  - need stiffness to straighten up the bending section
+
+
+- ck doesn't care about 3 or 4 chamber, whatever the functional prototype can be well-control is fine.
+- ck one more time emphasize the importance of the precision control 
+
+
 
 *** notes - 5 Aug
 

@@ -190,7 +190,19 @@ This system is the first catheter robot to be integrated with MRI-compatible act
 - S.Nazarian, A. Kolandaivelu, M. M. Zviman, G. R. Meininger, R. Kato, R. C. Susil, A. Roguin, T. L. Dickfeld, H. Ashikaga, H. Calkins, R. D. Berger, D. A. Bluemke, A. C. Lardo, and H. R. Halperin, "Feasibility of real-time magnetic resonance imaging for catheter guidance in electrophysiology studies," Circulation, vol. 118, pp. 223--229, 2008
 - E. J. Schmidt, R. P. Mallozzi, A. Thiagalingam, G. Holmvang, A. d'Avila, R. Guhde, R. Darrow, G. S. Slavin, M. M. Fung, J. Dando, L. Foley, C. L. Dumoulin, and V. Y. Reddy, "Electroanatomic Mapping and Radiofrequency Ablation of Porcine Left Atria and Atrioventricular Nodes Using Magnetic Resonance Catheter Tracking," Circulation-Arrhythmia and Electrophysiology, vol. 2, pp. 695-+, Dec 2009
 - D. C. Peters, J. Hsing, K. V. Kissinger, B. Goddu, R. Nezafat, J. E. Taclas, M. E. Josephson, J. V. Wylie, and W. J. Manning, "T2-Weighted Imaging of the Left Atrium Acutely After Pulmonary Vein Isolation Demonstrates Wall Thickening and Edema," ISMRM Proceedings, 2009.
-- M. Shurrab, R. Schilling, E. Gang, E. M. Khan, and E. Crystal, "Robotics in invasive cardiac electrophysiology," Expert Rev Med Devices, vol. 11, pp. 375-81, Jul 2014.
+- M. Shurrab, R. Schilling, E. Gang, E. M. Khan, and E. Crystal, "Robotics in invasive cardiac electrophysiology," Expert Review of Medical Devices, vol. 11, pp. 375-81, 2014.
+- T. Datino, A. Arenal, M. Pelliza, J. Hernández-Hernández, F. Atienza, E. González-Torrecilla, P. Avila, L. Bravo, and F. Fernández-Avilés, "Comparison of the safety and feasibility of arrhythmia ablation using the amigo robotic remote catheter system versus manual ablation," The American journal of cardiology, vol. 113, pp. 827-831, 2014
+- A. Aryana, and A. d’Avila, E. K. Heist, T. Mela and J. P. Singh, and J. N. Ruskin and V. Y. Reddy, "Remote magnetic navigation to guide endocardial and epicardial catheter mapping of scar-related ventricular tachycardia," Circulation, vol. 115, pp. 1191-1200, 2007.
+- E. M. Aliot, W. G. Stevenson, J. M. Almendral-Garrote, F. Bogun, C. H. Calkins, E. Delacretaz, P. Della Bella, G. Hindricks, P. Jaïs, M. E. Josephson and J. Kautzner, "EHRA/HRS expert consensus on catheter ablation of ventricular arrhythmias," Europace, vol. 11, pp. 771-817, 2009.
+- E. J. Schmidt, R. P. Mallozzi, A. Thiagalingam, G. Holmvang, A. d'Avila, R. Guhde, R. Darrow, G. S. Slavin, M. M. Fung, J. Dando and L. Foley, "Electroanatomic mapping and radiofrequency ablation of porcine left atria and atrioventricular nodes using magnetic resonance catheter tracking," Circulation: Arrhythmia and Electrophysiology, vol. 2, pp. 695-704, 2009.
+- J. Ren, K. A. McIsaac, R. V. Patel and T. M. Peters, "A potential field model using generalized sigmoid functions," IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics), vol. 37, pp. 477-484, 2007.
+- D. C. Peters, J. Hsing, K. V. Kissinger, B. Goddu, R. Nezafat, J. E. Taclas, M. E. Josephson, J. V. Wylie and W. J. Manning, "T2-weighted imaging of the left atrium acutely after pulmonary vein isolation demonstrates wall thickening and edema," Proceedings of the International Society for Magnetic Resonance in Medicine, vol. 17, pp. 4433, 2009.
+- A. N. Raval, P. V. Karmarkar, M. A. Guttman, C. Ozturk, R. DeSilva, R. J. Aviles, V. J. Wright, W. H. Schenke, E. Atalar, E. R. McVeigh and R. J. Lederman, "Real‐time MRI guided atrial septal puncture and balloon septostomy in swine," Catheterization and cardiovascular interventions, vol. 67, pp.637-643, 2006.
+- S. R. Dukkipati, R., Mallozzi, E. J. Schmidt, G. Holmvang, A. d'Avila, R. Guhde, R. D. Darrow, G. Slavin, M. Fung, Z. Malchano and G. Kampa, "Electroanatomic Mapping of the Left Ventricle in a Porcine Model of Chronic Myocardial Infarction With Magnetic Resonance–Based Catheter Tracking," Circulation, vol. 118, pp.853-862, 2008.
+- R. C. Susil, and C. J. Yeung, H. R. Halperin, A. C. Lardo and E. Atalar, "Multifunctional interventional devices for MRI: a combined electrophysiology/MRI catheter," Magnetic Resonance in Medicine, vol. 47, pp. 594-600, 2002.
+- R. Razavi, D. L. Hill, S. F. Keevil, M. E. Miquel, V. Muthurangu, S. Hegde, K. Rhode, M. Barnett, J. van Vaals, D. J. Hawkes and E. Baker, "Cardiac catheterisation guided by MRI in children and adults with congenital heart disease," The Lancet, vol. 362, pp.1877-1882, 2003. 
+- H. Su, W. Shang, G. Cole, G. Li, K. Harrington, A. Camilo, J. Tokuda, C. M. Tempany, N. Hata, G. S. Fischer, "Piezoelectrically Actuated Robotic System for MRI-Guided Prostate Percutaneous Therapy," in IEEE/ASME Transactions on Mechatronics, vol.20, no.4, pp.1920-1932, Aug. 2015
+
 
 **** Figure
 
@@ -1295,8 +1307,9 @@ Potential extension and future work
 ** Acknowledgments
 
 ** References
+- 
 - J. L. Ackerman, M. C. Offut, R. B. Buxton, and T. J. Brady, “Rapid 3D tracking of small RF coils.,” in Proceedings of the SMRM, (Montreal), p. 1131, 1986.
-- C. Dumoulin, S. Souza, and R. Darrow, “Real-time position monitor- ing of invasive devices using magnetic resonance,” Magn Reson Med, vol. 29, p. 411–5, Mar. 1993.
+- C. Dumoulin, S. Souza, and R. Darrow, “Real-time position monitoring of invasive devices using magnetic resonance,” Magn Reson Med, vol. 29, p. 411–5, Mar. 1993.
 - O. Ocali and E. Atalar, “Intravascular magnetic resonance imaging using a loopless catheter antenna,” Magn Reson Med, vol. 37, no. 1, p. 112–8, 1997.
 - A. Glowinski, G. Adam, A. Bucker, J. Neuerburg, J. van Vaals, and R. Gunther, “Catheter visualization using locally induced, actively controlled field inhomogeneities,” Magn Reson Med, vol. 38, p. 253–8, Aug. 1997.
 - S. Zuehlsdorff, R. Umathum, S. Volz, P. Hallscheidt, C. Fink, W. Semm- ler, and M. Bock, “MR coil design for simultaneous tip tracking and curvature delineation of a catheter,” Magn Reson Med, vol. 52, p. 214–8, July 2004
@@ -1371,9 +1384,30 @@ Potential extension and future work
 - Fabio Settecase, Alastair J. Martin, Prasheel Lillaney, Aaron Losey, Steven W. Hetts, "Magnetic Resonance– Guided Passive Catheter Tracking for Endovascular Therapy," Magn Reson Imaging Clin N Am 23 (2015) 591–605
 - Frericks BB, Elgort DR, Hillenbrand C, et al. Magnetic resonance imaging-guided renal artery stent placement in a swine model: comparison of two tracking techniques. Acta Radiologica 2009;50(1): 21–7.
 - F Galassi, D Brujic, M Rea, N Lambert, N Desouza, M Ristic, "Fast and accurate localization of multiple RF markers for tracking in MRI-guided interventions," Magnetic Resonance Materials in Physics, Biology and Medicine, vol. 28, pp. 33–48, 2015
+- T. Vercauteren, X. Pennec, A. Perchant and N. Ayache, "Diffeomorphic demons: Efficient non-parametric image registration," NeuroImage, vol. 45, pp. 561-572, 2009.
+- W. Atabany and D. Patrick, "A Spatiotemporal Parallel Image Processing on FPGA for Augmented Vision System," Advances in Computer and Information Sciences and Engineering. pp. 558-561. 2008
+- K. W. Kwok, G. C. T. Chow, T. C. P. Chau, Y. Chen, S. H. Zhang, W. Luk, E. J. Schmidt and Z. T. Tse, "FPGA-based acceleration of MRI registration: an enabling technique for improving MRI-guided cardiac therapy," Journal of Cardiovascular Magnetic Resonance, vol.16(Suppl 1):W11, 2014.
 
 
+@article{vercauteren2009diffeomorphic,
+  title={Diffeomorphic demons: Efficient non-parametric image registration},
+  author={Vercauteren, Tom and Pennec, Xavier and Perchant, Aymeric and Ayache, Nicholas},
+  journal={NeuroImage},
+  volume={45},
+  number={1},
+  pages={S61--S72},
+  year={2009},
+  publisher={Elsevier}
+}
 
+@incollection{atabany2008spatiotemporal,
+  title={A Spatiotemporal Parallel Image Processing on FPGA for Augmented Vision System},
+  author={Atabany, Walid and Degenaar, Patrick},
+  booktitle={Advances in Computer and Information Sciences and Engineering},
+  pages={558--561},
+  year={2008},
+  publisher={Springer}
+}
 
 
 Corresponding to the three key techniques mentioned above, we have 1) investigated the performance of a FPGA-based image registration method, 2) developed and a catheter robot using MR-safe hydraulically-driven actuation units and 3) examined an active coil for real-time catheter tracking. Results are elaborated as follows.
