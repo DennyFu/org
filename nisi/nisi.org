@@ -11,6 +11,105 @@
    :org file:
    :END:
 
+*** comment for paper : A Single Port Robotic Platform for Laparoscopic Surgery
+
+
+**** method    
+- Advanced design of a cannula includes
+  - 4 flaps
+  - lock pins
+  - spring plate
+
+**** novelty/contribution
+- allows the components of a surgical robotic system including cannula, 3D camera, the robotic arms and other instruments to be inserted and securely anchored one after another through a single small incision on the patient’s body. 
+- allows a third robotic arm to be anchored without increasing the incision size.
+- reduce the incision size as the instruments are inserted through the same space.
+- the independent anchorage of the instruments at different slots along the interior surface of the cannula. This makes it feasible to retrieve a particular instrument during surgical procedure.
+- allows more than two robotic arms to be anchored without increasing the incision size. Such a system can readily be deployed for laparoscopic surgery through a natural orifice
+- the surgeons will find it much easier to reposition the whole system during the surgery. It is especially convenient for surgical operations on different organs
+- A sizable opening has also been vacated to allow additional insertion of other laparoscopic tools via the single small incision port.
+
+**** results
+- force analysis was conducted to support the cannula is capable to sustain the weight of the 7-DOF robotic arm
+- figures of the real cannula are shown 
+
+
+**** Comments and suggestions
+- it is appreciated that the elaborations of the design always include clinical motivations. And the explanation of the design is in details. 
+- The title is not correct. it is not a robotic platform but a design of a cannula. Cautions should be taken that this paper does not include the proposal of the 7-DOF robotic arm, 3D camera and the manual tool.
+- The readability of the paper can be improved by re-organization. It is better to present the design of the cannula first, followed by explanations and illustrations of such design that faciliates the insertion sequence. Particularly, the advantages of the insertion sequence have to be emphasized. The force analysis should be put to the results section, followed by figures (and videos) of the cannula. It is also important to mention the current limitations and future work.
+- Some figures are of similar functions and some are not informative.
+- the 1) insertion obturator, 2) inner tube, 3) cannula , 4) end segments and 5) spring plate in fact constitute an advanced cannula.
+- In presenting the results in the force analysis, it is important to present all the parameters values such as dimensions, weight, and how to obtain those parameter values if they are not easily obtained. e.g. For (2), how do you get the results of f_p to be 23.5N? what is the values of the diameter d_p, length L_p, the weight W, ...?
+- It is important to demonstrate clearly how the proposed design can achieve the contributions that claimed in the introduction. 
+- 
+
+***** title 
+- it is not a robotic platform since there is no actuators. this paper in fact proposed a design of a cannula.
+
+***** organization
+
+The paper is better to be organized as follows.
+
+- section 1. introduction
+  - 1st para. Laparoscopic MIS, externally motorized approach (da Vinci) and its pros and cons
+    - e.g. multiple incisions
+    - ...
+  - 2nd para. internally motorized approach and its advantages
+    - e.g. single incisions
+    - e.g. allows insertion of dexterous robot 
+    - e.g. surgeons can intuitively control the high DoF robot 
+    - e.g. allows sensory feedback
+    - ...
+  - 3rd para. the importance of sequential insertion of intrusments
+    - state-of-art robotic platform that allows sequential insertions and their limitations
+    - some technical difficulties, especially the anchorage
+  - 4 para. We propose a novel cannula design that ...
+    - features of the cannula
+    - contributions: what functions that only this cannula can achieve?
+
+- section 2. Materials and methods
+  - The cannula
+    - 4 flaps
+    - lock pins
+    - spring plate
+  - Insertion sequence
+    - Important! Not to confuse the readers that the two robotic arms, 3D camera and others instruments are NOT included in the current paper
+
+- section 3. results and discussions
+  - 1. the stress analyses
+  - 2. The real cannula: locking sequence, with the 7-DOF robotic arm archored, videos
+  - discussions (important): based on the results, to emphasize the achievements, functionalities, and contributions of the current design.
+
+- section 4. Conclusion and Future work
+  - conclusion
+  - current limitations
+  - future works
+
+
+
+***** figures quality
+- too many figures, not focused and coherent to the theme
+- Fig.1: too small. also misleading that the proposed "robotic platform" includes the robotic arm, 3D camera and manual tools
+- Fig.2: this figure has good appearance. The purpose of this figure is to show the design and the important features of the "robotic platform". Therefore, the two robotic arm should be excluded.
+- Fig.3: this figure has high quality showing detailed of the cannula design.
+- Fig.4 and Fig. 5: these two figure are very similar.
+- Fig.6: It is difficult to get how the "lock" works from this figure
+- Fig.7: what is the purpose of this figure? it doesn't have much meaning.
+- Fig.8: This figure is good for force analysis.
+- Fig.9: This should be combined with Fig.2 that includes the novel features 1) the flaps, 2) the lock and 3) the spring plate of the cannula (i.e. the "robotic platform").
+- Fig.10: what is the purpose of this figure? what do you want to demonstrate?
+- Fig.11: Any special points in these figure? Such insertion sequence is a common sense.
+- Fig.12: This figure is fine.
+- Fig.13: There is no "insertion sequence" demonstrated in these figures. Video is a better choice.
+- Fig.14: This figure is not relevant to the functionality of the cannula ("robotic platform") since this paper only proposes the cannula but not the robotic arms.
+- Fig.15: This figure should be excluded. This figures demonstrates the current cannula is in fact very big that is not suitable for MIS. And this is not a MIS.
+
+***** reference  
+- The number of reference is not enough
+
+
+
 
 * Events
 ** DONE Quality Management System (QMS) training
