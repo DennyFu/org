@@ -1,0 +1,9 @@
+* Robotic Catheter System for MRI-Guided Cardiovascular Interventions
+  :PROPERTIES:
+  :working_folder: [[file:~/Work/Patents/Robotic_Catheter_System_for_MRIGuided_Cardiovascular_Interventions/][file:~/Work/Patents/Robotic_Catheter_System_for_MRIGuided_Cardiovascular_Interventions/]]
+  :END:
+  
+** TODO consider revision of the current claims
+   - purpose: 
+     - to protect the later publication
+       - e.g. if we publish sth that cannot be included in the current patent, we still can publish, but the published one is difficult to apply for new patent

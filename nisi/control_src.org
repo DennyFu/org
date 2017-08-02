@@ -1,0 +1,38 @@
+* General info
+  :PROPERTIES:
+  :folder:   [[file:~/Work/NISI/SRC/control/]]
+  :END:
+
+* Tasks
+** 
+** [[*literature%20review:][literature review]] of visual-based feedback
+   
+   
+** patent
+
+
+
+* literature review: 
+  :PROPERTIES:
+  :unfilter_papers: [[file:~/Work/NISI/SRC/control/ref_unfilter/]]
+  :papers:   [[file:~/Work/NISI/SRC/control/ref/]]
+  :tag_keywords: visualservo, colonoscopy, endoscopy
+  :END:
+
+- Objective:
+  - To find out the state-of-the-art visual-servoing methods for laparoscopy and the current limitations, and
+  - Search for existing engineering methods that can contribute to the robotic colonoscopy
+
+** why visual servoing is important ?
+** what is the state-of-the art visual servoing methods
+*** methods for colonoscopy
+*** state-of-the-art methods in other endoscopic procedure
+*** state-of-the-art methods in robotics, especially in soft robots
+** what are their limitations in the state-of-the art methods?
+** what approaches/techniques can contribute to the state-of-the-art methods?
+*** can the approach/algorithm resolve the current limitations?
+*** is the approach/algorithm is theoretically/algorithmically novel?
+*** can the approach/algorithm bring something new to the colonoscopy, and even applicable to other endoscopic procedures and robotic applications?
+    
+
+

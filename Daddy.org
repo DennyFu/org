@@ -1,19 +1,55 @@
 * Info
 
 * Health
-** follow-up consultation
-*** DONE check cancer index - Dr. Lam
-    CLOSED: [2016-06-20 Mon 16:35] SCHEDULED: <2016-06-20 Mon 10:30>
-    - State "DONE"       from "TODO"       [2016-06-20 Mon 16:35]
-*** TODO check cancer index - PWH
-    SCHEDULED: <2016-07-04 Mon>
-** DONE Father surgery
-   CLOSED: [2016-04-15 Fri 20:00]
-   - cautions
-     - no high fibre food
-     - control blood pressure
-   - check in <2016-04-08 Fri 12:00>
-   - operation start <2016-04-09 Sat 12:00>
+
+** follow-up consultation - Dr. Law
+   - Dr. comments - <2017-01-26 Thu>
+     - increased the dose from 5 to 10mg
+     - 
+   - Dr. comments - [2017-01-03 Tue 12:30]
+     - the drugs won't increase blood pressure
+       - maybe because the drugs may not work
+     - high blood pressure is related to the aortic insufficiency
+       - the blood pressure drugs helps also the aortic insufficiency
+     - later need to do ultrasound check
+     - food control
+       - less fat
+** Body check - Dr. Law at St. Teresa
+   - <2016-12-23 Fri>
+   - found aortic insufficiency (AI) (aortic regurgitation)
+     - cannot close completely
+     - leaking and cause blood flow in the reverse direction
+   - relatively larger heart
+     - could be caused by AI
+   - something in liver, need further investigation
+     - blood tested to search for Hepatitis
+     - could be Angiomas
+   - very small white spot (1-2 mm) in blood vessels; calcification
+     - normal
+   - high blood pressure (>150 upper), need to take regular drugs
+   - high cholesterol
+   - normal level for most health indexes
+** ENT soft palate biopsy
+   - Done with safe <2017-01-19 Thu 08:00>
+   - PWH
+** DONE follow-up consultation - Dr. Lam
+   CLOSED: [2016-11-18 Fri 15:08] SCHEDULED: <2016-11-17 Thu 10:00>
+   - State "DONE"       from "TODO"       [2016-11-18 Fri 15:08]
+   - all are benign tumors 
+      
+** DONE check cancer index - Dr. Lam
+   CLOSED: [2016-06-20 Mon 16:35] SCHEDULED: <2016-06-20 Mon 10:30>
+   - State "DONE"       from "TODO"       [2016-06-20 Mon 16:35]
+** DONE check cancer index - PWH
+   CLOSED: [2016-08-31 Wed 10:45] SCHEDULED: <2016-07-04 Mon>
+   - State "DONE"       from "TODO"       [2016-08-31 Wed 10:45]
+* DONE Father surgery
+  CLOSED: [2016-04-15 Fri 20:00]
+  - cautions
+    - no high fibre food
+    - control blood pressure
+  - check in <2016-04-08 Fri 12:00>
+  - operation start <2016-04-09 Sat 12:00>
 
 * Tasks
   

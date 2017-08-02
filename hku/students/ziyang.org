@@ -1,0 +1,91 @@
+Ziyang's research
+
+* progress
+
+** <2016-12-13 Tue 18:00>
+   - existing force motor
+     - DYNAMIXEL
+     - KW: go to order quickly
+   - Dynamic model
+     - 
+** <2016-12-09 Fri 14:30>
+   - suggested solving the problem by constrained optimization
+     - quadratic programming
+     - minimum force input to produce constant torque output
+       - the constant torque output is one of the constrain
+       - the minimum force can be a quadratic objective function
+   - the force calculation is correct
+     - correct free body diagram
+   - suggest to simplify the writing of methodology
+   
+** <2016-12-02 Fri>
+   - need to search for force-controlled motors for experimentation
+   - can also buy velocity-based controlled motors for experimentation
+   - design something new different from crane shaft
+     - how to put the 3 pistons
+   - writing
+   - expectation in next meeting
+     - writing of the methodology
+     - some solidwork design of the motor
+     - order the motors
+** 7 Sep 2016
+*** literature review
+- commercial catheter robotic platform
+  - Sensei X
+  - Amigo system
+    - can mount with a clinically-used catheter
+  - Magnetic field actuated
+    - Niobe magnetic navigation system
+    - M.A. Tavallaei et al.
+    - master-slave system
+      - master: the control interface
+      - non-magnetic ultrasonic motors (slave)
+    - non-magnetic metals, plastic
+      - SNR dropped less than 3%
+  - MRI/fMRI-compatible robotic system with force feedback for interaction with human motion
+    - Roger Gassert et al.
+    - hydraulic
+
+*** Ka-wai feedback
+- need to know more about the trend
+- horizon scanning
+  - e.g.
+  - what is the trend
+  - future development
+  - what are the other's work
+  - how's your research is related to the others
+  - 
+*** 
+
+
+** 9 Aug 2016
+*** RAM paper
+*** improvement of catheter robot design
+- master part enhancement using metal 
+
+*** Markforged printer cannot deliver to HK until 2017
+*** future design
+*** ask su-lin about the ablation target and then prepare data by manually control the robot 
+
+
+
+** 21 Jul 2016
+*** RAM
+**** technical description by this weekend
+*** neurorobot design
+*** reassembly of catheter robot
+**** by 26
+*** PWH 3D printer problem
+*** Evaluation of Surgical robot challenge
+**** component strength
+***** parts in control room should 
+**** less belt
+**** theoretical analysis
+*** purchase printers
+**** Markforged
+*** Ka-wai
+**** source one more printer
+***** unique, well-differentiated from existing
+***** draft 
+***** improve not only linear, but improve to get rid of stroke-length limitation
+

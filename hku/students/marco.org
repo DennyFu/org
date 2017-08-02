@@ -1,0 +1,76 @@
+Marco's research
+* progress
+** <2016-12-19 Mon 19:00>
+   - no table of content for discussion of the flow
+   - the main concern is the attitude
+     - he lacks of attitude solving a given problem
+     - he stops thinking solutions
+     - if he wants to improve himself, he will at least ask or take reference from others
+   - it seems that he put little time and effort for the literature review
+     - not so much points were shown
+     - the points were not well-organized as logical flow of literature review -- why the research is so important?
+   - it might be he lacks of experience in writing, he doesn't know how to start and write a thesis
+   - let see if he shows some change of his attitude and motivation
+   - KW seems frustrate with his performance
+** <2016-12-13 Tue 17:00>
+   - fabricated a collimator prototype
+   - the actuation soft cushion requires 3D printer
+   - so the work until next meeting will all focus on the literature review writing
+     - the logical flow of the literature
+     - enough literature
+     - organize in paragraphs
+     - organized bullet points
+** <2016-12-02 Fri 09:45>
+   - need more progress on the literature review
+   - fabricate a cavity platform based on MRI data
+   - tasks to do
+     - literature review
+     - FEM analysis
+     - robot prototype
+   - expectation on the next meeting
+     - progress on the literature 
+** <2016-11-28 Mon>
+   - meeting for the thesis
+     - no need to put focus on the tracking
+   - Table of content
+     - Literature review
+   - got some data from the internet
+     - had preliminary 3D model for the reconstruction 
+   - next meeting will be on 2nd Dec morning
+     - progress on the literature review
+       - the logical flow
+
+** <2016-09-07 Wed>
+*** 3D printable
+- with folded sleeve
+- to get faster integration
+- ~135 angle
+- 
+
+*** Kawai
+- FEA worth?
+  - brian: may not be necessary because the idea is pretty simple
+  - 
+- a soft cushion laser pointer
+
+** 9 Aug 2016
+*** 3D printable hyper-elastic actuator
+- can bend > 90 angle
+- kawai 
+  - how to apply to the laser project
+  - how to encode the laser pointing
+    - what MR sequence is sensitive to temperatures (<45 degree)
+    - optical calibration 
+
+** 21 Jul 2016
+*** 3d printable hyper-elastic actuator
+**** no need multi-stage molding
+**** enabling digital printing
+***** solution provided by companies?
+*** MR-compatible actuator using soft pop-ups
+*** Ka-wai
+**** contact leo
+**** literature
+***** focus on surgical application or design mechanism but not the frabrication process
+
+

@@ -1,0 +1,19 @@
+Martin's research
+* progress
+
+** 9 Aug 2016
+*** Performance Aware programming
+- identify the computation bottleneck
+  - bottleneck in memory access
+- proposed acceleration
+  - accelerate both process using FPGA
+  - adopting pixel shift register to minimize bandwidth requirement
+- kawai
+  - better to focus on developing a user-friendly open source code 
+    - a common series of scalable GPU
+      - modular GPU
+    - optimization memory access strategy
+    - not necessarily focus on FPGA-based
+  - TMI
+
+

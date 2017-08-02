@@ -1,0 +1,26 @@
+# This file organizes all the paper drafts
+* Templates
+  - IEEE journal: [[file:IEEEtran_org/][file:~/Dropbox/org/paper_drafts/IEEEtran_org/]]
+  -
+
+* TODO [[file:visual_based_fbctr_laparoscopy_softrobot/visual_based_fbctr_laparoscopy_softrobot.org][visual_based_fbctr_laparoscopy_softrobot.org]] Visual-based feedback control for soft continuum robot in laparoscopy
+* TODO [[file:catheter_control_PF.org][catheter_control_PF.org]] A kinematic control framework for intra-cardiac intervention
+* TODO [[file:FEA_softrobot/FEA_design_endoscopy.org][FEA_design_endoscopy.org]] FEA-based design and analysis of a soft continuum robot for endoscopy
+** tasks
+*** PAUSED draft outline  [[file:FEA_softrobot/FEA_design_endoscopy.org][FEA_design_endoscopy.org]]  
+    - State "PAUSED"     from "TODO"       [2017-01-03 Tue 10:32]
+      - focus on Soro first
+      - Do visual servoing first
+      - FEA involves so much uncertainties
+	- e.g. we don't know the core knowledge of FEA
+    - <2016-12-29 Thu 12:00-18:00>
+    - <2016-12-12 Mon 14:30-20:30>
+    - <2016-12-09 Fri 17:00-23:00>
+    - <2016-12-08 Thu 14:00-20:00>
+    - <2016-12-07 Wed 15:00-22:00>
+    - <2016-12-05 Mon 17:00-22:00>
+    - <2016-12-01 Thu 14:00-20:00>
+    - <2016-11-30 Wed 15:00-21:00>
+
+* TODO [[file:fbctrl_continuum_robot/fbctrl_continuum_robot.org][fbctrl_continuum_robot.org]] Orientation Control of a Class of Continuum Robots (tentative title)
+

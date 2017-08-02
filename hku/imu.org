@@ -1,0 +1,125 @@
+* general
+  :PROPERTIES:
+  :local: [[file:~/Work/HKU/IMU/][file:~/Work/HKU/IMU/]]
+  :cloud: [[file:~/Dropbox/ImuSoftRobot][file:~/Dropbox/ImuSoftRobot]]
+  :END:
+
+* tasks
+** TODO write [[*Methodology][Methodology]]
+
+** TODO Paper draft
+   :PROPERTIES:
+   :draft_org: [[file:~/Dropbox/org/paper_drafts/ori_fb_ctrl_const_cur_continuum_robot.org][draft_org]]
+   :END:
+   
+*** notes
+**** keywords 
+ - IMU
+ - continuum robot
+ - constant curvature
+ - quaternion based orientation feedback control
+
+*** Introduction
+
+**** contributions
+ - Absolute positional sensing for piecewise constant curvature continuum robots using IMUs (section II. A) 
+ - Orientation feedback control of the continuum soft robot. Which is the first demonstration of orientation feedback control in soft robots.  (section II. C) 
+
+
+*** Methodology
+ Although continuum robots in general cannot be described by a specific dynamic model, a particular class of them that behaves as sections of constant curvature curves can be modeled analytically. This section briefly introduces the equation of motion of the robot, the kinematic sensing principle of IMUs, and an orientation feedback control method that is used. 
+
+**** Piecewise Constant Curvature Continuum robot
+
+ Fig. 1. (a) Forward kinematics of a constant curvature curve. Given the absolute orientation of a point along the curve, the corresponding absolute position can be obtained. (b) Continuum robot highlighted with representative (3 for each section) piecewise constant curves.
+
+ Fig. 1a illustrate the kinematics of a constant curvature curve. Given two orientation vectors n_{i-1} and n_{i} both tangent to a curve with constant curvature, the bending angle $\theta$ equals to
+ (current eq.4).
+ Having the absolute position x_{i-1} at the tangent point of n_{i-1}, the absolute position x_{i} of the tangent point of n_{i} is 
+ . (eq. 2)
+ where variable definition in (2) ....
+
+ A continuum robot can be considered as a bundle of infinite number of curve with the same curvature but different lengths (Fig. 1b). Therefore the kinematics obey the above equations (1), (2).
+
+ In this paper, we consider a piecewise constant curvature continuum robot comprises of N sections of constant curvature continuum robots, where the two tangent vectors at a connection are the same. (Fig. 1b)
+
+ As described in [XXX], the piecewise constant curvature continuum robot above can be modeled by the following equation of motions
+       - standard formulation of a robot manipulator: M(q)\ddot q + c(q,\dot q) + G(q) = \tau
+ .
+
+
+     - the definition of the piecewise constant curvature continuum robots used in this paper
+       - what is constant curvature? 
+       - what constraints that lead to constant curvature
+       - what is a piecewise constant curvature robot?
+       - forward kinematics of a given point of the robot
+       - equation of motion 
+       - 
+
+**** Absolute Kinematics Sensing using IMUs
+
+ Fig. 2. Computing architecture of an IMU.
+
+     An IMU consists of an accurate accelerometer (precision data), a gyroscope (precision data) and a magnetometer (precision data) (Fig. 2). It usually come with on-borad computing units that process the raw data using low-pass filter, followed by a data fusion unit that output orientation in terms of a unit quaternion
+ (current eq.1).
+ The unit 4-elements quaternion is a compact representation; It can be transformed to a rotating matrix R_i specifying the orientation with reference to the world coordinate frame of the ith IMU:
+ (current eq.2)
+ where the three columns of (current eq.2) are orthogonal and the 3rd column is the normal vector (precision data). 
+ Using this quaternion, the absolute position of a point where an IMU mounted on a piecewise constant curvature continuum robot can be found using ().
+
+
+ IMUs are small (data) and light (data) enough that have little effect to the motion of the robot. Since the feedback of the translational acceleration, angular velocity, and the unit quaternion can be readily obtained, IMUs ease the application of orientation feedback control, which is described in the next subsection. 
+
+
+     - brief description of the sensing principle of a 2-IMU module (II.B)
+       - what is the main components of an IMU and what are the raw sensory information
+	 - accelerometer, gyroscope, magnetometer
+       - what is a (unit) quaternion
+	 - a unit quaternion represents orientation of the 1st IMU relative to the 2nd IMU
+	   - absolute measurement if one of the 2 IMUs is fixed
+	   - show only the necessary equations (e.g. equations that will only be utilized in the later context).
+     - MAIN 1!: under piecewise constant curvature, how to compute the position of the 1st IMU relative to the 2nd IMU
+       - absolute measurement if one of the 2 IMUs is fixed
+     - MAIN 2!: How to obtain the values of the equation of motion? This relates to the control method in II.C
+
+**** Orientation feedback control (using quaternion feedback)
+ Other existing control method can replace this orientation control method.  “more advance” methods are better than naïve PD controller. Because PD controller may need very large control gain to achieve a given control task such as trajectory tracking; Large gain usually results in large-valued control signals which exceed the admissible range. Moreover, simple PD controller example does not add value to the paper contribution about the use of IMUs. Because the quaternion, angular velocities, translational accelerations can be readily obtained from the IMUs, in addition to the absolute position computed under the constant curvature constrain, the use of IMUs can be said as facilitating this feedback control. 
+
+     - Brief description of the orientation feedback control method in [nakanishi2008operational]
+       - given the equation of motion in II.A
+       - using quaternion feedback
+	 - what are the advantages of quaternion feedback
+       - the orientation feedback control law in [nakanishi2008operational] is in fact an operational (i.e. task-space) control method
+	 - equation: control law
+	 - proof of stability can be omitted
+       - how this control method can be used using IMU sensing and why IMUs are suitable (or good)
+	 - why: since the absolute position of and orientation (quaternion) can be readily obtain from IMUs (as described in II.B)
+
+
+
+
+
+*** Empirical evaluations
+
+ - Description of our real continuum robot
+ - why the robot comprises 2-sections
+   - the task space is not redundant
+     - the dimension of the end-effector translational (3X1) and angular (3X1) position is 6.
+
+**** Verification of the piecewise constant curvature 
+ - what experiment can verify the piecewise constant curvature characteristics?
+
+**** The control task 
+ - experiment description
+ - what is the purpose of the experiment?
+ - what are the (expected) results
+
+
+*** Discussion
+ - what are the importance of the results
+   - be consistence to the claim of the contributions in the introduction
+ - comparisons to related works
+   - NOT depreciate but praise the others
+   - our limitations
+ - Future work
+*** Conclusion

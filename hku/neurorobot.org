@@ -1,0 +1,83 @@
+* general info
+  :PROPERTIES:
+  :local: [[file:~/Work/HKU/Neuro_robot/][file:~/Work/HKU/Neuro_robot/]]
+  :cloud: [[file:~/Dropbox/Neuro_Robot/][file:~/Dropbox/Neuro_Robot/]]
+  :END:
+
+
+* The review paper
+  :PROPERTIES:
+  :local: [[file:~/Work/HKU/Neuro_robot/dropbox_data/Review%20Paper/][file:~/Work/HKU/Neuro_robot/dropbox_data/Review Paper/]]
+  :cloud: [[file:~/Dropbox/Neuro_Robot/Review%20Paper/][file:~/Dropbox/Neuro_Robot/Review Paper/]]
+  :END:
+
+
+
+
+** tasks
+
+
+*** revise figure of MR-conditional actuation method
+    - <2016-12-06 Tue 11:30-12:30>
+    - Discussed with Ziyan: suggested to replace the figure by
+      - illustration of the Hydraulic-driven robot setting 
+
+    - State "WAITING"    from "TODO"       [2016-10-08 Sat 20:11] \\
+      Done, waiting for revision
+
+*** revised real-time tracking system
+    - <2016-12-06 Tue 15:00-18:00>
+Real-time tracking enables in situ position feedback in the image coordinate frame. The state-of-the-art tracking technologies in MRI can be classified into 3 categories: passive, semi-active and active. Passive fiducials/markers are either gadolinium-based MRI contrast agents or strongly paramagnetic materials that can be visualized in the MR images. After selecting a set of fiducials/markers, usually manually, as optical landmark for rigid registration, the 3D positions of the selected fiducials/markers can be registered to the MR image coordinate frame for positional localization. The integration of passive fiducials/markers are simple and safe. Tracking can also be operated under different MR field strengths. However, such rigid registration may not be reliable because the MR images can be intrinsically distorted due to the nonlinearity in the magnetic field [48]. Complicated MR sequence as well as more computation time are also required to process susceptibility artifacts in the high-resolution images for fast and accurate localization. Moreover, passive tracking may be invalid when the fiducials/markers are in close proximity, or out of the imaging slice that may not be readily detected/visualized by external tracking devices [49]. 
+Small MR-active tracking system (e.g.  [55]) can offers fine localization (as fine as [50] ) inside the target anatomy. In real-time MR navigation, small tracking coils () can actively respond to the MR gradient field along three principal directions [durek2002abrief], and communicate to independent receiver channel via coaxial cable. The signal of each coil signal is sensitive to distinct local field inhomegeniety [glowinski1997catheter] and can be obtained fast enough for high-frame rate tracking (>40kHz [50]). This allows generation of high spatial and temporal resolution 3D information, automatic tracking and slice plane following readily. An interface [56] has been successfully developed, allowing to steam both MR images and positional data simultaneously to a computer at a low-latency (<1.5ms), high-frequency (40Hz) sampling rate, thus augmenting the virtual catheter configuration on the images in real-time. However, the excessive heat could be generated due to the resonating radiofrequency (RF) waves and storage of electrical energy caused by standing wave within the conducting structure, posing potential safety hazards [koning2002heating]. Complicated electronic circuits and assembly procedure [52] also increase difficulty of miniaturization for operation involving large number (>8) of coils.  
+- S. Weiss, T. Kuehne, F. Brinkert, G. Krombach, M. Katoh, T. Schaeffter, R. W. Guenther, and A. Buecker, “In vivo safe catheter visualization and slice tracking using an optically detunable resonant marker,” Magn. Reson. Med., vol. 52, pp. 860–868, 2004.
+- J. L. Duerk, E. Y. Wong, J. S. Lewin, “A brief review of hardware for catheter tracking in magnetic resonance imaging,” Magn. Reson. Mater. Phys., Biol. Med., vol. 13, pp. 199–208, 2002.
+- A. Glowinski, G. Adam, A. Bucker, J. Neuerburg, J. van Vaals, and R. Gunther, “Catheter visualization using locally induced, actively controlled field inhomogeneities,” Magn. Reson. Med., vol. 38, pp. 253– 258, 1997.
+- M. Konings, L. Bartels, H. Smits, and C. Bakker, “Heating around intravascular guidewires by resonating RF waves,” J Magn Reson Imaging, vol. 12, pp. 79–85, 2000.
+In contrast, semi-active MR-tracking system has no direct capacitive electrical connections between small tracking coils and the MRI scanner; The coils act only as a radiofrequency (RF) receiver and inductor in an isolated LC circuit [53], resonating with specific MR frequencies (at around 63.8MHz or 123.5MHz for 1.5T or 3T scanner respectively). Because signal transmission is based on wireless inductive coupling techniques (e.g. via optical fiber [weiss2004invivo]),  development of the standing waves could be avoided. The visualization in the MR images can be achieved using properly programmed MR sequence that detunes/triggers the isolated resonant circuit. Nevertheless, it is challenging to miniaturize semi-active devices (e.g.  [51]) having high quality factor (Q>50). LC tuning process also requires tedious work to match the resonant frequency within tolerance of 1MHz, while X-Y-Z coordinates matching of 3 coils is already demanding. These are practical concerns in integrating coil units with manipulation instruments that are typically metallic and thin in diameter.
+
+*** paper organization (old)
+**** Introduction
+
+***** stereotactic neurosurgery
+  - topic: describe what is stereotactic neurosurgery
+    - simple description of stereotactic neurosurgery procedure
+      - surgical instrument is inserted in the brain to carry out operation
+      - list some target diseases
+
+***** Image-guided stereotactic neurosurgery
+  - topic: current trend is the incorporating intra-operative MRI and robotic technology
+    - brief history of image-guided stereotactic neurosurgery
+      - the evolution figure
+    - The advantages of using MRI 
+      - high quality MR image
+      - examples (not limited to stereotactic neurosurgery)
+    - Current workflow
+      - pre-op, immediate before operation, intra-op
+
+***** A close-loop surgery (not a good title. to be refined)
+  - topic: intra-operative MRI, real-time tracking and robots forms a close-loop (human-in-the-loop)
+    - FIG: a conceptual figure of close-looped surgery
+    - describe the close-loop in more detail
+      - clinical advantages
+      - qualitatively mention some related recent works
+	- the works suggested by Su Hao. e.g. Mazor?
+    - In this review, we provide insights regarding the front-end surgical robotic technologies with emphasis on the current status of neurosurgical robots, current limitations and technical gaps, as well as the future trends.
+
+
+**** Non-rigid registration
+
+
+
+* mri distortion paper outline
+** Introdution
+- to estimate the end effector position
+- to control 
+- 2 real time measurement
+  - robot joint
+  - from mr tracking coil in XYZ space 
+- how to utilize the 2 measurement to perform the estimation
+  - especially for particular use of MRI envierioment
+  - 
+** 
+
+#  LocalWords:  capacitive

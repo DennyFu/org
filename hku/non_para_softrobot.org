@@ -1,0 +1,539 @@
+* general
+  :PROPERTIES:
+  :local:    [[file:~/Work/HKU/Nonpara_softrobot_control/][file:~/Work/HKU/Nonpara_softrobot_control/]]
+  :END:
+* TMECH2016
+  :PROPERTIES:
+  :local:    [[file:~/Work/HKU/Nonpara_softrobot_control/TMECH_2016/][file:~/Work/HKU/Nonpara_softrobot_control/TMECH_2016/]]
+  :END:
+  
+* Soft_Robotics
+  :PROPERTIES:
+  :local:    [[file:~/Work/HKU/Nonpara_softrobot_control/SoRo2016/][file:~/Work/HKU/Nonpara_softrobot_control/SoRo2016/]]
+  :cloud:    [[file:~/Dropbox/SoRo2016/][file:~/Dropbox/SoRo2016/]]
+  :END:
+
+** Decision letter
+Dear Dr. Kwok:
+
+Manuscript ID SORO-2016-0065 entitled "Nonparametric Local Learning for Hyper-Elastic Robotic Control: An Enabling Technique for Effective Endoscopic Navigation" which you submitted to  Soft Robotics, has been reviewed.  The comments of the reviewers are included at the bottom of this letter.
+
+The reviewers have recommended revisions to your manuscript.  Therefore, I invite you to respond to the reviewers' comments and revise your manuscript.
+
+To revise your manuscript, log into https://mc.manuscriptcentral.com/soro and enter your Author Center, where you will find your manuscript title listed under "Manuscripts with Decisions."  Under "Actions," click on "Create a Revision."  Your manuscript number has been appended to denote a revision.
+
+You will be unable to make your revisions on the originally submitted version of the manuscript.  Instead, revise your manuscript using a word processing program and save it on your computer.  Please also highlight the changes to your manuscript within the document by using the track changes mode in MS Word or by using bold or colored text.Once the revised manuscript is prepared, you can upload it and submit it through your Author Center.
+
+When submitting your revised manuscript, you will be able to respond to the comments made by the reviewers in the space provided.  You can use this space to document any changes you make to the original manuscript.  In order to expedite the processing of the revised manuscript, please be as specific as possible in your response to the reviewers.
+
+IMPORTANT:  Your original files are available to you when you upload your revised manuscript.  Please delete any redundant files before completing the submission.
+
+Because we are trying to facilitate timely publication of manuscripts submitted to  Soft Robotics, your revised manuscript should be uploaded as soon as possible.  If it is not possible for you to submit your revision in a reasonable amount of time, we may have to consider your paper as a new submission.
+
+Once again, thank you for submitting your manuscript to Soft Robotics and I look forward to receiving your revision.
+
+Sincerely,
+Dr. Barry Trimmer
+Editor-in-Chief, Soft Robotics
+Barry.Trimmer@tufts.edu
+
+*** DONE write letter for postpone of the submission
+    CLOSED: [2017-01-06 Fri 11:58]
+    - State "DONE"       from "TODO"       [2017-01-06 Fri 11:58]
+    -     
+@@date to be populated upon sending@@
+
+SORO-2016-0065 - Nonparametric Local Learning for Hyper-Elastic Robotic Control: An Enabling Technique for Effective Endoscopic Navigation
+
+Dear Mr. Ryan:
+
+I am writing to ask for deferment of the revision deadline (currently 27 Jan 2017) to 28 February 2017, on behalf of all the co-authors.
+
+We appreciate the prompt response for our submission. The reviewers did suggest many constructive recommendations. 
+
+We need more time to address important issues pointed out by the reviewers such as paper organization, clarity of novelty and methodology and preparing additional experimental data, so as to substantially improve the manuscript. 
+
+Thank you for consideration.
+
+Sincerely,
+Dr. Kin Chung Denny Fu
+Research Associate 
+Department of Mechanical Engineering
+The University of Hong Kong
+
+
+    - State "DONE"       from "TODO"       [2017-01-04 Wed 17:00]
+Dear Dr. Barry Trimmer,
+
+Thank you for the prompt response for our submission.
+The reviewers suggest many constructive recommendations. 
+In response to all the reviewers' comments, in addition to the important issues such as paper organization, clarity of novelty and methodology, we have decided to provide additional experimental data in order to substantially improve the manuscript. 
+Therefore, we would like to ask for deferment of the revision deadline (currently 27 Jan 2017) to 28 February 2017.
+
+Thank you for consideration.
+
+Best regards,
+
+
+
+
+** reviewers' comment
+
+*** Reviewer: 1
+ N/A
+
+*** Reviewer: 2
+
+ Comments to the Author
+ This paper presents a soft robotic endoscope design and a non-parametric approach to identifying model inverses of the body. 
+
+ The paper seems very incomplete. The major contributions, as stated by the authors, should be questioned. FEA is used often for iteratively choosing a design for soft robotics, and the authors fail to mention this or cite relevant work. Non-parametric local learning for elastic robot deformation has been demonstrated by Yip et al., which precede developments of this paper. Finally, experimental validation is done on only one trajectory and is thus not convincing. Significantly more experimentation is required (more on this later).
+
+ A big assumption of this paper is that the environment is generally learned beforehand and adjustments to this is corrected in real-time by closed-loop control. Section V seems to mention the inverse model continuously estimates “Delta u = phi(.)” but how this is actually done online is not described. Even if it was not performed and the system was static, the closed-loop control, under reasonable errors, would account for the disturbances, which means that given the very minimal data shown in this paper, this reviewer has no confidence that this method can be used “online”. If this is a contribution that is being claimed, then the authors need to show numerically or visually how values change in phi during controlled disturbance experiments (under varying conditions). 
+
+ Section I. 
+ Significant references missing regarding prior work in model-free, non-parametric methods in position/force control. Some in continuum/endoscopic robots alone are:
+ -	M. C. Yip and D. B. Camarillo, “Model-less feedback control of continuum manipulators in unknown environments,” IEEE Trans. Robot., vol. 30, no. 4, pp. 880–889, Aug. 2014.
+ -	M. Yip and D. Camarillo, “Model-less hybrid position/force control: a minimalist approach for continuum manipulators in unknown, constrained environments,” IEEE Robot. Autom. Lett., vol. 1, no. 2, pp. 844–851, 2016.
+ -	M. Yip, J. Sganga, and D. Camarillo, “Autonomous Control of Continuum Robot Manipulators for Complex Cardiac Ablation Tasks,” J. Med. Robot. Res., vol. 1, no. 2, pp. 1750002, 2016.
+ -	D. Braganza, D. M. Dawson, I. D. Walker, and N. Nath, “A neural network controller for continuum robots,” IEEE Trans. Robot., vol. 23, no. 25, pp. 1270–1277, 2007.
+ -	K. Wu, L. Wu, C. M. Lim, and H. Ren, “Model-free image guidance for intelligent tubular robots with pre-clinical feasibility study: Towards minimally invasive trans-orifice surgery,” Proc. IEEE Int. Conf. Inf. Autom., no. August, pp. 749–754, 2015.
+ Scoping out the problem you plan to address in light of other work in the medical robotics and the overall robot learning space is important.
+
+ How would the size of this device compare to endoscopes today? How would this be made to be practical?
+
+ Section II.
+ Formatting on math equations seem to be above the normal line (e.g. P5.53).
+ P7.41 why choose a switching based control – would you not get oscillatory performance from your actuators at singularities that would degrade system performance? This also means that you are not choosing actuation with any optimality in mind. Why not choose some min-norm method so that you always get smooth actuation? 
+ Section V. 
+ The constrained experiment is poorly controlled: a “general” push is not repeatable.
+ Other comments
+ -	P1.51 “metallic cables serially connected” is not clear. It should be parallel?
+ -	P4.8 “due to incompressibility of silicone rubber” – do you mean compressibility? Silicone rubber is certainly compressible and it is significant.
+ -	P8.12 “it is invulnerable to kinematic singularities” – a strong statement, since you can imagine that the lag of learning vs actuation near a singularity will cause it to present limit cycles, or worse, instability.
+ -	Table 1 is an Algorithm, not a Table, and which should be changed.
+
+
+*** Reviewer: 3
+
+ Comments to the Author
+ The manuscript presents a model-free closed-loop control method for position control of robot appendages made of soft materials. The control method does not assume any models of kinematics, statics or dynamics. Instead it applies an existing learning technique i.e. locally weighted projection regression (LWPR) for position control. The control method was tested with a 3-DOF robot appendage made of fibre-reinforced silicone-based elastomers and electromagnetic tracking. Results show (1) without human disturbance, an average tip positioning error 0.7 degree and a maximum positioning error of 2.3 degrees was achieved; (2) with human disturbance, the positioning error stabilized to 2.8 degrees; and (3) upon application and removal of disturbance, the positioning error returned and stabilized within three seconds.
+
+ The topic of manuscript is of significance to control of soft-material robots and other continuum robots. To the best of my knowledge, model-free closed-loop control of these robots has only been minimally studied [20, 21, R1, R2]. In my opinion, it is worth much further investigation, given the limitations from open-loop control and model-based closed-loop control. The authors have given good reasons in Introduction on the limitations from model-based closed-loop control.
+
+ The demonstrated results are worth publication; however the manuscript needs major revision so that several aspects can be clarified.
+
+ Major comments:
+ 1.	The contribution of the work needs to be further clarified. The authors should definitely make a comparison between their achieved results to existing control methods for soft-material and other continuum robot appendages. These methods could be any or all of the following categories:
+ •	model-free closed-loop approach based on ANN [20, 21, R1]
+ •	model-free closed-loop approach based on other techniques [R2]
+ •	closed-loop approach based on piecewise constant curvature (PCC) kinematic models [R3-R5]
+ •	closed loop approach based on non-PCC kinematic models [R6]
+ •	open-loop control
+ Metrics for comparison could include error and responding time, etc. The comparison could be shown in a table at the beginning or at the end of the manuscript. I believe this comparison will clarify the contribution of the work.
+ On the other hand, the three aspects of the contribution as claimed now in Introduction can be revised. Specifically, the first aspect (i.e. FEA and design) shall be removed. The second and the third aspects shall be revised according to the findings from the comparison above.
+
+ 2.	The learning technique LWPR needs further explanation. For example, which value needs to be optimized? Is it from equations (5) and (6). A table showing how the LWPR algorithm works would help.
+
+ 3.	The generality of the control method needs to be clarified. The presented work shows the method worked on a single-segment 3-DOF robot appendage. Would it work for multiple segments such as those in references R1, R5 and R7? Would it work for smaller and larger robots? 
+
+ 4.	The structure of the manuscript shall be improved.
+ 4.1.	Section II Soft Manipulator may be integrated to Section IV Experimentation. The reasons are (1) this is a specific platform (2) this is about design and fabrication.
+ 4.2.	The first paragraph in Section III is redundant since it has been covered in Introduction.
+ 4.3.	Subsection III.C alone is not about learning, III.C, III.D, III.E together form the learning technique. They should be put together.
+ 4.4.	Subsection III.C: “According to Jan et al. [26], the inverse model of a rigid link robot can be learnt using spatially localized nonparametric learning techniques (e.g., LWPR), given that the robot configuration is well-defined and measurable.” Gives the justification of the chosen technique and may be moved to the last paragraph of Introduction.
+ 4.5.	The first paragraph of subsection III.E may be moved to Introduction.
+ 4.6.	Subsection IV.B may be better integrated with III.D to provide a more complete understanding how data were pre-processed. Is there a reason why they are separated?
+ 4.7.	Since Experimentation and Results were arranged in two sections, the section of Results and Discussion should focus on results. The section of Experimentation needs to be improved with the addition of following content:
+ 4.7.1.	A subsection of experiment methods is needed. It may include details on how it was done with training, testing with the first set of experiments (baseline, no disturbance), and testing with the second set of experiments (with disturbance)
+ 4.7.2.	A subsection of performance evaluation is needed, as the present IV.B does not contain content on performance evaluation. In this new subsection, the following performance metrics shall be defined and explained: nMSE, number of receptive fields, absolute tracking error. 
+ 4.8.	The second paragraph of section VI may be moved to Introduction because it is about motivation.
+
+ 5.	In Introduction, methods based on non PCC kinematic models e.g. those based on geometrically exact models [35, R6] and other models shall be further introduced.
+
+ 6.	References need to be improved. Besides those related to model-free closed-loop control [R1, R2] and model-based closed-loop control [R3-R6], authors should include references to similar robot design [R7] and references to work using EM tracking in closed-loop control of continuum robots (it has been used for quite some times).
+
+ Minor comments:
+
+ 7.	First paragraph in Introduction: “Typical robot actuations are driven by fluidic input to delicate chambers embedded inside the soft materials [1-3].” This is not typical soft-material robots. Refer to [R8] for a categorization of actuation in soft-material robots.
+
+ 8.	First paragraph on page 3: “…the change in mapping often exceed the amount of compensation that the NN can provide, as its network topology (number of hidden layers) is fixed.” Citation is need to make this claim of con of ANN.
+
+ 9.	Add quantitative results into conclusions.
+
+ 10.	Fig 5 may be removed since it is included in Fig. 6.
+
+ Additional references:
+ [R1] R. Kang, D. T. Branson, T. Zheng, E. Guglielmino, and D. G. Caldwell. Design, modeling and control of a pneumatically actuated manipulator inspired by biological continuum structures. Bioinspiraton& Biomimetics, 8: 036008, September 2013.
+ [R2] M. C. Yip and D. B. Camarillo. Model-less hybrid position/force control: A minimalist approach for continuum manipulators in unknown, constrained environments. IEEE Robotics and Automation Letters, 1(2):844–851, July 2016.
+ [R3] H. Wang, W. Chen, X. Yu, T. Deng, X. Wang, and R. Pfeifer. Visual servo control of cable-driven soft robotic manipulator. In Proceedings of the 2013 IEEE/RSJ International Conference on Intelligent Robots and Systems, 3-7 November, Toyko, Japan, pages 57–62, 2013.
+ [R4] A. D. Marchese, K. Komorowski, C. D. Onal, and D. Rus. Design and control of a soft and continuously deformable 2d robotic manipulation system. In Proceedings of 2014 IEEE International Conference on Robotics and Automation, 31 May-7 June, Hong Kong, China, pages 2189–2196, 2014.
+ [R5] A. D. Marchese, R. Tedrake, and D. Rus. Dynamics and trajectory optimization for a soft spatial fluidic elastomer manipulator. The International Journal of Robotics Research, 35(8):1000–1019, July 2016.
+ [R6] M. Giorelli, F. Renda, M. Calisti, A. Arienti, G. Ferri, and C. Laschi. A two dimensional inverse kinetics model of a cable driven manipulator inspired by the octopus arm. In Proceedings of the 2012 IEEE International Conference on Robotics and Automous Systems, 14-18 , St. Paul, USA, pages 3819–3824, 2012.
+ [R7] K. Suzumori, S. Iikura, and H. Tanaka. Development of flexible microactuator and its applications to robotic mechanisms. In Proceedings of the 1991 IEEE International Conference on Robotics and Automation, 9-11 April, Sacramento, CA, USA, pages 1622–1627, 1991.
+ [R8] L. Wang and F. Iida. Deformation in soft-matter robotics. IEEE Robotics & Automation, 22(3):125–139, September 2015.
+
+*** Reviewer: 4
+
+ Comments to the Author
+ In this paper, the authors present a nonparametric local learning approach for a hyper elastic robotic control. The paper is generally well-written and organized. However, the paper may be improved in the following aspects: 
+ 1.	The introduction cites relevant literature, such as the endotics and Aer-O-Scope. The authors might consider adding a brief discussion of the limitations of these two products and the technical innovation of your design. 
+ 2.	There are too many details about the implementation of the FEM simulation in ABAQUS. However, these details are not closely relevant to the topic. For example, the description of the C3D8RH and T3D2 element. These are basic implementation knowledge in ABAQUS. The author might need to make the FEM section more concise. 
+ 3.	Page 5, line 38-39, the authors mentioned that linear truss elements being placed along each chamber in a layer-by-layer manner. I assume that these truss are linear and in parallel. However, these elements are used to model the helical strain-wrapping constraint. Do you think it is accurate linear truss to model the helical ones?
+ 4.	Page 5, line 49, the authors mention that ‘… regulating the volumetric fluid input’. However, in Fig.2 caption, the authors mention that ‘different levels of pneumatic pressure’. Please make sure which power source do you use in the experiment, fluid or pneumatic? A similar issue can be found in the caption of Fig.3 and page 9, line 55. 
+ 5.	In Fig. 3, please explain how to calibrate the steering angle.
+ 6.	In general, the FEM section is not exciting. There is no ‘optimization’ according to the contributions clarified in the introduction section. There is no comparative study to show the ‘optimal’ design. The method used here is also not novel. The authors need to make this section more concise or show different comparative study results. 
+ 7.	In the control method section, subsection C, the learning technique is not explained clearly. To be more specific, it is difficult to understand this technique with only one equation in this subsection C. According to the introduction section, the major contribution of this paper is the non-parametric local learning algorithm. Therefore, it is required to explain the methodology in detail. 
+ 8.	 In the result section, the authors tested the control algorithm by tracking a spatial curve. The video looks interesting. However, to fully evaluate the performance of the proposed algorithm, it is anticipated to provide the comparative study. To be more specific, the kinematic control method vs. nonparametric learning method.  The tracking error from 0s to 20s looks a bit large from my understanding considering the small dimension of the soft robot hardware. How about the close loop control performance? Since EM tracking technique has been used in clinical scenarios already, it is possible to have the real-time position feedback to close the control loop. 
+
+ In general, this is a good paper that makes contribution to the state of the art. The comments above are intended to illustrate opportunities for enhancement of the paper.
+
+   
+** DONE revise paper according to [[reviewers' comment]]
+   CLOSED: [2017-03-02 Thu 18:00] SCHEDULED: <2017-02-13 Mon 11:00-19:00>
+   - State "DONE"       from "TODO"       [2017-03-07 Tue 22:52]
+   - <2017-02-09 Thu>. Brian is improving the redundancy I will focus on the literature review and the revision of introduction. 
+   - <2017-02-08 Wed 11:30-17:00>. prepare the [[response letter]] template and the [[todo list for the response letter]] 
+   
+   
+
+** title name
+- Nonparametric Online Learning Control Framework for Soft Continuum Robot: An Enabling Technique for Effective Endoscopic Navigation
+- A Control Framework for Soft Continuum Robot using Nonparametric Online Learning: An Enabling Technique for Effective Endoscopic Navigation
+- 
+
+
+
+** response letter
+[[file:~/Work/HKU/Nonpara_softrobot_control/SoRo2016/2nd_submission/response_letter.org]]   
+
+*** todo list for the response letter
+  - compare our nonparametric-learning-based control method to the literature
+    - model-free vs model-based
+      - particularly with the PCC kinematic model
+    - LWPR vs ANN
+      - #R3-C4
+      - #R3-C8: search for relevant literature for the claim of con of ANN
+    - vs the suggested
+  - include also the reference of similar robot design and close-loop control of continuum robot using EM tracking
+    - not necessary in the introduction
+  - additional experiments
+    - possible detail settings
+      - case 1: no online update of the inverse mapping
+      - case 2: case 1 + PID feedback
+      - case 3: online update of the inverse mapping
+      - case 4: case 3 + PID feedback
+    - explain clearly why the experimental comparison to model-based method (the kinematic control method) is not necessary
+    - comparison to existing algorithms?
+      - NN-based control
+	- how to show LWPR based is superior?
+  - explain the proposed feedback control method in details
+    - how the positional feedback is used online and why/how this feedback can compensate for the tracking error
+    - case 1 and case 2: if we do not update the inverse "Delta u = phi(.)" online
+      - clearly state the inverse mapping Delta u = phi(.) is not updated online.
+    - case 3 and case 4: if we update the inverse "Delta u = phi(.)" online
+      - numerically or visually show the value of phi under disturbance
+  - How would the size of this device compare to endoscopes today? How would this be made to be practical?
+    - #R4-C1: more discussion about the limitiation of endotics and Aer-O-Scope.
+  - fix the equation typesetting
+  - may need to plot also the action output of Delta u = phi(.) and also the Delta u + feedback
+    - to show the "smoothness"
+  - explain why the silicon is considered as "incompressibile" for the FEA simualation
+  - Revise explanation of LWPR
+    - explain how the LWPR results is used in our case
+    - give a pseudo code of how the data is update in the training phrase
+  - Generalize the data-preprocessing scheme, if possible
+    - e.g. the trainig data is selected according to some optimality which can be formulated (e.g. minimum 2-norm)
+  - improve the paper organization
+    - move the FEA section to the experiment section
+      - make the FEM section more concise
+    - remove the 1st paragraph of section III
+    - combine III.C, III.D and III.E
+    - move description of [26] to the introduction to explain the choice of LWPR
+    - move the 1st paragraph of section III.E to introduction
+    - consider combine III.D and IV.B about the data preprocessing
+    - improve section IV
+      - add description of the experiment methods
+	- e.g. with and without feedback
+      - add description of the performance index
+    - consider moving the 2nd paragraph of section VI to the introduction about the research motivation
+    - put quantitative results in the conclusion
+  - figures and tables
+    - revise the algorithm
+      - add pseudo-code of the LWPR
+      - revise the current pseudo code according to the revised data preprocessing scheme
+    - consider removing fig. 5
+    - probably we will remove fig. 3?
+  - FEA section
+    - #R4-C2: description of C3D8H and T3D2 is basic implementation knowledge in ABAQUS
+    - #R4-C3: Do you think it is accurate linear truss to model the helical ones
+    - #R4-C6: explain the FEM design optimization in order to answer Reviewer #4.
+      - may need to do this even we will treat the FEA section as experimental setup, or we admit the FEA novelty is weak
+  - revise description with wordings fluidic and pneumatic which make confusing of the power source.
+  - discussion about the steering problem with varied based frame in response to #R4-C9
+
+
+*** introduction - model-based approach
+- To simplify the modeling process, piecewise constant curvature (PCC) assumption is one of the widely-used techniques [13, 14, 16, 18] to obtain close-formed solutions [19, 20].
+- This enables real-time kinematic control of curvature discrepancy to attain the desired pose [21] and to perform dynamic motion primitives [22] for fluidically-driven soft continuum robot.
+- The parameters that govern the analytical models can be estimated online during robotic manipulation [23].
+- Other model-based methods have been proposed without taking the PCC assumption, such as approximation of trunk-like continuum structure to infinite degree-of-freedom (DoF) system [24], and modeling a series of pneumatic artificial muscles as spring-mass systems [25, 26], which can be implemented in a hierarchical controller to generate stereotyped motions of octopus-like manipulator [25].
+- Recently, the Cosserat theory [27] of elasticity has been shown capable of predicting underwater motions of a cable-driven, octopus-like soft robots [28] by deducing their geometrical exact formulations.
+- Yet, external disturbance to the robot, such as gravity, payload and external interaction, can promptly invalidate those suppositions.
+- These over-simplified assumptions would substantially degrade the model’s reliability in real applications. Moreover, structural parameters in the kinematics have to be determined prior to the modeling process. The search for these invariant coefficients is heuristic in nature. This might induce further complications on mapping the robot motion analytically. Besides, such invariant can only hold valid upon slight modification of the robot, as they possess strong correlation with the robot’s mechanical structure. Inevitably, the analytical model has to be revisited after any major change in the robot structure, further diminishing the effectiveness of such an approach.
+
+**** old 
+To simplify the modeling process, piecewise constant curvature (PCC) assumption is one of the widely-used techniques [13, 14, 16, 18] to obtain close-formed solutions [19, 20]. This enables real-time kinematic control of curvature discrepancy to attain the desired pose of a fluid driven soft continuum robot [21], as well as precise manipulation of a multi-segment soft fluidic robot to perform dynamic primitives such as grabbing and bracing [22]. The parameters that govern the analytical models can also be estimated online, as demonstrated in the visual-servo adaptive controller for manipulation of a fluid driven soft robot in a two-dimensional plane [23]. Other model-based methods have been proposed without taking the PCC assumption. Approximation to infinite degree-of-freedom (DoF) systems is one of this kind, and has been successfully applied for trunk manipulation [24]. Spring-mass models have been applied to model the dynamics of octopus-like manipulators [25, 26]. In [25], based on modeling a series of pneumatic muscle actuators as spring-mass systems, a bio-spired hierarchical controller has been proposed to generate stereotyped motions [25]. Recently, the Cosserat theory [27] of elasticity has been shown capable of predicting underwater motions of a cable-driven, octopus-like soft robots [28] by deducing their geometric formulations. Yet, external disturbance to the robot, such as gravity, payload and external interaction, can promptly invalidate those suppositions. These over-simplified assumptions would substantially degrade the model’s reliability in real applications. Moreover, structural parameters in the kinematics have to be determined prior to the modeling process. The search for these invariant coefficients is heuristic in nature. This might induce further complications on mapping the robot motion analytically. Besides, such invariant can only hold valid upon slight modification of the robot, as they possess strong correlation with the robot’s mechanical structure. Inevitably, the analytical model has to be revisited after any major change in the robot structure, further diminishing the effectiveness of such an approach.
+
+*** introduction - model-free approaches
+With the foreseen difficulty of developing the analytical/kinematic model, research attempts were made to control the soft, pliable robot using non-parametric, learning-based approaches. The idea is to obtain forward/inverse mappings for kinematics/dynamics robot control based on measurement data only. Model-free control methods can also be developed based on direct modeling architecture [32], where the inverse mapping is directly obtained. This mapping is an inverse transition model of the robot, which could be dynamic, particularly when involving contact between the robot and the environment, such as soft tissue. The use of NNs has been proposed to globally approximate such inverse mapping between end-effector and robot actuation [33][34]. Such an approach can compensate for uncertainties in robot dynamics [33], and yield even more reliable solutions when compared to using an analytical model [34]. Previous studies of NNs mostly consider simplified scenarios, such as a non-redundant manipulator and contact-free situation [33, 34]. Although redundant actuated robotic systems can be controlled in lower dimensionality in hierarchical manner, it may require pre-defined movement patterns (primitives) for every specific task goals [25]. Moreover, there has been a great demand on using machine learning approaches to address the change in inverse mapping of the hyper-elastic robot upon contact [1]. A kind of Jacobian-based model-free controller has shown its capabilities to manipulate a planar cable-driven continuum robot in constrained environment [R2]. Such controller indirectly approximates the inverse model of the robot using constrained optimization problem, which is based on a single Jacobian forward kinematic estimation. Despite taking pseudo inverse of the forward Jacobian could also be feasible in some applications such as manipulation of multiple pre-curved concentric tubes [Wu], such optimization can constrain the solution to valid actuation ranges; nevertheless, the single Jacobian may become invalid due to contacts [R2]. Model-free approach takes advantages by neither acquiring accurate structural parameters for analytical modeling, nor demanding expertise on the material science behind the constituent material that is used to build the robot. However, there are still no example that demonstrates manipulation of redundantly-actuated soft continuum robot in three-dimensional task space, and is adaptive to external disturbance. 
+
+In this paper, we propose a control framework based on nonparametric local learning technique. Nonparametric local learning methods, such as [35, 36], possess the ability to learn the high dimensional inverse transition of rigid-link robots. The essence of nonparametric local methods is to construct a batch of locally weighted models that collectively approximate the inverse mapping. Each of these models is spawned and updated in an independent manner, such that the overall architecture can be rapidly transformed to accommodate new input data. Meanwhile, the weighted global approximation can be optimized on the fly, and consistent with the desired control behavior [36]. Such nonparametric local learning approach can thus facilitate fast online correction of the learning model [37]. Therefore, the proposed framework is suitable for providing a rapid response to soft robot manipulation within constrained environments. The major contributions of this work are:
+
+
+A series of model-free controllers for cable-driven continuum robots have been proposed in [29-31] which employed indirect modeling architecture [32].
+
+- 
+- 
+
+- 
+- 
+- Their methods iteratively estimate a single forward kinematic mapping, and search for optimal solutions from infinite number of possible actuation patterns.
+- 
+- These online-updated controllers were attempted to applied in the use of manipulating catheter such as cardiac ablation tasks [29]. 
+
+
+- Workspace exploration is a prerequisite to collect training data for learning the controller. It is desirable to have accurate enough kinematic data to initialize the controller offline, since it is impractical to carry out robot exploration in the confined trans-luminal workspace. We propose to use Finite Element Analysis (FEA) to sample the kinematic data for the offline learning process. FEA has been widely used in the design optimization and miniaturization of soft robots [13]. Not only can the FEA accurately predict the highly deformable behaviors, but it can provide data for characterization of inverse kinematic relations for control [Largilliere2015]. However, the application to robotic control has only been minimally investigated in non-continuum deformable structure [Duriez2013,Largilliere2015].
+
+
+
+*** contribution
+The major contributions are:
+- The first attempt of online nonparametric local learning technique for direct modeling of the inverse kinematics of a redundantly-actuated, soft fluidically-driven endoscope prototype. (Section II)
+- Novel integration of FEA into model-free control method for accurate inverse model initialization to facilitate fast convergence (< xx second) in early state of the online learning. (Section IV) 
+- Experimental validation of the control performance and adaptability of the proposed method. This work is the first to demonstrate precise (max. xxxmm) 3D trajectory tracking of soft continuum robot even under dynamic external disturbance (max. xxxN)  (Section IV).
+
+- Online nonparametric local learning technique capable of approximating the inverse transition of a redundantly actuated, hyper-elastic robot deformation for task-space kinematic control;
+- Initialization of online learning controller by using FEA simulated robot motion data. This can eliminate the need for random exploration before the controller deployment;
+- Experimental validation of accurate and consistent trajectory tracking even under external constraints.
+
+*** revision of the methodology 
+
+**** soft continuum robot
+     A generic, fluidic-driven soft continuum robot made of RTV (Room Temperature Vulcanization) silicone (Ecoflex 0050, Smooth-on inc.) is designed and fabricated to evaluate the proposed control framework for endoscopic navigation (Fig. xx). It has 3 chambers, allowing either pneumatic or hydraulic actuation. By regulating the internal pressure inside the chamber, the robot can move in large panoramic workspace with relatively large bending angle (>150˚). In order to generate an effective bending moment under a reasonable volume/pressure fluidic input, Kevlar strings are installed to enforce axial anisotropic expansion [27]. It has an outer diameter of 20 mm and a length of 90mm is used. Three major phases involved in the robot fabrication: i) Three cylindrical actuation chambers made of RTV silicone are cast separately with inner molds; ii) Kevlar strings are wrapped densely in single helical structure along each soft chamber; iii) Additional layers of silicone are cast to house the three inflatable chambers into one. This could fix the strings against their dislocation, even after numerous bending actions. Comparison to existing clinical endoscopy: The robot motion can be found in the provided video.
+     Gradual, smooth regulation of the fluidic flow rate allows steady bending of the presented soft manipulator. It also allows quickly reaching an equilibrium of fluid volume and pressure, minimizing the residual motion generated during such fluidic actuation. During endoscopic navigation within small and confined spaces (e.g. duodenum), such quasi-static motion characteristic [32] can facilitates effective, precise targeting of the endoscopic camera or interventional tools (e.g., biopsy forceps or brush cytology) at the surgical regions of interest, thereby avoiding inadvertent damage to delicate tissue and potential discomfort to the patient.
+
+**** Characterization of robot motion transition
+     To mathematically describe the motion transition of the soft robotic manipulator, let \bm{u}_k \in \mathcal{U} be the fluid pressure (at equilibrium) at time step k in the actuation chambers where \mathcal{U} \subset \Re^3 denotes the control space. Also let \boldsymbol{\theta}_k be the static robot configuration state when the chambers have fluid pressure at equilibrium u_k. This configuration state corresponds to a particular distal tip position \bm{p}_k \in \Re^3 and orientation normal \bm{n}_k \in \Re^3 in the Cartesian space (Fig.XX). These are collectively represented in \bm{x}_k = [\bm{p}^T,\bm{n}^T] \in \Re^6. The forward transition model of the soft robot can be described as follows:
+     \boldsymbol{\theta}_{k+1} = f(\boldsymbol{\theta}_k, \Delta \bm{u}_k)
+     \bm{x}_k = h(\boldsymbol{\theta}_k)
+     where \Delta \bm{u}_k = \bm{u}_{k+1} - \bm{u}_k denotes the change of the fluid pressure. The motion transition function f is a continuous mapping that depends on the current robot configuration \boldsymbol{\theta}_k. Compared to the case of rigid-link robots where the configuration can be well-defined by the joint kinematics, in the case of soft robot it is difficult to describe the exact configuration. Note that \boldsymbol{\theta}_k can be potentially a infinite-dimensional vector, because soft continuum robot can be considered as having infinite number of joints [R6]. The nonlinear function h maps the configuration \boldsymbol{\theta}_k to its tip position and orientation \bm{x}_k.
+
+
+***** The inverse problem for control
+      Typical endoscopic navigation requires delicate articulation of the distal tip so as to provide accurate positioning and easy access to the soft tissue lesion. A micro-camera at the soft robot tip provides forward vision, guiding the interventional instruments to be deployed from the tip via the biopsy channel. In particular, this endoscopic navigation of a soft robot can be regarded as a tele-operative targeting task, in which the operator has to aim the distal tip at a target on the wall of lumen. This gives rise to defining the robot task space coordinate by its viewing direction (i.e. orientation normal) \bm{s}_k \equiv \bm{n}_k. According to (1), consider a mapping \bm{s}_k=h_s(\boldsymbol{\theta}_k), we have the following task space transition mapping:
+      \bm{s}_{k+1} = g(\boldsymbol{\theta}_k,\Delta \bm{u}_k).
+      The control problem is to find the change of fluid pressure \Delta \bm{u}_k such that the a desired change of view direction \Delta \bm{s}_{k}^*= \bm{s}_{k+1} -\bm{s}_k can be achieved. Thus the controller should approximates the inverse of g:
+      \Delta \bm{u}_k = \Phi (\Delta \bm{s}_k, \theta_k).
+
+
+
+      
+- general formulation in terms of robot configuration only
+- many possible solution
+- the concept of null space
+- generally ill-posed
+- relationship between the unobservable robot configuration and the pair of air chamber pressure and endeffector 3D position
+  - our hypothesis
+  - with figure illustration
+  - to what extend this assumption will be invalid
+  - under external disturbance
+  - too long
+  - lead
+
+**** Learning the inverse problem using nonparametric local technique
+- brief introduction to nonparametric learning
+  - solely depend on data
+  - formulation of kernel-based regression
+  - result equal to average of given sampled data
+  - learning the ill-posed problem is generally difficult
+    - some existing approaches given in [Nygen]
+      - indirect architecture[yips], distal teacher [ref]
+	- constrained optimization problem
+      - direct modeling approach [peters, ...]
+	- e.g. create a set of dataset that learning is feasible
+	  - may not be applied to online learning
+	- learning data directly using local learning
+- explanation why learning the inverse is valid in the vicinity of a robot configuration
+  - figure illustration
+- global inverse = linear combination of locally learned inverse mappings
+  - detail will be discussed in the next subsection.
+
+**** Controller design 
+- brief description of the control architecture
+  - schematic diagram
+***** Online learning implementation 
+- identification of local models
+  - using forward models
+  - given a batch of data
+- the update mechanism when a new data is provided
+- pseudo code
+
+***** Linear combination of local controllers
+- controller formulation of the linear combination
+- optimality for computing null space behavior
+- pseudo code
+
+
+*** conclusion
+- We have proposed a model-free control framework which adopts an online nonparametric local learning technique for manipulation of a redundantly-actuated, fluidically driven soft continuum robot in the presence of dynamic external disturbance. Nonparametric techniques are capable of representing highly nonlinear functions by data solely, which is particularly suitable for characterization of hyperelastic structure. To accommodate the flexible feature of soft robot, we approximate the global inverse kinematics by a linear combination of many locally learnt inverse kinematic model. Such global approximation acts as the model-free controller, where the behavior of the redundant actuator can be optimized by a user-defined criterion, and simultaneously fulfilling the control objective defined in task space coordinates. In addition, the controller is adaptive to dynamical changes in environment, where each local model can be updated online independently according to newly acquired data. This equips the robot with ability to maintain control accuracy under external dynamical disturbance. This is the first attempt of such direct inverse modeling using online nonparametric learning technique for control of redundantly-actuated soft continuum robot.
+
+
+- We have integrated FEA into the learning control framework for initialization of the robot's inverse model accurately. FEA is capbale of simulating the actuation behavior of the hyperelastic robot, and offer enough sample data covering the entire workspace at high resolution. This avoids the need of time-consuming random exploration for initialization of learning, which may not be practical in surgical applications. The proposed controller can hence be calibrated offilne using FEA simulated data, and ready for endoscopic navigation procedure.
+
+
+- The proposed online learning method have been experimentally validated. In the constrained experiments, the endoscope prototype could follow a three-dimensional trajectory with accuracy of average XXX and max XX, and attained the almost the same tracking accuracy (XXX and max XXX) after xxx second upon the act/removal of external disturbance (max. xxxN). This work is the first to demonstate model-free close-loop control of a fluidically-driven soft continuum in three-dimensional task space under dynamic external disturbance.
+
+The inverse model can quickly adapt the inverse mapping upon contact with the external interaction at XXXs. It keeps following the trajectory with a small average error of XXX. The controller also remains stable and re-adapt after the removal of the constraints. 
+
+
+
+Motion constraints associated with external force/disturbance commonly occurs, particularly during surgical procedures such as trans-luminal endoscopic navigation. Reliable manipulation under constraints is a crucial ability of robots to achieve therapeutic procedures which require precise and reliable targeting at surgical lesions with endoscopic instruments. In the case of conventional rigid-linked robot, the positional error due to the interaction with constraint is often considered as perturbation. The error can hence be compensated by using a high-gain linear feedback controller, given that the inverse model is readily available from the kinematics chain. Such approach is not directly applicable to soft robot due to their mechanical compliance that inevitably induces much larger positioning errors. In addition, the interaction force may also alter the force equilibrium of the robot and therefore, substantially degrade the reliability of the predetermined inverse model when this manipulation error is caused by a perturbation. 
+
+*** TODO compared with all the literature provided by the reviewers
+- write email to ask for postpone
+
+** DONE Revise paper formatting for Soft Robotics
+   CLOSED: [2016-10-27 Thu 01:51]
+   - State "DONE"       from "TODO"       [2016-10-27 Thu 01:51]
+   - check list [100%]
+     - [X] grammar and spell check
+     - [X] help CK and Prof. Sze to create a Soft Robotics account
+     - [X] add Author Disclosure statement 
+       No competing financial interests exist.
+     - [X] only correspondence author's email and address are needed
+     - [X] Separate figure/table and main text
+     - [X] change Table 1 title on the top
+     - [X] use TABLE. 1 in Table Title and use all capital letters 
+     - [X] Label figures and tables inside the files in addition to naming the file with the figure or table number. (i.e.: When figures or table files are opened, the figure or table number should appear inside the file.)
+     - [X] use "FIG." instead of "Fig." in figure captions.
+     - [X] Revise Reference format and intext style (not [] but superscript)
+       - take a soft robotics paper for style reference
+       - list out all author instead of using et al.
+       - use Abbreviation for journals <- check correctness of the abbreviation as well 
+       - Suggested format:
+         - Journal:   Margheri L, Laschi C, Mazzolai B. Soft robotic arm inspired by the octopus: I. From biological functions to artificial requirements. Bioinspir Biomim. 2012 Jun;7(2):025004.
+	 - Book: Robot Ethics: The Ethical and Social Implications of Robotics (Intelligent Robotics and Autonomous Agents series)  Lin P,  Abney K, Bekey GA. (Eds).  Cambridge, MA; MIT Press: 2011.
+     - [X] Line illustrations must be submitted at a minimum of 900 DPI.
+     - [X] Halftones and color photos should be submitted at a minimum of 300 DPI. 
+     - [X] Saveas figures to TIFF or EPS
+       - color must be saved as CYMK not GB.
+     - [X] revise equation formatting and ensure it has no problem when save and open in Compatibility Mode (i.e. .doc)
+     - [X] save in a new file without track changes before submission
+     - [X] final check
+
+
+
+
+
+
+
+
+
+** DONE write cover letter
+   CLOSED: [2016-10-27 Thu 02:59]
+   - State "DONE"       from "TODO"       [2016-10-27 Thu 02:59]
+   Dear Editor of Soft Robotics
+   
+   We are pleased to ask your consideration of the enclosed manuscript, titled "Nonparametric Local Learning for Hyper-Elastic Robotic Control: An Enabling Technique for Effective Endoscopic Navigation".
+   
+   Hyper-elastic continuum robots could enhance safety that is demanding in endoscopy. Model-based control approaches that rely on geometric approximations could be inadequate. To accommodate the robot's hyper-elasticity and dynamics external interactions within confined environment, we propose a generic control framework for hyper-elastic continuum robots based on nonparametric local learning technique to learn the robot's inverse transition model, combining with advanced finite element analysis (FEA) formulation for design optimization. Results show that trajectory tracking could be achieved even under noticeable dynamic constraints, which indicate promising potentials for endoscopic applications. We believe the mentioned methods coincides with the scope of Soft Robotics. 
+
+   Yours sincerely,
+   On behalf of all authors
+   Kit-Hang Lee
+
+
+
+
+
+
+
+
+
+
+
+
+
+** DONE Revise paper according to Kasper's comment for soft robotic
+   CLOSED: [2016-10-24 Mon 13:49] SCHEDULED: <2016-10-08 Sat>
+   - State "DONE"       from "WAITING"    [2016-10-24 Mon 13:49]
+   - State "WAITING"    from "DONE"       [2016-10-12 Wed 11:41] \\
+     sent the revision to Kaspar, waiting for his reply
+   - State "DONE"       from "TODO"       [2016-10-08 Sat 17:21]
+   [[file:~/Work/HKU/Nonpara_softrobot_control/SoftRobotics_2016/][file:~/Work/HKU/Nonpara_softrobot_control/SoftRobotics_2016/]]
+
+*** missing references
+- Design of nature-inspired manipulators actuated based on soft material properties has become one of the most engaged research areas in robotics [ref?].
+- These metallic structures also come with a high rigidity of the scope tip, which may increase the risk of causing trauma or even perforation when the scope is forcefully pushed against the wall of a confined lumen or cavity [8]. This has motivated the development of soft robotic instruments for surgical interventions [ref?].
+- However, there has been a great demand on using machine learning approaches to address the change in inverse mapping of the hyper-elastic robot upon contact [ref?]. Previous studies of NNs mostly consider simplified scenarios, such as a non-redundant manipulator and contact-free situation [ref?].
+
+*** unclear description 
+- section III A
+  - where u_k \in R^m
+    - kasper: I am not familiar with these types of equations. Or is there a formatting issue?
+  - x_k = [p,n]^T \in R^6
+    - kasper's: Again, equation not clear.
+  - Function denotes the observation
+    - kasper: not clear
+- section III B
+  - In particular, this endoscopic navigation of a soft robot can be regarded as a tele-operative targeting task, in which the operator has to aim the distal tip (e.g., the endoscopic camera) at a surgical target on the cavity surface using a motion input device --- not clear----.
+  - This gives rise to a robot task space defined directly on the inner surface of the cavity (Fig. 4).
+    - kapser: Why do you call this a cavity? What about curved surface? Or hemisphere?
+- section III C
+  - Many current advances in positional tracking systems, even for medical uses (e.g., NDI Medical Aurora Electromagnetic Tracking System), can provide submillimetre-level measurement of the robot tip position  and hence the operational space coordinate.
+    - kapser: Is that really true? I thought the measurements are in the millimeter range.
+  - Another challenge in adopting supervised learning algorithms is that it requires a one-to-one mapping in the inverse model, so as the training dataset ---- not clear!----.
+- section III D
+  - The proposed pre-processing scheme enforces one-to-one mapping of the training dataset  by picking out a subset of data that does not contain redundancy.
+    - kasper: What I mapped onto what? Not clear!
+  - In addition, the inverse solution should also avoid inflating all three chambers simultaneously, since it will further elongate the whole manipulator so that more pressured fluid must be pumped into the chambers to achieve the same bending effect, but causing structural damage to the robot ----- not clear---- explain in a sentence-----.
+  - This requirement is imposed on Line 5 of Table 1 that choose data comprised of at least one or more zero components in the inflation volume vector u_i + \delta u_i.
+    - kasper: Not sure that I understand this.
+- section IV A
+  - A tiny electromagnetic (EM) tracking coil is also attached to the distal tip of the soft robotic manipulator. It can track the position and orientation of the robot tip with an accuracy of 0.7mm (RMS) and (RMS) at 40Hz. This measurement serves multiple purposes in our empirical study of the control framework. At the training stage, it provides sample information of the motion transition model of the robot. After that, at deployment stage, the up-to-date position feedback  , together with the volumetric input, are streamed into the control module to enable the inverse estimation  based on the spatially localized model (i.e., the LWPR algorithm). This measurement {WHICH MEASUREMENT???} is recorded throughout the experiment to evaluate the system performance.
+
+
+
+*** Rewrite Section III: Method
+    
+A control framework is proposed to enable effective tele-operation of a soft robotic endoscope capable of performing diagnostic or therapeutic tasks inside a lumen or confined cavity. 
+# The major challenge of such control framework is to resolve the inverse motion transition and model the soft robotic endoscope with its inherently high redundancy. 
+The major challenge of such control framework is the acquisition of the inverse model of the robot motion transition. In particular, this framework focus on a {\em task-space inverse transition model} that maps from a desired task-space displacement to a control input.
+# The classical Jacobian-based approach requires the formulation of the robot kinematics and then solves its inverse. 
+One of the possible approaches is to obtain the inverse transition model from an analytical forward transition model [ref?]. 
+# However, the description of continuum robot mechanics could yield ordinary differential equations, but these may not be analytically invertible [17]. 
+However, the description of soft robot mechanics could yield ordinary differential equations which may not be analytically invertible [17]. 
+# To alleviate the need for the analytical formulation, we proposed a generic framework that could “learn” to control the soft robotic endoscope through the acquisition of its inverse motion transition model by means of nonparametric learning techniques (e.g., [23]). 
+To alleviate the need for the analytical formulation, we propose a generic framework that acquires the task-space inverse transition model by means of a nonparametric learning technique, namely locally weighted projection regression (LWPR) [23], to control the soft robotic endoscope. 
+
+This section first describes the motion characteristics for a soft manipulator, followed by the task space definition and the learning-based control formulation tailored for soft robot manipulation. 
+Subsequently, a data pre-processing scheme that ensures the consistency of the training data is presented. 
+Locally Weighted Projection Regression (LWPR), an incremental learning-based algorithm, is introduced and used to approximate the soft robot inverse model in the last sub-section.
+
+**** A. Robot Motion Transition Characterization
+
+# Gradual, smooth regulation of the fluidic flow rate allows steady bending of the presented soft manipulator. 
+# It also allows quickly reaching an equilibrium of fluid volume and pressure, minimizing the residual motion generated during such fluidic actuation. 
+# Such manipulation also takes place within small and confined spaces (e.g., duodenum) ----- NOT CLEAR!!!----. 
+# This quasi-static motion characteristic [32] facilitates effective, precise targeting of the endoscopic camera or interventional tools (e.g., biopsy forceps or brush cytology) at the surgical regions of interest, thereby avoiding inadvertent damage to delicate tissue and potential discomfort to the patient. 
+
+By gradually and smoothly regulating the fluidic flow rate, the generic soft robot (Fig. 1) will result in steady bending; In such quasi-static motion [32], the fluid pressure quickly reaches equilibrium, the residual motion can hence be reduced.
+In endoscopic navigation (e.g., colonoscopy) within small and confined spaces, the quasi-static motion behavior can facilitate effective and precise targeting of endoscopic camera or interventional tools (e.g., biopsy forceps or brush cytology) at the surgical regions of interest, thereby avoiding inadvertent damage to delicate tissue and potential discomfort to the patient. 
+
+To mathematically describe such quasi-static transition from time $k$ to time $k+1$, let $\bm{u}_k \in \mathcal{U}$ be the fluid pressure (at equilibrium) in the actuation chambers; $\mathcal{U}$ denotes the control space. Also let $\bm{\theta}_k$ be the static robot configuration state when $\bm{u}_k$ is applied; This configuration state corresponds to a particular position (\bm{p}\in\Re^3) and orientation (\bm{n} \in \Re^3) of the end-effector (Fig. 4), collectively representing as $\bm{x}_k = [\bm{p},\bm{n}]^T \in \Re^6$. The transition model of the soft robot can be described by 
+
+where $\Delta \bm{u}_k = \bm{u}_{k+1}-\bm{u}_k$ is the difference of the fluid pressure. The motion transition function $f$ depends on the current robot configuration state $\bm{theta}_k$. Compared to the case of rigid-link robots where the configuration can be well-defined by joint kinematics, in the case of soft robot it is difficult to describe the exact configuration; Several analytical approaches approximate the soft robot configuration under constant curvature assumption [ref]. The nonlinear function $h$ transforms the configuration $\bm{\theta}_k$ to the end-effector position and orientation $\bm{x}_k$. In the following subsection, further details are given to relate $\bm{x}_k$ and the task space. 
+
+
+In particular, this endoscopic navigation of a soft robot can be regarded as a tele-operative targeting task, in which the operator has to manipulate the soft robot such that the tip points at a target on a cavity surface of interest. For instance, during colonoscopy, the operator tele-manipulates an endoscopic camera mounted at the soft robot tip to targets of interest on the inner wall of the colon. 

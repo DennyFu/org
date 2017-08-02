@@ -1,0 +1,48 @@
+Chimlee's research
+* notes 
+** to myself
+- need to learn more technical details
+  - sensing principle
+  - the use of network analyzer
+- well this is to prevent the lost of knowledge if Chimlee leave
+
+* progress
+** <2016-12-19 Mon 12:15>
+   - quite organized table of content was shown
+   - hiring people for this coil project
+     - EEE people?
+     - MEMS people?
+     - 
+   - prospective collaboration with CUHK side
+     - Dr. Weitian Chen
+   - 
+   - next week monday
+     - literature review of chapter 2
+     - demonstration of network analyzer
+
+** <2016-09-07 Wed>
+- Patent
+  - last 20 years patent
+    - potential direction
+      - design and optimization
+      - addictive fabrication
+      - 
+
+** 9 Aug 2016
+*** semi-active coil
+- 9 layers
+- 134 and 135 MHz results
+- Successful detunig with PIN photodiode + Detuning Capacitor
+  - @ 110 MHz
+  - delta 1MHz
+- testing platform (kawai suggestion)
+  - at the tip of 4 飲管
+  - optical fibers
+    - need to find a better method for cutting optical fibers
+  - laser source
+  - how to locate the center of the sensor
+    - frequency domain data
+    - 
+  - FEA results next time
+
+

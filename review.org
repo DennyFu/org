@@ -1,3 +1,765 @@
+* ABME
+
+
+
+
+
+In this revision, the figures have been much improved, which illustrate the concept of the proposed robotic drill and navigation system, as well as its setting in for a lab-based validation task. However, the manuscript still need a major revision to improve in the following aspects:
+  - In the proposed clinical setting, the global frame-of-reference has to be setup by fixing a tracking unit on the patient's femur using bone pins (page 27, Fig.9). The authors has to make justifications for this setup, and provide/cite references to support the feasibility of this routine.
+  - In addition, because the accuracy of the proposed tracking and navigation system clearly depends on this global frame-of-reference, further details are expected to be included. For example:
+    - 1) how to determine the position of setting up the global frame-of-reference on the femur, and
+    - 2) how the pre-operative 3D bone model from the CT scans (or any virtual objects) can be accurately register relative to this global frame-of-reference.
+  - 7DOF system is misleading. Throughout the paper, only the performance of a planar 3-joints robot actuated by 1 tendon is demonstrated.
+  - The video can be further improved by demonstrating the synchronization between the real robot motion and the virtual model in the navigation system.
+  - The organization of the results section and discussion section (section 6 and 7) has to be improved. Section 5.1, 5.2 and the first paragraph of 5.3 can be placed under a section describing the experimentation method; The second paragraph of 5.3 and section 6 can be put in a "Results and discussion" section. 
+  - Table 1 for comparison purpose should not be placed in the conclusion section. 
+  - There are still typos and typesetting issues (e.g. double white space).
+  - For each comment in the response letter, the authors have to state where each amendment has been made. It is difficult to trace whether the revisions have been properly made in the manuscript. There are also many subjective answers without evidence (e.g. in Response 4).
+ 
+
+
+* IEEE RAM
+** IEEE-RAM Review Form 
+*** Details of the Submission
+Title  	RollerBall: a mobile colon screening robot
+Authors 	Norton, Joseph* (194386), Hood, Adrian (194437), Neville, Anne (153145), Jayne, David (153147), Boyle, Jordan Hylke (154050), Alazmani, Ali (123952), Culmer, Peter Robert (123932)
+Submission number and version 	16-0078 (Submission ID 16-0078), Version 1
+Review requested by 	Merrifield, Robert (Guest Editor (Guest Editor), 160970)
+Under review for publication as 	Paper for special issue on Surgical Robot Challenge
+Review ID 	8845
+Reviewer 	Ka-Wai Kwok (127660)
+*** Some Review Guidelines
+Articles appearing in the magazine should be of general interest to readers of the magazine which is primarily society members: not only academics but also students and industry practioners. The maximum length for an article is 8 magazine pages but the mapping from submission format to magazine layout makes this hard to judge. A rule of thumb is that 8 pages in TRO double column format is about 8 magazine pages, but mileage will vary.
+
+It is important to consider that this a magazine and not a "transactions light". Papers must be:
+
+    interesting,
+    readable,
+    technically substantive,
+    have good images or graphics, and
+    describe a working system
+
+We do not want papers that simply describe a robot that works, there needs to be some insight or learning from the exercise.
+
+It is not a requirement that papers:
+
+    make a theoretical contribution
+    have theorems or lots of equations, 10 equations is probably a reasonable upper bound
+    have lots of references, 20 is probably a reasonable upper bound
+
+Regular papers and special issue papers should all conform to these guidelines.
+
+If you do not have the time personally to review the paper within the allotted time on the review form, please see if one of your qualified associates or students can review the paper. In this case, please notify the Associate Editor or Editor who invited you to review this paper so that the paper may be-reassigned. Otherwise, inform us at your earliest convenience so that we may find an alternative reviewer.
+
+You undoubtedly appreciate the importance of minimizing publication delays to provide papers of current interest. Therefore it is important that you complete the review form as soon as possible. Hopefully the paper is related to your previous or present activities to make the review relatively interesting and useful to you.
+
+Please note: an author retains the rights to all unpublished work, and any results and ideas from this work must not be used by a referee for research publications if they are obtained exclusively through the reviewing process.
+
+Please supply any information that you think will be useful to the author in revision, in enhancing the appeal of the paper, or in convincing the author of any mistakes.
+
+Your name will appear in this or next year’s reviewers’ list that RAM publishes each year in the December issue.
+
+Thank you in advance for your time on behalf of the Robotics and Automation Society and the Robotics and Automation Magazine Editorial Board.
+*** Assessment/Evaluation Section
+**** Is_the_paper_clearly_written?
+- [ ] A (Excellent)
+- [ ] B (Good)
+- [ ] C (Fair)
+- [ ] D (Unsatisfactory)
+- [ ] U (Unsuitable)
+**** Interest_to_journal_audience
+- [ ] Exceptional
+- [ ] Major
+- [ ] Minor
+- [ ] Questionable
+- [ ] None
+**** Technological_contribution
+- [ ] A (Excellent)
+- [ ] B (Good)
+- [ ] C (Fair)
+- [ ] D (Unsatisfactory)
+- [ ] U (Unsuitable)
+**** Thoroughness_of_results
+- [ ] A (Excellent)
+- [ ] B (Good)
+- [ ] C (Fair)
+- [ ] D (Unsatisfactory)
+- [ ] U (Unsuitable)
+**** How do you rate the paper quality?
+Paper_quality
+- [ ] A (Excellent)
+- [ ] B (Good)
+- [ ] C (Fair)
+- [ ] D (Unsatisfactory)
+- [ ] U (Unsuitable)
+*** Recommendation Section
+**** Overall Recommendation
+- [ ] Publish
+- [ ] Publish subject to revision
+- [ ] Not publishable as it is
+- [ ] Reject
+**** If publishable then publish as
+- [ ] Regular Paper
+- [ ] Survey Paper
+- [ ] Tutorial Paper
+- [ ] Special Issue Paper
+- [ ] General Non-Technical Article
+- [ ] Not applicable
+**** How do you rate your own level of confidence in the subject of the submission that you have been asked to review?
+- [ ] Very confident
+- [ ] Confident
+- [ ] Fairly confident
+- [ ] Not very confident
+- [ ] No confidence
+*** Comments Section
+**** Confidential Comments to the Editorial Staff*
+- Not more than 2000 characters (about 33 full lines)
+-  Motivate your evaluation and recommendation 
+**** Comments to the Author*
+- Not more than 5000 characters (about 83 full lines)
+- Please type or paste your comments for the author or authors into the box. You may also upload your review as a file below. Do not identify yourself if you wish to remain anonymous.
+
+- Discuss the following points
+  - Does the Introduction state the purpose of the paper?
+  - Is the significance of the paper explained relative to previous work?
+  - Is the paper clearly written and well organized?
+  - What is the contribution of the paper?
+  - How may the paper be improved?
+
+- Do not just write "yes" or "no" because the questions themselves are not included in the comments that the author receives
+
+**** Upload an attachment to the Comments to the Author (optional) 
+Pdf file of size less than 2 MB
+
+Only documents consisting of a single file are accepted. Do not identify yourself if you wish to remain anonymous. 	
+
+Click on Submit or Save to upload the file
+
+New: All pdf annotations, comments and markup included in your pdf file are retained.
+Warning: Annotations that you make to a pdf file carry your identification. To make the review anonymous,
+you must ensure that any identifying information is removed. Click here for help
+
+Important: Please make sure that the name of any file that you try to upload,
+as well as the names of all directories in the file path, only contain standard ASCII characters.
+Otherwise you run the risk of receiving a security violation error message 
+
+*** Save or Submit the Review
+Save the possibly incomplete review to complete and submit it later 	
+  	Warning: If you save the review then it has not been submitted
+Do not forget to return to this page to complete the review and submit it
+Send me a copy of the review by e-mail upon submission 	
+Submit the review 	
+  	Warning: Please check the review carefully before submitting it. You will not be able to revise the review after it has been submitted
+After you have submitted the review, click on the status link of the review in your reviews list to see the reviews that are available for this paper (including your own) and, eventually, the publication decision 
+
+
+** DONE review RollerBall: a mobile colon screening robot
+   CLOSED: [2016-09-28 Wed 22:28] SCHEDULED: <2016-09-28 Wed> DEADLINE: <2016-09-29 Thu>
+   :PROPERTIES:
+   :local: [[file:~/Work/Reviews/IEEE_RAM/RollerBall-%20a%20mobile%20colon%20screening%20robot/][file:~/Work/Reviews/IEEE_RAM/RollerBall- a mobile colon screening robot/]]
+   :END:
+   - State "DONE"       from "TODO"       [2016-09-28 Wed 22:28]
+*** IEEE-RAM Review Form 
+**** Details of the Submission
+Title  	RollerBall: a mobile colon screening robot
+Authors 	Norton, Joseph* (194386), Hood, Adrian (194437), Neville, Anne (153145), Jayne, David (153147), Boyle, Jordan Hylke (154050), Alazmani, Ali (123952), Culmer, Peter Robert (123932)
+Submission number and version 	16-0078 (Submission ID 16-0078), Version 1
+Review requested by 	Merrifield, Robert (Guest Editor (Guest Editor), 160970)
+Under review for publication as 	Paper for special issue on Surgical Robot Challenge
+Review ID 	8845
+Reviewer 	Ka-Wai Kwok (127660)
+**** Some Review Guidelines
+Articles appearing in the magazine should be of general interest to readers of the magazine which is primarily society members: not only academics but also students and industry practioners. The maximum length for an article is 8 magazine pages but the mapping from submission format to magazine layout makes this hard to judge. A rule of thumb is that 8 pages in TRO double column format is about 8 magazine pages, but mileage will vary.
+
+It is important to consider that this a magazine and not a "transactions light". Papers must be:
+
+    interesting,
+    readable,
+    technically substantive,
+    have good images or graphics, and
+    describe a working system
+
+We do not want papers that simply describe a robot that works, there needs to be some insight or learning from the exercise.
+
+It is not a requirement that papers:
+
+    make a theoretical contribution
+    have theorems or lots of equations, 10 equations is probably a reasonable upper bound
+    have lots of references, 20 is probably a reasonable upper bound
+
+Regular papers and special issue papers should all conform to these guidelines.
+
+If you do not have the time personally to review the paper within the allotted time on the review form, please see if one of your qualified associates or students can review the paper. In this case, please notify the Associate Editor or Editor who invited you to review this paper so that the paper may be-reassigned. Otherwise, inform us at your earliest convenience so that we may find an alternative reviewer.
+
+You undoubtedly appreciate the importance of minimizing publication delays to provide papers of current interest. Therefore it is important that you complete the review form as soon as possible. Hopefully the paper is related to your previous or present activities to make the review relatively interesting and useful to you.
+
+Please note: an author retains the rights to all unpublished work, and any results and ideas from this work must not be used by a referee for research publications if they are obtained exclusively through the reviewing process.
+
+Please supply any information that you think will be useful to the author in revision, in enhancing the appeal of the paper, or in convincing the author of any mistakes.
+
+Your name will appear in this or next year’s reviewers’ list that RAM publishes each year in the December issue.
+
+Thank you in advance for your time on behalf of the Robotics and Automation Society and the Robotics and Automation Magazine Editorial Board.
+**** Assessment/Evaluation Section
+***** Is_the_paper_clearly_written?
+- [ ] A (Excellent)
+- [X] B (Good) 
+- [ ] C (Fair)
+- [ ] D (Unsatisfactory)
+- [ ] U (Unsuitable)
+***** Interest_to_journal_audience
+- [ ] Exceptional
+- [X] Major
+- [ ] Minor
+- [ ] Questionable
+- [ ] None
+***** Technological_contribution
+- [ ] A (Excellent)
+- [ ] B (Good)
+- [X] C (Fair)
+- [ ] D (Unsatisfactory)
+- [ ] U (Unsuitable)
+***** Thoroughness_of_results
+- [ ] A (Excellent)
+- [ ] B (Good)
+- [ ] C (Fair)
+- [X] D (Unsatisfactory)
+- [ ] U (Unsuitable)
+***** How do you rate the paper quality?
+Paper_quality
+- [ ] A (Excellent)
+- [ ] B (Good)
+- [X] C (Fair)
+- [ ] D (Unsatisfactory)
+- [ ] U (Unsuitable)
+**** Recommendation Section
+***** Overall Recommendation
+ - [ ] Publish
+ - [ ] Publish subject to revision
+ - [ ] Not publishable as it is
+ - [ ] Reject
+***** If publishable then publish as
+- [ ] Regular Paper
+- [ ] Survey Paper
+- [ ] Tutorial Paper
+- [X] Special Issue Paper
+- [ ] General Non-Technical Article
+- [ ] Not applicable
+***** How do you rate your own level of confidence in the subject of the submission that you have been asked to review?
+- [ ] Very confident
+- [X] Confident
+- [ ] Fairly confident
+- [ ] Not very confident
+- [ ] No confidence
+**** Comments Section
+***** Confidential Comments to the Editorial Staff*
+- Not more than 2000 characters (about 33 full lines)
+- Motivate your evaluation and recommendation 
+
+This paper presents a robot prototype for colonoscopy. The robot features a novel locomotion mechanism: wheeling and expanding. It has 3 individual arms, each with a wheel at the end. The locomotion is achieved by controlling the expansion of the arms to maintain a certain contact force between the wheels and the inner wall of the colon. Since the robot is internally motorized, pain/discomfort caused by stretching between the colon and abdominal wall in conventional colonoscopy procedure is avoided. The expanding mechanism could be a promising idea for navigation in environments with dynamically changing morphology. 
+
+This paper is well-written and organized, and easy to understand for RAM readers. The figures clearly illustrates the critical ideas and results of the proposed method. 
+
+The proposed locomotion idea is novel and interesting. However, the current experiment settings are too simple; The experiments do not convince the feasibility of the proposed locomotion mechanism for colonoscopy. I would recommend this paper should be revised with enhanced evidence. 
+
+***** Comments to the Author*
+- Not more than 5000 characters (about 83 full lines)
+- Please type or paste your comments for the author or authors into the box. You may also upload your review as a file below. Do not identify yourself if you wish to remain anonymous.
+
+- Discuss the following points
+  - Does the Introduction state the purpose of the paper?
+  - Is the significance of the paper explained relative to previous work?
+  - Is the paper clearly written and well organized?
+  - What is the contribution of the paper?
+  - How may the paper be improved?
+
+This paper presents a robot prototype for colonoscopy. The robot features a novel locomotion mechanism: wheeling and expanding. It has 3 individual arms, each with a wheel at the end. The locomotion is achieved by controlling the expansion of the arms to maintain a certain contact force between the wheels and the inner wall of the colon. Since the robot is internally motorized, pain/discomfort caused by stretching between the colon and abdominal wall in conventional colonoscopy procedure is avoided. The expanding mechanism could be a promising idea for navigation in environments with dynamically changing morphology.
+
+This paper is well-written and organized, and easy to understand. The figures clearly illustrates the critical ideas and results of the proposed method. 
+
+I have the following concerns:
+
+1. The colon phantoms are too simple to verify the feasibility of the locomotion mechanism:
+   - Real colon is highly flexible. It likely has to pass through acute corners (could be nearly 180 degree), especially when passing through the "alpha loop"; Passing through the "alpha loop" is considered the most difficult. In the current experiment, the most acute corner is only 90 degree. To examine the locomotion efficacy, environment with more acute corners should be used. It is doubtful that the robot prototype can pass through the "alpha loop". 
+   - Real colon is soft; It naturally collapses when insufflation is not applied. When it is insufflated, the 
+lumen shape is not only with changing diameter as illustrate in Fig. 1a, but also in different shapes such as circular and triangular. Given that the proposed expansion mechanism can maintain contact between the wheels and the colon inner wall, skillful control techniques are required to carry out navigation for passing through non-circular lumen.
+   - Real colon is very slippery. Because the locomotion is based on the friction, it is necessary to provide evidence that the current prototype can move on the surfaces with extremely low-friction. E.g. the minimum friction coefficients that the robot can move on, the necessary normal force to provide enough frictional force for locomotion, ... etc.. 
+
+     
+   At least, I would recommend to include more acute corners in the experiment to enhance the evidence of the feasibility of the robot prototype. I would suggest, if possible, to verify the locomotion mechanism at least using ex vivo such as pig colon, in addition with other fundamental functionalities such as insufflation and suction, ..., etc.. 
+
+2. Safety: 
+   From Fig. 1b, Are the edges of the wheels sharp that will cause damge to the colon tissue? 
+   How to ensure the friction is enough for atraumatic locomotion?
+
+
+
+- Do not just write "yes" or "no" because the questions themselves are not included in the comments that the author receives
+
+***** Upload an attachment to the Comments to the Author (optional) 
+Pdf file of size less than 2 MB
+
+Only documents consisting of a single file are accepted. Do not identify yourself if you wish to remain anonymous. 	
+
+Click on Submit or Save to upload the file
+
+New: All pdf annotations, comments and markup included in your pdf file are retained.
+Warning: Annotations that you make to a pdf file carry your identification. To make the review anonymous,
+you must ensure that any identifying information is removed. Click here for help
+
+Important: Please make sure that the name of any file that you try to upload,
+as well as the names of all directories in the file path, only contain standard ASCII characters.
+Otherwise you run the risk of receiving a security violation error message 
+
+**** Save or Submit the Review
+Save the possibly incomplete review to complete and submit it later 	
+  	Warning: If you save the review then it has not been submitted
+Do not forget to return to this page to complete the review and submit it
+Send me a copy of the review by e-mail upon submission 	
+Submit the review 	
+  	Warning: Please check the review carefully before submitting it. You will not be able to revise the review after it has been submitted
+After you have submitted the review, click on the status link of the review in your reviews list to see the reviews that are available for this paper (including your own) and, eventually, the publication decision 
+
+
+* IEEE T-RO
+
+** IEEE T-RO Review Form Template
+**** Details of the Submission
+   Title  	
+   Authors 	
+   Submission number and version 	
+   Review requested by 	
+   Under review for publication as 	
+   Review ID 	
+   Reviewer 	Ka-Wai Kwok (127660)
+**** Instructions for Reviewers of Regular papers
+       Please respect the deadline. As an author, you undoubtedly appreciate the importance of minimizing delays.
+
+       Please provide detailed comments to the authors, including AT LEAST A FEW SENTENCES JUSTIFYING YOUR RECOMMENDATION. The following points are suggested for your comments:
+       - What is the contribution of the paper?
+       - Does the author explain the significance of this paper?
+       - Is the paper clearly written and well organized?
+       - Does the introduction state the purpose of the paper?
+       - Are the references relevant and complete? Supply missing references.
+       - If the paper is not technically sound, why not?
+       - If the paper is too long for its category, how can it be shortened?
+       - In particular, if you recommend to revise and resubmit or to conditionally accept the paper as Short, please provide indications to the authors on how to accomplish this reduction.
+       - If the paper is intended for a Special Issue, please comment on its pertinence.
+
+       Supply any information that you think will be useful to the author for a revision, for enhancing the appeal of the paper, or for convincing him/her of the weak points or mistakes. The reviewer's recommendation for acceptance or rejection should not be included in the comments to the author. Do not identify yourself or your organization within the review text.
+
+       In your critical comments to the author, please be specific. If you find that the results are already known, please give references to earlier papers which contain these or similar results. If you say that the reasoning is incorrect or vague, please indicate specifically where and why. If you suggest that the paper be rewritten, give specific suggestions as to which parts of the paper should be deleted, amplified or modified, and please indicate how.
+
+       If the paper has a multimedia attachment (typically, a video clip), please evaluate this in the Comments Section. Is it consistent with the paper content? Does it enhance the paper quality? If it is a video, how is the technical quality? Is it free of commercialism?
+
+       Please note the following T-RO policy: If a paper is submitted as Regular, there is no direct recommendation of acceptance as Short. In view of the presumably large changes needed, the paper should first be conditionally accepted as Short.
+
+       The paper review procedure for the IEEE Transactions on Robotics involves a recommendation prepared by the Associate Editor on the basis of the paper reviews by peers. The final decision on publication, sustaining or modifying this recommendation, is taken by the Editor handling the paper.
+**** Recommendation Section for Regular papers
+***** Overall Recommendation
+- [ ] Accept as Regular Paper provided that all typographic errors and minor recommendations are corrected in the final version
+- [ ] Conditionally Accept as Regular Paper provided that minor revisions are made as indicated in the Comments Section
+- [ ] Conditionally Accept as Short Paper provided that minor revisions are made as indicated in the Comments Section
+- [ ] Revise and Resubmit as Regular Paper as indicated in the Comments Section (if resubmitted, the revised paper should undergo a full review cycle keeping past review material into account)
+- [ ] Revise and Resubmit as Short Paper as indicated in the Comments Section (if resubmitted, the revised paper should undergo a full review cycle keeping past review material into account)
+- [ ] Reject the Paper (future submission of this work will be treated as a new paper)
+- [ ] Submit to Another Journal
+***** Please check if you wish to see the revision [] <- checkbox
+***** Should this paper be considered for the annual BEST T-RO PAPER AWARD? 	[]
+***** If the paper has a multimedia attachment, should this be included in case of final acceptance? 	[]
+***** If you have recommended submission to another journal, please indicate which one 	
+**** Assessment/Evaluation. Please rate the paper according to the following criteria:
+***** Paper Contribution
+- [ ] Exceptional
+- [ ] Major
+- [ ] Minor
+- [ ] Questionable
+- [ ] None
+***** Technical Quality
+- [ ] Excellent
+- [ ] Good
+- [ ] Fair
+- [ ] Poor
+***** Originality
+- [ ] Excellent
+- [ ] Good
+- [ ] Fair
+- [ ] Poor
+***** Thoroughness of Results
+- [ ] Excellent
+- [ ] Good
+- [ ] Fair
+- [ ] Poor
+***** Clarity of Presentation
+- [ ] Excellent
+- [ ] Good
+- [ ] Fair
+- [ ] Poor
+***** Adequacy of Citations
+- [ ] Excellent
+- [ ] Good
+- [ ] Fair
+- [ ] Poor
+***** Relevance to the Field
+- [ ] Excellent
+- [ ] Good
+- [ ] Fair
+- [ ] Poor
+- [ ] Excellent
+**** Comments Section
+***** Confidential Comments to the Editorial Staff.
+Not more than 2000 characters (about 33 full lines)
+
+
+***** Comments to the Author
+
+
+Not more than 9000 characters (about 150 full lines)
+Please discuss:
+- Major Contribution of the Paper
+  - Organization and Style
+  - Technical Accuracy
+  - Presentation
+  - Adequacy of Citations
+  - Multimedia (if present)
+***** Upload an attachment to the Comments to the Author (optional)
+Upload an attachment to the Comments to the Author (optional)
+
+Pdf file of size less than 1 MB
+
+Use this for including additional material (e.g., review with equations or graphs). Please mention this attachment in your Comments to the Author. 	
+
+Click on Submit or Save to upload the file
+
+New: All pdf annotations, comments and markup included in your pdf file are retained.
+Warning: Annotations that you make to a pdf file carry your identification. To make the review anonymous,
+you must ensure that any identifying information is removed. Click here for help
+
+Important: Please make sure that the name of any file that you try to upload,
+as well as the names of all directories in the file path, only contain standard ASCII characters.
+Otherwise you run the risk of receiving a security violation error message 
+
+**** Save or Submit the Review
+Save the possibly incomplete review to complete and submit it later 	
+  	Warning: If you save the review then it has not been submitted
+Do not forget to return to this page to complete the review and submit it
+Send me a copy of the review by e-mail upon submission 	
+Submit the review 	
+  	Warning: Please check the review carefully before submitting it. You will not be able to revise the review after it has been submitted
+After you have submitted the review, click on the status link of the review in your reviews list to see the reviews that are available for this paper (including your own) and, eventually, the publication decision
+
+** TODO review Kim et al, "Active Stiffness Tuning of a Spring-based Continuum Robot for MRI-Guided Neurosurgery"
+   DEADLINE: <2017-07-13 Thu> SCHEDULED: <2017-07-13 Thu>
+   :PROPERTIES:
+   :local: [[file:~/Work/Reviews/IEEE_TRO/Kim2016Active/][file:~/Work/Reviews/IEEE_TRO/Kim2016Active/]]
+   :END:
+   - State "DONE"       from "TODO"       [2017-03-07 Tue 19:05]
+   - State "DONE"       from "TODO"       [2016-09-29 Thu 15:49]
+
+*** IEEE T-RO Review Form (3nd review on <2017-07-11 Tue>)
+**** Details of the Submission
+   Title  	Active Stiffness Tuning of a Spring-based Continuum Robot for MRI-Guided Neurosurgery
+   Authors 	Kim, Yeongjin (119984), Cheng, Shing Shin* (178362), Desai, Jaydev P. (101676)
+   Submission number and version 	16-0481 (Submission ID 16-0481), Version 1
+   Review requested by 	Wang, Hesheng (Associate Editor, 103003)
+   Under review for publication as 	Regular Paper
+   Review ID 	44809
+   Reviewer 	Ka-Wai Kwok (127660)
+**** Instructions for Reviewers of Regular papers
+       Please respect the deadline. As an author, you undoubtedly appreciate the importance of minimizing delays.
+
+       Please provide detailed comments to the authors, including AT LEAST A FEW SENTENCES JUSTIFYING YOUR RECOMMENDATION. The following points are suggested for your comments:
+       - What is the contribution of the paper?
+       - Does the author explain the significance of this paper?
+       - Is the paper clearly written and well organized?
+       - Does the introduction state the purpose of the paper?
+       - Are the references relevant and complete? Supply missing references.
+       - If the paper is not technically sound, why not?
+       - If the paper is too long for its category, how can it be shortened?
+       - In particular, if you recommend to revise and resubmit or to conditionally accept the paper as Short, please provide indications to the authors on how to accomplish this reduction.
+       - If the paper is intended for a Special Issue, please comment on its pertinence.
+
+       Supply any information that you think will be useful to the author for a revision, for enhancing the appeal of the paper, or for convincing him/her of the weak points or mistakes. The reviewer's recommendation for acceptance or rejection should not be included in the comments to the author. Do not identify yourself or your organization within the review text.
+
+       In your critical comments to the author, please be specific. If you find that the results are already known, please give references to earlier papers which contain these or similar results. If you say that the reasoning is incorrect or vague, please indicate specifically where and why. If you suggest that the paper be rewritten, give specific suggestions as to which parts of the paper should be deleted, amplified or modified, and please indicate how.
+
+       If the paper has a multimedia attachment (typically, a video clip), please evaluate this in the Comments Section. Is it consistent with the paper content? Does it enhance the paper quality? If it is a video, how is the technical quality? Is it free of commercialism?
+
+       Please note the following T-RO policy: If a paper is submitted as Regular, there is no direct recommendation of acceptance as Short. In view of the presumably large changes needed, the paper should first be conditionally accepted as Short.
+
+       The paper review procedure for the IEEE Transactions on Robotics involves a recommendation prepared by the Associate Editor on the basis of the paper reviews by peers. The final decision on publication, sustaining or modifying this recommendation, is taken by the Editor handling the paper.
+**** Recommendation Section for Regular papers
+***** Overall Recommendation
+- [X] Accept as Regular Paper provided that all typographic errors and minor recommendations are corrected in the final version
+- [ ] Conditionally Accept as Regular Paper provided that minor revisions are made as indicated in the Comments Section
+- [ ] Conditionally Accept as Short Paper provided that minor revisions are made as indicated in the Comments Section
+- [ ] Revise and Resubmit as Regular Paper as indicated in the Comments Section (if resubmitted, the revised paper should undergo a full review cycle keeping past review material into account)
+- [ ] Revise and Resubmit as Short Paper as indicated in the Comments Section (if resubmitted, the revised paper should undergo a full review cycle keeping past review material into account)
+- [ ] Reject the Paper (future submission of this work will be treated as a new paper)
+- [ ] Submit to Another Journal
+***** Please check if you wish to see the revision [] <- checkbox
+***** Should this paper be considered for the annual BEST T-RO PAPER AWARD? 	[]
+***** If the paper has a multimedia attachment, should this be included in case of final acceptance? 	[]
+***** If you have recommended submission to another journal, please indicate which one 	
+**** Assessment/Evaluation. Please rate the paper according to the following criteria:
+***** Paper Contribution
+- [ ] Exceptional
+- [X] Major
+- [ ] Minor
+- [ ] Questionable
+- [ ] None
+***** Technical Quality
+- [ ] Excellent
+- [X] Good
+- [ ] Fair
+- [ ] Poor
+***** Originality
+- [ ] Excellent
+- [ ] Good
+- [X] Fair
+- [ ] Poor
+***** Thoroughness of Results
+- [ ] Excellent
+- [X] Good
+- [ ] Fair
+- [ ] Poor
+***** Clarity of Presentation
+- [ ] Excellent
+- [X] Good
+- [ ] Fair
+- [ ] Poor
+***** Adequacy of Citations
+- [ ] Excellent
+- [X] Good
+- [ ] Fair
+- [ ] Poor
+***** Relevance to the Field
+- [ ] Excellent
+- [X] Good
+- [ ] Fair
+- [ ] Poor
+- [ ] Excellent
+**** Comments Section
+***** Confidential Comments to the Editorial Staff.
+Not more than 2000 characters (about 33 full lines)
+
+In this 3rd revision, the authors have experimentally verified that the surface temperature of the SMA device is 35°C, which is lower than the brain necrosis temperature at ~44°C. The reviewer accept this answer and agree the acceptance of this manuscript.
+
+
+***** Comments to the Author
+
+The authors have experimentally verified that the surface temperature of the SMA device is 35°C, which is lower than the brain necrosis temperature at ~44°C. The reviewer accept this answer and agree the current content is publishable. 
+
+
+Not more than 9000 characters (about 150 full lines)
+Please discuss:
+- Major Contribution of the Paper
+  - Organization and Style
+  - Technical Accuracy
+  - Presentation
+  - Adequacy of Citations
+  - Multimedia (if present)
+***** Upload an attachment to the Comments to the Author (optional)
+Upload an attachment to the Comments to the Author (optional)
+
+Pdf file of size less than 1 MB
+
+Use this for including additional material (e.g., review with equations or graphs). Please mention this attachment in your Comments to the Author. 	
+
+Click on Submit or Save to upload the file
+
+New: All pdf annotations, comments and markup included in your pdf file are retained.
+Warning: Annotations that you make to a pdf file carry your identification. To make the review anonymous,
+you must ensure that any identifying information is removed. Click here for help
+
+Important: Please make sure that the name of any file that you try to upload,
+as well as the names of all directories in the file path, only contain standard ASCII characters.
+Otherwise you run the risk of receiving a security violation error message 
+**** Save or Submit the Review
+Save the possibly incomplete review to complete and submit it later 	
+  	Warning: If you save the review then it has not been submitted
+Do not forget to return to this page to complete the review and submit it
+Send me a copy of the review by e-mail upon submission 	
+Submit the review 	
+  	Warning: Please check the review carefully before submitting it. You will not be able to revise the review after it has been submitted
+After you have submitted the review, click on the status link of the review in your reviews list to see the reviews that are available for this paper (including your own) and, eventually, the publication decision
+  	
+ 
+
+*** IEEE T-RO Review Form (2nd review on <2017-03-07 Tue 19:05>)
+**** Details of the Submission
+   Title  	Active Stiffness Tuning of a Spring-based Continuum Robot for MRI-Guided Neurosurgery
+   Authors 	Kim, Yeongjin (119984), Cheng, Shing Shin* (178362), Desai, Jaydev P. (101676)
+   Submission number and version 	16-0481 (Submission ID 16-0481), Version 1
+   Review requested by 	Wang, Hesheng (Associate Editor, 103003)
+   Under review for publication as 	Regular Paper
+   Review ID 	44809
+   Reviewer 	Ka-Wai Kwok (127660)
+**** Instructions for Reviewers of Regular papers
+       Please respect the deadline. As an author, you undoubtedly appreciate the importance of minimizing delays.
+
+       Please provide detailed comments to the authors, including AT LEAST A FEW SENTENCES JUSTIFYING YOUR RECOMMENDATION. The following points are suggested for your comments:
+       - What is the contribution of the paper?
+       - Does the author explain the significance of this paper?
+       - Is the paper clearly written and well organized?
+       - Does the introduction state the purpose of the paper?
+       - Are the references relevant and complete? Supply missing references.
+       - If the paper is not technically sound, why not?
+       - If the paper is too long for its category, how can it be shortened?
+       - In particular, if you recommend to revise and resubmit or to conditionally accept the paper as Short, please provide indications to the authors on how to accomplish this reduction.
+       - If the paper is intended for a Special Issue, please comment on its pertinence.
+
+       Supply any information that you think will be useful to the author for a revision, for enhancing the appeal of the paper, or for convincing him/her of the weak points or mistakes. The reviewer's recommendation for acceptance or rejection should not be included in the comments to the author. Do not identify yourself or your organization within the review text.
+
+       In your critical comments to the author, please be specific. If you find that the results are already known, please give references to earlier papers which contain these or similar results. If you say that the reasoning is incorrect or vague, please indicate specifically where and why. If you suggest that the paper be rewritten, give specific suggestions as to which parts of the paper should be deleted, amplified or modified, and please indicate how.
+
+       If the paper has a multimedia attachment (typically, a video clip), please evaluate this in the Comments Section. Is it consistent with the paper content? Does it enhance the paper quality? If it is a video, how is the technical quality? Is it free of commercialism?
+
+       Please note the following T-RO policy: If a paper is submitted as Regular, there is no direct recommendation of acceptance as Short. In view of the presumably large changes needed, the paper should first be conditionally accepted as Short.
+
+       The paper review procedure for the IEEE Transactions on Robotics involves a recommendation prepared by the Associate Editor on the basis of the paper reviews by peers. The final decision on publication, sustaining or modifying this recommendation, is taken by the Editor handling the paper.
+**** Recommendation Section for Regular papers
+***** Overall Recommendation
+- [ ] Accept as Regular Paper provided that all typographic errors and minor recommendations are corrected in the final version
+- [X] Conditionally Accept as Regular Paper provided that minor revisions are made as indicated in the Comments Section
+- [ ] Conditionally Accept as Short Paper provided that minor revisions are made as indicated in the Comments Section
+- [ ] Revise and Resubmit as Regular Paper as indicated in the Comments Section (if resubmitted, the revised paper should undergo a full review cycle keeping past review material into account)
+- [ ] Revise and Resubmit as Short Paper as indicated in the Comments Section (if resubmitted, the revised paper should undergo a full review cycle keeping past review material into account)
+- [ ] Reject the Paper (future submission of this work will be treated as a new paper)
+- [ ] Submit to Another Journal
+***** Please check if you wish to see the revision [] <- checkbox
+***** Should this paper be considered for the annual BEST T-RO PAPER AWARD? 	[]
+***** If the paper has a multimedia attachment, should this be included in case of final acceptance? 	[]
+***** If you have recommended submission to another journal, please indicate which one 	
+**** Assessment/Evaluation. Please rate the paper according to the following criteria:
+***** Paper Contribution
+- [ ] Exceptional
+- [X] Major
+- [ ] Minor
+- [ ] Questionable
+- [ ] None
+***** Technical Quality
+- [ ] Excellent
+- [X] Good
+- [ ] Fair
+- [ ] Poor
+***** Originality
+- [ ] Excellent
+- [ ] Good
+- [X] Fair
+- [ ] Poor
+***** Thoroughness of Results
+- [ ] Excellent
+- [X] Good
+- [ ] Fair
+- [ ] Poor
+***** Clarity of Presentation
+- [ ] Excellent
+- [X] Good
+- [ ] Fair
+- [ ] Poor
+***** Adequacy of Citations
+- [ ] Excellent
+- [X] Good
+- [ ] Fair
+- [ ] Poor
+***** Relevance to the Field
+- [ ] Excellent
+- [X] Good
+- [ ] Fair
+- [ ] Poor
+- [ ] Excellent
+**** Comments Section
+***** Confidential Comments to the Editorial Staff.
+Not more than 2000 characters (about 33 full lines)
+
+The authors have revised accordingly to the previous comments. The answers are acceptable. This paper is publishable after the including the response about the heating problem answered in R3Q3 in the rebuttal. 
+
+***** Comments to the Author
+
+The authors have revised accordingly to the previous comments. The answers are acceptable. The heating problem is important safety for surgical application. The answer in R3Q3 in the rebuttal should be included in the paper. 
+
+
+Not more than 9000 characters (about 150 full lines)
+Please discuss:
+- Major Contribution of the Paper
+  - Organization and Style
+  - Technical Accuracy
+  - Presentation
+  - Adequacy of Citations
+  - Multimedia (if present)
+***** Upload an attachment to the Comments to the Author (optional)
+Upload an attachment to the Comments to the Author (optional)
+
+Pdf file of size less than 1 MB
+
+Use this for including additional material (e.g., review with equations or graphs). Please mention this attachment in your Comments to the Author. 	
+
+Click on Submit or Save to upload the file
+
+New: All pdf annotations, comments and markup included in your pdf file are retained.
+Warning: Annotations that you make to a pdf file carry your identification. To make the review anonymous,
+you must ensure that any identifying information is removed. Click here for help
+
+Important: Please make sure that the name of any file that you try to upload,
+as well as the names of all directories in the file path, only contain standard ASCII characters.
+Otherwise you run the risk of receiving a security violation error message 
+**** Save or Submit the Review
+Save the possibly incomplete review to complete and submit it later 	
+  	Warning: If you save the review then it has not been submitted
+Do not forget to return to this page to complete the review and submit it
+Send me a copy of the review by e-mail upon submission 	
+Submit the review 	
+  	Warning: Please check the review carefully before submitting it. You will not be able to revise the review after it has been submitted
+After you have submitted the review, click on the status link of the review in your reviews list to see the reviews that are available for this paper (including your own) and, eventually, the publication decision
+*** rebuttal (Reviewer 3 <- kawai)
+Reviewer #3:
+This paper presents a spring-based continuum robot for MRI-guided deep intracranial tumor removal surgery. The robot is composed of tendon driven mechanism integrated with shape memory alloy (SMA) spring. The robot joint could be independently controlled. A tendon routing configuration was designed to adjust local stiffness of the SMA spring backbone. Analytical stiffness model was developed, and experiments were carried out to analyze the resistive force, and also to evaluate MRI compatibility of the robot. However, the major weakness is that the proposed experimental validation may not sufficiently demonstrate the work relevant to the real surgical requirement, giving rise to many concerns from the clinical side as follows:
+Major concerns:
+
+**** R3Q1.
+The outer diameter of robot is 13mm and it is proposed for deep intracranial tumor removal aforementioned in the part of abstract. To insert such a device into the brain, a burr hole with diameter much more than 13mm is needed to create on the patient’s skull, since it may require more than one instrument in this procedure. Large effect of “brain shift” in this case could significantly affect the overall accuracy of the surgical manipulation, and further safety. The length of each segment is not clearly depicted in the paper. As can be seen in Fig. 1, the length is approximately 18mm. To reach the deep brain region, the robot needs to comprise four or more segments, thus traveling all the way beyond the critical structures that may deviate from the brain map pre-operatively obtained by functional/DT MRI. Note that such images are not obtainable during the procedure. Experimental validation is expected to ensure how the robot is capable to precisely reach the deep tumors, and meanwhile avoiding excessive damage under the further manipulation by this Ø13-mm SMA-based instrument.
+
+***** Response: Thank you for your comments. The robot is MR-compatible so that it can work in an MRI scanner while obtaining intraoperative MRI images. These intraoperative MRI images are necessary to understand “brain shift” or deviation between preoperative brain map and intra-operative brain map. The robot is designed to fit in a commercially available straight neuroendoport (11-13 mm) used commonly in microsurgery that allows direct access to a deep-seated brain tumor [1,2]. Three segments are sufficient to provide the additional degrees of freedom to move around critical regions in the tumor region, should the condition calls for it. Divided into three segments, the robot has a 60 mm length and a diameter of 12.6 mm. Its length and multiple degrees of freedom allow the robot to have a sufficiently large enough workspace to cover deep brain tumors which have an average diameter of less than 40 mm [3]. The robot motion experiment in gelatin during the MRI compatibility test (See Figure 18) serves as preliminary verification of the motion capability of the robot inside the brain.
+  The amendment is as follows:
+  The robot is designed to have the workspace to cover deep brain tumors which have an average diameter of less than 40 mm [51] and each segment should achieve a bending angle of at least 45o. It is important to note that the bending angle is relative to the orientation (surface normal vector) of the prior disk. Hence the change in bending angle causes twice the change in the surface normal of the subsequent disk. For example, a bending angle of 45o results in a 90o orientation change of the subsequent disk as illustrated in Fig. 1(c). The diameter was selected so that the entire robot can fit inside an existing endoport (11-13 mm) used in microsurgical resection of deep-seated brain tumor [52], [53]. The lumen through the center of the robot has to be at least 4 mm to have enough room for the electrocautery wires, and suction and irrigation tubes. The electrocautery probes are embedded at the tip of the end segment of the robot. The robot has a 65 mm length, an outer diameter of 12.6 mm, and a lumen diameter of 4.1 mm to cover the required workspace, fit in the existing endoport, and to house the required wires and cables.
+and is located in section II titled “Robot Design”.
+[1]Ding, Dale, Robert M. Starke, R. Webster Crowley, and Kenneth C. Liu. "Endoport- assisted microsurgical resection of cerebral cavernous malformations." Journal of Clinical Neuroscience 22, no. 6 (2015): 1025-1029.
+[2]Jo, Kwang-Wook, Hyung Jin Shin, Do-Hyun Nam, Jung-Il Lee, Kwan Park, Jong Hyun Kim, and Doo-Sik Kong. "Efficacy of endoport-guided endoscopic resection for deep-seated brain lesions." Neurosurgical review 34, no. 4 (2011): 457-463.
+[3] Linzer, D., S. M. Ling, H. Villalobos, W. Raub Jr, X. Wu, J. Ting, A. Berti, H. Landy, and A. M. Markoe. "Gamma knife radiosurgery for large volume brain tumors: An analysis of acute and chronic toxicity." Stereotactic and functional neurosurgery 70, no. Suppl. 1 (1998): 11-18.
+
+**** R3Q2.
+In Fig. 12, the largest bending angle seems to be 10 degree for each segment. For a three- segment robot, maximum 30 degrees could be obtained in one direction. Detailed workspace analysis is expected to ensure if the dexterity sufficiently capable to perform the required manipulation. Test applied on a brain phantom (e.g. made of gelatin-based materials) is also expect to evaluate the performance.
+***** Response: Thank you for your comment. In the previously submitted paper, we only performed the experiments for small bending angles. Per the reviewer’s comment, we have repeated the experiments and bent each robot segment up to around 45o bending angle. It should be noted that a bending angle of 45o represents 90o change in the surface normal of the segment disk. Tests have also been performed in a brain-like gelatin phantom and the MR images are shown in Fig. 18 in the revised manuscript. The robot motion experiment in gelatin during the MRI compatibility test serves as preliminary verification of the motion capability of the robot inside the brain.
+ The amendment is as follows
+Fig. 1(c): Illustration showing that the surface normal of the end segment disk has an orientation change of 90o that is twice the bending angle of 45o 
+and is located in section II titled “Robot Design”.
+The amendment is as follows:
+Figure 12: Experimental results of the independent joint motion for (a) only end segment actuation, (b) only middle segment actuation, and (c) only base segment actuation
+and is located in section V titled “Independent Joint Control”.
+
+**** R3Q3.
+The local stiffness of each segment could be tuned by varying the temperature of SMA backbone, thus its stiffness, and locking the tendon. The stiffness test was only applied on a single segment of the robot. Experiment is expected to evaluate the entire robot to obtain the overall performance. It also intuitively comes up a question if brain tissue can withstand up to 47°C. If so, clinical support is mostly required.
+***** Response: Thank you for your comment. As the reviewer mentioned, we performed the stiffness modulation experiment for the complete three-segmented robot. The results are shown in Fig. 14. The outer spring, which is covered with vinyl, prevents contact between the spring joint and the brain tissue. The outer surface temperature of the robot was measured to be 3-4 degrees lower than the SMA temperature consistently. Following our current work that proves the ability to modulate the stiffness of the individual robot segment, we plan to train SMA springs at a lower temperature to achieve a lower austenite finish temperature. This would provide more assurance that the robot surface temperature would not be close to the brain tissue necrosis temperature of 44oC [4].
+Fig. 14 Changes in resistive force when the robot tip moves by a lateral displacement of 5 mm in the four aforementioned cases.
+
+[4] Matsumi, N., Matsumoto K., Mishima, N., Moriyama, E., Furuta, T., Nishimoto, A., & Taguchi, K. (1994). Thermal Damage Threshold of Brain Tissue—Histological Study of Heated Normal Monkey Brains—. Neurologia medico-chirurgica, 34(4), 209-215.
+This amendment is as follows:
+all robot segments were taut. The results shown in Fig. 14 confirm that the tip forces of the three-segmented robot are smaller than those of a single robot segment for all conditions. The conclusion that the combination of tendon locking and SMA backbone stiffening leads to the highest rigidity, followed by SMA backbone stiffening only, and tendon locking only remains the same for the three-segmented robot.
+and can be found in the section VI (A) titled “Local stiffness changes by SMA backbone stiffening and tendon locking”.
+
+**** R3Q4.
+Fish wire is adopted as the robot tendon, of which wire elasticity in certain amount would reduce lateral deflection of the robot segment, thus making control of its bending angle very challenging. In addition, the elastic deformation of such wire may transform to plastic deformation after sustaining a long-time force. Such validation is required. If this is not the case, specification of this choice of wire has to be emphasized in detail.
+
+***** Response: Thank you and we agree with your comment. The tendons we used to connect between the robot segment discs and the SMA spring actuators are fishing lines (Omniflex 8lb, Zebco Fishing, USA). The fishing line is made of nylon and is likely to undergo plastic deformation provided the elongation is beyond the elastic limit. In our experiments, the force threshold was below the plastic deformation limit. In our future work, we are planning to use Kevlar wire, which would ensure minimal plastic deformation.
+
+
+**** R3Q5.
+In the experiments of local stiffness characterization, resistive forces in four different cases were tested, as shown in Fig 13. However, the forces plotted in Fig.13b according to lateral displacement of the micromanipulator dose only tell a little useful information. Correlation of such resistive force with the robot tip displacement is expected to show various rigidities of the structure.
+
+***** Response: Fig. 13 shows the correlation between the resistive force and the lateral displacement of the robot tip. For instance, the graph for Case IV (combination of tendon locking and SMA backbone stiffening) has the largest slope, meaning that robot rigidity in this particular case is the largest. We also measured and recorded the lateral displacement and resistive force data at several intermediate temperatures during the heating process to determine how the rigidity of the robot segment changes, the results of which are plotted in Fig. 15. Figure 16 shows how the resistive force changes with temperature at several fixed lateral displacements. The theoretical data are plotted alongside the experimental data in both Figs. 15 and 16 to show that our stiffness model matches the experimental data well.
+  	
+ 
 * Hamlyn Symposium 2016
      
 ** A Dual-Arm Robotic Neuroendoscope: Early Results
@@ -151,18 +913,17 @@
      
      However, considering the overall quality of the paper, I am neutral for either the acceptance or the rejection.
   
-* Frontier 
+* Frontier  
   
 ** DONE H T Sen, A Cheng, K Ding, E Boctor, J Wong, I Iordachita, and P Kazanzides, Cooperative Control with Ultrasound Guidance for Radiation Therapy
    CLOSED: [2016-04-28 Thu 16:35] SCHEDULED: <2016-04-28 Thu 11:00-16:00> DEADLINE: <2016-04-28 Thu>
    
    
 *** General info
-- [[file:~/Work/Review/FrontiersinRoboticsandAI/senAPR2016cooperative/][working directory]]
-- [[file:~/Work/Review/FrontiersinRoboticsandAI/senAPR2016cooperative/204220_Kazanzides_Manuscript.PDF::%25PDF-1.5%0D][paper pdf]]
+- [[file:~/Work/Reviews/FrontiersinRoboticsandAI/senAPR2016cooperative/][file:~/Work/Reviews/FrontiersinRoboticsandAI/senAPR2016cooperative/]]
 - Title: Cooperative Control with Ultrasound Guidance for Radiation Therapy
 - Authors: H. Tutkun Sen, Alexis Cheng, Kai Ding, Emad Boctor, John Wong, Iulian Iordachita, and Peter Kazanzides
-*** Review report
+*** Review report [[file:~/Work/Reviews/FrontiersinRoboticsandAI/senAPR2016cooperative/review_report.org]]
     My independent review report
     Please fill in each field of the independent review questionnaire below. Your review report will only be submitted to the Associate Editor and Authors when clicking on Submit my report.
 
@@ -391,6 +1152,52 @@ Figure 6:
 
 *** Finished review - accepted <2016-07-05 Tue 21:00>
 * IROS
+** DONE Vincent Groenhuis, Francoise J. Siepel, Jeroen Veltman and Stefano Stramigioli, Design and characterization of Stormram 4: an MRI-compatible robotic system for breast biopsy
+   CLOSED: [2017-04-06 Thu 18:28]
+   - State "DONE"       from              [2017-04-06 Thu 18:28]
+*** General info
+    :PROPERTIES:
+    :Directory: file:~/Work/Reviews/IROS_2017
+    :Title: Design and characterization of Stormram 4: an MRI-compatible robotic system for breast biopsy
+    :Authors: Vincent Groenhuis, Francoise J. Siepel, Jeroen Veltman and Stefano Stramigioli
+    :END:
+    
+This paper presents a robot prototype, Strormram 4, for performing breast biopsy in MRI environment. It is a four degrees-of-freedom (DoFs) needle manipulator driven by pneumatic stepper motors. The motors are designed to have zero backlash, which is enabled by keeping the gear teeth in contact with a piston to "lock" the motion of a rack. The insertion and horizontal positioning of the needle are provided by two individual linear racks. The novelty of this work goes to use of two individual curved racks to provide the vertical positioning and insertion angle adjustment of the needle. Compared to its previous version, Strormarm 3, the robot has smaller size (26 X 21 X 16 mm) and finer step size (0.25mm). The end effector is positioned by solving the inverse kinematics of the system. In the experiment, the robot could automatically locate the needle tip in sub-millimeter precision, and transfer about 40N via 0.5 meter pneumatic transmission from the power source. The presented video has also demonstrated the smooth and stable actuation of all the DoFs.
+
+The paper is easy-to-follow. The overall mechanical design, especially the zero backlash stepper motors, is impressive. Although the current work is a proof-of-concept, there are several concerns toward clinical application:
+
+Major concerns:
+•	Relatively short pneumatic tubes of 0.5 meter were used in the experimentation. However, in the clinical environment, the separation between the control room and the MRI scanner room should be much larger, e.g. 10 meters. Such long transmission would inevitably induce hysteresis and degrade the positioning accuracy and force output. Moreover, larger pressure should then be used to make the gas "more incompressible", as well as the pipelines should be as straight as possible; What is the maximum pressure the robot structure can sustain? The authors should consider evaluation of the robot performance using longer pipeline, or provide justifications of the feasibility in clinical setting based on the current results.
+•	Despite the robot could be made of MR-safe materials, MRI-compatibility test is expected to support the claim of "MRI-compatible robotic system". Authors should evaluate the effects to the MR images in clinical setting when the robot is operating inside a MRI scanner. 
+•	The two curved stepper motors only provide 2 DOF to adjust the insertion angle along the y-z plane (Fig.7). Does it imply the adjustment of insertion angle along the x-z plane is less important? How to alter the insertion angle along the x-z plane? 
+•	In addition, how to decide the placement of the robot and how to fix it in practice? According to Fig. 1, one can image the robot would be placed on the patient body. The authors should clarify this practical concern in the paper.
+•	Table 1 only shows the result in the X- and Z-direction, what is the precision of insertion in the Y-direction?
+Minor concerns
+•	Page 2: Should it be: zero backlash and "zero" hysteresis.?
+•	What is the X-axis of E_phi? how to compute E_phi?
+•	Please indicate l_1, alpha, beta and l_4 in Fig 6. 
+•	The captions should be placed above the Table 1 and 2 according to the normal IEEE format.
+•	Page 6: A typo: "Further tests on breast phantoms ... into account.n"
+
+
+The video clearly demonstrates smooth and stable actuations of all the four degrees-of-freedom and its positioning accuracy in submillimeter level, which coincide with the claims in the paper.
+
+To the editor:
+- This paper presents an MRI-compatible needle manipulator
+for breast biopsy. The overall mechanical design,
+especially the zero backlash stepper motors, is impressive.
+The results show the robot has high accuracy and the
+provided video shows the needle motion is very smooth. The
+weakness of the paper is the experimentation. Currently,
+short (0.5 meter) pneumatic transmission was adopted,
+however, the separation between MRI room and the control
+room would be much larger, e.g. 10 meters. Moreover, it
+lacks the validation of MRI-compatibility. Despite such
+deficiencies, the novelty in terms of mechanical design deserves
+the acceptance in the IROS 2017.
+
+
+
 
 ** DONE M Grammatikopoulou, K Leibrandt, and G. Z. Yang, Motor Channelling for Safe and Effective Dynamic Constraints in Minimally Invasive Surgery
    CLOSED: [2016-05-09 Mon 13:44] SCHEDULED: <2016-05-07 Sat> DEADLINE: <2016-05-09 Mon>
@@ -398,7 +1205,7 @@ Figure 6:
       
 *** General info
     :PROPERTIES:
-    :Directory: file:~/Work/Review/IROS_2016
+    :Directory: [[file:~/Work/Reviews/IROS_2016]]
     :Title: Motor Channelling for Safe and Effective Dynamic Constraints in Minimally Invasive Surgery
     :Authors: Maria Grammatikopoulou, Konrad Leibrandt, and Guang-Zhong Yang, Fellow, IEEE
     :END:
@@ -430,8 +1237,6 @@ The novelty is weak because it is apparently an integration of existing algorith
      It is also better to indicate the direction of force exerted on the manipulator in each zone.
 
      About the estimation of the motion prediction in section III B, how to determine the number of dominant frequencies $N$ needed in eq. (16) and how many sample $M$ is required? It would be better to demonstrate the estimation result with aperiodic signal. For instance, the results demonstrated in Yuen et al. "Robotic Motion Compensation for Beating Heart Intracardiac Surgery", IJRR, 2009, which is the extension of the reference [14].
-
-
 
 
 

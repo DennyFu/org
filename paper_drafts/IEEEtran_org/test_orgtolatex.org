@@ -1,0 +1,175 @@
+#+OPTIONS: author:t title:t
+#+BIND: org-latex-title-command ""
+# export parameters
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+# No need for a table of contents
+#+OPTIONS: toc:nil 
+
+# emacs options
+#+STARTUP: overview
+
+# LaTeX export options
+# Set the article class
+#+LaTeX_CLASS: IEEEtran
+#+LaTeX_CLASS_OPTIONS: [journal,onecolumn]
+
+# include packages
+#+LATEX_HEADER: \usepackage[pdftex]{graphicx}
+#+LATEX_HEADER: \graphicspath{{../pdf/}{../jpeg/}}
+#+LATEX_HEADER: \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+#+LATEX_HEADER: \usepackage[cmex10]{amsmath}
+#+LATEX_HEADER: \interdisplaylinepenalty=2500
+#+LATEX_HEADER: \usepackage{cite}
+#+LATEX_HEADER: \usepackage{epsfig}
+#+LATEX_HEADER: \usepackage{epstopdf}
+#+LATEX_HEADER: \usepackage[caption=false,font=footnotesize]{subfig}
+#+LATEX_HEADER: \usepackage{bm}
+#+LATEX_HEADER: \usepackage{color}
+#+LATEX_HEADER: \usepackage{hyperref}
+
+
+
+
+
+# paper title
+# can use linebreaks \\ within to get better formatting as desired
+# #+begin_latex
+# % \title{Design and analysis of a soft contiuum robot for endoscopy}
+# #+end_latex
+#+Title: Title
+
+
+# author names and IEEE memberships
+# note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+# a structure at a ~ so this keeps an author's name from being broken across
+# two lines.
+# use \thanks{} to gain access to the first footnote area
+# a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+# was not built to handle multiple paragraphs
+
+# #+begin_latex
+#  \author{Author}% <-this % stops a space
+#   \author{Michael~Shell,~\IEEEmembership{Member,~IEEE,}
+#          John~Doe,~\IEEEmembership{Fellow,~OSA,}
+#          and~Jane~Doe,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
+#   \thanks{M. Shell is with the Department
+#  of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta, GA, 30332 USA -mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
+#   \thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
+#   \thanks{Manuscript received April 19, 2005; revised January 11, 2007.}}
+# #+end_latex
+#+Author: Author 1, Author 2
+
+# The paper headers
+#+LaTeX: %\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
+#+LaTeX: %{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+# The only time the second header will appear is for the odd numbered pages
+# after the title page when using the twoside option.
+# 
+# *** Note that you probably will NOT want to include the author's ***
+# *** name in the headers of peer review papers.                   ***
+# You can use \ifCLASSOPTIONpeerreview for conditional compilation here if  you desire.
+
+
+
+# If you want to put a publisher's ID mark on the page you can do it like this:
+#+LaTeX: %\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
+# Remember, if you use this you must call \IEEEpubidadjcol in the second column for its text to clear the IEEEpubid mark.
+
+# use for special paper notices
+#+LaTeX: %\IEEEspecialpapernotice{(Invited Paper)}
+
+# make the title area
+#+LaTeX: %\maketitle
+
+# Abstract
+\begin{abstract}
+%\boldmath
+The abstract goes here.
+\end{abstract}
+
+# Index terms
+\begin{IEEEkeywords}
+IEEEtran, journal, \LaTeX, paper, template.
+\end{IEEEkeywords}
+
+#+LaTeX: \IEEEpeerreviewmaketitle
+
+
+* notes								   :noexport:
+- always work in ~/Dropbox/org/paper_drafts/filename/
+  - cd /Users/Denny/Dropbox/org/paper_drafts/filename
+
+- export in shell
+  - pandoc -s -S org_filename.org --bibliography=bib_filename.bib -o docx_filename.docx
+
+- figures in /fig/pptx_filename.pptx
+
+- copy to cloud
+  - cp -a -p ./* ~/Dropbox/xxx/
+  - cp -a -p ./fig/* ~/Dropbox/xxx/fig
+
+- copy to local
+  - cp -a -p ./* ~/Desktop/xxx/
+  - cp -a -p ./fig/* ~/Desktop/filename/fig
+
+- use \C-c ( to insert ~\cite{citation}
+
+  
+
+** TODO search target journals
+** progress [0%]
+   - [ ] Introduction [0%]
+     - [ ] contributions
+     - [ ] topic sentences
+     - [ ] literature review
+     - [ ] organize into paragraphs 
+     - [ ] revision
+   - [ ] Method [0%]
+     - [ ] discussion and confirm methods
+     - [ ] simulations and experiment planning
+     - [ ] prepare figures and tables
+     - [ ] collect data
+   - [ ] Results [0%]
+     - [ ] collect data
+     - [ ] prepare figures and tables
+   - [ ] Discussion [0%]
+     - [ ] organize important points
+     - [ ] topic sentences
+     - [ ] organize into paragraphs
+     - [ ] revision
+   - [ ] Conclusion
+
+* Figures and Tables                                               :noexport:
+
+
+
+* Introduction                                                     
+# #+LaTeX: % \IEEEPARstart{T}{his} 
+# demo file is intended to serve as a ``starter file''
+# for IEEE journal papers produced under \LaTeX\ using
+# IEEEtran.cls version 1.7 and later.
+# I wish you the best of success.
+# #+LaTeX: \hfill \\
+# mds
+# #+LaTeX: \hfill \\
+# January 11, 2007
+
+
+* Materials and methods                                            
+
+
+
+# #+LaTeX: \appendices
+# * Proof of the First Zonklar Equation
+# Appendix one text goes here.
+
+# * 
+# Appendix two text goes here.
+
+
+#+LaTeX: \bibliographystyle{IEEEtran}
+#+LaTeX: \bibliography{IEEEabrv,./FEA_design_endoscopy.bib}
+
+\clearpage

@@ -1,3 +1,91 @@
+* ICRA 2017
+** Jacky
+*** A hybrid plastic-fabric soft bending actuator with reconfigurable bending profiles
+*** A reconfigurable hybrid actuator with rigid and soft components
+**** contributions
+     - inspired by crustaceans
+     - fabrication process
+
+*** 3D printed soft actuators for a legged robot capable of navigating unstructured terrain
+**** contributions
+     - fabrication
+     - analytical modeling
+       - extension
+       - bending
+     - quadruped locomotion
+       - estimate deflection of legs under load
+       - distance travelled
+       - velocity
+       - sequence of motions
+** Ziyang
+*** A rolling-diaphragm hydrostatic transmission for remote MR-guided needle insertion
+**** contribution
+     - passive needle manipulator
+       - one water and air pipeline
+       - needle insertion by a capstan drive 
+     - experimental validation with good tracking and force transparency
+*** Controlling the Stormram 2: An MRI compatible robotic system for breast biopsy
+**** contribution 
+      - 5-DOF
+      - kinematic analysis
+      - 7 meter transmission
+      - 5Hz due to system delay
+*** A self-locking-type expansion mechanism to achieve high holding force and pipe-passing capability for a pneumatic in-pipe robot
+**** contributions
+     - high holding force for in-pipe robot
+     - modeling of the design and control of the locomotion
+     - experimental validation
+       - holding force 69.7N
+
+** Justin
+
+*** A method for sensoring soft actuators and its appication to the RBO Hand 2
+**** contribution
+     - a learning algorithm a determine a good sensor layout and eliminate redundant sensors
+     - sensor-agnostic
+     - modular liquid metal sensors
+
+*** JammJoint: A variable stiffness device based on granular jamming for wearable joint support
+
+**** contribution
+     - wearable robot , portable
+     - very stiffness
+     - larger compliant cubed granular media instead of fine grains, resulting in a more linear relationship between vacuum pressure and stiffness
+     - each column/ring is coupled to each other
+     - still very bulky
+
+*** Design and fabrication of a soft three-axis force sensor based on radially symmetric pneumatic chambers
+
+**** contributions
+     -
+
+** Xiaomei
+
+*** orientation estimation of a continuum manipular in a phantom lung
+
+**** contributions
+     - estimation of orientation
+       - orientation based
+       - position based by UKF
+       - 
+
+*** predictive filtering in motion compensation with steerable cardiac catheters
+
+**** contributions
+     - to compensate the respiratory motion in cardiac catheterization using ultrasoound imaging
+
+
+*** Series Pneumatic artificial muscles and application to a soft continuum robot
+    
+    - static equilibrium kinematic model
+      - constant curvature
+    - model-based visual servoing of soft robot
+      - 
+
+
+
+
+
 * Hamlyn Symposium 2016
 :PROPERTIES:
 :Directory: [[file:~/Work/Conferences/]]

@@ -3,158 +3,528 @@
   :Directory: file:~/Work/NISI/
   :END:
 * notes
+** the upcoming publications
+   - directions of the publication
+     - engineering
+     - clinical
+     - 
+   - how many publications?
+     - engineering
+     - clinical
+*** engineering publication
+    - direction:
+      1. design optimization for endoscopy (for NISI)
+	 - with working channel
+	 - advanced FEM formulations for simulating the interaction with surgical instruments in the working channel
+	 - describe clearly what are the bottleneck that we have overcome? and also the contribution
+	 - validation with the real robot
+      2. advanced mechanical properties of our soft actuator (Advanced materials )
+	 - high power density, highly extensible
+	 - what are the tricks to enable such advance properties
+	   - fabrication, geometric design, advanced FEM formulations
+	 - list and demonstrates several potential applications
+      3. From the bio-inspired point of view
+	 - mimicking biological movements
+	   - brian: Chameleons tongue movement
+	   - why such biological movements are important?
+	   - what are the characteristics of the biological movements
+	   - what are the potential applications
+      4. IMU
+	 - embedded with IMU
+	 - advance formulation for sensing curvature
+      5. Visual-servoing of a soft endoscope
+	 - image-based feedback only
+	 - can be simulation only
+	 - for endoscopy
+	 - state the contribution clearly
+	   - only claiming "the visual-servoing of a soft endoscope" seems not enough, not specific
+	   - list out specific difficulties/bottleneck or special clinical objectives, and how do we solve for these difficulties
+	     - e.g. auto tracking and steering to lumen center, prediction of the ongoing lumen direction.
+	     - 
+      6. Dynamic control of a soft endoscope
+	 - stiffness control/force control of the soft actuator
+	 - we need a force sensor or a mechanism to estimate the resulting stiffness/force
+	 - what is the target application or function that we want the endoscope to have
+	   - e.g. to maintain a specific stiffness 
+	   - e.g. to maintain a constant contact force with the soft tissue
+	 
+	     
+*** clinical publication
+
+* tasks
+** DONE prepare slides for [[publication meeting]]
+   CLOSED: [2017-02-13 Mon 11:40] SCHEDULED: <2017-02-10 Fri 11:30-12:30>
+
+   - State "DONE"       from "TODO"       [2017-02-13 Mon 11:40]
+** DONE draft outline for the 4th journal
+   CLOSED: [2017-01-09 Mon 22:55] SCHEDULED: <2017-01-09 Mon 18:00-22:00>
+   - State "DONE"       from "TODO"       [2017-01-09 Mon 22:55]
+** DONE revise image paper
+   CLOSED: [2016-12-07 Wed 20:09] SCHEDULED: <2016-12-06 Tue 18:00-21:00>
+   - revised in [[file:~/Work/NISI/IMAGE/][file:~/Work/NISI/IMAGE/]] 
+     ABME Manuscript_30Nov2016 (002)_denny.docx
+   - State "DONE"       from "TODO"       [2016-12-07 Wed 20:09]
+
+** DONE ppt for the meeting 
+   CLOSED: [2016-11-30 Wed 18:05] SCHEDULED: <2016-11-30 Wed 14:00-15:00>
+   - State "DONE"       from "TODO"       [2016-11-30 Wed 18:05]
+   - one slide
+   - how to improve control response
+     - using absolute position as input
+       - no intermediate input points --> reach target faster
+
+** DONE improve handle assembly process
+   CLOSED: [2016-11-18 Fri 15:08] SCHEDULED: <2016-11-02 Wed 15:30>
+   - State "DONE"       from "INPROGRESS" [2016-11-18 Fri 15:08]
+   - assembled, need to test
+
+** DONE add adaptors for tidy up cables of console
+   CLOSED: [2016-11-18 Fri 15:11]
+   - State "DONE"       from "WAITING"    [2016-11-18 Fri 15:11]
+   - State "WAITING"    from "TODO"       [2016-11-02 Wed 14:35] \\
+     asked Tim to draw and 3D-print the adapter
+** DONE order trolley
+   CLOSED: [2016-11-02 Wed 11:57]
+   - State "DONE"       from "TODO"       [2016-11-02 Wed 11:57]
+** DONE comment nisi paper
+   CLOSED: [2016-10-20 Thu 17:19] SCHEDULED: <2016-10-20 Thu 14:00-15:00>
+   - State "DONE"       from "TODO"       [2016-10-20 Thu 17:19]
+** DONE fix the irrigation - water leakage
+   CLOSED: [2016-10-14 Fri 16:45] SCHEDULED: <2016-10-14 Fri 15:30-16:30>
+   - State "DONE"       from "TODO"       [2016-10-14 Fri 16:45]
+** DONE internal trial 
+   CLOSED: [2016-09-15 Thu 16:46] SCHEDULED: <2016-09-15 Thu 12:00-16:00>
+   - State "DONE"       from "TODO"       [2016-09-15 Thu 16:46]
+   - Tested 008and 013.
+     - 008: 2 broken chambers with camera. and balloons placed at both ends of the bendable section
+     - 013: three chamber without camera. the proximal balloon placed at the middle of the bendable section
+   - both could successfully pass through the descending colon
+   - Simulator
+     - artificial anal works
+     - the component fixing the descending colon needs to remove the "stair"
+
+** CANCELED prepare simulator
+   CLOSED: [2016-09-02 Fri 15:01] SCHEDULED: <2016-09-01 Thu 16:00>
+   - State "CANCELED"   from "TODO"       [2016-09-02 Fri 15:01] \\
+     no need to prepare on 1st Sep
+   - State "DONE"       from "TODO"       [2016-08-31 Thu 16:00]
+* notes
 
 ** Neoguide Colonoscope
 
+* DONE Cadaveric trial 
+  CLOSED: [2016-11-21 Mon 18:29] DEADLINE: <2016-11-20 Sun>
+  - State "DONE"       from "TODO"       [2016-11-21 Mon 18:29]
+    
+* sourcing 
+both soft and hard copies are needed
+
+* others
+
+** DONE annual dinner
+   CLOSED: [2017-02-13 Mon 11:48] SCHEDULED: <2017-02-10 Fri 17:45>
+   - State "DONE"       from              [2017-02-13 Mon 11:48]
+   - Aberdeen Marina Club
 * meetings
 
-
-** TODO internal progress meeting
-   SCHEDULED: <2016-08-15 Mon 11:30 +1w>
-   - State "DONE"       from "TODO"       [2016-08-08 Mon 18:51]
-   - State "DONE"       from "TODO"       [2016-07-05 Tue 17:56]
-   - State "CANCELED"   from "TODO"       [2016-05-16 Mon 15:24] \\
-     Dr. Kwok is attending ICRA
-   - State "DONE"       from "TODO"           [2016-05-09 Mon 13:00]
+** DONE Christmas party 
+   CLOSED: [2016-12-19 Mon 09:59] SCHEDULED: <2016-12-16 Fri 12:00>
+   - State "DONE"       from "MEETING"    [2016-12-19 Mon 09:59]
+   - Cyberport
+** internal meetings
    :PROPERTIES:
-   :LAST_REPEAT: [2016-08-08 Mon 18:51]
+   :LAST_REPEAT: [2016-08-31 Wed 10:43]
    :END:
 
-*** notes - 2016-08-15 
+*** management team meeting
 
-**** working prototype deliverables
+**** 
 
-***** until the end of October
-***** Camera
-- Naneye
-- 200 X 200
+*** group meetings
 
-***** Biocoating 
-- possibly not available because it needs 2 months
-
-***** Control 
-- more responsive by
-  - by improving the bendable section stiffness and shorter length
+**** 
 
 
-***** bendable section
-- stiffer
-- shorter
-  - length? 
+**** notes of CK visit on 2016-10-12
+    
+***** CK notes
+      - about the inner tube
+	- at least can propagate to the decending colon using only the inner tube with balloon Anchorage
+      - about the outer tube main function
+	- fix the morphology of the straighten "alpha loop"
+	- as a base at the decending colon, preventing further streching of the colon segement that have already passed, hence reduce discomfort during colonoscopy
+      - about normal human rectum length
+	- 8-12 cm
 
+      - about with the aid of the outer tube to pass through the "alpha loop"
+	- the presence of outer tube increases manipulation difficulties of surgeon, leading to inefficient colonoscopy procedure
+
+      - about the biopsy/working channel
+	- he said it is a must for the cadaveric trial at the beginning, but gradually changing to "strongly encourage to have biopsy channel"
+	- we need better cable management of the camera wires to include the biopsy channel
+	- the working channel exit can be not centered
+	  - olympus one's is not centered
+
+      - about advantages of disposable colonoscope
+	- current situation
+	  - expensive
+	    - setting the equipment for colonoscopy is expensive
+	    - high maintainance cost
+	    - even not common in china, only popular in big cities
+	  - need expertise skill of colonoscopy
+	    - surgeons have to be well-trained to conduct colonoscopy
+	      - skills to navigate inside the colon
+	- disposable colonoscope
+	  - no experties skill is needed
+	    - with the aid of ancharage system, the navigation skill, i.e. straightening the colon, is relatively simpler compared to the conventional one
+	  - the reduction of cost and skills required increase popularity of colonoscopy
+	    - enable remote monitoring and even manipulation with the aid of tele-operation technology
+
+	- about publications
+	  - engineering first, then clinical
+	  - engineering papers
+	    - FEA based analysis for design and analysis of soft robot colonoscopy
+	      - with working channel
+	      - simulating the effect when instrument is insert
+	    - we said we also need the real robot prototype for valiation
+
+
+
+
+
+
+
+**** notes - 2016-10-03
+
+***** To do tasks and timeline
+
+****** DONE internal trial (CK visit)
+       CLOSED: [2016-10-13 Thu 11:54] SCHEDULED: <2016-10-12 Wed 19:30>
+       - State "DONE"       from              [2016-10-13 Thu 11:54]
+****** console 
+ - change to COM port communication
+   - to handle only by <2016-10-12 Wed>
+     - Vincent
+   - change remaining connections to COM later
+ - overall layout
+   - components placement in each layer
+   - inter-connections
+ - where to put the camera board
+ - Handle
+   - and adapter to console - tested 
+ - Cylinder Quickfit
+   - done by 2016-10-03 Mon
+ - Cable/tubing wrapping
+ - balloon size control
+   - do by software
+   - GUI showing balloon size
+   - by <2016-10-07 Fri> Vincent
+ - indicator board 
+   - pressure sensors
+     - 3 chamber + 1 balloon
+   - flow rate sensors
+   - switches
+ - cylinder limiting sensors
+   - replace new sensors
+   - 
+ - irrigation box
+   - new box
+   - variable input voltage
+   - 
+
+ - test for lengths of
+   - bendable to handle
+   - handle to console
+   - long lengths may lead to insufficient actuation air volume
+
+****** bendable section
+ - control mapping
+   - optimizing code
+   - by <2016-10-07 Fri>
+ - sleeve coloring
+   - 
+ - inner tube to bendable section conjunction
+   - 
+ - surface friction
+
+****** capsule
+ - LED control
+   - by <2016-10-06 Thu>
+ - compare two capsule designs
+   - by <2016-10-06 Thu>
+ - test for PC/cover glass/arcylic
+ - test for camera boards
+   - switch on for 2 days by <2016-10-07 Fri>
+ - all tests in colon
+
+****** simulator
+ - new version
+ - constraints for rectum and descending colon
+   - Tim will help
+
+****** management
+      
+ - cash rebate
+
+ - ITF Online form
+   - endorsement
+   - ppt
+ - SRC clinical paper
+   - decide target journal
+     - discuss with Biji ?
+ - Soft robotics paper 
+   - follow Kasper comments
+     - Denny by <2016-10-05 Wed>
+
+
+
+
+
+**** notes - 2016-09-12
+ - order and test water type flow rate sensor
+   - Tim
+ - rebate 1st Jul 2015 - 31st Jue 2016
+   - Angel and Fai to vivian by 15 Sep 
+ - CK quite happy with the success of locomotion
+ - Trial confirm in 15th Oct
+ - new chamber design
+   - connecting two adjacent circular chamber instead of "fan" size
+     - Prof Sze also think this design make sense
+ - use pneumatic
+ - refine the console setting 
+   - for the ease of plug-and-play
+   - tidy up the wiring
+   - by 26 sep
+ - handle
+   - Ziyang, Dr.Tse, Marco
+   - 4-5 set
+ - camera
+   - use yinshun first
+   - buy more yinshun
+   - hand-made camera (cmos 6930)
+     - chimlee
+     - need 100k resolution claimed in ITF
+ - Bendable section
+   - 008 by 15 Sep
+   - with proximal balloon in the middle by 26 Sep
+
+ - visual servoing
+   - patent form
+   - video
+
+ - literature review
+   - soft robot paper 
+   - e.g. latex material
+   - 
+
+**** notes - 2016-08-15 
+
+***** working prototype deliverables
+
+****** until the end of October
+****** Camera
+ - Naneye
+ - 200 X 200
+
+****** Biocoating 
+ - possibly not available because it needs 2 months
+
+****** Control 
+ - more responsive by
+   - by improving the bendable section stiffness and shorter length
+
+
+****** bendable section
+ - stiffer
+ - shorter
+   - length? 
+
+****** handle
+ - Tim, Chimlee, Dr. Tse
+
+****** Anchorage and filter, integrating balloon, inner tubes and filter
+ - difficult to use cohensive to integrate the balloons, inner tube and the filter
+ - Tim, Dr. Tse
+
+****** inner tube
+ - stiffer
+ - will arrive as fast as the end of Aug, as late on 15 Sep
+ - Tim
+
+****** simulator 
+ - very important
+ - need to call CK in the loop
+
+
+****** visual-servo
+ - publication and patent
+
+
+****** individual detail schedule and timeline
+
+
+**** notes - 2016-08-08
+
+
+***** vaccum casting pump (martin)
+****** martin will go for order 
+***** Computer
+****** 4 computers
+******* 2 X i7-6700, gtr 1024, 24gb ram, 240gbssd 1tb hdd
+******* 2 X i7-6700, gtr 1024, 16gb ram, 240gbssd 1tb hdd
+******* 4 X windows
+****** 7 monitors 24 inches 1080
+****** 2 X work stations
+***** will give nisi braided tube
+***** will give inner tube without coating
+***** tubing, ballon development report
+****** 2 hardness tubing
+******* in manufacturing process
+******* louis paid
+****** shorter ballon
+******* - 8mm to 10mm can be shorten for a twin set
+****** try to stick the suction tube from outside (i.e. not using internal suciton tube) to test the concept
+***** lumen adapter
+****** try to (metal) 3D print an adapter
+****** ask nisi for a solution in the next meeting
+***** filter testing, dirt capacity(0/25/50/100%)-anchoring
+****** will test surrounding a filter around the twin balloon
+***** time-observation(filter/suction hole/suction channel)
 ***** handle
-- Tim, Chimlee, Dr. Tse
+****** pending
+***** visual servoing
+****** show video processing
+***** website
+****** publication team to discussion with nisi every thursday
+***** 3 or 4 chamber
+****** dr. kwok will explain historical reason why choosing 3 chambers in the next meeting
+****** consult dr chou about the payload problem
+******* prepare a checklist
+**** notes - 2016-07-05
+***** ballon
+ - need to confirm ballon design and quantity
+ - to order more outuber ballons
+   - pay by luis
+   - will be arrived in 2 months
+ - tim
 
-***** Anchorage and filter, integrating balloon, inner tubes and filter
-- difficult to use cohensive to integrate the balloons, inner tube and the filter
-- Tim, Dr. Tse
+***** tube
+ - ordered tubes with different stiffness
+ - tim
 
-***** inner tube
-- stiffer
-- will arrive as fast as the end of Aug, as late on 15 Sep
-- Tim
+***** pump
+ - sourcing by dr. tse
+ - to test how much power should to use
 
-***** simulator 
-- very important
-- need to call CK in the loop
-
-
-***** visual-servo
-- publication and patent
-
-
-***** individual detail schedule and timeline
-
-
-*** notes - 2016-08-08
-
-*** 
-**** vaccum casting pump (martin)
-***** martin will go for order 
-**** Computer
-***** 4 computers
-****** 2 X i7-6700, gtr 1024, 24gb ram, 240gbssd 1tb hdd
-****** 2 X i7-6700, gtr 1024, 16gb ram, 240gbssd 1tb hdd
-****** 4 X windows
-***** 7 monitors 24 inches 1080
-***** 2 X work stations
-**** will give nisi braided tube
-**** will give inner tube without coating
-**** tubing, ballon development report
-***** 2 hardness tubing
-****** in manufacturing process
-****** louis paid
-***** shorter ballon
-****** - 8mm to 10mm can be shorten for a twin set
-***** try to stick the suction tube from outside (i.e. not using internal suciton tube) to test the concept
-**** lumen adapter
-***** try to (metal) 3D print an adapter
-***** ask nisi for a solution in the next meeting
-**** filter testing, dirt capacity(0/25/50/100%)-anchoring
-***** will test surrounding a filter around the twin balloon
-**** time-observation(filter/suction hole/suction channel)
-**** handle
-***** pending
-**** visual servoing
-***** show video processing
-**** website
-***** publication team to discussion with nisi every thursday
-**** 3 or 4 chamber
-***** dr. kwok will explain historical reason why choosing 3 chambers in the next meeting
-***** consult dr chou about the payload problem
-****** prepare a checklist
-*** notes - 2016-07-05
-**** ballon
-- need to confirm ballon design and quantity
-- to order more outuber ballons
-  - pay by luis
-  - will be arrived in 2 months
-- tim
-
-**** tube
-- ordered tubes with different stiffness
-- tim
-
-**** pump
-- sourcing by dr. tse
-- to test how much power should to use
-
-**** filter
-- to find proper filter
-- or solution to use larger radius for suction
-  - will enlarge both inner and other tube
-    - tube will be needed x-symmetric
-- test 2mm (first) and 3mm suction with long tube and new pump and flow rate sensors
+***** filter
+ - to find proper filter
+ - or solution to use larger radius for suction
+   - will enlarge both inner and other tube
+     - tube will be needed x-symmetric
+ - test 2mm (first) and 3mm suction with long tube and new pump and flow rate sensors
 
 
-**** test locomotion with ballon placing at the front
-- without bendable section first 
+***** test locomotion with ballon placing at the front
+ - without bendable section first 
 
-**** find info for bending curvature of optical fibers
+***** find info for bending curvature of optical fibers
 
-**** test faster response using faster stepper motor
-- braided tube = biopsy
-- smaller bendable section to put inside outer tube 
-- faster stepper motor/better linear track/larger cylinder
+***** test faster response using faster stepper motor
+ - braided tube = biopsy
+ - smaller bendable section to put inside outer tube 
+ - faster stepper motor/better linear track/larger cylinder
 
-**** wiring 
-- on braided tube = sourcing by chimlee
-- alternative solution - flexible pcb
+***** wiring 
+ - on braided tube = sourcing by chimlee
+ - alternative solution - flexible pcb
 
-** TODO progress meeting with nisi
-   SCHEDULED: <2016-08-12 Fri 19:30 +1w>
-   - State "DONE"       from "TODO"       [2016-08-05 Fri 21:00]
-   - State "DONE"       from "TODO"       [2016-07-27 Fri 21:00]
-   - State "DONE"       from "TODO"       [2016-05-30 Mon 21:00]
-   - State "DONE"       from "TODO"       [2016-05-13 Fri 22:00]
-   - State "DONE"       from "TODO"       [2016-05-06 Fri 21:00]
-   - State "DONE"       from "TODO"       [2016-04-29 Fri 22:00]
-   - State "DONE"       from "TODO"       [2016-04-13 Wed 22:00]
-   - State "DONE"       from "TODO"       [2016-04-22 Fri 22:00]
+
+** NISI meetings/demos
    :PROPERTIES:
    :Directory: [[file:~/Work/NISI/SRC/meeting%20records/][file:~/Work/NISI/SRC/meeting records/]]
-   :LAST_REPEAT: [2016-08-08 Mon 18:54]
+   :LAST_REPEAT: [2016-08-31 Wed 10:49]
    :END:      
+
+
+      
+
+*** DONE internal demo - Dr. CC Foo
+    CLOSED: [2017-01-06 Fri 20:49] SCHEDULED: <2017-01-06 Fri 14:00>
+    - State "DONE"       from "TODO"       [2017-01-06 Fri 20:49]
+    - new features demonstrated
+      - with insertion tube for better force/torque transmission
+      - faster response
+      - better bendable section rigidity
+      - track-ball control
+
+    - he tried twice
+      - balloon was detached during the 1st trial
+
+    - simulator's rubber bands blocked the advancement 
+
+    - Dr. Foo's comments
+      - he wants fine adjustment when move slowly
+      - the insertion tube did helps for advancement because of better force/torque transmission
+	- easier to push forward
+      - other functions works fine
+      - could not confirm if straightening was effectively done
+	- because balloon was detached during the 1st trial
+
+    - Comments on the subject test using phantom 
+      - he did agree with the following setting
+	- load cell under a phantom to estimate the reaction force 
+	  - load cell can measure 3D force
+	- subject test to measuring completion time
+	- EM trackers to measure the real-time position of the scope
+
+    - Unlooping techniques
+      - after pulling (unloop), use external pressure to prevent reoccurring of looping
+	- the external pressure constrain the shape to straightened colon after pulling
+*** DONE Lab demo 
+    CLOSED: [2016-12-19 Mon 09:59] SCHEDULED: <2016-12-16 Fri 08:30>
+    - State "DONE"       from "MEETING"    [2016-12-19 Mon 09:59]
+*** publication meeting <2016-12-08 Thu 10:30>
+    - Update on manuscript: A Single port robotic platform for laparoscopic surgery with a large central channel for additional instruments
+    - Topic areas for the preparation of our next manuscript
+    - CK: need more revision on the introduction
+      - currently some parts of the introduction can be put in the discussion
+    - prof Yung wants to add the point:
+      - 
+    - some figures revision for readability
+    - CK: next
+    - next publication
+      - animal study
+      - quick study
+    - study of the working envelop
+      - simulation
+      - compare with the da vinci
+	- robotic arms are inserted via predetermined holes
+	  - the holes are opened for specific target
+	- the arms can't reach other regions
+	  - can't do multi-regions surgery
+      - need a good protocol 
+      - start to prove with the simulation, phantom study and finally the pig study
+*** Dr. C. C. Foo commented on the Cadaveric trial <2016-12-07 Wed 11:00>
+    - Cyberport
+    - Dr. Foo suggested live pig trial
+    - Suggest to improve rigidity, control response and insufflation
+      - rigidity
+	- to 
+      - control response
+	- not the moving speed but the reaction latency
+      - insufflation
+	- olympus can insufflate easily
+	- he wants to have fast insufflation effect as olympus
+    - Dr. Foo on technique of avoiding looping
+      - avoid the first loop
+	- once the loop happens the first time, the second can ocurrs easily
+      - not the force against resistance
+    - voice memo in [[file:~/Work/NISI/SRC/voice_memos/][file:~/Work/NISI/SRC/voice_memos/]]
+      - Dr CC Foo.m4a
+*** progress meeting cyberport
+    - <2016-12-02 Fri 14:30>
+    - cancelled
+
 *** notes - 2016-08-12
 - filter surround a twin-balloon set
   - filter large facel particles
@@ -310,7 +680,62 @@ marco
 ***** 
 
 
-** TODO publication meeting with nisi
-   SCHEDULED: <2016-08-11 Thu 10:30 +1w>
+*** old record
+   - State "CANCELED"   from "TODO"       [2016-08-31 Wed 10:49] \\
+     agreed that no more regular meeting with nisi
+   - State "DONE"       from "TODO"       [2016-08-31 Wed 10:48]
+   - State "DONE"       from "TODO"       [2016-08-05 Fri 21:00]
+   - State "DONE"       from "TODO"       [2016-07-27 Fri 21:00]
+   - State "DONE"       from "TODO"       [2016-05-30 Mon 21:00]
+   - State "DONE"       from "TODO"       [2016-05-13 Fri 22:00]
+   - State "DONE"       from "TODO"       [2016-05-06 Fri 21:00]
+   - State "DONE"       from "TODO"       [2016-04-29 Fri 22:00]
+   - State "DONE"       from "TODO"       [2016-04-13 Wed 22:00]
+   - State "DONE"       from "TODO"       [2016-04-22 Fri 22:00]
 
-** 
+
+** publication meeting (NISI)
+
+*** DONE publication meeting 
+    CLOSED: [2017-02-13 Mon 11:49] SCHEDULED: <2017-02-10 Fri 15:30>
+    - State "DONE"       from "MEETING"    [2017-02-13 Mon 11:49]
+    - experiment for workspace analysis
+      - CK said to investigate how to measure the experiment data for decent presentation in the paper
+    - Soro review
+      - CK suggested that not to agree all the reviewers comments; stand strong if we think we are correct
+    - visual servoing
+      - CK didn't quite understand the objective of the research.
+	- need to consider more detail about the lab-based experimental task 
+*** publication meeting about the next (4th) paper <2017-01-10 Tue 15:30>
+    - we propose a outline of the next paper
+      - engineering paper to surgical robotics journals
+      - needs data to support the claims and emphasize the technical novelty of the design 
+    - CK agreed that data measurement is necessary for not only academic publication, but also the research and development process
+    - there are difficulties to obtain data
+      - data from embedded encoder is difficult because it required extra data communication bandwidth
+      - standalone linkage measurement is also difficult because connecting motors to the small-sized linkage requires much efforts
+    - [[file:~/Work/NISI/IMAGE/][file:~/Work/NISI/IMAGE/]]
+      - nisi_publication_meeting_9Jan2017.pptx
+      - nisi_draft.docx
+**** DONE circulate the outline to the publication team via email
+     CLOSED: [2017-02-07 Tue 17:55] SCHEDULED: <2017-01-11 Wed 10:00>
+
+     - State "DONE"       from "TODO"       [2017-02-07 Tue 17:55]
+*** pre-publication meeting with Jo and Biji
+    - <2017-01-09 Mon 11:15>
+    - ck said we can go directly to start drafting the later papers
+      - don't need to demonstrate how is the guideline of doing publication
+    - present a outline of 4th paper for tomorrow
+      - based on the 3 submitted paper
+      - theme
+      - contribution
+      - what experiment data is need 
+
+*** old record
+    - State "DONE"       from "MEETING"    [2016-09-15 Thu 16:46]
+    - State "MEETING"    from "TODO"       [2016-09-15 Thu 03:28]
+    - State "DONE"       from "TODO"       [2016-09-08 Thu 11:30] Only Ka-wai attended this
+    - State "CANCELED"   from "TODO"       [2016-09-01 Thu 10:41] \\
+      this week has no meeting
+    - State "DONE"       from "TODO"       [2016-08-11 Thu 13:00]
+

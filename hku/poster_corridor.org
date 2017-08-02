@@ -3,104 +3,97 @@
 
 * notes
   
-** TODO ask for figures
-   ask chimlee for coil design figures
-   ask martin or other for phantom figure
-
-** TODO ask for conclusion text
-   
 * Task
 
-** TODO submit poster 
+** DONE revise corridor poster
+   CLOSED: [2016-10-12 Wed 11:02] SCHEDULED: <2016-10-08 Sat>
+   - State "DONE"       from "WAITING"    [2016-10-12 Wed 11:02]
+   - State "WAITING"    from "TODO"       [2016-10-08 Sat 16:06] \\
+     waiting for kawai's revision
+*** according to information of RAM
+    [[file:~/Work/HKU/MRcompatible_platform/RAM/][file:~/Work/HKU/MRcompatible_platform/RAM/]]
 
-* DONE Poster outline
-  CLOSED: [2016-04-29 Fri 17:37] SCHEDULED: <2016-04-29 Fri 11:00-13:00>
+* Poster outline
 ** Title
-   - High-performance Robot-assisted Systems for MRI-guided Cardiac Interventions * 
+   - High-performance Robot-assisted Systems for MRI-guided Cardiac Interventions
    - MRI-guided and Robot-assisted Technologies for Surgical Interventions
+   - Development of robotic platform for MRI-guided Intra-cardiac Catheterization * 
 ** Introduction
-   - Magnetic resonance imaging (MRI) techniques
-     - produce high-contrast images
-     - enable/provide intra-operative, real-time assessment of lesion tissue
-   - MRI-guided and Robot-assisted Systems enhances saftey and efficacy of surgical interventions
-   - Examples of surgical interventions (omitted)
-     - Cardiovascular electrophysiology (EP) 
-     - Neurosurgery
-   - Figure of good quality MR images
+   - Intra-cardiac Catheterization 
+     - a thin (<3mm), long (~1.5m) catheter is inserted from the femoral vein to the heart chamber for surgical intervention
+     - for treatment of cardiovascular diseases such as arryhythmia 
+   - Magnetic Resonance Imaging (MRI)
+     - provide high-contrast images for cardiovascular tissue
+     - enable construction of 3D cardiac roadmap
+   - MRI-guided and robot-assisted system can
+     - enhance safety and efficacy to manipulate the long flexible catheter 
+     - avoid exposing patients and clinicians to harmful radiation from X-ray and computed tomography (CT) 
+   - No existing commercial robotic catheterization platform is MR-safe/conditional 
 ** Objectives
-   1. Development of fast computing architecture for real-time MR image processing
-   2. Development of high-performance, MR-conditional robotic platform
-   3. Advanced control interface
-   4. Validation of potential clinical advantages 
-   5. Ultimate objective : Figure of integrated robotic system
+   - Development of 
+     - Fast computing architecture for Intra-operative MRI
+     - High-performance and MR-conditional robotic platform
+     - Positional sensing of catheter in MRI scanner
+     - Intuitive control interface for effective catheterization
       
 ** Methodology
+   - Intra-operative image processing
+     - Diffeomorphic Demons image registration
+     - High performance Field-Programmable Gate Arrays (FPGAs)-based computation 
 
+   - MR-safe actuation units
+     - Fabrication using MR-safe (non-ferromagnetic) material by 3D-printing technologies
+     - Master-slave pneumatic/hydraulic transmission to ensure negligible electromagnetic interference to MRI
 
-*** Fast MR image registration (Objective 1)
-    - Field-Programmable Gate Arrays (FPGAs)-based computing architecture for accurate localization of ablation targets
-    - Figure
-*** MR-compatible actuation and sensing (Objective 2)
-    1. design: MR-compatible pnuematic stepper motor 
-       - add chimlee for more design figure of coil
-    2. Micro coil sensor for real-time positional tracking
-       - figure
-*** Control interface for catheterization (Objective 3)
-    - Novel model-free control for flexible continuum robots
-    - Visual-motor alignment of operator’s motion in virtual endoscopic fly-through view
+   - Tracking coils for real-time positional feedback in MRI 
+     - allows visualization of the catheter configuration in MR images
+     - enables implementation of robotic feedback control of the catheter
+
+   - Control interface for catheterization
+     - Novel model-free control for flexible continuum robots
+     - Visual-motor alignment of operator’s motion in virtual endoscopic view
 	
-*** Validation (Objective 4)
-    1. Development of dynamic left atrial phantom model for lab-based validation
-        - phantom model figure, currently copied from video, to be modified
-    2. Computer-simulated RFA test
-	  - Subject test: volunteers were invited to manually maneuver an EP catheter to target the virtual catheter tip to the lesion targets
-	  - validate the potential benefits of providing enhanced guidance in the form of haptic and visual feedback
-    3. MRI-based validation
-       1. Test of FPGA-based MR image registration
-	  - figure
-       2. Signal-to-noise (SNR) test
-	  - figure
+** Research accomplishments
+   - Computation using FPGAs is 25 time faster than state-of-the-art GPUs.
+   - A catheter robot with the following features:
+     - Hydraulic actuation effectively transmit power for long distance (at least 10m) with small hysterysis (<1.5 degree)
+     - Rolling diagram reduces friction thus enhances efficiency
+     - A clinically-used catheter can be easily plugged-in
+   - Small and flexible tracking coils can provide accurate (+/- 0.5mm) and fast positional feedback (40Hz)
+   - Maximum Signal-to-noise (SNR) loss in MR image is within 2% only when robot is in motion.
+   - More accurate and faster robot-assisted catheterization using the control interface has been proven in a subject test of ablation task
 
-** Results
-*** MR image registration
-    FPGA-based computation enables fast (<0.1s) MR registration
-
-*** MR-compatible robotic platform
-Figure of the robotic platform with pneumatic/hydraulic actuators installed (the above figure to be replaced if not to be disclosed)
-
-*** Control interface
-Enhancement of control performance has been proven in subject test of ablation task
-*** Validation
-    1. Lab-based validation
-       1. Computer-simulated RFA test -- the same test in model-free control?
-       2. Figure of the phantom model
-    2. MRI-based validation
-       1. SNR images
-
-
-*** Visual, position and haptic sensing (omitted)
-    1. Micro coil
-       tracking accuracy +/- 0.5mm at 40Hz
-    2. (optional?) FBG-based sensing units
-*** Model-free kinematics control interface for flexible catheter (omitted)
-    - Ablation performances are found to be improved significantly with the visual-motor realignment updated in real time
-    - Subject found easier to complete the simulated ablation task with the aid of our model-free robotic control
-    - Both accuracy and effciency of robotic catheterization are enhanced
-    - Quantitive data needed
 ** Conclusions/outlooks
+   - The presented work is the first MR-conditional robotic platform for cardiac catheterization, which can be serve as benchmark for extension to other MRI-guided surgical procedures such as breast biopsy, neurosurgery, and prostate intervention. 
+
 To be revised at last
 *** Prospective impacts of using robotic catheter for MRI-guided EP:
     1. Decrease chances of post-precedural arrhythmia recurrence
     2. Increase safety of catheter navigation
        - Thereby decreasing the rates of nerve damage, esophageal fistula creation, pulmonary-vein stenosis and stroke, the major risks of EP procedures
     3. Enhancing the dexterity of catheter control facilitating better treatments for more complex arrhythmias
-    4. Serve as bencmark for the design and integration of MR-conditional robotic devices
+    4. Serve as benchmark for the design and integration of MR-conditional robotic devices
        - Open a new dimension for other procedures, such as breast biopsy neurosurgery and prostate intervention that can also benefit from intra-op MRI
 *** Something more to say....
 
 
 
 
+
+
+
+** Introduction 
+   - Magnetic resonance imaging (MRI) techniques
+     - produce high-contrast images
+     - enable/provide intra-operative 
+
+** Methodology
+
+** Objectives
+
+** Research accomplishments
+
+** Conclusions/outlooks
 
 
 * Materials

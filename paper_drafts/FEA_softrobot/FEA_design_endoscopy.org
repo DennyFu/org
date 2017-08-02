@@ -1,0 +1,825 @@
+#+OPTIONS: author:t title:t
+#+BIND: org-latex-title-command ""
+# export parameters
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+# No need for a table of contents
+#+OPTIONS: toc:nil 
+
+# emacs options
+#+STARTUP: overview
+
+# LaTeX export options
+# Set the article class
+#+LaTeX_CLASS: IEEEtran
+#+LaTeX_CLASS_OPTIONS: [journal,onecolumn]
+
+# include packages
+#+LATEX_HEADER: \usepackage[pdftex]{graphicx}
+#+LATEX_HEADER: \graphicspath{{../pdf/}{../jpeg/}}
+#+LATEX_HEADER: \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+#+LATEX_HEADER: \usepackage[cmex10]{amsmath}
+#+LATEX_HEADER: \interdisplaylinepenalty=2500
+#+LATEX_HEADER: \usepackage{cite}
+#+LATEX_HEADER: \usepackage{epsfig}
+#+LATEX_HEADER: \usepackage{epstopdf}
+#+LATEX_HEADER: \usepackage[caption=false,font=footnotesize]{subfig}
+#+LATEX_HEADER: \usepackage{bm}
+#+LATEX_HEADER: \usepackage{color}
+#+LATEX_HEADER: \usepackage{hyperref}
+
+
+
+
+
+# paper title
+# can use linebreaks \\ within to get better formatting as desired
+# #+begin_latex
+# % \title{Design and analysis of a soft contiuum robot for endoscopy}
+# #+end_latex
+#+Title: Design and analysis of a soft continuum robot prototype for colonoscopy
+
+
+# author names and IEEE memberships
+# note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+# a structure at a ~ so this keeps an author's name from being broken across
+# two lines.
+# use \thanks{} to gain access to the first footnote area
+# a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+# was not built to handle multiple paragraphs
+
+# #+begin_latex
+#  \author{Author}% <-this % stops a space
+#   \author{Michael~Shell,~\IEEEmembership{Member,~IEEE,}
+#          John~Doe,~\IEEEmembership{Fellow,~OSA,}
+#          and~Jane~Doe,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
+#   \thanks{M. Shell is with the Department
+#  of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta, GA, 30332 USA -mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
+#   \thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
+#   \thanks{Manuscript received April 19, 2005; revised January 11, 2007.}}
+# #+end_latex
+#+Author: Author 1, Author 2
+
+# The paper headers
+#+LaTeX: %\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
+#+LaTeX: %{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+# The only time the second header will appear is for the odd numbered pages
+# after the title page when using the twoside option.
+# 
+# *** Note that you probably will NOT want to include the author's ***
+# *** name in the headers of peer review papers.                   ***
+# You can use \ifCLASSOPTIONpeerreview for conditional compilation here if  you desire.
+
+
+
+# If you want to put a publisher's ID mark on the page you can do it like this:
+#+LaTeX: %\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
+# Remember, if you use this you must call \IEEEpubidadjcol in the second column for its text to clear the IEEEpubid mark.
+
+# use for special paper notices
+#+LaTeX: %\IEEEspecialpapernotice{(Invited Paper)}
+
+# make the title area
+#+LaTeX: %\maketitle
+
+# Abstract
+\begin{abstract}
+%\boldmath
+The abstract goes here.
+\end{abstract}
+
+# Index terms
+\begin{IEEEkeywords}
+IEEEtran, journal, \LaTeX, paper, template.
+\end{IEEEkeywords}
+
+#+LaTeX: \IEEEpeerreviewmaketitle
+
+
+* notes								   :noexport:
+- always work in ~/Dropbox/org/paper_drafts/FEA_softrobot/
+  - cd /Users/Denny/Dropbox/org/paper_drafts/FEA_softrobot
+- export in shell
+  - pandoc -s -S FEA_design_endoscopy.org --bibliography=FEA_design_endoscopy.bib -o FEA_design_endoscopy.docx
+- figures in /fig/Figures_FEApaper.pptx
+
+- copy to cloud
+  - cp -a -p ./* ~/Dropbox/FEM_endoscopy/
+  - cp -a -p ./fig/* ~/Dropbox/FEM_endoscopy/fig
+- copy to local
+  - cp -a -p ./* ~/Desktop/FEM_endoscopy/
+  - cp -a -p ./fig/* ~/Desktop/FEM_endoscopy/fig
+- use \C-c ( to insert ~\cite{citation}
+
+  
+
+** TODO search target journals
+** progress [0%]
+   - [ ] Introduction [0%]
+     - [ ] contributions
+     - [ ] topic sentences
+     - [ ] literature review
+     - [ ] organize into paragraphs 
+     - [ ] revision
+   - [ ] Method [0%]
+     - [ ] discussion and confirm methods
+     - [ ] simulations and experiment planning
+     - [ ] prepare figures and tables
+     - [ ] collect data
+   - [ ] Results [0%]
+     - [ ] collect data
+     - [ ] prepare figures and tables
+   - [ ] Discussion [0%]
+     - [ ] organize important points
+     - [ ] topic sentences
+     - [ ] organize into paragraphs
+     - [ ] revision
+   - [ ] Conclusion
+
+* Figures and Tables                                               :noexport:
+
+
+  - FEA animation
+    1. animation of bending
+    2. animation of adding force at the tip
+
+
+  - Videos of real robot motion
+    1. bending behavior alongside of FEM animation
+       - bending at different angles
+       - sweeping
+    2. Stiffness
+       - tip force required until tip displacement
+       - lifting a mass
+    3. Endoscope functions
+       - alongside with an endoscopic view
+       - suction and irrigation of colored liquid
+       - working with biopsy forceps
+
+
+* Introduction                                                     
+# #+LaTeX: % \IEEEPARstart{T}{his} 
+# demo file is intended to serve as a ``starter file''
+# for IEEE journal papers produced under \LaTeX\ using
+# IEEEtran.cls version 1.7 and later.
+# I wish you the best of success.
+# #+LaTeX: \hfill \\
+# mds
+# #+LaTeX: \hfill \\
+# January 11, 2007
+- 1st paragraph: To introduce the advantages of using soft robots in endoscopy
+  - Clinical data of endoscopy, showing the increasing need of robotic endoscope
+  - Review of some state-of-the-art robot-assisted endoscopy with rigid structure
+    - tendon-driven
+  - Current applications of soft robots in medical applications
+  - Advantages of using soft robots in endoscopy
+    - low-cost 
+      - disposable
+    - easy to fabricate
+    - particularly fluidically-driven soft continuum robots
+
+- 2nd paragraph: To introduce the technical challenges of using soft robots in endoscopy
+  - State-of-the-art soft robotic technologies
+    - achievements in literature 
+  - requirements for endoscopy
+    - safe
+    - fast response
+    - small size
+    - with working channel *
+    - (with embedded camera)
+  - the technical challenges in design:
+    - choice of material
+    - structural and geometrical design
+    - how stiff should be enough?
+    - simulation of hyper-elastic materials and interaction with internal instrument
+
+- 3rd paragraph: How do we solve these challenges
+  - state-of-the-art FEA for hyperelastic material
+    - achievement in literature
+  - what are the contributions of our FEA?
+    - any literature have done simulation of interaction with internal instrument?
+    - 
+  - what are our approach/tricks that can approximate the hyperelastic behaviour?
+    - new FEM formulations?
+    - new combination of element?
+    - optimized for fast computation?
+    - etc...
+
+  - how the FEA results be incorporate in the design optimization
+    - description of role of FEA in the design optimization cycle
+
+  - Fig. [[fig:robot_intro]]. The endoscope prototype.
+    #+begin_comment
+    - to give first impression what this paper is about
+    - in the introduction section
+    - with working channel and biopsy forceps
+    - with camera and LED
+    - endoscopic view with biopsy forceps
+    - can be a screenshot inside the (phantom) colon
+    #+end_comment
+    #+CAPTION: The endoscope prototype.
+    #+NAME: fig:robot_intro
+    #+ATTR_LATEX: :width 0.6\textwidth :placement [!h]
+    [[./fig/fig-robot_intro.png]]
+
+  - 4rd paragraph: Clearly list out the contributions using the proposed FEM-based design 
+    1) Novel structural design to improve the stiffness and durability (section [[Structural design]])
+       - dump-bell-shaped actuation chamber
+    2) FEM methods for simulating the effects of including working channel (section [[FEM-based modeling and response characterization]])
+       - e.g. buckling
+    3) The smallest soft continuum robot with working channel (øxmm) for endoscopic interventions (section [[Results and discussion]])
+       - how much output force?
+       - smallest too aggressive?
+
+
+* Materials and methods                                            
+
+
+** Design and performance requirements
+   - specify the target application -- colonoscopy
+
+   - a working channel is preserved
+     - for biopsy, suction, irrigation, and other instruments
+     - give common dimension of clinically-used instruments (e.g. biopsy forceps)
+       - dimensions in specific applications: e.g. colonoscopy
+     - requirement for the diameter: the larger the better
+       - specify a dimension for the prototype in this paper
+
+   - target dimension: Outer diameter and length
+     - why such dimension?
+       - clinical reason
+
+   - The requirement of bending behavior
+     - curvature ratio
+     - 
+
+   - constrained elongation
+     - i.e. only bending without much elongation 
+     - why?
+       - camera is mount at the tip. bending with large elongation will cause loss of tracked vision target in the endoscopic view
+
+   - How stiff should the scope be? - the key problem of this paper
+     - sufficient to be stable during instrument manipulation
+     - sufficient to withstand high input pressure
+     - we use FEM simulations to characterize the stiffness properties
+
+   - Durability
+     - long life cycle 
+
+   - actuation method - fluidic actuation 
+     - advantages of fluidically driven - can be only Hydraulic/pneumatic
+       - safe without internal electric component or some toxic component
+       - hydraulic: incompressible transmission media gives fast response, ...
+       - pneumatic: ease of assembly, ...
+       - MRI-compatible
+       - a sentence about the control method
+       - why not tendon-driven? (move to discussion section)?
+	 - here we may need to mention also the advantages of tendon-driven soft continuum robot
+
+   - discuss difficulties of miniaturization - the inclusion of working channel
+     - mention the state-of-the-art (smallest) soft robot dimension (for colonoscopy)
+     - difficulties of including a central working channel
+       - weaken structure
+       - reduced volume of material --> less elongation and thus smaller bending curvature
+     - are we the first soft robot with working channel of that small dimension?
+
+   - Assume that the camera and LED are not considered during simulation, but they are included in the real prototype. 
+
+
+** Structural design
+   - the actuation response depends on the structural design
+     - the geometric design of the actuation chambers and internal tubings
+     - materials
+     - fabrication process
+   - we use FEA to simulate the kinematic and dynamics behaviour in the design optimization process, regarding to the first two factors
+
+   - we can first give the design using fan-shaped actuation chambers
+   - then use FEM to demonstrate the weak points at the chamber corners
+   - then provide the dump-bell-shaped design
+
+*** Geometrical design of actuation chambers
+
+   - Fig. [[fig:2D_fem]]. 2D FEM model
+     #+begin_comment
+     - Fig. 2. 
+     - showing high stress found at the chamber corners and the wall between the working channel 
+     - 2D cross-sectional designs of generation
+     - to compare the fan-shaped and the dump-bell-shaped design
+     #+end_comment
+     #+CAPTION: Internal stress during actuation. (a) Fan-shaped actuation chamber design has higher stress. (b) Dump-bell shaped chamber design has lower stress. 
+     #+NAME: fig:2D_fem
+     #+ATTR_LATEX: :width 0.6\textwidth :placement [!h]
+     [[./fig/fig-2D_fem.png]]
+
+
+   - actuation chamber design - 1st version: the fan-shaped 
+     - number of chambers
+       - 3-chambers are commonly used in the literature
+     - chamber geometry
+       - why do we use the fan-shaped chamber?
+       - done in\nbsp\cite{martinez2012robotic}.
+     - mention about chamber arrangement/location
+       - why this offset from the center?
+   - constraint layers
+     - where are the constraint layers
+     - what are the benefits of the constraint layers?
+     - why they are necessary?
+   - dimension of the working channel
+     - to match requirement mention in [[Design and performance requirements]]
+
+   - actuation chamber design - 2nd version: the dump-bell shaped
+     - thicker walls between the chambers and the central channel
+     - no-corner chambers
+     - why?
+       - during actuation, high stress are found in the fan-shaped chambers 
+	 - in the walls between the chambers and the central channel
+	 - at the corners
+
+
+*** The choice of materials
+
+   - Fig. [[fig:stress_strain_material]]. Stress-strain characteristics of the materials in used 
+     #+begin_comment
+     - To show the process of identifying the correct hyperelastic models
+     - To show how high stress the endoscope can sustain before failure
+     - longitudinal, transverse direction
+     #+end_comment
+     #+CAPTION: Stress-strain curves of the materials in used. These measurement data are used for identification of hyperelastic model in Table [[tab:hyperelastic_formulations]].
+     #+NAME: fig:stress_strain_material
+     #+ATTR_LATEX: :width 0.6\textwidth :placement [!h]
+     [[./fig/fig-stress_strain_material.png]]
+
+
+   - show the stress-strain properties of the material (Fig. [[fig:stress_strain_material]])
+     - the body
+       - the constraint layer
+       - the central channel
+       - both longitudinal and axial stress-strain
+       - show failure limit
+   - reasons for the choice
+     - for the body
+       - large longitudinal strain
+       - can withstand high stress
+     - for the constraint layer
+       - insignificant axial strain
+       - can withstand high stress
+     - for the central channel
+       - insignificant axial strain
+       - can withstand high stress
+ 
+** FEM-based modeling and response characterization
+
+*** Identification of hyperelastic model 
+   - Table [[tab:hyperelastic_formulations]]. Table of hyperelastic models
+     #+begin_comment
+     - for the choice of FEA formulation (curve fitting)
+     - list several candidates
+     - equations of the corresponding strain-energy functions
+     #+end_comment
+     #+CAPTION: Hyperelastic model candidates for FEM simulation.
+     #+NAME: tab:hyperelastic_formulations
+     #+ATTR_LATEX: :placement [!p] :align p{0.8\textwidth}
+     | [[./fig/tab1.png]] |
+
+   - Table [[tab:FEA_simpara]]. FEM simulation parameters
+     #+begin_comment
+     - to show more details about the FEM simulation 
+     - the simulation parameters and the corresponding values for each hyperelastic model
+     - e.g. name of the element in the software
+     - e.g. the number of elements used for simulation
+     - e.g. fitting error, which indicates the best candidate among the hyperelastic models
+     #+end_comment
+     #+CAPTION: FEM simulation parameters.
+     #+NAME: tab:FEA_simpara
+     #+ATTR_LATEX:  :placement [!p] :align p{0.8\textwidth}
+     | [[./fig/tab2.png]]  |
+
+
+   - the identifying hyperelastic materials for FEA
+     - how to choose the strain energy functions?
+       - list several candidates, and then discuss how to choose among them.
+     - what software you are using?
+
+   - how to choose the finite element? and why?
+     - hexahedral element for the hyperelastic material, truss for the constraint layer?
+       - with the element number in that software (e.g. Abaqus element type C3D10H)
+
+   - Simulation parameters
+     - what is the number of elements?
+     - what are the types of elements?
+     - simulation time
+     - list in a table
+
+
+*** Characterization of bending behavior and stiffness
+
+   - Fig. [[fig:FEA_3D_external_tipforce]]. 3D FEM model for stiffness simulation
+     #+begin_comment
+     - to show how to examine the stiffness of the whole scope
+     - showing an external force act at the tip
+     - simulate displacement of the tip
+     - force perpendicularly exerted to the tip (center of the cross section)
+     - to show the setting only, result will be shown in the result section
+     #+end_comment
+     #+CAPTION: FEM simulation to estimate the robot stiffness. An external force is exerted at the tip perpendicular to the pointing direction. Stiffer robot requires larger force to move the tip.
+     #+NAME: fig:FEA_3D_external_tipforce
+     #+ATTR_LATEX: :width 0.6\textwidth :placement [!h]
+     [[./fig/fig-FEA_3D_external_tipforce.png]]
+
+
+    
+   - simulate bending performance: ratio = curvature/length
+   - bending force 
+     - what is bending force? the force at the tip ?
+     - the force with the same direction with the tip movement
+
+
+   - how to estimate stiffness?
+     - applying a force to the inner wall of the working channel
+     - stiffness = force / displacement
+
+
+   - we need to simulate the stress acting on the embedded tubings?
+     - can we simulate the buckling of the tubing? when and how the buckling occurs?
+     - as including a central channel is also the key difference from the literature, such simulation will be the novelty of the method
+     - buckling causes collapse and thus malfunction of the central channel.
+	    
+
+** (Fabrication process) - optional
+
+   - Fig. [[fig:fabrication]]. Fabrication procedure -- optional
+      #+begin_comment
+      - photos or schematic diagram
+      - sequence of fabrication
+      - molding
+      - the material pouring sequence
+      - temperature condition
+      #+end_comment
+      #+CAPTION: Fabrication procedure of the endoscope prototype. - optional
+      #+NAME: fig:fabrication
+      #+ATTR_LATEX: :width 0.6\textwidth :placement [!h]
+      [[./fig/fig-fabrication.png]]
+
+   - Fabrication process
+     - low-cost
+     - basic procedure (of course some basic tricks that can be disclosed)
+       - e.g. sequence of molding and filling material, temperature
+       - reference: e.g.  Fig.1 in \nbsp\cite{martinez2012robotic}.
+     - what should be paid attention to? why?
+       - e.g. temperature control, material filling speed, assembly cautions
+       - ...
+
+
+* Results and discussion                                           
+  - Comparison of the results between FEA and the real robot
+
+  - workspace analysis
+    - using random pressure inputs
+  - how to measure the bending force
+  - how to measure the internal force
+    - fatigue test
+      - no. of cycle until failure
+    - can take reference from [[papers:High-Force Soft Printable Pneumatics for Soft Robotic Applications][yap2016highforce]] 
+
+** Quasi-static bending behavior
+
+   - Fig [[fig:bending_behavior]]. Bending behaviour 
+     #+begin_comment
+     - Bending behaviour -- bending curvature vs pressure 
+     - curvature ratio = radius/length
+     - Assessment of motion coplanarity
+     - workspace analysis
+     - conditions
+       - bending when actuating 1 and 2 chambers
+       - different preloaded pressure
+       - different designs (e.g. chamber cross-section area)
+       - Validate the FEA data by real robot data
+     #+end_comment
+     #+CAPTION: Bending behavior of the endoscope. (a) FEA results with different chamber pressure. (b) Snapshots of the real robot. (c) The relationship between chamber pressure and the bending curvature, for different preloaded pressure. (d) Bending coplanarity of the prototype. (e) Workspace of the prototype.
+     #+NAME: fig:bending_behavior
+     #+ATTR_LATEX: :width 0.6\textwidth :placement [!h]
+     [[./fig/fig-bending_behavior.png]]
+     #+begin_comment
+     \begin{figure}[!p]
+     \subfloat[\label{fig:fig7a}]{\includegraphics[width=0.65\textwidth]{./fig/fig7.png}}
+     \subfloat[\label{fig:fig7b}]{\includegraphics[width=0.65\textwidth]{./fig/fig8.png}}\\
+     \subfloat[\label{fig:fig7c}]{\includegraphics[width=0.65\textwidth]{./fig/fig9.png}}
+     \subfloat[\label{fig:fig7d}]{\includegraphics[width=0.65\textwidth]{./fig/fig10.png}}
+     \caption{\label{}}
+     \end{figure}
+     #+end_comment
+
+   - experiment settings
+     - the prototype based is fixed
+       - what were measured?
+	 - bending radius
+	 - length of the prototype
+	 - position of the tip
+       - what instruments were used?
+	 - e.g. EM tracker to measure the 3D position of the tip
+	 - e.g. analyzed from captured images to measure the radius and the length
+     - actuation condition?
+       - bending when actuating 1 chamber
+       - bending when actuating 2 chambers
+       - different preloaded pressure
+       - 
+     - refer a figure that can illustrate the setting
+
+
+   - Assessment of the bending degree
+     - ratio = bending radius/length
+     - lower ratio means better bending degree
+     - both FEA and real robot results
+     - real robot data of different preloaded pressure
+     - 2 figures:
+       1) ratio vs chamber pressure
+       2) length vs chamber pressure
+     - expected results
+       - 
+
+   - workspace analysis
+     - real robot data is enough
+     - actuation of 1 and 2 chamber
+       - using random chamber pressure
+       - uniform distribution
+     - 1 result figure
+       - a 3D surface plot of the tip position
+       - with some vectors showing the tip directions when adding more pressure at the 3 chambers
+     - to show if the resulting cloud points are evenly distributed
+       - if the relationship of bending vs pressure is linear, the cloud points should be evenly distributed
+     - expected results
+       - 
+
+
+   - (Assessment of motion coplanarity - optional)
+     - to examine if the bending is in a fixed plane
+     - FEA may not reveal the coplanarity, because this might be due to some technical problems in the fabrication process, such as uneven material density
+     - how to quantitatively measure the coplanarity?
+       - for each bending from 0 to max degree
+       - obtain instantaneous velocities $\{\bm{v}^{tip}\}_{k}$ of the tip at time step $k$.
+	 - $k=0,...,N$ indicates the time step 
+	 - let $\bm{n}_{\theat}$ be the normal vector of the bending plane
+	   - $0\geq\theta\geq 2\pi$
+	 - kinematics of the tip can be obtained using EM tracker
+       - a scalar performance index evaluates if two consecutive velocities $\bm{v}^{tip}_{i}$ and $\bm{v}^{tip}_{i+1}$ stay on the bending plane
+	 - $J = (\bm{v}^{tip}_{i} \times \bm{v}^{tip}_{(i+1)}) \cdot \bm{n}_{\theta}$
+       - index closer to 0 means more coplanar bending 
+     - figures
+       - a 3D plot of the velocity vectors of a bending movement
+       - showing the mean and the range of the coplanarity performance index of all recorded bending movements
+
+
+** Stiffness analysis
+  - Fig. [[fig:stiffness_test_setting]]. Stiffness measurement setting.
+    #+begin_comment
+    - Measuring the stiffness of the prototype
+    - to show the measurement setting for 
+      1) the actual bending behavior and
+      2) the stiffness of the prototype (tip force until displacement)
+    - robots with camera, working channel and LED
+    - bending when actuating 1 and 2 chambers
+    - different preloaded pressure
+    #+end_comment
+    #+CAPTION: Stiffness measurement setting. The tip of the robot is connected to a pulling device with a force sensor. The robot is fixed to a platform. The platform is tilted to ensure the force is exerted perpendicular to the pointing direction.
+    #+NAME: fig:stiffness_test_setting
+    #+ATTR_LATEX: :width 0.6\textwidth :placement [!h]
+    [[./fig/fig-stiffness_test_setting.png]]
+
+  - Fig. [[fig:stiffness_results]]. Stiffness results
+    #+begin_comment
+    - min. force to displace the tip vs curvature ratio
+    - max displacement of the tip when accelerating a biopsy forceps
+    - condition
+      - at different static bending angles
+      - actuation of 1 or 2 chambers
+      - preloaded pressure
+    - Validate the FEA data by real robot data
+    #+end_comment
+    #+CAPTION: Stiffness of the protoype. (a) The min. force required to move the tip for Xmm vs curvature ratio, for different preloaded pressure. This force indicates the stiffness of the prototype. (b) The maximum displacement of the tip when accelerating a biopsy forceps inserted in the central channel.
+    #+NAME: fig:stiffness_results
+    #+ATTR_LATEX: :width 0.6\textwidth :placement [!h]
+    [[./fig/fig-stiffness_results.png]]
+    #+begin_comment
+    \begin{figure}[!p]
+    \subfloat[\label{fig:fig8b}]{\includegraphics[width=0.6\textwidth]{./fig/fig13.png}}
+    \subfloat[\label{fig:fig8d}]{\includegraphics[width=0.6\textwidth]{./fig/fig15.png}}\\
+    \subfloat[\label{fig:fig8c}]{\includegraphics[width=0.6\textwidth]{./fig/fig14.png}}
+    \subfloat[\label{fig:fig8a}]{\includegraphics[width=0.6\textwidth]{./fig/fig11.png}}
+    \caption{\label{}}
+    \end{figure}
+    #+end_comment
+
+  - experiment settings
+    - fig of the setting
+      - the robot base is fixed on a robotic platform
+      - the tip of the robot is pulled by an external force
+	- pull until the tip is displaced (e.g. several mm)
+      - the platform is tilted to ensure the pulling force acts perpendicularly to the robot pointing direction
+      - the test is repeated with different robot bending angle
+    - how to measure the force?
+      - type and name of the sensors
+    - how to measure the displacement?
+      - EM tracking system?
+      - Image analysis system?
+    - conditions
+      - actuation of 1 chamber
+      - actuation of 2 chambers
+      - different preloaded pressure
+      - 
+
+
+  - stiffer robot requires larger forces to displace the tip
+  - Assessment of the stiffness - ratio: $\frac{\textrm{pulling force}}{\textrm{tip displacement}}$
+    1) min. force required to move the tip
+    2) displacement of the tip when accelerating a biopsy forceps (or a catheter) inserted in the central channel
+  - 2 result figures
+    1) force vs preloaded pressure
+       - several curves for different chamber pressure 
+    2) displacement of the tip vs acceleration of the inserted instrument
+  - expected results
+    - for 1)
+      - larger force will be required when larger pressure is preloaded
+      - at the same prelaoded pressure but with different chamber pressure, the values of the force required would be similar. Since a chamber pressure = a curvature ratio, we will similar stiffness for various curvature ratio.
+    - for 2)
+      - Two increasing slopes will be observed.
+      - more gentle slope before a certain value of the acceleration, the tip displacement will be insignificant. 
+      - A steeper slope after the value of acceleration.
+
+
+
+** Dynamic response
+  - Fig. [[fig:dynamic_response]]. Dynamic responses
+    #+begin_comment
+    - min. force to displace the tip vs curvature ratio
+    - step responses
+    - frequency responses
+    - condition
+      - at different static bending angles
+      - actuation of 1 or 2 chambers
+      - preloaded pressure
+    - Validate the FEA data by real robot data
+    #+end_comment
+    #+CAPTION: Dynamic response analysis. (a) The relationship of the tip force output and chamber pressure, for different preloaded pressure . (The tip force is measured while constraining the robot at 0 bending angle) Kinematics histories of the (b) step responses and (c) frequency responses of the robot.
+    #+NAME: fig:dynamic_response
+    #+ATTR_LATEX: :width 0.6\textwidth :placement [!h]
+    [[./fig/fig-dynamic_response.png]]
+    #+begin_comment
+    \begin{figure}[!p]
+    \subfloat[\label{fig:fig9a}]{\includegraphics[width=0.6\textwidth]{./fig/fig13.png}}
+    \subfloat[\label{fig:fig9b}]{\includegraphics[width=0.6\textwidth]{./fig/fig15.png}}\\
+    \subfloat[\label{fig:fig9c}]{\includegraphics[width=0.6\textwidth]{./fig/fig14.png}}
+    \subfloat[\label{fig:fig9d}]{\includegraphics[width=0.6\textwidth]{./fig/fig11.png}}
+    \caption{\label{}}
+    \end{figure}
+    #+end_comment
+
+  - experiment settings
+    1) for step response and frequency response:
+       - the same setting as the bending test in section [[Quasi-static bending behavior]]
+       - giving step input and sine input for the chamber pressure instead
+    2) for tip force output
+       - the same setting as the stiffness test in section [[Stiffness analysis]] 
+       - not pull the tip, but giving pressure to the robot instead
+       - measure the force at the tip
+       - the force is perpendicular to the tip's pointing direction
+  - actuation condition
+    - 1 chamber actuation
+    - 2 chambers actuation
+    - different preloaded pressure
+    - 
+  - assessment of the dynamic response
+    1) tip force output
+    2) step response - typical performance indexes
+       - e.g. rise time
+       - e.g. transient response
+       - e.g. overshoot
+    3) frequency response - typical performance indexes
+       - frequency response plots
+  - result figures
+    1) tip force vs preloaded pressure
+       - several curves for different chamber pressure (i.e. curvature ratio) 
+    2) time history of the tip displacement
+       - several curves for different preloaded pressure (i.e. curvature ratio) 
+    3) frequency response plots
+       - amplitude vs frequency
+       - phase vs frequency
+  - expected results
+    - 
+** Performance Limits
+  - Fig. [[fig:limits]]. Prototype limits
+    #+begin_comment
+    - Fatigue -- life cycle vs engineering strain
+    - max. curvature vs stiffness (max tip force to displace the tip)
+    - 
+    #+end_comment
+    #+CAPTION: Performance limits of the prototype for different preloaded pressure . (a) Stiffness vs max. curvature ratio. (b) Life cycle.
+    #+NAME: fig:limits
+    #+ATTR_LATEX: :width 0.6\textwidth :placement [!h]
+    [[./fig/fig-limits.png]]
+    #+begin_comment
+    \begin{figure}[!p]
+    \subfloat[\label{fig:fig10a}]{\includegraphics[width=0.65\textwidth]{./fig/fig12.png}}
+    \subfloat[\label{fig:fig10b}]{\includegraphics[width=0.65\textwidth]{./fig/fig16.png}}
+    \caption{\label{fig:limits}}
+    \end{figure}
+    #+end_comment
+
+  - experiment settings
+    - increase the chamber pressure up to the maximum bending angle
+    - measure the boundary curvature ratio
+    - measure the tip force output
+    - measure the life cycle
+  - condition
+    - actuation of 1 chamber
+    - actuation of 2 chambers
+    - different preloaded pressure
+    - 
+    - run until failure
+
+  - Assessment of the performance limits
+    1) The maximum curvature achieved
+       - curvature ratio of different preloaded pressure
+       - can reuse/interpret the data obtained in the bending experiment in section [[Quasi-static bending behavior]]
+       - 
+    2) The maximum stiffness achieved
+       - define stiffness index = ratio: $\frac{\textrm{pulling force}}{\textrm{tip displacement}}$
+       - stiffness of different preloaded pressure
+       - can reuse/interpret the data obtained in the bending experiment in section [[Stiffness analysis]]
+       - 
+    3) life cycle 
+       - life cycle for different preloaded pressure
+	 - 2 chamber actuated
+  - result figures
+    1) max. curvature ratio vs max. stiffness
+       - each point represents the value of a specific preloaded pressure 
+    2) life cycle
+       - life cycle vs curvature ratio (~strain)
+	 - several curves for different preloaded pressure 
+  - expected results
+    - for 1) lower preloaded pressure will have lower stiffness and curvature ratio
+    - for 2) using lower pressure will have longer life
+
+
+** Discussion
+
+  - Fig. [[fig:demo_basics]]. Demonstration of basic endoscopic procedure
+    #+begin_comment
+    - Figures of the robot prototype
+    - to show basic functions of the prototype
+    - robots with camera, working channel and LED
+    - show together with the endoscopic view
+    - photo with biopsy forceps inserted
+    - photo of irrigating water
+    - photo of sucking water
+    - these photos can be the snapshots of videos
+    #+end_comment
+    #+CAPTION: Basic functions of the prototype. (a) Endoscopic view when performing a biopsy task inside a phantom model. (b) Suction and (c) Irrigation of colored liquid. The demonstrations can also be found in the provided videos.
+    #+NAME: fig:demo_basics
+    #+ATTR_LATEX: :width 0.6\textwidth :placement [!h]
+    [[./fig/fig-demo_basics.png]]
+    #+begin_comment
+    \begin{figure}[!p]
+    \subfloat[\label{fig:fig11a}]{\includegraphics[width=0.6\textwidth]{./fig/fig17.png}}
+    \subfloat[\label{fig:fig11b}]{\includegraphics[width=0.6\textwidth]{./fig/fig18.png}}\\
+    \subfloat[\label{fig:fig11c}]{\includegraphics[width=0.6\textwidth]{./fig/fig19.png}}
+    \caption{\label{fig:demo_basics}}
+    \end{figure}
+    #+end_comment
+
+  - Demonstrate the robot can perform basic functions for endoscopy
+    - endoscopic view
+    - the use of working channel
+      - instruments such as biopsy forceps
+      - suction and irrigation
+    - the first soft continuum robot that demonstrates such basic functions
+      - \nbsp\cite{martinez2012robotic} demonstrated the use of camera through the working channel
+    - Fig. [[fig:demo_basics]]
+
+  - Discuss about the proposed FEM methods for design optimization 
+    - can approximate the bending behavior and dynamic response
+    - simulate the effects of the internal tubings
+      - buckling
+
+  - Discuss about the high stiffness and output force
+    - advantages of having such high stiffness and output force 
+    - potential applications, not limited to endoscopic interventions
+
+  - Discuss about the performance limits
+
+* Conclusion
+- summary
+- future work
+
+# #+LaTeX: \appendices
+# * Proof of the First Zonklar Equation
+# Appendix one text goes here.
+
+# * 
+# Appendix two text goes here.
+
+
+#+LaTeX: \bibliographystyle{IEEEtran}
+#+LaTeX: \bibliography{IEEEabrv,./FEA_design_endoscopy.bib}
+
+\clearpage

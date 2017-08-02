@@ -1,0 +1,76 @@
+Ziyan's research
+* progress
+** <2016-12-13 Tue 18:00>
+   - HIFU
+     - mri distortion is a known-problem
+     - use laser to rise temperature
+   - only GE provide MRI distortion model
+     - use nonlinear gradient
+     - aim for faster imaging 
+   - motor paper
+     - revised paper
+     - still revising a good way to present the idea of the motor family
+   - neuro paper
+     - revised some figures
+       - took out the small figures out from the table
+       - add some latest
+     - KW:
+       - may need to revise the text also about the motor
+	 - more understandable by doctors
+       - remove the motor figure
+       - search for more target journals?
+       - also check the writing format
+** <2016-12-02 Fri>
+   - get submit the neuro review paper by christmas
+     - fix the figures
+     - discuss between martin, me and ziyan
+   - how to overcome the distortion
+     - in MRI HIFU
+     - in MRI radiotherapy
+   - how to use MR thermometry for mri distortion
+   - think about how to introduce our work
+     - aim for high impact papers
+     - intraoperative mri
+     - due with mri distortion
+   - expectation
+     - prepare ppt about our work
+       - the impacts
+     - the neurorobot review paper
+     - 
+** 9 Aug 2016
+*** Neuro robot
+- 
+*** Catheter robot
+*** motor upgrade
+- model modified
+  - 7 motors with different parameters
+- need a torque sensor
+  - kawai: can go for buy suitable sensor
+- Ziyan suggest for TMECH
+  - kawai suggest
+    - for ICRA letter
+    - ask dr zhou for FEA simulation of puematic acutation
+
+
+** 21 Jul 2016
+*** Needle insertion
+**** forward and inverse kinematics 
+**** workspace analysis 50 cm^2
+**** error analysis 0.2mm/1degree
+**** registration scheme
+**** difficulities
+***** long stroke
+****** try to solve by continuous motor
+***** actuator 
+****** hydraulic
+****** cable driven
+****** mount motor on the needle guide
+****** need optical encoder
+*** Catheter robot
+**** new phantom
+***** 
+*** motor upgrade
+**** modify models
+*** Ka-wai
+**** close pneumatic motor and submit to a journal 
+***** assign experiments to family pueumatic motor

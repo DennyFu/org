@@ -1,0 +1,32 @@
+Brian's research
+
+* progress
+
+** <2016-09-07 Wed>
+- Jack and Terrance for the progress of IMU
+  - IMU use accelerometer, magnetometer, and gyroscope to get the orientation information of
+- target task: velocity-control to differentiate from FPG optical fiber sensor.
+  - my opinion, need also to differentiate from other existing sensors which can sense velocity 
+
+- Chimlee opinion
+  - wireless communication of IMUs to an external RF module
+  - but cannot use the magnetometer in the IMUs
+  - a kind of wireless charging technology
+  - RF -> DC
+
+** 9 Aug 2016
+*** ICRA 2017
+- IMU-based state estimation for soft robot task-space feedback control
+  - IMU module
+    - 9 axis inertial measure unit
+      - linar acc.
+      - abs orientation
+  - originality 
+    - soft robot estimation of posture 
+  - Task space feedback control
+  - kawai
+  - chimlee
+    - imu cannot be placed too closed
+
+
+

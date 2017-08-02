@@ -1,0 +1,312 @@
+% Created 2017-03-10 Fri 00:59
+% Intended LaTeX compiler: pdflatex
+\documentclass[journal,onecolumn]{IEEEtran}
+                          \usepackage[pdftex]{graphicx}
+\graphicspath{{../pdf/}{../jpeg/}}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\usepackage[cmex10]{amsmath}
+\interdisplaylinepenalty=2500
+\usepackage{cite}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{bm}
+\usepackage{color}
+\usepackage{hyperref}
+\author{Author 1, Author 2}
+\date{\today}
+\title{Visual-based Model-free Control of Soft Continuum Robot for Effective Endoscopic Navigation}
+\hypersetup{
+ pdfauthor={Author 1, Author 2},
+ pdftitle={Visual-based Model-free Control of Soft Continuum Robot for Effective Endoscopic Navigation},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.5.1 (Org mode 9.0.1)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
+
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+%\maketitle
+
+\begin{abstract}
+%\boldmath
+The abstract goes here.
+\end{abstract}
+
+\begin{IEEEkeywords}
+IEEEtran, journal, \LaTeX, paper, template.
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+
+\section{Introduction}
+\label{sec:orgda1762c}
+\begin{itemize}
+\item Why do we use soft robot for endoscopy
+
+\begin{itemize}
+\item Endoscope is an tubular instrument for intra-cavitary or intra-luminal inspection in minimal invasive surgical procedure.
+
+\item In conventional design, an endoscope comprises of a long and flexible body and a cable-driven steerable tip mounted with a camera.
+\item This slender body is pliant to the surrounding objects, which facilitates versatile operations within the confined surgical environments.
+\item The orientation of the tip can be manipulated by antagonistically adjusting the tensions and positions of the embedded cables.
+\item This allows directing the camera and delivering interventional instruments such as biopsy forceps at particular regions of interest.
+
+\item However, the cable tensions are difficult to control [ref] for stable interventional procedures.
+\item The rigidity of tip may also cause damage to the soft tissue or even perforation [ref] when the endoscope is forced to pass through narrow corners against interior luminal surfaces.
+\item These drawbacks motivate the development of totally soft, fluid-driven continuum robotic systems for endoscopic interventions.
+
+\item Soft continuum structure can be readily fabricated from hyperelastic materials such as silicone (e.g. Ecoflex) using advanced 3D-printed technologies [ref: pnet].
+\item This enables production of low-cost and disposable soft endoscopes to facilitate sterilization process, where the risk of cross infection would be minimized [ref].
+\item Briefly introduce achievements of soft continuum robots for surgical applications
+\begin{itemize}
+\item Endotics [ref]
+\begin{itemize}
+\item for colonoscopy
+\end{itemize}
+\item Aer-O-space [ref]
+\begin{itemize}
+\item for colonoscopy
+\end{itemize}
+\item STIFFLOP [ref]
+\begin{itemize}
+\item controllable stiffness
+\end{itemize}
+\item other examples [ref]
+\end{itemize}
+
+\item Yet the kinematic and dynamic behavior of the deformable structure is usually highly nonlinear and is easily complicated by external disturbances.
+\item Consequently the responses upon actuation can be dramatically unalike at different robot configurations.
+\item This pose difficulties in deriving control methods for precise manipulation of such soft continuum structure.
+\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+\item Various close-loop control methods have been proposed for soft continuum robots.
+\begin{itemize}
+\item Model-based approaches relies on obtaining close-formed solutions [ref] from analytical models of the robot's kinematics or dynamics [ref].
+\begin{itemize}
+\item Several modeling methods have been proposed to approximate the hyperelastic behavior
+\item piecewise contant curvature models [refs],
+\begin{itemize}
+\item infintie degree-of-freedom systems [ref],
+\item interconnected spring-mass systems [refs],
+\item geometrically exact formulations based on Cosserat theory [ref].
+\end{itemize}
+\item Model-based controllers could be applied to regulate either cable-driven [ref] or fluid-driven continuum robots [ref], and even generate bio-mimicking sterotyped motions [ref].
+\item However, the assumptions made could be invalid in the presence of disturbances such as payload and external interactions.
+\item Complicated procedures are also required to determine proper analytical models and system parameters beforehand [ref].
+\item Such system identification process inevitably have to be started from scratch, if the structural properties that govern the robot's mechanical behavior have been significantly modified.
+\item These drawbacks hinder model-based methods from applications to robot manipulation the confined surgical environments involving substantial contacts.
+\end{itemize}
+\item Model-free approaches
+\begin{itemize}
+\item NN
+\item Yips
+\item advantages of model-free approach
+\end{itemize}
+\item However, most of the literature assume feedback of absolute robot position is avaliable
+\end{itemize}
+
+\item The visual servoing camera-in-hand problem and control in constrained environment 
+
+\begin{itemize}
+\item Endoscopic images are the primary source to provide positional feedback of robot in real time
+\item provide immediate positional displacement in the image domain caused by the robot motion.
+\item The minautrized camera at the distal tip can offer high resolutions images, which can be streamed to computing units for pattern recognition [ref]
+\item because installation of additional positional sensors may be infeasible due to limited size or clinical constraints.
+\item explain briefly the camera-in-hand problem visual-servoing
+\item this problem have been extensively studied in the case of rigid-link manipulators [refs]
+\item only one example could be found in the case of continuum robots and its methods
+\begin{itemize}
+\item wang's model-based cable-driven visual servo [ref]
+\end{itemize}
+\item no existing example of visual-based control for soft fluid-driven continuum robot
+\end{itemize}
+
+\item propose our model-free visual servo approach
+\begin{itemize}
+\item why nonparametric methods?
+\item Contributions:
+\begin{itemize}
+\item first attempt the camera-in-hand visual servoing for fluid-driven continuum robots for intra-luminal endoscopy
+\item Novel model-free visual servoing control method (section II)
+\item demonstrated enhanced manipulation in tele-mainpulation tasks (section III)
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\section{Materials and methods}
+\label{sec:org93313d6}
+
+\subsection{Overall control architecture for tele-manipulation}
+\label{sec:org9811a63}
+\begin{itemize}
+\item Explanation of the tele-manipulation in endoscopic navigation
+\begin{itemize}
+\item Fig.1 : Schematic diagram of the overall control architecture
+\item Components: the user input, the controller, the robot, the endoscopic camera
+\end{itemize}
+
+\item Definition of the control problem
+\begin{itemize}
+\item redundantly actuated soft robot
+\begin{itemize}
+\item Fig. 2: sketch of the soft robot
+\end{itemize}
+\item we consider operational space control
+\begin{itemize}
+\item 
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsection{Real-time image processing}
+\label{sec:orgce3d6e5}
+\begin{itemize}
+\item what is the output of the image processing
+\begin{itemize}
+\item the displacement in the endoscopic view
+\item use filter technique to smooth the output
+\item is the smoothing technique specific for the endoscopic environment?
+\end{itemize}
+\end{itemize}
+
+\subsection{Model-free Kinematic control}
+\label{sec:org9e37a6a}
+\subsubsection{Kinematic transition of soft continuum robot}
+\label{sec:orge3ab473}
+\begin{itemize}
+\item general nonlinear function to describe the kinematic relation
+\begin{itemize}
+\item why quasi-static?
+\begin{itemize}
+\item robot tip motion should be gentle for smooth output in the endoscopic view
+\item large pressure change must be prohibited
+\end{itemize}
+\item quasi-static transition model [ref]
+\begin{itemize}
+\item the robot is in stationary condition at time step \(k\) with static chamber pressure \(\bm{u}_k\)
+\item the robot state is represented \(\bm{x}_k\)
+\end{itemize}
+\item when the chamber pressure is changed by \(\Delta\bm{u}_k\), the state at the next time step is:
+\item \(\bm{x}_{k+1} = f(\bm{x}_k,\Delta\bm{u}_k, \bm{\eta}_k)\) or \(\bm{x}_{k+1} = f(\bm{x}_k,\Delta\bm{u}_k) + \bm{\eta}_k\)
+\item where \(bm{\eta}_k\) is unknown external disturbance
+\begin{itemize}
+\item e.g. ???
+\end{itemize}
+\item kinematics relative to a base frame
+\begin{itemize}
+\item indicate in Fig. 2
+\end{itemize}
+\item In endoscopic procedure, image feedback is the only available feedback to close the robotic control loop
+\item The tip orientation \(\bm{y}_k\), and the corresponding image output \(\bm{z}\) are 
+\begin{itemize}
+\item \(\bm{y}_k = g_e(\bm{x}_k)\)
+\item \(\bm{z}_k = g_c(\bm{y}_k) + \bm{\tilde \epsilon}_k\)
+\item where \bm{\epsilon}\(_{\text{k}}\) is the measurement noise
+\end{itemize}
+\end{itemize}
+\item During the tele-manipulation process, the desired target \(\bm{z}_{k+1}^*\) is given by the operator via the user input.
+\item Therefore, the controller needs to compute the required change of chamber pressure \(\Delta \bm{u}_k\), which can be represented as the inverse kinematic model below:
+\begin{itemize}
+\item \(\Delta \bm{u}=\tilde \pi(\bm{x}, \bm{\eta}, \bm{z}_k, \bm{z}_{k+1}^{*}) + \bm{\epsilon}\)
+\item \(\bm{\epsilon}\) is the noise resulting from the measurement inaccuracy
+\end{itemize}
+\item however, \(\bm{x}\) and \(\bm{\eta}\) are unknown.
+\item Under the quasi-static transition behavior, we hypothesize that the pressure \(\bm{u}_k\) can provide information of the state \(\bm{x}_k\).
+\item Besides, the controller have to adapt the external disturbance \(\bm{\eta}_k\), which inherently affects the robot transition.
+\item Therefore, we propose to adopt online learning technique to acquire the following approximated inverse model from measurement data:
+\item \(\Delta \bm{u}= \pi(\bm{u}, \bm{z}_k, \bm{z}_{k+1}^{*}) + \bm{\epsilon}\)
+\end{itemize}
+
+\subsubsection{Estimation of the absolute position from real-time visual feedback}
+\label{sec:org26c53ef}
+\begin{itemize}
+\item use image displacement and the chamber pressure at the last time step to estimate the absolute orientation
+\item \(\bm{\hat s}_k = h(\Delta \bm{z}_k,\bm{u}_{k-1})\)
+\item this estimation will be employed in the model-free controller described below.
+\end{itemize}
+
+\subsubsection{Learning the inverse model for operational space control}
+\label{sec:org5e8356b}
+\begin{itemize}
+\item brief introduction of online nonparametric method
+\begin{itemize}
+\item advantages of directly learning the inverse
+\begin{itemize}
+\item low gain feedback controller
+\end{itemize}
+\item difficulty in directly learning the inverse
+\begin{itemize}
+\item redundancy problem in the control space
+\end{itemize}
+\end{itemize}
+\item proposed our method
+\begin{itemize}
+\item how to resolve the redundancy problem
+\end{itemize}
+\item discuss the difference from related works regarding the learning/control methods
+\end{itemize}
+
+\section{Results and discussion}
+\label{sec:org17c1b76}
+\begin{itemize}
+\item (Validation by simulation)
+\begin{itemize}
+\item 
+\end{itemize}
+\item experimental setup
+\begin{itemize}
+\item Description of the endoscope prototype
+\begin{itemize}
+\item dimension, bending angle, basic endoscopic functions: e.g. insulflation, irrigation, \ldots{}
+\item Fig. 3
+\end{itemize}
+\item Description of the experimental platform
+\begin{itemize}
+\item The base of the robot is fixed
+\item to simulate the colonoscopy procedure, in which the operator searches for specific features such as polyps.
+\item Fig. 4a, b
+\begin{itemize}
+\item a: overall setting, with EM tracker at the tip
+\item b: endoscopic view with feature markers
+\end{itemize}
+\end{itemize}
+\item To quantitatively evaluate the benefits to the navigation procedure, we measures the performance of the tele-manipulation task in terms of
+\begin{itemize}
+\item completion time
+\item the discrepancy between the desired and the actual image displacement
+\end{itemize}
+\item \#xx subjects were divided into 3 groups, in each of which the subjects performed the task using
+\begin{itemize}
+\item open-loop control
+\item EM-based feedback
+\item Visual-based feedback
+\end{itemize}
+\end{itemize}
+\item Results
+\begin{itemize}
+\item Table I. performance indexes of the 3 cases
+\item Fig. 3D trajectories of the 3 cases
+\item overlayed on a virtual colon model
+\end{itemize}
+\end{itemize}
+
+\section{Conclusion}
+\label{sec:orge099be8}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,./FEA_design_endoscopy.bib}
+
+\clearpage
+\end{document}

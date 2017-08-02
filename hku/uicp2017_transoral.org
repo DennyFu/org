@@ -1,0 +1,843 @@
+* e-form (UICP 6.0)
+  Application for the Innovation and Technology Fund
+  University-Industry Collaboration Programme
+  Submitted by and
+
+** Section A – Basic Information
+   (When an application is approved, the information in this section will be published at the ITF website (denoted with #) and/or carried forward as pre-filled data in the related progress/final reports.)
+   1. Project Title#
+      Magnetic Resonance Imaging Augmented Reality Guided Transoral Surgery
+
+   1.1. English (not more than 20 words):
+   1.2. Chinese (not more than 30 words):
+   2. Abstract
+   (Please provide a brief summary of the objectives, R&D methodology and the impacts and benefits of the project on the company.)
+   The repertoire for transoral surgery in the treatment of disease processes in the head and neck region including the nasopharynx, oropharynx and hypopharynx, has been ever increasing with the advancement of robot assisted surgery. Pre-operative planning for surgical extirpation of these lesions is primarily derived from pre-operative volumetric data from computed tomography (CT) and/or magnetic resonance imaging (MRI). However currently the integration of this imaging data with transoral surgical procedures is a mental exercise. MRI offers superior soft tissue detail and differentiation, offering the ability to identify tumour margins and important neurovascular and muscular structures that need to be preserved. Integration of the MRI information in real-time during transoral surgery is hampered by the soft tissue deformation that occurs with the approach involving an extended neck, opening of the mouth and retraction of the tongue anteriorly. We will overcome this issue with a custom made dental guard to perform all of this with fiducials that offer a landmark for navigation and augmented reality (AR) based on MRI for use in transoral surgery.
+
+   
+   2.1. English (not more than 200 words):
+   2.2. Chinese (not more than 300 words):
+   3. Objectives
+   (Please state in clear and specific terms the technological challenges that merit the participation of the collaborating university, and the benefits this proposal would bring to the company.)
+
+   The overall goal of this project is to develop a MRI-based augmented reality (AR) system to assist transoral surgical procedure, in which virtual objects of critical regions (e.g. carotid artery, tumour margins) or pre-planned lesion targets can be displayed in a real-time endoscopic camera view, with the aim to improve the safety issue and efficacy of the surgical interventions. Due to the soft tissue deformation occurred during transoral surgery as aforementioned, accurate augmentation of MRI-based virtual objects into the endoscopic view in real-time will be the main technical challenge. To this end, this project proposes the use of a custom-made, patient-specific dental guard with MR-fiducial markers for positioning reference. Other technical challenges involve, but not limited to design and fabrication of the dental guard, MR-positional tracking, segmentation of MR images, real-time image registration, integration of AR in surgical endoscopic camera, etc..
+
+The PI’s clinical research team has extensive experience with transoral surgery and minimally invasive head and neck surgery as demonstrated by the multiple publications on the topics in our curriculum vitae. The research team of co-I Dr. Tsoi at HKU has expertise in dental material design and fabrication, and has published numerous manuscripts in prestigious journals. Co-I Dr. Au at CUHK is an expert in surgical robotics for minimal invasive surgery. He has co-invented and led the product development of a series of FDA approved daVinci surgical robotic platforms. The engineering team of the co-I Dr. Kwok in HKU has been developing various robotic platforms for MRI-guided minimal invasive surgery, and has remarkable experience in medical image processing. These teams of specialists will collaborate together to overcome the aforementioned technical challenges. 
+
+-	benefits this proposal would bring to the company 
+o	open/explore the market, increase the market share in robotic systems for MRI-guided robot-assisted minimal invasive surgery
+o	patent 
+
+
+
+   4. R&D Methodology
+   (Please provide a brief description of the technology to be developed and/or the innovative use of existing technologies. Details should be provided in Section C.)
+
+   This multidisciplinary research will be divided systematically into the following four components, and carry out in parallel manner for time efficiency:
+1.	To design dental guard that fixates soft tissue and provides landmarks for augmented reality (AR)
+2.	To efficiently process MRI data for 3D virtual objects segmentation and AR
+3.	To develop an integrated graphical user interface for interactive AR
+4.	To validate performance and the potential clinical outcomes of the presented MRI AR interface
+
+
+
+   5. Deliverables
+   (Please set out the deliverables, itemized as appropriate, together with their detailed technical specifications, of the project.)
+   The proposed deliverables are stated as follows:
+   -	Design of dental/surgical guard capable to firmly fixate a static-frame of reference inside oral cavity for head and neck surgery.
+   -	Integration of the dental/surgical guard with MRI-signal markers, and MR images processing of the relevant 3-D structure.
+   -	Development of image processing techniques capable to co-registration MRI model with the markers inside the dental/surgical guard.
+   -	Augmenting MRI-based 3-D structure on fixed camera 2-D views using the presented image registration techniques.
+   -	Alignment of MRI-based visual feedback on the view of 3-D tracked laparoscopic camera in real time, and its test in anatomical phantom model/simulator.
+   -	Performance/accuracy analysis of surgical margin with and without the proposed MRI-based augmented visual feedback.
+
+      5.1. English
+      5.2. Chinese
+
+** Section B – Implementation Schedule
+   (When an application is approved, the information in this section will be published at the ITF website (denoted with #) and/or carried forward as pre-filled data in the related progress/final reports.)
+
+   1. Overall Schedule#
+   (Please schedule the project commencement date to be least 30 working days from the date of submission.)
+   Commencement date (dd/mm/yyyy) : 
+   Completion date (dd/mm/yyyy) : 
+   Project duration (month) :
+
+   2. Project Milestones
+   (Please set out individual milestones to be achieved at different stages of implementation. be provided Section C.)
+   Detailed account should
+   |-------------------+-----------------+------------|
+   | Period            | period          | Milestones |
+   |-------------------+-----------------+------------|
+   | From (dd/mm/yyyy) | To (dd/mm/yyyy) |            |
+   |-------------------+-----------------+------------|
+   |                   |                 |            |
+   |-------------------+-----------------+------------|
+   
+   
+   - D1: Design of dental/surgical guard capable to firmly fixate a static-frame of reference inside oral cavity for head and neck surgery.
+   - D2: Integration of the dental/surgical guard with MRI-signal markers, and MR images processing of the relevant 3-D structure.
+   - D3: Development of image processing techniques capable to co-registration MRI model with the markers inside the dental/surgical guard.
+   - D4: Augmenting MRI-based 3-D structure on fixed camera 2-D views using the presented image registration techniques.
+   - D5: Alignment of MRI-based visual feedback on the view of 3-D tracked laparoscopic camera in real time, and its test in anatomical phantom model/simulator.
+   - D6: Performance/accuracy analysis of surgical margin with and without the proposed MRI-based augmented visual feedback.
+
+
+Milestones
+1. Design of dental/surgical guard capable to firmly fixate a static-frame of reference inside oral cavity for head and neck surgery.
+
+2. Integration of the dental/surgical guard with MRI-signal markers, and MR images processing of the relevant 3-D structure.
+
+3. Development of image processing techniques capable to co-registration MRI model with the markers inside the dental/surgical guard.
+
+4. Augmenting MRI-based 3-D structure on fixed camera 2-D views using the presented image registration techniques.
+
+5. Alignment of MRI-based visual feedback on the view of 3-D tracked laparoscopic camera in real time, and its test in anatomical phantom model/simulator.
+
+6. Pre-clinical validation with cadaver heads.
+
+7. Performance/accuracy analysis of surgical margin with and without the proposed MRI-based augmented visual feedback.
+
+
+
+
+   - Aim#1: To develop dental appliance
+
+   - Aim#2: To apply fast and reliable MR image registration for intra-operative updates of surgical roadmap
+
+   - Aim#3: To enhance visual guidance with MRI augment reality in novel endoscopic and stereoscopic view
+
+
+
+** Section C – Project Details 
+   1. Background
+   1.1. General background leading to this project. Please provide supporting documents, such as company brochures and/or published papers demonstrating relevant experiences of your company, the collaborating university and/or the project team members.
+   
+Transoral surgery in the treatment of disease processes in the head and neck region including the nasopharynx, oropharynx and hypopharynx, has been advancing exponentially with the development of robot assisted surgeries. Pre-operative planning for surgical extirpation of these lesions is primarily derived from pre-operative volumetric data from computed tomography (CT) and/or magnetic resonance imaging (MRI). However, currently the integration of this imaging data with transoral surgical procedures is a mental exercise. CT offers superior bony detail and is relatively quick to acquire with previous studies investigating AR with cone beam CT guidance for transoral robotic surgery (Liu W et al. 2015). MRI offers superior soft tissue detail and differentiation, offering the ability to identify tumour margins and the identification of important neurovascular and muscular structures that need to be preserved. Integration of the MRI information in real-time during transoral surgery is hampered by the soft tissue deformation that occurs with the approach involving an extended neck, open mouth and retraction of tongue anteriorly, there has also not been augmented reality of MRI with transoral surgery.
+
+A particular problem is encountered with the soft tissue deformation in preparation for transoral surgery that we will overcome with a custom made dental appliance to perform all of this with fiducials that offer a landmark for navigation and AR based on MRI for use in transoral surgery. With the advent of interventional MRI this also offers a platform to developing AR with real time MRI in the future for transoral robotic surgery.
+
+   1.2. Details about the R&D work to be undertaken by the collaborating university in this project and its demonstrable manpower and/or other commitments for this work.
+
+   The work for this project will be conducted at the collaborating universities including the Chinese University of Hong Kong/ The University of Hong Kong. The key aspects will be developing the dental guide with the assistance of dental faculty at Prince Philip Dental School Hong Kong University. Then utilizing cadavers and the MRI facilities at the Chinese University of Hong Kong and engineering support from Hong Kong University we will augment the transoral endscopic images of the head and neck region with MRI.
+   
+   Our Department of Otorhinoloryngology, Head and Neck Surgery at the Chinese University of Hong Kong has two academic staffs in our head and neck team, two research assistants and residents that are involved with robotic research. We are part of the research team of the ITF funded project “A New Robot Assisting Nasal Surgical Procedures with Natural Interface and its Clinical Trials” and the “Development of a Robotic System for Nasal Surgery”. We have also extensive experience with transoral robotic surgery and minimally invasive head and neck surgery as demonstrated by the multiple publications on the topics in our curriculum vitae
+
+   Our collaborator at the Department of Mechanical Engineering, Hong Kong University has multiple publications on researching bridging the technical gap between medical imaging and surgical robotic control and received multiple grants in this regards (Will probably need Ka-wai’s elaboration). 
+
+   
+   1.3. Any previously related project(s) undertaken by your company, the collaborating university and/or key project team members in the past five years and supported by the ITF or any other funding sources in Hong Kong and around the world? If yes, please briefly describe the relevant/related project(s) and the source(s) of funding obtained for it (them).
+
+   - (Ref No. 27209515): MRI-guided and Robot-assisted Catheterization for Cardiac Electrophysiological Intervention. PI: Dr. Ka-Wai Kwok
+   - General Research Fund by Research Grants Council (RGC) (Ref No. T12161316): High-performance MRI-guided Robotic System for Functional and Stereotactic Neurosurgery. PI, Dr. Ka-Wai Kwok
+   - A New Robot Assisting Nasal Surgical Procedures with Natural Interface and Its Clinical Trials (Ref: ITS/112/15FP EE15434). ITF grant, Co – Investigator – Jason Chan
+   - The ITF colonoscopy project
+
+
+   1.4. Any other R&D work or projects similar to this application have been done or are being carried out by other parties in Hong Kong and around the world? If yes, please set out the findings and explain how your approach is compared to others in terms of technological superiority, production costs, market acceptability, etc.
+
+
+   Although MRI-based AR has been investigated in various clinically applications such as liver punctures (Nicolau 2005), needle biopsy in swine (Wacker 2006), arthrography needle insertion (Fischer 2007), lumbar spinal procedures (Fritz 2012), currently there exists no application of augmented reality and MRI technologies for transoral surgery. Endoscopic camera view is the main visual reference for surgical intervention within confined transoral cavity. We propose to apply AR in the real-time endoscopic camera view, which provides additional visual guidance to the surgeons during operations. Techniques of see-through AR projection on the head-mounted binocular (Birkfellner 2002) or microscope (Edwards 2000) could be an alternative solution. However, accurate registration of the AR objects onto the direct human vision involving real-time pupil/gaze tracking is technically difficult (Nicolau 2011). The novel contribution of our proposal is the invention of dental guard embedded with MR-fiducials markers. By attaching tracking devices (e.g. infrared optical markers) for camera pose tracking of the endoscope, analytical coordinate system transformation between the MR image and the endoscopic image can be guaranteed. This device keeps its distance relatively constant to the soft tissue in open mouth position during the interventional procedure, thus allows accurate registration of AR objects on the endoscopic image. This eliminates a time-consuming initialization procedure of manually pointing representative landmarks on the patient's soft tissue using a tracked pointer as demonstrated in (Marvik 2004).
+
+
+   - Some applications of augmented MRI in other surgical procedure. 
+     - Wacker, Frank K., et al. "An Augmented Reality System for MR Image–guided Needle Biopsy: Initial Results in a Swine Model 1." Radiology 238.2 (2006): 497-504.
+       - Purpose: To evaluate an augmented reality (AR) system in combination with a 1.5-T closed-bore magnetic resonance (MR) imager as a navigation tool for needle biopsies.
+       - Materials and Methods: The experimental protocol had institutional animal care and use committee approval. Seventy biopsies were performed in phantoms by using 20 tube targets, each with a diameter of 6 mm, and 50 virtual targets. The position of the needle tip in AR and MR space was compared in multiple imaging planes, and virtual and real needle tip localization errors were calculated. Ten AR-guided biopsies were performed in three pigs, and the duration of each procedure was determined. After successful puncture, the distance to the target was measured on MR images. The confidence limits for the achieved in-plane hit rate and for lateral deviation were calculated. A repeated measures analysis of variance was used to determine whether the placement error in a particular dimension (x, y, or z) differed from the others.
+       - Results: For the 50 virtual targets, a mean error of 1.1 mm ± 0.5 (standard deviation) was calculated. A repeated measures analysis of variance indicated no statistically significant difference (P > .99) in the errors in any particular orientation. For the real targets, all punctures were inside the 6-mm-diameter tube in the transverse plane. The needle depth was within the target plane in 11 biopsy procedures; the mean distance to the center of the target was 2.55 mm (95% confidence interval: 1.77 mm, 3.34 mm). For nine biopsy procedures, the needle tip was outside the target plane, with a mean distance to the edge of the target plane of 1.5 mm (range, 0.07–3.46 mm). In the animal experiments, the puncture was successful in all 10 cases, with a mean target-needle distance of 9.6 mm ± 4.85. The average procedure time was 18 minutes per puncture.
+       - Conclusion: Biopsy procedures performed with a combination of a closed-bore MR system and an AR system are feasible and accurate.
+ 
+     - Fischer, Gregory S., et al. "MRI image overlay: application to arthrography needle insertion." Computer Aided Surgery 12.1 (2007): 2-14.
+       - Magnetic Resonance Imaging (MRI) offers great potential for planning, guiding, monitoring and controlling interventions. MR arthrography (MRAr) is the imaging gold standard for assessing small ligament and fibrocartilage injury in joints. In contemporary practice, MRAr consists of two consecutive sessions: (1) an interventional session where a needle is driven to the joint space and MR contrast is injected under fluoroscopy or CT guidance; and (2) a diagnostic MRI imaging session to visualize the distribution of contrast inside the joint space and evaluate the condition of the joint. Our approach to MRAr is to eliminate the separate radiologically guided needle insertion and contrast injection procedure by performing those tasks on conventional high-field closed MRI scanners. We propose a 2D augmented reality image overlay device to guide needle insertion procedures. This approach makes diagnostic high-field magnets available for interventions without a complex and expensive engineering entourage. In preclinical trials, needle insertions have been performed in the joints of porcine and human cadavers using MR image overlay guidance; in all cases, insertions successfully reached the joint space on the first attempt.
+
+     - Fritz, Jan, et al. "Augmented reality visualization with image overlay for MRI-guided intervention: accuracy for lumbar spinal procedures with a 1.5-T MRI system." American Journal of Roentgenology 198.3 (2012): W266-W273.
+       - ABSTRACT :
+	 - OBJECTIVE. The purpose of this study was to prospectively evaluate the accuracy of an augmented reality image overlay system in MRI-guided spinal injection procedures.
+	 - MATERIALS AND METHODS. An augmented reality prototype was used in conjunction with a 1.5-T MRI system. A human lumbar spine phantom was used in which 62 targets were punctured to assess the accuracy of the system. Sixty anatomic targets (facet joint, disk space, and spinal canal) were punctured to assess how the accuracy of the system translated into practice. A visualization software interface was used to compare planned needle paths and final needle locations on coregistered CT images (standard of reference). Outcome variables included entry error, angle error, depth error, target error, successful access of anatomic targets, number of needle adjustments, and time requirements.
+	 - RESULTS. Accuracy assessments showed entry error of 1.6 ± 0.8 mm, angle error of 1.6° ± 1.0°, depth error of 0.7 ± 0.5 mm, and target error of 1.9 ± 0.9 mm. All anatomic targets (60 of 60 insertions) were successfully punctured, including all 20 facet joints, all 20 disks, and all 20 spinal canals. Four needle adjustments (6.7%) were required. Planning of a single needle path required an average of 55 seconds. A single needle insertion required an average of 1 minute 27 seconds.
+	 - CONCLUSION. The augmented reality image overlay system evaluated facilitated accurate MRI guidance for successful spinal procedures in a lumbar spine model. It exhibited potential for simplifying the current practice of MRI-guided lumbar spinal injection procedures.
+
+     - Liao, Hongen, et al. "Three-dimensional augmented reality for mriguided surgery using integral videography auto stereoscopic-image overlay." IEEE transactions on biomedical engineering 57.6 (2010): 1476-1486.
+       - A 3-D augmented reality navigation system using autostereoscopic images was developed for MRI-guided surgery. The 3-D images are created by employing an animated autostereoscopic image, integral videography (IV), which provides geometrically accurate 3-D spatial images and reproduces motion parallax without using any supplementary eyeglasses or tracking devices. The spatially projected 3-D images are superimposed onto the surgical area and viewed via a half-slivered mirror. A fast and accurate spatial image registration method was developed for intraoperative IV image-guided therapy. Preliminary experiments showed that the total system error in patient-to-image registration was 0.90 ±0.21 mm, and the procedure time for guiding a needle toward a target was shortened by 75%. An animal experiment was also conducted to evaluate the performance of the system. The feasibility studies showed that augmented reality of the image overlay system could increase the surgical instrument placement accuracy and reduce the procedure time as a result of intuitive 3-D viewing.
+
+     - Nicolau, Stéphane, et al. "A complete augmented reality guidance system for liver punctures: First clinical evaluation." Medical Image Computing and Computer-Assisted Intervention–MICCAI 2005 (2005): 539-547.
+       - We provided in [14] an augmented reality guidance system for liver punctures, which has been validated on a static abdominal phantom [16]. In this paper, we report the first in vivo experiments. We developed a strictly passive protocol to directly evaluate our system on patients. We show that the system algorithms work efficiently and we highlight the clinical constraints that we had to overcome (small operative field, weight and sterility of the tracked marker attached to the needle...). Finally, we investigate to what extent breathing motion can be neglected for free breathing patient. Results show that the guiding accuracy, close to 1 cm, is sufficient for large targets only (above 3 cm of diameter) when the breathing motion is neglected. In the near future, we aim at validating our system on smaller targets using a respiratory gating technique.
+
+     - Archip, Neculai, et al. "Non-rigid alignment of pre-operative MRI, fMRI, and DT-MRI with intra-operative MRI for enhanced visualization and navigation in image-guided neurosurgery." Neuroimage 35.2 (2007): 609-624.
+       - Objective: The usefulness of neurosurgical navigation with current visualizations is seriously compromised by brain shift, which inevitably occurs during the course of the operation, significantly degrading the precise alignment between the pre-operative MR data and the intra- operative shape of the brain. Our objectives were (i) to evaluate the feasibility of non-rigid registration that compensates for the brain deformations within the time constraints imposed by neurosurgery, and (ii) to create augmented reality visualizations of critical structural and functional brain regions during neurosurgery using pre-opera- tively acquired fMRI and DT-MRI.
+       - Materials and methods: Eleven consecutive patients with supratentorial gliomas were included in our study. All underwent surgery at our intra- operative MR imaging-guided therapy facility and have tumors in eloquent brain areas (e.g. precentral gyrus and cortico-spinal tract). Functional MRI and DT-MRI, together with MPRAGE and T2w structural MRI were acquired at 3 T prior to surgery. SPGR and T2w images were acquired with a 0.5 T magnet during each procedure. Quantitative assessment of the alignment accuracy was carried out and compared with current state-of- the-art systems based only on rigid registration.
+       - Results: Alignment between pre-operative and intra-operative data- sets was successfully carried out during surgery for all patients. Overall, the mean residual displacement remaining after non-rigid registration was 1.82 mm. There is a statistically significant improve- ment in alignment accuracy utilizing our non-rigid registration in comparison to the currently used technology (p<0.001).
+       - Conclusions: We were able to achieve intra-operative rigid and non- rigid registration of (1) pre-operative structural MRI with intra- operative T1w MRI; (2) pre-operative fMRI with intra-operative T1w MRI, and (3) pre-operative DT-MRI with intra-operative T1w MRI. The registration algorithms as implemented were sufficiently robust and rapid to meet the hard real-time constraints of intra-operative surgical decision making. The validation experiments demonstrate that we can accurately compensate for the deformation of the brain and thus can construct an augmented reality visualization to aid the surgeon.
+
+
+     - Ukimura, Osamu. "Image-guided surgery in minimally invasive urology." Current opinion in urology 20.2 (2010): 136-140.
+
+     - Nicolau, Stéphane, et al. "Augmented reality in laparoscopic surgical oncology." Surgical oncology 20.3 (2011): 189-201.
+
+     - Birkfellner W, Figl M, Huber K. A head-mounted operating binocular for augmented reality visualization in medicine-design and initial evaluation. IEEE Transaction on Medical Imaging 2002;21(8):991e7.
+
+     - Edwards PJ, King AP, Maurer CR, Cunha Da de, Hawkes DJ, Hill DL, et al. Design and evaluation of a system for microscope-assisted guided interventions (MAGI). IEEE Transactions on Medical Imaging 2000;19(11):1082e93.
+
+     - Marvik R, Lang T, Tangen G, Andersen J, Kaspersen J, Ystgaard B, et al. Lapa- roscopic navigation pointer for 3D image guided surgery. Surgical Endoscopy 2004;18(8):1242e8.
+
+   
+   1.5. Any pilot work has already been done by your company, the collaborating university and/or the project team members in preparation for this project? If yes, please describe the work done.
+   
+
+   (Any suitable prior work done by Dr. Chan?)
+
+   Design and Fabrication of dental appliance (Dr. Tsoi’s input)
+
+   (Any suitable prior work done by Dr. Au?)
+
+   Computational improvement of MR image registrations: To align the MRI-based targets of interest with the surgical roadmap, we have investigated intensity-based image registrations which constitute the best-performing approach for addressing tissue deformation, even when a certain level of artifacts is induced on the MR images. In our MRI experiment using cardiac atrial phantom model, Demons-based algorithms [ref] demonstrated the promising registration accuracy and potential applications in many MRI-guided interventions. We then pinpointed computational complexity with regard to large memory access as the primary bottleneck to translating into clinical practice. We were the first to study the potential advantages of using reconfigurable computing units, field-programmable gate array (FPGA) [ref], for such algorithms, in order to significantly speedup the pixel/voxel gradient calculation that is a crucial step in intensity-based registration methods in general.
+
+   Navigation interface for EP using AR: We have developed an interface capable of carrying out RF-active tracking of micro-coils mounted on standard cardiac electrophysiology (EP) catheter (Ø 2.67mm) [ref]. The interface can stream MR images and positional data to a computer with low-latency (<1.5ms) and at fast sampling rate (40 Hz), which enables augmenting a virtual catheter configuration on the images in real-time. This provides an enhanced endoscopic visualization during the robotic catheter control [ref]. Thus, the operator performing the robotic catheter manipulation will have a fly-through view (FTV) of the inside of the real-time registered cardiovascular surgical roadmap.
+
+
+
+   - Investigation of deformable image registration for MR images
+     - Intensity-based image registration for large deformation tissue
+       - Error analysis on a left atrial (LA) phantom model using MRI (Fig)
+	 - injected gadolinium agents into the pre-regions inside the LA wall, simulating perioperative physiological changes at ablation landmarks
+	 - Demons-based registration algorithms
+     - Regarding the applicability of the demons-based approach in clinical intra-op imaging, we have discovered the primary bottleneck is the computational complexity in terms of the large memory access.
+       - We are the first that demonstrated the potential advantages of using reconfigurable computing units, accurate FPGA system simulator and customized performance models [ref], for accelerating the pixel/voxel gradient calculation in Demons algorithms
+   - Design and implementation of MR-tracking coils interface
+     - We have developed an interface capable of carrying out RF-active tracking of micro-coils mounted on standard cardiac electrophysiology (EP) catheter (Ø 2.67mm) [25]
+       - can stream MR images and positional data to a computer with low-latency (<1.5ms) and at fast sampling rate (40 Hz)
+       - which enables augmenting a virtual catheter configuration on the images in real-time (Fig).
+     - Smaller active tracking coil (8×1.5mm2) fabricated on flexible printed circuit (FPC) was also integrated on customized stylets [26] (Fig.) for gynecologic brachytherapy.
+       - Two thin grooves, each 10-mm long and 0.45-mm deep, were carved onto the tungsten-based stylet in diameter of Ø 1.6mm.
+       - MR-sequence, inversion- recovery gradient echo (MP-RAGE), was applied.
+       - The coils’ position could be measured as fine as 0.6×0.6×0.6 mm3, and displayed on the navigation system (Fig.2c). 
+   
+   1.6. Any request for funding support for this application previously rejected by ITF? If yes, please set out the project reference of the previous application.
+
+   1.7. If this application is a re-submission of a previously rejected application under any one of the ITF programmes, please highlight the main differences of this application vis-à-vis the previous one and explain how the differences have addressed the concerns previously raised by the Innovation and Technology Commission.
+
+   2. Implementation Approach
+   2.1. Please elaborate on the technology to be developed and/or the innovative use of existing technologies. The brief information provided in Section A is relevant.
+
+   2.2. Please elaborate with technical details on each project milestone. The brief information provided in Section B is relevant.
+   
+
+
+   This project aims at developing an augment reality technology that integrates MRI information in real-time for transoral surgery. Currently, only CT-based augmented reality, which can offer superior bony detail, has been studied for transoral surgery. The proposed MRI-based augmented reality can provide surgeons in real-time superior soft tissue details of important neurovascular and muscular structures, and visualizing surgical margins, virtual 3D surgical roadmap, and tool navigation guidance, facilitating both the surgical planning process and enhancing safety issues during the interventional procedure within the confined transoral cavity. Soft tissue deformation in transoral surgery involving an extended neck, open mouth and tongue pulled anteriorly poses many technical challenges in integrating MRI information in real-time. To this end, this research will be divided systematically into four parts, which will be progressed in parallel for time efficiency: 1) A novel dental guard will be designed to fix the soft tissue and to act as a stereotactic frame; 2) medical image processing and registration techniques will be applied for 3D virtual objects segmentation and augmented reality; 3) an integrated graphical user interface will be developed for interactive augmented reality; and 4) pre-clinical validations will be performed to evaluate the potential clinical outcomes of the proposed MRI-based augment reality system. 
+
+
+
+functional prototype of soft robotic colonoscope that facilitates non-invasive, completely pain-free and safe colonic exploration while still guaranteeing the diagnostic and therapeutic capabilities, acting as the next-generation of a standard colonoscope. This new technology will revolutionise the field of colonoscopy, as well as the techniques of surgical robotics for intra-luminal procedures, which currently require a rigid endoscope to navigate throughout the soft, long and delicate luminal structure. Such a conventional endoscope is integrated with numerous metallic tendons driving bending motion in various degrees of freedom, which also has to be re-used many times due to its expensive manufacturing cost; however, the sterilization procedure is complicated by its inherent design, assembling various materials with seams.
+
+
+
+   - Aim#1: To design dental appliance that fixates soft tissue and provides reference landmarks for augmented reality
+     - 1a: Patient-specific dental appliance that fixates soft tissue
+       - MRI scan to obtain the 3D digitized model of the patient dental arches
+       - Orthodontic Computer Aided Manufacturing (CAM) technologies will be applied to design and fabricate the dental appliance in high accuracy (< mm) [ref].
+       - Timely addictive manufacturing technologies (e.g. 3D printing, stereolithography) will be investigated with the aims to improve the production cost, time and accuracy.
+       - The appliance will be made of Polymethylacrylate (e.g. ProBase hot acrylic resin) due to its hardness, light-weighted (< g) and non-toxic nature.
+       - It will be a hollow structure that fixes the jaws in 35-40mm separation. 
+       - In addition, it will pull the lower jaw forward and retract the tongue, which enlarges the airway and thereby the surgical field of work in the transoral cavity.
+       - This maximizes the room (>25X25X20mm3) in-between the impression for delivery of multiple surgical tools such as endoscope, scalpel, suction coagulator.
+       - Several channels with interlocks will also be included inside the appliance to anchor/guide the endoscopic instruments such as endoscope, biopsy, suction, insulflation, etc., if necessary.
+       - We will also investigate to accommodate robotic devices, for example the five-lumen da Vinci Single-Site Port device, for Transoral robotic surgery (TROS).
+
+
+	 - for what instrument?
+	   - instrument
+	   - endoscope
+	   - insulflation/suction
+	 - investigate the version for incororating robotic device for TROS
+	   - da Vinci Single-Site Port
+	   - The five-lumen port provides access for two Single-Site Instruments: the 8.5 mm 3DHD endoscope, a 5/10 mm accessory port and insufflation adaptor. Port enables simple and safe entry through a 1.5 cm incision
+
+	 - a laparoscopic camera
+	   - 2
+	 - size of the channels
+	 - shape of the channels
+	 - 
+	 - 
+	 - 1b: Fiducial markers for stereotactic surgical intervention
+	   - Small fiducial markers (10mm×2mm, capsulized with vitamin E), which are visualizable in the MR images, will be embedded inside the appliance.
+	   - These landmarks will be arranged in structured pattern, acting as the frame-of-reference for the image registration process that is mandatory for the proposed augment reality technology.
+	   - Image registration process
+	   - To initialize the image registration,
+	   - A probe will be designed to let an operator to make physical contacts with the fiducial markers, which will initialize and refine the marker positions in the MR image coordinates.
+	   - A pedal switch will be also be provided for the contact confirmation.
+	   - The probe is position is tracked by an external positional tracking system (e.g. infrared camera-based tracking).
+	   - To ensure accurate contact, each marker will be associated with a colored small pit on the interior surface.
+	   - Further details of the image registration and the tool tracking are described in #Aim2 and #Aim3.
+           - We will investigate the optimal distribution and size of the marker, aiming at minimizing the reaching time by the hand-held probe. 
+
+	 - Aim#2:
+	   - 2a: Tool localization for augment reality in MR image coordinates
+	     - To visualize augmented objects efficiently and accurately, it is required to track the position and orientation of the endoscopic camera or instruments being displayed.
+	     - Infrared camera-based tracking systems (e.g. Polaris; Optotrak, NDI; accuTrack, Atracsys; medSAFE, Ascension Technology corp.) are available for clinical applications, providing wireless, accurate (<1mm) and fast (>Hz) localization.
+	     - We will design a holder (dimension) that attaches with a set of small infrared reflectors (size), which can be firmly mounted to a surgical tool being tracked.
+	     - This holder will be custom-made according to the shape of the tool, and 3D-printed by disposable materials for the ease of sterilization.
+	     - The associated calibrated infrared cameras and emitters will be placed where the line of sight to the reflectors will be guranteed (e.g. over the operation table). 
+	     - The arrangement (e.g. number, size and the separations) of the markers in a single holder will be optimized to maximize the resultant tracking accuracy in lab-based validation simulating clinical setting (#Aim4).
+	     - We will also investigate using distinct marker arrangements, or replacing the markers by distinct tags for multiple tools tracking. 
+	     - In case the occulsion of the line of sight is unavoidable, for example tracking the tip of a flexible endoscope, the holder will be designed to embed electromagnetic (EM) sensor coils, and the associated EM field generator (e.g. Aurora, NDI; infiniTrack, Atracsys; MiniBird, Ascension Technology corp) will be placed nearby within effective sensing range.
+	     - The probe (#Aim1) for pointing the fiducials embedded inside the dental appliance will be localized using the infrared camera-based tracking system.
+	     - The coordinate transformation between the tracking system and the MR image frame can therefore be established.
+	     - This enables rendering augmented 3D objects of the tracked tools and even motion prediction indications in the pre-op MR images, or 3D surgical roadmap from an external point of view in real-time.
+
+	   - 2b: Augmented reality in endoscopic view 
+	     - We will implement existing softwares to process pre-op MRI data (DICOM) from the MRI workstation.
+	     - Operators can interactively delineate and identify critical structures such as surgical margins, tumors and carotid artery.
+	     - 3D surface meshes of these strutures can extracted and superimposed on the pre-op MRI data.
+	     - To supperimpose the 3D mesh surface onto the endoscopic image in real-time, the camera pose have to be measured.
+	       - For rigid endoscope, infrared markers will be attached to the endoscope using the custom-made holder (#Aim 2a)
+	       - Camera calibration methods will be implemented to 
+		 - i) to obtain the camera's instrinsic parameters
+		 - ii) to get the relative position between the markers and the camera lens (the principal plane and principal axis) 
+	       - We will investigate the use of EM-tracking for the pose tracking of flexible endoscope
+	       - The positions of the infrared markers/EM coils can be represented in the MR image coordinates, after performing the initialization process described in #Aim 1. 
+	       - This camera pose tracking allows transformation of the virtual objects represented in MR image coordinate to the endoscopic image coordinate
+	       - Note that the transoral tissue deformation should be relatively fixed to the dental appliance while the patient's muscles being paralyzed, therefore the objects segmented from the pre-op MRI data can be consistently registering in the real-time endscopic images. 
+	       - Intensity-based image registration techniques [refs] will be applied to augment the 3D objects onto the 2D endoscopic view with correct image depth in real time (> Hz), which can be further accelerated by adopting advanced computing units (e.g. GPUs, FPGAs) for handling large number of pixels/voxels.
+	       - Such endoscopic view will be displayed together with the surgical roadmap in the external view (Aim#2a) in real-time, which could help tool positioning, giving surgeons more confidence during inventional procedures.
+
+
+
+
+
+
+
+     - segmentation of 3D virtual structures from 2D pre-op MR images
+       - develop GUI
+	 - integrates existing open-source/commerical softwares that enables delineatation and segmentation of critical structure from pre-op 2D MR-image
+	 - 
+       - further details are described in #Aim 3
+     - how to supperimpose the segmented 3D structure onto real-time 2D endoscopic image with correct image depth
+       - need to know the coordinate transformation between the MR image frame and the endoscopic image frame
+       - this require
+	 - 1. to track the camera pose in real time
+	 - 2. to compute the 3D positions of the virutal objects relative to the camera
+	 - 3. the intrinsic parameters of the camera, which is independent of the camera motion and can be obtained using standard calibration methods.
+       - how to track the position of the endoscopic camera
+	 - for non-steerable endoscope such as laparoscopic camera 
+	   - mounting infrared optical reflectors on the handle
+	   - the camera pose can be computed from the positions of the reflectors via a constant homogeneous transformation 
+	 - for steerable endoscope
+	   - we will investigate the 
+   - 
+     - 3D visualization of pre-op image
+       - the 3D virtual objects
+	 - surface rendering
+	   - delineate on the 2D pre-op MR images
+	   - 3D surface mesh
+	   - segmentation software
+	 - semi-auto 
+	 - existing softwares
+	   - names
+	   - 
+	 - open-sources
+	 - criteria to choose which softwares suit?
+	   - time spent for the delineation process
+	   - avaliability to integration of AR visualization
+	   - 
+	 - SDK
+	   - MITK (mitk.org)
+
+
+	 - display actual anatomy of the patients in 3D
+
+	 - how to do segmentation?
+	   - auto? semi-auto?
+	   - 
+
+	 - 
+
+	 - critical features
+
+	   - resection regions
+	   - tumours
+
+
+	       
+	 - an external view will be divised in a GUI
+	   - further details in Aim#3
+	   - the pre-op images
+	   - augmented with the 3D virtual objects
+	   - 
+	 - facilitate surgical planning
+	   
+     - 2b: Augmented reality in endoscopic view
+       - image registration
+	 - 
+
+     - will investigate non-rigid
+
+       
+
+
+   - monitor closed to the surgeons during surgery 
+
+
+   
+   - Aim#1: To design dental appliance that fixates soft tissue and provides reference landmarks for augmented reality
+     - 1a: Tailor-made dental appliance that fixates soft tissue
+       - A single piece of dental appliance made of polymethylacrylate (e.g. ProBase hot acrylic resin) will be designed by Co-I, Tsoi’s team.
+       - It will be tailor-made by casting upper and lower impressions of the patient subject with an open bite of 35-40mm (Fig.).
+       - Cavity space created in-between the impressions will have to be maximized (>25×25×20mm3) by further pressing the tongue.
+       - This can accommodate more number of instrument channels for delivering endoscopic devices such as a laparoscopic camera, biopsy, suction, into deeper position of the transoral cavity, avoiding the dissection of soft palate, in particular for nasopharyngeal procedure.
+       - The interior surface of the instrument channels will also be featured with several mechanical interlocks capable to anchor the surgical instruments.
+       - (need Dr. Tsoi's inputs for more technical details about the optimzation/fabrication process)
+     - 1b: Embedded fiducials for stereotaxy
+       - Thin MRI fiducials (<Ø 10mm×2mm, capsulized with vitamin E) will be embedded inside the dental appliance.
+       - These will act as image registration landmarks offering a stereotactic frame-of-reference for localization of the endoscopic devices in the MR image coordinates.
+       - In addition, the fiducials will be arranged in structured pattern, which are observable from the laparoscopic camera.
+       - Small infrared reflective markers (diameter < xx mm ) will be attached at end of the camera handle to track the position and orientation of the laparoscopic camera.
+       - Multiple calibrated infrared emitters will be placed where the occulsion of the lines of sight is minimized.
+       - This provides accurate (< xxmm) localization of the camera in real-time (> xxHz), which will be used to establish a coordinate transformation between the MR image frame and the endoscopic camera frame, allowing augmenting virtual structures identified from the pre-op MRI data onto the 2D endoscopic images.
+
+
+   - Aim#2: To visualize MR images with virtual augmented structures 
+     - Surgical areas and critical structures such as carotid artery can be identified and delineated from pre-operative functional/DT-MRI images, using commercial softwares (e.g. ).
+     - 3D meshed surfaces of the delineated structures can hence be segmented and visualized in an external view.
+     - Operators can adjust the surface meshing, color and transparency for constructing roadmaps during the surgical planning process.
+     - Prior to the intervention procedure, a laparoscopic camera can be inserted into the dental appliance.
+     - The observed fiducials can be pointed out by the operators in both the pre-op and endoscopic images.
+     - This allows setting up the coordinate transformation for registration between the MR and the endoscopic images, given known instrinsic camera parameters.
+     - Rigid image registration techniques will be applied to rapidly render the virtual surgical margin and hidden structures onto the endoscopic images. 
+     - Note that the tissue within the transoral cavity should be fixed relative to the appliance while the patient's muscles being paralyzed.
+     - Based on the tracked position and orientation of the camera, a corresponding virtual model can also be displayed together with the 3D surgical roadmap in the external view.
+     - Prediction of tool movement can also be shown. 
+     - Such enhanced visual guidance could give operators confidence during tool manipulation inside the confined transoral cavity.
+
+
+   - Aim#3: Integrated graphical user interface 
+     - 4 types of display view
+       - pre-op 2D images
+       - external view: 3D virtual surgical roadmap
+       - endoscopic camera view without augment reality
+       - endoscopic camera view with augment reality
+     - The present kinematic-model-free control approach would constitute an improvement on these existing methods.
+
+
+     - camera calibration system
+       - compatible to with commonly used endoscope models (advised by the PI Dr. Chan).
+       - analog-to-digital converter will be implemented for analog video output if necessary
+       - instrinsic parameters (e.g. focal length, principal center )
+	 - existing methods of different calibration models,for example [ref], will be evaulated according to criteria such as calibration accuracy and the ease of usage.
+	 - ground truth calibration landmarks that are easy to detect in the camera image will also be prepared
+	 - operator can also input the calibrated intrinsic parameters manually.
+     - integrate with external positional tracking systems
+       - infrared camera-based tracking system
+	 - model no.
+       - EM-tracking system
+	 - model no.
+       - direct access of the positional data of tracked objects
+     - image registration
+       - interface that allows user to initialize and refine the image registration process described in Aim#1
+       - allow operator to locate the dental appliance's landmarks visualized in both the pre-op MR images and the real-time endoscopic images
+       - the coordinate transformation between the MR image frame and the endoscopic image frame will be automatically computed, allowing visualization of MRI-based virtual objects in the external and endoscopic views in real-time.
+     - augment reality
+       - develop based on existing generic libraries for medical image processing, visualization and analyses:
+	 - VTK, ITK, 3D Slicer,
+       - DICOM raw data from the MRI workstation
+       - semi-auto delineatation of surgical area/volume of interest in the pre-op MR image data
+       - 3D mesh surfaces of the delineated objects will be automatically generated 
+	 - can exported the 3D positions in the MR image coordinates
+       - will implement interactive interface capable of adjusting the 3D mesh shape, display color, transparency.
+       - any information about the virtual objects (e.g. volume) will also be shown.
+       - These interactive functions would not only facilitate the iterative surgical planning process, but also providing additional information to assist tool manipulation during the intervention.
+
+
+
+   - Aim#3: To validate performance and the potential clinical outcomes of the presented MRI augmented reality interface.
+(Milestone 5, 6, 7)
+-	3a. Lab-based validation 
+o	To evaluate the accuracy of augmenting virtual objects on the co-registered camera images
+o	A phantom transoral model in open-jaw position will be fabricated using high quality MR images
+o	The dental appliance with landmarks will then be tailor-made and fixed on the phantom 
+o	During the validation, a laparoscopic camera will be inserted through the instrument channel of the dental appliance (Aim#1)
+o	Using the proposed image-registration technique (Aim#2), critical objects, for example, carotid artery, can be aligned on the 2D camera image feedback in real-time, as well as MR images having resolution comparable to intra op images. 
+o	The positions of both the camera and the critical objects will be recorded using electromagnetic (EM) tracking system (NDI Medical Aurora V3)
+o	This allows analysis of the alignment accuracy on both the real-time camera images and intra-op MR images under various insertion speed of the endoscope
+-	3b. MRI-based validation
+o	The proposed MRI augmented reality interface will be validated on the cadaver heads.
+o	The dental appliance with landmarks will be tailor-made according to the size of the head in open-jaw position (Aim#1)
+o	T2-weighted MR images of the cadaver head will be acquired, from which 3D virtual objects of critical regions such as carotid artery and nerves will be identified and constructed on a surgical roadmap using image segmentation techniques [ref].
+o	An ablation task will be simulated, where an area of lesion target will be planned on the MRI-based roadmap with the augmented virtual objects.
+o	During the task, an endoscope and an ablation device will be inserted via the instrument channels of the appliance. 
+o	The ablation will be performed under the enhanced visual guidance the endoscopic view augmenting with the surgical area and the critical regions (Aim#2).
+o	The above trial will be repeated with and without the augmented objects. Various conditions of head size, lesion target locations, and different settings for the imaging registration will also be tested.
+o	The resultant surgical margin and other relevant data such as task completion time will be recorded. This allows forming comprehensive performance indexes for analyses of the safety, accuracy and effectiveness of our propose MRI-based augmented reality system for transoral surgery.
+
+
+
+
+- Aim#4: To validate performance and the potential clinical outcomes of the presented MRI augmented reality interface.
+- 4a. Lab-based validation:
+  - To evaluate the accuracy of augmenting virtual objects on the co-registered camera images, a phantom transoral model in open-jaw position will be fabricated using high quality MR/CT images.
+  - The dental guard will then be tailor-made according to the phantom dental arches.
+  - During the validation, a laparoscopic camera will be inserted through the instrument channel of the dental appliance (Aim#1).
+  - Using the proposed augmented reality technology (Aim#2), critical objects, for example, carotid artery, can be aligned on the 2D camera image feedback in real-time, as well as MR images having resolution comparable to intra op images.
+  - The positions of both the camera and the critical objects will be recorded using electromagnetic (EM) tracking system (NDI Medical Aurora V3).
+  - This allows analysis of the alignment accuracy on both the real-time camera images and intra-op MR images under various insertion speed of the endoscope.
+- 4b. MRI-based validation:
+  - The proposed MRI augmented reality interface will be validated on the cadaver heads.
+  - The dental appliance with landmarks will be tailor-made according to the size of the head in open-jaw position (Aim#1).
+  - T2-weighted MR images of the cadaver head will be acquired, from which 3D virtual objects of critical regions will be identified and constructed on a surgical roadmap using image segmentation techniques [ref].
+  - An ablation task will be simulated, where an area of lesion target will be planned on the MRI-based roadmap with the augmented virtual objects.
+  - During the task, an endoscope and an ablation device will be inserted via the instrument channels of the appliance.
+  - The ablation will be performed under the enhanced visual guidance the endoscopic view augmenting with the surgical area and the critical regions (Aim#2).
+  - The above trial will be repeated with and without the augmented objects.
+  - Various conditions of head size, lesion target locations, and different settings for the imaging registration will also be tested.
+  - The resultant surgical margin and other relevant data such as task completion time will be recorded.
+  - This allows forming comprehensive performance indexes for analyses of the safety, accuracy and effectiveness of our propose MRI-based augmented reality system for transoral surgery.
+
+
+
+- steerable robotic laser pointer
+  - A miniaturized robotic laser pointer (< size mm) will be built for validation of our proposed AR-system. 
+  - It will comprise a steerable titanium-based laser collimator (diameter, length) and a soft robotic endoscope.
+  - The collimator will be installed in a small capsule, and steered by several fluid actuation units surrounded.
+  - To achieving precise manipulation of the laser aiming angle, volumetric feedback control of the fluid will be applied to regulate the pitch and yaw angles.
+  - This laser pointer will be attached to the tip of the soft robotic endoscope.
+  - The endoscope will be silicone-made and embedded with fluid chambers for actuation.
+  - Its bending motion can be measured by attaching EM-tracking coils to the scope body.
+  - For tool tracking in the MRI environment, we will also investigate the use of semi-active tracking.
+  - A preliminary prototype of semi-active RF-coil has been developed by the co-PI Dr Kwok’s team.
+  - This coil unit is fabricated on flexible-printed circuit, which can be made thin (0.1mm) and small (1×5mm2) in size for flexible integration with surgical devices, while maintaining low energy loss rate (Q-factor >30).
+  - Such real-time tracking will be integrated into a control interface for tele-manipulation of the soft endoscope and the laser pointer.
+  - Operators can then accurately point a laser spot on a target surface, using a motion input device (e.g. joystick (model no)). 
+  - The co-PI Dr.Kwok's team is experienced in deriving robotic controllers [soro, pf] that can precisely control the tip motion of such flexible endoscopic devices.
+  - Note that both the soft endoscope and the laser pointer do not produce any EM interference that cause artifacts to the MR images.
+  - It can be connected to fibre laser source to deliver visible laser, e.g. CO2/Thulium.
+  - By adjusting the output power, targeting (low-power) and ablation (high-power) can be performed.
+  - Because the laser emits from a single fibre, the ablation spot will be exactly aligned with the targeting one.
+  - The whole robotic device can be firmly anchor to the dental guard, thus allow delivery of the laser source close to ablation regions. 
+    
+- Lab-based validations will be conducted on a head and neck phantom model before any ex vivo examinations.
+  - The phantom will be tailor-made according to pre-operative MR scans. (do we need other modalities? for the 3D modeling?)
+  - Soft tissues of cavity comprising nasopharynx, oropharynx and hypopharynx will be made of elastomers (e.g. Dragon Skin® series), by casting the materials on a 3D-printed mold. 
+  - To simulate soft tissue deformation due to physiological motion such as breathing, fluid chambers will also be embedded inside the elastomers, so that the morphology of the transoral cavity can be changed by varying the fluid volume. 
+  - The dental upper and lower arches will also be fabricated.
+  - The arches separation will be adjustable so as to "bite" the dental guard proposed in Aim#1.
+  - tumors
+    - how to make?
+    - e.g. ex-vivo tissue
+    - stick on the phantom model
+    - 
+- Lab-based validation using the phantom model
+- 
+- 
+
+
+
+The following is copied from the GRF2016
+Aim#3: To design surgical planning interface and validate the potential clinical values of the proposed system
+- A laser resection task for the transoral ONP carcinoma will be simulated to validate the entire proposed system.
+- Co-I Chan’s team will advise on design of a head and neck phantom model tailor-made with three key features specific for our validation:
+  - 1) Upper nose and mouth airways, including uvula, hard and soft palate, will be fabricated by stiff elastomers (e.g. Dragon Skin® Series). It will also be attached with an articulated soft gingiva model for dental retraction using the proposed surgical guard (Aim#1b);
+  - 2) Gelatin-agar gels casted by a 3D-printed mold will be integrated with the phantom airways, thereby shaping the interior morphological features alike ONP cavities. Such agar-based model will be also attached with small silicone bladders filled with fluid. The “ONP” cavity morphology can be altered with controllable fluid volume regulated by a syringe, simulating any intra-op tissue deformation;
+  - 3) Phantom cysts/tumors will be created, embedded inside the soft “ONP” cavities. It could be formed by either ex-vivo mucosal tissue of swine or color-dyed agar gels mixed with MRI contrast agents (e.g. gadolinium paramagnetic agents). This mimicked resection targets can then be well-distinguished from the agar-based “ONP” cavities under MRI.
+- 3a. Lab-based validation:
+  - Prior to the test in MRI environment, tele-operated robotic control of the proposed endoscope and laser pointer (Aim#1-2) will be validated on the phantom model in laboratory.
+  - Instead of RF-semi-active tracking, a real-time EM tracking system (e.g. NDI Aurora) will be adopted to measure the robot configuration, also to localize the instrument tip.
+  - The actual collimator will be replaced by a 6-D EM tracking marker (Ø0.8mm×9mm). 3-D desired resection margins on the color-dyed phantom tumor will be measured/registered by the EM tracker.
+  - The robot feedforward/feedback controller will be calibrated in task space w.r.t. the EM tracking coordinates.
+  - Proximity and differentiation angle from the EM marker to the desired resection can be captured to evaluate the targeting accuracy.
+  - In actual laser tests, the targeting accuracy will be evaluated by tracing the ablation effect along the color-dyed margin.
+  - A set of optimal control parameters for coordinating the endoscope bending/insertion, laser pointing will be obtained for the subsequent MRI trials.
+- 3b. MRI-based validation:
+  - MRI compliancy of the whole setup (Aim#1-2) will be tested by evaluating the image artefact, if any, and also by measuring the SNR on the MR images.
+  - The robot feedback control (Aim#2c) will be implemented with the RF-semi-active tracking system (Aim#2a).
+  - Thulium laser oscillation and intensity (Aim#1c) will have to be tuned so that little temperature rise (≈+1ºC) on the ex-vivo mucosal tissue can be measured under the MR-thermometry (Aim#2b).
+  - A graphic user interface (GUI) for laser surgical planning will be developed.
+  - It could provide the operator with intuitive prescription of an allowable laser region on the 3-D ONP roadmap that is constructed/segmented based on high-resolution (<0.7mm) pre-op MR images.
+  - The simulated tissue deformation will be applied, shifting the “ONP lesions” likely out of the optimal laser navigation range.
+  - The intra-op MRI interleaved with thermometry sequence will automatically take place along/nearby the prospective laser target.
+  - Demons-based MR image registration (previously improved by PI’s team [25, 29]) will be applied to align the planned laser path with the intraoperatively registered roadmap.
+  - The above trials will be repeated for various sizes and locations of “ONP carcinoma”, speeds of endoscopic and laser navigation, and different settings for its soft chamber actuation.
+  - All relevant data regarding imaging and robot manipulation will be recorded, thus forming the performance metrics for assessing safety, accuracy and effectiveness through the use of our proposed MRI-guided soft robotic system.
+  - Feasibility of the proposed work has been demonstrated under the comprehensive coverage of our preliminary studies.
+  - The ultimate successful completion will attract further follow-up funding for comprehensive pre-clinical validation of the proposed platform in cadaveric head and neck model, followed by feasibility live human trials.
+  - A new line of study will be developed convincing other researchers to push the envelope of robot-assisted interventions, particularly those using MRI to guide steerable instruments navigated for soft tissue surgeries.
+
+
+
+** 
+   3. Target Results and Benefits
+   3.1. The proposal’s contribution to the innovation and technology upgrading of the Hong Kong economy.
+   3.2. The proposal's contribution to the innovation and technology capabilities of the company.
+   3.3. The benefits of this proposal to the collaborating university, its faculty members and/or graduate students.
+
+
+   4. Collaborations with Other Organisations
+   4.1. Any collaboration with other organizations? If so, please elaborate on the form of such collaborations.
+   4.2. Any special arrangements arising from such collaboration, e.g. licensing of intellectual property rights? If so, please elaborate.
+
+   5. Intellectual Property Rights of the Project Results/Deliverables
+   5.1. Any intellectual property rights from your company or the collaborating university that would be used for the generation of the project results/deliverables? If so, please provide details about such arrangements.
+   5.2. Any intention to patent any of the project results/deliverables to be developed under the project and if so, the name of the patentable item(s) and the country/countries where such registration will be filed?
+   5.3. Any agreement between your company and the collaborating university on the sharing of the royalties or any other sorts of income to be generated from the project results/deliverables and if so, brief description of such arrangement? (Please attach a copy of the relevant agreement to this application.)
+
+
+   6. Company Details
+   6.1. General Information [Such information has been provided in Section D.]
+   6.2. Business Information
+   |--------------------------+---|
+   | No. of Employees in HK : |   |
+   |--------------------------+---|
+   | Year of Establishment :  |   |
+   |--------------------------+---|
+   | Nature of Business :     |   |
+   |--------------------------+---|
+   | Line of Products :       |   |
+   |--------------------------+---|
+
+
+   6.3. Shareholding Information
+   |-----+--------------------+---------------------------------------------+--------|
+   | No. | Shareholder’s Name | Allotted Co. No.(if any) / Identity Card No | % held |
+   |-----+--------------------+---------------------------------------------+--------|
+   |     |                    |                                             |        |
+   |-----+--------------------+---------------------------------------------+--------|
+   |     |                    |                                             |        |
+   |-----+--------------------+---------------------------------------------+--------|
+   |     |                    |                                             |        |
+   |-----+--------------------+---------------------------------------------+--------|
+   |     |                    |                                             |        |
+   |-----+--------------------+---------------------------------------------+--------|
+   |     |                    |                                             |        |
+   |-----+--------------------+---------------------------------------------+--------|
+
+
+   6.4. Management Team Information
+   |-----+------+----------+-------------------+--------------------------------------|
+   | No. | Name | Position | Identity Card No. | Date of 1st Appointment (DD/MM/YYYY) |
+   |-----+------+----------+-------------------+--------------------------------------|
+   |     |      |          |                   |                                      |
+   |-----+------+----------+-------------------+--------------------------------------|
+   |     |      |          |                   |                                      |
+   |-----+------+----------+-------------------+--------------------------------------|
+   |     |      |          |                   |                                      |
+   |-----+------+----------+-------------------+--------------------------------------|
+   |     |      |          |                   |                                      |
+   |-----+------+----------+-------------------+--------------------------------------|
+   |     |      |          |                   |                                      |
+   |-----+------+----------+-------------------+--------------------------------------|
+
+   6.5. Relationship between the Company, the Collaborating University and their Staff Members Participating in the Project
+   (Please provide details about any other kind of affiliation if they have not been provided in 6.4 above)
+
+   7. Other Information in Support of the Application
+
+** Section D – Applicant Organization and Collaborating Parties
+   (When an application is approved, the information in this section will be published at the ITF website (denoted with #) and/or carried forward as pre-filled data in the related progress/final reports.)
+   1. Information on the Applicant Company#
+   (Please provide business, shareholding and management team information in Section C.)
+   |-------------------------------------------------+---|
+   | Name in English:                                |   |
+   |-------------------------------------------------+---|
+   | Name in Chinese:                                |   |
+   |-------------------------------------------------+---|
+   | Registered Address:                             |   |
+   |-------------------------------------------------+---|
+   | Telephone Number:                               |   |
+   |-------------------------------------------------+---|
+   | Fax Number:                                     |   |
+   |-------------------------------------------------+---|
+   | Email Address:                                  |   |
+   |-------------------------------------------------+---|
+   | Webpage:                                        |   |
+   |-------------------------------------------------+---|
+   | Contact Person - Name:                          |   |
+   |-------------------------------------------------+---|
+   | Contact Person - Position:                      |   |
+   |-------------------------------------------------+---|
+
+ 
+   2. Information on the Collaborating University# 
+   |----------------------------+---|
+   | Name in English:           |   |
+   |----------------------------+---|
+   | Name in Chinese:           |   |
+   |----------------------------+---|
+   | Year of Establishment:     |   |
+   |----------------------------+---|
+   | Nature of Business:        |   |
+   |----------------------------+---|
+   | Registered Address:        |   |
+   |----------------------------+---|
+   | Telephone Number:          |   |
+   |----------------------------+---|
+   | Fax Number:                |   |
+   |----------------------------+---|
+   | Email Address:             |   |
+   |----------------------------+---|
+   | Webpage:                   |   |
+   |----------------------------+---|
+   | Contact Person - Name:     |   |
+   |----------------------------+---|
+   | Contact Person - Position: |   |
+   |----------------------------+---|
+
+
+   3. Other Collaborating Parties#
+   |----+-----------------------------+---------------------+----------------------------+----------------+-------------------------|
+   | No | English Name (Chinese Name) | Role in the Project | Address / Webpage (if any) | Contact Person | Tel No / Fax No / Email |
+   |----+-----------------------------+---------------------+----------------------------+----------------+-------------------------|
+   |    |                             |                     |                            |                |                         |
+   |----+-----------------------------+---------------------+----------------------------+----------------+-------------------------|
+   |    |                             |                     |                            |                |                         |
+   |----+-----------------------------+---------------------+----------------------------+----------------+-------------------------|
+
+** Section E – Project Team
+   (When an application is approved, the information in this section will be published at the ITF website (denoted with #) and/or carried forward as pre-filled data in the related progress/final reports.)
+
+   1. Project Coordinator#
+   |--------------------------------------------------------------+---|
+   | Project Role:                                                |   |
+   |--------------------------------------------------------------+---|
+   | [ ] Key member [ ] CV included [ ] To be Paid by the Project |   |
+   |--------------------------------------------------------------+---|
+   | Name in English:                                             |   |
+   |--------------------------------------------------------------+---|
+   | Name in Chinese:                                             |   |
+   |--------------------------------------------------------------+---|
+   | Position:                                                    |   |
+   |--------------------------------------------------------------+---|
+   | Department (if any)                                          |   |
+   |--------------------------------------------------------------+---|
+   | Organization Name                                            |   |
+   |--------------------------------------------------------------+---|
+   | Telephone Number:                                            |   |
+   |--------------------------------------------------------------+---|
+   | Fax Number:                                                  |   |
+   |--------------------------------------------------------------+---|
+   | Email Address:                                               |   |
+   |--------------------------------------------------------------+---|
+   | Main Task:                                                   |   |
+   |--------------------------------------------------------------+---|
+   | Organization Webpage:                                        |   |
+   |--------------------------------------------------------------+---|
+
+   2. Other Team Members#
+   |----+-------------+-------------------------------------------------------+-----------+--------------------------------------------------------+----------|
+   | No | Key Member? | Name (Chinese name) Role in the Project [PSC Member@] | Main Task | Position or Project Post/Rank, Department Organisation | With CV? |
+   |----+-------------+-------------------------------------------------------+-----------+--------------------------------------------------------+----------|
+   |    |             |                                                       |           |                                                        |          |
+   |----+-------------+-------------------------------------------------------+-----------+--------------------------------------------------------+----------|
+   |    |             |                                                       |           |                                                        |          |
+   |----+-------------+-------------------------------------------------------+-----------+--------------------------------------------------------+----------|
+   @ PSC Member = Project Steering Committee Member.
+
+** Section F – Budget for the Project
+   (Please provide full justifications for each sub-item under the budget items “Manpower”, “Equipment” and “Other Direct Costs”. The rationale behind any projected income or expenditure has also to be given. In case certain goods or services are intended to be procured from one company/organization/individual, please provide the details, relationship between the applicant(s) and the company/organization/individual (if any) and justifications for not following the open procurement procedures set out in the “Guide to the Innovation and Technology Fund”.)
+   1. Expenditure
+   (Please ensure that all expenditure items must be incurred between the commencement and completion dates of the project.)
+   UICP 6.0
+   1.1. Manpower
+   - U/C^
+   - Key member
+   - Post/Rank
+   - No. of staff (A)
+   - Duration (B) (man-month)
+   - Monthly rate or equivalent (C) ($’000)
+   - Total (A)*(B)*(C) ($’000)
+   - Justification
+   - Sub-total (I):
+   ^ ‘U’ indicates university expenses and ‘C’ company ones.
+   1.2. Equipment
+   (For each sub-item under “Equipment”, apart from providing justifications for its procurement, please also state in the explanatory notes whether similar equipment is available for sharing within the applicant organization or with other ITF recipient organizations, and if so, the reason why the existing equipment cannot be used for this project.)
+   - U/C^
+   - Key equipment
+   - Item
+   - Quantity (A)
+   - Unit cost (B) ($’000)
+   - Total (A)*(B) ($’000)
+   - Justification
+   - Sub-total (II):
+   ^ ‘U’ indicates university expenses and ‘C’ company ones.
+   1.3. Other Direct Costs
+   (In case external consultants are required for the project, please set out clearly in the explanatory note the justifications for engaging the consultants and the expected time commitment of the consultants under the project.)
+   - U/C^
+   - Item
+   - Quantity (A)
+   - Unit cost (B) ($’000)
+   - Total (A)*(B) ($’000)
+   - Justification
+   - Sub-total (III):
+   - Total((I)+(II)+(III)):
+
+   ^ ‘U’ indicates university expenses and ‘C’ company ones.
+
+   2. Matching Fund, Income and/or Funding from Other Sources
+   (The amount of matching fund should not include the contribution to the administrative overhead of the university.)
+   - Matching Fund ($’000)
+   - Income and/or Funding from Other Sources
+     - Cash   ($’000) (A)
+     - Equipment (in cash-equivalent) ($’000) (B)
+     - Consumables (in cash-equivalent) ($’000) (C)
+
+   - Total  ($’000) (A)+(B)+(C)
+
+
+   3. Administrative Overheads
+   (The company’s contribution to the university’s administrative overhead should not be less than 15% of the matching fund and the ITF can be at most 15% of the total ITF fund requested.)
+   - Item
+     - University overhead from company
+     - University overhead from ITF
+   - Total($’000)
+     - University overhead from company
+     - University overhead from ITF
+
+   Total:
+   4. Net Amount Requested from the Innovation and Technology Fund
+
+
+   - Total Expenditure (A)($’000)
+   - Matching Fund (net of overhead) (B)($’000) 
+   - Income/ Other Funding (C)($’000) 
+   - ITF Funding (net of overhead) (D)=(A)-(B)-(C)($’000) 
+   - Matching Fund (overhead) (E)($’000) 
+   - ITF Funding (overhead) (F)($’000) 
+   - Total Matching Fund G=(B)+(E)($’000) 
+   - Net Requested Amount from ITF H=(D)+(F)($’000) 
+
+** Section G – Classification of the Project
+(When an application is approved, the information in this section will be published at the ITF website.)
+1. Project Type
+2. Technology Area
+2.1. PrimaryArea
+2.2. OtherAreas(ifany)
+2.2.1. 
+2.2.2. 
+2.2.3.
+3. Industrial Sector 
+3.1. PrimarySector
+3.2. OtherSectors(ifany)
+3.2.1. 
+3.2.2. 
+3.2.3.
+4. Other Attributes (if any)
+(Please feel free to choose more than one attribute.)
+4.1. Environment-related 4.2. Quality-related
+4.3. Particularly SME-related
+
+** Section H – Attachments for the Project
+|-----------+-------------+---------------+-----------|
+| Annex No. | Section No. | Paragraph No. | File Name |
+|-----------+-------------+---------------+-----------|
+|           |             |               |           |
+|-----------+-------------+---------------+-----------|
+|           |             |               |           |
+|-----------+-------------+---------------+-----------|
+
+We hereby declare that:
+(a) this application for Innovation and Technology Fund is submitted by with as the partner in implementing the project;
+(b) all factual information provided in this application as well as the accompanying information reflects the status of affairs as at the date of submission. I shall inform the Secretariat of the Innovation and Technology Fund immediately if there are any subsequent changes to the above information; and
+(c) the ideas of the proposed project are original without any constituted or potential act of infringement of the intellectual property rights of other individuals and/or organizations.
+Company
+Authorized Signature with Company Chop: Name of Signatory: Position:
+Name of Company: Date: (dd/mm/yyyy):
+University Authorized Signature with University Chop: Name of Signatory: Position:
+Name of University: Date: (dd/mm/yyyy):
+

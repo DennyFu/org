@@ -1,0 +1,89 @@
+* general info
+  on google drive
+* DONE Progress meeting
+  CLOSED: [2016-11-21 Mon 18:34] SCHEDULED: <2016-11-11 Fri>
+  - State "DONE"       from "MEETING"    [2016-11-11 Fri 18:34]
+  - State "DONE"       from "MEETING"    [2016-10-13 Thu 21:16]
+* meeting notes
+
+** notes - 13-oct
+
+*** kawai 
+- Ian want to collect all the license for patented technologies from existing companies
+- he also wants to wait for a good timing to buy those companies
+
+- ian and kawai will talk to imaco (the competitive company) to ask about their progress
+
+- key components need to develop
+  - tracking system
+  - mri actuation
+
+- think about the story of presenting the automatic mri distortion calibration instead of phantom approach 
+
+
+*** ziyan
+- pneumatic motor
+  - not very consistence with the hypothesis currently because of the measurement error
+  - will continue the experiment
+  - 
+- neuro robot
+  - relation to the image registration problem
+
+*** xiaomei
+- studied rigid and non-rigid registrations
+  - a method uses GMM model with EM optimization
+
+
+*** ziyang
+- dynamic modeling of the continuous motor
+
+
+
+
+
+
+** notes - 7-oct
+*** kawai's 
+ - billionairs Ian want us to provide a global market revenue
+   - to ziyan
+ - 
+*** ziyang - 7-oct
+**** continuous motor using rolling diaphragm
+ - need to check the equation of torque, why it will become negative?
+ - kawai's 
+   - important to find out the tricks of the making the hydraulic motor which can give constant torque
+*** xiaomei - 7- oct
+**** searching for parameters by constrained optimization problem
+*** ziyan progress - 7 -oct
+**** pneumatic motor
+ - collect data for pnuematic motor
+   - kawai's comments
+     - noise is the problem for practical application
+     - don't need to keen on make the pnuematic motor work
+ - hydraulic motor
+   - only one cylinder takes main effect one time
+ - neuro robot 
+   - mri gradient model needs 36 coefficients
+     - some use only 8 to achieve 0.2 mm 
+** estimating MRI image distortion - 2016-09-29
+*** The sources of distortion
+ - could be sorted as: 1) inhomogeneity in the static magnetic field, namely the imperfect uniformity of the  field (only along frequency encoded directions / read encode and slice select directions); 2) object-induced distortions (only along frequency encoded directions / read encode and slice select directions); 3) gradient nonlinearities (each of the three cardinal directions).
+
+ - why we use robot to take calibration over phantom
+   - robot could provide flexibility to adjust the sequence
+
+
+
+ - how the gradient affect the distortion?
+   - the effects in different
+
+ - check out the distortion formulations
+   - e.g. distortions due to imperfections in the B_0 field and to susceptibility effects
+
+*** the distortion 
+ D(P(alpha+error), theta) = P_mri
+ - D: function/operator
+ - alpha: robot joint
+ - P: coil position in the image coordinate
+ - theta: model parameter 
+

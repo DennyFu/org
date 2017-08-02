@@ -1,4 +1,8 @@
 * Emacs todo lists
+** TODO convert .emacs file to org
+   http://mescal.imag.fr/membres/arnaud.legrand/misc/init.php
+** TODO learn who to do if then else in org 
+- e.g. for controlling latex typesetting
 ** DONE upgrade emacs
    CLOSED: [2016-06-02 Thu 14:48]
    - State "DONE"       from "TODO"       [2016-06-02 Thu 14:48]
@@ -8,8 +12,9 @@
 ** DONE add TODO states
    CLOSED: [2016-05-05 Thu 00:53]
    - State "DONE"       from "TODO"       [2016-05-05 Thu 00:53]
-** TODO enable preview-latex
-** TODO fix aspell	
+** DONE fix aspell	
+   CLOSED: [2016-09-12 Mon 12:35]
+   - State "DONE"       from "TODO"       [2016-09-12 Mon 12:35]
    [[https://tug.org/mactex/elcapitan.html][internet source]]
 ** DONE fix mbp's mactex
    CLOSED: [2016-05-03 Tue 15:48]

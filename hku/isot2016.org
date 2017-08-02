@@ -1,0 +1,82 @@
+* general info
+http://optomechatronics.org/program.html
+
+* YY's email
+Dear Ka-Wai,
+
+The year the International Symposium of Optomechatronics Technology 
+(ISOT) 2016  will be in Tokyo, Japan, from November 7-9. 
+(http://optomechatronics.org/).
+
+As mentioned, ISOT is a annual symposium on multidisciplinary topics 
+crossing between optics, mechanics, fluidics, electronics and robotics. 
+Though the symposium is small (around 120 attendees for past few years) 
+in size but the speakers are of excellent quality.
+
+Again, Professor Hyungsuck Cho from Korea and I are planning a Special 
+Session on "Optomechatronics in Biomedical Engineering Applications" for 
+this year in the Symposium. We welcome you and your team to submit a 
+paper to our Special Session. The deadline for submission is September 
+15th (though the official deadline was August 31). The submission is a 2 
+page summary of work, which can be a detailed investigation of a mature 
+subject or just a preliminary exploration of a new concept.
+
+Last year you were not able to join. Maybe this year you will be able 
+to? Do consider! Thank you!
+
+Best,
+Yeung
+
+
+* Paper draft
+** Title
+FEA-based Kinematics Characterization of a Soft Robot for Intracavitary Navigation 
+
+** Authors
+Kit-Hang Lee, Martin C.W. Leong, Marco C.K. Chow, Tim T.L. Lun, Hing-Choi Fu,
+Chim-Lee Cheung, Yexin Zhou, Kam-Yim Sze and Ka-Wai Kwok
+Department of Mechanical Engineering, The University of Hong Kong. 7/F, Haking Wong Building, Pokfulam Road, Hong Kong.
+
+** Abstract
+Continuum soft robots has attracted increasing research interests in its potential and capacity of complying with unstructured and dynamic environment, as well as providing safe interaction with human. Compared to conventional rigid devices, soft robots could be a safer alternative to deliver optomechatronics devices instruments for various surgical interventions such as endoscopy, or even laser emitters for tumor treatment. To this end, understanding kinematic behavior is essential for developing control methods to achieve reliable and intuitive manipulation. Analytical modeling approach is difficult due to the remarkable non-linearity of its kinematics and dynamics. In this work, we attempt to make use of a finite-element modeling (FEM) method to characterize the kinematics of a hyper-elastic robot and to achieve kinematic control. Experimental validations indicate that the proposed FEM method not only could realize the kinematic behavior of a real hyper-elastic robot, but also be utilized to construct a kinematic controller for endoscopic manipulation.
+
+** Introduction
+Fig. 1. 	(a) Design and the finite element model of the soft robot. finite element mesh tessellated with 1178 linear hexahedron elements. A set of 408 truss elements are binded to the nodes directly to emulate the effect of strain-wrapping constraint. (b) Conceptual diagram where the soft robot is manipulated using endoscopic coordinates () to point at an intracavity surface (yellow).
+
+
+Continuum soft robots has attracted increasing research interests in its potential and capacity of complying with unstructured and dynamic environment, as well as providing safe interaction with human, and in confined, unstructured and dynamic environment. Compared to conventional rigid devices, soft robots could be a safer alternative to deliver devices for various surgical interventions such as endoscopy [1], or optomechatronic devices for tumor treatment [2]. 
+Understanding kinematic behavior is essential for developing control methods to achieve reliable and intuitive manipulation. Analytical modeling is a common approach to formulate the kinematics of small and simple structured robots [3]. However, it is usually difficult to formulate a precise analytical model for soft robots. Moreover, an analytical model describing a specific robot design may not be valid for replicates. For determining the parameters/coefficients involved, impractical assumptions are usually made to reduce the complexity, for example, the constant curvature assumption [4]; however, this usually violates in soft robots due to the unevenly force distribution, substantially degrading the model reliability in real applications.  
+Finite element modelling (FEM) is a powerful numerical approach to perform piecewise approximation continuously with the prior knowledge of material properties given. It can describe any mechanical structure.  Recent works have demonstrated that FEM is capable of performing kinematic analysis on soft robot constituted by inhomogeneous composite materials, although the deformation involved is not large enough to provide a full range of robot motion [5-6].
+Online estimation of robot motion mapping using machine intelligence methods solely, in absence of either kinematic, physical or analytical model, is one of the cutting edge methods for soft-robotic control. Such model-free approaches can be optimized and updated [7]. Those continuum structures susceptible to external disturbance, but find their ways impossible to exploit any physical/analytical model, e.g. robotic catheters, will make use of these model-free approaches. 
+This paper presents a FEM method to realize the kinematic characteristics of hyper-elastic soft robots actuated by pressurized fluid. Furthermore, it is proposed to estimate the kinematics mapping from the input pressure to a displacement on a 2D plane. Considering the 2D plane as the endoscopic plane as illustrated in Fig 1b (where a virtual camera is mounted at the tip of the end-effector), having such kinematics mapping enables the derivation of intuitive control methods, where an operator manipulates the soft robot providing desired endoscopic displacement. Such task is admissible to various robotic applications. For examples, surgical procedures that require precise targeting of high-power laser to perform tissue ablation or cutting; Full inspection of an intracavitary space using endoscopic camera view through a desired pathway.
+** Methodology
+The finite element model of the soft robot (Fig. 1) is presented. This manipulator consists of three inflatable chambers. Each chamber is constrained by strain-wrapping in transversal plane to attain anisotropic expansion along axial direction upon inflation of pressurized fluid. By regulating the inflation pressure of each chamber, paranoiac motions can be achieved.
+The hyper-elastic incompressible property of silicone rubber is modeled by Neo Hookean model [8]. The strain energy equation is:
+	  	
+where shear modulus ,  is the first deviatoric strain invariant. The manipulator model is meshed with hybrid linear hexahedral elements and linear truss elements. Truss elements are chosen over beam elements to model the strain-wrapping constraint because it does not hinder bending. Hexahedral element is more preferable than tetrahedral element due to the fact that hexahedral element can better resemble the hyper-elastic stress-strain relationship of realistic material under large deformation [8]. Hexahedral element is, in general, more difficult to tessellate complicated volumetric geometry, such as circles and sharp edges, compared to tetrahedral element. Despite of its complexity in meshing, it can fill up the same volume with smaller number of elements, resulting in reduced computational requirement. 
+The kinematics model of the soft manipulator with respect to the endoscopic coordinate (Fig. 1b) is identified by fitting a linear function using the FEM simulation results. The linear relationship between the chamber pressure and the endoscopic coordinates is modeled by: 
+	 	
+where  is the endoscopic displacement and  is the change of pressure in the chambers. is the Jacobian matrix obtained by minimizing the least-square error using the FEM simulation results. This linear kinematics relationship can be used to derive control methods for intuitive manipulation of the soft robot with an intracavitary space. 
+** Results and discussion
+Fig. 2.	Fine-tuned FEM model (right) demonstrate similar deformation characteristics to real soft manipluator (left) under various inflation pressure.
+
+Fig. 3.	Results from the trajectory tracking experiment. Blue line represents the pre-definied taregt trajectory. Red line represents the resultanlt trajectory of the tip of the soft robot.
+
+
+The soft robot depicted in Fig. 2 was fabricated using Ecoflex 0050 (Smooth-on inc.). Simulation was carried out to investigate the kinematics response when the chambers are actuated by pressurized fluid. After proper meshing, different external loads including gravity and inflation were applied to the finite element model. Quasi-static motion was taken as an assumption in which the manipulator was expected to move at low velocities, and negligible hysteresis loss in operation. Because the model is axially symmetric, we simulated the kinematics by inflating only two actuation chambers. The comparison of simulation results and the real model is presented in Fig. 2, showing the proposed FEM methods can be utilized to characterize hyper-elastic kinematics behavior.
+
+ We tried to control the real soft robot to following a spiral trajectory as depicted in in Fig. 3. During the control task, the Jacobian matrix  was obtained using the pre-computed FEM simulation results, the input pressure was computed according to the inverse relationship of  (2), that is the inverse kinematics, using a constrained optimization technique such that the change of pressure . The results here demonstrated that a kinematic controller can be constructed online based on the FEM simulation results.  This work is a proof-of-concept to demonstrate the advantage of decoupling the real-time Jacobian estimation from the FEM if that can be even updated online. 
+
+** Reference
+[1]	D. Kundrat, A. Schoob, B. Munske, T. Ortmaier, "Towards an endoscopic device for laser-assisted phonomicrosurgery," In The Hamlyn Symposium on Medical Robotics, pp. 55–56, 2013.
+[2] 	K. Rabenorosoa, B. Tasca, A. Zerbib, P. Rougeot, N. Andreff and T. E. Pengwang, "Squipabot: A mesoscale parallel robot for a laser phonosurgery," International Journal of Optomechatronics, vol. 9, no. 4, pp.310-324, 2015. 
+[3]	Y. Ganji and F. Janabi-Sharifi, "Catheter kinematics for intracardiac navigation," IEEE Transactions on Biomedical Engineering, vol. 56, pp. 621-632, 2009.
+[4]	D. B. Camarillo, C. F. Milne, C. R. Carlson, M. R. Zinn, and J. K. Salisbury, "Mechanics modeling of tendon-driven continuum manipulators," IEEE Transactions on Robotics, vol. 24, pp. 1262-1273, 2008.
+[5]	I. D. Walker, "Continuous backbone “continuum” robot manipulators," ISRN Robotics, 2013.
+[6]	C. Duriez, "Control of elastic soft robots based on real-time finite element method," in IEEE International Conference on Robotics and Automation (ICRA), pp. 3982-3987, 2013.
+[7]	M. C. Yip and D. B. Camarillo, "Model-less feedback control of continuum manipulators in constrained environments," IEEE Transactions on Robotics, vol. 30, pp. 880-889, 2014.
+[8]	S. E. Benzley, E. Perry, K. Merkley, B. Clark, and G. Sjaardama, "A comparison of all hexagonal and all tetrahedral finite element meshes for elastic and elasto-plastic analysis," in Proceedings, 4th International Meshing Roundtable, pp. 179-191, 1995.
+
+
+Kit-Hang Lee, Hing-Choi Fu, Martin C.W. Leong, Marco C.K. Chow, Tim T.L. Lun, Chim-Lee Cheung, Yexin Zhou, Kam-Yim Sze and Ka-Wai Kwok
+

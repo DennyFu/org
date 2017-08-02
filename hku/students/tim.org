@@ -1,0 +1,71 @@
+Tim's research
+* progress
+** <2016-12-19 Mon 10:30>
+   - progress on literature review
+     - soft robotic background
+     - sensing is the key challenge for control
+     - fiber optics
+     - load estimation
+   - next meeting will be after new year holiday
+     - put more points on the soft robotics development
+     - add other sensing modalities before "shape sensing"
+** <2016-12-12 Mon 15:00>
+   - the experimental validation will be mainly simulations
+   - novelty
+     - control framework using optical sensing for localization of force based on morphological change
+     - not to fight for against LUNA, but a control framework that LUNA can also work 
+   - expectation in the next meeting
+     - paragraphs of the literature review
+   
+** <2016-12-02 Fri 11:00>
+   - direction
+     - localization of force of soft robots based on morphological change
+     - the morphology of the soft robot is learned offline
+   - expectation  in the next meeting
+     - more progress on the literatue review (chapter 2) 
+     - idea of the experimental platform
+** <2016-11-28 Mon>
+   - meeting for the thesis
+     - Table of content
+       - Literature review
+	 - what is the importance of our design rather than the others (e.g. LUNA)
+	 - AI-based morphological sensing
+     - one channel optical fiber
+   - next meeting will be on 2nd Dec morning
+     - progress on the literature review
+       - the logical flow 
+
+** <2016-09-07 Wed>
+- molded sensors (100mm)
+- unexpected spectral behaviour
+  - uneven strain along sensor
+  - partial slippage occurs inside the embedded environment
+  - maynot be cause by spectrum shifted after embedded into the silicon
+- need longer to test S-curve sensing
+  - expected separated spectrum 
+
+
+
+** 9 Aug 2016
+*** FEA simulation
+**** silicone model
+**** fiber model
+*** CFBG simulation
+- interesting method from strain data to specturm frequency
+*** CFBG testing
+*** literature
+- kawai ask for literature review (chapter 2)
+
+
+
+** 21 Jul 2016
+**** chirped fiber bragg grating (CFBG) test was done
+***** spectual response
+***** tracking platform was built
+****** 3 cameras
+**** Ka-wai
+***** can it be less fragile (Ka-wai)
+***** find out mathematical model by next week
+****** element model and material(substrate) model
+***** draft the  
+

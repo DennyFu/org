@@ -1,220 +1,150 @@
 * Notes
+** DONE preparation of lecture notes - MECH 3418  
+   CLOSED: [2017-02-07 Tue 17:55] SCHEDULED: <2017-01-13 Fri>
+   - State "DONE"       from "TODO"       [2017-02-07 Tue 17:55]
+   - State "DONE"       from "TODO"       [2017-01-06 Fri 20:49]
+   - 15 lecture hours for dynamics
+   - current notes in
+     - [[file:~/Work/HKU/lecture/MECH3418/][file:~/Work/HKU/lecture/MECH3418/]]
+     - Mech3418_LectureNote_2016_v4.pptx
+   - https://www.dropbox.com/s/ce2t3o28iodksd0/Mech3418_LectureNote_2016_v4.pptx?dl=0
+
+*** schedule records
+   - <2017-01-05 Thu 14:00-17:00>
+   - <2017-01-04 Wed 14:00-17:00>
+   - <2017-01-03 Tue 11:00-15:00>
+
+** DONE preparation of lecture notes - MECH4404
+   CLOSED: [2017-02-07 Tue 17:55] SCHEDULED: <2017-01-13 Fri>
+
+   - State "DONE"       from "TODO"       [2017-02-07 Tue 17:55]
+   - 1. Linear control system design (13 hours)
+     - (Frequency response methods, polar plot, Nyquist stability criterion, Bode plot, gain-phase relationship, gain and phase margin, minimum & nonminimum phase systems, time-d​elay system.)
+   - 2. Computer control system (13 hours)
+     - 2(a) Data acquisition using on-line computer, A/D and D/A converters, data logging using micro-computers; z-transform, inverse z-transfom; sampling theory; pulse transfer function, closed-loop transfer function, discrete-time stability analysis; (6 hours)
+
+   - reference
+     - Prof. James Lam's notes (kwkwok)
+       [[file:~/Work/HKU/lectures/MECH4404/ref/AutomaticControl%201.pdf][AutomaticControl 1.pdf]]
+       [[file:~/Work/HKU/lectures/MECH4404/ref/AutomaticControl%202a.pdf][AutomaticControl 2a.pdf]]
+     - previous notes 
+       - MECH2407
+	 https://www.dropbox.com/s/yag0v9u5lwd9hpo/Mech2407_2016.pptx?dl=0
+*** schedule records
+    - <2017-01-09 Mon 15:30-16:30>
+    - <2017-01-04 Wed 18:00-22:00>
+** dinner with the Dean of Engineering
+   - <2016-12-02 Fri>
+   - Morton Steak House, Sheraton Hotel
+** DONE prepare task for a prospective phd candidate
+   CLOSED: [2016-10-04 Tue 18:15] SCHEDULED: <2016-10-04 Tue>
+   - State "DONE"       from "TODO"       [2016-10-04 Tue 18:15]
+   - kawai's TRO paper
+     - reference from kawai's email:
+       >> 发件人: "Ka-Wai Kwok" <kwokkw@hku.hk>
+       >> 发送时间: 2014年7月11日 星期五
+       >> 收件人: "郭子彦" <guoziyan13@tsinghua.org.cn>
+       >> 抄送: "Brian Kit Hang Lee" <brian1029hk@gmail.com>, "Yue Chen" <ychen@uga.edu>
+       >> 主题: about the PQ formulation
+       >>
+       >> Hi Ziyan,
+       >>
+       >> My TRO paper is attached, demonstrating the formulation of Proximity
+       >> Queries. Just reading the Section III.A.2 (starting from "In this study,
+       >> points and segment..."), basically, you are expected to understand how
+       >> the shortest distance between a point and segment (Fig. 3a) is
+       >> calculated via the steps 1-5 (equations 1-6 ).
+       >>
+       >> Once you get the idea, please inform us, then Brian will tell you what
+       >> to do next.
+       >>
+       >> Thanks,
+       >> Ka-Wai
+       >>
+       >> -- 
+       >> B.Eng, MPhil (CU, HK), DIC, PhD (Imperial, UK)
+       >> Croucher Research Fellow
+       >> at University of Georgia and Harvard Medical School
+       >> Assistant Professor
+       >> at Mechanical Engineering, The University of Hong Kong
+       >> Email: kwokkw@hku.hk / kkwok@uga.edu
+       >> Web: http://www.doc.ic.ac.uk/~kkwok/
+
+*** email draft
+Dear Prof. Lam,
+
+This is Denny from Dr. Kwok's group.
+
+According to Dr. Kwok's opinion, in order to let the prospective phd candidate understand more about robotics in medical application.
+A task is arranged for the prospective Phd candidate Ms. Zhao Chang.
+
+Please find the attached paper (Dr. Kwok's TRO paper). Her task is to study the method in section III A and write a MATLAB program to implement the PQ method. 
+She is expected to understand how the shortest distance between a point and segment (Fig. 3a) is calculated. Of course understanding the whole paper would be appreciated. We will later send her some testing data for her program.
+
+Thank you.
+
+Best,
+Denny
+
+*** kawai's additional email about the programing task
+Dear Prof. Lam,
+
+Appreciate your kind referral. Here is my detailed instruction in regards of the programming task:
+
+As found in the TRO paper, in Section III, there is a proximity query (PQ) algorithm proposed to effectively calculate the shortest distance between two geometries, namely a vertex point and a segment that is defined by two adjacent contours. Following the equations from (1) to (9), along with the pseudocode stated in the paper, the candidate is expected to write a C/C++ programme to:
+
+1) identify if the vertex point is being inside or outside a series of continuous segments;
+2) compute the shortest distance from the vertex point to the series of segments;
+3) validate your written programme with a graphic diagram, indicating shortest distance between the 3D grid points and the series of segments, e.g. https://www.dropbox.com/s/o0kqtcobi8uoxwo/PQ_diagram.avi?dl=0
+
+If the candidate finds any difficulty, pls suggest him/her to contact my colleagues Denny Fu <dennyfu@hku.hk> and Brian Lee <briankhl@connect.hku.hk>
+
+Thanks,
+Ka-Wai
+
+
+* students
+[[file:students/xiaomei.org][Xiaomei]]
+
+[[file:students/ziyan.org][Ziyan]]
+
+[[file:students/ziyang.org][Ziyang]]
+
+[[file:students/brian.org][Brian]]
+
+[[file:students/martin.org][Martin]]
+
+[[file:students/tim.org][Tim]]
+
+[[file:students/chimlee.org][Chimlee]]
+
+[[file:students/marco.org][Marco]]
+
+[[file:students/jacky.org][Jacky]]
 
 * website
-** project by project
-*** one para
-** personal desciption
-*** better to have a personal website
-*** 
+  - project by project
+    - one para
+  - personal description
+    - better to have a personal website
+    - 
 
-* thesis
+* thesis format 
 ** 1 research objective and motivation short
 ** 2 literature review , technical gap , motivation (30 pages)
 ** 3 simulation
 ** 4 experimental 
 
-* MICCAI
-
-* progress meeting
-** 9 Aug 2016
-*** Brian 
-**** ICRA 2017
-- IMU-based state estimation for soft robot task-space feedback control
-  - IMU module
-    - 9 axis inertial measure unit
-      - linar acc.
-      - abs orientation
-  - originality 
-    - soft robot estimation of posture 
-  - Task space feedback control
-  - kawai
-  - chimlee
-    - imu cannot be placed too closed
-*** Martin 
-**** Performance Aware programming
-- identify the computation bottleneck
-  - bottleneck in memory access
-- proposed acceleration
-  - accelerate both process using FPGA
-  - adopting pixel shift register to minimize bandwidth requirement
-- kawai
-  - better to focus on developing a user-friendly open source code 
-    - a common series of scalable GPU
-      - modular GPU
-    - optimization memory access strategy
-    - not necessarily focus on FPGA-based
-  - TMI
-*** Ziyan
-**** Neuro robot
-- 
-**** Catheter robot
-**** motor upgrade
-- model modified
-  - 7 motors with different parameters
-- need a torque sensor
-  - kawai: can go for buy suitable sensor
-- Ziyan suggest for TMECH
-  - kawai suggest
-    - for ICRA letter
-    - ask dr zhou for FEA simulation of puematic acutation
-
-*** Tim 
-**** FEA simulation
-***** silicone model
-***** fiber model
-**** CFBG simulation
-- interesting method from strain data to specturm frequency
-**** CFBG testing
-**** literature
-- kawai ask for literature review (chapter 2)
-
-*** Chimlee
-**** semi-active coil
-- 9 layers
-- 134 and 135 MHz results
-- Successful detunig with PIN photodiode + Detuning Capacitor
-  - @ 110 MHz
-  - delta 1MHz
-- testing platform (kawai suggestion)
-  - at the tip of 4 飲管
-  - optical fibers
-    - need to find a better method for cutting optical fibers
-  - laser source
-  - how to locate the center of the sensor
-    - frequency domain data
-    - 
-  - FEA results next time
-
-*** ziyang
-
-**** RAM paper
-**** improvement of catheter robot design
-- master part enhancement using metal 
-
-**** Markforged printer cannot deliver to HK until 2017
-**** future design
-**** ask su-lin about the ablation target and then prepare data by manually control the robot 
-
-*** Jacky
-
-**** neurorobot
-- 1st version
-- planar backlash is reduced
-- Workspace is enough
-- still a bit backlash
-**** future work
-- try to use servo to drive the pair of rolling diaphragm
-- Develop of kinematic of the robot in matlab
-- Telsa turbine
-- kawai suggest consider "cycrops" mechanism
-- bring the 2nd prototype to Dr. Danny Chan
-
-*** Marco
-
-**** 3D printable hyper-elastic actuator
-- can bend > 90 angle
-- kawai 
-  - how to apply to the laser project
-  - how to encode the laser pointing
-    - what MR sequence is sensitive to temperatures (<45 degree)
-    - optical calibration 
-
-** 21 Jul 2016
-*** Tim
-**** chirped fiber bragg grating (CFBG) test was done
-***** spectual response
-***** tracking platform was built
-****** 3 cameras
-**** Ka-wai
-***** can it be less fragile (Ka-wai)
-***** find out mathematical model by next week
-****** element model and material(substrate) model
-***** draft the  
-
-*** ziyang
-**** RAM
-***** technical description by this weekend
-**** neurorobot design
-**** reassembly of catheter robot
-***** by 26
-**** PWH 3D printer problem
-**** Evaluation of Surgical robot challenge
-***** component strength
-****** parts in control room should 
-***** less belt
-***** theoretical analysis
-**** purchase printers
-***** Markforged
-**** Ka-wai
-***** source one more printer
-****** unique, well-differentiated from existing
-****** draft 
-****** improve not only linear, but improve to get rid of stroke-length limitation
-
-
-*** Marco
-**** 3d printable hyper-elastic actuator
-***** no need multi-stage molding
-***** enabling digital printing
-****** solution provided by companies?
-**** MR-compatible actuator using soft pop-ups
-**** Ka-wai
-***** contact leo
-***** literature
-****** focus on surgical application or design mechanism but not the frabrication process
-
-
-*** Jacky
-**** Reduction of rolling diaphram
-**** Needle insert mechanism
-***** challenge
-****** long stroke 20cm
-****** precise control
-**** Continues rotation
-***** The Telsa motor with encoder
-
-
-*** Ziyan
-**** Needle insertion
-***** forward and inverse kinematics 
-***** workspace analysis 50 cm^2
-***** error analysis 0.2mm/1degree
-***** registration scheme
-***** difficulities
-****** long stroke
-******* try to solve by continuous motor
-****** actuator 
-******* hydraulic
-******* cable driven
-******* mount motor on the needle guide
-******* need optical encoder
-**** Catheter robot
-***** new phantom
-****** 
-**** motor upgrade
-***** modify models
-**** Ka-wai
-***** close pneumatic motor and submit to a journal 
-****** assign experiments to family pueumatic motor
-
-*** Fai
-**** To create simple and portable, yet accurate system
-***** auto image capturing
-***** contactless
-***** protable
-***** unrestricted
-**** current progress
-***** prototype
-***** need colorchecker
-***** GUI
-**** application for ITF
-**** working on 2 reviews
-***** more details, current progress, where to submit
-
 * Lectures
 
 * Seminars
-  
+
+** DONE Modern Control: making optimal decisions online - Prof. Jan M. Maciejowski, University of Cambridge
+   CLOSED: [2016-11-28 Mon 19:34] SCHEDULED: <2016-11-28 Mon 18:00-19:00>
+   - State "DONE"       from "TODO"       [2016-11-28 Mon 19:34]
+   Lecture Theatre C, Chow Yei Ching Building, HKU
+
+   - [[file:~/Work/HKU/Seminars/Maciejowski_HKU_28Nov2016/][file:~/Work/HKU/Seminars/Maciejowski_HKU_28Nov2016/]]
 ** DONE Computer Aided Surgery and Surgical Robotics - Professor Ichiro Sakuma, The University of Tokyo
    CLOSED: [2016-04-29 Fri 10:57] SCHEDULED: <2016-04-29 Fri 09:00>
 Title:           Computer Aided Surgery and Surgical Robotics
@@ -247,8 +177,14 @@ For advancement of minimally invasive therapies, various information technologie
    
 * Lab Demo
 
-** ITC visit
-   SCHEDULED: <2016-08-13 Sat 15:00>
+** DONE Lab demo - VIP visit
+   CLOSED: [2016-12-19 Mon 09:59] SCHEDULED: <2016-12-16 Fri 15:45-17:00>
+   - State "DONE"       from "TODO"       [2016-12-19 Mon 09:59]
+   - Lenovo seniors, HKU vice president, etc..
+   - catheter robot
+** DONE ITC visit
+   CLOSED: [2016-08-31 Wed 10:46] SCHEDULED: <2016-08-13 Sat 15:00>
+   - State "DONE"       from ""           [2016-08-31 Wed 10:46]
 
 *** Atlas lab or at office
 ** DONE Prof. Kazuhiro Kosuge's visit

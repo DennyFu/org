@@ -121,4 +121,4 @@ The paper is better to be organized as follows.
    In [[file:~/Work/NISI/QMS/]]
    Focus on  [[file:~/Work/NISI/QMS/QP-7.3_Rev00%E7%94%A2%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86%E6%8E%A7%E5%88%B6%E7%A8%8B%E5%BA%8F%EF%BC%88%E7%B9%81%E9%AB%94%EF%BC%89.pdf::%25PDF-1.5%0D][QP-7.3_Rev00產品生命周期管理控制程序（繁體）.pdf]]
 
-*** TODO read [[file:~/Work/NISI/QMS/QP-7.3_Rev00%E7%94%A2%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86%E6%8E%A7%E5%88%B6%E7%A8%8B%E5%BA%8F%EF%BC%88%E7%B9%81%E9%AB%94%EF%BC%89.pdf::%25PDF-1.5%0D][QP-7.3_Rev00產品生命周期管理控制程序（繁體）.pdf]] before going QMS
+*** read [[file:~/Work/NISI/QMS/QP-7.3_Rev00%E7%94%A2%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86%E6%8E%A7%E5%88%B6%E7%A8%8B%E5%BA%8F%EF%BC%88%E7%B9%81%E9%AB%94%EF%BC%89.pdf::%25PDF-1.5%0D][QP-7.3_Rev00產品生命周期管理控制程序（繁體）.pdf]] before going QMS

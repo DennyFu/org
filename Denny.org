@@ -1,118 +1,108 @@
+* tasks
+** TODO backup MBP's harddisk
+   SCHEDULED: <2017-03-31 Fri>
+   
+   - State "DONE"       from "TODO"       [2017-01-01 Sun 10:34]
+** DONE pay home telephone bill at 7-11
+   CLOSED: [2016-10-17 Mon 14:32]
+   - State "DONE"       from "TODO"       [2016-10-17 Mon 14:32]
+** DONE update website information and send to Vincent
+   CLOSED: [2016-12-15 Thu 10:09]
+   - State "DONE"       from "WAITING"    [2016-12-15 Thu 10:09]
+   - State "WAITING"    from "TODO"       [2016-11-11 Fri 11:46] \\
+     sent to vincent
+   Dr. FU, Kin Chung Denny
+   Denny received his B.Eng. degree and M.Phil. degree from the Chinese University of Hong Kong (CUHK). He obtained is Ph.D. degree in Engineering from Osaka University, where he has been conducting research about control of musculoskeletal robots. His research interests include bio-inspired robotics, robotic dynamics and control, learning-based control, and medical robotic systems.
+** DONE update hku personal info, upload phd cert.
+   CLOSED: [2016-12-15 Thu 10:09]
+   - State "DONE"       from "WAITING"    [2016-12-15 Thu 10:09]
+   - State "WAITING"    from "TODO"       [2016-11-02 Wed 11:56] \\
+     email sent, waiting for reply
+   - contact HR:
+   Personnel matters/Reference letter/Employment verification: hrpu@hku.hk
+   Staff Card: scphoto@hku.hk
+   Others: hrshku@hku.hk
+   
+   Dear Sir or Madam,
+
+   I would like to ask for helps 1) on updating education qualification in the HKU portal, and 2) obtaining official staff card.
+   
+   1) updating the qualification
+   I tried to add the PhD degree in my the "Personal and Family Data Form" under "Human Resource". However, I couldn't continue since there is no "Osaka University" (shown in attached snapshot). Could you please help me to update the information? The PhD degree certificate is also attached. Thank you.
+
+   2) obtaining official staff card
+   After updating the personal information, could you please also issue an staff card? 
+   
+   Thank you.
+
+   Best,
+   Denny 
+   Mobile: 6037 2082
+   
+** DONE namecard 
+   CLOSED: [2016-10-18 Tue 10:54]
+   - State "DONE"       from "TODO"       [2016-10-18 Tue 10:54]
+   宏志公司(宏志印務) - 西營盤第三街138號8號舖
+   wangchiprint@yahoo.com.hk
+   2857 6028
 * notes
 
 
-* today's todo
+** website
 
-** 15 Jul 2016
+*** Robotic systems for MRI-guided surgical interventions 
 
-*** DONE Laser project meeting  
-    CLOSED: [2016-07-15 Fri 18:00]
-    - State "DONE"       from "TODO"       [2016-07-15 Fri 18:00]
+Description
+Magnetic Resonance Imaging (MRI) offers high resolution images to visualize soft tissue details, allowing clinicians to identify critical regions such as tumors margins and neurovascular and muscular structures. Intra-operative MRI techniques can reveal physiological changes of the critical regions, and even tool configurations. This enhances visual guidance to surgeons during interventional procedures. We are developing integrated robotic systems that enable intra-operative MRI-guided interventions, including i) fast image registration using advanced computing units (e.g. graphical computing units (GPUs), field-programmable gate arrays (FPGAs)) for high-quality intra-operative MRI; ii) MR-safe actuators driven by fluid to provide high-performance actuation without affecting the MR image quality; iii) miniaturized tracking units for accurate and rapid positional sensing that close the control loops; and iv) human-robot control interface allowing intuitive manipulation of surgical instruments. These enabling techniques are particularly beneficial to minimal invasive surgeries (MIS) such as cardiac electrophysiology, deep brain stimulation, transoral surgery, etc., providing safe, precise and effective control of surgical instruments.
 
-*** 
-** 12 Jul 2016
-
-*** DONE Manage Frontier Robotic and AI paper review
-    CLOSED: [2016-07-18 Mon 14:13]
-    - State "DONE"       from "WAITING"    [2016-07-18 Mon 14:13]
-    - State "WAITING"    from "TODO"       [2016-07-15 Fri 15:19] \\
-      request sent, waiting for reviewer reply
-
-*** INPROGRESS Review IEEE sensor paper
-
-*** TODO RAM - write topic sentences 
-
-*** DONE PPT for nisi - dynamic model of soft robot
-    CLOSED: [2016-07-15 Fri 12:14]
-    - State "DONE"       from "INPROGRESS" [2016-07-15 Fri 12:14]
+Publications
+- Z. Guo, T. T. L. Lun, Y. Chen, H. Su, D. T. M. Chan, and Dr. K. W. Kwok, "Novel Design of an MR-safe Pneumatic Stepper Motor for MRI-guided Robotic Interventions," in Hamlyn Symposium for Robotic Surgery, London, 2016.
+- C.L. Cheung, K.H. Lee, Z. Guo, Z. Dong, C.W. Leong, Y. Chen, P.W. Lee, Dr. K.W. Kwok, “Kinematic-model-free Positional Control for Robot-assisted Cardiac Catheterization”, in Hamlyn Symposium for Robotic Surgery, London, 2016.
+- Y. Chen, W. Wang, E. J. Schmidt, K.W. Kwok, A. N. Viswanathan, R. Cormack, and Z. T. H. Tse, “Design and Fabrication of MR-Tracked Metallic Stylet for Gynecologic Brachytherapy,” IEEE/ASME Trans. on Mechatronics, vol. 21(2), pp.956-962, 2015.
+- K.W. Kwok, K.H. Lee (co-1st author), Y. Chen, W. Wang, Y. Hu, G.C.T. Chow, S.H. Zhang, W.G.. Stevenson, R.Y. Kwong, W. Luk, E.J. Schmidt, Z.T.H. Tse, “Interfacing Fast Multi-phase Cardiac Image Registration with Real-time MRI-based Catheter Tracking for MRI-guided Electrophysiological Ablative Procedures”, Circulation, Vol. 130(Suppl 2):A18568, 2014
 
 
-** 4 Jul 2016
 
-*** DONE revise mingzhou paper
-    CLOSED: [2016-07-05 Tue 11:26]
-    - State "DONE"       from "TODO"       [2016-07-05 Tue 11:26]
-
-*** TODO organize Hamlyn information
-    
-** 3 Jun 2016
-*** DONE draft complaint letter
-    CLOSED: [2016-06-17 Fri 12:10]
-    - State "DONE"       from "TODO"       [2016-06-17 Fri 12:10]
-Dear Chief Editor,
-
-I am writing for a few equiries about our recent submission titled “Nonparametric Local Learning for Hyper-Elastic Robotics Control: An Enabling Technique for Effective Endoscopic Navigation” (ID: TMECH-02-2016-5183) to the Focused Section Mechatronics in Soft Robotics of the IEEE Transaction on Mechatronics.
-
-We received a decision on 8th May 2016, which contains comments from 9 reviewers. (The decision letter is attached for your reference.)
-In order to prepare a revised paper within the tight schedule of the focused section, we have contacted the associate editor about the deadline for resubmission. However, there is no reply.
-
-Regarding our submission, we would like to enquire about the following issues:
-1. Could you please provide the average number of reviewers for each submission in this focused section? and in regular submission? 
-   As discussed with experienced colleagues, we believe that a decision based on 9 reviewers' comments is unusual.
-Especially for the focused section, preparing high-quality replies to all the 9 reviewers' comments within designated is difficult.
-Thus, we conceive that the decision with 9 reviewers comments was a subtle way to discourage us from resubmission in the same focused section. 
-2. Is there any filtering process for the reviewers' comments?
-   We found that the 9 reviewers' comments are diverging. Some reviewers lack technical knowledge that misunderstood our manuscript. For example, a reviewer misunderstood that we employed neutral network; However, we employed a nonparametric local learning technique called LWPR, which is not a neutral network algorithm. In addition to the number of the reviewer, the quality of the comments also introduce difficulties to improve our manuscript.
-3. Generally, is a resubmission deadline is included in the decision letter for a focused section?
-   Although the deadline for submission of revised paper is provided in the focused section, it is not updated; 
-   Due to the postponement of the paper submission, we received the decision almost a month later than that provided on the web.
-   We believe it is impossible to prepare a revised manuscript that includes response to all the 9 reviewers, by the provided deadline of submission of revised paper on 1st June.
+Advanced surgical robotics has attracted significant research interest in supporting image guidance for effective navigation of surgical instruments. In minimally invasive interventions, in situ guidance providing access routes to the target anatomy, rendered based on imaging data, can enable a distinct awareness of the configuration of robotic instrument relative to the anatomy of surgical interest. Among the imaging techniques, the capability of Magnetic Resonance Imaging (MRI) to provide the high soft tissue contrast multiplanar image with a high flow and temperature sensitivity, in the absence of radiation exposure, makes MRI an ideal instrument for supporting image guidance. However, the development of MRI-compatible robots remains a very challenging engineering task, due to the MRI-incompatibility of most electronic components, constraints in physical size of robots and the high precision requirement for the surgical manipulations. Despite of these difficulties, our team of young brilliant engineers are striving for the best practical solutions in collabration with the clinical experts from various specialties.
 
 
-Thank you for your attention. 
-We are looking forward to your kind response.
+**** Publications
 
-Yours sincerely,
-
-
-*** DONE draft method for determining the best number of synergies
-    CLOSED: [2016-06-17 Fri 12:10]
-    - State "DONE"       from "TODO"       [2016-06-17 Fri 12:10]
-** 2 Jun 2016
-*** TODO check english of the thesis
-*** DONE discussions in chapter 3, 4 and 5 about determination of synergies no.
-    CLOSED: [2016-07-04 Mon 11:29]
-    - State "DONE"       from "TODO"       [2016-07-04 Mon 11:29]
-** 1 Jun 2016
-    
-*** DONE contact Dr. Tsang
-    CLOSED: [2016-06-01 Wed 23:43]
-    - State "DONE"       from "TODO"       [2016-06-01 Wed 23:43]
-    Dear Dr. Tsang,
-
-    How are you? It has been long time since we had the gathering at your place.
-    We are fine here. The two children are growing up quickly and having angle smiles everyday.
-    My sister and her husband are both doing good as usual.
-    It was very lucky that my father discovered a stage 1 cancer near the semi-colon this April,
-    and had a successful MIS that completely remove the tumour.
-    He is now recovered and living as usual that taking care of the us everyday.
-    I moved back to Hong Kong since last December. If everything goes fine, I will get the PhD degree this September.
-    
-    I'm now working at the University of Hong Kong in a Lab doing surgical robotics.
-    I'm going to London from 21 Jun to 3 Jul for a about surgical robotics symposium held in the Imperial College London.
-    It will be great if we can meet each other.
-
-    Best,
-    Denny
-    
-** 9 May 2016
-
-   
-*** check catheter data and revise paper draft
-*** revise defense slide
-** 5 May 2016
-*** defense slides and submit the 3rd journal
-** 4 May 2016
-   
-*** DONE contact host family
-    CLOSED: [2016-05-09 Mon 10:28] SCHEDULED: <2016-05-04 Wed 14:00>
-    - State "DONE"       from "INPROGRESS" [2016-05-09 Mon 10:28]
-** 3 May 2016
-*** DONE get passport 
-    CLOSED: [2016-05-03 Tue 10:00]
-** 29 April 2016
-*** DONE call daddy not go tonight dinner
-    CLOSED: [2016-04-29 Fri 13:54] SCHEDULED: <2016-04-29 Fri 14:00>
+***** 
 
 
+
+  - Advanced surgical robotics has attracted significant research interest in supporting magnetic resonant imaging (MRI)-based visual guidance for effective navigation of surgical instruments.
+  - 
+  - By acquiring intra-operative (intra-op) MR images rapidly, 3-D critical regions showing the physiological changes of tissue can be visualized.
+  - In minimally invasive interventions, such in situ guidance providing access routes to the target anatomy, rendered based on imaging data, can enable a distinct awareness of the configuration of robotic instrument relative to the anatomy of surgical interest. 
+
+
+  - MRI can offer high resolution images to visualize soft tissue features such as scars or edema.
+  - 
+
+  - This article introduces a robot platform that could realize the robot-assisted intra-cardiac catheterization in magnetic resonance imagining (MRI) environment.
+  - 
+  - We hypothesize that the robotic catheterization, combined with the enhanced monitoring of lesions creation using MRI intra- operatively, will significantly improve the procedural safety, accuracy and effectiveness.
+  - This is designed particularly for cardiac electrophysiological (EP) intervention, which is an effective treatment of arrhythmia.
+  - We present the first MR-safe robot for intra-cardiac EP intervention.
+  - The robot actuation features small hysteresis, effective force transmission and quick response, which have been experimentally verified for its capability to precisely tele-manipulate a standard clinically used EP catheter.
+  - We also present timely techniques for real-time positional tracking in MRI and intra-operative image registration, which can be integrated with the presented robot platform to improve the performance of tele-operated robotic catheterization.
+
+
+*** Soft robotics
+
+- Bio-inspired robotic structures composed of soft actuation units have attracted increasing research interest. Taking advantage of its inherent compliance, soft robots can assure safe interaction with external environments, provided that precise and effective manipulation could be achieved. However, previous model-based control approaches often require simplified geometric assumptions on the soft manipulator, but which could be very inaccurate in the presence of unmodeled external interaction forces. We are investigating model-free control methods that do not require prior knowledge of the robot’s structural parameters. A generic control framework based on a nonparametric online learning technique is developed, which in the inverse model is acquired directly. As a result, a soft continuum robot can precisely follow a 3D trajectory, even under dynamical external disturbance (e.g. push). Such enhanced control accuracy and adaptability would therefore facilitate effective manipulation in complex and changing environments such as endoscopic navigation. Furthermore,  finite element analysis (FEA) using advanced element formulations  also investigated.
+- We study the dynamical response by considering different materials, actuation methods, and external loadings.
+- Based on the FEA realization, not only the geometrical and structural design parameters can be optimized, but also the simulation data can be used to initialize the model-free control policy, hence eliminating the need for random exploration in the robot’s workspace.
+
+
+
+
+
+
+
+3510898758
+* Diary
+** 
 

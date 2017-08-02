@@ -1,0 +1,59 @@
+Xiaomei's research 
+
+* notes
+
+** <2017-07-12 Wed 10:00>
+   - novelty
+     - intuitive control interface in endoscopic view
+     - use PQ information to update the controller
+   - did simulation of catheter forward kinematics 
+     - 
+   - to do parallel (KW)
+     - three components
+       - EM tracking
+       - subject test interface
+       - robot
+     - EM tracking and interface
+       - first try interfacing EM tracking and the subject test interface (the london one )
+	 - by hand playing a traditional catheter in a virtual environment
+	   - the purpose is to get how good we can control the traditional catheter
+	 - need to ask Brian for the code and practice it ASAP
+	   - unity 3D
+     - robot
+       - the current slave robot with 3DOF 
+	 - without the coarse insertion
+       - help ziyang to build the robot
+     - catheter
+       - the traditional catheter may not good to control
+       - but we need some new catheter
+	 - ask Martin
+       - estimate the fabrication time of the Kaspar's catheter
+   - 
+     - 
+     - 
+     - 
+** <2016-12-13 Tue 18:00>
+   - progressed on writing the methodology about the mri-distortion
+   - 
+** <2016-12-09 Fri 16:00> 
+   - the mri-distortion estimation is in fact a homogeneous linear eqaution Ax = 0;
+   - It needs to further investigate how to solve it.
+   - I suggested to solve it by linear programming, using slack variable x_n = \xi x_{n+1}
+   - suggested to simplify the writing of methodology
+     
+** DONE discuss about the solution of the mri-distortion parameters
+   CLOSED: [2016-12-05 Mon 16:59] SCHEDULED: <2016-12-05 Mon 16:00>
+   - told her to write a 1 page methodology
+     - concisely write down the problem definition
+     - simplify the equations for the ease of discussion
+     - put all complicated arithmetic in appendix
+   - told her to contact Brian to buy the VR set
+   - State "DONE"       from "TODO"       [2016-12-05 Mon 16:59]
+* progress
+** <2016-12-02 Fri>
+   - The Transoral surgical project
+   - tried to solve the mri distortion parameters estimation problem
+     - the problem could be solve by linear algebra
+     - but the data currently is not so accurate
+   - aim for higher impact factor journal
+     - try to thing about the story of the mri distortion

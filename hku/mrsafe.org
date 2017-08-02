@@ -5,6 +5,7 @@
   
 * notes
 
+** 
 ** TERMINOLOGY USED FOR IMPLANTS AND DEVICES RELATIVE TO MRI TESTING 
 
 "OLD" TERMINOLOGY
@@ -40,8 +41,7 @@ The new terminology is intended help elucidate matters related to biomedical imp
 
 * meeting
 
-** TODO progress meeting
-   SCHEDULED: <2016-06-15 Wed 15:00 +1w>
+** progress meeting
    - State "DONE"       from "TODO"       [2016-05-25 Wed 18:00]
    - State "DONE"       from "TODO"       [2016-05-18 Wed 18:00]
    - State "DONE"       from "TODO"       [2016-05-11 Wed 15:00]
@@ -52,13 +52,139 @@ The new terminology is intended help elucidate matters related to biomedical imp
    :END:
 
 * tasks
+
+** DONE [[RAM 2nd submission]] writing
+   CLOSED: [2017-02-07 Tue 17:54] SCHEDULED: <2017-01-10 Tue>
+   - State "DONE"       from "TODO"       [2017-02-07 Tue 17:54]
+     - submitted
+*** schedule record
+    - <2016-12-30 Fri 14:00-15:00>
+      - finished reorganization
+    - <2016-12-28 Wed 12:00-17:00>
+      - reorganization of RAM
+** DONE Filling the relevant details referring to the PPT template
+   CLOSED: [2016-10-17 Mon 11:14] DEADLINE: <2016-10-10 Mon>
+   - State "DONE"       from "WAITING"    [2016-10-17 Mon 11:14]
+   - State "WAITING"    from "TODO"       [2016-10-11 Tue 02:05] \\
+     uploaded documents on Dropbox for revision
+   - Some reference and templates are in the folder [[file:~/Work/HKU/MRcompatible_platform/Patent/][file:~/Work/HKU/MRcompatible_platform/Patent/]]
+   - the relevant details need
+     - whole market of treatment to arrhythmia
+     - EP market 
+     - robot catheter
+     - MRI-guided catheterization
+*** The relevant details needed
+**** DONE whole market of treatment to arrhythmia
+     CLOSED: [2016-10-12 Wed 11:02]
+     - State "DONE"       from              [2016-10-12 Wed 11:02]
+population having arrhythmia in countries, the following is an example from a given reference 
+| customer base      | USA          | Western Europe | Japan | China | Total |
+|--------------------+--------------+----------------+-------+-------+-------|
+| Population (total) |    xxx       |                |       |       |       |
+|--------------------+--------------+----------------+-------+-------+-------|
+| Population (50-54) | xxx(% of total) |                |       |       |       |
+|--------------------+--------------+----------------+-------+-------+-------|
+|                    |              |                |       |       |       |
+
+- need to search for keywords
+  - arrhythmia ablation global market
+  - arrhythmia ablation population
+
+- Some graphs and data can be found useful in The Rapidly Changing Catheter Ablation Device Market
+  - http://www.meddeviceonline.com/doc/the-rapidly-changing-catheter-ablation-device-market-0001
+- report links that need to pay
+  - Atrial Fibrillation Surgery Market by Procedure (Catheter Ablation, Surgical Ablation/Maze), Product (Catheter Ablation, Surgical Ablation), and Geography (Canada, China, France, Germany, India, Japan, U.S., U.K.) - Global Forecast to 2020 :
+    - http://www.marketsandmarkets.com/Market-Reports/atrial-fibrillation-surgery-market-8998731.html
+  - Global Electrophysiology Ablation Catheters Market Size, Analysis, Share, Growth Trends, Report, Opportunities and Forecast 2014-2018:
+    - https://www.linkedin.com/pulse/20141010114740-75484224-global-electrophysiology-ablation-catheters-market-size-analysis-share-growth-trends-report-opportunities-and-forecast-2014-2018
+  - Global Electrophysiology Ablation Catheters Market 2014-2018:
+    - http://www.researchandmarkets.com/reports/2884212/global-electrophysiology-ablation-catheters#summary
+  - Global Ablation Catheters Market 2016-2020:
+    - http://www.technavio.com/report/global-cardiovascular-devices-ablation-catheters-market
+  - MCP-6254: ELECTROPHYSIOLOGY MAPPING AND ABLATION DEVICES – A GLOBAL STRATEGIC BUSINESS REPORT :
+    - http://www.strategyr.com/PressMCP-6254.asp
+
+
+
+what other information is important
+- treatment methods
+  - for slow heartbeats (bradycardias)
+    - doctors often treat them with a pacemaker because there aren't any medications that can reliably speed up your heart
+  - for fast heartbeats (tachycardias) (may include one or more of the following)
+    - Vagal maneuvers
+      - may be able to stop an arrhythmia that begins above the lower half of your heart (supraventricular tachycardia)
+      - by using particular maneuvers that include holding your breath and straining, dunking your face in ice water, or coughing.
+    - Medications
+      - many types of tachycardia,
+      - may be prescribed medication to control your heart rate or restore a normal heart rhythm.
+      - It's very important to take any anti-arrhythmic medication exactly as directed by your doctor
+      - for atrial fibrillation, doctor may prescribe blood-thinning medications to help keep dangerous blood clots from forming
+    - Cardioversion
+      - a certain type of arrhythmia, such as atrial fibrillation
+      - can be conducted as a procedure or by using medications.
+      - In the procedure, a shock is delivered to your heart through paddles or patches on your chest
+    - Catheter ablation
+      - doctor threads one or more catheters through your blood vessels to your heart
+      - Electrodes at the catheter tips can use heat, extreme cold or radiofrequency energy to damage (ablate) a small spot of heart tissue and create an electrical block along the pathway that's causing your arrhythmia
+      - treat some arrhythmias IF MEDICINES DON'T WORK
+      - Catheter ablation usually is done in a hospital as part of an electrophysiology study.
+      - doctor may recommend transesophageal echocardiography before catheter ablation to make sure no blood clots are present in the atria (the heart's upper chambers).
+      - 
+  - Implantable devices
+    - pacemaker
+      - A small device is placed under the skin near the collarbone in a minor surgical procedure. An insulated wire extends from the device to the heart, where it's permanently anchored.
+      - emits electrical impulses that stimulate your heart if detects a heart rate that's abnormal 
+    - Implantable cardioverter-defibrillator (ICD)
+      - doctor may recommend this device if
+	- you're at high risk of developing a dangerously fast or irregular heartbeat in the lower half of your heart (ventricular tachycardia or ventricular fibrillation).
+	- you have had sudden cardiac arrest or
+	- have certain heart conditions that increase your risk of sudden cardiac arrest
+      - implanted under the skin near the collarbone, similar to a pacemaker
+      - The ICD continuously monitors your heart rhythm
+      - it sends out low- or high-energy shocks to reset the heart to a normal rhythm
+  - Surgical treatments
+    - Maze procedure
+      - a surgeon makes a series of surgical incisions in the heart tissue in the upper half of your heart (atria) to create a pattern or maze of scar tissue
+      - Because scar tissue doesn't conduct electricity, it interferes with stray electrical impulses that cause some types of arrhythmia.
+      - The procedure is effective, but it's usually reserved for people who don't respond to other treatments or for those who are having heart surgery for other reasons.
+    - Coronary bypass surgery
+      - if you have severe coronary artery disease in addition to arrhythmias, your doctor may perform coronary bypass surgery.
+      - This procedure may improve the blood flow to your heart.
+  - Alternative medicine
+    - 
+  - how many % of the whole population is receiving or needs the particular treatment method
+
+- cost
+  - for each treatment/surgery
+  - for follow-up
+- 
+**** EP market
+**** robot catheter
+**** MRI-guided catheterization
+
+
+*** kawai's email request
+    From: Ka-Wai Kwok <kwokkw@hku.hk>
+Subject: Fwd: Brief Description example
+Date: 8 October 2016 at 12:44:24 HKT
+To: "DONG, Ziyang" <u3513827@connect.hku.hk>, Guo Zi-Yan <guoziyan@connect.hku.hk>, dennyfu <dennyfu@hku.hk>
+
+Dear Ziyang, Ziyan and Denny,
+
+Supposing you are all in this patent inventorship, I need your great help in filling the relevant details referring to the PPT template, as attached. If our patent got licensed, Aptus will be the investment company lining up the business deal and our research collaboration plan with MRIC. I will need you draft by this coming Mon. 
+
+Pardon to drive you busy, as to every academics, from Sep to Christmas is always the hot season.
+
+Thanks,
+Ka-Wai
+
+
 ** Dynamics modeling
    details are located below
 *** TODO free body diagram
 *** DONE combine equaitons and find necessary constraint equations
     CLOSED: [2016-05-06 Fri 11:14]
     - State "DONE"       from "TODO"       [2016-05-06 Fri 11:14]
-*** TODO check friction model between gear and shaft (sliding friction)
 *** TODO check friction model between gear and shaft (sliding friction)
 *** TODO verification
 
@@ -67,8 +193,9 @@ The new terminology is intended help elucidate matters related to biomedical imp
     outline is located below
     
 
-*** INPROGRESS submit paper to RA Magazine Special Issue
-    DEADLINE: <2016-08-01 Mon>
+*** DONE submit paper to RA Magazine Special Issue
+    CLOSED: [2016-08-15 Wed 10:50] DEADLINE: <2016-08-01 Mon>
+    - State "DONE"       from "INPROGRESS" [2016-08-31 Wed 10:50]
 **** RAM submission info
 http://www.ieee-ras.org/publications/ram/ram-special-issues/special-issues-on-surgical-robot-challenge
 
@@ -647,6 +774,784 @@ Specification
     - Difficulty even using robot, and pave a way to our future work in regards of model-free catheter control
  
       
+
+* RAM 2nd submission
+
+** Title: A robotic platform for MRI-guided Intra-cardiac Catheterization
+** Abstract (0.25 page)
+   - This article introduces a robotic platform that could realize the robot-assisted intra-cardiac catheterization in magnetic resonance imagining (MRI) environment.
+   - MRI can offers high contrast images to visualize soft tissue features such as scar or edema.
+   - We hypothesize that the robotic catheterization, combined with the enhanced monitoring of lesions creation using MRI intra-operatively, will significantly improve the procedural safety, accuracy and effectiveness.
+   - This is particular for cardiac electrophysiological (EP) intervention, which is the effective treatment of arrhythmia.
+   - We present the first MR-conditional robot for intra-cardiac EP intervention.
+   - Low hysteresis was verified experimentally, which supports the capability of precise tele-operated catheterization.
+   - We also review timely complementary techniques that would enable the close loop MRI-guide robot-assisted catheterization. 
+
+   - This article presents timely and key enabling techniques that could realize the robot-assisted intra-cardiac catheterization under the magnetic resonance imagining (MRI).
+   - We hypothesize that the robotic catheterization, combined with the enhanced monitoring of lesions creation using MRI, will significantly improve the procedural safety, accuracy and effectiveness.
+   - This is particular for cardiac electrophysiological intervention, which is the effective treatment of arrhythmia.
+   - The relevant technical challenges are reviewed.
+   - We also report our research progress on developing the first system which provides a means of integrating intra-operative MRI imaging, MR-tracking and MR-conditional actuation to improve the performance of tele-operated robotic catheterization.
+     
+** Introduction (0.75 page)
+
+- introduce what is catheterization for EP
+  - clinical background of EP
+  - require control of a long and flexible catheter to perform ablation
+Catheterization involves dexterous manipulation of thin and flexible medical-grade instrument to pinpoint the target anatomy for biopsy, drug delivery or lesion ablation through the transluminal, intraluminal, intracavitary or intracranial surgical approach. Such surgical manipulation could be applied to cardiovascular intervention, prostate surgery, stereotactic neurosurgery or breast biopsy. Cardiovascular diseases, which remain the major cause of mortality in developed countries, particularly demand dexterous catheterization. Heart rhythm disorder (known as arrhythmia) is a typical example, to which cardiovascular electrophysiology (EP) is known as the effective surgical treatment. In the procedure, electrophysiologists insert a long catheter mostly from the femoral vein to the heart chamber, in which radiofrequency (RF) ablation is performed at the catheter tip in contact with lesion tissue to isolate the abnormal electrophysiological signals that cause arrhythmias.
+
+
+- MRI-guide robot-assisted catheterization can improve quality of EP
+  - offers high quality images for construction of 3D cardiac roadmap intra-operatively
+  - robotic system can enhance fidelity of catheterization
+  - prevent from radiation exposure
+- no existing commercial MRI-safe robotic platform for catheterization
+  - mention some state-of-the-art MR-compatible robotic platforms and the challenges
+- main contribution:
+  - Developed A MR-safe hydraulically-driven robotic platform for transitional steerable catheter device
+  - other contributions:
+    - review state-of-the-art enabling techniques for MRI-guided and robot-assisted minimal invasive surgery
+      - Intra-operative Image processing 
+      - Positional Tracking of catheter
+
+Catheterization involves dexterous manipulation of thin and flexible medical-grade instrument to pinpoint the target anatomy for biopsy, drug delivery or lesion ablation through the transluminal, intraluminal, intracavitary or intracranial surgical approach. Such surgical manipulation could be applied to cardiovascular intervention, prostate surgery, stereotactic neurosurgery or breast biopsy. Cardiovascular diseases, which remain the major cause of mortality in developed countries, particularly demand dexterous catheterization. Heart rhythm disorder (known as arrhythmia) is a typical example, to which cardiovascular electrophysiology (EP) is known as the effective surgical treatment. In the procedure, electrophysiologists insert a long catheter mostly from the femoral vein to the heart chamber, in which radiofrequency (RF) ablation is performed at the catheter tip in contact with lesion tissue to isolate the abnormal electrophysiological signals that cause arrhythmias.
+
+Even with catheter navigation using a cardiac EP roadmap, manipulating the catheter to the desired location remains challenging due to the inconsistent control of a thin (Ø2.67mm), long (1.5-m), flexible EP catheter within rapidly deforming cardiovascular tissue, such as the left ventricle (LV) and left atrium (LA). This challenge has drawn attention to the development of tele-operated robotic platforms, such as the well-known commercial platforms – Hansen SenseiTM X, Amigo Remote Catheter System, aiming at improving the dexterity and accuracy of catheter manipulation for intra-cardiac EP intervention.
+
+- the need of real-time and continuous EP roadmaps
+Another challenge is that the catheter navigation can also be complicated by the lack of real-time and continuous updates of patient-specific cardiac EP roadmaps. The electrophysiologists may not feel sufficiently confident to perform effective RF ablation, due to the possibly large misalignment (>5mm) of the actual position of catheter tip with respect to the roadmap or electro-anatomical (EA) map. This poses certain disadvantages in using the industry-leading EP robots, including Stereotaxis Niobe® even with highly steerable catheter tip driven by magnetic force.
+
+- advantages of MRI-guided 
+Apart from dexterous maneuvering of cardiac catheters to the target tissues, both for EA mapping (EP’s diagnostic phase) and then RF ablation, the ability to intra-operatively assess lesion locations and their ablation progress is another very crucial factor to enhance the safety and efficacy of the EP procedure. Magnetic resonance imaging (MRI) is the unique image modality offering excellent images contrast for cardiovascular soft tissue, forming a cardiac roadmap online in 3D (Fig. 1). MRI-guided EP also avoids exposing patients and clinicians to harmful radiation as generated by X-ray and computed tomography (CT) in conventional EP procedure.
+
+Late gadolinium enhancement T2-weighted cardiac MRI [1] can also readily visualize the physiological change of tissues, and identify the scar or edema arising from successful or incomplete RF ablation. Many research groups (e.g. [2-5]) have already conducted numerous patient trials and demonstrated the significant clinical value with the use of intra-op MRI for EP in clinical routine.
+
+Despite the significant benefits from robot-assisted catheterization, as well as the advances of intra-operative (intra-op) MRI, no existing commercial robotic catheterization platform is MR-safe/conditional. In this article, the key enabling techniques and their technical challenges are reviewed in the aspects of MR image processing, robot actuation and MR-tracking of catheter (Section II). We also present our research attempts (Section III) to develop the first robotic system capable of operating with MR-compatible actuation units for dexterous tele-manipulation of the catheter, and also incorporating with the EP roadmap rapidly registered with intra-op MR images to access RF ablation locations and progress. Potential clinical outcomes are also discussed in Section IV, along with our on-going work towards the ultimate success in future clinical trials. Basic operation of the robot can also be referred to our video submitted along with this manuscript.
+
+The proposed system for MRI-guided cardiac catheterization involves timely research issues, aiming to: 1) provide fast intra-operative (intra-op) updates of the cardiac EP roadmap based on MR images; 2) enable precise and dexterous manipulation which is driven by MR-conditional actuators; 3) implement close-loop robot control with the real-time MR-tracking system. Three key components corresponding to the above issues will be introduced as follows, which are also integrated in the system.
+
+
+
+** Methods - A MR-conditional robot for Catheterization (2 pages)
+- Fig. 1: Figure of the real robot
+- we have written some text about the robot in a draft
+
+*** Design requirements:
+To achieve robot-assisted catheterization in MRI environment, we have developed a catheter robot (Fig.1) based on the following requirements:
+- The robot operation should pose no hazards and should not be affected in the MRI environment.
+- The robot can provide precise actuation with enough degree of freedom (DoF) to carry out intra-cardiac EP intervention using a clinically-used catheter.
+- Common clinically-used steerable catheters are compatible. 
+- The robot should be assembled compactly, light-weighted and easy to sterilize.
+
+- It was designed based on the following requirements:
+- - The master part and the slave part are designed to situate in the control room and on the patient table of the MRI scanner in the MRI room, respectively.
+- compatible to traditional steerable catheter:
+  - easy to be mounted
+  - number of DOF and motion provided to the catheter
+- precise and efficient actuation
+- easy sterilization (disposable and low cost)
+- (compact size and light-weight)
+
+
+*** Hydraulic actuation units
+- why hydraulic?
+  - In MRI environments, electromagnetic (EM) and electrically conductive components must be handle with cautions.
+  - It is because the electric currents inevitably induce electromagnetic interference (EMI) that disrupts the magnetic field homogeneity in MRI scanner, deteriorating the image quality.
+  - This poses a significant challenge to adopting electromagnetic motors in actuation mechanism design, in particular for precise catheterization.
+  - A common approach is to enclose motors that place closed to the MRI scanner with complex EM-shielding.
+  - However, it is still technically difficult to filter out high-frequency control signals without affecting the motor operation and design compactness. 
+  - Recently, it has been reported that an advanced design on piezoelectric motor could reduce the signal-to-noise ratio (SNR) loss to less than 15% by using high-frequency signal transmission [9].
+  - Therefore, we focus developing intrinsically MR-safe fluidically-driven actuators driven and master-slave architecture, so that no electromagnetic materials are located in the MRI room.
+
+- working principle in MRI environment
+  - We adopt master-slave hydraulic transmission in the design of actuation units (Fig. 2) to drive a catheter.
+  - In the contrast to gas, hydraulic actuation uses incompressible fluid as working media, offering more steady transmission and quicker response.
+  - In our robot, each master unit is actuated by a electric motor and is placed in the control room and each slave unit works on the patient table near the MRI scanner.
+  - Such separation ensures negligible EMI to the MR images, and allows the compact design of the slave units.
+  - During operation, each master unit drives the corresponding slave unit, consequently the catheter, via 2 long (≈10 meters each) pipelines through the waveguide in-between the control room and the MRI room.
+
+
+- features of the actuation units
+  - low friction using rolling diaphragm
+    - To achieve efficient transmission, rolling diaphragms are adopted in every master and slave actuation units (Fig. 2).
+    - Compared to the sealing using O-ring, rolling diaphragm has negligible sliding friction between the piston and the inner wall of the cylinder, reducing energy loss during actuation.
+    - Our design is adapted from the actuator proposed in [12] for operation in MRI room.
+    - Specifically, [how our design is modified for working in MRI?].
+      - The actuation units are miniturized to incorporate with rolling diaphragms with strengthened structure -- particularly for MR-safe non-metallic materials -- to resist high internal fluid pressure.
+      - difficulties of using non-metallic materials
+	- The dimensional precision of non-metallic components is not easily controlled.
+	- Strength of non-metallic material is worse. 
+	- Less components available in the market
+    
+  - no backlash when sufficient pressure is preloaded
+    - It is noteworthy that the hysteresis may significantly affect the fidelity of the catheter robot. It could be caused by the backlash between gears or long transmission via flexible pipelines.
+    - The backlash between the gear teeth can be eliminated by loading higher pressure inside the pipelines; The pressurized fluid always pushes the 2 pistons toward the gear, keeping the teeth in contact (Fig. 2).
+
+  - However, reconnecting the hydraulic tubes through the waveguide between MRI room and control room may require the strict sealing, thus increasing the difficulty of setting up the robot.
+  - As illustrated in Fig. 3a, 4 pairs of hydraulic master-slave actuation units are adopted. Each connects with 2 pipelines. Provided with incompressible liquids (water) fully filled throughout the 8 pipelines, the slave robot motion can be synchronized with the master one responsively.
+
+
+
+*** Detailed Robot Features for Catheterization
+- features of each DOF
+- how to perform catheterization?
+  - The robot has 4 pairs of the master-slave actuation units (Fig. 4), providing steering, rotation, coarse and fine translation for manipulation of the catheter tip with sufficient driving ranges (Table 1).
+    - steering: in one direction of 90°
+    - rotation: from 0° to 720°
+    - fine : 30mm
+    - coarse: 200mm
+  - The coarse and fine translation DOFs enables both the longer journey navigation from vessels to the heart chambers and short range of dexterous tip movement inside the heart chambers for EA mapping and delicate RF ablation.
+
+- The mount for traditional catheter
+  - The slave system is designed to be mechanically compatible with different types of clinically used catheters.
+  - A catheter holder can be readily 3D-printed according to the shape and the steering handle of a specific type of bi-directional and steerable EP catheters (e.g. Biosense Webster Inc. and St. Jude Medical).  
+  - This allows a EP ablation catheter can be plugged-in easily and firmly with the tailor-made catheter holder.
+  - All the component in the slave system are made of MR-safe materials and non-ferromagnetic materials in order to minimize the EMI to the MR images: The main structural components are 3D-printed with materials of acrylic compounds (e.g. VeroWhitePlus/VeroClear, Stratasys, USA); Key actuation components such as gears are made of nylon; Some auxilariy parts are made of PolyVinyl Chloride (PVC), Polyetherimide (PEI) and rubber.
+  - This eases sterilization.
+  - The slave body can be covered by disposable sterilized protection sheets.
+  - The catheter guidances are also disposable and can be sterilized beforehand.
+- Demonstration of the robotic catheterization can be found in the provided video.
+- the catheter guidance
+- other featured components?
+- easy assembly, fabrication and sterilization
+  - video
+  - Fig. 3: 3D design figures
+    - transparent figures
+    - explosion diagram to show the easy assembly process
+
+** Results and Discussion - performance evaluation of the proposed platform (2.5 pages)
+
+
+
+|-----------------------+------------------------------------------------------------|
+| Size                  | mm X mm X mm                                               |
+|-----------------------+------------------------------------------------------------|
+| Weight (slave)        | kg                                                         |
+|-----------------------+------------------------------------------------------------|
+| Pipeline              | 10 m, ø XXmm (model no.), (2 pipelines for each DoF)       |
+|-----------------------+------------------------------------------------------------|
+| Power source          | DC motors (model no.)                                      |
+|-----------------------+------------------------------------------------------------|
+| Range of motion       |                                                            |
+| Steering              | -90˚ ≤ \theta_{s} ≤ 90˚                                    |
+| Rotation              | -360˚ ≤ \theta_{r} ≤ 360˚                                  |
+| Coarse translation    | 0 mm ≤ \d_{c} ≤ 200 mm                                     |
+| Fine translation      | 0 mm ≤ \d_{f} ≤ 30 mm                                      |
+|-----------------------+------------------------------------------------------------|
+| Materials             |                                                            |
+| Structural components | Acrylic compounds: VeroWhitePlus/VeroClear, Stratasys, USA |
+| Mechanical components | Nylon, Rubber                                              |
+| Others                | PolyVinyl Chloride (PVC), Polyetherimide (PEI)             |
+|-----------------------+------------------------------------------------------------|
+
+
+To examine the performance of the presented robot for MRI-guided robot-assisted catheterization, experiments about 1) the MRI-compatibility, 2) the performance of the hydraulic transmission, 3) and catheter manipulation in a left ventricle phantom were conducted. 
+- evaluations of the 
+  - mri-compatibility
+  - precision
+  - dynamic response of the hydraulic transmission
+
+
+
+*** MRI-compatibility test
+- description of the test
+- definition of performance index: what is SNR-loss?
+- result data
+- resulting MR images
+  - integrate into Fig. 4
+
+An MRI-compatibility test has been conducted. The master system was actuated inside the control room inside a 1.5T MRI scanner (SIGNA, General Electric Company, USA); The slave system was placed near a commercial MRI phantom (J8931, J.M. Specialty Parts, USA) containing pure water at the isocenter of the scanner (Fig. 5a). The phantom was imaged at the iso-center with the aim to verify the interference, if any, generated by the robot besides. Fig. 5b depicts the resultant MR images of the phantom under four different conditions: i) Phantom: only phantom placed in the scanner; ii) static: robot introduced and remained power OFF; iii) powered: robot kept still, but with the hydraulic and electric power ON; and iv) in motion: robot in operation. The condition i) serves as baseline for evaluation. The EM-induced effects to the MR images were measured based on the changes in the signal-to-noise ratio: 
+
+where P_{center} is the mean intensity value of the 40 X 40 pixels region at the image center, SD_{conner} is the standard deviation of intensity value in the 40 X 40 pixels region at the lower right corner. The MR images shown has SNR loss less than 2% and no observable image artifact is generated. 
+
+
+- An MRI-compatibility test has been conducted.
+- As shown in Fig. 5a, the master system was operated inside a 1.5T MRI scanner (SIGNA, General Electric Company, USA) and was placed near the commercial MRI phantom (J8931, J.M. Specialty Parts, USA) at the isocenter of the scanner (Fig. 5a).
+- Phantom containing pure water was imaged at the iso-center with the aim to verify the interference, if any, generated by the robot besides;
+- No observable artifact was found in MR images under different robot operation scenarios (Fig. 5b).
+- Fig. 5.
+  - (a) Experimental setup of MRI-compatibility test showing the basic components located separately in the MRI and control rooms. Phantom containing pure water was imaged at the iso-center with the aim to verify the interference, if any, generated by the robot besides;
+  - (b) Resultant MR images of the phantom under four different conditions:
+    - i) Phantom: only phantom placed in the scanner;
+    - ii) Static: robot introduced and remained power OFF;
+    - iii) Powered: robot kept still, but with the hydraulic and electric power ON;
+    - iv) In motion: robot in operation.
+    - SNR analysis follows the standard evaluation of general MR-conditional devices.
+    - definition of SNR loss
+    - The condition i) serves as baseline for evaluation.
+    - The maximum SNR loss in the successive conditions was found within 2% only.
+
+
+We have conducted an MRI-compatibility test with our robot running inside a 1.5T MRI scanner (SIGNA, General Electric Company, USA). A commercial MRI phantom (J8931, J.M. Specialty Parts, USA) was placed at the isocenter of the scanner and closely to the robot. Its MR images were obtained under different robot running scenarios, which are: i) control: only phantom placed in the MRI scanner, serving as a baseline; ii) static: robot is introduced and remains power off; iii) powered: robot remains still, but the hydraulic and electric power is on; iv) in motion: robot is in operation. Fig. X shows the schematic diagram of experimental setup. T1-weighted and T2-weighted imaging were adopted to acquire the MR images of phantom (as shown in Fig. X). The quantitative evaluation of MRI-compatibility is based on the changes in SNR, which is defined as:
+SNR = P_{center}/SD_{corner}
+where P_{center} is the mean intensity value of the 40 X 40 pixels region at the image center, SD_{conner} is the standard deviation of intensity value in the 40 X 40 pixels region at the lower right corner [1]. According to the American Society for Testing and Materials (ASTM) standard F2119 [XXX], image artifact is 30% pixel intensity changes in the MR image before and after the installation of robot. As the experimental results shown, SNR loss is within 2% and no observable image artifact is generated. 
+
+GE Medical Systems (ed): MR Safety and MR Compatibility: Test Guidelines for Signa SPTM. Version 1.0, http://www.ge.com/medical/mr/iomri/safety.htm October (1997) 
+
+
+*** Hydraulic transmission performance
+
+**** Hysteresis
+
+- Small hysteresis is desirable, especially for intra-cardiac intervention that requires accurate manipulation of the catheter tip with high resolution (< xx mm).
+- For the presented master-slave hydraulic actuators, preloading fluid pressure would reduce the inevitable hysteresis due to long hydraulic transmission and backlash.
+- However, higher preloaded pressure would have side effects of increasing frictions, such as friction at the gear teeth, friction between the fluid and the pipelines.
+
+- The hysteresis of the master-slave system was shown in Fig. 5.
+- The translational positions of the master piston and the slave piston were measured at different preloaded fluid pressure.
+- The periodic motion had frequency XX Hz.
+- The range of motion covered XX % of the stroke-length.
+- The hysteresis was uniform for the whole range of motion.
+- Worse hysteresis was observed at higher fluid pressure.
+- It may be because higher actuation force was needed to overcome the static friction at the gear and the pipeline. 
+
+- 
+
+- Experiment setting
+o	The translational displacement of the piston shaft was measure
+o	Angular position was controlled by the embedded PID controller.
+o	% of span of motion range
+pre-pressure used
+
+
+     - why this test is need
+       - the importance of measuring the hysteresis
+       - the effect to the control performance and thus the catheterization of having large hysteresis 
+     - experiment setting
+       - position was controlled by the embedded PID controller.
+       - % of span of motion range
+       - Which DOF is test? and why?
+     - Fig. 5: plot of hysteresis 
+       - output angle vs input angle
+     - curves of all DOFs? or only 1 DOF
+
+     - hysteresis vs pre-loaded pressure
+       - the higher pre-pressure, the worse hysteresis
+       - the highest hysteresis was within xxx mm.
+	 - (intend to keep the result figure of “the optimal preloaded pressure” for Ziyang’s next journal)
+       - larger hysteresis as pre-loaded pressure
+       - a minimum of hysteresis at 0.75Hz
+       - possible explanation 
+	 - at very low pre-loaded pressure, the fluid is still "compressible" (i.e. not stiff enough)
+	   - stiffness K = BA/L;
+	   - A: cross section area of the pipeline
+	   - L: length of the pipeline
+	 - at the same time there are different types of friction during transmission
+	   - friction force at the cylinder ports and friction due to bends in the pipes
+	     - f_1 = D_1 prop \dot s
+	     - D_1: damping term
+	     - s: stroke length
+	   - frictional torque at the gear
+	     - tau_1 = D_2 prop \dot theta
+	     - D_2:
+	     - theta: gear displacement
+	   - fluid friction
+	     - F_lf = H_f rho g A
+	     - H_f: friction head modeled by Darcy-Weishach formula
+	       - H_f = (c L v^2) / 2 g d
+	       - c = 64/Re for Re < 2000 (laminar flow) where Re is the Reynolds number
+	       - Re = (rho v d) / nu
+	       - nu: viscosity of the fluid
+	     - for laminar flow, friction F_lf = (32 v  nu)
+
+
+**** Dynamic response 
+     - We have also investigated the dynamic performance of the master-slave actuation units using a frequency response method.
+     - Given sinusoidal torque input tau=sin  to the master gear where omega was the frequency, the steady state response at the slave gear was measured.
+     - Fig. 6 depicts the Bode plots for different values of preloaded fluid pressure. 
+     - Elaboration of the magnitude plot
+       - Larger magnitude was obtained when larger fluid pressure was preloaded, implying the force transmission performance improves using larger preloaded pressure.
+       - The peaks in the magnitude plot correspond to the natural frequencies (~5Hz).
+       - The natural frequency was independent of the increase in the preloaded fluid pressure.
+       - (explanation of this independence)
+	 - We find that the natural frequency, which depends on ratio of stiffness and inertia, is relatively independent from the variation of the preloaded fluid pressure.
+	 - As mentioned in section II B that the fluid stiffness increases with preloaded pressure, such independence may indicate the increase of the transmission inertia.
+	 - However, because the transmission phase lag depends on complicated fluid dynamics, we will investigate its independence from the preloaded fluid pressure in the future by dynamic modeling techniques. 
+       - The values of the peaks were smaller when higher pressure was preloaded.
+       - It may be attributed to the increase of frictions, such as those at the gear teeth and between the fluid and the pipelines, where more energy is required for the transmission.
+     - Elaboration of the phase plot
+       - In addition, the phase lag was also independent of the 
+       - From the phase plot, larger phase lag is observed when the actuation frequency was higher. 
+       - This may be because the system requires longer time to accumulate enough energy to overcome the inertial motion, especially during the change of motion direction.
+       - For higher preloaded pressure, 
+       - The high frequency the larger phase lag (delay)
+       - Effect of increasing the preload pressure
+
+     - In sum,
+       - the master-slave actuator had small (1.29mm) hysteresis even at relatively high fluid pressure (2.0bar).
+       - Although preloading higher fluid pressure would slightly enlarge the hysteresis, it could improve force transmission performance of the master-slave actuators.
+       - Moreover, the actuation frequency should also be restrained to obtain acceptable system delay.
+       - Apart from the preloaded fluid pressure, other system parameter such as 
+       - the fluid physical properties, for example mass and viscosity,
+       - and the pipelines geometry (length and diameter) [Ganesh 2004]
+       - are some factors that contributes to the fluid dynamics.
+
+
+
+**** Delay
+- Fig. 6: plot of force histories
+  - input force vs time
+  - output force vs time
+  - curves of all DOFs? or only 1 DOF
+  - superpose the curves and indicate the time delay
+**** Force transmission efficiency
+- definition of performance index: e.g. output force/input force
+- compute from the plot of force histories (Fig. 6)
+**** efficiency 
+     - 
+
+
+
+
+*** Phantom test – Pulmonary vein isolation 
+Ablation test in a left ventricle phantom
+- Finally, the robot performance for catheterization was validated using a left ventricle phantom model (Fig. 7a).
+- Pulmonary vein isolation (PVI) is a treatment for atrial fibrillation, where left atrial ablation is usually performed 1 to 2 cm from the pulmonary vein (PV) ostia to encircle the left- and right-sided PVs [oral 2003].
+- In the test, a clinically used catheter (Biosense Webster Inc.) was mounted on the catheter robot, with positional sensors attached at close to the tip for estimating the tip position in real-time.
+- The phantom was 3D-printed using soft material (model no) with the interior surface coated with conductive materials (model no) for indicating contact with the catheter tip.
+- The catheter was tele-manipulated to perform ablations on a target trajectory on the phantom interior surface, using a motion input device (model no.).
+- When the tip was brought close to the trajectory, an "ablation button" was pressed followed by peforming fine translation of the catheter. 
+% - When the catheter tip touches the coating, the sensor values were recorded.
+- Fig 7b depicts the 3D locations where 127 ablations were performed.
+- The average number of RF pulses was 98±21 for LA ablation.
+- The 
+- , indicating the efficacy of catheterization using the present robot.
+- Objective, evaluate the reachability of the catheter tip using the presented catheter robot
+Experiment setting
+Use and motion input device to manipulate a catheter inside a left ventricle phantom (Fig. 7a) along a predefined ablation trajectory
+
+The interior of the phantom was coated with conductive material (model no); the catheter tip is mounted with EM tracker (model no.). When the catheter tip contacts with the coating, the position of the catheter tip is recorded
+
+Number of points 
+
+Pulmonary vein isolation (PVI) is currently the best technique available for “curing” atrial fibrillation.
+[1] Scheinman M M, Morady F. Nonpharmacological approaches to atrial fibrillation[J]. Circulation, 2001, 103(16): 2120-2125.
+ 
+Left atrial ablation is usually performed 1 to 2 cm from the pulmonary vein (PV) ostia to encircle the left- and right-sided PVs.
+[2] Oral H, Scharf C, Chugh A, et al. Catheter ablation for paroxysmal atrial fibrillation[J]. Circulation, 2003, 108(19): 2355-2360.
+ 
+The average number of RF pulses was 98±21 for LA ablation.
+[3] Pappone C, Oreto G, Lamberti F, et al. Catheter ablation of paroxysmal atrial fibrillation using a 3D mapping system[J]. Circulation, 1999, 100(11): 1203-1208.
+
+
+- Fig. 3
+  - indicate the gear box, the belt and the four actuators in (a)
+  - only show the "V" actuator in (b)
+- Fig. 7.
+  - photo of the experiment setting
+  - (b): change color of the left ventricle
+- Fig. 2 (if possible)
+  - indicate the concept of reducing backlash using preloaded fluid pressure
+** Towards MRI-guided and robot-assisted catheterization (1.5 pages)
+
+- Figure 8 depicts the prospective architecture of a close-loop tele-manipulation catheter system under intra-op MRI, where the presented robot is a part of it.
+- Advances of MR-tracking and intra-op MR image processing are the enabling techniques to fully realize the MRI-guided EP in clinical setting.
+- These techniques, as well as the human-robot interface, have to be reviewed and discussed for the future integration with our presented robot.
+
+
+To realize MRI-guided EP catheterization with the presented robot in clinical practice, accurate MR-based localization of the catheter tip, as well as high performance image registration have to be developed. These essential technologies have to be integrated with the human-robot interface under the framework specified in Fig. 8.
+
+#+BEGIN_SRC comment
+Figure 8 illustrates the key components which form a close loop system for tele-manipulation of catheter in MRI. MR-conditional robot have been presented in the previous section. In the following, we give brief reviews of two enabling technologies: 1) MR-tracking, 2) intra-operative image processing and discuss the issue of integrating them into the human-robot interface. 
+#+END_SRC
+
+
+
+
+#+BEGIN_SRC comment
+- Fig. 7: schematic of the close-loop MRI-guided robot-assisted catheterization
+- Review state-of-the-art techniques towards MRI-guided and robot-assisted catheterization
+
+The presented catheter robot only partially contributes the close-loop MRI-guided robot-assisted catheterization (Fig. 7). In the following, we review the state-of-the-art technologies from two different disciplines, namely intra-operative image processing and MR-tracking, and discuss issues of integrating them into the whole close loop. 
+#+END_SRC
+
+
+
+*** Positional Tracking of catheter
+- Table 2: passive, active and semi-active catheter tracking technologies
+
+
+- Online update of catheter tip position in 3D is essential in many cardiac interventions. Not only does it act as the feedback data to close the loop of robot control, but it also allows the operator to visualize the catheter configuration with respect to the cardiovascular roadmap constructed by the MR images
+
+Tracking the catheter position is essential in many cardiac interventions. It serves as feedback data to close the robot control loop, enabling implementation of feedback position controller that enhances catheter manipulation (Fig. 8). MR-tracking can be achieved by employing tiny MR-tracking device to the catheter, which could be close to the catheter tip (e.g. Fig. 1). The following section highlights the state-of-the-art MR-tracking technologies.
+
+, and describe integration issues which could enhance the control performance of the presented robot.
+
+C.
+- Real-time Positional Tracking of catheter in MRI
+  - Online update of catheter tip position in 3D is essential in many cardiac interventions.
+  - Not only does it act as the feedback data to close the loop of robot control, but it also enables visualization of the catheter configuration with respect to the cardiovascular roadmap constructed by the MR images.
+  - The following highlights of the state-of-the-art passive, active and semi-active MR tracking technologies. 
+
+Online update of catheter tip position in 3D is essential in many cardiac interventions. This can be achieved by installing MR-tracking devices close to the catheter tip (Fig. 8). The basic principle is to apply properly programmed excitation signals, namely MRI sequence, that detunes/triggers MR resonance. At the receiver interface, the localization of the devices is achieved by analyzing the resulting susceptibility artifacts in the resulting MR images. In the following, we highlights the state-of-the-art 1) passive, 2) active and 3) semi-active MR-tracking technologies (Table II), and describe integration issues which could enhance the control performance of the presented robot.
+
+
+- The position feedback not only closes the loop of robot control, but it also allows the operator to visualize the catheter configuration with respect to the cardiovascular roadmap constructed by MR images.
+
+Passive MR fiducial/markers can be visualized by embedding materials that cause positive (+ve) or negative (-ve) contrast of the MR field at the matter surrounding catheter tip, such as gadolinium-based contrast agents or strongly paramagnetic materials. Recently, paramagnetic markers could be automatically localized at high frequency (50 Hz) within positional error of ≤ 4.5mm, using the MRI sequence PRIDE to acquire echo-phased projection in three principal axes [12]. 
+
+#+BEGIN_SRC comment
+- Passive MR fiducial/markers can be visualized by embedding materials that cause positive or negative contrast of the MR field at the surrounding matter, such as gadolinium-based MRI contrast agents or strongly paramagnetic materials.
+- For automatic tracking of the 3D position, it requires complicated MR sequence as well as more computation time to process susceptibility artifacts in the high-resolution images for fast and accurate localization.
+- It has been demonstrated that paramagnetic markers could be automatically localized at high frequency 20 ms (50 Hz) within positional error of ≤ 4.5mm, using the sequence PRIDE to acquire echo-phased projection in three principal axes [13].
+#+END_SRC
+
+
+In common active tracking settings, small coils (Fig.1) are attached close to the catheter tip, which are connected to the electronic system in the receiver interface via coaxial cables. These coils can be fabricated on flexible printed circuit and integrated on customized stylets. They can actively “pick up” the MR gradient field [13] along the three principal directions. By matching/tuning the receiver's LC components for a specific MRI scanner, these coils can be highly sensitive to very local field inhomogeneity [14] without adversely affecting the image quality, providing high resolution (0.6×0.6×0.6mm3) tracking performance with fast sampling rate (40 Hz) [15]. 
+
+
+#+BEGIN_SRC comment
+- In active tracking, a unit of coils connected to a receiver electronic system via coaxial cables can actively “pick up” the MR gradient field [14] along the three principal directions.
+- Such coils are small to attach close to the catheter tip.
+- By matching/tuning the receiver's LC components for a particular MRI scanner, the coils can be highly sensitive to very local field inhomogeneity [15] without adversely affecting the image quality.
+- Highest resolution of tracking performance (0.6×0.6×0.6 mm3) with the fastest sampling rate at 40 Hz has been reported [16]. 
+#+END_SRC
+
+
+In contrast, semi-active approach separates the small coils in isolated circuits. These coils resonate with specific MR frequencies by means of wireless inductive coupling with the MRI system, preventing from resonating radiofrequency (RF) waves (Table II) that cause heating in conductive wire. An optical fiber was used in [16] to illuminate a photodiode placed parallel to a coil in a resonant circuit at the catheter tip. This device could achieve real-time imaging (20fps) in an in vivo test, using a radial steady-state free-precession MRI sequence.
+
+#+BEGIN_SRC comment
+- In semi-active tracking, small coils are utilized in isolated circuits that resonate with particular MR frequencies.
+- (Wireless inductive coupling between tracking coils and the MRI system is adopted.)
+- Visualization of the semi-active tracking device can be achieved using properly programmed MR sequence that detunes/triggers the isolated resonant circuit.
+- An optical fiber was used in [18] as the wireless inductive coupling along a catheter, where the laser signal source triggered by an MR sequence was transmitted to illuminate a photodiode, which was placed parallel to a coil in a resonant circuit at the catheter tip; Real-time imaging (20fps) of a in vivo test using a radial steady-state free-precession sequence was demonstrated.
+#+END_SRC
+
+#+BEGIN_SRC comment
+- Semi-active tracking devices utilize small coils in isolated circuits that resonate with specific MR frequencies.
+- The devices can be visualized using properly programmed MRI sequence that detunes/triggers the isolated resonant circuit. 
+- In contrast to conductive coupling in active tracking, wireless inductive coupling between tracking coils and the MRI system is adopted.
+- As demonstrated in [16], an optical fiber was embedded used along a catheter to transmit optical signals, which was connected to a photodiode.
+- The photodiode was placed parallel to a coil in a resonant circuit at the catheter tip. 
+- When a laser signal source was triggered by an MRI sequence, the coil would illuminate. 
+- This device achieved real-time imaging (20fps) in an in vivo test using a radial steady-state free-precession sequence.
+
+
+
+
+- Passive MR fiducials/markers
+  - Two types of passive fiducials/marker,
+    - either capsulizing i) gadolinium-based MRI contrast agents, e.g. liquid with 4-6% gamogenetic acid (Gd-DTPA), which could enhance MR signal by shortening the T1-relaxation time,
+    - or ii) strongly paramagnetic material, e.g. dysprosium oxide, causing MR field inhomogeneity at the surrounding matter that can be visualized by delicate MR-triggering signal or sequence programmable in the MRI scan software.
+  - The corresponding 3D position of such markers is usually selected on the image domain.
+  - For automatic tracking, it requires complicated MR sequence as well as more computation time to process susceptibility artifacts in the high-resolution images for fast and accurate localization.
+  - An MR sequence, PRIDE [13], was an example proposed to acquire echo-phased projections in the three principal axes.
+  - It is capable of localizing the paramagnetic marker shortly at high frequency 20 ms (50 Hz), but within relatively large positional error of ≤ 4.5mm.
+  - Tracking based on passive markers may also encounter difficulties in tracking multiple catheters that are in close proximity to each other.
+  - This can also be invalid while being out of the imaging site/slice, despite the uses of advanced image recognition techniques.
+
+- Active MR-tracking coils
+  - A coil unit connected to a receiver electronic system via coaxial cables can actively “pick up” the MR gradient field [14] along the three principal directions. Such coils can be small so as to attach close to the catheter tip.
+  - Localization of the coils can be achieved within a few milliseconds, thus enabling high frame rate of tracking.
+  - It could be also precise in accrediting of the high sensitivity to the very local field inhomogeneity [15] without adversely affecting the image quality.
+  - Such sensitivity can be achieved by matching/tuning the LC components inside the receiver at once for a particular MRI scanner.
+  - The optimal tracking performance can be attained in the highest resolution of 0.6×0.6×0.6 mm3, and the fastest sampling rate at 40 Hz [16].
+  - Despite its promising spatial and temporal resolution, the main issue in active tracking is the heating issue due to the resonating radiofrequency (RF) waves; The standing wave also causes storage of electrical energy within the conducting structure that may cause potential safety hazards [17].
+  - Besides, the integration of the tracking coil requires wiring and matching with the MRI scanner, and sophisticated assembling of small electronics components at the catheter tip, which pose difficulties on further miniaturization of the tracking device.
+
+- Semi-active tracking
+  - In semi-active tracking, small coils are utilized in isolated circuits that resonate with particular MR frequencies.
+  - There are no direct capacitive electrical connections to the MRI system.
+  - Instead, wireless inductive coupling between tracking coils and the MRI system is used.
+  - Using properly programmed MR sequence that detunes/triggers the isolated resonant circuit, visualization of the semi-active device in the MR image can be achieved.
+  - An optical fiber was used in [18] as the wireless inductive coupling along a catheter, where the laser signal source triggered by an MR sequence was transmitted to illuminate a photodiode, which was placed parallel to a coil in a resonant circuit at the catheter tip; Real-time imaging (20fps) of a in vivo test using a radial steady-state free-precession sequence was demonstrated.
+  - Benefiting from the wireless inductive coupling, semi-active devices avoid the potential development of standing waves along electrical connections found in active tracking.
+  - Nevertheless, the mechanical assembly and miniaturization of semi-active tracking devices are still challenging tasks [19].
+#+END_SRC
+
+#+BEGIN_SRC comment
+Such accurate and frequently updated 3D position data can act as feedback data to close the loop of robot control. The feedback data can be used to estimate the kinematics/dynamics of the catheter tip online. In addition, supported by the high precision actuation (section III-B), we can also obtain relatively accurate model for our robot. This enables implementation of the feedback position controllers (Fig. 8) to enhance the fidelity of catheter manipulation. Moreover, the feedback data can be used to construct visual guidance (Fig. 8) such as instant catheter configuration with respect to the cardiovascular roadmap (Fig. 4). This technique relates to the image registration technologies, which is explained in section IV B. 
+#+END_SRC
+
+Despite the aforementioned approaches have their own technical deficiencies (Table II), the highlighted achievements are promising for clinical applications that demand for online update of accurate catheter 3D position. The tracked tip positions could also guide and specify the intra-op MR scanning planes and directions (Fig. 8). It could allow visualization of the catheter configuration with respect to the cardiovascular roadmap constructed by the MR images. This provides the operator with navigation guidance and a consistent motion reference to maneuver the catheter tip aiming at the ablation lesions imaged and registered locally around the tip (Fig. 4). To this end, fast image registration is necessary. 
+
+
+*** Intra-operative Image processing
+- Fig. 8: of the EP roadmap using FPGA-based non-rigid registration
+
+
+- how intra-operative images facilitates EP procedure?
+  - During EP procedures, post- or pre-ablation lesions/landmarks (edema or scar) can be visualized and selected on T2-weighed MR images. 
+- how are the cardiac MR images being produced intra-operatively?
+  - The MR images together with the collected ECG-gated contact points have to be instantly aligned on the pre-planned EP roadmap showing the EA mapping data, providing intra-operative visual reference to the electrophysiologist (Fig. 8).
+  - Such alignment, namely image registration, is the prerequisite for MRI-guided intervention, where the intra-op MR images are mostly obtained at different cardiac cycle with respect to the pre-operative (pre-op) images that construct the EP roadmap.
+
+- intensity-based non-rigid registration
+  - Image registeration can be categoried into feature-based and intensity-based. 
+  - Feature-based image registration methods rely on correspondence between image features.
+  - However, they are susceptible to the MR image artifacts caused by turbulent blood flow or cardiac motion, which hamper the correct matching of landmarks intra-operatively between two sets of MR images.
+  - Intensity-based image registration methods are less prone to such artifacts because they rely on comparing intensity patterns in images.
+  - Due to intensive computation of large amount of pixel/voxel gradient to recover the change of image morphology, conventionally they are mostly applied only once after the EA mapping for improved integration between the EA map and the pre-op roadmap.
+
+
+- FPGA-based computational acceleration
+  - We hypothesize that novel computing architecture featured with flexible and efficient memory access structures can alleviate the computation bottleneck. 
+  - (By employing application accelerators such as graphical processing units (GPUs) and field-programmable gate arrays (FPGAs),)
+  - MR images can be tessellated into smaller segments for parallel computation to accelerate the registration process.
+  - Furthermore, the bit-width of the data can be optimized according to the trade-offs between the computation speed and accuracy.
+  - In particular, FPGAs can resolve the computational bottleneck by employing temporal parallelism on top of spatial parallelism [7].
+  - It has been demonstrated that computation could be done through a flexible computational pipeline, and the memory transfer between device memory and the processing units of FPGA (Xilinx® Virtex7-XC7V2000T) could be minimized [8], where co-registration between two sets of 3D images (resolution 192X132X300) could be achieved within 1.1 sec.
+  - This enables providing the electrophysiologist with high quality intra-operative 3D MR image feedback of the physiological changes of tissue during intervention.
+enable online registration of the intra-operative images for clinical setting. 
+
+
+  - (Memory access congestion is avoided by streaming the data into a dataflow pipeline, while other pixel values can be accessed via data exchange channels between the processing units [8]).
+  - A demons-based registration on an FPGA (Xilinx® Virtex7-XC7V2000T) has  Note that the algorithm involved 100 iterations for large sizes of pre-op images registered with the same sizes of intra-op ones, which is more than sufficient to cover the cardiovascular anatomy. Co-registration between two sets of images scan complete within 1.1 sec.
+  - This makes technically possible to employ real-time co-registration in the clinical practice, providing the electrophysiologist with the frequent visual feedback of the physiological changes at the ablated tissue..
+  - 
+  - The computation results in Fig. 8 show that the processing time using FPGA is 25 times less than the time on the state-of-the-art GPUs.
+
+  - A recent intensity-based method, Diffeomorphic Demons [6], may require >10 minutes to register a 3D image (resolution 256X256X100) using a state-of-art CPU.
+  - This diffeomorphic 
+
+- non-rigid image registration
+  - Non-rigid image registration is the common technique to reduce the misalignment of the selected landmarks on the roadmap. 
+  - 
+
+- why FPGA-based
+- expectations using FPGA-based approach
+  - our primary results
+- general expectation 
+
+
+
+A. Intra-operative image processing
+- why intra-op IP is need?
+  - Advances of MRI create a new realm of intra-operative (intra-op) guidance for intervention.
+  - Post- or pre-ablation lesions/landmarks can be visualized and selected on T2-weighed intra-op images, which will have to be instantly aligned on the EP roadmap showing the EA mapping data.
+  - Such a roadmap acts as a fundamental visual reference, on which the electrophysiologist primarily relies during the EP procedures.
+
+- Non-rigid image registration is the prerequisite technique 
+  - However, the intra-op MR images are mostly obtained at different cardiac cycle with respect to the pre-operative (pre-op) images that construct the EP roadmap.
+  - Non-rigid image registration is the prerequisite technique used to reduce the misalignment of the selected landmarks from the roadmap in 3D (Fig. 1).
+  - Moreover, ECG-gated contact points collected during the EA mapping will have to be promptly co-registered to the roadmap based on the cardiac morphology.
+  - Fast MR image registration is the pre-requisite to co-registering the post-ablation lesions/landmarks (edema or scar) on the pre-planned EP roadmap.
+  - Such lesion landmarks could be captured by the T2-weight intra-op. imaging such that the scanning direction and plane can be guided by the MR-tracked catheter tip.
+  - The deformation field between the pre-op and intra-op images acts as the result of the co-registration.
+
+- Diffeomorphic Demons image registration
+  - why intensity-based image registration and its technical difficulties?
+    - Image registration approaches relying on feature detection or selection are investigated not to be clinically practical due to the susceptibility to artifacts in fast intra-op MR images.
+    - Such artifacts caused by turbulent blood flow or cardiac motion hamper the correct matching of landmarks between two sets of images.
+    - Much research effort has been focused on intensity-based approaches, however, which are very computationally intensive because of the large amount of pixel/voxel gradient calculated to recover the change of image morphology.
+    - This poses the primary bottleneck in fulfilling many real-time requirements for RF ablation and catheterization guidance.
+
+- performance of state-of-the-art Diffeomorphic Demons image registration
+  - Long computation time (>5sec) is clinically impractical for MRI-guided EP, which demands a frequent and rapid update the roadmap based on the intra-op T2/real-time MR images.
+  - However, typical computation time for a more recent intensity-based approach, Diffeomorphic Demons [6], may require >10 minutes to register a 3D image (with resolution of 256x256x100) using a state-of-the-art CPU.
+  - Therefore, the conventional use of intensity-based registration is mostly applied only once after the EA mapping for improved integration between the EA map and the pre-op roadmap.
+  - An advanced registration approach, Diffeomorphic Demons, employs diffeomorphic transformation in the deforming tissue in attempt to ensure invertibility, continuity and legitimacy of the deformation field [6].
+  - The general advantage is that the intra-op images can be of different dimensions, resolutions and scanning directions with respect to the pre-op images that construct the EP roadmap; However, it is also computationally intensive due to a substantial number of convolution processes involved.
+  - This requires repeated access of non-coalesced pixel values. Such access will compel a large amount of memory being continuously fetched to the device cache in runtime.
+
+- Computational acceleration for demons-based Image registrations
+  - We hypothesize that novel computing architecture featured with flexible and efficient memory access structures can enable online registration of the intra-operative images for clinical setting.
+  - Employing application accelerators such as graphical processing units (GPUs) and field-programmable gate arrays (FPGAs) can exploit parallelism to accelerate the registration process.
+  - Both accelerators employ spatial parallelism, which is achieved by tessellating the MR images into smaller segments for parallel computation.
+
+- Why FPGA
+  - GPUs’ Single Instruction, Multiple Data (SIMD) architecture enables parallel processing of multiple blocks of data at the same time.
+  - However, as most intensity-based registration algorithm requires frequent access of nearby pixel value, such parallelized computation architecture will require a large memory throughput of the device, consequently result in a bottleneck on memory access as the computation scales up.
+  - In contrast, FPGAs can resolve the computational bottleneck by employing temporal parallelism on top of spatial parallelism [7]. Computation can be done through a flexible computational pipeline, and the memory transfer between device memory and the processing units of FPGA can be minimized [8]. Furthermore, the kernels can be optimized to perform the computation that requires less precision by varying the bit-width of the data, of which trade-offs can be done between the computation speed and accuracy.
+
+- how fast can we achieve now?
+  - In light of fulfilling this memory bandwidth requirement, we have implemented the demons-based registration on an FPGA (Xilinx® Virtex7-XC7V2000T).
+  - Memory access congestion is avoided by streaming the data into a dataflow pipeline, while other pixel values can be accessed via data exchange channels between the processing units [8]. The computation results in Fig. 8 show that the processing time using FPGA is 25 times less than the time on the state-of-the-art GPUs.
+  - Note that the algorithm involved 100 iterations for large sizes of pre-op images registered with the same sizes of intra-op ones, which is more than sufficient to cover the cardiovascular anatomy. Co-registration between two sets of images scan complete within 1.1 sec.
+  - This makes technically possible to employ real-time co-registration in the clinical practice, providing the electrophysiologist with the frequent visual feedback of the physiological changes at the ablated tissue.
+
+- expectation of having fast and continuous intra-operative image registeration 
+  - All in all, fast and continuous co-registration between the pre- and intra-op images could significantly smoothen the repeated workflow of RF ablation planning and catheterization.
+  - It also allows one to readily identify the locations of the next point collection regions, as well as the arrhythmia origins.
+
+
+Such rapid realignment of the intra-op data is crucial to precise catheter manipulation in dynamic surgical scenarios. This computation architecture offers, not only efficient interfacing with our MRI-guided robotic platform (Fig. 8), but also essential visual guidance (e.g. Fig.4 and Fig. 9) for the operator to maneuver the catheter.
+
+*** Human-Robot Control Interface 
+Such frequent and accurate localization of the micro coils catheter tip enables the estimation of both 3D position and orientation of the catheter tip. The MR-based tracking data can be continuously streamed into the navigation interface (e.g. EnSite VelocityTM, St. Jude Medical, as can be seen in the submitted video). The entire catheter localization takes place with the MR imaging coordinate system. Therefore, it does not require any external tracking reference, thereby avoiding potential disparity caused by relative registrations between tracking and imaging system. As a result, the tracked catheter tip position shares the same coordinate space with the MR images, facilitating precise placement of catheter tip at the ablation target registered on the roadmap. Moreover, it is clinically advantageous, while the MR-tracking can be applied in conjunction with the intra-op. imaging such that the tracking is interleaved with the MR image sequence. This enables the instantaneous visualization of the tissue edema or scars surrounding the catheter tip as the result of RF ablation [20].
+
+The intra-op. imaging can be applied in conjunction with the MR-tracking, such that the tracking is interleaved with the MR image sequence. This enables the estimation of both 3D position and orientation of the catheter tip. The MR-based tracking data can be continuously streamed into the navigation interface (e.g. EnSite VelocityTM, St. Jude Medical, as can be seen in the submitted video). The entire catheter localization takes place with the MR imaging coordinate system. Therefore, it does not require any external tracking reference, thereby avoiding potential disparity caused by relative registrations between tracking and imaging system. As a result, the tracked catheter tip position shares the same coordinate space with the MR images. This not only enables visualization of the tissue edema or scars surrounding the catheter tip as the result of RF ablation [20] on the fly-through-view of 3D EP cardiac roadmap (Fig. 9), but also allows endoscopic navigation from the view point of the catheter tip with ablation target registered (Fig. 4). Such navigation interface can provide comprehensive information for monitoring the RF ablation process, as well as facilitating precise placement of catheter tip at the ablation target registered on the roadmap (Fig. 4). 
+Electrophysiologist can tele-manipulate the catheter tip using a motion input device (e.g. Novint Falcon, NF1-L01-004, Fig. 4). 
+This prospective close loop MRI-guided catheterization is also illustrated in the provided video.
+Imprecise EP catheterization would pose patients in risks of nerve damage, esophageal fistula creation, pulmonary vein stenosis and stroke. Assisted by the proposed human-robot interface, electrophysiologists could gain better manipulability during RF ablation. This results in improving the creation of ablation lesions, such as transmural and interconnected circumferential lesions, thereby decreasing the chances of post-procedural arrhythmia recurrence.
+
+#+BEGIN_SRC comment
+- Provided with high resolution MR images and accurate positional feedback of the catheter, a 3D EP cardiac roadmap with registered ablation lesions/landmarks can be updated intra-operatively.
+- This enables electrophysiologists performing catheterization in a close loop.
+- For the EP procedure, the RF ablation progress can be frequently monitored, thus avoiding manual coordination of such lesions on the images which may be inconsistent with the roadmap at a certain instant of the cardiac cycle.
+- As results, this may improve the creation of ablation lesions, such as transmural and interconnected circumferential lesions, thereby decreasing the chances of post-procedural arrhythmia recurrence, currently 30% in atrial fibrillation (AF) and 50% in ventricular tachycardia (VT), which could compensate for the cost of using MRI, and significantly reduce the overall healthcare expenditure on arrhythmia treatment.
+
+- MR-tracking 
+
+- receive positional feedback of the catheter from the MR tracking device
+- close the control loop
+- Advanced MR tracking technologies do not only provide visual feedback, but also enable implementation robotic feedback controller to enhance the control performance of the catheter robot.
+- The kinematics/dynamics of the catheter can be estimated online and incorporated in the controller in adaptive manner, eventually improving the fidelity of the catheter tip manipulation.
+- The tracked tip positions can also guide and specify the intra-op MR scanning planes and directions.
+- This provides the operator with a consistent motion reference to maneuver the catheter tip aiming at the ablation lesions imaged and registered locally around the tip, in accrediting of the fast image registration.
+- In general, this potentially adds confident to perform RF ablation, and improves the safety of catheter navigation, thereby decreasing the rates of nerve damage, esophageal fistula creation, pulmonary vein stenosis and stroke, the major risks of EP procedures.
+
+
+
+ of closing the inner robotic control loop of the 
+ has been presented. Active tracking coils wired close to the catheter tip can be localized at high frequency and resolution in the image coordinates. It enables to close the control loop of catheter navigation, thus introducing the use of various methods that can estimate the motion mapping online from the robot actuation to the catheter tip. The tracked tip positions could also guide, specify the intra-op MR scanning planes and directions. It could provide the operator with a consistent motion reference to maneuver the catheter tip aiming at the ablation lesions imaged and registered locally around the tip, in accrediting of the presented fast image registration as well. In general, this potentially adds confident to perform RF ablation, and improves the safety of catheter navigation, thereby decreasing the rates of nerve damage, esophageal fistula creation, pulmonary vein stenosis and stroke, the major risks of EP procedures
+
+- our demonstration in the robotic challenge
+In the Surgical Robotics Challenge 2016, we demonstrated a human-robot interface for catheterization using the presented catheter robot. 
+Such close loop robotic catheterization is demonstrated in the submitted video: the catheter can be tele-manipulated using a 3D motion input device in the control room (Fig. 4), where both the virtual catheter tip and the 3D EP roadmap constructed based on the pre-operative MR images can be rendered in a navigation interface. 
+Accurate alignment of the virtual catheter with the EP roadmap can be attributed by the real-time and continuous MR-tracking of the catheter. 
+The navigation interface can include multi-modal visual guidance such as an endoscopic view (Fig. 4) from the point of the catheter tip, which can also be virtually generated provided with the accurate alignment.
+
+
+- need to modify the schematic diagram
+  - feedback input to the "feedback position controller"
+#+END_SRC
+
+
+
+
+- An electrophysiologist can intuitively tele-manipulate the catheter tip using a motion input device (e.g. 3D motion input device Novint Falcon, NF1-L01-004) according to the navigation interface.
+- The input should be stabilized/augmented (Fig. 8) to diminish unsafe catheter motion that may cause tissue damage, before feeding to the position controller for tele-manipulation of the tip.
+- Provided with the presented high-precision and low-latency robot, more accurate kinematics/dynamics model of the robot could be derived for the control
+- A robot-assisted catheterization is also illustrated in the provided video.
+
+
+
+** Conclusions (0.5 page)
+
+
+#+BEGIN_SRC comment
+- performance of the robotic platform
+- other enabling techniques 
+- References (1/2 page)
+
+
+
+- One of the demanding MRI-related technologies is high performance robotic system for precise manipulation of surgical tools.
+- In this article, we present a robotic platform for MRI-guided cardiac electrophysiological intervention.
+- Currently, there is no such existing commercialized robotic system that is MR-compatible.
+- The presented system is the first of its kinds that features with solely non-metallic and low-hysteresis actuation.
+- Actuation is based on master-slave hydraulic transmission with rolling diaphragms as low-friction sealing.
+- The low-hysteresis is achieved utilizing pressurized fluid to minimize backlash, and has been experimentally verified.
+- Dynamic response analysis is also provided.
+- (advantages based on the dynamic performance)
+- In addition, its practicability has been verified in an ablation test on a phantom model, in which a clinically used catheter tip could be precisely tele-manipulated to target trajectory.
+- We have also reviewed timely MRI-related techniques, namely intra-operative image registration and positional tracking in MRI. 
+- The presented robot can be incorporated with such enabling techniques for prospective MRI-guided robot-assisted interventions. 
+
+However, the short stroke of such frictionless design using rolling-diaphragm would be the major limitation of extending its application to other interventional procedures. We are improving the design of the hydraulic actuators capable of providing infinite range of rotation with high accuracy and resolution, resulting in more dexterous catheter manipulation. Such enhancement could facilitate treatments for more complex arrhythmias, such as persistent AF and VT.
+
+
+
+This may serve as a benchmark for the design and integration of MR-conditional robotic devices in MR image processing, robot actuation and catheter tracking under the MRI.
+
+
+
+In summary, we reviewed the key technologies that potentially resolves the major bottlenecks of developing an MRI-guided robotic catheterization system for intra-cardiac interventions. An integrated robot prototype has been developed to validate the practicality of the proposed approaches. Parts of the prototype was demonstrated in the Surgical Robotics Challenge 2016.
+
+Currently, there is no such existing commercialized robotic system that is MR-compatible. The presented system is the first of its kinds that can be incorporated with intra-op MRI, multiple sensing units, real-time MR image registration, and high performance actuation consisted of solely non-metallic material. This may serve as a benchmark for the design and integration of MR-conditional robotic devices in MR image processing, robot actuation and catheter tracking under the MRI.
+
+Hydraulic actuation has been shown as a great potential of offering high-performance actuation under MRI, but also without adversely affecting the imaging quality. The design of master-slave actuation system involves advanced sealing method has demonstrated its advantages in low-friction, quick-response and low-noise motion transmission. Backlash in such hydraulic transmission could be reduced by applying pressure (2-3 bar) in the fluid transmitted in between the control and MRI rooms via the waveguide. 
+#+END_SRC
+
+#+BEGIN_SRC comment
+We present an MR-safe robotic platform for MRI-guided cardiac electrophysiological (EP) intervention. Currently, there is no such existing commercialized robotic system that is MR-compatible/conditional. The presented robot is the first of its kinds that can operate inside the MRI scanner without adversely affecting the MR image quality. It adopts hydraulic master-slave actuation that has small hysteresis and quick response. Backlash during such hydraulic transmission can be reduced by applying preloaded pressure in the fluid transmitted in-between the control and MRI rooms via the waveguide. The robot has also been verified in a lab-based validation task, in which a standard EP catheter tip could be precisely tele-manipulated around the pulmonary vein ostia inside the left atrium phantom model.
+
+We are improving the design of the hydraulic actuators capable of providing enhanced range of motion with high accuracy and resolution, aiming at more dexterous catheter manipulation. In addition, the design optimization will be based on thorough study of the hydraulic actuation dynamics, in order to improve the robot performance relevant to the best clinical outcome.
+
+- We have also discussed timely techniques that can be integrated with the presented robot.
+- Advanced MR-tracking devices can be attached close to the catheter tip, which and can be localized at high frequency and resolution in the image coordinates.
+- This enables to close the control loop of the catheter manipulation by providing visual guidance to the electrophysiologists.
+- This also allows introducing various methods that can estimate the catheter tip motion, enabling implementation of robotic feedback controllers to enhance catheter manipulation fidelity.
+- The image registration process between intra-op and pre-op MR images can be accelerated using reconfigurable-computing architecture such as GPUs/FPGAs, so as to facilitates instant guidance for catheter navigation.
+- For the EP procedure, when the RF ablation progress is frequently monitored by the intra-op images, the ablation lesions/landmarks can be rapidly registered on the EP cardiac roadmap.
+- It avoids manual coordination of such lesions on the images but which may not be consistent with the roadmap at the same point of cardiac cycle.
+- This may result in improving the creation of ablation lesions, such as transmural and interconnected circumferential lesions, thereby decreasing the chances of post-procedural arrhythmia recurrence, currently 30% in atrial fibrillation (AF) and 50% in ventricular tachycardia (VT), which could compensate for the cost of using MRI, and significantly reduce the overall healthcare expenditure on arrhythmia treatment.
+- Moreover, the MR-tracking of the catheter can be interleaved with the intra-op imaging techniques, in which the catheter tracking can take place in the MRI coordinate system.
+- This allows construction of virtual endoscopic view angled from the catheter tip.
+- Such virtual view can be include in the navigation interface with instant visual guidance. 
+- In general, this potentially adds confident to perform RF ablation, and improves the safety of catheter navigation.
+- Assisted by such close-loop control interface, not only does the robot control fidelity would be increased, but also electrophysiologists could gain better manipulability during RF ablation. 
+- , which enable robotic EP catheterization guided by MRI intra-operatively.
+
+
+In summary, we reviewed the key technologies that potentially resolves the major bottlenecks of developing an MRI-guided robotic catheterization system for intra-cardiac interventions. An integrated robot prototype has been developed to validate the practicality of the proposed approaches. Parts of the prototype was demonstrated in the Surgical Robotics Challenge 2016.
+
+Currently, there is no such existing commercialized robotic system that is MR-compatible. The presented system is the first of its kinds that can be incorporated with intra-op MRI, multiple sensing units, real-time MR image registration, and high performance actuation consisted of solely non-metallic material. This may serve as a benchmark for the design and integration of MR-conditional robotic devices in MR image processing, robot actuation and catheter tracking under the MRI.
+
+Robot actuation: Hydraulic actuation has been shown as a great potential of offering high-performance actuation under MRI, but also without adversely affecting the imaging quality. The design of master-slave actuation system involves advanced sealing method has demonstrated its advantages in low-friction, quick-response and low-noise motion transmission. Backlash in such hydraulic transmission could be reduced by applying pressure (2-3 bar) in the fluid transmitted in between the control and MRI rooms via the waveguide. However, the short stroke of such frictionless design using rolling-diaphragm would be the major limitation for its further application. Our on-going work is to design a new type of hydraulic motor capable of providing infinite range of rotation with high accuracy and resolution. Such high-performance actuation under the MRI is generally aimed at enhancing the dexterity of catheter control, facilitating better treatments for more complex arrhythmias, such as persistent AF and VT.
+
+
+
+
+Image processing: Significant computational acceleration of the deformable registration using reconfigurable-computing architecture, FPGA, has been proposed to facilitate instant guidance for catheter navigation. For the EP procedure, when the RF ablation progress is frequently monitored by the intra-op images, the ablation lesions/landmarks can be rapidly registered on the EP cardiac roadmap. It avoids manual coordination of such lesions on the images but which may not be consistent with the roadmap at the same point of cardiac cycle. As results, this may improve the creation of ablation lesions, such as transmural and interconnected circumferential lesions, thereby decreasing the chances of post-procedural arrhythmia recurrence, currently 30% in atrial fibrillation (AF) and 50% in ventricular tachycardia (VT), which could compensate for the cost of using MRI, and significantly reduce the overall healthcare expenditure on arrhythmia treatment.
+
+
+MR-tracking of catheter: Advanced MR-based tracking technologies has been presented. Active tracking coils wired close to the catheter tip can be localized at high frequency and resolution in the image coordinates. It enables to close the control loop of catheter navigation, thus introducing the use of various methods that can estimate the motion mapping online from the robot actuation to the catheter tip. The tracked tip positions could also guide, specify the intra-op MR scanning planes and directions. It could provide the operator with a consistent motion reference to maneuver the catheter tip aiming at the ablation lesions imaged and registered locally around the tip, in accrediting of the presented fast image registration as well. In general, this potentially adds confident to perform RF ablation, and improves the safety of catheter navigation, thereby decreasing the rates of nerve damage, esophageal fistula creation, pulmonary vein stenosis and stroke, the major risks of EP procedures.
+
+#+END_SRC
+
+- To realize robotic EP catheterization guided by MRI, the presented robot have to be integrated with real-time MR-tracking and intra-operative image registration techniques.
+- Advanced MR-tracking devices can be used to localize the catheter at high frequency and resolution in the image coordinates. This not only enables to close the control loop of the catheter tele-manipulation by providing visual guidance to the electrophysiologists, but also opens the opportunities to implement various feedback controllers for improving the fidelity of the robotic catheterization. 
+- Taking the advantages of the accurate and frequent positional tracking of the catheter, fewer number of scanning slice, and thus hence the scanning time, will be required. The image registration process can also be accelerated using application accelerators such as GPUs/FPGAs. For the EP procedure, this allows the ablation lesions/landmarks can be rapidly registered on the EP cardiac roadmap, while the RF ablation progress can be frequently monitored by the intra-op MR images. Such registration avoids manual coordination of such lesions on the MR images which may not be consistent with the roadmap at the same point of the cardiac cycle. This may improve the creation of ablation lesions, such as transmural and interconnected circumferential lesions, thereby decreasing the chances of post-procedural arrhythmia recurrence.
+- Moreover, the MR-tracking of the catheter can be interleaved with the intra-op imaging techniques, in which the catheter tracking can take place in the MRI coordinate system. This allows re-construction of virtual endoscopic perspective view from the catheter tip. Such virtual view can provide the operator with a consistence motion reference for the maneuver of the catheter tip aiming at the ablation lesions/targets that are imaged and registered locally around the tip. In general, this potentially adds confidence to perform RF ablation, and improves the safety of catheter navigation, thereby decreasing the rates of nerve damage, esophageal fistula creation, pulmonary vein stenosis and stroke, the major risks of EP procedures.
+
+To extend the application of the presented robot, we will improve the design of the hydraulic actuators so as to enhance the range of motion with higher accuracy and resolution, aiming at more dexterous catheter manipulation. In addition, we will study thoroughly the hydraulic actuation based on dynamic modeling techniques, so as to optimize the design and improve the robot performance relevant to the best clinical outcome.
+
+
+** video caption
+- remove the white "The University of Hong Kong Presents:"
+- Commercially available catheter --> Clinically used catheter
+- The installation of catheter is simple and straight-forward
+
+
+
+*** old organization
+- Introduction
+  - what is EP
+  - Control of catheter in EP is difficult --> robotic systems
+  - Real-time imaging can improve quality of EP
+  - MRI offers high quality images and prevent from radiation exposure
+  - contributions of this paper
+- Key Enabling techniques
+  - Intra-operative image processing
+    - Diffeomorphic Demons image registration
+    - Computational acceleration for demons-based image registration
+  - MR-safe Actuation Units
+    - Piezoelectric/ultrasonic motors
+    - Pneumatic motors
+    - Hydraulic motors
+  - Real-time Positional Tracking of catheter in MRI
+    - Passive MR fiducials/markers
+    - Active MR-tracking coils
+    - Semi-active tracking
+- Experimental Evaluations
+  - An MR-conditional catheter robot
+  - Real-time active tracking coil
+  - Fast image registration using FPGA
+- Discussion and Conclusions
+  - The first MRI-catheter robot
+  - Image processing
+    - intra-operative image registration improves localization of the ablation lesions/landmarks
+    - reduces post-procedural arrhythmia recurrence
+    - compensate for the cost of using MRI
+    - reduce the overall healthcare expenditure
+  - Robot actuation
+    - hydraulic is MR-safe
+    - the low-friction actuator design enhance efficiency
+    - backlash can be reduced using 2-3 bar pressure
+    - will improve design to overcome the short-stroke deficiency
+  - MR-tracking of catheter
+    - active tracking coils can wired close to the catheter tip and localized at high frequency and resolution
+    - close the control loop of catheter navigation 
+    - enable implementation of closed-loop robotic control methods
+    - prove a consistent motion reference to maneuver the catheter tip
+    - add confidence to perform RF ablation, and improve the safety of catheter navigation
+    - decreases the rates of nerve damage, esophageal fistula creation, pulmonary vein stenosis and stroke
+	
+
+
+	
 
 * paper draft for RAM
   :PROPERTIES:

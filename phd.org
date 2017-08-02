@@ -453,8 +453,9 @@ Arai sensei: what is the most important contribution?
    - A PDF in USB or CD for COOP. A printed version is also needed
    - Either soft or hard copy
   
-** Faculty meeting
-   SCHEDULED: <2016-07-20 Wed>
+** DONE Faculty meeting
+   CLOSED: [2016-08-31 Wed 10:45] SCHEDULED: <2016-07-20 Wed>
+   - State "DONE"       from ""           [2016-08-31 Wed 10:45]
    
 ** Final defense - presentation and Q&A (total 30 mins)
    - Presentation to answer the questions in the public hearing

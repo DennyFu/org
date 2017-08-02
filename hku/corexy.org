@@ -1,10 +1,21 @@
 * info
   :PROPERTIES:
-  :Directory: [[file:~/Work/HKU/CoreXY/]]
+  :Directory: [[file:~/Work/HKU/CoreXY/][file:~/Work/HKU/CoreXY/]]
   :END:
-
 * Notes
 
+* tasks
+
+** DONE final check paper_v19.docx
+   CLOSED: [2016-12-05 Mon 12:55] SCHEDULED: <2016-12-01 Thu 12:00-14:30>
+   
+
+   - State "DONE"       from "TODO"       [2016-12-05 Mon 12:55]
+   Cartesian motion systems have been the key advances for the development of various precise positioning machines, such as 3D printers, laser cutters, and automated tissue indentation platform in micro-scale accuracy for biomedical applications. A promising parallel belt-driven mechanism called Core-XY was proposed to reduce the moving load of the system.
+It has been demonstrated that Core-XY outperform conventional Cartesian motion systems, where each dimension motion is actuated by a motor independently. 
+However, the elasticity of the belt transmission inevitably induces unneglectable errors under high running speed while moving along a defined trajectory. 
+To this end, this project objective is to provide detailed identification of the error sources by dynamics modeling of the Core-XY Cartesian motion system. Detailed modeling methods with both full degrees of freedoms (DoFs) and simplified DoFs are presented. Error analysis of the Core-XY system is conducted based on the dynamics model, along with experimental validation, under different operation conditions. 
+ The proposed dynamic model attained accurate predication of contour errors can be attained by, which is of importance to the design of motion controller for all kinds of Core-XY systems.
 * on paper_v16.docx
 
 ** section II

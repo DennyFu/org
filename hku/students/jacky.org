@@ -1,0 +1,30 @@
+Jacky's research
+* progress
+
+** 9 Aug 2016
+
+**** neurorobot
+- 1st version
+- planar backlash is reduced
+- Workspace is enough
+- still a bit backlash
+**** future work
+- try to use servo to drive the pair of rolling diaphragm
+- Develop of kinematic of the robot in matlab
+- Telsa turbine
+- kawai suggest consider "cycrops" mechanism
+- bring the 2nd prototype to Dr. Danny Chan
+
+
+
+
+** 21 Jul 2016
+**** Reduction of rolling diaphram
+**** Needle insert mechanism
+***** challenge
+****** long stroke 20cm
+****** precise control
+**** Continues rotation
+***** The Telsa motor with encoder
+
+

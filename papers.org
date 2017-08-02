@@ -1,0 +1,260 @@
+* General info
+  :PROPERTIES:
+  :bibliography: \bibliography{~/Dropbox/org/main.bib}
+  :Library:  [[file:~/paper_lib/]]
+  :Library-unfiltered:  [[file:~/pending_oreadings/]]
+  :bib-file: file:~/Dropbox/org/main.bib
+  :End:
+
+* Hotkey
+- C-c ): insert citation
+- get-bibtex-from-doi: insert bibtex in [[file:main.bib][main.bib]]
+
+* Tag keywords
+
+- robotics
+  - soft_robot
+  - surgical_robot
+  - exoskeleton
+  - prosthesis
+  - dynamics
+  - kinematics
+  - continuum_robot
+  - hyperredundant_robot
+  - robot_control
+    - operational_space_control
+    - compliant_control
+    - resolved-acceleration_control
+    - orientation_control
+      - quaternion_feedback
+      - euler_angle_feedback
+      - angle_axis_feedback
+  - redundant_manipulator
+- optics
+- diagnosis
+  - tumor
+  - 
+- biomedical
+- medical_device
+  - catheter
+  - 
+- sensor
+  - mri_tracking
+    - active_mri_tracking
+    - passive_mri_tracking
+    - semiactive_mri_tracking
+- actuator
+  - artificial_muscle
+  - nanotube
+  - soft_actuator
+    - variable_stiffness
+- design
+- review
+- material
+  - elastic_material
+  - material_instability
+    - tensile_instability
+- bioinspired
+- 
+
+* papers 
+** TODO [[papers:A biomimetic robotic platform to study flight specializations of bats][ramezani2017biomimetic]]: A biomimetic robotic platform to study flight specializations of bats 
+   SCHEDULED: <2017-02-11 Sat>
+
+** TODO [[papers:Light in diagnosis, therapy and surgery][yun2017light]]: Light in diagnosis, therapy and surgery :review:biomedical:optics:
+   SCHEDULED: <2017-02-11 Sat>
+
+** [[papers:Solid stress and elastic energy as measures of tumour mechanopathology][nia2016solid]]: Solid stress and elastic energy as measures of tumour mechanopathology :diagnosis:tumor:
+   - Solid stress and tissue stiffness affect tumour growth, invasion, metastasis and treatment.
+   - Here, we show that 2D spatial maps of the solid stress and the resulting elastic energy in excised or in situ tumours with arbitrary shapes and a wide range of sizes can be obtained via three distinct and quantitative techniques that rely on the measurement of tissue displacement after disrup- tion of the confining structures. 
+** [[papers:A transistor-like pH nanoprobe for tumour detection and image-guided surgery][zhao2016transistorlike]]: A transistor-like pH nanoprobe for tumour detection and image-guided surgery :diagnosis:tumor:
+   - It is challenging to detect a broad range of malignant tumours at high resolution, because of profound genetic and histological dif- ferences in cancerous tissue.
+   - Here, we report the design and performance of a fluorescent nanoprobe with transistor-like responses (transition pH = 6.9) for the detection of deregulated pH, which drives many of the invasive properties of cancer.
+** [[papers:Autonomous Soft Robotic Fish Capable of Escape Maneuvers Using Fluidic Elastomer Actuators][marchese2014autonomous]]: Autonomous Soft Robotic Fish Capable of Escape Maneuvers Using Fluidic Elastomer Actuators :soft_actuator:soft_robot:bioinspired:
+
+** [[papers:Robotic Tentacles with Three-Dimensional Mobility Based on Flexible Elastomers][martinez2012robotic]]: Robotic Tentacles with Three-Dimensional Mobility Based on Flexible Elastomers :soft_robot:soft_actuator:design:
+
+** [[papers:Design Principles for Improved Fatigue Life of High-Strain Pneumatic Artificial Muscles][miron2016design]]: Design Principles for Improved Fatigue Life of High-Strain Pneumatic Artificial Muscles :artificial_muscle:soft_actuator:elastic_material:
+- This paper discusses that 3 factors are crucial for designing high-strain soft actuators: 1) fatigue limit of the membrane material, 2) abrasive wear and cutting (surface damage), and 3) contact stresses and strains (Hertz).
+- First it presents an extensible pneumatic muscle (EPM). The EPMs are integrated in a MRI-compatible manipulator for protate interventions (Fig. 1).
+- This 1st generation EPM has rings as radial constraint layer.
+- FEA results reveal that that local strains under the rings are almost twice the strains in the rest of the EPM, due to contact pressure as well as strain concentrations caused by section changes (Fig. 4).
+- In the proposed improved design of the EPM, the rings constraint layer is replaced by a continuous orthotropic sleeve (Fig.7).
+- The local strains due to section changes and Hertz contacts are reduced, hence achieving almost constant strain along the EPM.
+- Dielectric elastomer (DE) sensors are also embedded inside the EPM for positional feedback.
+- This new design of the EPM has fatigue life of 229,000 cycles with 50% extension, and can produce 100N linearly.
+- The EPM suffers a slow drift in strain due to the membrane material creeping during cycling: under a constant force, EPM elongation increases following a linear-log trend.
+- Creep issues can be overcome with adequate closed-loop control.
+** [[papers:Soft Robots and Kangaroo Tails- Modulating Compliance in Continuum Structures Through Mechanical Layer Jamming][santiago2016soft]]: Soft Robots and Kangaroo Tails: Modulating Compliance in Continuum Structures Through Mechanical Layer Jamming :bioinspired:soft_robot:artificial_muscle:soft_actuator:continuum_robot:variable_stiffness:
+- This paper describes a novel mechanism for stiffening a continuum robot.
+- The mechanism is called the Layer jamming based on varying the friction between specially-designed internal layers.
+- The mechanism can be understood from Fig.5: A spring backbone is surroundded by a specially-designed layer where the layer jamming takes place, the friction is controlled by varying the diameter of the outer braided sheath.
+- Could this be an inspiring idea of stiffening our bendable section?
+** [[papers:High-Force Soft Printable Pneumatics for Soft Robotic Applications][yap2016highforce]]: High-Force Soft Printable Pneumatics for Soft Robotic Applications :actuator:soft_actuator:elastic_material:soft_robot:
+- This paper describes how to 3D-print a soft bending actuator with complex inner geometry.
+- FEM was implemented to analyze the actuator behavior.
+- It not only describes some guidelines using low-cost 3D-printing technologies, but also demonstrates how to use FEM for design analysis.
+- We may also take reference how they setup various testing platforms for quantitative measurement and scientific studies.
+- It is a good example for our future publication about FEM-based optimization for soft bending section.
+** [[papers:Amplifying the response of soft actuators by harnessing snap-through instabilities][overvelde2015amplifying]]: Amplifying the response of soft actuators by harnessing snap-through instabilities :material_instability:soft_actuator:elastic_material:
+- this paper studies instabilities of elastomeric materials that undergo large deformation.
+- Such instabilities are called the snap-through instabilities
+- making use of the instabilities, it is found that the response of a fluidically-driven soft actuator can be amplified.
+- only small volume of air can produce relatively large changes in pressure, length, shape and exerted force, at constant volume
+- this paper calls such use of instability "harnessing snap-through instabilities"
+** [[papers:Tensile Instability in a Thick Elastic Body][overvelde2016tensile]]: Tensile Instability in a Thick Elastic Body :elastic_material:tensile_instability:
+- found that a thick elastic body exhibit a tensile instability under equibiaxial stretching.
+- Wavy pattern was also found in the out-of-plane direction. 
+- for incompressible Neo-Hookean material, when subjected to uniform tractions, two possible equilibrium solutions, i.e. bifurcation, exist. The material stays undeformed until a limit of tensile normal force while obeying the first solution(branch), then snaps to the second branch. (Fig.1a) 
+- No such snap-through instability is observed for the plane strain case (Fig.1b)
+- This work experimentally shows that the tensile instability can be triggered in a thick elastic body subjected to in-plane tensile forces and generalized plane strain conditions.
+** [[papers:Visualization of dedicated catheters using fast scanning techniques with potential for MR-guided vascular interventions][bakker1996visualization]]: Visualization of dedicated catheters using fast scanning techniques with potential for MR-guided vascular interventions :medical_device:catheter:sensor:passive_mri_tracking:
+** [[papers:Real-time active MR-tracking of metallic stylets in MR-guided radiation therapy][wang2014realtime]]: Real-time active MR-tracking of metallic stylets in MR-guided radiation therapy :medical_device:catheter:sensor:active_mri_tracking:
+** [[papers:Magnetic Resonance-Guided Passive Catheter Tracking for Endovascular Therapy][settecase2015magnetic]]: Magnetic Resonance-Guided Passive Catheter Tracking for Endovascular Therapy :medical_device:catheter:sensor:passive_mri_tracking:
+** [[papers:In vivo safe catheter visualization and slice tracking using an optically detunable resonant marker][weiss2004invivo]]: In vivo safe catheter visualization and slice tracking using an optically detunable resonant marker :medical_device:catheter:sensor:semiactive_mri_tracking:
+** [[papers:A brief review of hardware for catheter tracking in magnetic resonance imaging][duerk2001brief]]: A brief review of hardware for catheter tracking in magnetic resonance imaging :review:medical_device:catheter:sensor:mri_tracking:
+** [[papers:Resolved-acceleration control of robot manipulators- A critical review with experiments][caccavale1998resolved]]: Resolved-acceleration control of robot manipulators: A critical review with experiments :orientation_control:quaternion_feedback:euler_angle_feedback:angle_axis_feedback:review:
+- As opposed to rotation matrix feedback, an error based on a minimal representation of orientation, e.g. Euler angles, was used in the operational 3 space approach; a drawback of this approach is the occurrence of representation singularities.
+- An effective alternative to the above two descriptions is represented by a four-parameter singularity-free representation of the end- effector orientation error in terms of a unit quaternion.
+- J is the (6 n) end-effector geometric Jacobian matrix; the joint configurtions at which the matrix J is not full-rank are termed kinematic singularities.
+- resolved linear acceleration can be chosen as (19), which yields closed-loop dynamics of the position error (20).
+- Euler angle feedback
+  - based on the rotation matrix describing the mutual orientation between the desired and the actual end-effector frame because the euler angle feedback is ill-conditioned when close to singularities
+  - resolved angular acceleration can be chosen as (28), which yields closed-loop dynamics of the position error (30).
+  - for the ZYX representation
+  - ill-conditioning of matrix T is not influenced by the desired or actual end-effector orientation but only by the orientation error;
+- quaternion feedback
+
+** [[file:~/paper_lib/Operational%20Space%20Control-%20A%20Theoretical%20and%20Empirical%20Comparison.pdf][nakanishi2008operational]]: Operational Space Control: A Theoretical and Empirical Comparison :operational_space_control:redundant_manipulator:review:
+** [[file:~/paper_lib/Dynamics%20for%20variable%20length%20multisection%20continuum%20arms.pdf][godage2015dynamics]]: Dynamics for variable length multisection continuum arms :continuum_robot:dynamics:
+
+** [[file:~/paper_lib/Design%20and%20Kinematic%20Modeling%20of%20Constant%20Curvature%20Continuum%20Robots-%20A%20Review.pdf][webster2010design]]: Design and Kinematic Modeling of Constant Curvature Continuum Robots: A Review :continuum_robot:kinematics:review:
+   - forward kinematics mapping from configuration space to task space
+     - robot-independent
+     - shows that many seemingly disparate approaches produce identical results (namely (2) and (3) when written in homogeneous matrix form) when placed in a common coordinate frame and stated using consistent symbols and mathemati- cal terminology
+     - Denavit–Hartenburg (D-H) parameters (Hannan and Walker 2003),
+     - Frenet–Serret (F-S) frames (Hannan and Walker 2003),
+     - Integral representation formulation that can account for zero curvature (Chirikjian and Burdick 1994) (the F-S frame is undefined when curvature equals zero),
+     - exponential coordinates (Sears and Dupont 2006;Webster et al. 2006a, 2009)
+   - forward mapping from task space to configuration space
+     - robots shaped by continuously bending actuators and by tendons have identical formulations of curvature $\kappa(q)$ and $\phi(q)$, the only difference between the two types, arising from the fact that wires go straight between support disks rather than through curved paths, is in the arc length parameter $l(q)$ in (26).
+     - However, additional difficulties arise due to cable extension resulting from loading, which requires examination of the statics of the continuum robot and the resulting forces applied to its cables to properly regulate cable tension, avoid cable slack, and address both under- and over-actuation in these systems (Camarillo et al. 2008, 2009a)
+     - concentric tubes
+       - neglecting torsion with circular curvature preformed -> piecewise constant curvature
+       - can determine arc parameters of a given link using Bernoulli-Euler beam mechanics
+       - For a collection of tubes with circular precurvatures and a deformed resultant circular curvature common to all tubes , moments will be constant along the length of each tube in a given section
+     - The Steerable Needle.
+       - Work in Webster et al. (2006a) : bevel-steered needle
+       - A distinguishing feature of bevel steering is that the backbone (needle shaft) can have as many arcs as desired (a new one begins with each bevel reorientation), and with constant axial rotation during insertion steerable needles can also achieve helical trajectories
+       - only arcs forward of the current tip position can be affected by the actuators.
+       - Arcs embedded in tissue will stay in place with constant arc parameters,
+       - closed-loop control with feedback from a medical imaging system, a needle controller (see, e.g., Kallem and Cowan (2009)) determines u1 and u2 in real-time and applies them using motors connected to the needle base (see Webster et al. (2005) and Reed et al. (2008)).
+   - multi-section forward and inverse kinematics
+     - forward
+       - In general, the robot-independent forward kinematic results are straightforward to generalize to the multi-section case. However, the robot-specific mapping cannot always be so cleanly decoupled, and doing so sometimes requires consideration of the whole robot and simultaneous solution of all sections.
+       - Thus, the designs where extension to multiple sections requires additional analysis are those involving push rods and cables
+     - inverse
+       - A closed-form geometric approach is given for single and multiple sections in Neppalli et al. (2009), based on modeling each section using a spherical joint and a straight rigid link, then applying an analytical process to solve inverse kinematics for this model before converting back to arc parameters. However, this formulation does not yet account for physical actuation limits, such as limited actuator lengths, forces, or locations.
+       - The Jacobian (see Section 5.1) provides another approach to robot-independent inverse kinematics. It finds a single solution to the problem by servoing a virtual copy of the robot from any initial guess (including the robot’s current configuration) to the desired configuration (see, e.g., Sears and Dupont (2007) and Webster et al. (2008) for active cannula results). In this Jacobian-based inverse kinematics strategy, it is possible to build actuator limits into the control law so that the robot’s trajectory is always physically realizable.
+       - algorithms restrict their attention to constant-curvature kinematics, and thus do not include real-world effects that can be important in some continuum robot designs, such as gravitational loading or friction.
+	 - can be overcome by compensation that makes use of redundant actuation in the single- (Xu and Simaan 2006) and multi-section cases (Simaan et al. 2009). Likewise, some continuum robot designs undergo appreciable axial compression due to actuator forces, necessitating a static analysis of the system to compute cable lengths which correspond to desired arc parameters (Camarillo et al. 2009a).
+   - Differential kinematics
+     - use the chain rule to compute differential kinematics.
+     - one can generalize to multiple sections by expressing individual section Jacobians in the spatial frame
+     - Efficient methods for obtaining the Jacobian for non-circular continuum robots, including piecewise constant-curvature robots of all designs under significant external loading (as well as active cannulas with variable precurvature and/or under external loading (Rucker et al. 2010a)) is an open research question that is discussed below in terms of future challenges in the field of continuum robots.
+   - future direction
+     - design
+       - challenges of concatenating multiple sections
+       - appropriately tuning or con- trolling overall robot stiffness to match application objectives
+       - and identifying and using robust materials with long functional lifetimes
+       - how to incorporate actuator or structural limits (see, e.g., Jones et al. (2006)) into models to prevent robot self- damage or damage under load
+       - many of the continuum robots developed to date have not yet been fitted with end-effectors
+     - Static modeling
+       - general methods to characterize the error induced by constant-curvature assumption do not currently exist.
+       - does not provide an early means of testing a single section of the robot to extrapolate whether a multi-section robot will be likely to meet design requirements.
+       - general results on error propagation based on metrics for the circularity (or lack thereof) of the physical robot shape would be valuable
+       - There is a great deal of current interest in obtaining deeper understanding of the fundamental mechanics of continuum robots in terms of general theories of elasticity, and both energy minimization (see, e.g., Rucker et al. (2010b), among others) and Cosserat rod theory (see, e.g., Trivedi et al. (2008a), Dupont et al. (2010), and Rucker et al. (2010a), among others) have yielded useful recent results. The ability to include the effects of gravity, torsion, and external loading in such models is particularly useful.
+     - dynamic modeling
+       - deriving and practically applying dynamic models of continuum robots in a numeri- cally stable form amenable to real-time implementation.
+       - most advanced work in terms of practical implementation is that of Chirikjian (1995), where a variable geometry truss pro- vided a means of computing planar continuum robot dynamics rapidly
+       - We note also that several non-robotic applications of Cosserat rod dynamics address these issues (Spillmann and Teschner 2007; Lang et al. 2009) and show promise for future application in continuum robotics.
+       - efficient implementation of dynamic models for various kinds of continuum robots is an open and active area of research
+	 - efficient and stable numerical techniques for real-time implementation will be developed, both of which facilitate the practical application of continuum robots in dynamic environments that require rapid motion
+     - Sensing, Control, and Calibration
+       - feedback on robot shape is necessary to enable closed-loop control
+       - computer vision for shape sensing (see, e.g., Chitrakaran et al. (2007), Camarillo et al. (2009b), and Croom et al. (2010)) and visual servo control
+       - Control advancements may include methods of servoing the entire shape of the robot curve to a desired curve
+       - embedded strain gages or fiber optic techniques such as ShapeTape (see http://www.measurand.com/), while medical systems will likely employ intraoperative medical imaging
+       - sensors can be used for robot calibration, enabling fitting of imprecisely known robot parameters (e.g. stiffnesses, lengths, etc.) to experimental data
+     - complete systems
+       - not yet clear what the opti- mal kinematic mappings between human user input and the curve of a continuum robot will be, although some promising initial studies have been done (see, e.g., Csencsits et al. (2005) and Immega and Antonelli (1995))
+       - advancements are needed in motion planning and obstacle avoidance for continuum robots (see Lyons et al. (2009) for one approach)
+	 - these topics have been addressed for hyperredundant robots (see, e.g., Hannan and Walker (2003) and Choset and Henning (1999))
+       - In medical applications complete systems will include use of preoperative and intraoperative image data, statistical information about anatomical geometry, appropri- ate and interchangeable end-effectors, human interfaces, and assistance that can be provided to the doctor in the form of virtual fixtures (Kapoor 2007)
+
+
+** [[papers:Model-Less Feedback Control of Continuum Manipulators in Constrained Environments][yip2014modelless]]: Model-Less Feedback Control of Continuum Manipulators in Constrained Environments 
+
+** [[papers:From model-based control to data-driven control- Survey, classification and perspective][hou2013from]]: From model-based control to data-driven control: Survey, classification and perspective 
+
+** [[papers:Reducing the energy cost of human walking using an unpowered exoskeleton][collins2015reducing]]: Reducing the energy cost of human walking using an unpowered exoskeleton :exoskeleton:actuator:
+
+** [[papers:Buckling of Elastomeric Beams Enables Actuation of Soft Machines][yang2015buckling]]: Buckling of Elastomeric Beams Enables Actuation of Soft Machines :material:soft_robot:actuator:
+
+** [[papers:Combinatorial design of textured mechanical metamaterials][coulais2016combinatorial]]: Combinatorial design of textured mechanical metamaterials :design:soft_robot:
+
+** [[papers:Design, fabrication and control of soft robots][rus2015design]]: Design, fabrication and control of soft robots  :soft_robot:
+
+** [[papers:A highly shape-adaptive, stretchable design based on conductive liquid for energy harvesting and self-powered biomechanical monitoring][yi2016highly]]: A highly shape-adaptive, stretchable design based on conductive liquid for energy harvesting and self-powered biomechanical monitoring :material:
+
+** [[papers:Ultraflexible organic photonic skin][yokota2016ultraflexible]]: Ultraflexible organic photonic skin :material:sensor:
+
+** [[papers:Highly stretchable electroluminescent skin for optical signaling and tactile sensing][larson2016highly]]: Highly stretchable electroluminescent skin for optical signaling and tactile sensing :material:sensor:
+
+** [[papers:A light-reflecting balloon catheter for atraumatic tissue defect repair][roche2015light]]: A light-reflecting balloon catheter for atraumatic tissue defect repair :medical_device:catheter:
+
+** [[papers:Hierarchically buckled sheath-core fibers for superelastic electronics, sensors, and muscles][liu2015hierarchically]]: Hierarchically buckled sheath-core fibers for superelastic electronics, sensors, and muscles :nanotube:sensor:actuator:
+
+** [[papers:Origami-inspired active graphene-based paper for programmable instant self-folding walking devices][mu2015origami]]: Origami-inspired active graphene-based paper for programmable instant self-folding walking devices :origami:
+
+** [[papers:A method for building self-folding machines][felton2014method]]: A method for building self-folding machines    :origami:
+
+** [[papers:Restoring Natural Sensory Feedback in Real-Time Bidirectional Hand Prostheses][raspopovic2014restoring]]: Restoring Natural Sensory Feedback in Real-Time Bidirectional Hand Prostheses :prosthesis:
+
+** [[papers:Bionic%20Limbs-%20Clinical%20Reality%20and%20Academic%20Promises][farina2014bionic]]: Bionic Limbs: Clinical Reality and Academic Promises :prosthesis:
+
+** [[papers:Personalized Neuroprosthetics][borton2013personalized]]: Personalized Neuroprosthetics  :prosthesis:review:
+
+** [[papers:Torsional Carbon Nanotube Artificial Muscles][foroughi2011torsional]]: Torsional Carbon Nanotube Artificial Muscles :artificial_muscle:material:
+
+** [[papers:Supervised autonomous robotic soft tissue surgery][shademan2016supervised]]: Supervised autonomous robotic soft tissue surgery :surgical_robot:
+
+** [[papers:Phototactic guidance of a tissue-engineered soft-robotic ray][park2016phototactic]]: Phototactic guidance of a tissue-engineered soft-robotic ray :soft_robot:bioinspired:
+
+** [[papers:Tail use improves performance on soft substrates in models of early vertebrate land locomotors][mcinroe2016tail]]: Tail use improves performance on soft substrates in models of early vertebrate land locomotors :bioinspired:
+
+** [[papers:Jumping%20on%20water-%20Surface%20tension%E2%80%93dominated%20jumping%20of%20water%20striders%20and%20robotic%20insects][koh2015jumping]]: Jumping on water: Surface tension-dominated jumping of water striders and robotic insects :bioinspired:
+
+** [[papers:Biorobotics-%20Using%20robots%20to%20emulate%20and%20investigate%20agile%20locomotion][ijspeert2014biorobotics]]: Biorobotics: Using robots to emulate and investigate agile locomotion :bioinspired:
+
+** [[papers:Sidewinding%20with%20minimal%20slip-%20Snake%20and%20robot%20ascent%20of%20sandy%20slopes][marvi2014sidewinding]]: Sidewinding with minimal slip: Snake and robot ascent of sandy slopes :bioinspired:
+
+** [[papers:Autonomous undulatory serpentine locomotion utilizing body dynamics of a fluidic soft robot][onal2013autonomous]]: Autonomous undulatory serpentine locomotion utilizing body dynamics of a fluidic soft robot :soft_robot:
+
+** [[papers:Self-Organization, Embodiment, and Biologically Inspired Robotics][pfeifer2007self]]: Self-Organization, Embodiment, and Biologically Inspired Robotics :bioinspired:
+
+** [[papers:A Resilient, Untethered Soft Robot][tolley2014resilient]]: A Resilient, Untethered Soft Robot	  :soft_robot:
+
+** [[papers:Soft%20Robotics-%20A%20Perspective%E2%80%94Current%20Trends%20and%20Prospects%20for%20the%20Future][majidi2014soft]]: Soft Robotics: A Perspective—Current Trends and Prospects for the Future :soft_robot:
+
+** [[papers:A Hybrid Combining Hard and Soft Robots][stokes2014hybrid]]: A Hybrid Combining Hard and Soft Robots	  :soft_robot:
+
+** [[papers:Undulatory Swimming in Sand: Subsurface Locomotion of the Sandfish Lizard][maladen2009undulatory]]: Undulatory Swimming in Sand: Subsurface Locomotion of the Sandfish Lizard :bioinspired:
+
+** [[papers:Automatic Design and Manufacture of Soft Robots][hiller2012automatic]]: Automatic Design and Manufacture of Soft Robots :soft_robot:
+
+** [[papers:Materials that couple sensing, actuation, computation, and communication][mcevoy2015materials]]: Materials that couple sensing, actuation, computation, and communication :review:material:
+
+** [[papers:A 3D-printed, functionally graded soft robot powered by combustion][bartlett20153d]]: A 3D-printed, functionally graded soft robot powered by combustion :soft_robot:
+
+** [[papers:An integrated design and fabrication strategy for entirely soft, autonomous robots][wehner2016integrated]]: An integrated design and fabrication strategy for entirely soft, autonomous robots :soft_robot:

@@ -1,0 +1,616 @@
+:PROPERTIES:
+  :Directory: [[file:~/Work/HKU/Laser/]]
+  :TC'notes: [[file:~/Work/HKU/Laser/]]TC_notes/
+  :reference: [[file:~/Work/HKU/Laser/]]ref/
+  :END:
+  
+* notes
+http://www.cancerresearchuk.org/about-cancer/type/nasopharyngeal-cancer/treatment/radiotherapy/radiotherapy-side-effects-for-nasopharyngeal-cancer
+Side effects of nasopharyngeal cancer radiotherapy
+- Generally, radiotherapy causes tiredness and sore red skin in the area being treated.
+- Radiotherapy to this area will also cause damage to the glands that produce your spit (the salivary glands).
+- After the treatment, you may have a permanently dry mouth.
+- If you have trouble with a dry mouth, your doctor can prescribe artificial saliva to keep it moist.
+
+Most people have side effects from radiotherapy to the nasopharynx. They usually appear gradually during your course of treatment. Over the weeks following your treatment they will slowly get better. Getting over a long course of treatment completely can take quite a few months.
+
+Radiotherapy to the head or neck often affects taste. 
+- You may lose your sense of taste, or have strange tastes or dulled taste.
+- This may be temporary or permanent.
+Radiotherapy for nasopharyngeal cancer can often affect hearing.
+
+- As you go through your treatment, your mouth and throat are likely to become increasingly sore. You may have ulcers.
+- If your mouth and throat are very sore, you may need strong painkillers.
+
+- You may have difficulty chewing and swallowing.
+- You can have a liquid diet if you feel it would help.
+- Many people find they need to take food through a tube into the stomach for a while.
+ 
+
+http://www.cancer.org/cancer/nasopharyngealcancer/detailedguide/nasopharyngeal-cancer-treating-radiation-therapy
+- Dry mouth is less of a problem if radiotherapy techniques such as IMRT are used
+- The thyroid gland is often damaged if the neck area is treated with external beam radiation. 
+- The pituitary gland, which is responsible for controlling many hormones in the body, can also be damaged by treatment of a tumor in the nasopharynx.
+- The carotid arteries, which are major blood vessels in the neck that deliver blood to the brain, can sometimes become narrowed after radiation, which could raise a person’s risk of stroke or other problems.
+
+http://www.nhs.uk/Conditions/nasopharyngeal-cancer/Pages/Definition.aspx
+- Radiotherapy is the most commonly used treatment for nasopharyngeal cancer. It can be used on its own to treat very early-stage cancers, or in combination with chemotherapy for more advanced cancers.
+- In most cases, external radiotherapy is used. This involves using a machine to focus high-energy radiation beams on to the area that requires treatment.
+- In nasopharyngeal cancer, an advanced form of external radiotherapy called intensity-modulated radiation therapy (IMRT) is used.
+- It involves aiming radiation beams of different strengths at a tumour from several different angles. This helps maximise the dose delivered to the tumour, while minimising the effect on the surrounding healthy tissue.
+- Stereotactic radiotherapy is another way of giving radiotherapy externally and may be used to target a specific area where the cancer has returned.
+- External radiotherapy is often given in short sessions, once a day from Monday to Friday, with a break at weekends. This is usually carried out for up to seven weeks. You won't need to stay in hospital overnight between these appointments.
+- In some cases, internal radiotherapy may be required where nasopharyngeal cancer has returned after initial treatment. A radioactive source is placed into or near the cancerous area and left in place for anywhere from a few minutes to a few days.
+- Depending on the type of treatment you have, you may need to stay in hospital for a short period of time.
+- Radiotherapy itself is painless, but it can have some significant side effects, such as:
+
+
+* tasks
+
+** GRF proposal: feedback control method of the manipulator
+   
+   
+   
+*** Aim#2 To design and apply robotic control using intra-operative MR imaging and tracking feedback
+
+**** 
+ Apart from our prior work on active coil tracking, 
+ Mouth guard with MR-signal fiducials  
+
+ 2a. Tracking coil design and integration:
+ The role of Kenneth Wong
+ MR-semi-active tracking units embedded in the endoscope 
+ Effective zone MRI temperature monitor on the laser spot
+ Region calibration
+ David Yeung 
+
+ 2b. Enhanced feedback control in the MR image domain:
+ - The tracking coils embedded in the endoscope
+ # controller objective : 
+ Two individual controllers will be implemented to respectively control the endoscope and the laser projector.
+ # the controller for the endoscope
+ The controller for the endoscope computes correct commands for the pnematically/hydraulically-driven endoscope such that the laser can be targeted on a desired lesion region (XXXmm2) on the transoral tissue. 
+ # controller structure: 
+ As depicted in Fig. XXX, the controller comprises two components: a feedforward and a feedback part. 
+ # feedforward component by nonparametric learning and its advantages.
+ Nonparametric learning technique will be adopted to approximate the inverse transition mapping of the endoscope. 
+ # advantanges of nonparametric approach 
+ Unconstrained by predefined parametric model, nonparametric learning characterized the mapping solely depends on data, which is considered can better approximate the hyper-elastic behavior of the soft endoscope.
+ # preliminary results:
+ We have already carried out preliminary proof that a learning-based task-space feedforward kinematic controller, which is based on locally weighted projection regression (LWPR), can allows a soft continuum robot to accurately follow a trajectory on a curved surface, even under noticeable dynamic external disturbance (Fig.XXX).
+ # the advantages of using the tracking coils and indicate the novelty
+ Utilizing the positional feedback via the embedded tracking coils, the absolute position and absolute orientation in the MR image coordinates can be obtained intra-operatively (XXXHz). This allows training of the feedforward controller under the actual MRI environment and leads to better approximation of the inherent inverse transition mapping; Low-gain feedback is hence adequate to compensate the positional tracking error, which can reduce the fluctuation (chattering) of actuation signals and can prevent from acting large actuation that may cause damages to the endoscope.
+ For better adaptability and robustness, the LWPR-based controller will be extended to online learning by incrementally feeding the orientation information; The adaption of the inverse transition model is expected to accommodate with morphological changes may occur due to physiological motions such as breathing and swallowing, thus enhancing manipulation fidelity. 
+
+ # for the laser projector, controller objective 
+ The same control architecture will be implemented for the control of the laser projector (Fig.XXX) that is carried by a soft, short, and pnematically/hydraulically-driven continuum robot segment (Fig.XXX) mounted at the tip of the endoscope, providing precise control of the laser target (<XXXmm). 
+ # about the feedback 
+ The feedback control is enabled by using a low-energy laser source that can localize the laser projection in the MR image according to the induced unharmful rise (1-2 degree) of tissue surface temperature (1-2 degree).
+ # about the feedforward
+ Finite element methods (FEM) will be adopted not only for design analysis, the simulated data will also be utilized for training the feedforward component of the controller. 
+
+ # alternatives
+ - using particle filtering (for the feedforward component) as we did in catheter control?
+ -   
+
+ # expectations of control specification and performance
+ - control frequency update, accuracy
+ - clinical advantages?
+  
+
+ The tracking coils embedded in the endoscope enables implementation of feedback control algorithms to enhance manipulation fidelity.
+
+ #
+ Utilizing the absolute position and absolute orientation obtained from the MR images intra-operatively (XXXHz), a task-space controller, which comprises of a feedforward component and a feedback component (Fig.XXX), will be implemented to enhance the manipulation fidelity of the endoscope. 
+ #
+ We have already developed a learning-based task-space feedforward kinematic controller that allows a soft continuum robot to accurately follow a trajectory on a curved surface, even under noticeable dynamic external disturbance (Fig.XXX).
+ #
+ The feedforward controller is learned 
+ - based a nonparametric learning technique called locally weighted projection regression (LWPR) [ref#1], using simulated data sample by
+ - training data sample is prepared using finite element methods (FEM)
+ - the feedforward controller is a mapping describing the inverse transition model of the endoscope
+ - 
+
+ - Will be investigated 
+   - Provided with the endoscope orientation via the tracking coils, the quasi-static forward transition model of the endoscope can be learned inside MRI environment. 
+ #
+ To enhance the controller's adaptability and robustness, especially tackling with the static contact to the soft transoral tissue and dynamic disturbance potentially caused by physiological motions such as breathing, the LWPR-based kinematic controller will be updated by incrementally feeding the endoscope orientation information online. 
+ #
+ Thanks to the feedforward component that can bring the endoscope close to the desired reference input, it is expected the manipulation error can be reduced using low-gain feedback, thus lessening chattering of control signals and preventing from large actuation commands that may cause damage to the endoscope.
+ #
+ The same control architecture will be implemented for the control of the laser projector (Fig.XXX) that is carried by a soft, pnematically/hydraulically-driven continuum robot segment (Fig.XXX) at the tip of the endoscope, providing precise control of the laser target. 
+ #
+ Using a low-energy laser source that rises the tissue surface temperature unharmfully (1-2 degree) [ref#2], the region of rise in temperature can be visualized in the MR images and fed back as positional information to locate the laser target (accuracy data) and for feedback control. 
+ #
+
+ 
+ ref:
+ #1Vijayakumar, S., D'souza, A. and Schaal, S., 2005. Incremental online learning in high dimensions. Neural computation, 17(12), pp.2602-2634.
+ #2 a paper about the little rise of temperature cause no harm to the tissue
+
+
+ - a schematic diagram is need
+   - 1/4 A4 page
+   - two individual control loops
+     - one for the soft bending section, one for the laser pointer
+   - lines showing the feedback using 1) the tracking coils and 2) the temperature monitor
+   - indicate online update of the feedforward controller, i.e. robot dynamics estimates
+
+
+
+ 2c. Localization of laser-ablated on tumor tissue
+ in MR image domain
+
+ microsurgery 
+
+
+ - search if the physiological motion (e.g breathing) is significant during surgery
+   - in Analysis of Passive Motion of Para- and Retropharyngeal Structures During Swallowing Using Dynamic Magnetic Resonance Imaging
+
+     - in Anaesthesia for DaVinci assisted intraoral and tongue base operations
+
+   - in Viscoelastic model based force control for soft tissue interaction and its application in physiological motion compensation
+
+   - some data may also be found in Active filtering of physiological motion in robotized surgery using predictive control (TRO)
+     - Respiratory motions (pig)
+       - anterior-posterior hepatic motion about 8mm of liver
+       - anterior-posterior motion of heart about 8mm cardiac motions about
+
+   - may need to find some videos for confirmation by "observation"
+
+
+*** final proofread 
+    Title: MRI-guided Soft Continuum Robotic System for Transoral Laser Microsurgery 
+
+Abstract
+Head and neck squamous cell carcinoma affects ~550,000 people worldwide and is the 5th most common cancer worldwide. Currently in Hong Kong, as of 2013, nasopharyngeal carcinoma (NPC) alone is the 10th most common cancer and 6th most common in males. Head and neck cancers (HNCs), excluding NPC, are the 9th most common cancer in males, with the absolute numbers continuing to increase. Treatment of these cancers revolves around the three modalities of surgery, radiotherapy and chemotherapy. The latter two have their own toxic side effects; however, for surgery, its open approaches to HNCs are still associated with significant morbidity. Minimally invasive approaches will offer the possibility of limiting trauma and long term injury to critical structures involved in speech, swallowing and facial cosmesis. 
+Current minimally invasive approaches to the HNCs, even assisted with robot, lack the ability to adequately plan for the surgery in a three dimensional approach and relies on the surgeons’ experience while dissecting the tumors, particularly their deep aspect that are not readily visible. Through the magnetic resonance imaging (MRI) guidance, the 3-D resection margins can be planned, carried out with the laser intra-operatively to protect critical structures yet resect the tumor with adequate margins. Furthermore, intra-operative (intra-op) visualization of the HNCs, as well as the laser-induced physiological changes, is made possible by T2-weighed//diffusion-tensor MRI, thus allowing the surgeons to promptly determine whether the tumor resection is complete or conducted safely.
+The overall goal of this project is to develop and validate an MR-safe/conditional endoscopic robot system incorporating fluidic soft actuations, intra-op MRI, and enhanced laser navigation with fast MR temperature imaging to improve the resection accuracy of carcinoma in oral and nasopharyngeal (ONP) cavities. We propose to design a novel transoral robot capable of firmly anchoring onto the dental surgical guard, and flexibly accessing to ONP lesions in the confined cavitary space. It would provide stable endoscopic platform for instrument delivery, as well as laser beam navigation within the desired ablation margin. Low-error (<0.4mm) and high-frequency (>30Hz) RF-semi-active positional tracking under MRI, along with online ablation-temperature monitoring with the MR thermometry, will facilitate reliable guidance in the forms of in situ visual feedback in the same MR image coordinates. Advanced learning-based control approaches are also applied to constitute an improvement on the existing methods, which are incapable of providing steady, smooth and consistent kinematics control of a long, thin and soft/flexible continuum robot in a confined space. This system will differ fundamentally from the existing tele-operated robotic systems, of which the robotic tissue resection is still not effective owning to the very limited guidance from camera images only. This proposed system will be the first of its kind which offers a means of integrating intra-op MRI and online MR thermometry to realize the high-precision soft robotic/endoscopic navigation for laser microsurgery. Detailed quantitative validation is also proposed through the lab- and MRI-based experiments.
+The success of this project may represent a major step toward safer, more precise and effective procedure. It would significantly enhance the tumor resection accuracy to preserve best the anatomical and functional integrity, and would also resolve the complication of instrument docking/positioning through the oral cavity, thus reducing the operative time (at least 40-50%) by having the instant and in-situ evaluations of the post-resection martin under MRI. These outcomes would give rise to a new standard treatment of early-stage carcinoma, alternative to the conventional radiotherapy inevitably associated with many side effects.
+(a) Long-term impact (800 words)
+
+Transoral surgery is an approach to treat the head and neck cancers (HNCs) on nasopharynx, oropharynx, larynx and hypopharynx through the intra-oral cavity. HNCs originated from squamous cell affect ~550,000 people worldwide and is the 5th most common cancer worldwide. Currently in Hong Kong, as of 2013, nasopharyngeal carcinoma (NPC) alone is the 10th most common cancer and the 6th most common in males. HNCs, excluding NPC, are the 9th most common cancer in males, with the absolute numbers continuing to increase. Among the other two treatment modalities: radiotherapy and chemotherapy, transoral surgery has least toxicity, but its open surgical approaches to HNCs are associated with significant morbidity. Minimally invasive approaches will offer the possibility of limiting trauma and long term injury to critical structures involved in speech, swallowing and facial cosmesis.
+
+Surgical robot platforms, da Vinci robot (Intuitive Surgical Inc.) and Flexrobot (Medrobotics, Markham, MA), are currently FDA approved for transoral surgical resection of T1/2 oropharyngeal lesions. However, maneuvering instruments in confined spaces, such as oral and nasopharyngeal (ONP) cavities, closing to critical neurovascular and muscle structures remains very challenging. This poses a great demand for precise and minimally invasive approaches to dissect the carcinoma with an adequate margin away from the critical structures through the oral access. However, current minimally invasive approaches to HNCs still lack the ability to adequately plan for the surgery in 3D, but just relying on the surgeons’ experience while ablating/dissecting the tumors, particularly their deep aspect that are not readily visible. 
+
+Intra-operative (intra-op) visualization of the HNCs, as well as the laser-induced physiological changes, is made possible by T2-weighed//diffusion-tensor magnetic resonance imaging (MRI), thus allowing the surgeons to promptly determine whether the tumor resection is complete or conducted safely from the critical structure; however, development of the MRI-guided laser resection interface is still in its infant stages. Currently, there is no well-established robotic interface capable of continuously controlling the laser beam projection on lesion regions based on intra-op MRI data, despite the advances of optics technologies which enable to endoscopically introduce high-intensity (thulium) laser through an optic fiber. It couples with an increasing demand on development of an endoscopic robot platform which could provide precise, effective and reliable laser navigation in confined ONP cavities. This robotic navigation will have to involve MR-compatible actuation dedicated for endoscopic manipulation, as well as its close-loop control realized by real-time MRI data. In contrast, current transoral robotic/laser surgeries still rely on visual feedback from camera alone, which lag far behind the clinical requirements for effectively monitoring the change of tissue morphology in 3D. 
+
+In this project, a soft continuum robot will be developed, which is timely to benefit from its MR-safe fluidic actuation for endoscopic navigation. Such a robot featured with certain stiffness/hardening control can be anchored firmly onto the dental surgical guard. Low-error (<0.4mm), high-frequency (>30Hz) positional tracking using miniaturized RF-semi-active coils, along with online ablation-temperature monitoring by the MR thermometry, will facilitate reliable guidance in the forms of in situ visual feedback in the same image coordinates. A control framework will also be designed to constitute an improvement on the existing methods, which are incapable of providing steady, smooth and consistent kinematics control of a long, thin and soft/flexible continuum robot in a confined space. Our study may serve as a benchmark for the design and integration of MR-conditional robotic devices. This will avoid exposing patients/clinicians to potentially harmful radiation, and open a new dimension for other procedures, such as breast biopsy, cardiac electrophysiology, neurosurgery and prostate intervention which can also benefit from intra-op MRI. 
+
+Potential clinical outcomes – The success of this project would represent a major step toward several ultimate goals, which are difficult to achieve even by the state-of-the-art robot-assisted surgery: i) preserving best the anatomical and functional integrity with enhanced accuracy of tumor resection margins. The expected accuracy (±1mm) will be accomplished by monitoring laser beam projection and its ablation progress using instantly-updated MR images and MR-tracked instruments; ii) decreasing the risks of damages to the critical neurovascular and muscular structures; iii) avoiding the complications of instruments docking through the intraoral cavity using conventional retractors; iv) saving the operation time from the post-resection margin evaluations, such as frozen section analysis. The procedural time would be reduced from approximately 120 to 60 minutes. 
+
+The aforementioned outcomes would give rise to a new standard treatment of early-stage carcinoma, alternative to the conventional radiotherapy and current surgical modalities that inevitably associate with damage to muscles, bones, nerves and salivary glands with the resultant morbidity of dysphagia, dysphonia, worse quality of life and poor self-esteem from the injury.
+
+
+
+(b) Objectives
+1.	To develop an MR-safe/conditional endoscopic platform for transoral access;
+2.	To design, apply robotic control using intra-op MRI and tracking feedback;
+3.	To design surgical planning interface and validate the potential clinical values of the proposed system.
+
+
+
+
+(a) Background of research
+(i) State-of-the-art research conducted by others
+Transoral robotic resection of carcinoma: There are two key steps in transoral endoscopic surgery for head and neck tumors resection: i) Instruments docked through the oral cavity – a mechanical retractor is attached non-invasively on the teeth and the maxillary alveolus, stabilizing the mouth opening (45-55mm) [1]. This could widen the surgical field for direct access to the deep oral {Chan, 2012 #1256} and nasopharyngeal (ONP) cavities by retracting the tongue and soft palate (Fig.1a). Three rigid instruments (OD≈Ø3.7mm), along with a laryngoscope (OD=Ø6-8mm), will be deployed through the retractor acting as a static frame-of-reference; ii) Identification of carcinoma margin – The ONP tumors/lesions have to be revealed, exposed adequately for marking and resection along the tissue margin around 5-10mm beyond the actual tumors [2]. Dissection of parapharyngeal space may be required [3].
+However, the robotic procedures could be time-consuming and complicated by the lack of operating space allowing for effective manipulation of more than 3 rigid instruments altogether. This limits the conventional application mostly to laryngeal, hypo- or oro-pharyngeal tumors [4]. Despite the advert of flexible and miniature devices, e.g. da Vinci® SPTM Surgical System offering compact and dexterous manipulation through a single-cannula (Ø=25mm) for nasopharyngectomy, resection of relatively large and deep (5-10mm) tumor still remains challenging on account of injury to internal carotid artery/nerve. No resection margin can be marked in depth. 
+Laser microsurgery and MRI-guided laser ablation: Tumor resected by laser {Mydlarz,  #1257} has been increasingly adopted in advantage of its precise incision depth and hemostatic control. Many procedures have been conducted through the use of very few choices of transoral laser surgical systems (e.g. Lumenis® AcuSpot AcuBlade) [5]. Thin carbonization margin created by the laser beam can preserve the anatomical and functional integrity [4]. Such systems deliver the CO2 (λ≈10,600nm) laser by a means of rigid optics mechanism that alters the laser beam projection using adjustable prisms/mirrors. However, this rigid structure inevitably hinders its application in endoscopic approaches demanding for flexible instrument navigation. In contrast, high-power thulium laser at much shorter wavelength of λ≈1,942nm can be flexibly guided by optic fiber, providing excellent hemostasis during the tissue cutting [6]. Despite these recent laser advances, evaluating the laser incision/ablation depth beyond the critical artery/nerve is still very difficult due to the disability of real-time, frequent and in-situ sampling of tumor margin. Such intra-operative (intra-op) evaluation can only be conducted on the basis of pathologic laboratory procedures, e.g. frozen section analysis (FSA) [7], but only right after completion of the tumor resection.
+Magnetic resonance imaging (MRI) offers excellent images contrast for ONP soft tissue. It can form a surgical roadmap in 3D, distinguishing even the early stage (T1/T2) of carcinoma/tumor from the healthy tissue, as well as the critical lingual/carotid artery, or even nerves (Fig.1b). Real-time T2/diffusion-weighted MRI [8] can also readily visualize the physiological change of tissue arising from successful or incomplete cutting/ablation created by laser, thus monitoring the incision depth and progress. By adjusting temperature-sensitive MR parameters [9], such as proton resonance frequency (PRF), the MR susceptibility at high signal-to-noise-ratio (SNR) can measure the fine change of temperature in accuracy of <1°C (Fig.1c). These capabilities have been widely employed in MRI-guided focused ultrasound (MRgFUS) procedures [10]. However, the ultrasound energy passing through the body needs to be limited, controlled very delicately to avoid skin burns or tissue damages near the target lesions. Such limited energy makes the ablation difficult to destroy the persistent tumors. 
+MR-conditional soft/flexible continuum robot and its actuation: To deliver localized high-power laser energy under MRI, NeuroBlate® is a commercial system for neurosurgical ablation, by which a straight and rigid laser probe has to be positioned in contact with the lesion. MR-compatible concentric tube robot [11] was proposed to target the lesion through a curvy pathway. It acted as an actively steerable cannula, flexibly delivering ablation probe to the cannula tip. It comprised multiple thin and pre-curved nitinol tubes that could be channeled each other to alter the robot curvature. Each tube was actuated in combination of insertion and torsion, giving rise to concerns about the dexterity, in particular for manipulation inside a small anatomical cavity. Complex electromagnetic (EM) shielding enclosure has to fully contain the piezoelectric motor and its drivers. Digital synthesizers [12, 13] were also needed to attenuate the high-frequency motor signal which would induce the EM interference along the cables. These complications naturally shifted the research focuses towards intrinsically MR-safe actuators driven by pressured fluid flow [14]. Soft fluidic actuators are also the current state-of-the-art, which could be tailor-made to embed along the elastomeric structure, varying the robot morphology for dexterous endoscopic navigation. These soft actuators have been validated in non-image-guided therapies, such as Endotics [15, 16] for colonoscopy and STIFF-FLOP soft robot [17, 18] for keyhole surgery. 
+MR-based positional tracking of instruments: Let alone endoscopic robot for transoral laser microsurgery, currently, there is no MRI guidance applied to tumor resection which involves the laser beam projection on tissue in larger-scale (2-4cm), rather than contact ablation at local points only. To realize feedback control of endoscopic navigation, real-time, precise positional tracking of soft/flexible robot under MRI remains a major challenge. Recent advances of optical fiber bragg grating (FBG) sensors [19] that can be mounted along the instrument/catheter spline to frequently measure the corresponding shape throughout its length. Accurate tracking (<1mm per meter) can be achieved by industrial-grade eight-channel fiber (LUNA Innovation, Inc). This FBG-tracked configuration out of image domain is still not necessary well-aligned with the MR images for proper guidance, not only owning to  rigid registration error between tracking and imaging coordinates, but also because of the more-or-less MR image distortion [20] (up to 25mm) inevitably induced by the non-linearity of magnetic field. To this end, real-time tracking, achieved by the radio frequency (RF) coil markers [21], becomes the prerequisite to providing fast, robust 3-D positional feedback in situ in image coordinates frame [22]. 
+(ii) Research motivation and opportunity
+Three key and timely research issues emerge from the above discussion:
+1)	Development of an MR-conditional endoscopic robot platform – Compact robotic endoscope capable to operate inside MRI bore is required for providing flexible, reliable access to the lesion without complicated docking of instruments through the oral cavity.
+2)	Improved endoscopic navigation using MR-tracking – Feedback control of the endoscopic robot has to be realized (in MR image coordinates) by semi-active MR-tracking in real time, in order to perform effective, precise navigation inside nasal or intraoral cavity.
+3)	Control of laser ablation/cutting under real-time MRI – MR-safe/conditional micro-manipulator is required for altering the laser beam projection toward carcinoma targets. The projection point and temperature have to be monitored safely, accurately under real-time MR temperature detection. 
+(iii) Preliminary studies conducted by the PI’s groups
+Design and implementation of MR-conditional RF-tracking interface and other sensors: We have developed an interface capable of carrying out RF-active tracking of three micro-coils mounted on standard cardiac electrophysiology (EP) catheter (Ø2.67mm) [23] (Fig.2a). It enabled to steam both MR images and positional data simultaneously to the computer at low-latency (<1.5ms), high-frequency (40Hz) sampling rate, thus augmenting the virtual catheter configuration on the images in real-time. Smaller active tracking coil (8×1.5mm2) fabricated on flexible printed circuit (FPC) was also integrated on customized stylets [24] (Fig.2b) for gynecologic brachytherapy. Two thin grooves, each 10-mm long and 0.45-mm deep, were carved onto the tungsten stylet in diameter of Ø1.6mm. MR sequence, inversion-recovery gradient echo (MP-RAGE), was applied. The coils’ position could be measured as fine as 0.6×0.6×0.6 mm3, and displayed on the navigation system (Fig.2c). We have also employed optical FBG sensors [25] that could be mounted close to the catheter tip for MRI-guided EP, and was capable to determine the catheter-tissue contact force [26] with the aim to signal the electrophysiologist when excessive force is applied to the tissue of the cardiac vessels/chambers. Such FBG sensors could also be used for monitoring temperature during the RF ablation on the tissue. 
+Computational improvement of MR image registrations: To align the MRI-based targets of interest with the surgical roadmap, we have investigated intensity-based image registrations which constitutes the best-performing approach for addressing tissue deformation, even when a certain level of artifacts is induced on the MR images. In our MRI experiment using cardiac atrial phantom model, Demons-based algorithms [23] demonstrated promising registration accuracy and potential applications in many MRI-guided interventions. We then pinpointed computational complexity with regard to large memory access as the primary bottleneck to translating into clinical practice. We were the first to study the potential advantages of using reconfigurable computing units, field-programmable gate array (FPGA) [27], for such algorithms, in order to significantly speedup the pixel/voxel gradient calculation that is a crucial step in intensity-based registration methods in general.
+Development of MR-safe/conditional robotic actuation and control: We have designed various actuators capable of operating inside the scanner without adversely affecting MR image quality. A series of pneumatic stepper motors could be driven, regulated by the pressurized clean air (30-55psi) available in the MRI room through the medical piped gas system. They were featured with high-torque (max. 800mNm) at fine driving step of 3.6º [28]. Some compact (Ø35×88mm), lightweight (<70g) motor designs [29] comprised seven 3D-printed components only. The motor step size, maximum speed and torque could be even customized for different combinations of design parameters. We also have developed a hydraulic transmission system (Fig.3a) involving rolling diaphragms to avoid sliding friction that occurs between the piston and O-ring in conventional sealing. This system operated inside the MRI scanner bore (Fig.3b-c) was connected to high-performance (EM) actuators in the control room through a bundle of hoses via the waveguide in-between the MRI and control rooms. It also featured with very low hysteresis (<0.5mm, 1.5°), ensuring effective transmission in high accuracy (Fig.3d). Combined with the above RF-tracking and intra-op MR image registration, this hydraulic actuation realized the first MR-conditional catheter robot [30, 31] that facilitated precise tele-manipulation of standard EP catheter in clinical use. 
+Design and assessment of image-guided robotic devices: We have developed various master-slave control systems for a robotic endoscope [32-34] and catheter [35] characterized by high kinematics redundancy [36, 37] for intra-luminal, -cavity or cardiac navigation. We have also proposed a real-time proximity query (PQ) process that could be implemented on graphic process units (GPUs) or FPGAs [38-41] for high-fidelity graphic and haptic rendering implemented on various surgical navigation systems. This PQ process enabled efficient computation of the deviation distance between the robotic instrument and the dynamic imaging model of anatomy in real time. The PI’s group has extensive experience in designing phantom anatomical simulators (e.g. [23, 42, 43]) to access the performance of providing extra surgical guidance [44, 45] based on stereoscopic images [46, 47] or intra-op imaging data [32, 48, 49]. 
+In sum, the aforementioned research experience of the PI and his group has laid a solid foundation for the proposed development of a robotic system that can be operated with intra-op MR images for MRI-guided laser microsurgery.
+(b) Research plan and methodology
+Two major design and control criteria relevant to surgical outcome of the transoral robotic laser procedure: 1) Robotic endoscope has to be flexibly introduced through mouth opening, intra-oral and oropharyngeal cavities, even up to nasopharynx (Fig.1a), but without having to perform dissection of soft palate. It will also offer a stable platform for laser beam projection on ONP lesions; 2) Proximity and differentiation angle from the endoscope tip towards the ONP lesions have to be promptly adjusted, optimized based on the intra-op MR images and RF-tracking. It could significantly smoothen the repeated workflow of the laser path re-planning, as well as any internal instruments advancement through the endoscope.
+Aim#1: To develop an MR-safe/conditional endoscopic platform for transoral access
+1a. Transoral soft robotic endoscope: An actively bending endoscope (≤Ø16mm, long in 10-15cm) will be fabricated by soft materials, and embedded with longitudinal chambers. Fluid volumetric control of these chambers will result in omni-directional bending along transoral curved pathway. No metal causing MR susceptibility artifacts will be involved. A layer of fiber bellow will be wrapped along the scope cylindrical surface. The bending efficiency can be altered by varying the bellow pattern or pitch sizes (Fig.4a). This feature has been preliminarily studied by PI’s team for a newly developed soft colonoscope (Fig.4b-c). 
+Additionally, the proposed transoral endoscope has to afford multiple internal instruments (e.g. fibre optic camera OD≈Ø2.8mm, suction/irrigation tube OD≈Ø2.5mm) channeled along the scope but without adversely affecting the freedom and stability of the laser beam projection. Elastic/linear strain-stress control (Fig.4c), which are currently exploited in many advanced soft continuum robots, could not offer sufficient rigidity or stiffness for this required stability. Tendon-driven mechanisms [19] were commonly applied to resolve this insufficiency, but also inevitably inducing complications in robotic control due to the nonlinear hysteresis inherited by this mechanism. To this end, we propose to employ the strain hardening/stiffening property to enhance the scope rigidity, which is conventionally avoided, considered as snap-through instabilities [50] (Fig.4d). Our preliminary work has unveiled the potential of this property capable to withstand strong external force, but not arising to any structural damage (Fig.4e-f). To optimize the bending performance for transoral access, three analyzes will be implemented, iterated in our design cycle:
+1)	Workspace analysis: Co-I Chan’s team will select key landmarks throughout the intraoral and ONP cavities based on the 3D CT/MRI of patient subjects’ head and neck models (N≥12). Statistical shape modelling [51] will be applied to deduce the average workspace required to accomplish a laser resection. 
+2)	Finite element analysis (FEA): The robot dynamics will be simulated by FEA (Fig.4b) according to strain-stress relationship of the selected elastomer/latex (e.g. biocompatible STYRON™ polyisoprene). Element model of the scope structure will be tessellated with linear hexahedral (e.g. Abaqus C3D8H). Linear truss element (e.g. Abaqus T3D2) will be used to model the warping constraints that ensure the anisotropic expansion of soft chambers. Strain hardening/stiffening effect will be taken into account such that the nonlinear stress-strain behavior can also be simulated using methods (e.g. arc-length [52]).
+3)	Kinematics analysis: Prototype can be fabricated based on the acquired workspace and the FEA simulation, of which the robot configuration will also be measured by EM-based positional tracking device (e.g. NDI Medical Aurora). As a result, the robot control mapping can be estimated, correlated with the volumetric fluid input to its chambers. 
+1b. Positioning of transoral endoscopic instruments: A single piece of dental surgical guard made of polymethylacrylate (e.g. ProBase hot acrylic resin) will be designed by Co-I, Tsoi’s team. It will be tailor-made by casting upper and lower impressions of the patient subject with an open bite of 35-40mm (Fig.5a). Cavity space created in-between the impressions will have to be maximized (>25×25×20mm3) by further pressing the tongue. Not only can it accommodate more numbers of instruments/tubes guided by the endoscope, but it also can avoid the dissection of soft palate, in particular for nasopharyngeal procedure. Interior surface of this surgical guard will be featured with several mechanical interlocks capable to anchor the entire robotic mechanism. Linear actuators anchored outside the mouth will be coupled with the hydraulic transmission system (Fig.3a). Such transmission will advance the scope in a combination of gripping and pushing/pulling. Note that the linear motion resolution will depend on the hysteresis induced by the hydraulic transmission, rather than the pushing/pulling step. Thin MRI fiducials (<Ø10mm×2mm, capsulized with vitamin E) could be embedded inside the dental guard. These act as image registration landmarks offering steady frame-of-reference relative to the robot base in the MR image coordinates.
+1c. Laser beam micro-pointer driven by soft actuators: Co-I Wong’s team has recently developed an optical parametric oscillator [53] that could produce pulsed thulium laser at short-wave infrared (SWIR) band, of which the wavelength is widely tunable from 1815nm to 1968nm [54]. Such laser could be guided by all-fiber configuration (as thin as Ø200-400µm). The laser power will be amplified (4-5W) for proper tissue dissection, and also be regulated by the pulsed oscillation with variable emission bandwidth [55]. A titanium-based collimator (≈Ø1.1mm×8mm, Fig. 5b) connected with the fiber can be used to emit the parallel-beam spot on tissue at high power density (>4W/mm2). To steer the laser collimator, thus dissecting the tumor precisely along its margin, PI’s team will develop a novel soft actuator driven by microfluidic input to its chambers made of elastomer. Such soft chambers capsulized by a rigid enclosure will actuate the pitch-yaw displacement of the laser collimator (Fig.5c). Further detailed FEA will has to be performed to optimize the dexterity correlated with the fluidic chamber expansion. Close-loop laser projection will be realized by real-time MR thermometry, as proposed later in Aim#2c.
+Expected results and alternatives: This is the first work proposed to enhance the soft endoscopic robot manipulation by exploiting the strain stiffness/hardening effect inherited in the latex-based polymer. To enhance the control of this effect, longitudinal pre-stretch on the fluidic chambers can be customized during the fabrication. Multiple bendable segments may be required for more dexterous laser navigation above the ONP lesions. In any case if the pitch-yaw displacement of laser collimator does not sufficiently cover the range required for typical laser resection of ONP tumors, a miniaturized tentacle allowing for structural bending will be studied (Fig.5d), which can also be steered by at least 3 micro-fluidic soft chambers.
+Aim#2: To design, apply robotic control using intra-op MRI and tracking feedback
+MR-based tracking is the pre-requisite to close the loop of robotic control with respect to (w.r.t.) the MR coordinates. PI’s team previously applied RF-active tracking coils (e.g. <Ø4mm×5mm) (Fig.2a-c) for the EP catheter control. Each coil connected with a receiver channel of the scanner via coaxial cables in order to measure MR gradient field [56]. Despite the highly localized signal received [22], the coil-to-channel electronic interface also has to be specifically designed for particular types of scanners only. Research attention has then been recently drawn to RF-semi-active tracking, of which the coil does not have to connect with the scanner, but only acts as an isolated LC circuit that resonates with MR Larmor frequency at around 63.8MHz or 123.5MHz, respectively, for 1.5T or 3T scanner either [57]. 
+2a. Design and integration of semi-active RF-tracking units: A preliminary prototype of semi-active RF-coil (Fig.2d-e) has been fabricated by the PI’s team. This FPC-based coil unit can be thin (0.1mm), small (14×3.8mm2) in size for flexible integration with surgical devices, compared to those recently reported (e.g. Ø3mm×8mm [22]). Its intensive, localized signal could be clearly recognized (Fig.2f). However, this LC coil circuit may not be sufficiently accurate to match the Larmor frequency within tolerance of ±1MHz due to any fabrication error, even using EM field simulation (ANSYS HFSS) in the design process. To this end, we propose to vary the optic-fiber light intensity to adjust capacitance of the photodiode mounted on the coil unit, thus fine-tuning the RF resonant behavior for MR-tracking. This can even tune/detune a particular coil individually so as to multiplex many (>8) coils along the 1-D coordinates at high frequently (>100Hz). This will resolve the conventional complication [22] of matching X-Y-Z coordinates corresponding to a particular coil. Size of the coil unit will be further reduced by shrinking the FPC polyimide thickness (from 25µm to 12.5µm) and the copper trace width (from 4mil to 1.5mil), but still maintaining its high Q-factor (>30) [58]. 
+2b. MR thermometry-based laser localization:   Low-power laser could be regulated by the optical oscillator (Aim#1c). This laser spot on the lesion will induce harmless temperature rise (1-2ºC) detectable by MR thermometry [9] which can be interleaved real-time MRI [59]. Prior to the actual laser resection, such MR-localized laser targets will be mapped/registered with the corresponding fluidic chamber actuation, of which the spatial resolution will also be investigated so as to fulfil the laser resection accuracy specified by the user. In a confined transoral cavity, even small physiological motions may be magnified to obvious positional difference, particularly while aiming at lesion target with acute angle. We propose to use sequential Monte Carlo (SMC) methods [60] (e.g. particle filter [61]), to model the position of laser spot. We hypothesize such sequential estimation methods are capable to predict and compensate motion-induced error by dealing with the signal non-linearity. This will partially accomplish the feedback loop for controlling the endoscope and the laser collimator. 
+2c. Enhanced feedback control using RF-tracking: To control the soft actuators driving the scope and the laser collimator, two individual controllers: feedforward and feedback controllers will be implemented on composite architecture (Fig.6a). The feedforward controllers compute the fluidic volume inputs to perform bending (Aim#1a) and insertion (Aim#1b) of the scope, and steering (Aim#1c) of the collimator. Nonparametric learning techniques [62] will be adopted to estimate such inverse kinematics mappings. Our hypothesis is that these techniques, which are unconstrained by the predefined parametric models, could characterize the hyper-elastic behavior of the soft robot. This learning-based technique in task space has been validated partially by incorporating a feedforward kinematics controller only. Locally weighted projection regression (LWPR) [63] was demonstrated (Fig.6b) to enable a hyper-elastic continuum robot to follow along a trajectory projected on a curved surface, even under noticeable dynamic external disturbance (Fig.6c). The feedforward controller will be initially learned offline using FEA data. Based on the feedbacks of RF-tracking (Aim#2a) and the MR-thermometry (Aim#2b), the states of the scope and the collimator can be estimated in real time. These robot states will be used for updating the feedforward controllers online, and looped to the feedback controllers (Fig.6a) that would enable correction of positioning error instantly, thus improving the accuracy of the laser spot projecting to the next prospective targets along the pre-planned laser path.
+Expected results and alternatives: This is the first work proposed to miniaturize the RF-semi-active circuit in such a scale for soft continuum robots, and the operation of numerous semi-active coils (>8) was made impossible before our proposed method. It is expected that each coil position can be sampled at >30Hz with 0.6-mm resolution in 3D, and only <0.5˚C rise by the RF excitation. Heat generated by the coil can be measured, investigated by FBG segment [60] attached closed to the LC electronics. Two solenoid RF-tracking coils can also be wrapped on the collimator (similiar to the EP catheter as in Fig.2a). These two coils provide geometric references to rapidly (>30Hz) estimate the laser aiming angle, and hence the laser spot position in-between MR thermometry scans.
+Aim#3: To design surgical planning interface and validate the potential clinical values of the proposed system
+A laser resection task for the transoral ONP carcinoma will be simulated to validate the entire proposed system. Co-I Chan’s team will advise on design of a head and neck phantom model tailor-made with three key features specific for our validation: 1) Upper nose and mouth airways, including uvula, hard and soft palate, can be fabricated by stiff elastomers (e.g. Dragon Skin® Series). It will also be attached with an articulated soft gingiva model for dental retraction using the proposed surgical guard (Aim#1b); 2) Gelatin-agar gels casted by a 3D-printed mold will be integrated with the phantom airways, thereby shaping the interior morphological features alike ONP cavities. Such agar-based model will be also attached with small silicone bladders filled with fluid. The cavity morphology can be altered with controllable fluid volume regulated by a syringe, simulating any intra-op tissue deformation; 3) Phantom cysts/tumors will be created, embedded inside the soft ONP cavities. It could be formed by either ex-vivo mucosal tissue of swine or color-dyed agar gels mixed with MRI contrast agents (e.g. gadolinium paramagnetic agents). This mimicked resection targets can then be well-distinguished from the agar-based ONP cavities under MRI.
+3a. Lab-based validation: Prior to the test in MRI environment, tele-operated robotic control of the proposed endoscope and laser pointer (Aim#1-2) will be validated on the phantom model in laboratory. Instead of RF-semi-active tracking, a real-time EM tracking system (e.g. NDI Aurora) will be adopted to measure the robot configuration, also to localize the instrument tip. The actual collimator will be replaced by a 6-D EM tracking marker (Ø0.8mm×9mm). A 3-D desired resection margin on the color-dyed phantom tumor will be measured/registered by the EM tracker. The robot feedforward/feedback controller will be calibrated in task space w.r.t. the EM tracking coordinates. Proximity and differentiation angle from the EM marker to the desired resection can be captured to evaluate the targeting accuracy. In actual laser tests, the targeting accuracy will be evaluated by tracing the ablation effect along the color-dyed margin. A set of optimal control parameters for coordinating the endoscope bending/insertion, laser pointing will be obtained for subsequent trials under MRI.
+3b. MRI-based validation: MRI compliancy of the whole setup (Aim#1-2) will be tested by evaluating the image artefact, if any, and also by measuring the SNR on the MR images. The robot feedback control (Aim#2c) will be implemented with the RF-semi-active tracking system (Aim#2a). Thulium laser oscillation and intensity (Aim#1c) will have to be tuned so that little temperature rise (≈+1ºC) on the ex-vivo mucosal tissue can be measured under the MR-thermometry (Aim#2b). A graphic user interface (GUI) for laser surgical planning will be developed. It could provide the operator with intuitive prescription of an allowable laser region on the 3-D ONP roadmap constructed/segmented based on high-resolution (<0.7mm) pre-op MR images. The simulated intra-op tissue deformation will be applied, shifting the ONP “lesions” likely out of the optimal laser navigation range. The intra-op MRI interleaved thermometry sequence will automatically take place along/nearby the prospective laser target. Demons-based MR image registration (previously improved by PI’s team [23, 27]) will be applied to align the planned laser path with the intraoperatively registered roadmap. 
+The above trials will be repeated for various sizes and locations of “ONP carcinoma”, speeds of endoscopic and laser navigation, and different settings for its soft chamber actuations. All relevant data regarding imaging and robot manipulation will be recorded, thus forming the performance metrics for assessing safety, accuracy and effectiveness through the use of our proposed MRI-guided soft robotic system.
+Feasibility of the proposed work has been demonstrated under the comprehensive coverage of our preliminary studies. The ultimate successful completion will attract further follow-up funding for comprehensive pre-clinical validation of the proposed platform in cadaveric head and neck model, followed by feasibility live human trials. A new line of study will be developed attracting other researchers to push the envelope of robot-assisted interventions, particularly those using MRI to guide steerable instruments navigated in soft, deformable tissues. The work is scheduled as the Gantt chart attached in this proposal.
+References (our group members’ names are highlighted)
+[1]	R. K. Tsang and F. C. Holsinger, "Transoral endoscopic nasopharyngectomy with a flexible next-generation robotic surgical system," The Laryngoscope, vol. 126, no. 10, pp. 2257-2262, 2016.
+[2]	W. I. Wei and W.-K. Ho, "Transoral Robotic Resection of Recurrent Nasopharyngeal Carcinoma," The Laryngoscope, vol. 120, no. 10, pp. 2011-2014, 2010.
+[3]	J. Y. K. Chan, R. K. Tsang, D. W. Eisele, and J. D. Richmon, "Transoral robotic surgery of the parapharyngeal space: A case series and systematic review," Head & Neck, vol. 37, no. 2, pp. 293-298, 2015.
+[4]	C. Arens, "Transoral treatment strategies for head and neck tumors," GMS current topics in otorhinolaryngology, head and neck surgery, vol. 11, p. Doc05, 2012 2012.
+[5]	L. S. Mattos, N. Deshpande, G. Barresi, L. Guastini, and G. Peretti, "A novel computerized surgeon–machine interface for robot-assisted laser phonomicrosurgery," The Laryngoscope, vol. 124, no. 8, pp. 1887-1894, 2014.
+[6]	J. A. Burns, J. B. Kobler, J. T. Heaton, G. Lopez-Guerra, R. R. Anderson, and S. M. Zeitels, "Thermal damage during thulium laser dissection of laryngeal soft tissue is reduced with air cooling: ex vivo calf model study," Annals of Otology, Rhinology & Laryngology, vol. 116, no. 11, pp. 853-857, 2007.
+[7]	S. M. Olson, M. Hussaini, and J. S. Lewis, "Frozen section analysis of margins for head and neck tumor resections: reduction of sampling errors with a third histologic level," Mod Pathol, vol. 24, no. 5, pp. 665-670, 05//print 2011.
+[8]	R. Toth, D. Sperling, and A. Madabhushi, "Quantifying Post- Laser Ablation Prostate Therapy Changes on MRI via a Domain-Specific Biomechanical Model: Preliminary Findings," PLoS ONE, vol. 11, no. 4, p. e0150016, 2016.
+[9]	V. Rieke and K. Butts Pauly, "MR thermometry," Journal of Magnetic Resonance Imaging, vol. 27, no. 2, pp. 376-390, 2008.
+[10]	F. A. Jolesz, "MRI-Guided Focused Ultrasound Surgery," Annual review of medicine, vol. 60, pp. 417-430, 2009.
+[11]	H. Su, G. Li, D. C. Rucker, R. J. Webster III, and G. S. Fischer, "A Concentric Tube Continuum Robot with Piezoelectric Actuation for MRI-Guided Closed-Loop Targeting," Annals of Biomedical Engineering, vol. 44, no. 10, pp. 2863-2873, 2016.
+[12]	H. Su, W. Shang, G. Cole, G. Li, K. Harrington, A. Camilo, J. Tokuda, C. M. Tempany, N. Hata, and G. S. Fischer, "Piezoelectrically Actuated Robotic System for MRI-Guided Prostate Percutaneous Therapy," IEEE/ASME Transactions on Mechatronics, vol. 20, no. 4, pp. 1920-1932, 2015.
+[13]	S. Hao, D. C. Cardona, S. Weijian, A. Camilo, G. A. Cole, D. C. Rucker, R. J. Webster, and G. S. Fischer, "A MRI-guided concentric tube continuum robot with piezoelectric actuation: A feasibility study," in Robotics and Automation (ICRA), 2012 IEEE International Conference on, 2012, pp. 1939-1945.
+[14]	P. Vartholomeos, L. Qin, and P. E. Dupont, "MRI-powered Actuators for Robotic Interventions," Rep U S, pp. 4508-4515, Sep 25 2011.
+[15]	E. Tumino, R. Sacco, M. Bertini, M. Bertoni, G. Parisi, and A. Capria, "Endotics system vs colonoscopy for the detection of polyps," World J Gastroenterol, vol. 16, no. 43, pp. 5452-5456, 2010.
+[16]	F. Cosentino, E. Tumino, G. R. Passoni, E. Morandi, and A. Capria, "Functional evaluation of the endotics system, a new disposable self-propelled robotic colonoscope: in vitro tests and clinical trial," The International journal of artificial organs, vol. 32, no. 8, pp. 517-527, 2009.
+[17]	M. Cianchetti, T. Ranzani, G. Gerboni, T. Nanayakkara, K. Althoefer, P. Dasgupta, and A. Menciassi, "Soft robotics technologies to address shortcomings in today's minimally invasive surgery: the STIFF-FLOP approach," Soft Robotics, vol. 1, no. 2, pp. 122-131, 2014.
+[18]	J. Fras, J. Czarnowski, M. Macias, J. Glowka, M. Cianchetti, and A. Menciassi, "New STIFF-FLOP module construction idea for improved actuation and sensing," in IEEE International Conference on Robotics and Automation (ICRA), 2015, pp. 2901-2906.
+[19]	R. J. Roesthuis and S. Misra, "Steering of Multisegment Continuum Manipulators Using Rigid-Link Modeling and FBG-Based Shape Sensing," IEEE Transactions on Robotics, vol. 32, no. 2, pp. 372-382, 2016.
+[20]	D. Wang, W. Strugnell, G. Cowin, D. M. Doddrell, and R. Slaughter, "Geometric distortion in clinical MRI systems: Part I: evaluation using a 3D phantom," Magnetic resonance imaging, vol. 22, no. 9, pp. 1211-1221, 2004.
+[21]	W. Wang, C. L. Dumoulin, A. N. Viswanathan, Z. T. H. Tse, A. Mehrtash, W. Loew, I. Norton, J. Tokuda, R. T. Seethamraju, T. Kapur, A. L. Damato, R. A. Cormack, and E. J. Schmidt, "Real-time active MR-tracking of metallic stylets in MR-guided radiation therapy," Magnetic Resonance in Medicine, vol. 73, no. 5, pp. 1803-1811, 2015.
+[22]	F. Galassi, D. Brujic, M. Rea, N. Lambert, N. Desouza, and M. Ristic, "Fast and accurate localization of multiple RF markers for tracking in MRI-guided interventions," Magnetic Resonance Materials in Physics, Biology and Medicine, vol. 28, no. 1, pp. 33-48, 2015/02/01 2015.
+[23]	K. W. Kwok, K. H. Lee, Y. Chen, W. Wang, Y. Hu, G. C. T. Chow, S. H. Zhang, W. G. Stevenson, R. Y. Kwong, W. Luk, E. J. Schmidt, and Z. T. H. Tse, "Interfacing Fast Multi-phase Cardiac Image Registration with MRI-based Catheter Tracking for MRI-guided Electrophysiological Ablative Procedures," Circulation, vol. 130, A18568, 2014.
+[24]	Y. Chen, W. Wang, E. J. Schmidt, K. W. Kwok, and Z. Tse, "Design and Fabrication of MR-Tracked Metallic Stylet for Gynecologic Brachytherapy," IEEE Trans. on Mechatronics vol. (under review).
+[25]	J. Ge, A. E. James, L. Xu, Y. Chen, K. W. Kwok, and M. P. Fok, "Bidirectional Soft Silicone Curvature Sensor Based on Off-Centered Embedded Fiber Bragg Grating," IEEE Photonics Technology Letters, vol. 28, no. 20, pp. 2237-2240, 2016.
+[26]	Y. Chen, J. Ge, K. W. Kwok, K. R. Nilsson, F. Fok, and Z. Tse, "MRI-conditional catheter sensor for contact force and temperature monitoring during cardiac electrophysiological procedures," Journal of Cardiovascular Magnetic Resonance, vol. 16(Suppl 1):P150, 2014.
+[27]	K. W. Kwok, G. C. T. Chow, T. C. P. Chau, Y. Chen, S. H. Zhang, W. Luk, E. J. Schmidt, and Z. Tse, "FPGA-based acceleration of MRI registration: an enabling technique for improving MRI-guided cardiac therapy," Journal of Cardiovascular Magnetic Resonance, vol. 16(Suppl 1):W11, 2014.
+[28]	Y. Chen, K. W. Kwok, and Z. T. Tse, "An MR-Conditional High-Torque Pneumatic Stepper Motor for MRI-Guided and Robot-Assisted Intervention," Annals of Biomedical Engineering, vol. 42, no. 9, pp. 1823-33, Sep 2014.
+[29]	Z. Guo, T. T. L. Lun, Y. Chen, H. Su, D. T. M. Chan, and K. W. Kwok, "Customizable Design of an MR-safe Pneumatic Stepper Motor for MRI-guided Robotic Interventions," in Robotics and Automation (ICRA), 2016 IEEE International Conference on, p. (under review).
+[30]	K. W. Kwok, Z. Dong, Z. Guo, K. C. D. FU, K. H. Lee, and C. L. Cheng, "Robotic catheter system for MRI-guided cardiovascular interventions," US Patent US 62/354,211, 24 Jun, 2016.
+[31]	K. H. Lee, D. K. C. Fu, Z. Guo, Z. L. Dong, M.C.W., C. L. Cheung, P. T. Chan, A. P. W. Lee, and K. W. Kwok, "Enabling Techniques for MRI-guided and Robot-assisted Intra-cardiac Catheterization," IEEE Robotics and Automation Magazines, (under review), 2016.
+[32]	K. W. Kwok, V. Vitiello, and G. Z. Yang, "Control of Articulated Snake Robot under Dynamic Active Constraints," in Medical Image Computing and Computer-Assisted Intervention, 2010, pp. 229-236.
+[33]	J. Z. Shang, C. J. Payne, J. Clark, D. P. Noonan, K. W. Kwok, A. Darzi, and G. Z. Yang, "Design of a Multitasking Robotic Platform with Flexible Arms and Articulated Head for Minimally Invasive Surgery," 2012 Ieee/Rsj International Conference on Intelligent Robots and Systems (Iros), pp. 1988-1993, 2012.
+[34]	V. Vitiello, K. W. Kwok, C. Payne, and G. Z. Yang, "DOF Minimization for Optimized Shape Control under Active Constraints for a Hyper-redundant Flexible Robot," in Information Processing in Computer-Assisted Interventions, 2011, pp. 67-78.
+[35]	C. L. Cheung, K. H. Lee, Z. Guo, Z. Dong, M. C. W. Leong, Y. Chen, A. P. W. Lee, and K. W. Kwok, "Kinematic-model-free positional control for robot-assisted cardiac catheterization," in The 9th Hamlyn Symposium on Medical Robotics, 2016, pp. 80-81.
+[36]	K. W. Kwok, G. P. Mylonas, L. W. Sun, M. Lerotic, J. Clark, T. Athanasiou, A. Darzi, and G. Z. Yang, "Dynamic Active Constraints for Hyper-Redundant Flexible Robot," in Medical Image Computing and Computer-Assisted Intervention, 2009, pp. 410-417.
+[37]	K. W. Kwok, K. H. Tsoi, V. Vitiello, J. Clark, G. C. T. Chow, W. Luk, and G. Z. Yang, "Dimensionality Reduction in Controlling Articulated Snake Robot for Endoscopy Under Dynamic Active Constraints," IEEE Transactions on Robotics, vol. 29, no. 1, pp. 15-31, Feb 2013.
+[38]	K.-H. Lee, Z. Guo, G. C. T. Chow, Y. Chen, W. Luk, and K.-W. Kwok, "GPU-based proximity query processing on unstructured triangular mesh model," in Robotics and Automation (ICRA), 2015 IEEE International Conference on, 2015, pp. 4405-4411.
+[39]	T. C. P. Chau, K. W. Kwok, G. C. T. Chow, K. H. Tsoi, K. H. Lee, Z. Tse, P. Y. K. Cheung, and W. Luk, "Acceleration of real-time Proximity Query for dynamic active constraints," in Field-Programmable Technology (FPT), 2013 International Conference on, 2013, pp. 206-213.
+[40]	G. C. T. Chow, K. W. Kwok, W. Luk, and P. Leong, "Mixed Precision Comparison in Reconfigurable Systems," in IEEE International Symposium on Field-Programmable Custom Computing Machines, 2011, pp. 17-24.
+[41]	Z. Zhang, Y. Xin, B. Liu, W. X. Y. Li, K.-H. Lee, C.-F. Ng, D. Stoyanov, R. C. C. Cheung, and K.-W. Kwok, "FPGA-Based High-Performance Collision Detection: An Enabling Technique for Image-Guided Robotic Surgery," Frontiers in Robotics and AI, vol. 3, no. 51, 2016-August-31 2016.
+[42]	E. Lopez, K. W. Kwok, C. J. Payne, P. Giataganas, and G. Z. Yang, "Implicit Active Constraints for robot-assisted arthroscopy," in Robotics and Automation (ICRA), 2013 IEEE International Conference on, 2013, pp. 5390-5395.
+[43]	K. Leibrandt, H. J. Marcus, K. W. Kwok, and G. Z. Yang, "Implicit active constraints for a compliant surgical manipulator," in Robotics and Automation (ICRA), 2014 IEEE International Conference on, 2014, pp. 276-283.
+[44]	K. W. Kwok, Y. Chen, T. C. P. Chau, W. Luk, K. Nilsson, E. J. Schmidt, and Z. Tse, "MRI-based visual and haptic catheter feedback: simulating a novel system's contribution to efficient and safe MRI-guided cardiac electrophysiology procedures," Journal of Cardiovascular Magnetic Resonance, vol. 16, no. Suppl 1, p. O50, 2014.
+[45]	Y. Chen, K. W. Kwok, J. Ge, Y. Hu, M. Fok, K. R. Nilsson, and Z. T. H. Tse, "Augmented Reality for Improving Catheterization in MRI-guided Cardiac Electrophysiology," Journal of Medical Devices - Transactions of the ASME, vol. 8, no. 2, p. 020917, 2014.
+[46]	K. W. Kwok, L. W. Sun, V. Vitiello, D. James, G. P. Mylonas, and G. Z. Yang, "Perceptually Docked Control Environment for Multiple Microbots: Application to the Gastric Wall Biopsy," in IEEE/RSJ International Conference on Intelligent Robots and Systems, 2009, pp. 2783-2788 
+[47]	G. P. Mylonas, K. W. Kwok, D. R. C. James, D. Leff, F. Orihuela-Espina, A. Darzi, and G. Z. Yang, "Gaze-Contingent Motor Channelling, haptic constraints and associated cognitive demand for robotic MIS," Medical Image Analysis, vol. 16, no. 3, pp. 612-631, Apr 2012.
+[48]	S. L. Lee, M. Lerotic, V. Vitiello, S. Giannarou, K. W. Kwok, M. Visentini-Scarzanella, and G. Z. Yang, "From medical images to minimally invasive intervention: Computer assistance for robotic surgery," Computerized Medical Imaging and Graphics, vol. 34, no. 1, pp. 33-45, Jan 2010.
+[49]	S. L. Lee, K. W. Kwok, C. Riga, C. Bicknell, and G. Z. Yang, "Motion-adapted catheter navigation with real-time instantiation and improved visualisation," Journal of Robotic Surgery, vol. 7, no. 3, pp. 251-260, 2013.
+[50]	J. T. B. Overvelde, T. Kloek, J. J. A. D’haen, and K. Bertoldi, "Amplifying the response of soft actuators by harnessing snap-through instabilities," Proceedings of the National Academy of Sciences, vol. 112, no. 35, pp. 10863-10868, September 1, 2015 2015.
+[51]	S. L. Lee, A. Chung, M. Lerotic, M. A. Hawkins, D. Tait, and G. Z. Yang, "Dynamic shape instantiation for intra-operative guidance," in Medical Image Computing and Computer-Assisted Intervention, 2010, pp. 69-76.
+[52]	G. A. Hrinda and D. T. Nguyen, "Optimization of stability-constrained geometrically nonlinear shallow trusses using an arc length sparse method with a strain energy density approach," Finite Elements in Analysis and Design, vol. 44, no. 15, pp. 933-950, 11// 2008.
+[53]	C. Li, N. Chen, X. Wei, J. Kang, B. Li, S. Tan, L. Song, and K. K. Y. Wong, "High power widely-tunable all-fiber thulium-assisted optical parametric oscillator at SWIR band," Optics Letters, vol. (in press), 2016.
+[54]	S. Tan, X. Wei, S. Xu, Z. Yang, B. Li, and K. K. Y. Wong, "Spectrally Encoded Confocal Microscopy at 1.9um," IEEE Photonics Technology Letters, vol. 28, no. 2, pp. 201-204, 2016.
+[55]	X. Wei, A. K. S. Lau, Y. Xu, C. Zhang, A. Mussot, A. Kudlinski, K. K. Tsia, and K. K. Y. Wong, "Broadband fiber-optical parametric amplification for ultrafast time-stretch imaging at 1.0&#x2009;&#x2009;&#x3BC;m," Optics Letters, vol. 39, no. 20, pp. 5989-5992, 2014/10/15 2014.
+[56]	B. Sarioglu, M. Tumer, U. Cindemir, B. Camli, G. Dundar, C. Ozturk, and A. D. Yalcinkaya, "An Optically Powered CMOS Tracking System for 3 T Magnetic Resonance Environment," Biomedical Circuits and Systems, IEEE Transactions on, vol. 9, no. 1, pp. 12-20, 2015.
+[57]	M. A. Rube, A. B. Holbrook, B. F. Cox, J. G. Houston, and A. Melzer, "Wireless MR tracking of interventional devices using phase-field dithering and projection reconstruction," Magnetic Resonance Imaging, vol. 32, no. 6, pp. 693-701, 2014.
+[58]	E. Y. Wong Mse, Q. Zhang PhD, J. L. Duerk PhD, J. S. Lewin Md, and M. Wendt PhD, "An optical system for wireless detuning of parallel resonant circuits," Journal of Magnetic Resonance Imaging, vol. 12, no. 4, pp. 632-638, 2000.
+[59]	A. B. Holbrook, J. M. Santos, E. Kaye, V. Rieke, and K. B. Pauly, "Real Time MR Thermometry for Monitoring HIFU Ablations of the Liver," Magnetic resonance in medicine : official journal of the Society of Magnetic Resonance in Medicine / Society of Magnetic Resonance in Medicine, vol. 63, no. 2, pp. 365-373, 2010.
+[60]	C. Andrieu, N. de Freitas, A. Doucet, and M. I. Jordan, "An Introduction to MCMC for Machine Learning," Machine Learning, vol. 50, no. 1, pp. 5-43, 2003.
+[61]	M. S. Arulampalam, S. Maskell, N. Gordon, and T. Clapp, "A tutorial on particle filters for online nonlinear/non-Gaussian Bayesian tracking," IEEE Transactions on Signal Processing, vol. 50, no. 2, pp. 174-188, 2002.
+[62]	S. Schaal and C. G. Atkeson, "Learning Control in Robotics," IEEE Robotics & Automation Magazine, vol. 17, no. 2, pp. 20-29, 2010.
+[63]	S. Vijayakumar, A. D'souza, and S. Schaal, "Incremental Online Learning in High Dimensions," Neural Comput., vol. 17, no. 12, pp. 2602-2634, 2005.
+
+
+
+
+The proposed project aims to (1) develop an MR-safe/conditional robotic system capable of delivering, manipulating a laser pointer towards the ONP target lesion; (2) apply and design a control framework facilitating tele-operated navigation of the soft endoscopic robot and laser pointer using real-time RF-tracking and MR thermometry; and (3) design a laser surgical planning and navigation interface, and experimental setups to validate the system performance and its potential clinical benefits. These three work packages are scheduled as follows:
+
+
+
+
+- abstract
+  - nasopharyneal (appeared twice) -> nasopharyngeal
+  - incorporating fluidic soft actuations -> soft actuation
+
+- Aim#1 
+  - serval -> several
+- Aim#2
+  - similiar -> similar
+
+
+
+
+*** revision for more concise and precise writinig 
+   
+
+**** revise 2b and 2c, 
+     2b: mr thermometry 
+     Proton resonance frequency shift (PRFS)-based MR thermometry is currently considered the best method for achieving this goal since it is independent of tissue type, easy to perform, has a high temporal resolution, and the PRFS changes linearly with temperature, which makes it straightforward to interpret (4–7). Temperature-dependent PRFSs lead to phase changes in the MR signal in gradient-echo scans. These phase changes can be interpreted as temperature changes, thus allowing MR thermometry (4–7). 
+Thermometry in moving organs such as the liver is impaired since this method is based on subtrac- tion of baseline phase images from the phase images acquired during the thermal treatment (8). Further- more, even in the immobilized breast, MR thermometry can be complicated. The PRFS method in organs close to the lungs can be affected by respiration and cardiac motion–induced local magnetic field disturbances (9). During respiration, the lung volume and the oxygen concentration in the lungs change. This causes a change in the distribution of magnetic susceptibility that leads to magnetic field fluctuations in organs sur- rounding the lungs such as the breast and even the brain (9,10). Such phase effects may also be invoked by the pulsation of the heart and the larger blood vessels.
+9 .Bolan PJ, Henry PG, Baker EH, Meisamy S, Garwood M. Measure- ment and correction of respiration-induced B0 variations in breast 1H MRS at 4 Tesla. Magn Reson Med 2004;52:1239–1245.
+10. Van de Moortele PF, Pfeuffer J, Glover GH, Ugurbil K, Hu X. Res- piration-induced B0 fluctuations and their spatial distribution in the human brain at 7 Tesla. Magn Reson Med 2002;47:888–895.
+
+
+- N. H. Peters, L. W. Bartels, S. M. Sprinkhuizen, K. L. Vincken and C. J. Bakker, "Do respiration and cardiac motion induce magnetic field fluctuations in the breast and are there implications for MR thermometry?". Journal of Magnetic Resonance Imaging, vol 29, no. 3, pp.731-735, 2009. 
+
+   # problem description
+   Low-intensity laser could be regulated by the optical oscillator (Aim#1c). This laser spot on the lesion will induce harmless temperature rise (1-2ºC) detectable by MR thermometry {Rieke, 2008} which can be interleaved with real-time MRI with high temporal resolution {de Senneville, 2007}.
+   However, because of the time spent for image processing, localization of moving object is challenging.
+   In confined transoral cavity, even small physiological motions may be magnified to obvious positional difference, if the laser pointer has to aiming at lesion target with acute angle. 
+   We propose to use sequential Monte Carlo (SMC) methods, e.g. particle filter [], to model the position of the lesion target.
+   These methods update estimation sequentially by weighting more importantly in new arrival data; 
+   We argue that the nonlinear and non-stationary motion-induced error, e.g. respiration motion, can be predicted and compensated. 
+   This will enable real-time feedback control for the endoscope and the laser collimator (Aim#2c). 
+
+Schaal, S., & Atkeson, C. G. (2010). Learning control in robotics. IEEE Robotics & Automation Magazine, 17(2), 20-29.
+
+# 
+
+2c. Enhanced feedback control
+
+To control the soft actuators driving the scope and the laser collimator, two individual controllers will be implemented.
+The controllers will be of composite architecture, comprising feedforward and feedback controllers (Fig.??). 
+The feedforward controllers compute the fluidic volume inputs to perform bending (Aim#1a) and insertion (Aim#1b) of the scope, and steering (Aim#1c) of the collimator.
+Nonparametric learning techniques [?] will be adopted to estimate such inverse kinematic mappings. 
+Our hypothesis is that these techniques, which are unconstrained by the predefined parametric models, could characterize such invserse mappings solely depending on data, thus approximating hyper-elastic behavior of the scope.
+This learning-based technique in task space has been validated partially by incorporating a feedforward kinematics controller only. Locally weighted projection regression (LWPR) [54] was demonstrated (Fig.6b) to enable a hyper-elastic continuum robot to follow along a trajectory projected on a curved surface, even under noticeable dynamic external disturbance (Fig.6c). 
+The feedforward controller will be learned offline using FEA data. 
+Based on the feedback of RF-tracking (Aim#2a) and the MR-thermometry (Aim#2b), the states of the scope and the collimator can be estimated in real time.
+These robot states will be used for updating the feedforward controllers online, and will be provided to the feedback controllers (Fig.??). The feedback controllers enable  correction of positioning error instantly and improve the accuracy of the laser spot projecting to the next prospective targets along the pre-planned laser path. 
+
+
+
+# alternative ()
+- if the relatively slower MR thermometry feedback could not provide enough positional information 
+- 
+- semi-active coils will be mounted on the colliminator
+-  to obtain the aiming angle
+- This could eventually provide self-reference to rapidly estimate the laser spot position in between MR thermometry scans
+# expected result
+- enable faster control frequency.
+
+if the MR thermometry feedback could not fast enough positional feedback, we will mount the semi-active tracking coils on the colliminator. It is expected that these RF-tracking coils could provide self-reference to estimate the laser aiming angle, and hence the laser position in-between MR thermometry scans. 
+
+these RF-tracking coils could geometric references to estimate the laser aiming angles, and hence the laser positions in-between MR thermometry scans. 
+
+Two solenoid RF-tracking coils can also be wrapped on the collimator (similiar to the EP catheter as in Fig.2a). These coils provide geometric references to rapidly (>30Hz) estimate the laser aiming angle, and hence the laser spot position in-between MR thermometry scans.
+
+# alternative
+- If the proposed learning approach could not adequately characterize the kinematic hyper-elastic behavior of the soft robot, we will investiage parametric approximation approaches under geometric constraints, e.g. piecewise constant-curvature. The proposed control architecture can still be applied to laser spot tracking, where the feedfoward controller can be updated online using the RF-tracking (Aim#1) and MR thermometry-based positional feedback (Aim#2) in real-time. 
+
+- R. J. Webster III and B. A. Jones, "Design and Kinematic Modeling of Constant Curvature Continuum Robots: A Review," International Journal of Robotics Research, vol. 29, no. 13, pp.1661-1683, 2010.
+Webster, R. J., & Jones, B. A. (2010). Design and kinematic modeling of constant curvature continuum robots: A review. The International Journal of Robotics Research.
+
+
+2c. Enhanced feedback control using RF-tracking: 
+Two individual controllers for tele-manipulation of the endoscope and laser pointer (Aim#1) will be implemented. The endoscope controller could compute fluid volume input rapidly in order to simultaneously drive the scope bending (Aim#1a) and insertion (Aim#1b) toward the target lesion. It will comprise both feedforward and feedback controller. Nonparametric learning technique [?] will be adopted to estimate the robot’s inverse-kinematics mapping. Our hypothesis is that this technique, which is unconstrained by the predefined parametric models, could characterize such mapping solely depending on RF-tracking data, thus approximating hyper-elastic behavior of the scope in real-time. This learning-based technique in task space has been validated partially by incorporating a feedforward kinematics controller only. Locally weighted projection regression (LWPR) [54] was demonstrated (Fig.6b) to enable a hyper-elastic continuum robot to follow along a trajectory projected on a curved surface, even under noticeable dynamic external disturbance (Fig.6c). 
+
+2c. Enhanced feedback control using RF-tracking: Two individual controllers for tele-manipulation of the endoscope and laser pointer (Aim#1) will be implemented. 
+The controllers could compute fluid volume inputs rapidly in order to simultaneously drive the scope bending (Aim#1a) and insertion (Aim#1b), and to steer the collimator to aim at the laser resection target, respectively. 
+The control architecture will comprise both feedforward and feedback controllers. 
+Nonparametric learning technique [?] will be adopted to estimate the soft robot’s inverse-kinematics mapping. 
+Our hypothesis is that this technique, which is unconstrained by the predefined parametric models, could characterize such mapping solely depending on RF-tracking data, thus approximating the hyper-elastic behavior of the endoscope in real-time. 
+Inverse-kinematics mapping based on this task-space mapping/registration will be learned online, and incorporated into the feedforward controller that has been initially formed by prior knowledge, namely the robot FEA data
+
+This learning-based technique in task space has been validated partially by incorporating a feedforward kinematics controller only. Locally weighted projection regression (LWPR) [54] was demonstrated (Fig.6b) to enable a hyper-elastic continuum robot to follow along a trajectory projected on a curved surface, even under noticeable dynamic external disturbance (Fig.6c). 
+Prior to the actual laser resection, such MR-localized laser targets will be mapped/registered with the corresponding fluidic chamber actuation, of which the spatial resolution will also be investigated so as to fulfil the laser resection accuracy specified by the user. 
+Inverse-kinematics mapping based on this task-space mapping/registration will be learned online, and incorporated into the feedforward controller that has been initially formed by prior knowledge, namely the robot FEA data.
+2c. MR thermometry-based feedback control of laser pointer: 
+. However, for the feedback controller, we propose to employ data-driven control techniques, e.g. particle filters [?], to estimate and interpolate morphological kinematics of the soft laser pointer, using the localized temperature feedback (10-20Hz) relatively slower than the RF-coil tracking. This will still enable rapid control of the laser spot projecting to the next prospective targets along the pre-planned laser path. 
+
+
+     2c: enhanced feedback control using 
+     - laser ablation is carried out by 
+     - soft robot
+       - difficult to obtain analytical model
+       - difficult to control
+     - nonparametric learning 
+       - unconstrained by predefined model
+       - represent the robot inverse dynamics solely by data
+     - the nonparametric learning will be adopt in the feedforward control loop
+     - have partially verified the feedforward control algorithm using LWPR 
+     - feedback control to compensate the positioning error
+     - in addition, we will investigate updating the inverse mapping online.
+       - in order to adapt morphological change due to physiological motion 
+	 - in contact with the transoral tissue, e.g. the velum, 
+	 - breathing
+     - what is expected ? 
+	   
+	 
+
+**** DONE revise 2b and 2c  v16
+     CLOSED: [2016-11-17 Thu 14:28] SCHEDULED: <2016-11-14 Mon 12:00-20:00>
+     - State "DONE"       from              [2016-11-17 Thu 14:28]
+***** ka-wai's revised
+      - 2b
+	- Two individual controllers for tele-manipulation of the endoscope and laser pointer (Aim#1) will be implemented.
+	- The endoscope controller could compute fluid volume input rapidly in order to simultaneously drive the scope bending (Aim#1a) and insertion (Aim#1b) toward the target lesion.
+	- It will comprise both feedforward and feedback controller.
+	- Nonparametric learning technique [?] will be adopted to estimate the robot’s inverse-kinematics transition mapping, forming the robot kinematics.
+	- Our hypothesis is that this technique, which is unconstrained by the predefined parametric models, could characterize such mapping solely depending on RF-tracking data, thus approximating hyper-elastic behavior of the scope in real time.
+	- This learning-based technique in task space has been validated partially by incorporating a feedforward kinematics controller only.
+	- Locally weighted projection regression (LWPR) {Vijayakumar, 2005 #1247} was demonstrated, which enabled a hyper-elastic continuum robot to follow along a trajectory projected on a curved surface, even under noticeable dynamic external disturbance (Fig.??). 
+	- Feedback controller description?
+	  - The RF-tracking will also be provided to the feedback controller to rapidly compensate the positioning error of the endoscope that aiming at target lesion region.
+	  - We will also investigate updating the feedforward controller online using the real-time RF-traching feedback, in order to adapt physiological motions that may cause morphological change of the endoscope and hence deflection of laser target.
+
+      - 2c MR thermometry-based feedback control of laser pointer:
+	- Low-intensity laser could be regulated by the optical oscillator (Aim#1c).
+	- This laser spot on the lesion will induce harmless temperature rise (1-2ºC) detectable by MR thermometry [?] which can be interleaved with real-time MRI [?].
+	- Prior to the actual laser resection, such MR-localized laser targets will be mapped/registered with the corresponding fluidic chamber actuation, of which the spatial resolution will also be investigated so as to fulfil the laser resection accuracy specified by the user.
+	- A control architecture similar with Aim#2b will also be implemented (Fig.??).
+	- Inverse-kinematics mapping based on this task-space mapping/registration will be learned online, and incorporated into the feedforward controller that has been initially formed by prior knowledge, namely the robot FEA data.
+	- However, for the feedback controller, we propose to employ data-driven control techniques, e.g. particle filters [?], to estimate and interpolate morphological kinematics of the soft laser pointer, using the localized temperature feedback (10-20Hz) relatively slower than the RF-coil tracking.
+	- This will still enable rapid control of the laser spot projecting to the next prospective targets along the pre-planned laser path. 
+
+***** revised
+      - 2b 
+	- Feedback controller description?
+	  - The RF-tracking will also be provided to the feedback controller to rapidly compensate the positioning error of the endoscope that aiming at target lesion region.
+	  - We will also investigate updating the feedforward controller online using the real-time RF-traching feedback, in order to adapt physiological motions that may cause (morphological change of the endoscope and hence) deflection of laser target. 
+      - 2c
+	- However, the feedback of the localized temperature is relatively slower (10-20Hz) than the RF-coil tracking.
+	- We propose to estimate and interpolate morphological kinematics of the soft laser pointer.
+	- Data-driven estimation techniques for nonlinear systems, e.g. particle filters [?], will be investigated.
+	- The kinematic estimates will be fed to both the online feedforward and feedback controller.
+	- This will enable rapid control of the laser spot projecting to the next prospective targets along the pre-planned laser path. 
+
+	  
+  #ref 
+- V. Rieke and B. P. Kim, “MR thermometry,” Journal of Magnetic Resonance Imaging 27.2 (2008): 376-390.
+- B. D. de Senneville, C. Mougenot and C. T. W. Moonen, “Real‐time adaptive methods for treatment of mobile organs by MRI‐controlled high‐intensity focused ultrasound,” Magnetic Resonance in Medicine 57.2 (2007): 319-330.
+- M. S. Arulampalam, S. Maskell, N. Gordon, and T, Clapp, “A tutorial on particle filters for online nonlinear/non-Gaussian Bayesian tracking,” IEEE Transactions on signal processing 50, no. 2 (2002): 174-188.
+- S. Schaal and C. G. Atkeson, "Learning control in robotics," IEEE Robotics & Automation Magazine 17, no. 2 (2010): 20-29.
+Vijayakumar
+
+
+**** DONE revise 2c - v13
+     SCHEDULED: <2016-11-11 Fri 12:00-20:00>
+ - kawai's
+ Low-intensity laser could be regulated by the optical oscillator (Aim#1c). This laser spot on the lesion will induce harmless temperature rise (1-2ºC) that could be detected, localized by MR thermometry in real time (xxxHz) [ref#2]. We propose to map or register such localized laser targets with the corresponding fluidic chamber actuation. Such inverse kinematic mapping of the laser pointer will be “learned” by the feedforward controller (Fig.??), which is initially “trained” by the offline FEA. The resolution of registered laser targets will be investigated so as to fulfil the desired laser resection accuracy specified by the user. Real-time MRI interleaved with MR thermometry will be applied during the actual laser resection. This will provide online feedback data to another controller capable to compensate the laser pointing error rapidly; meanwhile, the offline inverse kinematic mapping will also be fine-tuned. This low-gain feedback control would filter out the fluctuated actuation signals, thus preventing from excessive fluidic input to causing damage of the soft chamber.
+
+
+ - revised
+ Low-intensity laser could be regulated by the optical oscillator (Aim#1c). 
+ This laser spot on the lesion will induce harmless temperature rise (1-2ºC) that could be detected and localized by MR thermometry in real time (xxxHz) [ref#2].
+ Real-time MRI interleaved with MR thermometry will be applied during the actual laser resection. 
+ The resolution of registered laser targets will be investigated so as to fulfil the desired laser resection accuracy specified by the user. 
+ # propose particle filter that enables rapid position control 
+ We propose to use particle filtering techniques to estimate and interpolate the morphological kinematics of the soft laser pointer.  
+ This enables rapid control of the laser spot positioning, based on the slower MR thermometry data.
+ # control architecture will be the same as 2b. FF: learn IK offline by FEA data using nonpara. method. FB: compensate the position error. 
+ A control architecture the same as Aim#2b will be implemented (Fig.??). 
+ For the feedforward controller, the task space inverse kinematic mapping between the localized laser targets and the fluidic actuation input will be learned offline using FEA data.
+ The online morphological kinematics estimates will serve for fine-tuning the inverse mapping and provide to a feedback controller capable to compensate the laser pointing error.
+
+
+ about real time mr thermometry
+ - found a paper that use real time mr thermometry (De Senneville 2007):
+   - Real-time PRF-based MR thermometry was performed using RF-spoiled, lipid-suppressed (using a 1-1 binomial frequency-selective RF pulse), single-shot gradient echo echo-planar sequences. The following acquisition parameters were used: TE = 40.9 ms, repetition time (TR) = 1 s, and slice thickness = 4.5 mm. A single slice with a spatial resolution of 128 X 128 voxels was reconstructed from 96 X 96 acquired voxels. With a field of view (FOV) of 192 X 192 X 4.5 mm3, the resulting voxel size was 2 X 2 X 4.5 mm3 .
+ Initial data processing was performed on the MR acquisition computer. Real and imaginary data were transferred online to the HIFU computer in charge of temperature visualization and control of the HIFU driver. This HIFU computer is equipped with an Athlon 3.2 GHz XP proces- sor and 1 GB of RAM running under the Windows XP operating system. From the acquired data set, an image registration algorithm estimates organ displacement in an area of interest in order to register images and suppress interscan motion artifacts in temperature maps. Briefly, an array of reference images results from the initial “learning phase.” The procedure makes it possible to automatically define the position of the focal point in the next firing period in order to focus the deposition of energy in the desired tissue area. The processing algorithm is derived from previously described procedures and is further elab- orated below.
+   - de Senneville BD, Mougenot C, Moonen CTW. Real-time adaptive methods for treatment of mobile organs by MRI-controlled high-intensity focused ultrasound. Magn Reson Med 2007;57:319–330.
+ - "Although most temperature monitoring has been done in single or multiple slice acquisition, there are situations when covering a 3D volume is desirable if the location of the heated region changes due to respiratory motion. However, in many cases isotropic 3D tempera- ture mapping is hardly feasible in real-time. " -- Viola Rieke (2008), 
+   - Viola Rieke and Kim Butts Pauly, "MR Thermometry", JOURNAL OF MAGNETIC RESONANCE IMAGING 27:376–390 (2008)
+
+**** DONE revise 
+     SCHEDULED: <2016-11-02 Wed 12:00-20:00>
+***** Ka-Wai's revised example
+ Two individual controllers for tele-manipulation of the endoscope and the laser pointer will be implemented. The endoscope controller could compute fluid volume input rapidly in order to aim and position the laser at the target lesion with optimal proximity (10-20mm) and field of view (<50°). It will comprise both feedforward and feedback control loops. Nonparametric learning technique [?] will also be adopted to estimate the inverse transition mapping of the soft robot kinematics. Our hypothesis is that this technique unconstrained by the predefined parametric model will be able to characterize the inverse-kinematics mapping solely depending on RF-tracking data, thus approximating hyper-elastic behavior of the endoscope in real-time. This learning-based technique in task space has been validated partially by incorporating a feedforward kinematics controller only. Locally weighted projection regression (LWPR) [ref#1] was demonstrated, which enabled a hyper-elastic continuum robot to aim and track along a trajectory pre-defined on a curved surface, even under noticeable dynamic external disturbance (Fig.??).      
+
+
+***** revised 
+ # controller objective : 
+ # Two individual controllers will be implemented to respectively control the endoscope and the laser projector.
+ Two individual controllers for tele-manipulation of the endoscope and the laser pointer will be implemented. 
+ # the controller for the endoscope
+ # The controller for the endoscope computes correct commands for the pnematically/hydraulically-driven endoscope such that the laser can be targeted on a desired lesion region (XXXmm2) on the transoral tissue. 
+ The endoscope controller could aim and position the laser at the target lesion with optimal proximity (10-20mm) and field of view (<50°). 
+ # controller structure: 
+ It is a composite controller comprising a feedforward controller and a feedback controller. 
+
+ # feedforward component by nonparametric learning and its advantages.
+ The feedforward controller will be an inverse kinematics mapping that computes required fluid volume input for a given reference input. 
+ # 
+ Nonparametric learning technique will be adopted to learn such inverse mapping.
+ Because it is unconstrained by predefined parametric models, learning accuracy can be solely depend on the RF-tracking data. We hypothesize that the inverse mapping, which is highly nonlinear, can be adequately characterized, and hence approximating the hyper-elastic behavior of the endoscope in real-time. 
+ # preliminary results:
+ We have validated this composite controller partially by incorporating a feedforward kinematics controller. The feedforward controller was obtained based on locally weighted projection regression (LWPR) [ref#1], using EM positional tracking sensors. A hyper-elastic continuum robot was able to aim and track along a pre-defined trajectory on a curved surface, even under noticeable dynamic external disturbance (Fig.??). 
+
+ The feedback controller will be adopted to compensate the control positional error caused by learning inaccuracies. 
+ In addition, online learning using real-time RF-tracking data will be implemented. 
+ The learning performance online will be examined in dynamic environments that mimic physiological motions within the transoral cavity such as breathing and swallowing. 
+ The enhanced learning performance of the feedforward controller could lower feedback control gain; High control feedback gain may cause large and jerky control commands input that could damage the endoscope.
+ Approximation error of the inverse kinematics mapping and external disturbance are inevitable. 
+
+
+
+
+ A laser pointer will be mounted at the tip of the endoscope (Fig.??) to deliver laser at lesion target. 
+ Low-energy laser source will be used for positional sensing of the laser target. 
+ It will induce an unharmful temperature rise (1-2 degree) that could be detect and located in real time (xxxHz) [ref#2]. 
+ Such temperature monitoring technique has been applied in MRI-guided laser interstitial thermal therapy (LITT) [ref#3]. 
+ A composite controller will be implemented for the laser pointer. 
+ It consists of a learning-based feedforward controller and a feedback controller (Fig. ??). 
+ For the feedforward controller, the inverse kinematic mapping of the laser pointer will be learned using data simulated by FEM. 
+ Such FEM-based feedforward controller based on learning techniques will be the first demonstration in soft robotic control. 
+ The feedback controller will utilize the laser target positional feedback to compensate the learning error.
+ As a complement to the FEM-based learning, we will investiage the relationship between the laser target position and the endoscope orientation in real time.
+ This real-time positional relationship will be used to enhance the offline approximation of the inverse kinematic mapping.
+
+ ref:
+ #1 S. Vijayakumar., A. D'souza, and S. Schaal, "Incremental online learning in high dimensions," Neural computation, 17(12), pp.2602-2634, 2005
+ #2 Rieke, Viola, and Kim Butts Pauly. "MR thermometry." Journal of Magnetic Resonance Imaging 27.2 (2008): 376-390.
+ #3 
+
+
+ - MR thermometry technologies
+   - use low energy laser source
+   - unharmful rise of tissue surface temperature : 1-2 degree
+   - may need citation to support safety issue about temperature rise
+ - laser pointer control
+   - the same composite architecture involving feedforward and feedback
+ - the feedforward controller 
+   - nonparametric learning technique
+   - to approximate the inverse kinematics mapping of the laser pointer
+     - it is a task space inverse kinematics
+     - the mapping computes the required fluid volume input to point the laser at desired target position
+   - since tracking coil is not available, the robot state (orientation) is unknown
+     - online learning is difficult, since it requires online data of robot state
+   - the inverse kinematics can be obtained offline using
+     - EM tracking sensor data, or
+     - simulated data by FEM
+   - is it possible to implement online update of the inverse mapping?
+     - if the robot state can be estimated
+       - by assuming constant curvature, the orientation may be estimated from the thermometry feedback and the position of endoscope tip
+       - other estimation methods? such as kalman filter to estimate the orientation using thermometry feedback
+ - the feedback controller
+   - the feedback of the laser target is obtained by MR thermometry technologies.
+   - given a well-approximated inverse kinematic mapping in feedforward controller 
+     - without the need of using large feedback gain to compensate error induced by learning inaccuracies
+   - what else about the feedback worth to highlight?
+
+   
+*** DONE download related literature
+    CLOSED: [2016-09-01 Thu 10:42] SCHEDULED: <2016-08-31 Wed 11:00-20:00>
+    - State "DONE"       from "TODO"       [2016-09-01 Thu 10:42]
+- try to follow proposal style
+  - long-term impact
+    - clinical data
+    - 
+  - state-of-the-art
+    - image-guided nasopharyngeal surgery
+    - robot-assisted platform for nasopharyngeal surgery
+    - positional tracking
+    - (micro) laser scanning
+    - MR-conditional actuation
+  - motivation
+  - preliminary studies
+* meetings
+** 1 Sep with Jason and TC and Leo and James
+- Jason: reduce electric toxicity
+- KW: why don't cut
+- TC: laser slicing
+- TC: mouth applicance
+- TC: MRI is essential for automation
+  - mri can computerize the identification of tumor margin
+- 3D tumor morphology
+- current procedure biopsy to check margin (5mm)
+- KW: may have different tumor morphology
+- Jason: irregular morphology
+- Jason: surrounding tissue and safety is very important
+- Jason: laser can't stop bleeding
+- The present proposal can aim for not only NCP
+- KW: need a specific sequence for calibration
+- KW: MRI-compatible endoscope after 
+- Mouth appliance 
+  - it's better to not take off after surgery
+  - not only for deliver the surgery instrument, but also other interesting application
+    - e.g. augment reality for adding features virtually for surgery, applicance can give a fixed reference before and after MRI scanning
+      - features: vessels, nerves
+  - 
+- fisrt trial proof of concept: laposcopic camera in a caderveric head
+
+** 4 Aug with Dr.Su
+*** common treatment is by radiology
+*** big vessels to the brain are very near to the area, surgeons usually need to feel it by hand during surgery
+*** the proposed laser method is an alternative to surgical treatment but not the cancer treatment
+*** need to do literature review about the clinical demand of using robot
+*** da vinci system has been used to a small number of particular cases 
